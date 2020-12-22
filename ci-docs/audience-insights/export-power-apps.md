@@ -1,0 +1,74 @@
+---
+title: Conector Power Apps
+description: Conectarea cu Power Apps și Power Automate.
+ms.date: 08/21/2020
+ms.reviewer: nikeller
+ms.service: customer-insights
+ms.subservice: audience-insights
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
+manager: shellyha
+ms.openlocfilehash: b6ec103e29e218b2f27bfc1193300ea793a6b30b
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406664"
+---
+# <a name="microsoft-power-apps-connector-preview"></a>Conector Microsoft Power Apps (previzualizare)
+
+Aduceți profilurile de clienți unificate în aplicațiile dvs. personalizate cu Power Apps.
+
+## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Conectare Power Apps și Dynamics 365 Customer Insights
+
+Customer Insights este unul dintre numeroasele [surse de date disponibile în Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+
+Consultați documentația Power Apps pentru a învăța cum să [adăugați o conexiune de date la o aplicație](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Vă recomandăm să treceți în revistă [Cum Power Apps utilizează delegarea pentru a gestiona seturi de date mari în aplicațiile proiectate pe pânză](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+
+## <a name="available-entities"></a>Entităţi disponibile
+
+După adăugarea Customer Insights ca o conexiune de date, puteți alege următoarele entități în Power Apps:
+
+- Client: să utilizeze date din [profilul clientului unificat](customer-profiles.md).
+- Activitatea client unificată: pentru a afișa [cronologia de activitate](activities.md) în aplicație.
+
+## <a name="limitations"></a>Limitări
+
+### <a name="retrievable-entities"></a>Entități recuperabile
+
+Puteți regăsi numai entitățile **Client**, **UnifiedActivity** și **Segmente** i prin intermediul conectorului Power Apps. Alte entități sunt afișate deoarece conectorul de bază le acceptă prin declanșatoare în Power Automate.  
+
+### <a name="delegation"></a>Delegare
+
+Delegarea funcționează pentru entitatea Client și entitatea UnifiedActivity. 
+
+- Delegare pentru entitatea **Client**: pentru a utiliza delegarea pentru această entitate, câmpurile trebuie să fie indexate în [Index de căutare și filtrare](search-filter-index.md).  
+
+- Delegația pentru **UnifiedActivity**: Delegația pentru această entitate funcționează numai pentru câmpuri **ActivityId** și **CustomerId**.  
+
+- Pentru mai multe informații despre delegare, consultați [Funcții și operațiuni Power Apps delegabile](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+
+## <a name="example-gallery-control"></a>Exemplu de control al galeriei
+
+De exemplu, adăugați profiluri de clienți la un [control al galeriei](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+
+1. Adăugați un control **Galerie** unei aplicații pe care o construiți.
+
+> [!div class="mx-imgBorder"]
+> ![Adăugați un element galerie](media/connector-powerapps9.png "Adăugați un element galerie")
+
+1. Selectați **Client** ca sursă de date pentru elemente.
+
+    > [!div class="mx-imgBorder"]
+    > ![Selectați o sursă de date](media/choose-datasource-powerapps.png "Selectați o sursă de date")
+
+1. Puteți schimba panoul de date din dreapta pentru a selecta ce câmp pentru entitatea Client să se afișeze în galerie.
+
+1. Dacă doriți să afișați orice câmp de la clientul selectat în galerie, completați proprietatea Text a unei etichete: **{Name_of_the_gallery}.Selectate.{property_name}**
+
+    Exemplu: Gallery1.Selected.address1_city
+
+1. Pentru a afișa cronologia unificată pentru un client, adăugați un element de galerie și adăugați proprietatea Elemente: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
+
+    Exemplu: Filtru ('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)

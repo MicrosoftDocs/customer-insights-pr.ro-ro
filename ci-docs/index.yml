@@ -1,0 +1,108 @@
+### YamlMime:Landing
+metadata:
+  title: Centrul de ajutor pentru Dynamics 365 Customer Insights
+  author: m-hartmann
+  description: Găsiți articole relevante pentru a începe cu conținutul de ajutor.
+  ms.author: mhart
+  ms.date: 10/29/2020
+  ms.service: customer-insights
+  ms.topic: landing-page
+  ms.openlocfilehash: f175ea858213022afc87fce77213893c7d050d30
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ro-RO
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406715"
+title: Documentație Dynamics 365 Customer Insights
+summary: Găsiți resurse utile pentru a începe și a afla despre caracteristicile și capacitățile Customer Insights.
+landingContent:
+- title: Faceți cunoștință cu Customer Insights
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Prezentare generală Customer Insights
+      url: overview.md
+    - text: Planuri de lansare
+      url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/customer-data-platform/dynamics365-customer-insights/planned-features
+    - text: Accesați-vă mediul
+      url: https://home.ci.ai.dynamics.com/
+- title: Începeți cu detalii despre public
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Înregistrați-vă pentru o versiune de încercare
+      url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
+    - text: Noutăți
+      url: audience-insights/whats-new-audience-insights.md
+    - text: Documentația despre detalii despre public
+      url: audience-insights/index.yml
+- title: Intrați în legătură
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Veniți alături de comunitatea Dynamics 365
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+    - text: Împărtășiți-vă ideile
+      url: https://go.microsoft.com/fwlink/?linkid=2074172
+    - text: Raportați o problemă
+      url: https://go.microsoft.com/fwlink/?linkid=2079641
+- title: Tutoriale Detalii despre audiență
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Creați un nou mediu
+      url: audience-insights/home.md
+    - text: Creați un profil de client unificat
+      url: https://docs.microsoft.com/learn/modules/unified-customer-profile/
+    - text: Lucrul cu aplicația
+      url: https://docs.microsoft.com/learn/modules/working-with-customer-insights/
+- title: Exportați date cu detalii privind publicul
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurare destinații de export
+      url: audience-insights/export-destinations.md
+    - text: Carduri de client în aplicații Dynamics 365
+      url: audience-insights/customer-card-add-in.md
+    - text: Conector Power BI
+      url: audience-insights/export-power-bi.md
+- title: Administrați detaliile privind publicul
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurați sistemul
+      url: audience-insights/system.md
+    - text: Definiți permisiunile utilizatorului
+      url: audience-insights/permissions.md
+    - text: Gestionați mai multe medii
+      url: audience-insights/manage-environments.md
+- title: Despre detalii de angajamente (previzualizare)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Prezentare generală a capacității
+      url: engagement-insights/overview.md
+    - text: Termeni și concepte
+      url: engagement-insights/glossary.md
+    - text: Începeți
+      url: engagement-insights/get-started.md
+- title: Rapoarte pentru detalii despre angajamente (previzualizare)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Vizualizare rapoarte
+      url: engagement-insights/view-reports.md
+    - text: Creați rapoarte personalizate
+      url: engagement-insights/custom-reports.md
+    - text: Vizualizați raportul profilurilor unificate
+      url: engagement-insights/profile-reports.md
+- title: Evenimente pentru detalii despre angajamente (previzualizare)
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creați evenimente rafinate
+      url: engagement-insights/refined-events.md
+    - text: Exportați evenimente
+      url: engagement-insights/export-events.md
+    - text: Ștergeți și exportați datele cu caracter personal
+      url: engagement-insights/delete-export-personal-data.md

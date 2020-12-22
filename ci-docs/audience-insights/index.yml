@@ -1,0 +1,79 @@
+### YamlMime:Landing
+title: Capabilitatea de detalii privind publicul în Dynamics 365 Customer Insights
+summary: Ingerați, unificați și organizați datele clienților din mai multe surse. Creați și gestionați profilurile clienților și segmentarea în timp real. Integrați datele clienților cu alte sisteme pentru a face și mai acționabile.
+metadata:
+  title: Documentația despre detalii despre public
+  description: Centrul de ajutor cu linkuri cheie pentru detalii despre public.
+  ms.service: customer-insights
+  ms.subservice: audience-insights
+  ms.topic: landing-page
+  author: m-hartmann
+  ms.author: mhart
+  ms.date: 10/16/2020
+  ms.openlocfilehash: 9dcbbecf793cca2ef1d79d6fad7f3b420f5a8806
+  ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+  ms.translationtype: HT
+  ms.contentlocale: ro-RO
+  ms.lasthandoff: 11/03/2020
+  ms.locfileid: "4406698"
+landingContent:
+- title: Despre Detalii despre public
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Prezentare generală produs
+      url: overview.md
+    - text: Caracteristici noi și actualizate
+      url: whats-new-audience-insights.md
+    - text: Site de comunitate
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
+- title: Ingerare surse de date
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Adăugare surse de date
+      url: data-sources.md
+    - text: Reîmprospătare incrementală
+      url: incremental-refresh-data-sources.md
+    - text: Înțelegeți entități
+      url: entities.md
+- title: Unificați date
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Hartă
+      url: map-entities.md
+    - text: Corespondență
+      url: match-entities.md
+    - text: Îmbinare
+      url: merge-entities.md
+- title: Rafinați profilele clientului
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurați relații
+      url: relationships.md
+    - text: Listă activități pentru client
+      url: activities.md
+    - text: Veniți cu propriile modele de învățare programată
+      url: custom-models.md
+- title: Exportați datele clientului
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurare destinații de export
+      url: export-destinations.md
+    - text: Carduri de client în aplicații Dynamics 365
+      url: customer-card-add-in.md
+    - text: Conector Power BI
+      url: export-power-bi.md
+- title: Administrarea aplicației
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Configurați sistemul
+      url: system.md
+    - text: Definiți permisiunile utilizatorului
+      url: permissions.md
+    - text: Gestionați mai multe medii
+      url: manage-environments.md

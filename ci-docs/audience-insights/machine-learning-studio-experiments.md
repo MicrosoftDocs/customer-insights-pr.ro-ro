@@ -4,17 +4,17 @@ description: Utilizați modele Machine Learning Studio (clasic) în Dynamics 365
 ms.date: 12/03/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: ameetj
 manager: shellyha
-ms.openlocfilehash: 556b6810db0ed2733a3f086291757bd85b77e371
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4669033"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270219"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizați modele bazate pe Azure Machine Learning Studio (clasic)
 
@@ -171,3 +171,6 @@ Privind mai departe distribuțiile recomandărilor pe întregul catalogul de ser
 Pentru a utiliza aceste predicții în Customer Insights, trebuie să **exportați** previziunile împreună cu ID-urile clientului. [Exportați-le în aceeași locație de stocare Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) către care exportați datele sursă. Serviciul web predictiv poate fi programat să ruleze în mod regulat și să actualizeze scorurile.
 
 Datele generate de modelul personalizat pot fi utilizate pentru a vă îmbogăți și mai mult datele despre clienți. Pentru mai multe informații, consultați [Modelele de învățare programată particularizate](custom-models.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

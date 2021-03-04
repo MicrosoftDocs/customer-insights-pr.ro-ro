@@ -5,16 +5,16 @@ ms.date: 09/21/2020
 ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406667"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477103"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector pentru Power BI (previzualizare)
 
@@ -31,7 +31,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 1. Selectați **Vedeți mai multe** și căutați **Dynamics 365 Customer Insights**
 
-1. Selectați rezultatul și selectați **Conectare**.
+1. Selectați **Conectare**.
 
 1. **Conectați-vă** cu același cont organizațional pe care îl utilizați pentru Customer Insights și selectați **Conectare**.
    > [!NOTE]
@@ -52,3 +52,22 @@ Conectorul Customer Insights pentru Power BI este proiectat pentru a funcționa 
 ### <a name="work-with-a-subset-of-data"></a>Lucrați cu un subset de date
 
 Luați în considerare lucrul cu un subset de date. De exemplu, puteți crea [segmente](segments.md) în loc să exportați toate înregistrările clienților către Power BI.
+
+## <a name="troubleshooting"></a>Depanare
+
+### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Mediul Customer Insights nu apare în Power BI
+
+Medii care au mai mult de o [relaţie](relationships.md) definită între două entități identice în statistici privind publicul nu vor fi disponibile în conectorul Power BI.
+
+Puteți identifica și elimina relațiile duplicate.
+
+1. În statisticile publicului, accesați **Date** > **Relații** asupra mediului care vă lipsește în Power BI.
+2. Identificați relațiile duplicate:
+   - Verificați dacă există mai multe relații definite între aceleași două entități.
+   - Verificați dacă există o relație creată între două entități care sunt ambele incluse în procesul de unificare. Există o relație implicită definită între toate entitățile incluse în procesul de unificare.
+3. Eliminați orice relație duplicat identificată.
+
+După eliminarea relațiilor duplicate, încercați să configurați conectorul Power BI din nou. Mediul ar trebui să fie disponibil acum.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
+

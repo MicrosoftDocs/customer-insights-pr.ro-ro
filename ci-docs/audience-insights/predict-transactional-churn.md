@@ -5,16 +5,16 @@ ms.date: 11/12/2020
 ms.reviewer: zacook
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: f3cbbf99a6cecba2aab2cf85428d53e5df8346e4
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: af461d290c69687fb47bacfcff446a0c62978383
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644418"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268333"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prezicerea retragerii tranzacționale (previzualizare)
 
@@ -96,6 +96,8 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
 1. Opțional, selectați **Adăugare date** pentru **Activitățile clienților**. Alegeți entitatea care furnizează informații despre activitatea clienților, așa cum este descris în condițiile prealabile.
 
 1. Asociați câmpurile semantice la atributele din cadrul entității cu activitatea clientului și selectați **Următorul**. Pentru descrierea câmpurilor, consultați secțiunea [Cerințe preliminare](#prerequisites).
+
+   :::image type="content" source="media/map-transaction-data-fields.png" alt-text="Mapați câmpurile clienților pentru datele tranzacționale.":::
 
 1. Selectați un tip de activitate care să corespundă tipului de activitate a clientului pe care o configurați. Selectați **Creare nou** și alegeți un tip de activitate disponibil sau creați un tip nou.
 
@@ -185,3 +187,6 @@ Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reî
 1. Selectați elipsele verticale de lângă predicția pe care doriți să o ștergeți.
 
 1. Selectați **Ștergere**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

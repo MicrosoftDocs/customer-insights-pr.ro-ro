@@ -4,17 +4,17 @@ description: Lucrați cu datele Common Data Model folosind Azure Data Lake Stora
 ms.date: 05/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 25de23e615704a72f6b41d98ae9418beb338e77e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 247e4d9c47ff2373065ebf3c6d554323e45a120b
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643473"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267875"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 
@@ -38,17 +38,25 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 1. Selectați **Adăugați sursa de date**.
 
-1. Selectați **Conectare la un director Common Data Model**, introduceți un **Nume** pentru sursa de date și selectați **Următorul**.
+1. Selectați **Conectare la un director Common Data Model**, introduceți un **Nume** pentru sursa de date și selectați **Următorul**. Recomandări de nume: 
+   - Începeți cu o literă.
+   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
+   - Folosiți între 3 și 64 de caractere.
 
 1. Puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Introduceți informația **Recipient** și selectați **Următorul**.
    > [!div class="mx-imgBorder"]
-   > ![Caseta de dialog pentru a introduce detaliile conexiunii pentru Azure Data Lake](media/enter-new-storage-details.png)
-
-1. În dialogul **Selectați un director Common Data Model**, selectați fișierul model.json din care să importați date și selectați **Următorul**.
+   > ![Casetă de dialog pentru a introduce noi detalii de conexiune pentru Azure Data Lake](media/enter-new-storage-details.png)
    > [!NOTE]
-   > Orice fișier model.json asociat cu o altă sursă de date din mediu nu va apărea în listă.
+   > Aveți nevoie de unul dintre următoarele roluri, fie la container, fie la contul de stocare menționat mai sus, pentru a vă putea conecta la și crea o sursă de date:
+   >  - Cititor de date Blob de stocare
+   >  - Proprietar de date Blob de stocare
+   >  - Contribuitor de date blob de stocare
 
-1. Veți obține o listă de entități disponibile în fișierul model.json selectat. Puteți analiza și selecta din lista de entități disponibile și selectați **Salvare**. Toate entitățile selectate vor fi ingerate din noua sursă de date.
+1. În dialogul **Selectați un director Common Data Model**, selectați fișierul model.json sau manifest.json din care să importați date și selectați **Următorul**.
+   > [!NOTE]
+   > Orice fișier model.json sau manifest.json asociat cu o altă sursă de date din mediu nu va apărea în listă.
+
+1. Veți obține o listă de entități disponibile în fișierul model.json sau manifest.json selectat. Puteți analiza și selecta din lista de entități disponibile și selectați **Salvare**. Toate entitățile selectate vor fi ingerate din noua sursă de date.
    > [!div class="mx-imgBorder"]
    > ![Casetă de dialog care arată o listă de entități dintr-un fișier model.json](media/review-entities.png)
 
@@ -59,11 +67,11 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 9. După salvarea selecțiilor, se deschide pagina **Surse de date**. Acum ar trebui să vedeți conexiunea folderului Common Data Model ca o sursă de date.
 
 > [!NOTE]
-> Un fișier model.json se poate asocia doar cu o singură sursă de date în același mediu. Cu toate acestea, același fișier model.json poate fi utilizat pentru surse de date în medii multiple.
+> Un fișier model.json sau manifest.json se poate asocia doar cu o singură sursă de date în același mediu. Cu toate acestea, același fișier model.json sau manifest.json poate fi utilizat pentru surse de date în medii multiple.
 
 ## <a name="edit-a-common-data-model-folder-data-source"></a>Editați o sursă de date a folderului Common Data Model
 
-Puteți actualiza cheia de acces pentru contul de stocare care conține directorul Common Data Model. De asemenea, puteți modifica fișierul model.json. Pentru a conecta la un container diferit de contul de stocare sau să modificați numele contului, trebuie să [creați o nouă conexiune la sursa de date](#connect-to-a-common-data-model-folder).
+Puteți actualiza cheia de acces pentru contul de stocare care conține directorul Common Data Model. De asemenea, puteți schimba fișierul model.json sau manifest.json. Pentru a conecta la un container diferit de contul de stocare sau să modificați numele contului, trebuie să [creați o nouă conexiune la sursa de date](#connect-to-a-common-data-model-folder).
 
 1. În Detalii despre audiență, accesați **Date** > **Surse de date**.
 
@@ -77,13 +85,24 @@ Puteți actualiza cheia de acces pentru contul de stocare care conține director
 
 5. Opțional, puteți actualiza de la o conexiune cu cheie de cont la o conexiune bazată pe resurse sau bazată pe abonament. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Nu puteți schimba informațiile legate de **Recipient** la actualizarea conexiunii.
    > [!div class="mx-imgBorder"]
-   > ![Caseta de dialog pentru a introduce detaliile conexiunii pentru Azure Data Lake](media/enter-existing-storage-details.png)
 
-6. Opțional, alegeți un fișier model.json diferit cu un set diferit de entități din container.
+   > ![Casetă de dialog pentru a introduce detaliile conexiunii pentru Azure Data Lake la un cont de stocare existent](media/enter-existing-storage-details.png)
+
+   > [!NOTE]
+   > Aveți nevoie de unul dintre următoarele roluri, fie la container, fie la contul de stocare menționat mai sus, pentru a vă putea conecta la și crea o sursă de date:
+   >  - Cititor de date Blob de stocare
+   >  - Proprietar de date Blob de stocare
+   >  - Contribuitor de date blob de stocare
+
+
+6. Opțional, alegeți un fișier model.json sau manifest.json diferit cu un set diferit de entități din container.
 
 7. Opțional, puteți selecta entități suplimentare de ingerat. De asemenea, puteți elimina orice entități deja selectate dacă nu există dependențe.
 
    > [!IMPORTANT]
-   > Dacă există dependențe la fișierul model.json existent și de setul de entități, veți vedea un mesaj de eroare și nu puteți selecta alt fișier model.json. Eliminați aceste dependențe înainte de a schimba fișierul model.json sau creați o sursă de date nouă cu fișierul model.json pe care doriți să-l utilizați pentru a evita eliminarea dependențelor.
+   > Dacă există dependențe de fișierul model.json sau manifest.json existent și setul de entități, veți vedea un mesaj de eroare și nu puteți selecta un fișier model.json sau manifest.json diferit. Eliminați aceste dependențe înainte de a schimba fișierul model.json sau manifest.json sau creați un nou sursă de date cu fișierul model.json sau manifest.json pe care doriți să îl utilizați pentru a evita eliminarea dependențelor.
 
 8. Opțional, puteți selecta atribute sau entități suplimentare pentru a activa profilarea datelor sau să le dezactivați pe cele deja selectate.   
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

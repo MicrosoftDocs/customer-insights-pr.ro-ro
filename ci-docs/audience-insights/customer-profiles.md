@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 13308c2f40cda0d7e813b4d94ab47d53b5ce2115
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: a5d928ae518f3cb1afbf8e2b197e51b27665f6e0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653905"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269759"
 ---
 # <a name="customer-profiles"></a>Profiluri de client
 
@@ -70,3 +70,6 @@ Selectați **Înapoi la clienți** pentru a reveni la pagina de căutare a clien
 ## <a name="next-steps"></a>Pașii următori
 
 [Adăugați mai multe surse de date](data-sources.md) sau [creați segmente de clienți](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

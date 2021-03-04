@@ -1,20 +1,20 @@
 ---
 title: Exportați datele Customer Insights către Dynamics 365 Marketing
 description: Aflați cum puteți configura conexiunea la Dynamics 365 Marketing.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 163387779b64bd78ef08e2d96a5f1c9615062f28
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a06920b8ff25d7102ccd14ae68cf42fe91fa1ee6
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643788"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269069"
 ---
 # <a name="connector-for-dynamics-365-marketing-preview"></a>Conector pentru Dynamics 365 Marketing (previzualizare)
 
@@ -24,7 +24,10 @@ Utilizați [segmentele](segments.md) pentru a genera campanii și a contacta anu
 
 ## <a name="prerequisite"></a>Cerințe preliminare
 
-Înregistrări de contact [din Dynamics 365 Marketing ingerate Common Data Service](connect-power-query.md).
+- Înregistrările de contact trebuie să fie prezente în Dynamics 365 Marketing înainte de a putea exporta un segment din Customer Insights în Marketing. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Marketing folosind Common Data Services](connect-power-query.md).
+
+  > [!NOTE]
+  > Exportul de segmente din perspectivele publicului către Marketing nu va crea noi înregistrări de contact în instanțele de Marketing. Înregistrările de contact din Marketing trebuie să fie ingerate în statistici ale publicului și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
 
 ## <a name="configure-the-connector-for-marketing"></a>Configurați conectorul pentru marketing
 
@@ -49,3 +52,6 @@ Utilizați [segmentele](segments.md) pentru a genera campanii și a contacta anu
 ## <a name="export-the-data"></a>Exportați datele
 
 Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

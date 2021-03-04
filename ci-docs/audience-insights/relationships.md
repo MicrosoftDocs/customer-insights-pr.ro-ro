@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 295c372bb452e7c40aa950506dc494d4a2de1108
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 292da986faa7f62d8aa73ed7214075612178e2e1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406708"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269896"
 ---
 # <a name="relationships-between-entities"></a>Relații între entități
 
@@ -28,8 +28,8 @@ Există două tipuri de relații. Relațiile de sistem care nu pot fi modificate
 > ![Se creează relația](media/relationships-entities-merge.png "Se creează relația")
 
 - **Relația *CustomerToContact*** a fost creată între entitatea Client și entitatea de contact. Entitatea Client face ca câmpul cheie **Contact_contactId** să se raporteze la câmpul cheie al entității de contact **contactId**.
-- **Relația _CustomerToAccount_** a fost creată între entitatea Client și entitatea de cont. Entitatea Client face ca câmpul cheie **Account_accountId** să se raporteze la câmpul cheie al entității de cont **accountId**.
-- **Relația _CustomerToWebAccount_** a fost creată între entitatea Client și entitatea WebAccount. Entitatea Client face ca câmpul cheie **WebAccount_webaccountId** să se raporteze la câmpul cheie al entității WebAccount **webaccountId**.
+- **Relația *CustomerToAccount*** a fost creată între entitatea Client și entitatea de cont. Entitatea Client face ca câmpul cheie **Account_accountId** să se raporteze la câmpul cheie al entității de cont **accountId**.
+- **Relația *CustomerToWebAccount*** a fost creată între entitatea Client și entitatea WebAccount. Entitatea Client face ca câmpul cheie **WebAccount_webaccountId** să se raporteze la câmpul cheie al entității WebAccount **webaccountId**.
 
 ## <a name="create-a-relationship"></a>Creați o relație
 
@@ -69,3 +69,6 @@ Definiți relațiile particularizate pe pagina **Relații**. Fiecare relație co
 ## <a name="next-step"></a>Următorul pas
 
 Relațiile de sistem și personalizate sunt utilizate pentru a crea segmente bazate pe mai multe surse de date care nu mai sunt izolate. Pentru mai multe informații, consultați [Segmente](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

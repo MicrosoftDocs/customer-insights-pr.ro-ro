@@ -1,7 +1,7 @@
 ---
 title: Căutați și filtrați profiluri de client
 description: Găsiți rapid informații despre profilurile de clienți unificate și filtrați pentru atributele specificate.
-ms.date: 04/16/2020
+ms.date: 01/19/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1842ad333c23bb155abc89167556163ae79cdd34
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d675738c43cbdb5f9b478d53d6124db38ba3004d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406709"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270081"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profilurile clienților: indexul de căutare și filtrare
 
@@ -28,14 +28,6 @@ Rezultatul unificării datelor clientului dvs. este o entitate de profil pentru 
 Dacă este prima dată când definiți atribute căutabile ca administrator, trebuie să definiți mai întâi câmpurile indexate. Vă sugerăm să alegeți toate atributele prin care utilizatorii pot căuta și filtra clienții pe pagina **Clienți**. Puteți specifica doar atribute care există în entitatea Profil client pe care le-ați creat în timpul procesului de unificare a datelor.
 
 1. Deschideți pagina **Clienți** și selectați **Index de căutare și filtrare**.
-
-> [!NOTE]
-> Creăm o configurație implicită a indexului de căutare pe atributele disponibile din entitatea Client din următoarele tipuri semantice, așa cum sunt definite pe pagina Hartă.
-> - Prenume, Nume de familie, Al doilea nume, Nume complet pentru persoană
-> - Nume organizație
-> - Adresă de e-mail
-> - Număr de telefon
-> - Informații locație
 
 2. Selectați **+ Adăugare** pentru specificarea câmpurilor indexate.
 
@@ -65,3 +57,10 @@ Meniul **Filtru** din pagina **Clienți** poate include un număr diferit de niv
 2. Selectați **Salvare** pentru a vă aplica modificările.
 
 3. Selectați **Executare** odată ce sunteți gata să vă aplicați setările.
+
+## <a name="next-steps"></a>Pașii următori
+
+Accesați pagina **Clienți** pentru a căuta profiluri de clienți sau utilizați câmpurile indexate pentru a vedea un subset al tuturor profilurilor de clienți.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,30 +1,26 @@
 ---
-title: Capabilitatea de detalii privind publicul
-description: Privire de ansamblu asupra capabilitatății de detalii privind publicul în Dynamics 365 Customer Insights.
-ms.date: 02/05/2020
+title: Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
+description: Prezentare generală a detaliilor de public pentru Dynamics 365 Customer Insights.
+ms.date: 01/18/2021
 ms.reviewer: nimagen
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 82763b294484cca4a3982f4ebef6f914a02f5cca
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
+ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406696"
+ms.lasthandoff: 02/18/2021
+ms.locfileid: "5477010"
 ---
-# <a name="dynamics-365-customer-insights-audience-insights-capability"></a>Capabilitatea de detalii privind publicul Dynamics 365 Customer Insights
+# <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 
-Experiența clienților se află în centrul esențial al ambițiilor de transformare digitală a fiecărei organizații. Pentru a concura pe piața de astăzi, organizațiile trebuie să construiască relații semnificative cu clienții lor la nivel personal. Personalizarea eficientă la scară necesită o vedere completă, unificată a clientului.
+Detaliile privind publicul vă ajută să construiți o înțelegere mai profundă a clienților dvs. Conectați date din diverse surse tranzacționale, comportamentale și de observație pentru a crea o vedere a clienților la 360 de grade. Utilizați aceste informații pentru a genera experiențe și procese centrate pe client. Unificați și înțelegeți datele clienților și valorificați-le pentru detalii și acțiuni inteligente.
 
-Detaliile privind publicul vă ajută să construiți o înțelegere mai profundă a clienților dvs. Conectați date din diverse surse tranzacționale, comportamentale și de observație pentru a crea o vedere a clienților la 360 de grade. Utilizați aceste informații pentru a genera experiențe și procese centrate pe client.
-
-**Unificați și înțelegeți datele clienților și valorificați-le pentru detalii și acțiuni inteligente.**
-
-Cu detaliile privind publicul, organizațiile pot:  
+## <a name="main-benefits"></a>Principalele beneficii 
 
 - **Elimine silozurile de date și să unifice datele clienților**
 
@@ -33,15 +29,15 @@ Cu detaliile privind publicul, organizațiile pot:
 
 - **Îmbogățiți-vă cu informațiile de audiență conținute în Microsoft Graph**
 
-  - Creeați profiluri de clienți mai bogate prin încorporarea informațiilor de audiență conținute în Microsoft Graph.  
+  - Creeați profiluri de clienți mai bogate prin [încorporarea informațiilor de audiență conținute în Microsoft Graph](enrichment-microsoft-graph.md).  
 
 - **Alimentați-vă procesele de afaceri și experiențele personalizate ale clienților**
 
   - Creșteți implicarea personalizată pe canale - ajutați profesioniștii de marketing, vânzări și servicii cu carduri de profil de client predefinite, perspective contextuale și adaptate pentru clienți, infuzate în aplicațiile de afaceri pe care le folosesc deja în fiecare zi
   - Automatizați experiențele și procesele centrate pe clienți, bazate pe profile, măsuri de afaceri și segmente particularizabile.
-  - Activați și extindeți experiențele line-of-business construite pe Microsoft Power Platform. Construiți rapid aplicații cu detalii încorporate utilizând o abordare puternică de codare redusă de la PowerApps.  
+  - Activați și extindeți experiențele line-of-business construite pe [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construiți rapid aplicații cu detalii încorporate utilizând o abordare puternică de codare redusă de la PowerApps.  
 
-Detaliile privind publicul includ capabilități pentru următorii utilizatori cheie:
+## <a name="key-audiences"></a>Public cheie
 
 - **Analiști / administratori de date:**
 
@@ -58,5 +54,8 @@ Detaliile privind publicul includ capabilități pentru următorii utilizatori c
 
 - **Analiști de afaceri:**
 
-  - Creează profiluri particularizabile, definesc măsuri și creează segmente pentru a obține o vizualizare la 360 de grade a clientului dvs, specific organizației dvs.  
-  - Utilizați conectori predefiniți pentru PowerApps sau Microsoft Power BI sau API-uri pentru a afișa detalii în aplicațiile dvs. de afaceri sau în soluțiile BI.  
+  - Creează profiluri particularizabile, definesc măsuri și creează segmente și beneficiați de analiză predictivă pentru a obține o vizualizare la 360 de grade a clientului dvs, specific organizației dvs.  
+  - Utilizați conectori de tip box pentru mai multe aplicații sau API-uri Microsoft și terțe părți pentru a procesa în continuare informațiile.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

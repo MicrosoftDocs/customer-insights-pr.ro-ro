@@ -1,20 +1,20 @@
 ---
 title: Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu
-description: utilizați o entitate principală de serviciu Azure pentru Detalii despre audiență pentru a vă conecta la propriul data lake la atașarea la Detalii despre audiență.
-ms.date: 11/24/2020
+description: Utilizați o entitate principală de serviciu Azure pentru Detalii despre audiență pentru a vă conecta la propriul data lake la atașarea la Detalii despre audiență.
+ms.date: 02/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c2fae278d34fa02b9168ac70dfa8dd351653245e
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644103"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267737"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu Azure pentru Detalii despre audiență
 
@@ -22,7 +22,9 @@ Instrumentele automate care utilizează serviciile Azure ar trebui să aibă în
 
 Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) sau [crea un mediu nou sau actualiza un mediu existent](manage-environments.md#create-an-environment-in-an-existing-organization) în siguranță.
 
-Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
+> [!IMPORTANT]
+> - Contul de stocare Azure Data Lake Gen2 care intenționează să utilizeze principalul serviciului trebuie să aibă [Spațiul de nume ierarhic (HNS) activat](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Creați entitatea principală de serviciu Azure pentru Detalii despre audiență
 
@@ -83,7 +85,7 @@ Atașați un cont Azure Data Lake Storage în Detalii despre audiență pentru [
 
 Urmați pașii de mai jos pentru a furniza informațiile necesare despre abordarea selectată.
 
-### <a name="resounce-based-storage-account-connection"></a>Conexiune la contul de stocare bazată pe resurse
+### <a name="resource-based-storage-account-connection"></a>Conexiune la contul de stocare bazat pe resurse
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com), conectați-vă la abonament și deschideți contul de stocare.
 
@@ -108,7 +110,8 @@ Urmați pașii de mai jos pentru a furniza informațiile necesare despre abordar
 1. Analizați **Abonament**, **Grup de resurse**, și **Numele** din contul de stocare pentru a vă asigura că selectați valorile potrivite în Detalii despre audiență.
 
 1. În Detalii despre audiență, alegeți valorile sau câmpurile corespunzătoare atunci când atașați contul de stocare.
-
-   :::image type="content" source="media/ADLS-SP-SubscriptionConnection.png" alt-text="Introduceți informația ID-ului resursei contului de stocare.":::
    
 1. Continuați cu pașii rămași din Detalii despre audiență pentru a atașa contul de stocare.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

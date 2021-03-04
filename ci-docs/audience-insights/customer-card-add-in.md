@@ -1,7 +1,7 @@
 ---
 title: Instalați și configurați Programul de completare card client
 description: Instalarea și configurarea programului de completare card client pentru Dynamics 365 Customer Insights.
-ms.date: 08/04/2020
+ms.date: 01/20/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: aab5deaf89b4b019f6688a1bca950ec2277ad5fb
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: a6d5b49380ed129cf147698a16f5f3f597bf7fbc
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644058"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5268059"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
@@ -28,7 +28,7 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 - Profilurile clienților [ingerate din aplicația Dynamics 365 folosind Common Data Service](connect-power-query.md).
 - Utilizatorii programului de completare card client trebuie să fie [adăugați ca utilizatori](permissions.md) în Detalii despre audiență.
 - [Capabilități de căutare și filtrare configurate](search-filter-index.md).
-- Control demografic: câmpurile demografice, cum ar fi vârsta sau sexul, sunt disponibile în profilul de client unificat.
+- Control demografic: câmpurile demografice (cum ar fi vârsta sau sexul), sunt disponibile în profilul de client unificat.
 - Controlul îmbogățirii: necesită [îmbogățiri](enrichment-hub.md) active aplicate profilurilor clienților.
 - Control inteligent: Necesită date generate în Azure Machine Learning ([Predicții](predictions.md) sau [Modele particularizate](custom-models.md))
 - Controlul măsurii: Necesită [măsuri configurate](measures.md).
@@ -92,10 +92,26 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 
 1. În caseta de dialog **Proprietăți câmp**, debifați caseta de selectare **Afișare etichetă pe formular**.
 
-1. Selectați opțiunea **Web** pentru control. Pentru controlul Îmbogățire, selectați tipul de îmbogățire pe care doriți să-l afișați configurand câmpul **enrichmentType**. Trebuie să adăugați un control de îmbogățire separat pentru fiecare tip de îmbogățire.
+1. Selectați opțiunea **Web** pentru control. Pentru controlul Îmbogățire, selectați tipul de îmbogățire pe care doriți să-l afișați configurand câmpul **enrichmentType**. Adăugați un control separat de îmbogățire pentru fiecare tip de îmbogățire.
 
 1. Selectați **Salvați** și **Publicați** pentru a publica formularul de contact actualizat.
 
 1. Accesați formularul de contact publicat. Veți vedea controlul nou adăugat. Este posibil să fie nevoie să vă conectați, prima dată când îl utilizați.
 
 1. Pentru a particulariza ceea ce doriți să afișați în controlul particularizat, selectați butonul de editare din colțul din dreapta sus.
+
+## <a name="upgrade-customer-card-add-in"></a>Faceți upgrade la programul de completare Customer Card
+Programul de completare pentru Customer Card nu se actualizează automat. Pentru a face upgrade la cea mai recentă versiune, urmați această procedură în aplicația Dynamics 365 care are instalat programul de completare.
+
+1. În aplicația Dynamics 365, accesați **Setări** > **Particularizare** și selectați **Soluții**.
+
+1. În tabelul cu programe de completare căutați **CustomerInsightsCustomerCard** și selectați rândul.
+
+1. Selectați **Aplicați actualizarea soluției** în bara de acțiune.
+
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizați soluția în zona de particularizare a aplicațiilor Dynamics 365":::
+
+1. După ce începeți procesul de actualizare, veți vedea un indicator de încărcare până la finalizarea actualizării. Dacă nu există o versiune mai nouă, actualizarea va afișa un mesaj de eroare.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

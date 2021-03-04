@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2537cfb5dde0d1ce1af16f585f0bf91d15ea1870
-ms.sourcegitcommit: a6e7df90d61450e00886753eb5db116f2f35bb6c
+ms.openlocfilehash: 3f1019ace424f89320c5a0d5058e928f4cbc7e62
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "4653995"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269855"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Ghid eșantion de predicție a retragerii abonamentelor (previzualizare)
 
@@ -46,10 +46,9 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    - **DateOfBirth**: Dată
    - **CreatedOn**: Dată/Oră/Zonă
 
-   [!div class="mx-imgBorder"]
-   ![Transformați data nașterii în dată](media/ecommerce-dob-date.PNG "transformare data nașterii în dată")
+   :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformați data nașterii în dată.":::
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
 
 1. Salvați sursa de date.
 
@@ -67,7 +66,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    - **RewardsPoints**: Număr întreg
    - **CreatedOn**: Dată/Oră
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
 
 1. Salvați sursa de date.
 
@@ -90,7 +89,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    - **Is_auto_renew**: Adevărat/Fals
    - **RecurringFrequencyInMonths**: Număr întreg
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **SubscriptionHistory**.
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **SubscriptionHistory**.
 
 1. Salvați sursa de date.
 
@@ -230,3 +229,6 @@ Puteți crea un segment nou pe baza entității create de model.
 Acum aveți un segment actualizat dinamic, care identifică clienții cu risc ridicat de retragere pentru această activitate de abonamente.
 
 Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
-title: Creați și editați măsuri
-description: Definiți măsurile legate de client pentru a analiza și reflecta performanța anumitor domenii de afaceri.
-ms.date: 10/15/2020
+title: Crearea și gestionarea măsurilor
+description: Definiți măsuri pentru a analiza și reflecta performanța afacerii dvs.
+ms.date: 02/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,105 +9,111 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: wameng
 manager: shellyha
-ms.openlocfilehash: 0e214a6eb66abd27f7292db3ce2c2a6e16a8ff33
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406705"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269943"
 ---
 # <a name="define-and-manage-measures"></a>Definiți și gestionați măsurile
 
-**Măsuri** reprezintă indicatori de performanță cheie (KPI) care reflectă performanța și sănătatea domeniilor de activitate specifice. Detaliile despre public oferă o experiență intuitivă pentru crearea diferitelor tipuri de măsuri, utilizând un generator de interogări care nu necesită codare sau validarea manuală a măsurilor. Aveți posibilitatea să urmăriți măsurile de afaceri pe pagina de **pornire**, să consultați măsuri pentru anumiți clienți din **cardul de client** și să utilizați măsuri pentru a defini segmentele de clienți din pagina **Segmente**.
+Măsurile vă ajută să înțelegeți mai bine comportamentele clienților și performanța afacerii prin recuperarea valorilor relevante din [profiluri unificate](data-unification.md). De exemplu, o companie vrea să vadă *cheltuieli totale per client* pentru a înțelege istoricul achizițiilor clientului individual. Sau măsurați *vânzările totale ale companiei* pentru a înțelege veniturile la nivel agregat din întreaga afacere.  
+
+Măsurile sunt create folosind generatorul de măsuri, o platformă de interogare a datelor cu diverși operatori și opțiuni simple de mapare. Vă permite să filtrați datele, să grupați rezultatele, să detectați [căile relației entității](relationships.md), și previzualizați ieșirea.
+
+Utilizați instrumentul de măsurare pentru a planifica activități comerciale prin interogarea datelor despre clienți și extragerea de informații. De exemplu, crearea unei măsuri de *cheltuieli totale per client* și *returnare totală per client* ajută la identificarea unui grup de clienți cu cheltuieli mari, dar cu randament ridicat. Puteți [crea un segment](segments.md) pentru a conduce următoarele cele mai bune acțiuni. 
 
 ## <a name="create-a-measure"></a>Crearea unei măsuri
 
-Această secțiune vă ajută apoi să parcurgeți prin crearea unei măsuri de la zero. Puteți construi măsuri cu date din mai multe surse de date care sunt conectate prin entitatea Client. Se aplică unele [limite ale serviciului](service-limits.md).
+Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți construi o măsură cu atribute de date de la entități de date care au o relație configurată pentru a se conecta cu entitatea Client. 
 
 1. În Detalii despre public, accesați **Măsuri**.
 
-2. Selectați **Măsură nouă**.
+1. Selectați **Nou**.
 
-3. Alegeți **Tipul** de măsură:
-
-   - **Atribut client**: Un singur câmp per client care reflectă un scor, o valoare sau o stare pentru client. Atributele clientului sunt create ca atribute într-o nouă entitate generată de sistem numită **Customer_Measure**.
-
-   - **Măsură client**: Statistici privind comportamentul clienților cu defalcarea în funcție de dimensiunile selectate. O entitate nouă este generată pentru fiecare măsură, potențial cu mai multe înregistrări per client.
-
-   - **Măsură de afaceri**: Urmărește performanța afacerii și sănătatea afacerii. Măsurile de afaceri pot avea două rezultate diferite: o ieșire numerică care se afișează pe pagina **Acasă** sau o entitate nouă pe care o găsiți pe pagina **Entități**.
-
-4. Oferiți un **Nume** și opțional **Nume afișat**, apoi selectați **Următorul**.
-
-5. În secțiunea **Entități**, selectați prima entitate din lista derulantă. În acest moment, ar trebui să decideți dacă sunt necesare entități suplimentare ca parte a definirii măsurii.
-
-   > [!div class="mx-imgBorder"]
-   > ![Definiție măsură](media/measure-definition.png "Definiție măsură")
-
-   Pentru a adăuga mai multe entități, selectați **Adăugați entitatea** și selectați entitățile pe care doriți să le utilizați pentru măsură.
-
+1. Selectați **Editează nume** și furnizați un **Nume** pentru măsură. 
    > [!NOTE]
-   > Puteți selecta numai entitățile care au relații cu entitatea dvs. de început. Pentru informații suplimentare despre definirea relațiile, consultați [Relații](relationships.md).
+   > Dacă noua dvs. configurație de măsurare are doar două câmpuri, de exemplu, CustomerID și un singur calcul, rezultatul va fi adăugat ca o nouă coloană la entitatea generată de sistem numită Customer_Measure. Și veți putea vedea valoarea măsurii în profilul de client unificat. Alte măsuri își vor genera propriile entități.
 
-6. Opțional, puteți configura variabile. În secțiunea **Variabile**, selectați **Variabilă nouă**.
+1. În zona de configurare, alegeți funcția de agregare din meniul derulant **Selectați Funcție**. Funcțiile de agregare includ: 
+   - **Sum**
+   - **Medie**
+   - **Contor**
+   - **Număr unic**
+   - **Max**
+   - **Min**
+   - **Primul**: ia prima valoare a înregistrării de date
+   - **Ultimul**: ia ultima valoare care a fost adăugată la înregistrarea de date
 
-   Variabilele sunt calcule care se fac pe fiecare dintre înregistrările selectate. De exemplu, însumarea punctului de vânzare (POS) și vânzările online pentru fiecare dintre înregistrările clienților.
+   :::image type="content" source="media/measure-operators.png" alt-text="Operatori pentru calcule de măsură.":::
 
-7. Furnizați un **Nume** pentru variabile.
+1. Selectați **Adăugați un atribut** pentru a selecta datele de care aveți nevoie pentru a crea această măsură.
+   
+   1. Selectați fila **Atribute**. 
+   1. Entitate de date: alegeți entitatea care include atributul pe care doriți să îl măsurați. 
+   1. Atribut de date: alegeți atributul pe care doriți să îl utilizați în funcția de agregare pentru a calcula măsura. Puteți selecta doar un singur atribut o dată.
+   1. De asemenea, puteți selecta un atribut de date dintr-o măsură existentă selectând fila **Măsuri**. Sau puteți căuta o entitate sau un nume de măsură. 
+   1. Selectați **Adăuga** pentru a adăuga atributul selectat la măsură.
 
-8. În zona **Expresie**, alegeți un câmp cu care să începeți calculul.
+   :::image type="content" source="media/measure-attribute-selection.png" alt-text="Selectați un atribut de utilizat în calcule.":::
 
-9. Introduceți o expresie în **Expresie** în timp ce alegeți mai multe câmpuri care vor fi incluse în calcul.
+1. Pentru a construi măsuri mai complexe, puteți adăuga mai multe atribute sau puteți utiliza operatori matematici în funcția de măsurare.
 
-   > [!NOTE]
-   > În prezent, sunt acceptate doar expresiile aritmetice. În plus, calculul variabilelor nu este acceptat pentru entități din diferite [căi de entitate](relationships.md).
+   :::image type="content" source="media/measure-math-operators.png" alt-text="Creați o măsură complexă cu operatori matematici.":::
 
-10. Selectați **Terminat**.
+1. Pentru a adăuga filtre, selectați **Filtru** în zona de configurare. 
+  
+   1. În secțiunea **Adăugați un atribut** din panoul **Filtre**, selectați atributul pe care doriți să îl utilizați pentru a crea filtre.
+   1. Setați operatorii de filtrare să definească filtrul pentru fiecare atribut selectat.
+   1. Selectați **Aplicare** pentru a adăuga filtrele la măsură.
 
-11. În secțiunea **Definiție măsură**, veți defini modul în care entitățile alese și variabilele calculate sunt agregate într-o nouă entitate sau atribut de măsură.
+1. Pentru a adăuga dimensiuni, selectați **Dimensiune** în zona de configurare. Dimensiunile vor fi afișate ca coloane în entitatea de ieșire de măsurare.
+   1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex. În mod implicit, dimensiunea *CustomerID* este selectată pentru a crea *măsuri la nivel de client*. Puteți elimina dimensiunea implicită dacă doriți să creați *măsuri la nivel de afaceri*.
+   1. Selectați **Gata** pentru a adăuga dimensiunile la măsură.
 
-12. Selectați **Dimensiune nouă**. Puteți da exemplu pentru o dimensiune ca funcție a *grupare după*. Rezultatul de date al entității sau atributului dvs. de măsurare va fi grupat după toate dimensiunile dvs. definite.
+1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea Client, trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată.
+   1. Selectați **Preferințe de date** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura.
+   1. Selectați **Terminat** pentru a aplica selecția dvs. 
 
-    > [!div class="mx-imgBorder"]
-    > ![Alegeți ciclul agregat](media/measures-businessreport-measure-definition2.png "Alegeți ciclul agregat")
+   :::image type="content" source="media/measures-data-preferences.png" alt-text="Selectați entitatea cale pentru măsură.":::
 
-    Selectați sau introduceți următoarele informații ca parte a definiției dimensiunii dvs.:
+1. Pentru a adăuga mai multe calcule pentru măsură, selectați **Calcul nou**. Puteți utiliza entități pe aceeași cale de entitate numai pentru noi calcule. Mai multe calcule vor fi afișate drept coloane dnoi în entitatea de ieșire de măsurare.
 
-    - **Entitate**: Dacă definiți o entitate de măsurare, aceasta ar trebui să includă cel puțin un atribut. Dacă definiți un atribut Măsură, acesta va include în mod implicit un singur atribut. Această selecție se referă la alegerea entității care include acel atribut.
-    - **Câmp**: Alegeți atributul specific care trebuie inclus fie în entitatea dvs. Măsură, fie în atributul dvs.
-    - **Pachet**: Alegeți dacă doriți să agregați datele zilnic, lunar sau anual. Este o selecție necesară numai dacă ați selectat un atribut de tip Date.
-    - **Ca**: Definește numele noului câmp.
-    - **Nume afișat**: Definește numele afișat al câmpului dvs.
+1. Selectați **...** asupra calculului la **Duplicat**, **Redenumiți**, sau **Eliminați** un calcul dintr-o măsură.
 
-    > [!NOTE]
-    > Măsura dvs. de afaceri va fi salvată ca o entitate cu un singur număr și va apărea pe pagina **Acasă** dacă nu adăugați mai multe dimensiuni la măsura dvs. După adăugarea mai multor dimensiuni, măsura va *nu* va apărea pe pagina **Acasă**.
+1. În zona **Previzualizare**, veți vedea schema de date a entității de ieșire a măsurii, inclusiv filtre și dimensiuni. Previzualizarea reacționează dinamic la schimbările din configurație.
 
-13. Opțional, adăugați funcții de agregare. Orice agregare pe care o creați are ca rezultat o nouă valoare în entitatea sau atributul dvs. Măsuri. Funcțiile de agregare acceptate sunt: **Min**, **Max**, **În medie**, **Median**, **Sumă**, **Cont unic**, **Primul** (ia prima înregistrare a unei valori a dimensiunii) și **Ultimul** (ia ultima înregistrare la o valoare a dimensiunii).
+1. Selectați **Rulare** pentru a calcula rezultatele pentru măsura configurată. Selectați **Salvați și închideți** dacă doriți să păstrați configurația curentă și să executați măsura mai târziu.
 
-14. Selectați **Salvare** pentru a aplica modificările la măsura dvs..
+1. Accesați **Măsuri** pentru a vedea măsurarea nou creată în listă.
 
 ## <a name="manage-your-measures"></a>Gestionați-vă măsurile
 
-După ce creați cel puțin o măsură, veți vedea o listă de măsuri pe pagina **Măsuri**.
+După ce [creați o măsură](#create-a-measure), veți vedea o listă de măsuri pe pagina **Măsuri**.
 
-Veți găsi informații despre tipul de măsură, creatorul, data și ora de creare, ultima dată și oră de modificare, starea (dacă măsura este activă, inactivă sau eșuată) și ultima dată și oră de actualizare. Când selectați o măsură din listă, puteți vedea o previzualizare a rezultatului acesteia.
+Veți găsi informații despre tipul de măsură, creatorul, data creării, starea și starea. Când selectați o măsură din listă, puteți previzualiza rezultatul și descărca un fișier .CSV.
 
 Pentru a vă reîmprospăta toate măsurile în același timp, selectați **Reîmprospătați tot** fără a selecta o anumită măsură.
 
 > [!div class="mx-imgBorder"]
 > ![Acțiuni de gestionare a măsurilor unice](media/measure-actions.png "Acțiuni de gestionare a măsurilor unice")
 
-Alternativ, selectați o măsură din listă și efectuați una dintre următoarele acțiuni:
+Selectați o măsură din listă pentru următoarele opțiuni:
 
 - Selectați numele măsurii pentru a vedea detaliile acesteia.
 - **Editați** configurația măsurii.
+- **Reîmprospătați** măsura pe baza celor mai recente date.
 - **Redenumiți** măsura.
 - **Ștergeți** măsura.
-- Selectați elipsele (...) și apoi **Reîmprospătați** pentru a începe procesul de reîmprospătare pentru măsură.
-- Selectați elipsele (...) și apoi **Descărcați** pentru a obține un fișier .CSV al măsurii.
+- **Activați** sau **Dezactivați**. Măsurile inactive nu vor fi reîmprospătate în timpul unei [reîmprospătări planificate](system.md#schedule-tab).
 
 > [!TIP]
 > Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
 
 ## <a name="next-step"></a>Următorul pas
 
-Puteți utiliza măsuri existente pentru a crea primul segment de clienți pe pagina **Segmente**. Pentru mai multe informații, consultați [Segmente](segments.md).
+Utilizați cam măsurile existente pentru a crea [un segment de clienți](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

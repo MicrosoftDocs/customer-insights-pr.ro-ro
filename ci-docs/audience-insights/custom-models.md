@@ -4,16 +4,16 @@ description: Lucrați cu modele particularizate de la Învățare programată Az
 ms.date: 11/19/2020
 ms.reviewer: zacook
 ms.service: dynamics-365-ai
-ms.topic: article
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: ef248086b30b870359970529a7bfb37792be62d5
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: 34489faaecc5da1ce3dd68d799b3e0e0d9672ab7
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668918"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267249"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
 
@@ -46,15 +46,15 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 1. Alegeți serviciul web Machine Learning Studio (clasic) sau canalul Azure Machine Learning în lista verticală **Serviciu web care conține modelul dvs.**. Apoi, selectați **Următorul**.
    - Aflați mai multe despre [publicarea unui serviciu web în Machine Learning Studio (clasic)](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Aflați mai multe despre [publicarea unui canal în Azure Machine Learning folosind designerul](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) sau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). 
-     > [!NOTE]
-     > Canalul dvs. trebuie publicat sub un [punctul final al canalului](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+   - Aflați mai multe despre [publicarea unui canal în Azure Machine Learning folosind designerul](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) sau [SDK](https://docs.microsoft.com/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Canalul dvs. trebuie publicat sub un [punctul final al canalului](https://docs.microsoft.com/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pentru fiecare **Intrare serviciu web**, selectați **Entitatea** adecvată pentru Detalii despre audiență și selectați **Următorul**.
+   > [!NOTE]
+   > Fluxul de lucru al modelului personalizat va aplica euristică pentru a mapa câmpurile de intrare ale serviciului web la atributele entității pe baza numelui și tipului de date al câmpului. Veți vedea o eroare dacă un câmp de servicii web nu poate fi mapat la o entitate.
 
    > [!div class="mx-imgBorder"]
    > ![Configurați un flux de lucru](media/intelligence-screen2-updated.png "Configurați un flux de lucru")
-
+   
 1. În pasul **Parametri de ieșire model**, setați următoarele proprietăți:
    - Machine Learning Studio (clasic)
       1. Introduceți ieșirea **Numele entității** în care doriți ca rezultatele de ieșire ale serviciului web să treacă.
@@ -112,3 +112,6 @@ Fluxul dvs. de lucru rulează automat cu fiecare reîmprospătare planificată. 
 1. Selectați **Ștergere** și confirmați ștergerea.
 
 Fluxul de lucru va fi șters. [Entitatea](entities.md) care a fost creată atunci când ați creat fluxul de lucru persistă și poate fi vizualizată din pagina **Entități**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

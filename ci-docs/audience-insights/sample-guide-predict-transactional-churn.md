@@ -5,16 +5,16 @@ ms.date: 11/19/2020
 ms.reviewer: digranad
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 055708ed3f9f468cad83ecf976a460814bf05199
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 81540ad2f490cf566f031233543b3cb6aa838033
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643608"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269805"
 ---
 # <a name="transactional-churn-prediction-preview-sample-guide"></a>Ghid eșantion de predicție a retragerii tranzacționale (previzualizare)
 
@@ -49,7 +49,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    [!div class="mx-imgBorder"]
    ![Transformați data nașterii în dată](media/ecommerce-dob-date.PNG "transformare data nașterii în dată")
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
 
 1. Salvați sursa de date.
 
@@ -66,7 +66,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    - **PurchasedOn**: Dată/Oră
    - **TotalPrice**: Monedă
    
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommercePurchases**.
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommercePurchases**.
 
 1. Salvați sursa de date.
 
@@ -84,7 +84,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
    - **RewardsPoints**: Număr întreg
    - **CreatedOn**: Dată/Oră
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
+1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
 
 1. Salvați sursa de date.
 
@@ -166,7 +166,7 @@ Odată stabilite profilurile de clienți unificate, putem rula acum predicția d
 
      :::image type="content" source="media/model-levers.PNG" alt-text="Selectați pârghiile model Fereastră de predicție și Definiție retragere.":::
 
-1. Selectați **Istoricul achizițiilor (obligatoriu)** și selectați **Adăugare date** pentru istoricul abonamentelor.
+1. Selectați **Istoricul achizițiilor (obligatoriu)** și selectați **Adăugare date** pentru istoricul achizițiilor.
 
 1. Adăugați entitatea **eCommercePurchases : eCommerce** și mapați câmpurile din eCommerce la câmpurile corespunzătoare cerute de model.
 
@@ -204,3 +204,6 @@ Puteți crea un segment nou pe baza entității create de model.
 Acum aveți un segment actualizat dinamic, care identifică clienții cu risc ridicat de retragere pentru această activitate de abonamente.
 
 Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

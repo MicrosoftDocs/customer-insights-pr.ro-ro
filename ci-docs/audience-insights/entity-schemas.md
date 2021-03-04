@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 2cf01029ef6b64fe566022d09ce65bca3603189c
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643923"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269299"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
@@ -45,3 +45,6 @@ Pentru informații suplimentare, consultați documentația despre [Scheme de ent
 Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați **Încărcare de la GitHub!** buton și navigați la **foundationCommon** > **crmCommon** > **soluții** > **customerInsights** unde veți găsi lista entităților Customer Insights și a definițiilor acestora.
 > [!div class="mx-imgBorder"]
 > ![Navigator entitate CDM care arată entitatea CustomerActivity](media/CDM-entity-navigator.png "Navigator entitate CDM care arată entitatea CustomerActivity")
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

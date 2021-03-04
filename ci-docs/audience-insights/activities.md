@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 1c95cba333266a73959de0a3afe1c8677130a3ec
-ms.sourcegitcommit: 334633cbd58f5659d20b4f87252c1a10cc7130db
+ms.openlocfilehash: dcef8f0547009e1488f1abe91423fa0bf5b061de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4667244"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267447"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
@@ -44,13 +44,13 @@ Sursele dvs. de date includ entități cu date tranzacționale și de activitate
 
 1. În secțiunee **Configurați relația**, configurați detaliile pentru a conecta datele activității dvs. cu clientul corespunzător.
 
-   > [!div class="mx-imgBorder"]
-   > ![Definiți relația dintre entități](media/activities-entities-define.png "Definiți relația dintre entități")
-
     - **Câmpul entității Activitate**: Selectați câmpul din entitatea dvs. de activitate care va fi utilizat pentru a stabili o relație cu o altă entitate.
     - **Entitate client**: Selectați entitatea clientului sursă corespunzătoare cu care entitatea dvs. de activitate va fi în relație. Vă puteți raporta doar la acele entități de clienți sursă care sunt utilizate în procesul de unificare a datelor.
     - **Câmpul entității clienților**: Acest câmp arată cheia principală a entității clientului sursă, așa cum este selectată în procesul de mapare. Acest câmp cheie principal în entitatea client sursă este utilizat pentru a stabili o relație cu entitatea de activitate.
     - **Nume**: Dacă există deja o relație între această entitate de activitate și entitatea client sursă selectată, numele relației va fi în modul numai în citire. Dacă nu există o astfel de relație, se va crea o nouă relație cu numele furnizat aici.
+   
+   > [!div class="mx-imgBorder"]
+   > ![Definiți relația dintre entități](media/activities-entities-define.png "Definiți relația dintre entități")
 
 1. Selectați **Salvare** pentru a vă aplica modificările.
 
@@ -82,3 +82,6 @@ Sursele dvs. de date includ entități cu date tranzacționale și de activitate
 3. Selectați pictograma **Ștergeți**.
 
 4. Confirmați ștergerea.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

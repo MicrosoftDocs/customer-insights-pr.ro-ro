@@ -1,26 +1,26 @@
 ---
 title: Îmbogățiți profilurile clienților cu Microsoft Graph
 description: Utilizați datele de proprietate din Microsoft Graph pentru a îmbogăți datele clienților dvs. cu afinități de marcă și interes.
-ms.date: 09/28/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4f93a2337815f76b98185ecb3755e08443031748
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 2c95369c778f592bc1460799aca0fa8cff813d68
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406674"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269345"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
 
 Utilizați datele de proprietate din Microsoft Graph pentru a îmbogăți datele clienților dvs. cu afinități de marcă și interes. Aceste afinități sunt determinate pe baza datelor de la persoane cu o demografie similară pentru clienții dvs. Aceste informații vă ajută să vă înțelegeți și să vă segmentați mai bine clienții în funcție de afinitățile lor către anumite mărci și interese.
 
-În Detalii despre audiență, accesați **Date** > **Îmbogățire** pentru a [configura și vizualiza îmbogățiri](enrichment-hub.md).
+În detalii despre audiență, accesați **Date** > **Îmbogățire** pentru a [configura și vizualiza îmbogățiri](enrichment-hub.md).
 
 Pentru a configura îmbogățirea afinităților de marcă, accesați fila **Descoperire** și selectați **Îmbogățiți-mi datele** pe dala **Mărci**.
 
@@ -35,16 +35,21 @@ Folosim datele de căutare online din Microsoft Graph pentru a găsi afinități
 
 [Aflați mai multe despre Microsoft Graph](https://docs.microsoft.com/graph/overview).
 
-## <a name="affinity-score-and-confidence"></a>Scorul de afinitate și încrederea
+## <a name="affinity-level-and-score"></a>Nivelul și scorul de afinitate
 
-**Scorul de afinitate** este calculat pe o scară de 100 de puncte, 100 reprezentând segmentul care are cea mai mare afinitate pentru o marcă sau interes.
+Pe fiecare profil de client îmbogățit, oferim două valori conexe - nivelul de afinitate și scorul de afinitate. Aceste valori vă ajută să determinați cât de puternică este afinitatea pentru segmentul demografic al profilului respectiv, pentru un brand sau interes, în comparație cu alte segmente demografice.
 
-**Încredere în afinitate** se calculează, de asemenea, pe o scară de 100 de puncte. Indică nivelul de încredere al sistemului că un segment are afinitate pentru brand sau interes. Nivelul de încredere se bazează pe mărimea segmentului și pe granularitatea segmentului. Mărimea segmentului este determinată de cantitatea de date pe care o avem pentru un segment dat. Granularitatea segmentului este determinată de câte atribute (vârstă, sex, locație) sunt disponibile într-un profil.
+*Nivelul de afinitate* este format din patru niveluri și *scor de afinitate* este calculat pe o scară de 100 de puncte care se mapează la nivelurile de afinitate.
 
-Nu normalizăm scorurile pentru setul dvs. de date. În consecință, este posibil să nu vedeți toate valorile posibile ale scorului de afinitate pentru setul dvs. de date. De exemplu, este posibil să nu existe un profil de clienți îmbogățit cu scorul de afinitate 100 în datele dvs. Acest lucru este posibil dacă nu există clienți în segmentul demografic care a înregistrat un scor de 100 pentru o anumită marcă sau interes.
 
-> [!TIP]
-> Când [creați segmente](segments.md) utilizând scoruri de afinitate, consultați distribuția scorurilor de afinitate pentru setul de date înainte de a decide cu privire la pragurile de scor corespunzătoare. De exemplu, un scor de afinitate de 10 poate fi considerat semnificativ într-un set de date care are un scor de afinitate cel mai mare de doar 25 pentru o anumită marcă sau interes.
+|Nivelul de afinitate |Scor de afinitate  |
+|---------|---------|
+|Foarte mare     | 85-100       |
+|Înalt     | 70-84        |
+|Mediu     | 35-69        |
+|Redusă     | 1-34        |
+
+În funcție de granularitatea pe care doriți să o măsurați afinitatea, puteți utiliza fie nivelul de afinitate, fie punctajul. Scorul de afinitate vă oferă un control mai precis.
 
 ## <a name="supported-countriesregions"></a>Țări / regiuni acceptate
 
@@ -54,30 +59,36 @@ Pentru a selecta o țară, deschideți **Îmbogățirea mărcilor** sau **Îmbog
 
 ### <a name="implications-related-to-country-selection"></a>Implicații legate de selecția țării
 
-- La [alegerea propriilor mărci](#define-your-brands-or-interests), vom oferi sugestii în funcție de țara/regiunea selectată.
+- Când [alegeți propriile mărci](#define-your-brands-or-interests), sistemul oferă sugestii pe baza țării sau regiunii selectate.
 
-- Când [alegeți o industrie](#define-your-brands-or-interests), vom identifica cele mai relevante mărci sau interese pe baza țării/regiunii selectate.
+- Când [alegeți o industrie](#define-your-brands-or-interests), veți obține cele mai relevante mărci sau interese în funcție de țara sau regiunea selectată.
 
-- La [maparea câmpurilor dvs.](#map-your-fields), când câmpul Țară/Regiune nu este mapat, vom folosi datele Microsoft Graph din țara/regiunea selectată pentru a vă îmbogăți profilurile de clienți. De asemenea, vom folosi respectiva selecție pentru a vă îmbogăți profilurile de clienți care nu au date de țară/regiune disponibile.
-
-- La [îmbogățirea profilurilor](#refresh-enrichment), vom îmbogăți toate profilurile clienților pentru care avem date Microsoft Graph disponibile pentru mărcile și interesele selectate, inclusiv profilurile care nu sunt în țara/regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date Microsoft Graph disponibile pentru mărcile și interesele selectate din SUA.
+- Când [îmbogățim profiluri](#refresh-enrichment), vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și interesele selectate. Inclusiv profiluri care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date Microsoft Graph disponibile pentru mărcile și interesele selectate din SUA.
 
 ## <a name="configure-enrichment"></a>Configurați îmbogățirea
 
-Configurarea îmbogățirii mărcilor sau intereselor constă în doi pași:
-
 ### <a name="define-your-brands-or-interests"></a>Definiți-vă brandurile sau interesele
 
-Selectaţi una dintre următoarele opţiuni:
+Selectați una dintre următoarele opțiuni:
 
 - **Industrie**: Sistemul identifică cele mai importante mărci sau interese relevante pentru industria dvs. și îmbogățește datele clientului cu acestea.
 - **Alegeți-vă una proprie**: Selectați până la cinci articole din lista mărcilor sau a intereselor care sunt cele mai relevante pentru organizația dvs.
 
 Pentru a adăuga o marcă sau interes, introduceți-o în zona de intrare pentru a primi sugestii bazate pe termeni potriviți. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
 
+### <a name="review-enrichment-preferences"></a>Recenzie preferințe de îmbogățire
+
+Examinați preferințele implicite de îmbogățire și actualizați-le după cum este necesar.
+
+:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captură de ecran a ferestrei preferințelor de îmbogățire.":::
+
+### <a name="select-entity-to-enrich"></a>Selectați entitatea de îmbogățit
+
+Selectați **Entitate îmbogățită** și alegeți setul de date pe care doriți să îl îmbogățiți cu date de companie din Microsoft Graph. Puteți selecta entitatea Client pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+
 ### <a name="map-your-fields"></a>Mapați câmpurile
 
-Mapați câmpurile de la entitatea dvs. de client unificată la cel puțin două atribute pentru a defini segmentul demografic pe care doriți să îl utilizați pentru îmbogățirea datelor clientului dvs. Selectați **Editați** pentru a defini maparea câmpurilor și selectați **Aplicare** când ați terminat. Selectați **Salvați** pentru a finaliza maparea câmpului.
+Hartați câmpurile de la entitatea dvs. client unificată pentru a defini segmentul demografic pe care doriți să îl utilizeze sistemul pentru îmbogățirea datelor despre clienți. Mapați Țară/Regiune și cel puțin Data nașterii sau atributele de gen. În plus, trebuie să mapați cel puțin unul dintre oraș (și stat/provincie) sau cod poștal. Selectați **Editați** pentru a defini maparea câmpurilor și selectați **Aplicare** când ați terminat. Selectați **Salvați** pentru a finaliza maparea câmpului.
 
 Următoarele formate și valori sunt acceptate, valorile nu sunt sensibile la litere mari și mici:
 
@@ -120,3 +131,6 @@ Afinitățile de marcă și interes pot fi, de asemenea, vizualizate pe carduri 
 ## <a name="next-steps"></a>Următorii pași
 
 Creați în plus față de datele îmbogățite ale clienților. Creați [Segmente](segments.md), [Măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

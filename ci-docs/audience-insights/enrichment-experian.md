@@ -1,20 +1,20 @@
 ---
 title: Îmbogățire cu îmbogățiri terță parte Experian
 description: Informații generale despre îmbogățirea terță parte Experian.
-ms.date: 09/17/2020
+ms.date: 12/10/2020
 ms.reviewer: kishorem
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 60fc49734e54740e83b47a7028be216a0eb81e49
-ms.sourcegitcommit: a9b2cf598f256d07a48bba8617347ee90024a1dd
+ms.openlocfilehash: baf3cc58a233b70c48fb94ac4a543d162f91bdd1
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "4668827"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269575"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Îmbogățirea profilurilor clienților cu date demografice de la Experian (previzualizare)
 
@@ -41,7 +41,9 @@ Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealab
 
 ## <a name="map-your-fields"></a>Mapați câmpurile
 
-1. Selectați **Adăugare date** și alegeți identificatorii cheie din **Numele și adresa**, **E-mail**, sau **Telefon** pentru trimitere la Experian pentru rezolvarea identității.
+1.  Selectați **Adăugați date** și alegeți **Set de date client** pe care doriți să îl îmbogățiți cu date demografice din Experian. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+
+1. Selectați identificatorii cheie din **Numele și adresa**, **E-mail**, sau **Telefon** pentru a trimite la Experian pentru rezolvarea identității.
 
    > [!TIP]
    > Mai multe atribute de identificare cheie trimise către Experian generează probabil o rată de potrivire mai mare.
@@ -52,8 +54,8 @@ Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealab
 
 1.  Selectați **Salvați** pentru a finaliza maparea câmpului.
 
-   > [!div class="mx-imgBorder"]
-   > ![Mapare câmp Experian](media/experian-field-mapping.png "Mapare câmp Experian")
+    > [!div class="mx-imgBorder"]
+    > ![Mapare câmp Experian](media/experian-field-mapping.png "Mapare câmp Experian")
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
@@ -71,3 +73,6 @@ Creați în plus față de datele îmbogățite ale clienților. Creați [segmen
 
 Când activați Dynamics 365 Customer Insights pentru a transmite date către Experian, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Experian îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administratorul Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

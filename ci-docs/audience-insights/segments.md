@@ -4,17 +4,17 @@ description: Creați segmente de clienți pentru a îi grupa pe baza diferitelor
 ms.date: 10/15/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: jimsonc
 manager: shellyha
-ms.openlocfilehash: 6931110c2ae93cd2792d319aa5a34f0df3088552
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406714"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270371"
 ---
 # <a name="create-and-manage-segments"></a>Crearea și gestionarea segmentelor
 
@@ -222,3 +222,6 @@ Pentru scenariile următoare, vă recomandăm să folosiți constructorul de seg
 ## <a name="next-steps"></a>Următorii pași
 
 [Exportați un segment](export-destinations.md) și explorați [Card client](customer-card-add-in.md) și [Conectori](export-power-bi.md) pentru a obține informații despre nivelul clientului.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

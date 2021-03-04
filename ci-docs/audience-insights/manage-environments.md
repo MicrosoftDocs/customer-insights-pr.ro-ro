@@ -1,20 +1,20 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 11/10/2020
+ms.date: 02/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 ms.reviewer: nimagen
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 010336445d0825a7ff82d1b7a65702fc12245788
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 744f0bcbf5d2700363180f44e38d6dee9bf5df63
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4644148"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270127"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -46,9 +46,9 @@ Există două moduri de a crea un mediu nou. Puteți fie specifica o configuraț
 
 Pentru crearea unui mediu:
 
-1. Selectați simbolul **Setări** în antetul aplicației.
+1. Selectați selectorul **Mediu** în antetul aplicației.
 
-1. Selectați **Mediu nou**.
+1. Selectați **Nou**.
 
    > [!div class="mx-imgBorder"]
    > ![Setări ale mediului](media/environment-settings-dialog.png)
@@ -75,7 +75,14 @@ Pentru crearea unui mediu:
 
    - Pentru opțiunea Azure Data Lake Storage Gen2, puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi „customerinsights”.
    
-   - Dacă doriți să utilizați [predicții](predictions.md), introduceți URL-ul instanței Common Data Service în câmpul **Adresa serverului** sub **Folosiți predicții**.
+   - Dacă doriți să utilizați [predicții](predictions.md) sau configurați partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, furnizați adresa URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și să activeze capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
+
+     > [!NOTE]
+     > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
+     > - [Predicția valorilor lipsă într-o entitate](predictions.md) momentan nu este acceptată atunci când activați partajarea datelor cu Microsoft Dataverse Data Lake gestionat.
+
+     > [!div class="mx-imgBorder"]
+     > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
 
    Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate la subfolderele respective pe baza procesului pe care îl derulați.
 
@@ -86,7 +93,7 @@ Pentru crearea unui mediu:
 Sunt copiate următoarele setări de configurare:
 
 - Configurații caracteristică
-- Surse de date incluse/importate
+- Surse de date ingerate/importate
 - Configurarea unificării datelor (mapare, potrivire, îmbinare)
 - Segmente
 - Măsuri
@@ -120,11 +127,11 @@ Când unificarea datelor este completă, accesați **Măsuri** și **Segmente** 
 
 Puteți edita câteva dintre detaliile mediilor existente.
 
-1. Accesați **Administrare** > **Sistem** > **Despre**.
+1.  Selectați selectorul **Mediu** în antetul aplicației.
 
-2. Selectați **Editare**.
+2.  Selectați pictograma **Editare**.
 
-3. Puteți actualiza **Numele afișat** al mediului, dar nu puteți schimba **Regiunea** sau **Tipul**.
+3. În caseta **Editați mediul**, puteți actualiza **Numele afișat** al mediului, dar nu puteți schimba **Regiune** sau **Tip**.
 
 4. Dacă un mediu este configurat pentru a stoca date în Azure Data Lake Storage Gen2, puteți actualiza **Cheia contului**. Cu toate acestea, nu puteți schimba **Numele de cont** sau numele **Containerului**.
 
@@ -132,19 +139,27 @@ Puteți edita câteva dintre detaliile mediilor existente.
 
 ## <a name="reset-an-existing-environment"></a>Resetați un mediu existent
 
-Puteți reseta un mediu la o stare goală dacă doriți să ștergeți toate configurațiile și să eliminați datele ingerate.
+Ca administrator, puteți reseta un mediu la o stare goală dacă doriți să ștergeți toate configurațiile și să eliminați datele ingerate.
 
-1.  Accesați **Administrare** > **Sistem** > **Despre**.
+1.  Selectați selectorul **Mediu** în antetul aplicației. 
 
-2.  Selectați **Resetare**. 
+2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie **...**. 
 
-3.  Pentru a confirma ștergerea, introduceți numele mediului și selectați **Resetare**.
+3. Alegeți opțiunea **Resetați**. 
+
+4.  Pentru a confirma ștergerea, introduceți numele mediului și selectați **Resetare**.
+
+## <a name="delete-an-existing-environment-available-only-for-admins"></a>Ștergeți un mediu existent (disponibil numai pentru administratori)
+
+În calitate de administrator, puteți șterge un mediu pe care îl administrați.
+
+1.  Selectați selectorul **Mediu** în antetul aplicației.
+
+2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie **...**. 
+
+3. Alegeți opțiunea **Ștergere**. 
+
+4.  Pentru a confirma ștergerea, introduceți numele mediului și selectați **Ștergere**.
 
 
-## <a name="delete-an-existing-environment"></a>Ștergerea unui mediu existent
-
-1. Accesați **Administrare** > **Sistem** > **Despre**.
-
-1. Selectați **Ștergere**.
-
-1. Pentru a confirma ștergerea, introduceți numele mediului și selectați **Ștergere**.
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

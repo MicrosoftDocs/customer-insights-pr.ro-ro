@@ -4,17 +4,17 @@ description: Asociați entitățile pentru a crea profiluri de clienți unificat
 ms.date: 10/14/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: 78549037f9c9e59329f5423c36eeb058128802c0
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406703"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267493"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -22,7 +22,7 @@ După finalizarea fazei hărții, sunteți gata să vă potriviți entitățile.
 
 ## <a name="specify-the-match-order"></a>Specificați ordinea de potrivire
 
-Accesați **Unificat** > **Potrivire** și selectați **Setare ordine** pentru a începe faza de potrivire.
+Accesați **Date** > **Unifica** > **Potrivire** și selectați **Setați ordinea** pentru a începe faza de potrivire.
 
 Fiecare potrivire unifică două sau mai multe entități într-o singură entitate, persistând în același timp fiecare înregistrare unică de client. În exemplul următor, am selectat trei entități: **ContactCSV: TestData** ca entitate **Principală**, **WebAccountCSV: TestData** ca **Entitate 2** și **CallRecordSmall: TestData** ca **Entitate 3**. Diagrama de deasupra selecțiilor ilustrează modul în care va fi executată ordinea de potrivire.
 
@@ -136,7 +136,7 @@ După identificarea unei înregistrări de eliminare a informațiilor duplicate,
 
 1. Rularea procesului de potrivire grupează acum înregistrările pe baza condițiilor definite în regulile de eliminare a informațiilor duplicate. După gruparea înregistrărilor, politica de îmbinare este aplicată pentru a identifica înregistrarea câștigătoare.
 
-1. Această înregistrare câștigătoare este apoi transmisă la potrivirea între entități.
+1. Această înregistrare a câștigătorului este apoi transmisă potrivirii între entități, împreună cu înregistrările non-câștigătoare (de exemplu, ID-uri alternative) pentru a îmbunătăți calitatea potrivirii.
 
 1. Orice regulă de potrivire personalizată definită pentru potrivire întotdeauna și nu se potrivește niciodată anulează regulile de eliminare a informațiilor duplicate. Dacă o regulă de eliminare a informațiilor duplicate identifică înregistrările de potrivire și o regulă de potrivire personalizată este setată să nu se potrivească niciodată cu aceste înregistrări, atunci aceste două înregistrări nu vor fi potrivite.
 
@@ -157,6 +157,17 @@ Primul proces de potrivire are ca rezultat crearea unei entități principale un
 
 > [!TIP]
 > Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+
+## <a name="deduplication-output-as-an-entity"></a>Ieșire de deduplicare ca entitate
+În plus față de entitatea principală unificată creată ca parte a potrivirii între entități încrucișate, procesul de deduplicare generează și o entitate nouă pentru fiecare entitate din ordinul de potrivire pentru a identifica înregistrările deduplicate. Aceste entități pot fi găsite împreună cu **ConflationMatchPairs: CustomerInsights** în secțiunea **Sistem** din pagina **Entități**, cu numele **Deduplication_Datasource_Entity**.
+
+O entitate de ieșire de deduplicare conține următoarele informații:
+- ID-uri / Chei
+  - Câmpul cheie primară și câmpul său ID-uri alternative. Câmpul ID-uri alternative constă din toate ID-urile alternative identificate pentru o înregistrare.
+  - Câmpul Deduplication_GroupId arată grupul sau clusterul identificat în cadrul unei entități care grupează toate înregistrările similare pe baza câmpurilor de deduplicare specificate. Acesta este utilizat în scopuri de procesare a sistemului. Dacă nu sunt specificate reguli de deduplicare manuală și se aplică reguli de deduplicare definite de sistem, este posibil să nu găsiți acest câmp în entitatea de ieșire a deduplicării.
+  - Deduplication_WinnerId: Acest câmp conține ID-ul câștigător din grupurile sau clusterele identificate. Dacă Deduplication_WinnerId este aceeași cu valoarea cheii principale pentru o înregistrare, înseamnă că înregistrarea este înregistrarea câștigătoare.
+- Câmpuri utilizate pentru definirea regulilor de deduplicare.
+- Câmpurile Regulă și Scor pentru a indica care dintre regulile de deduplicare s-au aplicat și scorul returnat de algoritmul de potrivire.
 
 ## <a name="review-and-validate-your-matches"></a>Examinați și validați-vă potrivirile
 
@@ -200,6 +211,11 @@ Evaluați calitatea perechilor de potrivire și rafinați-o:
   > [!div class="mx-imgBorder"]
   > ![Duplicați o regulă](media/configure-data-duplicate-rule.png "Duplicați o regulă")
 
+- **Dezactivați o regulă** pentru a păstra o regulă de potrivire în timp ce o excludeți din procesul de potrivire.
+
+  > [!div class="mx-imgBorder"]
+  > ![Dezactivați o regulă](media/configure-data-deactivate-rule.png "Dezactivați o regulă")
+
 - **Editați regulile** selectând simbolul **Editare**. Puteți aplica următoarele modificări:
 
   - Modificați atributele pentru o condiție: Selectați noi atribute în rândul de condiții specifice.
@@ -229,6 +245,8 @@ Puteți specifica condițiile la care anumite înregistrări trebuie să se potr
     - Entity2Key: 34567
 
    Același fișier șablon poate specifica înregistrări de potrivire particularizată de la mai multe entități.
+   
+   Dacă doriți să specificați potrivirea personalizată pentru deduplicare pe o entitate, furnizați aceeași entitate ca și Entity1 și Entity2 și setați diferitele valori ale cheii primare.
 
 5. După adăugarea tuturor suprascrierilor pe care doriți să le aplicați, salvați fișierul șablon.
 
@@ -250,3 +268,6 @@ Puteți specifica condițiile la care anumite înregistrări trebuie să se potr
 ## <a name="next-step"></a>Următorul pas
 
 După finalizarea procesului de potrivire pentru cel puțin o pereche de potrivire, puteți rezolva posibilele contradicții din datele dvs. parcurgând subiectul [**Îmbinare**](merge-entities.md).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

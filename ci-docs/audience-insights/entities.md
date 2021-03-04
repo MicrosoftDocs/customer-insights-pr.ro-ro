@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: e3f41c0424b2cd756d72ae6af9d5225ebba92628
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: e71c69a6207147d8cd65363d51a5fa6bbf896151
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406673"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269391"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
@@ -57,3 +57,6 @@ Selectați pictograma diagramă pentru a vedea rezumatul datelor.
 ### <a name="next-step"></a>Următorul pas
 
 Consultați subiectul [Unificare](data-unification.md) pentru a afla despre cum să *mapați*, *potriviți*, și *combinați* datele ingerate.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

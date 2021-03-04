@@ -1,7 +1,7 @@
 ---
 title: Configurarea sistemului în Detalii despre public
 description: Aflați despre setările sistemului în capabilitatea de detalii privind publicul Dynamics 365 Customer Insights.
-ms.date: 06/02/2020
+ms.date: 02/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,25 +9,30 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: nimagen
 manager: shellyha
-ms.openlocfilehash: 7dd72e6512cd87ac70235d21667399298408db21
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: a9c9e258da49b8f452550794539962d48b856829
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406706"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267355"
 ---
 # <a name="system-configuration"></a>Configurări sistem
 
-Pagina **Sistem** include patru file: **Stare**, **Planificare**, **Despre** și **General**.
+Pagina **Sistem** include următoarele file:
+- [Stare](#status-tab)
+- [Planificare](#schedule-tab)
+- [Utilizare API](#api-usage-tab)
+- [Despre](#about-tab)
+- [General](#general-tab)
 
 > [!div class="mx-imgBorder"]
 > ![Pagina de sistem](media/system-tabs.png "Pagina de sistem")
 
 ## <a name="status-tab"></a>Fila Stare
 
-Fila **Stare** vă permite să urmăriți progresul ingestiei de date, exporturile de date, și mai multe procese importante ale produsului. Consultați informațiile din această filă pentru a vă asigura că procesele active sunt complete.
+**Fila Stare** vă permite să urmăriți progresul ingerării datelor, exporturilor de date și alte câteva procese importante ale produselor. Consultați informațiile din această filă pentru a vă asigura că procesele active sunt complete.
 
-Această filă include tabele de stare pentru **Sursele de date**, **Procesele de sistem**, și **Pregătirea datelor**. Fiecare tabel urmărește **Numele** activității și entitatea corespunzătoare, **Starea** celei mai recente rulări și când a fost **Ultima actualizare**.
+Această filă include tabele cu informații de stare și procesare pentru diferite procese. Fiecare tabel urmărește **Numele** activității și entitatea corespunzătoare, **Starea** celei mai recente rulări și când a fost **Ultima actualizare**.
 
 Vizualizați detaliile ultimelor câteva rulări ale activității selectând numele acesteia.
 
@@ -40,7 +45,7 @@ Sunt șase tipuri de stări pentru sarcini. Următoarele tipuri de stare apar ș
 - **Omis:** Sarcina a fost omisă. Unul sau mai multe dintre procesele din aval de care depinde această sarcină eșuează sau sunt omise.
 - **Eșec:** Procesarea sarcinii a eșuat.
 - **Anulat:** Procesarea a fost anulată de către utilizator înainte de finalizarea acesteia.
-- **În coadă:** Prelucrarea este pusă în coadă și va începe odată ce toate sarcinile din aval sunt finalizate. Pentru mai multe informații, consultați [politici reîmprospătare](#refresh-policies).
+- **În așteptare:** Procesarea este pusă în așteptare și va începe odată ce toate sarcinile din amonte sunt finalizate. Pentru mai multe informații, consultați [politici reîmprospătare](#refresh-policies).
 
 ### <a name="refresh-policies"></a>Politici de reîmprospătare
 
@@ -89,4 +94,17 @@ Selectați **Salvare** pentru a confirma selecțiile.
 
 ## <a name="api-usage-tab"></a>Filă utilizare API
 
-Găsiți detalii despre utilizarea API în timp real și vedeți ce evenimente s-au întâmplat într-un interval de timp dat. Pentru mai multe informații, consultați [Ingestie date în timp real](real-time-data-ingestion.md).
+Găsiți detalii despre utilizarea API-ului în timp real și vedeți ce evenimente s-au întâmplat într-un anumit interval de timp. Alegeți intervalul de timp în meniul derulant **Selectați un interval de timp**. 
+
+**Utilizarea API** conține trei secțiuni: 
+- **Apeluri API** - o diagramă care vizualizează numărul agregat de apeluri către API în intervalul de timp selectat.
+
+- **Transfer de date** - o diagramă care arată cantitatea de date care a fost transferată prin API în intervalul de timp selectat.
+
+-  **Operațiuni** - un tabel cu rânduri pentru fiecare operațiune API disponibilă și detalii despre utilizarea operațiunilor. Puteți selecta un nume de operație pentru a accesa [referința API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
+
+   Operațiuni care utilizează [ingestie de date în timp real](real-time-data-ingestion.md) conțin un buton cu un simbol binocular pentru a vizualiza utilizarea API-ului în timp real. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.   
+   Utilizați caseta **Grupare după** din panoul **Utilizare API în timp real** pentru a alege cum să vă prezentați cel mai bine interacțiunile în timp real. Puteți grupa datele după metoda API, numele calificat de entitate (entitatea ingerată), creat de (sursa evenimentului), rezultat (succes sau eșec) sau coduri de eroare. Datele sunt disponibile ca un grafic istoric și ca un tabel.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

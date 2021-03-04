@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
-ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
+ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/06/2020
-ms.locfileid: "4689190"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5270295"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
@@ -83,6 +83,7 @@ Detalii despre acest API, inclusiv parametrii și răspunsurile, pot fi găsite 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Înțelegeți utilizarea dvs. în timp real cu telemetria
 
-Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#api-usage-tab) mergând la **Admin** > **Sistem** > **Utilizare API**. În tabelul **Operațiuni**, rândurile pentru operațiunile API care utilizează metodele în timp real conțin un buton pentru a vizualiza utilizarea API în timp real. Butonul este vizualizat cu un simbol de binoclu. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.
+Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#api-usage-tab). 
 
-Folosiți selectorul **Grupare după** pentru a alege cum să prezentați cel mai bine interacțiunile în timp real pe o cronologie cuprinsă între ultimele 24 de ore și ultimele 30 de zile. Puteți grupa datele după metoda API, numele calificat de entitate (entitatea ingerată), creat de (sursa evenimentului), rezultat (succes sau eșec) sau coduri de eroare. Datele sunt disponibile ca un grafic istoric și ca un tabel.
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -1,20 +1,20 @@
 ---
 title: Exportați datele Customer Insights către Dynamics 365 Sales
 description: Aflați cum puteți configura conexiunea la Dynamics 365 Sales.
-ms.date: 08/21/2020
+ms.date: 02/01/2021
 ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: af0824e69dfdf620a0ac756e32a9bd3dd85e5151
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643833"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269023"
 ---
 # <a name="connector-for-dynamics-365-sales-preview"></a>Conector pentru Dynamics 365 Sales (previzualizare)
 
@@ -24,7 +24,10 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 
 ## <a name="prerequisite"></a>Cerințe preliminare
 
-Înregistrări de contact [din Dynamics 365 Sales ingerate folosind Common Data Service](connect-power-query.md).
+1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Sales folosind Common Data Services](connect-power-query.md).
+
+   > [!NOTE]
+   > Exportul de segmente din perspectivele publicului către Sales nu va crea noi înregistrări de contact în instanțele de Sales. Înregistrările de contact din Sales trebuie să fie ingerate în statistici ale publicului și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
 
 ## <a name="configure-the-connector-for-sales"></a>Configurați conectorul pentru Vânzări
 
@@ -49,3 +52,6 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 ## <a name="export-the-data"></a>Exportați datele
 
 Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab).
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

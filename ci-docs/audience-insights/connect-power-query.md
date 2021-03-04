@@ -5,16 +5,16 @@ ms.date: 09/29/2020
 ms.reviewer: adkuppa
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 8a170cc5b64b4b383501021232c83948e838a0e2
-ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.openlocfilehash: d51a7efa5fd9f7336d1662500eb804a674738493
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "4406686"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267787"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la o sursă de date Power Query
 
@@ -28,7 +28,10 @@ Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea ac
 
 1. Alegeți metoda **Importați date** și selectați **Următorul**.
 
-1. Furnizați un **Nume** pentru sursa de date și selectați **Următorul** pentru a crea sursă de date.
+1. Furnizați un **Nume** pentru sursa de date și selectați **Următorul** pentru a crea sursă de date. Numire recomandări: 
+   - Începeți cu o literă.
+   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
+   - Folosiți între 3 și 64 de caractere.
 
 1. Alegeți unul dintre [conectorii disponibili](#available-power-query-data-sources). Pentru acest exemplu, selectăm conectorul **Text/CSV**.
 
@@ -77,3 +80,6 @@ Conectori cu bifă în coloana **Customer Insights (fluxuri de date)** sunt disp
 3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** așa cum au fost descrise în secțiunea [Creați o nouă sursă de date](#create-a-new-data-source).
 
 4. Selectați **Salvare** în Power Query după finalizarea modificărilor pentru a salva modificările.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

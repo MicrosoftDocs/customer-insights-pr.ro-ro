@@ -4,17 +4,17 @@ description: Importați date dintr-un Common Data Service Data Lake gestionat.
 ms.date: 09/29/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
 ms.reviewer: adkuppa
-ms.openlocfilehash: 029857e2bbb5f6357a5c01138ceaad78887b7518
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 18b6cd3fdaf5b738877a73b520b91dbc6ded40de
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643413"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5267829"
 ---
 # <a name="connect-to-data-in-a-common-data-service-managed-data-lake"></a>Conectați-vă la date într-un data lake gestionat Common Data Service
 
@@ -34,7 +34,10 @@ Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocat
 
 3. Selectați **Conectați-vă la Common Data Service** și selectați **Următorul**.
 
-4. Introduceți un **Nume** pentru sursa de date și selectați **Următorul**.
+4. Introduceți un **Nume** pentru sursa de date și selectați **Următorul**. Numire recomandări: 
+   - Începeți cu o literă.
+   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
+   - Folosiți între 3 și 64 de caractere.
 
 5. Furnizați **Adresa serverului** pentru organizația dvs. Common Data Service și selectați **Autentificare**.
 
@@ -65,3 +68,6 @@ Pentru a vă conecta la un Common Data Service diferit, [creați o sursă de dat
 3. Selectați opțiunea **Editare** din listă.
 
 4. Selectați entități suplimentare din lista de entități disponibile și selectați **Salvați**.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

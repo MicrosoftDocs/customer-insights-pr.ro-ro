@@ -9,14 +9,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: adkuppa
 manager: shellyha
-ms.openlocfilehash: a720641f7499fc71ff5bceeba48d296c51f77242
-ms.sourcegitcommit: 6a6df62fa12dcb9bd5f5a39cc3ee0e2b3988184b
+ms.openlocfilehash: 68aa1b56fb634da80a0c64db72f778d57507104d
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "4643968"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269713"
 ---
-# <a name="overview-about-data-sources"></a>Prezentare generală pentru surse de date
+# <a name="data-sources-overview"></a>Prezentare generală surse de date
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
@@ -47,9 +47,9 @@ Veți vedea numele fiecărei surse de date ingerate, starea acesteia și ultima 
 |Reușit   |Sursa de date a fost ingerată cu succes dacă este menționat un timp în coloana **Reîmprospătat**.
 |Neînceput   |Sursa de date nu are încă date ingerate sau este încă în modul schiță.         |
 |Se reîmprospătează    |Ingestia datelor este în curs. Aveți posibilitatea de a revoca această operațiune selectând **Oprire reîmprospătare** în coloana **Acțiuni**. Oprirea reîmprospătării unei surse de date o va readuce la ultima stare de reîmprospătare.       |
-|Nereuşit     |Ingerarea de date s-a efectuat cu erori.         |
+|Nereușite     |Ingerarea de date s-a efectuat cu erori.         |
 
-Selectați **Reîmprospătare stare** pentru a revizui mai multe detalii despre starea de reîmprospătare, inclusiv detalii despre erori și actualizări de proces descendent.
+Selectați valoarea în coloana **Stare** a oricărei sursă de date pentru a revizui mai multe detalii. În panoul **Detalii despre progres**, extindeți **Surse de date**. Selectați **Consultați detalii** pentru mai multe informații despre starea de reîmprospătare, inclusiv detalii despre erori și actualizări de proces descendent.
 
 Încărcarea datelor ar putea lua ceva timp. După o reîmprospătare reușită, datele ingerate pot fi revizuite din pagina **Entități**. Pentru mai multe informații, consultați [Entități](entities.md).
 
@@ -76,3 +76,6 @@ Pentru a actualiza o sursă de date la cerere, urmați acești pași:
 2. Selectați elipsa verticală de lângă sursa de date pe care doriți să o eliminați și selectați **Ștergeți** din meniul cu selectare multiplă.
 
 3. Confirmați ștergerea.
+
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]

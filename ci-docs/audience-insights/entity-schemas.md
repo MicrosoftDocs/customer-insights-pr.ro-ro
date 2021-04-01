@@ -2,25 +2,25 @@
 title: Scheme de entități Customer Insights din Common Data Model
 description: Lucrul cu entități din Common Data Model.
 ms.date: 04/17/2020
-ms.reviewer: mukeshpo
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 9e7a6e944d37d25f4c25846644278b39b3ddd08e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269299"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596376"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-[Common Data Model](https://docs.microsoft.com/common-data-model/) este o specificație declarativă și o definiție a entităților standard care reprezintă concepte și activități utilizate în mod obișnuit în aplicațiile de afaceri și de productivitate. Acest model este extins și la date observaționale și analitice. Common Data Model oferă entități de afaceri bine definite, modulare și extensibile - cum ar fi Cont, unitate de afaceri, caz, persoană de contact, client potențial, oportunitate și produs - precum și interacțiuni cu furnizorii, lucrătorii și clienții - cum ar fi activități și acorduri privind nivelul serviciului. Oricine poate construi și extinde definițiile Common Data Model pentru a capta idei suplimentare specifice afacerii.
+[Common Data Model](/common-data-model/) este o specificație declarativă și o definiție a entităților standard care reprezintă concepte și activități utilizate în mod obișnuit în aplicațiile de afaceri și de productivitate. Acest model este extins și la date observaționale și analitice. Common Data Model oferă entități de afaceri bine definite, modulare și extensibile - cum ar fi Cont, unitate de afaceri, caz, persoană de contact, client potențial, oportunitate și produs - precum și interacțiuni cu furnizorii, lucrătorii și clienții - cum ar fi activități și acorduri privind nivelul serviciului. Oricine poate construi și extinde definițiile Common Data Model pentru a capta idei suplimentare specifice afacerii.
 
 Acest model de date partajat permite aplicațiilor și integratorilor de date să colaboreze mai ușor prin furnizarea unei definiții unificate a datelor. Common Data Model include un sistem bogat de metadate cu entități standard, relații, ierarhii, trăsături și multe altele. Provine din aplicațiile Dynamics 365, cu sursă deschisă la GitHub, cu peste 260 de entități standard. Un sistem mare de parteneri interni și externi contribuie cu concepte specifice industriei la Common Data Model.
 
@@ -32,13 +32,13 @@ Pentru a stabili o vedere la 360 de grade a clientului și pentru a face disponi
 
 | Entitate | Descriere |
 |---------|---------|
-|[CustomerActivity](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Activitate realizată de un utilizator care are valoare de observație pentru companie. |
-|[Profil client](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | O persoană sau organizație care fie a efectuat sau are potențialul de a se implica în activități de business. |
-|[Definiție măsură](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definiția KPI-urilor partiționate cu zero sau mai multe dimensiuni (precum Utilizatori lunari activi, Cheltuieli totale pe client, Cost mediu achiziție client) |
-|[Segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definește un grup de membri cu caracteristici comune. |
-|[Membri segment](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Membrii participanți la un anumit segment. |
+|[CustomerActivity](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customeractivity) | Activitate realizată de un utilizator care are valoare de observație pentru companie. |
+|[Profil client](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile) | O persoană sau organizație care fie a efectuat sau are potențialul de a se implica în activități de business. |
+|[Definiție măsură](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/measuredefinition) | Definiția KPI-urilor partiționate cu zero sau mai multe dimensiuni (precum Utilizatori lunari activi, Cheltuieli totale pe client, Cost mediu achiziție client) |
+|[Segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segment) | Definește un grup de membri cu caracteristici comune. |
+|[Membri segment](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/segmentmembership) | Membrii participanți la un anumit segment. |
 
-Pentru informații suplimentare, consultați documentația despre [Scheme de entitate Customer Insights în Common Data Model](https://docs.microsoft.com/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
+Pentru informații suplimentare, consultați documentația despre [Scheme de entitate Customer Insights în Common Data Model](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/overview).
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Vizualizați entitățile care utilizează Navigator entitate Common Data Model
 

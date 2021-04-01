@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: ameetj
+ms.author: ameetj
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 8a861d62bdfee6a3a82468fe1ab4a3fbbdad43d4
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270219"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598354"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizați modele bazate pe Azure Machine Learning Studio (clasic)
 
@@ -37,7 +37,7 @@ Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru constru
 
 1. Căutați **Spațiu de lucru Studio pentru Învățare programată Azure** și selectați **Creați**.
 
-1. Introduceți detaliile necesare la [creați spațiul de lucru](https://docs.microsoft.com/azure/machine-learning/studio/create-workspace). Alegeți **Nivelul de preț al planului de servicii web** pe baza cantității de date pe care intenționați să le importați. Pentru cele mai bune performanțe, selectați **Locația** cea mai apropiată geografic de dvs.
+1. Introduceți detaliile necesare la [creați spațiul de lucru](/azure/machine-learning/studio/create-workspace). Alegeți **Nivelul de preț al planului de servicii web** pe baza cantității de date pe care intenționați să le importați. Pentru cele mai bune performanțe, selectați **Locația** cea mai apropiată geografic de dvs.
 
 1. După crearea resursei, va apărea tabloul de bord al spațiului de lucru Machine Learning Studio. Selectați **Lansați Machine Learning Studio**.
 
@@ -65,7 +65,7 @@ Acum puteți crea un experiment nou sau puteți importa un model de experiment e
 
    ![Configurați un serviciu web predictiv](media/predictive-webservice-control.png)
 
-1. După ce experimentul de servicii web predictiv are succes, îl puteți implementa pentru planificarea automată. Pentru ca serviciul web să funcționeze cu Customer Insights, selectați **Implementați serviciul Web** > **Previzualizare Implementați serviciul web [Nou]**. [Aflați mai multe despre implementarea de servicii web](https://docs.microsoft.com/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
+1. După ce experimentul de servicii web predictiv are succes, îl puteți implementa pentru planificarea automată. Pentru ca serviciul web să funcționeze cu Customer Insights, selectați **Implementați serviciul Web** > **Previzualizare Implementați serviciul web [Nou]**. [Aflați mai multe despre implementarea de servicii web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
    ![Implementați un serviciu web predictiv](media/predictive-webservice-deploy.png)
 
@@ -116,7 +116,7 @@ Următoarea imagine arată canalul de formare și evaluare a modelului de la Stu
 
 ![Modelul de scădere în Studio pentru Învățare programată Azure](media/azure-machine-learning-model.png)
 
-De asemenea, aplicăm o tehnică numită **Importanța caracteristicilor de permutare**, un aspect important al optimizării modelului. Modelele încorporate au prea puțin detaliu sau nu au deloc asupra impactului vreunei funcții specifice pe predicția finală. Calculatorul pentru importanța caracteristicilor folosește un algoritm personalizat pentru a calcula influența caracteristicilor individuale asupra rezultatului unui model specific. Importanța caracteristicii este normalizată între +1 și -1. O influență negativă înseamnă că caracteristica corespunzătoare are o influență contra-intuitivă asupra rezultatului și ar trebui eliminată din model. O influență pozitivă indică faptul că caracteristica contribuie puternic la predicție. Aceste valori nu sunt coeficienți de corelație, deoarece sunt valori diferite. Pentru mai multe informații, consultați [Importanța caracteristicii de permutare](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/permutation-feature-importance).
+De asemenea, aplicăm o tehnică numită **Importanța caracteristicilor de permutare**, un aspect important al optimizării modelului. Modelele încorporate au prea puțin detaliu sau nu au deloc asupra impactului vreunei funcții specifice pe predicția finală. Calculatorul pentru importanța caracteristicilor folosește un algoritm personalizat pentru a calcula influența caracteristicilor individuale asupra rezultatului unui model specific. Importanța caracteristicii este normalizată între +1 și -1. O influență negativă înseamnă că caracteristica corespunzătoare are o influență contra-intuitivă asupra rezultatului și ar trebui eliminată din model. O influență pozitivă indică faptul că caracteristica contribuie puternic la predicție. Aceste valori nu sunt coeficienți de corelație, deoarece sunt valori diferite. Pentru mai multe informații, consultați [Importanța caracteristicii de permutare](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
 Întregul [experiment de scădere este disponibil în Azure AI Gallery](https://gallery.azure.ai/Experiment/Hotel-Churn-Predictive-Exp).
 
@@ -168,7 +168,7 @@ Privind mai departe distribuțiile recomandărilor pe întregul catalogul de ser
 
 ## <a name="integrate-custom-models"></a>Integrați modele particularizate
 
-Pentru a utiliza aceste predicții în Customer Insights, trebuie să **exportați** previziunile împreună cu ID-urile clientului. [Exportați-le în aceeași locație de stocare Azure Blob](https://docs.microsoft.com/azure/storage/common/storage-import-export-data-from-blobs) către care exportați datele sursă. Serviciul web predictiv poate fi programat să ruleze în mod regulat și să actualizeze scorurile.
+Pentru a utiliza aceste predicții în Customer Insights, trebuie să **exportați** previziunile împreună cu ID-urile clientului. [Exportați-le în aceeași locație de stocare Azure Blob](/azure/storage/common/storage-import-export-data-from-blobs) către care exportați datele sursă. Serviciul web predictiv poate fi programat să ruleze în mod regulat și să actualizeze scorurile.
 
 Datele generate de modelul personalizat pot fi utilizate pentru a vă îmbogăți și mai mult datele despre clienți. Pentru mai multe informații, consultați [Modelele de învățare programată particularizate](custom-models.md).
 

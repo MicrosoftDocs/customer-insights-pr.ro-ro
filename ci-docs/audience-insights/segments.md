@@ -1,20 +1,20 @@
 ---
 title: Crearea și gestionarea segmentelor
 description: Creați segmente de clienți pentru a îi grupa pe baza diferitelor atribute.
-ms.date: 10/15/2020
+ms.date: 03/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: jimsonc
+author: JimsonChalissery
+ms.author: jimsonc
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1308f07ac3ba7d4b09931bab3d19b6dfaf479ee
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 4a6e8a3216a2c0738d60247054afa9fc18412f55
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270371"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597071"
 ---
 # <a name="create-and-manage-segments"></a>Crearea și gestionarea segmentelor
 
@@ -35,19 +35,19 @@ Segmentele sunt gestionate pe pagina **Segmente**.
 
 1. În Detalii despre public, accesați pagina **Segmente**.
 
-2. Selectați **Nou** > **Segment necompletat**.
+1. Selectați **Nou** > **Segment necompletat**.
 
-3. În panoul **Segment nou**, alegeți un tip de segment și furnizați un **Nume**.
+1. În panoul **Segment nou**, alegeți un tip de segment și furnizați un **Nume**.
 
    Opțional, furnizați un nume afișat și o descriere care ajută la identificarea segmentului.
 
-4. Selectați **Următorul** pentru a ajunge la pagina **Generator de segmente** unde definiți un grup. Un grup este un grup de clienți.
+1. Selectați **Următorul** pentru a ajunge la pagina **Generator de segmente** unde definiți un grup. Un grup este un grup de clienți.
 
-5. Alegeți entitatea care include atributul pe care doriți să îl segmentați.
+1. Alegeți entitatea care include atributul pe care doriți să îl segmentați.
 
-6. Alegeți atributul pentru care utilizați segmentul. Acest atribut poate avea unul dintre cele patru tipuri de valori: numeric, șir, dată sau boolean.
+1. Alegeți atributul pentru care utilizați segmentul. Acest atribut poate avea unul dintre cele patru tipuri de valori: numeric, șir, dată sau boolean.
 
-7. Alegeți un operator și o valoare pentru atributul selectat.
+1. Alegeți un operator și o valoare pentru atributul selectat.
 
    > [!div class="mx-imgBorder"]
    > ![Particularizați filtrul de grup](media/customer-group-numbers.png "Filtrul de grup de clienți")
@@ -64,9 +64,14 @@ Segmentele sunt gestionate pe pagina **Segmente**.
    > [!div class="mx-imgBorder"]
    > ![Calea relației în timpul creării segmentului](media/segments-multiple-relationships.png "Calea relației în timpul creării segmentului")
 
-9. Selectați **Salvare** pentru a vă salva segmentul. Segmentul dvs. va fi salvat și procesat dacă toate cerințele sunt validate. În caz contrar, acesta va fi salvat ca schiță.
+1. În mod implicit, segmentele generează o entitate de ieșire care conține toate atributele profilurilor clienților care se potrivesc cu filtrele definite. Dacă un segment se bazează pe alte entități decât entitatea *Client*, puteți adăuga mai multe atribute de la aceste entități la entitatea de ieșire. Selectați **Atributele proiectului** pentru a alege atributele care vor fi anexate entității de ieșire.  
 
-10. Selectați **Înapoi la segmente** pentru a reveni la pagina **Segmente**.
+   
+   Exemplu: un segment se bazează pe o entitate care conține date despre activitatea clienților care sunt legate de entitatea *Client*. Segmentul caută toți clienții care au apelat la serviciul de asistență în ultimele 60 de zile. Puteți alege să adăugați durata apelului și numărul de apeluri la toate înregistrările de clienți care se potrivesc în entitatea de ieșire. Aceste informații ar putea fi utile pentru a trimite un e-mail cu linkuri utile către articole de ajutor online și întrebări frecvente către clienții care au sunat frecvent.
+
+1. Selectați **Salvare** pentru a vă salva segmentul. Segmentul dvs. va fi salvat și procesat dacă toate cerințele sunt validate. În caz contrar, acesta va fi salvat ca schiță.
+
+1. Selectați **Înapoi la segmente** pentru a reveni la pagina **Segmente**.
 
 ## <a name="manage-existing-segments"></a>Gestionarea segmentelor existente
 
@@ -85,6 +90,7 @@ Următoarea acțiune este disponibilă când selectați un segment:
 
 - **Vizualizați** detaliile segmentului, incluzând tendința numărului de membri o previzualizare a membrilor segmentului.
 - **Editați** segmentul pentru a-i schimba proprietățile.
+- **Creați duplicat** pentru un segment. Puteți alege să editați proprietățile imediat sau pur și simplu să salvați duplicatul.
 - **Reîmprospătați** segmentul pentru a include cele mai recente date.
 - **Activarea** sau **Dezactivarea** segmentului. Segmentele au două stări posibile - active sau inactive. Aceste stări sunt utile la editarea unui segment. Pentru segmentele inactive, definiția segmentului există, dar nu conține încă clienți. Când activați un segment, starea acestuia se schimbă din „inactiv” în „activ” și începe să caute clienți care se potrivesc cu definiția segmentului. În cazul în care o [reîmprospătare programată](system.md#schedule-tab) este configurată, segmentele inactive au **Starea** listată drept **Omis**, indicând că nici măcar nu a fost încercată o reîmprospătare. Când este activat un segment inactiv, acesta se va reîmprospăta și va fi inclus în reîmprospătările programate.
   Alternativ, puteți utiliza funcționalitatea **Planifică mai târziu** în lista derulantă **Activare/Dezactivare** pentru a specifica data și ora viitoare pentru activarea și dezactivarea unui anumit segment.

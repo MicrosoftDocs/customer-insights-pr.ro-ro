@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: eebbac1370a847869d98beaf70db49b809d762e7
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267737"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596514"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu Azure pentru Detalii despre audiență
 
@@ -23,7 +23,7 @@ Instrumentele automate care utilizează serviciile Azure ar trebui să aibă în
 Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) sau [crea un mediu nou sau actualiza un mediu existent](manage-environments.md#create-an-environment-in-an-existing-organization) în siguranță.
 
 > [!IMPORTANT]
-> - Contul de stocare Azure Data Lake Gen2 care intenționează să utilizeze principalul serviciului trebuie să aibă [Spațiul de nume ierarhic (HNS) activat](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-namespace).
+> - Contul de stocare Azure Data Lake Gen2 care intenționează să utilizeze principalul serviciului trebuie să aibă [Spațiul de nume ierarhic (HNS) activat](/azure/storage/blobs/data-lake-storage-namespace).
 > - Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
 
 ## <a name="create-azure-service-principal-for-audience-insights"></a>Creați entitatea principală de serviciu Azure pentru Detalii despre audiență
@@ -48,7 +48,7 @@ Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita u
 
 ### <a name="create-a-new-service-principal"></a>Creare pentru o nouă entitate principală de serviciu
 
-1. Instalați cea mai recentă versiune a **Azure Active Directory PowerShell pentru reprezentare grafică**. Pentru mai multe informații, consultați [Instalare Azure Active Directory PowerShell pentru reprezentare grafică](https://docs.microsoft.com/powershell/azure/active-directory/install-adv2).
+1. Instalați cea mai recentă versiune a **Azure Active Directory PowerShell pentru reprezentare grafică**. Pentru mai multe informații, consultați [Instalare Azure Active Directory PowerShell pentru reprezentare grafică](/powershell/azure/active-directory/install-adv2).
    - Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și **Rulați ca administrator**.
    
    - În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.

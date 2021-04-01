@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
-ms.author: mhart
-ms.reviewer: m-hartmann
+ms.author: naravill
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c166015b92596da0c6097e3d25e89579a5186ce0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267921"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597434"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizați modele bazate pe Azure Machine Learning
 
@@ -29,9 +29,9 @@ Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru constru
 
 ## <a name="set-up-azure-machine-learning-workspace"></a>Configurați spațiul de lucru Azure Machine Learning
 
-1. Consultați [creați un spațiu de lucru Azure Machine Learning](https://docs.microsoft.com/azure/machine-learning/concept-workspace#-create-a-workspace) pentru diferitele opțiuni de creare a spațiului de lucru. Pentru cele mai bune performanțe, creați spațiul de lucru într-o regiune Azure care este cea mai apropiată geografic de mediul dvs. Customer Insights.
+1. Consultați [creați un spațiu de lucru Azure Machine Learning](/azure/machine-learning/concept-workspace#-create-a-workspace) pentru diferitele opțiuni de creare a spațiului de lucru. Pentru cele mai bune performanțe, creați spațiul de lucru într-o regiune Azure care este cea mai apropiată geografic de mediul dvs. Customer Insights.
 
-1. Accesați spațiul dvs. de lucru prin [Azure Machine Learning Studio](https://ml.azure.com/). Sunt câteva [modalități de interacțiune](https://docs.microsoft.com/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) cu spațiul dvs. de lucru.
+1. Accesați spațiul dvs. de lucru prin [Azure Machine Learning Studio](https://ml.azure.com/). Sunt câteva [modalități de interacțiune](/azure/machine-learning/concept-workspace#tools-for-workspace-interaction) cu spațiul dvs. de lucru.
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Lucrați cu designerul Azure Machine Learning
 
@@ -39,13 +39,13 @@ Designerul Azure Machine Learning oferă o pânză vizuală în care puteți gli
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Lucrul cu SDK Azure Machine Learning
 
-Specialiștii în date și dezvoltatorii de AI folosesc [SDK Azure Machine Learning](https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py&preserve-view=true) pentru a construi fluxuri de lucru de învățare programată. În prezent, modelele instruite folosind SDK nu pot fi integrate direct cu Customer Insights. Pentru integrarea cu Customer Insights este necesar un canal de inferență de lot care consumă acel model.
+Specialiștii în date și dezvoltatorii de AI folosesc [SDK Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) pentru a construi fluxuri de lucru de învățare programată. În prezent, modelele instruite folosind SDK nu pot fi integrate direct cu Customer Insights. Pentru integrarea cu Customer Insights este necesar un canal de inferență de lot care consumă acel model.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Cerințe de canal de lot pentru integrare cu Customer Insights
 
 ### <a name="dataset-configuration"></a>Configurare set de date
 
-Trebuie să creați seturi de date pentru a utiliza datele entității din Customer Insights în canalul de inferență a lotului. Aceste seturi de date trebuie înregistrate în spațiul de lucru. În prezent, acceptăm doar [seturi de date tabelare](https://docs.microsoft.com/azure/machine-learning/how-to-create-register-datasets#tabulardataset) în format .csv. Seturile de date care corespund datelor entității trebuie parametrizate ca parametru de canal.
+Trebuie să creați seturi de date pentru a utiliza datele entității din Customer Insights în canalul de inferență a lotului. Aceste seturi de date trebuie înregistrate în spațiul de lucru. În prezent, acceptăm doar [seturi de date tabelare](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) în format .csv. Seturile de date care corespund datelor entității trebuie parametrizate ca parametru de canal.
    
 * Parametrii setului de date în Designer
    
@@ -76,7 +76,7 @@ Trebuie să creați seturi de date pentru a utiliza datele entității din Custo
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importați datele canalelor în Customer Insights
 
-* Designerul oferă [modulul Export date](https://docs.microsoft.com/azure/machine-learning/algorithm-module-reference/export-data) care permite exportarea ieșirii unui canal în stocarea Azure. În prezent, modulul trebuie să utilizeze tipul de depozit de date **Stocare Blob Azure** și parametrizează **Depozitul de date** și **Calea** relativă. Customer Insights anulează ambii acești parametri în timpul executării canalului cu un depozit de date și o cale accesibilă produsului.
+* Designerul oferă [modulul Export date](/azure/machine-learning/algorithm-module-reference/export-data) care permite exportarea ieșirii unui canal în stocarea Azure. În prezent, modulul trebuie să utilizeze tipul de depozit de date **Stocare Blob Azure** și parametrizează **Depozitul de date** și **Calea** relativă. Customer Insights anulează ambii acești parametri în timpul executării canalului cu un depozit de date și o cale accesibilă produsului.
    > [!div class="mx-imgBorder"]
    > ![Exportul configurării modulului de date](media/intelligence-designer-importdata.png "Exportul configurării modulului de date")
    

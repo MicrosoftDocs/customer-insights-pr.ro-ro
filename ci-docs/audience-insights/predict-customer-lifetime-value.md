@@ -2,19 +2,19 @@
 title: Predicția valorii pe viață a clientului (CLV)
 description: Prevedeți potențialul de venituri pentru clienții activi în viitor.
 ms.date: 02/05/2021
-ms.reviewer: wameng
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
-ms.author: mhart
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 363a46c81b5bb737d274998f9a699dc662e38d7c
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268609"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595824"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Valoare ciclu de viață client (versiune preliminară) (CLV)
 
@@ -194,11 +194,11 @@ Există trei secțiuni principale de date în pagina de rezultate.
   
   - **Rata de succes în prezicerea clienților de valoare ridicată**
 
-  Vedeți diferența în prezicerea clienților cu valoare ridicată utilizând modelul AI comparativ cu modelul de bază. De exemplu, rata de succes de 84% înseamnă că dintre toți clienții cu valoare ridicată din datele de instruire, modelul AI a reușit să capteze cu precizie 84%. Apoi comparăm această rată de succes cu rata de succes a modelului de bază pentru a raporta modificarea relativă. Această valoare este utilizată pentru a atribui un nivel modelului.
+    Vedeți diferența în prezicerea clienților cu valoare ridicată utilizând modelul AI comparativ cu modelul de bază. De exemplu, rata de succes de 84% înseamnă că dintre toți clienții cu valoare ridicată din datele de instruire, modelul AI a reușit să capteze cu precizie 84%. Apoi comparăm această rată de succes cu rata de succes a modelului de bază pentru a raporta modificarea relativă. Această valoare este utilizată pentru a atribui un nivel modelului.
 
   - **Valori de eroare**
     
-  O altă valoare vă permite să examinați performanța generală a modelului în termeni de eroare în prezicerea valorilor viitoare. Folosim măsurătoarea generală Root Mean Squared Error (RMSE) pentru a evalua această eroare. RMSE este un mod standard de măsurare a erorii unui model în prezicerea datelor cantitative. RMSE al modelului AI este comparat cu RMSE al modelului de bază și se raportează diferența relativă.
+    O altă valoare vă permite să examinați performanța generală a modelului în termeni de eroare în prezicerea valorilor viitoare. Folosim măsurătoarea generală Root Mean Squared Error (RMSE) pentru a evalua această eroare. RMSE este un mod standard de măsurare a erorii unui model în prezicerea datelor cantitative. RMSE al modelului AI este comparat cu RMSE al modelului de bază și se raportează diferența relativă.
 
   Modelul AI acordă prioritate clasării exacte a clienților în funcție de valoarea pe care o aduc afacerii dvs. Deci, numai rata de succes a prezicerii clienților cu valoare ridicată este utilizată pentru a obține nota modelului final. Valoarea RMSE este sensibilă la valori aberante. În scenariile în care aveți un procent mic de clienți cu valori de achiziție extraordinar de mari, valoarea generală RMSE ar putea să nu ofere o imagine completă a performanței modelului.   
 

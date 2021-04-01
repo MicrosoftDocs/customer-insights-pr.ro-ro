@@ -1,34 +1,34 @@
 ---
 title: Limbi acceptate pentru detalii despre public
 description: Înțelegeți și configurați suportul lingvistic.
-ms.date: 04/27/2020
+ms.date: 02/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: pkieffer
+ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 84c4011e61058729a0ed0b7123df8a9227b0f083
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: cbf37b55ea6c54d912200a1f7167126925b35443
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268195"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595487"
 ---
 # <a name="supported-languages-for-audience-insights-capability"></a>Limbi acceptate pentru capabilitatea detalii despre public
 
-Capabilitatea de detalii despre public din Dynamics 365 Customer Insights acceptă mai multe limbi. Acest subiect listează limbile disponibile și oferă suport pentru comutarea între ele, precum și o imagine de ansamblu asupra conținutului tradus.
+Detalii despre audiență pentru Dynamics 365 Customer Insights este tradus în multe limbi. Următoarea listă conține limbile disponibile și informații despre ceea ce este tradus. De asemenea, puteți afla mai multe despre cum să modificați setările de limbă. 
 
 ## <a name="languages"></a>Limbi
 
 | Nume limbă (engleză)|  Nume limbă (limba maternă) |
 | ------------- | ------------- |
 | Bască | euskara |
-| Bulgară | Български |
+| Bulgară | български |
 | Catalană | català |
 | Chineză (simplificată) | 中文(简体) |
-| Chineză (Tradițională) | 中文(繁體) |
+| Chineză (tradițională) | 中文(繁體) |
 | Croată | hrvatski |
 | Cehă | čeština |
 | Daneză | dansk |
@@ -42,22 +42,22 @@ Capabilitatea de detalii despre public din Dynamics 365 Customer Insights accept
 | Greacă | Ελληνικά |
 | Hindi | हिंदी |
 | Maghiară | magyar |
-| Indoneziană | Bahasa Indonesia |
+| Indoneziană | Indonezia |
 | Italiană | italiano |
 | Japoneză | 日本語 |
-| Kazahă | Қазақ |
+| Kazahă | қазақ тілі |
 | Coreeană | 한국어 |
 | Letonă | latviešu |
 | Lituaniană | lietuvių |
-| Malaeză | Bahasa Melayu |
-| Norvegiană (Bokmål) | norsk (bokmål) |
-| Poloneză | Polski |
+| Malaeză | Melayu |
+| Norvegiană (Bokmål) | norsk bokmål |
+| Poloneză | polski |
 | Portugheză (Brazilia) | português |
 | Portugheză (Portugalia) | português |
 | Română | română |
-| Rusă | Русский |
-| Sârbă (scriere chirilică) | српски |
-| Sârbă (scriere latină) | srpski |
+| Rusă | pусский |
+| Sârbă (chirilic) | српски |
+| Sârbă (alfabet latin) | srpski |
 | Slovacă | slovenčina |
 | Slovenă | slovenski |
 | Spaniolă | español |

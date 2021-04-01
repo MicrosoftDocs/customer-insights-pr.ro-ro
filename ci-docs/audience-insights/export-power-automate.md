@@ -2,19 +2,19 @@
 title: Conector Power Automate | Microsoft Docs
 description: Creați fluxuri în Microsoft Power Automate din Dynamics 365 Customer Insights.
 ms.date: 01/20/2021
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: philk
+author: phkieffer
+ms.author: philk
 manager: shellyha
-ms.openlocfilehash: fb1df4e9ab1f78300b8ec1f8dfdfbfbac0e71447
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: e973bb11b31c9e70b695ebec8aa2700fdaa5e44f
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268839"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5597940"
 ---
 # <a name="power-automate-connector-preview"></a>Conector Power Automate (previzualizare)
 
@@ -34,7 +34,7 @@ Utilizați declanșatoarele pentru a crea fluxuri cloud și pentru a automatiza 
 [Configurați declanșatoarele în Power Automate](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/).
 
 ## <a name="power-automate-actions"></a>acțiuni Power Automate
-Conectorul Power Automate oferă alte acțiuni decât declanșatoarele disponibile. Pentru mai multe informaţii, consultaţi [Dynamics 365 Customer Insights Connector](https://docs.microsoft.com/connectors/customerinsights/).
+Conectorul Power Automate oferă alte acțiuni decât declanșatoarele disponibile. Pentru mai multe informaţii, consultaţi [Dynamics 365 Customer Insights Connector](/connectors/customerinsights/).
 
 ## <a name="create-a-power-automate-flow"></a>Creați un flux Power Automate
 
@@ -44,7 +44,7 @@ Conectorul Power Automate oferă alte acțiuni decât declanșatoarele disponibi
 
 1. Se deschide conectorul Customer Insights (previzualizare) în Power Automate. **Conectare** la Power Automate.
 
-1. Alegeți unul dintre declanșatoarele disponibile și adăugați mai mulți pași la noul dvs. flux. Pentru mai multe informații, consultați [Creați un flux pentru cloud în Power Automate](https://docs.microsoft.com/power-automate/get-started-logic-flow).
+1. Alegeți unul dintre declanșatoarele disponibile și adăugați mai mulți pași la noul dvs. flux. Pentru mai multe informații, consultați [Creați un flux pentru cloud în Power Automate](/power-automate/get-started-logic-flow).
 
 Exemple de utilizare a fluxurilor: 
 - Postează un mesaj către un canal Microsoft Teams dacă o reîmprospătare sursă de date eșuează. 

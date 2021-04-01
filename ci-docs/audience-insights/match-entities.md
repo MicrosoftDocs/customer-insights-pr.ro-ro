@@ -1,133 +1,137 @@
 ---
 title: Asociați entitățile pentru unificarea datelor
 description: Asociați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 10/14/2020
+ms.date: 02/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: adkuppa
+author: adkuppa
+ms.author: adkuppa
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 05afd17b7f1b34f7f24a8fa8cb2dc32c1649d40f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267493"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595579"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
-După finalizarea fazei hărții, sunteți gata să vă potriviți entitățile. Faza de potrivire specifică modul de combinare a seturilor de date într-un set de date de profil unificat pentru clienți. Faza de potrivire necesită cel puțin [două entități mapate](map-entities.md).
+Faza de potrivire specifică modul de combinare a seturilor de date într-un set de date de profil unificat pentru clienți. După finalizarea [pas de hartă](map-entities.md) în procesul de unificare a datelor, sunteți gata să vă potriviți cu entitățile. Faza de potrivire necesită cel puțin două entități mapate.
+
+Pagina de potrivire este formată din trei secțiuni: 
+- Valori cheie care rezumă numărul de înregistrări potrivite
+- Ordinea potrivirii și regulile pentru potrivirea între entități
+- Reguli pentru deduplicarea entităților de potrivire
 
 ## <a name="specify-the-match-order"></a>Specificați ordinea de potrivire
 
 Accesați **Date** > **Unifica** > **Potrivire** și selectați **Setați ordinea** pentru a începe faza de potrivire.
 
-Fiecare potrivire unifică două sau mai multe entități într-o singură entitate, persistând în același timp fiecare înregistrare unică de client. În exemplul următor, am selectat trei entități: **ContactCSV: TestData** ca entitate **Principală**, **WebAccountCSV: TestData** ca **Entitate 2** și **CallRecordSmall: TestData** ca **Entitate 3**. Diagrama de deasupra selecțiilor ilustrează modul în care va fi executată ordinea de potrivire.
+Fiecare potrivire unifică două sau mai multe entități într-o singură entitate consolidată. În același timp, păstrează înregistrările unice ale clienților. De exemplu, am selectat două entități: **eCommerce: eCommerceContacts** ca entitate primară și **LoyaltyScheme: loyCustomers** ca a doua entitate. Ordinea entităților specifică în ce ordine sistemul va încerca să se potrivească cu înregistrările.
 
-> [!div class="mx-imgBorder"]
-> ![Editarea ordinii de potrivire a datelor](media/configure-data-match-order-edit-page.png "Editarea ordinii de potrivire a datelor")
+:::image type="content" source="media/match-page.png" alt-text="Captură de ecran a paginii Potrivire din zona Unificare a procesului de unificare a datelor.":::
   
-Entitatea **Principală** este potrivită cu **Entitatea 2**. Setul de date care rezultă din prima potrivire se potrivește cu **Entitatea 3**.
-În acest exemplu, am selectat doar două potriviri, dar sistemul poate suporta mai multe.
+Entitatea primară *eCommerce: eCommerceContacts* se potrivește cu următoarea entitate *LoyaltyScheme: loyCustomers*. Setul de date care rezultă din primul pas de potrivire este asortat cu următoarea entitate dacă aveți mai mult de două entități.
 
 > [!IMPORTANT]
-> Entitatea pe care o alegeți ca entitate **Principală** va servi drept bază pentru setul dvs. de date principal unificat. Entitățile suplimentare care sunt selectate în timpul fazei de potrivire vor fi adăugate la această entitate. În același timp, acest lucru nu înseamnă că entitatea unificată va include *toate* datele incluse în această entitate.
+> Entitatea pe care o alegeți ca entitate principală va servi drept bază pentru setul dvs. de date ale profilelor unificate. Entitățile suplimentare care sunt selectate în timpul fazei de potrivire vor fi adăugate la această entitate. Acest lucru nu înseamnă că entitatea unificată va include *toate* datele incluse în această entitate.
 >
 > Există două considerații care vă pot ajuta să alegeți ierarhia entităților:
 >
-> - Ce entitate considerați că are cele mai complete și fiabile date despre clienții dvs.?
-> - Entitatea pe care tocmai ați identificat-o are atribute care sunt, de asemenea, partajate de alte entități (de exemplu, nume, număr de telefon sau adresă de e-mail)? Dacă nu, alegeți a doua entitate de încredere.
+> - Alegeți entitatea cu cele mai complete și mai fiabile date de profil despre clienții dvs. ca entitate principală.
+> - Alegeți entitatea care are mai multe atribute comune cu alte entități (de exemplu, numele, numărul de telefon sau adresa de e-mail) ca entitate principală.
 
-Selectați **Terminat** pentru a salva ordinea de potrivire.
+După specificarea ordinii de potrivire, veți vedea perechile de potrivire definite în secțiunea **Detalii înregistrări potrivite** pe **Date** > **Unificare** > **Potrivire**. Valorile cheie vor fi goale până la finalizarea procesului de potrivire.
 
-## <a name="define-rules-for-your-first-match-pair"></a>Definirea regulilor pentru prima pereche de potrivire
+## <a name="define-rules-for-match-pairs"></a>Definiți regulile pentru perechile potrivite
 
-După specificarea ordinii de potrivire, veți vedea potrivirile definite pe pagina **Potrivire**. Dalele din partea de sus a ecranului vor fi goale până când executați comanda de potrivire.
+Regulile de potrivire specifică logica după care se vor potrivi o anumită pereche de entități.
 
-> [!div class="mx-imgBorder"]
-> ![Definirea regulilor](media/configure-data-match-need-rules.png "Definirea regulilor")
+Avertizarea **Are nevoie de reguli** de lângă un nume de entitate sugerează că nu este definită nicio regulă de potrivire pentru o pereche de potrivire. 
 
-Avertismentul **Necesită reguli** sugerează că nu este definită nicio regulă de potrivire pentru o pereche de potrivire. Regulile de potrivire specifică logica după care se vor potrivi o anumită pereche de entități.
+:::image type="content" source="media/match-rule-add.png" alt-text="Captură de ecran a secțiunii Detalii înregistrare potrivită cu control pentru a adăuga reguli evidențiate.":::
 
-1. Pentru a defini prima regulă, deschideți panoul **Definiție regulă** selectând rândul de potrivire corespunzător din tabelul de potriviri (1), apoi selectând **Creare regulă nouă** (2).
+1. Selectați **Adăugați reguli** sub o entitate din secțiunea **Detalii înregistrări potrivite** pentru a defini regulile de potrivire.
 
-   > [!div class="mx-imgBorder"]
-   > ![Creare regulă nouă](media/configure-data-match-new-rule2.png "Creare regulă nouă")
+1. În panoul **Creați o regulă**, configurați condițiile pentru regulă.
 
-2. În panoul **Editare regulă**, configurați condițiile pentru această regulă. Fiecare condiție este reprezentată de două rânduri care includ selecții obligatorii.
+   :::image type="content" source="media/match-rule-conditions.png" alt-text="Captură de ecran a unei reguli de potrivire deschise cu condiții adăugate.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Adăugați o regulă de panou](media/configure-data-match-new-rule-condition.png "Adăugați o regulă de panou")
+   - **Entitate/Câmp (primul rând)**: Alegeți o entitate legată și un atribut pentru a specifica o proprietate de înregistrare care este probabil unică pentru un client. De exemplu, un număr de telefon sau o adresă de e-mail. Evitați potrivirea după atributele de tip activitate. De exemplu, un ID de achiziție nu va găsi probabil nicio potrivire în alte tipuri de înregistrări.
 
-   Entitate/Câmp (mai întâi) - Un atribut care va fi utilizat pentru potrivirea din prima entitate pereche de potrivire. Exemplele pot include un număr de telefon sau o adresă de e-mail. Alegeți un atribut care este probabil să fie unic pentru client.
+   - **Entitate/Câmp (al doilea rând)**: Alegeți un atribut care se referă la atributul entității specificate în primul rând.
 
-   > [!TIP]
-   > Evitați potrivirea pe baza atributelor de tip activitate. Cu alte cuvinte, în cazul în care un atribut pare a fi o activitate, atunci ar putea fi un criteriu slab de potrivire.  
+   - **Normalizare**: Selectați din următoarele opțiuni de normalizare pentru atributele selectate. 
+     - Spațiu alb: elimină toate spațiile. *Hello   World* devine *HelloWorld*.
+     - Simboluri: elimină toate simbolurile și caracterele speciale. *Head&Shoulder* devine *HeadShoulder*.
+     - Text cu minuscule: convertește toate caracterele în minuscule. *TOATE MAJUSCULE și majuscule* devine *toate majuscule și majuscule*.
+     - Unicode în ASCII: convertește notația unicode în caractere ASCII. */u00B2* devine *2*.
+     - Numerale: convertește alte sisteme de numere, cum ar fi numerele romane, în cifre arabe. *VIII* devine *8*.
+     - Tipuri semantice: standardizează nume, titluri, numere de telefon, adrese etc. 
 
-   Entitate/Câmp (Al doilea) - Un atribut care va fi utilizat pentru potrivirea din a doua entitate pereche de potrivire.
+   - **Precizie**: Setați nivelul de precizie care trebuie aplicat pentru această condiție. 
+     - **De bază**: Alege din *Scăzut*, *Mediu*, *Înalt* și *Exact*. Selectați **Exact** pentru a potrivi numai înregistrările care se potrivesc 100 la sută. Selectați unul dintre celelalte niveluri pentru a potrivi înregistrările care nu sunt 100% identice.
+     - **Particularizat**: Setați un procent care trebuie să corespundă înregistrărilor. Sistemul va potrivi doar înregistrările care depășesc acest prag.
 
-   Normalizare - **Metoda de normalizare**: Diferite opțiuni de normalizare sunt disponibile pentru atributele selectate. De exemplu, eliminarea semnelor de punctuație sau eliminarea spațiilor
+1. Furnizați un **Nume** pentru regulă.
 
-   Pentru normalizarea numelui organizației (Previzualizare), puteți selecta, de asemenea, **Tip (Telefon, Nume, Organizație)**
+1. [Adăugați mai multe condiții](#add-conditions-to-a-rule) sau selectați **Terminat** pentru a finaliza regula.
 
-   > [!div class="mx-imgBorder"]
-   > ![Normalizare-B2B](media/match-normalization-b2b.png "Normalizare-B2B")
+1. Opțional, [adăugați mai multe reguli](#add-rules-to-a-match-pair).
 
-   Nivel de precizie - Nivelul de precizie care va fi utilizat pentru această condiție. Setarea unui nivel de precizie pentru o condiție de potrivire poate avea două tipuri: **De bază** și **Particularizat**.  
-   - De bază: vă oferă patru opțiuni pentru a selecta de la: Scăzut, mediu, ridicat, și exact. Selectați **Exact** pentru a potrivi numai înregistrările care se potrivesc 100 la sută. Selectați unul dintre celelalte niveluri pentru a potrivi înregistrările care nu sunt 100% identice.
-   - Particularizat: Utilizați glisorul pentru a defini procentul particularizat de care au nevoie înregistrările pentru a se potrivi sau pentru a introduce o valoare în câmpul **Particularizat**. Sistemul se va potrivi numai cu înregistrările care trec acest prag ca perechi de potrivire contopite. Valorile de pe glisor sunt între 0 și 1. Deci, 0.64 reprezintă 64 la sută.
+1. Selectați **Salvare** pentru a vă aplica modificările.
 
-3. Selectați **Terminat** pentru a salva regula.
+### <a name="add-conditions-to-a-rule"></a>Adăugați condiții la o regulă
 
-### <a name="add-multiple-conditions"></a>Adăugarea mai multor condiții
+Pentru a potrivi entități numai dacă atributele îndeplinesc mai multe condiții, adăugați mai multe condiții la o regulă de potrivire. Condițiile sunt conectate cu un operator AND logic și astfel executate numai dacă sunt îndeplinite toate condițiile.
 
-Pentru a se potrivi cu entitățile numai dacă sunt îndeplinite mai multe condiții, adăugați mai multe condiții care sunt legate printr-un operator Și.
+1. Accesați **Date** > **Unificare** > **Potrivire** și selectați **Editare** pe regula la care doriți să adăugați condiții.
 
-1. În panoul **Editare regulă**, selectați **Adăugare condiție**. De asemenea, puteți șterge condițiile selectând butonul eliminare de lângă o condiție existentă.
+1. În panoul **Editare regulă**, selectați **Adăugare condiție**.
 
-2. Selectați **Terminat** pentru a salva regula.
+1. Selectați **Terminat** pentru a salva regula.
 
-## <a name="add-multiple-rules"></a>Adăugarea mai multor reguli
+### <a name="add-rules-to-a-match-pair"></a>Adăugați reguli unei perechi potrivite
 
-Fiecare condiție se aplică unei singure perechi de atribute, în timp ce regulile reprezintă seturi de condiții. Pentru ca entitățile să fie corelate cu diferite seturi de atribute, puteți adăuga mai multe reguli.
+Regulile de potrivire reprezintă seturi de condiții. Pentru a potrivi entități după condiții pe baza mai multor atribute, adăugați mai multe reguli
 
-1. În Detalii despre public, accesați **Date** > **Unificare** > **Asociere**.
+1.  Accesați **Date** > **Unificare** > **Potrivire** și selectați **Adăugare regulă** pe entitatea la care doriți să adăugați reguli.
 
-2. Selectați entitatea pe care doriți să o actualizați și selectați **Adăugați reguli**.
-
-3. Urmați procedura așa cum este descrisă în [Definire reguli pentru prima pereche de potrivire](#define-rules-for-your-first-match-pair).
+2. Urmați pașii din [Definiți regulile pentru perechile de potriviri](#define-rules-for-match-pairs).
 
 > [!NOTE]
-> Ordinea regulilor contează. Algoritmul de potrivire încearcă să se potrivească pe baza primei reguli și continuă cu a doua regulă numai dacă nu au fost identificate potriviri în conformitate cu prima regulă.
+> Ordinea regulilor contează. Algoritmul de potrivire încearcă să se potrivească pe baza primei reguli și continuă la a doua regulă numai dacă nu au fost identificate potriviri cu prima regulă.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definiți eliminarea informațiilor duplicate pentru o entitate de potrivire
 
-Împreună cu specificarea regulilor de potrivire a entităților încrucișate așa cum este subliniat în secțiunile de mai sus, puteți specifica și reguli de eliminare a informațiilor duplicate. *Eliminarea informațiilor duplicate* este un proces. Identifică înregistrările duplicate, le îmbină într-o singură înregistrare și leagă toate înregistrările sursă de această înregistrare combinată cu ID-uri alternative la înregistrarea combinată.
+Pe lângă [reguli de potrivire între entități](#define-rules-for-match-pairs), puteți specifica și reguli de deduplicare. *Deduplicare* este un alt proces atunci când se potrivesc înregistrările. Identifică înregistrările duplicate și le îmbină într-o singură înregistrare. Înregistrările sursă sunt legate de înregistrarea combinată cu ID-uri alternative.
 
-După identificarea unei înregistrări de eliminare a informațiilor duplicate, aceasta va fi apoi utilizată în procesul de potrivire între entități. Eliminarea informațiilor duplicate este implementată la nivel de entitate și poate fi aplicată fiecărei entități utilizate în procesul de potrivire.
+Înregistrările deduplicate vor fi utilizate în procesul de potrivire între entități. Deduplicarea are loc pe entități individuale și poate fi configurată fiecare entitate utilizată în perechi de potrivire.
+
+Specificarea regulilor de eliminare a informațiilor duplicate nu este obligatorie. Dacă nu sunt configurate astfel de reguli, se aplică regulile definite de sistem. Acestea combină toate înregistrările într-o singură înregistrare înainte de a transfera datele entității la potrivirea între entități pentru o performanță îmbunătățită.
 
 ### <a name="add-deduplication-rules"></a>Adăugare reguli de eliminare a informațiilor duplicate
 
-1. În Detalii despre public, accesați **Date** > **Unificare** > **Asociere**.
+1. Mergeți la **Date** > **Unificare** > **Potrivire**.
 
-1. În secțiunea **Dubluri combinate**, selectați **Setare entități**.
+1. În secțiunea **Dubluri combinate**, selectați **Setare entități**. În cazul în care regulile de deduplicare sunt deja create, selectați **Editați**.
 
-1. În secțiunea **Combinare preferințe**, selectați entitățile cărora doriți să le aplicați eliminarea de informații duplicate.
+1. În panoul **Îmbinare preferințe**, alegeți entitățile pe care doriți să rulați deduplicarea.
 
-1. Specificați cum să îmbinați înregistrările duplicate și alegeți una dintre cele trei opțiuni de îmbinare:
-   - *Cea mai completată*: Identifică înregistrarea cu cele mai multe atribute completate ca înregistrare câștigătoare. Aceasta este opțiunea implicită de combinare.
-   - *Cea mai recentă*: Identifică înregistrarea câștigătoare pe baza celor mai recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
-   - *Cea mai puțin recentă*: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
+1. Specificați cum să combinați înregistrările duplicate și alegeți una dintre cele trei opțiuni:
+   - **Cea mai completată**: Identifică înregistrarea cu cele mai populate câmpuri de atribute drept înregistrare câștigătoare. Este opțiunea implicită de combinare.
+   - **Cea mai recentă**: Identifică înregistrarea câștigătoare pe baza celor mai recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
+   - **Cea mai puțin recentă**: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
  
    > [!div class="mx-imgBorder"]
    > ![Reguli de eliminare a informațiilor duplicate pasul 1](media/match-selfconflation.png "Reguli de eliminare a informațiilor duplicate pasul 1")
  
-1. Odată ce entitățile sunt selectate și preferința lor de îmbinare este setată, selectați **Creare regulă nouă** pentru a defini regulile de eliminare a informațiilor duplicate la nivel de entitate.
-   - **Selectare câmp** listează toate câmpurile disponibile de la acea entitate pentru care doriți să eliminați informațiile duplicate din datele sursă.
-   - Specificați setările de normalizare și precizie în mod similar, așa cum se specifică în potrivirea entității încrucișate.
-   - Puteți defini condiții suplimentare selectând **Adăugare condiție**.
+1. Odată ce entitățile sunt selectate și preferința lor de îmbinare este setată, selectați **Adăugați regulă** pentru a defini regulile de eliminare a informațiilor duplicate la nivel de entitate.
+   - **Selectați câmpul** listează toate câmpurile disponibile de la acea entitate. Alegeți câmpul pe care doriți să îl verificați pentru duplicate. Alegeți câmpuri care sunt probabil unice pentru fiecare client. De exemplu, o adresă de e-mail sau combinația dintre nume, oraș și număr de telefon.
+   - Specificați setările de normalizare și precizie.
+   - Definiți mai multe condiții selectând **Adăugare condiție**.
  
    > [!div class="mx-imgBorder"]
    > ![Reguli de eliminare a informațiilor duplicate pasul 2](media/match-selfconflation-rules.png "Reguli de eliminare a informațiilor duplicate pasul 2")
@@ -138,107 +142,86 @@ După identificarea unei înregistrări de eliminare a informațiilor duplicate,
 
 1. Această înregistrare a câștigătorului este apoi transmisă potrivirii între entități, împreună cu înregistrările non-câștigătoare (de exemplu, ID-uri alternative) pentru a îmbunătăți calitatea potrivirii.
 
-1. Orice regulă de potrivire personalizată definită pentru potrivire întotdeauna și nu se potrivește niciodată anulează regulile de eliminare a informațiilor duplicate. Dacă o regulă de eliminare a informațiilor duplicate identifică înregistrările de potrivire și o regulă de potrivire personalizată este setată să nu se potrivească niciodată cu aceste înregistrări, atunci aceste două înregistrări nu vor fi potrivite.
+1. Orice regulă de potrivire personalizată definită suprascrie regulile de deduplicare. Dacă o regulă de eliminare a informațiilor duplicate identifică înregistrările de potrivire și o regulă de potrivire personalizată este setată să nu se potrivească niciodată cu aceste înregistrări, atunci aceste două înregistrări nu vor fi potrivite.
 
-1. După rularea procesului de potrivire, veți vedea statisticile de eliminare a informațiilor duplicate.
-   
-> [!NOTE]
-> Specificarea regulilor de eliminare a informațiilor duplicate nu este obligatorie. Dacă nu sunt configurate astfel de reguli, se aplică regulile definite de sistem. Acestea restrâng toate înregistrările care partajează aceeași combinație de valori (potrivire exactă) de la cheia primară și câmpurile din regulile de potrivire într-o singură înregistrare înainte de a transfera datele entității la potrivirea între entități pentru performanță îmbunătățită și sănătatea sistemului.
+1. După [rularea procesului de potrivire](#run-the-match-process), veți vedea statisticile de deduplicare în dalele de măsurători cheie.
 
-## <a name="run-your-match-order"></a>Executați comanda de potrivire
+### <a name="deduplication-output-as-an-entity"></a>Ieșire de deduplicare ca entitate
 
-După definirea regulilor de potrivire, inclusiv a regulilor de potrivire și eliminare a informațiilor duplicate între entități, puteți rula ordinea de potrivire. Pe pagina **Potrivire**, selectați **Executare** pentru a porni procesul. Algoritmul de potrivire ar putea dura ceva timp pentru a se finaliza. Nu puteți modifica proprietățile din pagina **Potrivire** până când se termină procesul de potrivire. Veți găsi entitatea de profil de client unificată care a fost creată în pagina **Entități**. Entitatea client unificată se numește **ConflationMatchPairs: CustomerInsights**.
-
-Pentru a face modificări suplimentare și a relua pasul, puteți anula o potrivire în curs. Selectați textul **Se reîmprospătează ...** și selectați **Anulare operațiune** în partea de jos a panoului lateral care apare.
-
-Când procesul de potrivire este finalizat, textul **Se reîmprospătează ...** se va schimba în **Reușit** și puteți folosi din nou toate funcționalitățile paginii.
-
-Primul proces de potrivire are ca rezultat crearea unei entități principale unificate. Toate executările ulterioare au ca rezultat extinderea entității respective.
-
-> [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
-
-## <a name="deduplication-output-as-an-entity"></a>Ieșire de deduplicare ca entitate
-În plus față de entitatea principală unificată creată ca parte a potrivirii între entități încrucișate, procesul de deduplicare generează și o entitate nouă pentru fiecare entitate din ordinul de potrivire pentru a identifica înregistrările deduplicate. Aceste entități pot fi găsite împreună cu **ConflationMatchPairs: CustomerInsights** în secțiunea **Sistem** din pagina **Entități**, cu numele **Deduplication_Datasource_Entity**.
+Procesul de deduplicare creează o entitate nouă pentru fiecare entitate din perechile de potriviri pentru a identifica înregistrările deduplicate. Aceste entități pot fi găsite împreună cu **ConflationMatchPairs:CustomerInsights** în secțiunea **Sistem** din pagina **Entități**, cu numele **Deduplication_DataSource_Entity**.
 
 O entitate de ieșire de deduplicare conține următoarele informații:
 - ID-uri / Chei
   - Câmpul cheie primară și câmpul său ID-uri alternative. Câmpul ID-uri alternative constă din toate ID-urile alternative identificate pentru o înregistrare.
-  - Câmpul Deduplication_GroupId arată grupul sau clusterul identificat în cadrul unei entități care grupează toate înregistrările similare pe baza câmpurilor de deduplicare specificate. Acesta este utilizat în scopuri de procesare a sistemului. Dacă nu sunt specificate reguli de deduplicare manuală și se aplică reguli de deduplicare definite de sistem, este posibil să nu găsiți acest câmp în entitatea de ieșire a deduplicării.
+  - Câmpul Deduplication_GroupId arată grupul sau clusterul identificat în cadrul unei entități care grupează toate înregistrările similare pe baza câmpurilor de deduplicare specificate. Este utilizat în scopuri de procesare a sistemului. Dacă nu sunt specificate reguli de deduplicare manuală și se aplică reguli de deduplicare definite de sistem, este posibil să nu găsiți acest câmp în entitatea de ieșire a deduplicării.
   - Deduplication_WinnerId: Acest câmp conține ID-ul câștigător din grupurile sau clusterele identificate. Dacă Deduplication_WinnerId este aceeași cu valoarea cheii principale pentru o înregistrare, înseamnă că înregistrarea este înregistrarea câștigătoare.
 - Câmpuri utilizate pentru definirea regulilor de deduplicare.
 - Câmpurile Regulă și Scor pentru a indica care dintre regulile de deduplicare s-au aplicat și scorul returnat de algoritmul de potrivire.
+   
+## <a name="run-the-match-process"></a>Executați procesul de potrivire
+
+Cu reguli de potrivire configurate, inclusiv a regulilor de potrivire și eliminare a informațiilor duplicate între entități, puteți rula procesul de potrivire. 
+
+Accesați **Date** > **Unificare** > **Potrivire** și selectați **Rulare** pentru a începe procesul. Algoritmul de potrivire durează ceva timp pentru a fi finalizat și nu puteți modifica configurația până când nu se finalizează. Pentru a face modificări, puteți anula rularea. Selectați starea lucrării și selectați **Anulați operațiunea** pe panoul **Detalii despre progres**.
+
+Veți găsi rezultatul unei rulări reușite, entitatea unificată a profilului de client, pe pagina **Entități**. Entitatea dvs. unificatăe de client se numește **Clienți** în secțiunea **Profiluri**. Prima rundă de potrivire reușită creează entitatea unificată *Client*. Toate rulările de potrivire ulterioare extind entitatea respectivă.
+
+> [!TIP]
+> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
 
 ## <a name="review-and-validate-your-matches"></a>Examinați și validați-vă potrivirile
 
-Evaluați calitatea perechilor de potrivire și rafinați-o:
+Accesați **Date** > **Unificare** > **Potrivire** pentru a evalua calitatea perechilor de potriviri și a le rafina dacă este necesar.
 
-- Pe pagina **Potrivire**, veți găsi două dale care afișează statistici inițiale despre datele dvs.
+Dalele din partea de sus a paginii prezintă valori cheie, rezumând numărul de înregistrări și duplicate potrivite.
 
-  - **Clienți unici**: afișează numărul de profiluri unice pe care le-a identificat sistemul.
-  - **Înregistrări potrivite**: afișează numărul de potriviri din toate perechile de potrivire.
+:::image type="content" source="media/match-KPIs.png" alt-text="Captură de ecran decupată a valorilor cheie din pagina Potrivire cu numere și detalii.":::
 
-- În tabelul **Potrivire ordine**, puteți evalua rezultatele fiecărei perechi de potrivire comparând numărul de înregistrări care provin de la această entitate de potrivire în raport cu procentul de înregistrări corelate cu succes.
+- **Înregistrări sursă unice** arată numărul de înregistrări sursă individuale care au fost procesate în ultima rundă de potrivire.
+- **Înregistrări potrivite și nepotrivite** evidențiază câte înregistrări unice rămân după procesarea regulilor de potrivire.
+- **Numai înregistrări potrivite** afișează numărul de potriviri din toate perechile dvs. de potriviri.
 
-- În secțiunea **Reguli** a unei entități din tabelul **Potrivire ordine**, veți găsi procentul de înregistrări corelate cu succes la nivel de regulă. Selectând simbolul tabelului de lângă o regulă, aveți posibilitatea să vizualizați toate aceste înregistrări la nivel de regulă. Vă recomandăm să examinați un subset de înregistrări pentru a valida că acestea au fost potrivite corect.
+Puteți evalua rezultatele fiecărei perechi de potriviri și regulile sale în tabelul **Detalii înregistrări potrivite**. Comparați numărul de înregistrări provenite dintr-o pereche de potriviri cu procentul de înregistrări potrivite cu succes.
 
-- Experimentați diferite praguri de precizie în jurul condițiilor dvs. pentru a identifica valoarea optimă.
+Examinați regulile unei perechi de potriviri pentru a vedea procentul de înregistrări potrivite cu succes la nivelul regulilor. Selectați punctele de suspensie (...) și apoi selectați **Previzualizare potrivire** pentru a vizualiza toate aceste înregistrări la nivel de regulă. Vă recomandăm să aruncați o privire asupra unor înregistrări pentru a verifica dacă acestea au fost potrivite corect.
 
-  1. Selectați punctele de suspensie (...) pentru regula perechii de potrivire cu care doriți să lucrați și selectați **Editare**.
+Încercați diferite praguri de precizie în condiții pentru a găsi valoarea optimă.
 
-  2. Selectați condiția cu care doriți să lucrați. Fiecare criteriu este reprezentat de un rând în panoul **Regulă de potrivire**.
+  1. Selectați punctele de suspensie (...) pentru regula cu care doriți să experimentați și selectați **Editare**.
 
-  3. Ceea ce veți vedea în pagina **Previzualizare criterii** depinde de nivelul de precizie pe care l-ați selectat pentru o condiție. Găsiți numărul de înregistrări potrivite și de neegalat pentru condiția selectată.
+  2. Modificați valorile de precizie în condițiile pe care doriți să le revizuiți.
 
-     Obțineți o înțelegere bogată a efectelor diferitelor niveluri de prag. Aveți posibilitatea să comparați câte înregistrări vor fi corelate sub fiecare nivel de prag și să vizualizați înregistrările din fiecare opțiune. Selectați fiecare dintre dale și revizuiți datele din secțiunea tabel.
+  3. Selectați **Previzualizare** deci consultați numărul de înregistrări potrivite și de neegalat pentru condiția selectată.
 
-## <a name="optimize-your-matches"></a>Optimizați-vă potrivirile
+## <a name="manage-match-rules"></a>Gestionare reguli de potrivire
 
-Îmbunătățiți calitatea prin reconfigurarea unora dintre parametrii potrivirii:
+Puteți reconfigura și regla fin majoritatea parametrilor de potrivire.
 
-- **Modificați ordinea de potrivire** selectând **Editare** și modificați câmpurile de ordine de potrivire.
+:::image type="content" source="media/match-rules-management.png" alt-text="Captură de ecran a meniului derulant cu opțiuni de regulă de potrivire.":::
 
-  > [!div class="mx-imgBorder"]
-  > ![Editarea ordinii de potrivire a datelor](media/configure-data-match-order-edit.png "Editarea ordinii de potrivire a datelor")
+- **Modificați ordinea regulilor** dacă ați definit mai multe reguli. Puteți reordona regulile de potrivire selectând opțiunile **Mutați în sus** și **Mutați în jos** sau prin glisare și fixare.
 
-- **Modificați ordinea regulilor** dacă ați definit mai multe reguli. Aveți posibilitatea să reordonați regulile de potrivire selectând opțiunile **Mutare în sus** și **Mutare în jos** din grila de reguli de potrivire.
-
-  > [!div class="mx-imgBorder"]
-  > ![Modificați ordinea regulilor](media/configure-data-change-rule-order.png "Modificați ordinea regulilor")
-
-- **Duplicați regulile** dacă ați definit o regulă de potrivire și doriți să creați o regulă similară cu modificări. Procedați astfel selectând **Duplicare**.
-
-  > [!div class="mx-imgBorder"]
-  > ![Duplicați o regulă](media/configure-data-duplicate-rule.png "Duplicați o regulă")
+- **Modificați condițiile regulii** prin selectarea **Editare** și alegeți câmpuri diferite.
 
 - **Dezactivați o regulă** pentru a păstra o regulă de potrivire în timp ce o excludeți din procesul de potrivire.
 
-  > [!div class="mx-imgBorder"]
-  > ![Dezactivați o regulă](media/configure-data-deactivate-rule.png "Dezactivați o regulă")
+- **Duplicați-vă regulile** dacă ați definit o regulă de potrivire și doriți să creați o regulă similară cu modificări, selectați **Duplicat**.
 
-- **Editați regulile** selectând simbolul **Editare**. Puteți aplica următoarele modificări:
+- **Ștergeți o regulă** selectând simbolul **Șterge**.
 
-  - Modificați atributele pentru o condiție: Selectați noi atribute în rândul de condiții specifice.
-  - Modificați pragul pentru o condiție: Reglați glisorul de precizie.
-  - Modificați metoda de normalizare pentru o condiție: Actualizați metoda de normalizare.
+## <a name="specify-custom-match-conditions"></a>Specificați condițiile de potrivire personalizate
 
-## <a name="specify-your-custom-match-records"></a>Specificarea înregistrărilor de potrivire particularizată
+Puteți specifica condițiile la care anumite înregistrări trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Aceste reguli pot fi încărcate pentru a suprascrie procesul de potrivire standard. De exemplu, dacă există în dosarele noastre John Doe I și John Doe II, sistemul s-ar putea să le potrivească ca o singură persoană. Regulile de potrivire personalizate vă permit să specificați că profilurile lor se referă la persoane diferite. 
 
-Puteți specifica condițiile la care anumite înregistrări trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Aceste reguli pot fi încărcate în bloc la procesul de potrivire.
+1. Accesați **Date** > **Unificare** > **Potrivire** și selectați **Potrivire particularizată** în secțiunea **Detalii înregistrări potrivite**.
 
-1. Selectați opțiunea **Corespondență particularizată** din ecranul **Potrivire ordine**.
+  :::image type="content" source="media/custom-match-create.png" alt-text="Captură de ecran a secțiunii regulilor de potrivire cu control de potrivire particularizat evidențiat.":::
 
-   > [!div class="mx-imgBorder"]
-   > ![Creați o potrivire particularizată](media/custom-match-create.png "Creați o potrivire particularizată")
+1. Dacă nu aveți setate reguli de potrivire personalizate, veți vedea un nou panou **Potrivire personalizată** cu mai multe detalii.
 
-2. Dacă nu aveți entități încărcate, veți vedea o nouă casetă de dialog **Potrivire personalizată** care vă solicită să completați câteva detalii. Dacă ați furnizat aceste detalii mai devreme, treceți la pasul 8.
+1. Selectați **Completați șablonul** pentru a obține un fișier șablon care poate specifica înregistrările din ce entități trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Va trebui să completați separat înregistrările "potrivire întotdeauna" și înregistrările "nu se potrivesc niciodată" în două fișiere diferite.
 
-   > [!div class="mx-imgBorder"]
-   > ![Casetă de dialog potrivire particularizată nouă](media/custom-match-new-dialog-box.png "Casetă de dialog potrivire particularizată nouă")
-
-3. Selectați **Completați șablonul** pentru a obține un fișier șablon care poate specifica înregistrările din ce entități trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Va trebui să completați separat înregistrările "potrivire întotdeauna" și înregistrările "nu se potrivesc niciodată" în două fișiere diferite.
-
-4. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți ca cheia primară 12345 din entitatea Vânzări să se potrivească întotdeauna cu cheia primară 34567 din entitatea Persoană de contact, va trebui să specificați următoarele:
+1. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
     - Entity1: Vânzări
     - Entity1Key: 12345
     - Entity2: Persoană de contact
@@ -248,22 +231,22 @@ Puteți specifica condițiile la care anumite înregistrări trebuie să se potr
    
    Dacă doriți să specificați potrivirea personalizată pentru deduplicare pe o entitate, furnizați aceeași entitate ca și Entity1 și Entity2 și setați diferitele valori ale cheii primare.
 
-5. După adăugarea tuturor suprascrierilor pe care doriți să le aplicați, salvați fișierul șablon.
+1. După adăugarea tuturor suprascrierilor pe care doriți să le aplicați, salvați fișierul șablon.
 
-6. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi. Odată ingerate, le puteți utiliza pentru a specifica configurația Potrivire.
+1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi. Odată ingerate, le puteți utiliza pentru a specifica configurația Potrivire.
 
-7. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul vertical.
+1. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul vertical.
 
-   > [!div class="mx-imgBorder"]
-   > ![Înlocuirea suprapunerii de potrivire](media/custom-match-overrides.png "Înlocuirea suprapunerii de potrivire")
+   :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 
-8. Selectați entitățile pe care doriți să le utilizați pentru **Se potrivește întotdeauna** și **Nu se potrivesc niciodată** selectați **Efectuat**.
+1. Selectați entitățile pe care doriți să le utilizați pentru **Se potrivește întotdeauna** și **Nu se potrivesc niciodată** selectați **Efectuat**.
 
-9. Selectați **Salvare** pe pagina **Potrivire** pentru configurația de potrivire particularizată pe care tocmai ați configurat-o.
+1. Selectați **Salvare** pe **Potrivire** pentru a aplica configurația de potrivire personalizată.
 
-10. Selectați **Executare** pe pagina **Potrivire** pentru a începe procesul de potrivire și configurația potrivirii particularizate va fi pusă în aplicare. Orice reguli de potrivire de sistem sunt anulate de setul de configurare.
+1. Selectați **Rulare** pe pagina **Potrivire** pentru a începe procesul de potrivire. Alte reguli de potrivire specificate sunt suprascrise de configurația de potrivire personalizată.
 
-11. După terminarea potrivirii, puteți verifica entitatea **ConflationMatchPair** pentru a confirma că suprascrierile sunt aplicate în potrivirile de contopire.
+> [!TIP]
+> Accesați **Date** > **Entități** și revizuiți entitatea **ConflationMatchPair** pentru a confirma că suprascrierile sunt aplicate.
 
 ## <a name="next-step"></a>Următorul pas
 

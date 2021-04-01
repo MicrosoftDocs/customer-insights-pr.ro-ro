@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 02/02/2021
+ms.date: 03/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,18 +9,18 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 9183c8af4fb9f9f08ac63d8d0cd37c6868bba310
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270447"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598472"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](https://docs.microsoft.com/dynamics365/release-plans/).
+Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
 
 De asemenea, puteți viziona următorul videoclip pentru a afla mai multe despre capacitățile planificate pentru ultimele șase luni.
 
@@ -30,6 +30,40 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="february-2021-updates"></a>Actualizări februarie 2021
+
+Actualizările din februarie 2021 includ mai multe caracteristici, actualizări de performanță și remedieri de erori.
+
+#### <a name="extensibility"></a>Extensibilitate
+
+- **Exportare segmente în AdRoll**
+
+  Am extins destinațiile noastre de export pentru a include AdRoll. Acum puteți exporta segmente din Customer Insights către segmentele de public AdRoll și le puteți folosi ca bază pentru publicitatea dvs. Pentru informații suplimentare, consultați [Conector pentru AdRoll](export-adroll.md).
+
+#### <a name="segments"></a>Segmente
+ 
+- **Dublați un segment**
+  
+  Pentru a crea un segment nou bazat pe unul existent, acum puteți duplica un segment și edita segmentul duplicat pentru a-l rafina în continuare. 
+
+- **Adăugați atribute suplimentare unui segment**
+
+  Acum puteți include atribute în rezultatul segmentului dvs., chiar dacă aceste atribute nu fac parte din profilul clientului. De exemplu, includeți ID-urile de abonament într-un segment, chiar dacă face parte din entitatea de abonament care are o relație M: 1 cu entitatea client. Atâta timp cât atributul aparține unei entități legate de entitatea client, puteți include acum aceste atribute.  
+
+#### <a name="predictions"></a>Predicții
+
+- **Creați recomandări predictive de produs**
+
+  Înțelegerea a ceea ce clienții sunt interesați să cumpere este unul dintre primii pași necesari pentru a îmbunătăți veniturile din afaceri și pentru a fideliza clienții prin personalizare și implicare. Furnizarea de recomandări pentru produse care nu sunt aliniate la interesele clientului dvs. poate crea un sentiment de deconectare între client și afacerea dvs. și, în cele din urmă, poate limita veniturile potențiale și experiența generală pentru un client. 
+
+  Folosind propriile date, puteți crea acum predicții pentru produsele pe care clienții dvs. le-ar putea achiziționa în viitor. Pentru mai multe informații, consultați [Recomandarea produsului predicție](predict-product-recommendation.md).
+
+#### <a name="system-administration"></a>Administrare de sistem
+
+- **Mediul de copiere acceptă mai multe tipuri de surse de date**
+
+  Administratorii pot copia configurațiile de mediu într-un mediu nou din aceeași organizație. Această caracteristică extinde funcționalitatea mediului de copiere pentru cazurile în care sursele de date se bazează pe un data lake Common Data Service sau se utilzează un folder Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizări din ianuarie 2021
 

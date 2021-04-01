@@ -2,19 +2,19 @@
 title: Conector Power Apps
 description: Conectarea cu Power Apps și Power Automate.
 ms.date: 01/19/2021
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 5a8bbb9a09218d54228589d43c21c8894680b56e
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3fa91553fd50a22ab62b5a2b1e3f13b9483776a8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268931"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598170"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector Microsoft Power Apps (previzualizare)
 
@@ -22,9 +22,9 @@ Aduceți profilurile de clienți unificate în aplicațiile dvs. personalizate c
 
 ## <a name="connect-power-apps-and-dynamics-365-customer-insights"></a>Conectare Power Apps și Dynamics 365 Customer Insights
 
-Customer Insights este unul dintre numeroasele [surse de date disponibile în Power Apps](https://docs.microsoft.com/powerapps/maker/canvas-apps/working-with-data-sources).
+Customer Insights este unul dintre numeroasele [surse de date disponibile în Power Apps](/powerapps/maker/canvas-apps/working-with-data-sources).
 
-Consultați documentația Power Apps pentru a învăța cum să [adăugați o conexiune de date la o aplicație](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-data-connection). Vă recomandăm să treceți în revistă [Cum Power Apps utilizează delegarea pentru a gestiona seturi de date mari în aplicațiile proiectate pe pânză](https://docs.microsoft.com/powerapps/maker/canvas-apps/delegation-overview).
+Consultați documentația Power Apps pentru a învăța cum să [adăugați o conexiune de date la o aplicație](/powerapps/maker/canvas-apps/add-data-connection). Vă recomandăm să treceți în revistă [Cum Power Apps utilizează delegarea pentru a gestiona seturi de date mari în aplicațiile proiectate pe pânză](/powerapps/maker/canvas-apps/delegation-overview).
 
 ## <a name="available-entities"></a>Entităţi disponibile
 
@@ -47,11 +47,11 @@ Delegarea funcționează pentru entitatea Client și entitatea UnifiedActivity.
 
 - Delegația pentru **UnifiedActivity**: Delegația pentru această entitate funcționează numai pentru câmpuri **ActivityId** și **CustomerId**.  
 
-- Pentru mai multe informații despre delegare, consultați [Funcții și operațiuni Power Apps delegabile](https://docs.microsoft.com/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
+- Pentru mai multe informații despre delegare, consultați [Funcții și operațiuni Power Apps delegabile](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Exemplu de control al galeriei
 
-De exemplu, adăugați profiluri de clienți la un [control al galeriei](https://docs.microsoft.com/powerapps/maker/canvas-apps/add-gallery).
+De exemplu, adăugați profiluri de clienți la un [control al galeriei](/powerapps/maker/canvas-apps/add-gallery).
 
 1. Adăugați un control **Galerie** unei aplicații pe care o construiți.
 

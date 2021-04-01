@@ -2,19 +2,19 @@
 title: Conector Power BI
 description: Aflați cum să utilizați conectorul Dynamics 365 Customer Insights în Power BI.
 ms.date: 09/21/2020
-ms.reviewer: sthe
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 0607a4644ac7d7beb19e4faecf012efcd197d48c
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477103"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5596054"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector pentru Power BI (previzualizare)
 
@@ -23,7 +23,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Aveți profiluri de clienți unificate.
-- Cea mai recentă versiune de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) este instalată pe computerul dvs. [Aflați mai multe despre Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
+- Cea mai recentă versiune de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) este instalată pe computer. [Aflați mai multe despre Power BI Desktop](/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurați conectorul pentru Power BI
 
@@ -47,7 +47,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 ## <a name="large-data-sets"></a>Seturi mari de date
 
-Conectorul Customer Insights pentru Power BI este proiectat pentru a funcționa pentru seturi de date care conțin până la 1 milion de profiluri de clienți. Importul seturilor de date mai mari poate funcționa, dar durează mult. În plus, procesul ar putea rula într-un time-out din cauza limitărilor Power BI. Pentru mai multe informații, consultați [Power BI : Recomandări pentru seturi mari de date](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
+Conectorul Customer Insights pentru Power BI este proiectat pentru a funcționa pentru seturi de date care conțin până la 1 milion de profiluri de clienți. Importul seturilor de date mai mari poate funcționa, dar durează mult. În plus, procesul ar putea rula într-un time-out din cauza limitărilor Power BI. Pentru mai multe informații, consultați [Power BI : Recomandări pentru seturi mari de date](/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Lucrați cu un subset de date
 
@@ -70,4 +70,3 @@ Puteți identifica și elimina relațiile duplicate.
 După eliminarea relațiilor duplicate, încercați să configurați conectorul Power BI din nou. Mediul ar trebui să fie disponibil acum.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
-

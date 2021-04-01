@@ -5,16 +5,16 @@ ms.date: 05/05/2020
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: m-hartmann
-ms.author: mhart
-ms.reviewer: zacook
+author: zacookmsft
+ms.author: zacook
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 577232c7e901dfd54a195c3e9cfac5d1f0f866e6
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5268287"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595916"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Finalizați-vă datele parțiale cu predicții
 
@@ -31,7 +31,7 @@ Predicțiile vă permit să creați cu ușurință valori previzionate care vă 
 
 Înainte ca organizația dvs. să poată utiliza funcția de predicții, trebuie să fie îndeplinite următoarele cerințe preliminare:
 
-1. Organizația dvs. are o instanță [înființată în Common Data Service](https://docs.microsoft.com/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
+1. Organizația dvs. are o instanță [înființată în Common Data Service](/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
 
 2. Mediul dvs. este atașat la instanța Common Data Service.
 
@@ -120,7 +120,7 @@ După ce ați creat o predicție, puteți particulariza modelul în AI Builder p
 
 4. Selectați **Particularizare în AI Builder**.
 
-5. Actualizați-vă modelul în AI Builder. [Aflați mai multe despre gestionarea modelelor din AI builder](https://docs.microsoft.com/ai-builder/manage-model#retrain-and-republish-existing-models).
+5. Actualizați-vă modelul în AI Builder. [Aflați mai multe despre gestionarea modelelor din AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Următoarea execuție a predicției dvs. va utiliza modelul actualizat pe care l-ați creat.
 

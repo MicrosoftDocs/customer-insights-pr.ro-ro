@@ -6,15 +6,15 @@ ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
-ms.reviewer: wameng
+ms.author: wameng
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5bcee3b4c51880740715575b18fd7a4dbf87e6d0
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
+ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5269943"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "5654747"
 ---
 # <a name="define-and-manage-measures"></a>Definiți și gestionați măsurile
 
@@ -72,8 +72,8 @@ Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți c
    1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex. În mod implicit, dimensiunea *CustomerID* este selectată pentru a crea *măsuri la nivel de client*. Puteți elimina dimensiunea implicită dacă doriți să creați *măsuri la nivel de afaceri*.
    1. Selectați **Gata** pentru a adăuga dimensiunile la măsură.
 
-1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea Client, trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată.
-   1. Selectați **Preferințe de date** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura.
+1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată. 
+   1. Selectați **Preferințe de date** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura. Dacă există doar o singură cale către entitatea *Client*, acest control nu se va afișa.
    1. Selectați **Terminat** pentru a aplica selecția dvs. 
 
    :::image type="content" source="media/measures-data-preferences.png" alt-text="Selectați entitatea cale pentru măsură.":::

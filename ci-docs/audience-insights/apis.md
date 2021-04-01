@@ -1,20 +1,20 @@
 ---
 title: Lucrați cu API-uri
 description: Folosirea de API-uri și înțelegerea limitărilor.
-ms.date: 12/04/2020
+ms.date: 03/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
-ms.author: mhart
+ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 966db1a22e7dece1bcd89733880bce059151157f
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
+ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5267539"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "5710475"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -36,7 +36,7 @@ Acest articol vă ghidează să accesați API-urile Customer Insights, să crea�
 
    :::image type="content" source="media/enable-apis.gif" alt-text="Activați API-urile Customer Insights":::
 
-1. Selectați **Explorați API-urile noastre** pentru a încerca API-urile.
+1. Selectați **Explorați API-urile noastre** pentru [a încerca API-urile](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
 1. Alegeți o operațiune API și selectați **Încearcă**.
 
@@ -47,6 +47,9 @@ Acest articol vă ghidează să accesați API-urile Customer Insights, să crea�
 1. Derulați până în partea de jos a panoului lateral și selectați **Trimitere**.
 
 Răspunsul HTTP va apărea curând mai jos.
+
+
+   :::image type="content" source="media/try-apis.gif" alt-text="Gif animat care arată cum se selectează testarea API-urilor.":::
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Creați o nouă înregistrare a aplicației în portalul Azure
 
@@ -61,6 +64,8 @@ Acești pași vă ajută să începeți să utilizați API-urile Customer Insigh
 
 1. În noua înregistrare a aplicației, accesați **Permisiuni API**.
 
+   :::image type="content" source="media/app-registration-1.gif" alt-text="Gif animat pentru a seta permisiunea API în înregistrarea aplicației.":::
+
 1. Selectați **Adăugați o permisiune** și selectați **Customer Insights** în panoul lateral.
 
 1. Pentru **Tip permisiune**, selectați **Permisiuni delegate** și selectați permisiunea **user_impersonation**.
@@ -71,9 +76,11 @@ Acești pași vă ajută să începeți să utilizați API-urile Customer Insigh
 
 Puteți utiliza ID-ul aplicației/clientului pentru această înregistrare a aplicației cu Biblioteca de autentificare Microsoft (MSAL) pentru a obține un token pentru purtător pe care îl trimiteți cu cererea dvs. către API.
 
+:::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF animat pentru a acorda consimțământul administratorului.":::
+
 Pentru mai multe informații despre MSAL, consultați [Prezentare generală a bibliotecii de autentificare Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
 
-Pentru mai multe informații despre înregistrarea aplicațiilor în Azure, consultați [Noua experiență de înregistrare a aplicației în portalul Azure](https://docs.microsoft.com/azure/active-directory/develop/app-registration-portal-training-guide).
+Pentru mai multe informații despre înregistrarea aplicațiilor în Azure, consultați [Noua experiență de înregistrare a aplicației în portalul Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 
 Pentru informații despre utilizarea API-urilor cu bibliotecile clienților noștri, consultați [Biblioteci client Customer Insights](#customer-insights-client-libraries).
 
@@ -101,6 +108,8 @@ Pentru informații despre utilizarea API-urilor cu bibliotecile clienților noș
 
 1. Selectați **Acordă consimțământul administratorului pentru...** pentru a finaliza înregistrarea aplicației.
 
+   :::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF animat pentru a acorda consimțământul administratorului.":::
+
 1. În concluzie, trebuie să adăugăm numele înregistrării aplicației ca utilizator în Customer Insights.    
    Deschideți Customer Insights, accesați **Administrator** > **Permisiuni** și selectați **Adăugare utilizator**.
 
@@ -108,7 +117,7 @@ Pentru informații despre utilizarea API-urilor cu bibliotecile clienților noș
 
 ## <a name="customer-insights-client-libraries"></a>Biblioteci client Customer Insights
 
-Această secțiune vă ajută să începeți să utilizați bibliotecile client disponibile pentru API-urile Customer Insights.
+Această secțiune vă ajută să începeți să utilizați bibliotecile client disponibile pentru API-urile Customer Insights. Toate codurile sursă ale bibliotecii și exemplele de aplicații pot fi găsite pe [pagina GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
 
 ### <a name="c-nuget"></a>C# NuGet
 
@@ -127,7 +136,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
 
 #### <a name="use-the-c-client-library"></a>Utilizați biblioteca de client C#
 
-1. Folosiți [Biblioteca de autentificare Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview) pentru a obține un `AccessToken` folosind [înregistrarea aplicației Azure](#create-a-new-app-registration-in-the-azure-portal) existentă.
+1. Folosiți [Biblioteca de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pentru a obține un `AccessToken` folosind [înregistrarea aplicației Azure](#create-a-new-app-registration-in-the-azure-portal) existentă.
 
 1. După autentificarea și achiziționarea cu succes a unui token, construiți un nou `HttpClient` sau utilizați unul existent cu suplimentul **DefaultRequestHeaders „Autorizare”** setat la **Purtător <access token>** și **Ocp-Apim-Subscription-Key** setat la [**cheie de abonament** din mediul dvs. Customer Insights](#get-started-trying-the-customer-insights-apis).    
    Resetați antetul **Autorizare** când este cazul. De exemplu, când tokenul a expirat.
@@ -141,5 +150,12 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
 1. Răspunsul va fi probabil de tip `object` deoarece metoda poate returna mai multe tipuri (de exemplu, `IList<InstanceInfo>` și `ApiErrorResult`). Pentru a verifica tipul de returnare, puteți folosi în siguranță funcția cast pentru obiectele din tipurile de răspuns specificate în [pagina de detalii API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pentru respectiva operațiune.    
    Dacă sunt necesare mai multe informații la cerere, utilizați **metode mesaj http** pentru a accesa obiectul de răspuns brut.
 
+### <a name="nodejs-package"></a>Pachetul NodeJS
+
+Utilizați bibliotecile client NodeJS disponibile prin NPM: https://www.npmjs.com/package/@microsoft/customerinsights
+
+### <a name="python-package"></a>Pachet Python
+
+Utilizați bibliotecile client Python disponibile prin PyPi: https://pypi.org/project/customerinsights/
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

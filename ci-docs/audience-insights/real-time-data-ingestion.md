@@ -2,19 +2,19 @@
 title: Ingerarea și limitările datelor în timp real
 description: Informații generale despre capacitățile în timp real în detalii despre public.
 ms.date: 10/27/2020
-ms.reviewer: nikeller
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
-ms.author: mhart
+author: Nils-2m
+ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 7421ed9d2cb399d546815b2d1b0ea5ec51ca6b6d
-ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
+ms.openlocfilehash: 3c84cfe7441eb026c1fd45eda1f72421388d01d7
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/15/2021
-ms.locfileid: "5270295"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598584"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
@@ -54,7 +54,7 @@ API-ul în timp real vă permite să publicați o activitate nouă din sistemul 
 
 Există două moduri de conectare la API-ul în timp real:
 
-- [indirect ](#connect-via-the-dynamics-365-customer-insights-connector), folosind [conectorul Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
+- [indirect ](#connect-via-the-dynamics-365-customer-insights-connector), folosind [conectorul Dynamics 365 Customer Insights](/connectors/customerinsights/)
 - [direct](#connect-directly-to-the-real-time-api), cu cod
 
 Ambele moduri au în comun următoarele condiții preliminare:
@@ -66,13 +66,13 @@ Ambele moduri au în comun următoarele condiții preliminare:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Conectare prin intermediul conectorului Dynamics 365 Customer Insights
 
-API-ul în timp real poate ingera date dintr-un conector dedicat Power Platform, [conectorul Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), fără a fi nevoie să scrieți și să implementați niciun cod.    
-Conectorul poate efectua aceleași acțiuni în timp real ca API-ul. Aveți nevoie de o licență validă pentru conectori premium. Pentru mai multe informații, consultați [întrebările frecvente despre licențierea Power Apps și Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
+API-ul în timp real poate ingera date dintr-un conector dedicat Power Platform, [conectorul Dynamics 365 Customer Insights](/connectors/customerinsights/), fără a fi nevoie să scrieți și să implementați niciun cod.    
+Conectorul poate efectua aceleași acțiuni în timp real ca API-ul. Aveți nevoie de o licență validă pentru conectori premium. Pentru mai multe informații, consultați [întrebările frecvente despre licențierea Power Apps și Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps și/sau Power Automate](https://docs.microsoft.com/connectors/)
-- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
+- Power Platform [Power Apps și/sau Power Automate](/connectors/)
+- Azure [Logic Apps](/azure/connectors/apis-list)
 
-Pentru detalii despre crearea fluxurilor, consultați secțiunea [documentație Power Automate](https://docs.microsoft.com/power-automate/).
+Pentru detalii despre crearea fluxurilor, consultați secțiunea [documentație Power Automate](/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Conectare direct la API-ul în timp real
 

@@ -2,19 +2,19 @@
 title: Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 description: Prezentare generală a detaliilor de public pentru Dynamics 365 Customer Insights.
 ms.date: 01/18/2021
-ms.reviewer: nimagen
+ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: overview
-author: m-hartmann
-ms.author: mhart
+author: NimrodMagen
+ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 735aae12abebd2d6d9b6aedb5835164834f480c0
-ms.sourcegitcommit: 0260ed244b97c2fd0be5e9a084c4c489358e8d4f
+ms.openlocfilehash: 146994b739748c615ca002add4e64216da6c1dea
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "5477010"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5598645"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 
@@ -25,7 +25,7 @@ Detaliile privind publicul vă ajută să construiți o înțelegere mai profund
 - **Elimine silozurile de date și să unifice datele clienților**
 
   - Conectați-vă și unificați-vă datele cu ușurință - aduceți date tranzacționale, observaționale și comportamentale din [surse de date populare prin folosirea conectorilor pre-construiți](data-sources.md).
-  - Transformă datele clientului în mod inteligent - creează profiluri de clienți unificate în conformitate cu [Common Data Model](https://docs.microsoft.com/common-data-model/). Rezolvați identitățile clienților cu recomandări bazate pe AI / ML.
+  - Transformă datele clientului în mod inteligent - creează profiluri de clienți unificate în conformitate cu [Common Data Model](/common-data-model/). Rezolvați identitățile clienților cu recomandări bazate pe AI / ML.
 
 - **Îmbogățiți-vă cu informațiile de audiență conținute în Microsoft Graph**
 
@@ -42,7 +42,7 @@ Detaliile privind publicul vă ajută să construiți o înțelegere mai profund
 - **Analiști / administratori de date:**
 
   - Acces la o colecție bogată de conectori pentru a ingera toate datele clientului.
-  - Posibilitatea de a uni datele clienților și de a le transforma în format [Common Data Model](https://docs.microsoft.com/common-data-model/).
+  - Posibilitatea de a uni datele clienților și de a le transforma în format [Common Data Model](/common-data-model/).
   - Îmbogățiți informațiile despre clienți cu informații despre informațiile publicului conținute în Microsoft Graph, cum ar fi afinitatea și interesele mărcii.
   - Configurare „clic, nu codare” și experiență de depanare pentru a ajuta la configurarea ușoară a detaliilor privind publicul și identificarea potențialelor probleme.
   - Curățați și standardizați datele clienților pe surse diferite, cu recomandări bazate pe AI.  

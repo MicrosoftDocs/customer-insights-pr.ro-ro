@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 02/01/2021
+ms.date: 03/26/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 1c2dfdd2889b5cb6c5285b4d7cc7f52a3d6de4d1
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598308"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5888001"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -44,6 +44,9 @@ Acest articol explică cum să creați o nouă organizație și cum să asigura�
 
 Există două moduri de a crea un mediu nou. Puteți fie specifica o configurație complet nouă, sau puteți copia unele setări de configurare dintr-un mediu existent.
 
+> [!NOTE]
+> Organizațiile pot crea *două* medii pentru fiecare licență Customer Insights. Dacă organizația dvs. achiziționează mai multe ori licență, vă rugăm să [contactați echipa noastră de asistență](https://go.microsoft.com/fwlink/?linkid=2079641) pentru a crește numărul de medii disponibile. Pentru mai multe informații despre capacitate și capacitate suplimentară, descărcați [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 Pentru crearea unui mediu:
 
 1. Selectați selectorul **Mediu** în antetul aplicației.
@@ -55,14 +58,14 @@ Pentru crearea unui mediu:
 
 1. În caseta de dialog **Creare mediu nou**, selectați **Mediu nou**.
 
-   Dacă doriți să [copiați date din mediul actual](#additional-considerations-for-copy-configuration-preview), selectați **Copiere din mediul existent**. Veți vedea o listă cu toate mediile disponibile în organizația dvs. de unde puteți copia datele.
+   Dacă doriți să [copiați date din mediul actual](#considerations-for-copy-configuration-preview), selectați **Copiere din mediul existent**. Veți vedea o listă cu toate mediile disponibile în organizația dvs. de unde puteți copia datele.
 
 1. Furnizați următoarele detalii:
    - **Nume**: Numele pentru acest mediu. Acest câmp este deja completat dacă ați copiat dintr-un mediu existent, dar îl puteți modifica.
    - **Regiune**: Regiunea în care este implementat și găzduit serviciul.
    - **Tip**: Selectați dacă doriți să creați un mediu de producție sau sandbox.
 
-2. Opțional, puteți selecta **Setări complexe**:
+1. Opțional, puteți selecta **Setări complexe**:
 
    - **Se salvează toate datele în**: Specifică unde doriți să stocați datele de ieșire generate de Customer Insights. Veți avea două opțiuni: **spațiu de stocare Customer Insights** (un Azure Data Lake gestionat de echipa Customer Insights) și **Azure Data Lake Storage Gen2** (Azure Data Lake Storage ale dvs.). Opțiunea de stocare a Customer Insights este selectată în mod implicit.
 
@@ -75,20 +78,20 @@ Pentru crearea unui mediu:
 
    - Pentru opțiunea Azure Data Lake Storage Gen2, puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi „customerinsights”.
    
-   - Dacă doriți să utilizați [predicții](predictions.md) sau configurați partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, furnizați adresa URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și să activeze capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
+   - Dacă doriți să utilizați [predicții](predictions.md), configurați partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, sau activați ingestia de date din sursele de date local, furnizați URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
 
      > [!NOTE]
      > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
      > - [Predicția valorilor lipsă într-o entitate](predictions.md) momentan nu este acceptată atunci când activați partajarea datelor cu Microsoft Dataverse Data Lake gestionat.
 
      > [!div class="mx-imgBorder"]
-     > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse](media/Datasharing-with-DataverseMDL.png)
+     > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
    Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate la subfolderele respective pe baza procesului pe care îl derulați.
 
    Dacă creați mai multe medii de Customer Insights și alegeți să salvați entitățile de ieșire din acele medii în contul dvs. de stocare, vor fi create dosare separate pentru fiecare mediu cu ci_<environmentid> în recipient.
 
-### <a name="additional-considerations-for-copy-configuration-preview"></a>Considerente suplimentare pentru configurarea copiei (previzualizare)
+### <a name="considerations-for-copy-configuration-preview"></a>Considerații pentru configurarea copierii (previzualizare)
 
 Sunt copiate următoarele setări de configurare:
 
@@ -136,6 +139,18 @@ Puteți edita câteva dintre detaliile mediilor existente.
 4. Dacă un mediu este configurat pentru a stoca date în Azure Data Lake Storage Gen2, puteți actualiza **Cheia contului**. Cu toate acestea, nu puteți schimba **Numele de cont** sau numele **Containerului**.
 
 5. Opțional, puteți actualiza de la o conexiune bazată pe cheie de cont la o conexiune bazată pe resurse sau bazată pe abonament. După actualizare, nu puteți reveni la cheia de cont după actualizare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Nu puteți schimba informațiile legate de **Recipient** la actualizarea conexiunii.
+
+6. Opțional, puteți furniza un URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Aceste capacități includ partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, ingestia de date din sursele de date local sau utilizarea de [predicții](predictions.md). Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data lake gestionat.
+
+   > [!NOTE]
+   > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
+   > - [Predicție a valorilor lipsă într-o entitate](predictions.md) momentan nu este acceptat atunci când activați partajarea datelor cu Microsoft Dataverse Data Lake gestionat.
+
+   Odată ce activați partajarea datelor cu Microsoft Dataverse, se va declanșa o reîmprospătare completă, unică, a surselor de date și a altor procese. Dacă procesele rulează și se află în coadă, nu veți vedea opțiunea de a permite partajarea datelor cu Microsoft Dataverse. Puteți aștepta ca acele procese să se finalizeze sau să le anulați pentru a permite partajarea datelor. 
+   
+   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
+   
+   Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate în subfolderele respective, în funcție de procesul pe care îl executați.
 
 ## <a name="reset-an-existing-environment"></a>Resetați un mediu existent
 

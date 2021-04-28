@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea măsurilor
 description: Definiți măsuri pentru a analiza și reflecta performanța afacerii dvs.
-ms.date: 02/02/2021
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,28 +9,28 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 202ea22d290be04e54ce9676b6b693162354607f
-ms.sourcegitcommit: d3eb07dcc72624a2d5cfc95c7ea9faaa2c1b6001
+ms.openlocfilehash: 9a94a32a04f2a8beb661c27271fe96f23d998722
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "5654747"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887955"
 ---
 # <a name="define-and-manage-measures"></a>Definiți și gestionați măsurile
 
-Măsurile vă ajută să înțelegeți mai bine comportamentele clienților și performanța afacerii prin recuperarea valorilor relevante din [profiluri unificate](data-unification.md). De exemplu, o companie vrea să vadă *cheltuieli totale per client* pentru a înțelege istoricul achizițiilor clientului individual. Sau măsurați *vânzările totale ale companiei* pentru a înțelege veniturile la nivel agregat din întreaga afacere.  
+Măsurile vă ajută să înțelegeți mai bine comportamentele clienților și performanța afacerii. Se uită la valorile relevante din [profiluri unificate](data-unification.md). De exemplu, o companie vrea să vadă *cheltuieli totale per client* pentru a înțelege istoricul sau măsura achizițiilor fiecărui client *vânzările totale ale companiei* pentru a înțelege veniturile la nivel agregat din întreaga afacere.  
 
 Măsurile sunt create folosind generatorul de măsuri, o platformă de interogare a datelor cu diverși operatori și opțiuni simple de mapare. Vă permite să filtrați datele, să grupați rezultatele, să detectați [căile relației entității](relationships.md), și previzualizați ieșirea.
 
 Utilizați instrumentul de măsurare pentru a planifica activități comerciale prin interogarea datelor despre clienți și extragerea de informații. De exemplu, crearea unei măsuri de *cheltuieli totale per client* și *returnare totală per client* ajută la identificarea unui grup de clienți cu cheltuieli mari, dar cu randament ridicat. Puteți [crea un segment](segments.md) pentru a conduce următoarele cele mai bune acțiuni. 
 
-## <a name="create-a-measure"></a>Crearea unei măsuri
+## <a name="build-your-own-measure-from-scratch"></a>Construiți propria măsură de la zero
 
 Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți construi o măsură cu atribute de date de la entități de date care au o relație configurată pentru a se conecta cu entitatea Client. 
 
 1. În Detalii despre public, accesați **Măsuri**.
 
-1. Selectați **Nou**.
+1. Selectați **Nou** și alegeți **Construiți una proprie**.
 
 1. Selectați **Editează nume** și furnizați un **Nume** pentru măsură. 
    > [!NOTE]
@@ -72,6 +72,8 @@ Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți c
    1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex. În mod implicit, dimensiunea *CustomerID* este selectată pentru a crea *măsuri la nivel de client*. Puteți elimina dimensiunea implicită dacă doriți să creați *măsuri la nivel de afaceri*.
    1. Selectați **Gata** pentru a adăuga dimensiunile la măsură.
 
+1. Dacă există date în datele dvs. pe care trebuie să le înlocuiți cu un număr întreg, de exemplu, înlocuiți *nul* cu *0*, selectați **Reguli**. Configurați regula și asigurați-vă că alegeți numai numere întregi ca înlocuitoare.
+
 1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată. 
    1. Selectați **Preferințe de date** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura. Dacă există doar o singură cale către entitatea *Client*, acest control nu se va afișa.
    1. Selectați **Terminat** pentru a aplica selecția dvs. 
@@ -88,9 +90,57 @@ Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți c
 
 1. Accesați **Măsuri** pentru a vedea măsurarea nou creată în listă.
 
+## <a name="use-a-template-to-build-a-measure"></a>Utilizați un șablon pentru a construi o măsură
+
+Puteți utiliza șabloane predefinite de măsuri utilizate în mod obișnuit pentru a le crea. Descrieri detaliate ale șabloanelor și o experiență ghidată vă ajută la crearea eficientă a măsurilor. Șabloanele se bazează pe date cartografiate din entitatea *Activitate unificată*. Deci, asigurați-vă că ați configurat [activitățile clienților](activities.md) înainte de a crea o măsură dintr-un șablon.
+
+Șabloane de măsură disponibile: 
+- Valoarea medie a tranzacției (ATV)
+- Valoarea totală a tranzacțiilor
+- Venitul mediu zilnic
+- Venitul mediu anual
+- Numărul de tranzacții
+- Puncte de fidelitate câștigate
+- Puncte de fidelitate valorificate
+- Soldul punctelor de fidelitate
+- Durată activă a ciclului de viață a clientului
+- Durata apartenenței la programul de fidelitate
+- Timp de la ultima achiziție
+
+Următoarea procedură prezintă pașii pentru a construi o nouă măsură folosind un șablon.
+
+1. În Detalii despre public, accesați **Măsuri**.
+
+1. Selectați **Nou** și selectați **Alegeți un șablon**.
+
+   :::image type="content" source="media/measure-use-template.png" alt-text="Captură de ecran a meniului derulant atunci când creați o nouă măsură cu evidențiere pe șablon.":::
+
+1. Găsiți șablonul care se potrivește nevoilor dvs. și selectați **Alegeți șablonul**.
+
+1. Examinați datele necesare și selectați **Începeți** dacă aveți toate datele la locul lor.
+
+1. În panoul **Editați nume**, setați numele măsurii dvs. și entitatea de ieșire. 
+
+1. Selectați **Terminat**.
+
+1. În secțiunea **Setați perioada de timp**, definiți intervalul de timp al datelor de utilizat. Alegeți dacă doriți ca noua măsură să acopere întregul set de date selectând **Tot timpul**. Sau dacă doriți ca măsura să se concentreze pe o **Perioadă de timp specifică**.
+
+   :::image type="content" source="media/measure-set-time-period.png" alt-text="Captură de ecran care arată secțiunea perioadei de timp la configurarea unei măsuri dintr-un șablon.":::
+
+1. În secțiunea următoare, selectați **Adăugați date** pentru a alege activitățile și pentru a mapa datele corespunzătoare din entitatea *Activitate unificată*.
+
+    1. Pasul 1 din 2: Sub **Tipul activității**, alegeți tipul entității pe care doriți să o utilizați. Pentru **Activități**, selectați entitățile pe care doriți să le mapați.
+    1. Pasul 2 din 2: Alegeți atributul din entitatea *Activitate unificată* pentru componenta cerută de formulă. De exemplu, pentru Valoarea medie a tranzacției, este atributul care reprezintă valoarea tranzacției. Pentru **Marcaj de timp al activității**, alegeți atributul din entitatea de activitate unificată care reprezintă data și ora activității.
+   
+1. Odată ce maparea datelor are succes, puteți vedea starea drept **Finalizată** și numele activităților și atributelor mapate.
+
+   :::image type="content" source="media/measure-template-configured.png" alt-text="Captură de ecran a unei configurații completate a șablonului de măsură.":::
+
+1. Acum puteți selecta **Rulare** pentru a calcula rezultatele măsurii. Pentru a-l rafina mai târziu, selectați **Salvați schița**.
+
 ## <a name="manage-your-measures"></a>Gestionați-vă măsurile
 
-După ce [creați o măsură](#create-a-measure), veți vedea o listă de măsuri pe pagina **Măsuri**.
+Puteți găsi lista măsurilor pe pagina **Măsuri**.
 
 Veți găsi informații despre tipul de măsură, creatorul, data creării, starea și starea. Când selectați o măsură din listă, puteți previzualiza rezultatul și descărca un fișier .CSV.
 

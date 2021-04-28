@@ -1,7 +1,7 @@
 ---
 title: 'conector LiveRamp '
-description: Aflați cum să exportați datele la LiveRamp.
-ms.date: 12/02/2020
+description: Aflați cum să configurați conexiunea și exportul la LiveRamp.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,29 +9,31 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 6ef4388b0e8ba8bc5866807765d8a872d41c9c14
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597572"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760342"
 ---
-# <a name="liverampreg-connector-preview"></a>Conector LiveRamp &reg; (previzualizare)
+# <a name="export-segments-to-liverampreg-preview"></a>Exportați segmente către LiveRamp&reg; (previzualizare)
 
-Activați-vă datele în LiveRamp pentru a vă conecta cu peste 500 de platforme pe ecosistemele digitale, sociale și TV. Lucrați cu datele dvs. în LiveRamp pentru a viza, suprima și personaliza campaniile publicitare.
+Activați-vă datele din LiveRamp pentru a vă conecta cu peste 500 de platforme din ecosisteme digitale, sociale și de televiziune. Lucrați cu datele dvs. în LiveRamp pentru a viza, suprima și personaliza campaniile publicitare.
 
-## <a name="prerequisites"></a>Cerințe preliminare
+## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
 
 - Pentru a utiliza acest conector aveți nevoie de un abonament LiveRamp.
 - Pentru a obține un abonament, [contactați LiveRamp](https://liveramp.com/contact/) direct. [Aflați mai multe despre Îndrumări LiveRamp](https://liveramp.com/our-platform/data-onboarding/).
 
-## <a name="connect-to-liveramp"></a>Conectare la LiveRamp
+## <a name="set-up-connection-to-liveramp"></a>Configurarea conexiunii la LiveRamp
 
-1. În Detalii despre audiență, accesați **Administrator** > **Destinații export**.
+1. Salt la **Administrator** > **Conexiuni**.
 
-1. În dala **LiveRamp**, selectați **Configurare**.
+1. Selectați **Adăugați conexiune** și alegeți **LiveRamp** pentru a configura conexiunea.
 
-1. Dați destinației dvs. un nume ușor de recunoscut în câmpul **Nume afișat**.
+1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
+
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Furnizează un **Nume de utilizator** și **Parola** pentru contul dvs. LiveRamp Secure FTP (SFTP).
 Aceste acreditări pot fi diferite de datele de acreditare Îndrumări LiveRamp.
@@ -40,15 +42,25 @@ Aceste acreditări pot fi diferite de datele de acreditare Îndrumări LiveRamp.
 
 1. După verificarea cu succes, acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **Sunt de acord**.
 
-1. Selectați **Următorul** pentru a configura conectorul LiveRamp.
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
-## <a name="configure-the-connector"></a>Configurați conectorul
+## <a name="configure-an-export"></a>Configurați un export
+
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Faceți salt la **Date** > **Exporturi**.
+
+1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea LiveRamp. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
 1. În câmpul **Alegeți identificatorul de cheie**, selectați **E-mail**,  **Numele și adresa**, sau **Telefon** pentru a trimite la LiveRamp pentru rezolvarea identității.
+   > [!div class="mx-imgBorder"]
+   > ![Conector LiveRamp cu mapare de atribute](media/export-liveramp-segments.png "Conector LiveRamp cu mapare de atribute")
 
 1. Mapați atributele corespunzătoare de la entitatea clientului dvs. unificat pentru identificatorul de cheie selectat.
 
-1. Selectați **Adăugați atributul** pentru a face o mapare a atributelor suplimentare pe care să le trimiteți la LiveRamp.
+1. Selectați **Adăugați un atribut** pentru a mapa mai multe atribute de trimis către LiveRamp.
 
    > [!TIP]
    > Trimiterea mai multor atribute de identificare cheie către LiveRamp este probabil să vă obțină o rată de potrivire mai mare.
@@ -57,13 +69,10 @@ Aceste acreditări pot fi diferite de datele de acreditare Îndrumări LiveRamp.
 
 1. Selectați **Salvare**.
 
-> [!div class="mx-imgBorder"]
-> ![Conector LiveRamp cu mapare de atribute](media/export-liveramp-segments.png "Conector LiveRamp cu mapare de atribute")
+Salvarea unui export nu se execută imediat.
 
-## <a name="export-the-data"></a>Exportați datele
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
 
-Exportul va începe curând dacă toate condițiile preliminare pentru export au fost finalizate. Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab).
-După ce exportul este încheiat cu succes, vă puteți conecta la Îndrumare LiveRamp pentru a activa și distribui datele.
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

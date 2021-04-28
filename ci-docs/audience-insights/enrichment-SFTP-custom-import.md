@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire cu importul particularizat SFTP
 description: Informații generale despre îmbogățirea particularizată a importului SFTP.
-ms.date: 11/18/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,44 +9,63 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: d9e095ef793cbd25415864f76a541dce68fafe47
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: a2d450635c19432bdd88db74b61c17febdeb568d
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595870"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896296"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Îmbogățiți profilurile clienților cu date particularizate (previzualizare)
 
-Importul particularizat Secure File Transfer Protocol (SFTP) vă permite să importați date care nu trebuie să treacă prin procesul de unificare a datelor. Este un mod flexibil, sigur și ușor de a vă obține datele. Importul particularizat SFTP poate fi utilizat în combinație cu [exportul SFTP](export-sftp.md) care vă permite să exportați datele de profil ale clienților necesare pentru îmbogățire. Datele pot fi apoi procesate, îmbogățite, iar importul particularizat SFTP poate fi utilizat pentru a readuce datele îmbogățite înapoi la capacitatea Detalii despre audiență a Dynamics 365 Customer Insights.
+Importul particularizat Protocol de transfer securizat al fișierelor (SFTP) vă permite să importați date care nu trebuie să treacă prin procesul de unificare a datelor. Este un mod flexibil, sigur și ușor de a vă obține datele. Importul particularizat SFTP poate fi utilizat în combinație cu [exportul SFTP](export-sftp.md) care vă permite să exportați datele de profil ale clienților necesare pentru îmbogățire. Datele pot fi apoi procesate, îmbogățite, iar importul particularizat SFTP poate fi utilizat pentru a readuce datele îmbogățite înapoi la capacitatea Detalii despre audiență a Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 Pentru a configura importul particularizat SFTP, trebuie îndeplinite următoarele condiții prealabile:
 
-- Aveți acreditări de utilizator (nume de utilizator și parolă) pentru locația SFTP de unde vor fi importate datele.
-- Aveți adresa URL și numărul portului (de obicei 22) pentru gazda STFP.
-- Aveți numele fișierului și locația fișierului de importat pe gazda SFTP.
-- Există un fișier *model.json* care specifică schema pentru datele care urmează să fie importate. Acest fișier trebuie să fie în același director cu fișierul de importat.
-- Aveți permisiune de [Administrator](permissions.md#administrator).
+- Aveți numele fișierului și locația (calea) fișierului de importat pe gazda SFTP.
+- Există un fișier *model.json* care specifică [schema Common Data Model](/common-data-model/) pentru ca datele să fie importate. Acest fișier trebuie să fie în același director cu fișierul de importat.
+- O conexiune SFTP a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#administrator). Veți avea nevoie de acreditările utilizatorului, adresa URL și numărul de port pentru locația SFTP de unde doriți să importați date.
 
-## <a name="configuration"></a>Configurație
+
+## <a name="configure-the-import"></a>Configurați importul
 
 1. Accesați **Date** > **Îmbogățire** și selectați fila **Descoperire**.
 
-1. Pe **Dala de import particularizat SFTP**, selectați **Doresc îmbogățirea datelor**.
+1. În **dala de import particularizat SFTP**, selectați **Îmbogățiți datele mele** și apoi selectați **Începeți**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Dala import particularizat SFTP](media/SFTP_Custom_Import_tile.png "Dala import particularizat SFTP")
+   :::image type="content" source="media/SFTP_Custom_Import_tile.png" alt-text="Dala import particularizat SFTP":::
 
-1. Selectați **Începeți** și furnizați acreditările și adresa pentru serverul SFTP. De exemplu, sftp://mysftpserver.com:22.
+1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând **Import particularizat SFTP** din meniul cu lista verticală.
 
-1. Introduceți numele fișierului care conține datele și calea către fișier de pe serverul SFTP dacă nu se află în folderul rădăcină.
+1. Selectați **Conectați-vă la import particularizat** pentru a selecta conexiunea.
 
-1. Confirmați toate intrările selectând **Conectare la importul particularizat**.
+1.  Selectați **Următorul** și introduceți **Nume de fișier** și **Cale** din fișierul de date pe care doriți să îl importați.
 
-   > [!div class="mx-imgBorder"]
-   > ![Fișă configurare import particularizat SFTP](media/SFTP_Custom_Import_Configuration_flyout.png "Fișă configurare import particularizat SFTP")
+    :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captură de ecran la introducerea locației datelor.":::
+
+1. Selectați **Următorul** și furnizați un nume pentru îmbogățire și un nume pentru entitatea de ieșire. 
+
+1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
+
+## <a name="configure-the-connection-for-sftp-custom-import"></a>Configurați conexiunea pentru importul particularizat SFTP 
+
+Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Import particularizat.
+
+1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
+
+1. Introduceți numele de utilizator valid, parola și adresa URL a gazdei pentru serverul STFP pe care se află datele care trebuie importate.
+
+1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **Sunt de acord**.
+
+1. Selectați **Verificare** pentru a valida configurația.
+
+1. După finalizarea verificării, conexiunea poate fi salvată făcând clic pe **Salvați**.
+
+> [!div class="mx-imgBorder"]
+   > ![Pagina de configurare a conexiunii Experian.](media/enrichment-SFTP-connection.png "Pagina de configurare a conexiunii Experian")
+
 
 ## <a name="defining-field-mappings"></a>Se definesc mapările de câmp 
 
@@ -105,8 +124,5 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 ## <a name="next-steps"></a>Pașii următori
 
 Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md), [măsuri](measures.md), și [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe personalizate.
-
-
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

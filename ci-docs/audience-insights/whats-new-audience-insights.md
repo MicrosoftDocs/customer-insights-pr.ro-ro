@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 03/08/2021
+ms.date: 04/07/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 96c0b871eeaaf0976e5c718f37f883f4410977dc
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2159481f9355de738a7b457dcf0849a45c3e08db
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598472"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896250"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
@@ -22,14 +22,51 @@ ms.locfileid: "5598472"
 
 Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
 
-De asemenea, puteți viziona următorul videoclip pentru a afla mai multe despre capacitățile planificate pentru ultimele șase luni.
-
-> [!VIDEO https://www.youtube.com/embed/jQh-7pscH30]
-
 Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regiuni pot vedea caracteristici înaintea altora. Cu excepția cazului în care se specifică altfel, nu trebuie să luați nicio acțiune și vom actualiza automat aplicația fără întreruperi.
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="march-2021-updates"></a>Actualizări martie 2021
+
+Actualizările din martie 2021 includ mai multe funcții, actualizări de performanță și remedieri de erori.
+
+### <a name="activities"></a>Activități
+
+- **Expert de activitate și tipuri semantice** Am îmbunătățit și am actualizat experiența noastră de cartografiere a activității pentru a ghida și simplifica crearea cartografierii activității. În această nouă experiență, utilizatorii obțin o experiență ghidată pentru a ajuta la finalizarea fiecărui pas al procesului. La etapa de mapare a activității, pe lângă alegerea dintre mai multe tipuri de activități, utilizatorul poate alege să mapeze semantic datele pentru *Abonament* și/sau *SalesOrderLine* la schemele standard din industrie, care pot fi utilizate pentru consumul din aval.    
+  Pentru mai multe informații, consultați [Activități Client](activities.md).
+
+### <a name="data-ingestion"></a>Ingestie date
+
+- **Conectați-vă la sursele de date local folosind fluxuri de date Power Platform și gateway-uri** Suntem încântați să anunțăm previzualizarea fluxurilor de date Power Platform și conectivitate local folosind gateway-uri în Customer Insights cu o Power Platform asociată sau un mediu Dataverse. Orice sursă de date nouă creată într-un mediu Customer Insights cu un mediu Dataverse legat va fi implicit la fluxuri de date Power Platform care aduc conectivitatea de date local și un set bogat de conectori și capabilități de transformare.
+
+### <a name="extensibility"></a>Extensibilitate
+
+- **Exporturi organizate în conexiuni și exporturi** Am schimbat numele paginii **Exportați destinațiile** în **Conexiuni** și am adăugat o pagină separată pentru **Exporturi**. Ca parte a acestei actualizări, vom transforma exporturile existente în perechi de conexiuni și exporturi utilizând conexiunea respectivă. Administratorii au acum mai multă claritate asupra datelor de ieșire din pagina **Conexiuni**. Toate rolurile utilizatorilor au acces la pagina **Exporturi**, dar numai administratorii pot alege să permită contribuitorilor să editeze anumite exporturi cu conexiuni partajate.     
+  Pentru mai multe informații, consultați [Prezentare generală a conexiunilor](connections.md) și [Prezentare generală a exporturilor](export-destinations.md).
+
+- **Exportați segmente în Campaign Monitor** Am extins destinațiile noastre de export pentru a include Campaign Monitor. Acum puteți exporta segmente din Customer Insights în listele Campaign Monitor și le puteți folosi ca bază pentru campaniile dvs. de marketing.    
+   Pentru informații suplimentare, consultați [Exportați în Campaign Monitorl](export-campaign-monitor.md).
+
+- **Exportați segmente în Persoană de contact constantă** Am extins destinațiile noastre de export pentru a include Persoană de contact constantă. Acum puteți exporta segmente din Customer Insights în listele Persoană de contact constantă și le puteți folosi ca bază pentru campaniile dvs. de marketing.   
+   Pentru informații suplimentare, consultați [Exportați în Persoană de contact constantă](export-constant-contact.md).
+
+- **Exportați segmente în RollWorks** Am extins destinațiile noastre de export pentru a include RollWorks. Acum puteți exporta segmente din Customer Insights în publicurile RollWorks și le puteți folosi ca bază pentru publicitatea dvs. B2B.    
+   Pentru informații suplimentare, consultați [Exportați în RollWorks ](export-rollworks.md).
+
+- **Exportați segmente în Snapchat** Am extins destinațiile noastre de export pentru a include Snapchat. Acum puteți exporta segmente din Customer Insights în publicurile Snapchat și le puteți folosi ca bază pentru publicitatea dvs.     
+   Pentru informații suplimentare, consultați [Exportați în Snapchat](export-snapchat.md).
+
+### <a name="predictions"></a>Predicții
+
+- **Utilizați filtre de produse în recomandările predictive de produse** Am adăugat capacitatea de a utiliza filtre de produse în modelul nostru de recomandare a produselor. Acum puteți crea un predicție care utilizează doar un subset de produse.    
+   Pentru mai multe informații, consultați [Configurați filtrele de produse](predict-product-recommendation.md#configure-product-filters).
+
+- **Creați segmente din predicțiile modelului** Am adăugat o modalitate rapidă de a crea segmente folosind rezultatele unui model predicție. Din pagina de rezultate a modelului, puteți crea cu ușurință un segment nou selectând noua opțiune **Creați un segment**.    
+  Pentru mai multe informații, consultați [Creați un segment bazat pe un model predicție](prediction-based-segment.md).
+
+- **Explicații pentru recomandările produsului** Am adăugat informații care explică factorii cheie învățați de modelul AI pentru a genera recomandări de produs și gradul în care acești factori contribuie la recomandările de produs. Aceste informații sunt adăugate la ecranul rezultatelor modelului.    
+   Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-product-recommendation.md#review-a-prediction-status-and-results).
 
 ## <a name="february-2021-updates"></a>Actualizări februarie 2021
 
@@ -107,7 +144,7 @@ Actualizările din decembrie 2020 includ mai multe funcții, actualizări de per
 
   În plus, am adăugat noi opțiuni de configurare pentru a controla mai bine modul în care doriți ca profilurile dvs. de clienți să fie îmbogățite. 
 
-  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft-graph.md).
+  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft.md).
 
 - **Controlați ce profiluri să îmbogățiți**
 
@@ -309,8 +346,8 @@ Actualizările din august 2020 includ mai multe funcții, actualizări de perfor
 
 - **Îmbogățirea afinităților de interes disponibile pe mai multe piețe**
 
-  Extindem disponibilitatea îmbogățirii afinităților de interes dincolo de Statele Unite la alte cinci piețe: Canada, Australia, Regatul Unit, Franța și Germania. Cu această extensie, vă puteți îmbogăți datele despre clienți cu mai multe interese aplicabile acestor piețe. Vom îmbogăți, de asemenea, profilurile clienților dvs. care sunt localizate pe aceste piețe, folosind datele locale proprii din Microsoft Graph.
-  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft-graph.md)
+  Extindem disponibilitatea îmbogățirii afinităților de interes dincolo de Statele Unite la alte cinci piețe: Canada, Australia, Regatul Unit, Franța și Germania. Cu această extensie, vă puteți îmbogăți datele despre clienți cu mai multe interese aplicabile acestor piețe. De asemenea, vă vom îmbogăți profilurile de clienți care se află pe aceste piețe utilizând date proprietare locale de la Microsoft.
+  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft.md)
 
 
 ## <a name="july-2020-updates"></a>Actualizări iulie 2020
@@ -330,8 +367,8 @@ Actualizările din iulie 2020 includ mai multe caracteristici, actualizări de p
 
 - **Îmbogățirea afinităților de marcă disponibile pe mai multe piețe**
 
-  Extindem disponibilitatea îmbogățirii afinităților de marcă dincolo de Statele Unite la alte cinci piețe: Canada, Australia, Regatul Unit, Franța și Germania. Cu această extensie, vă puteți îmbogăți datele clienților dvs. cu mărci locale de pe aceste piețe. Vom îmbogăți, de asemenea, profilurile clienților dvs. care sunt localizate pe aceste piețe, folosind datele locale proprii din Microsoft Graph.
-  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft-graph.md)
+  Extindem disponibilitatea îmbogățirii afinităților de marcă dincolo de Statele Unite la alte cinci piețe: Canada, Australia, Regatul Unit, Franța și Germania. Cu această extensie, vă puteți îmbogăți datele clienților dvs. cu mărci locale de pe aceste piețe. De asemenea, vă vom îmbogăți profilurile de clienți care se află pe aceste piețe utilizând date proprietare locale de la Microsoft.
+  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft.md)
 
 ## <a name="june-2020-updates"></a>Actualizări iunie 2020
 
@@ -355,7 +392,7 @@ Actualizările din iunie 2020 includ mai multe caracteristici, actualizări de p
 - **Îmbogățirea separată a mărcii și a interesului**
 
   Afinitățile de mărci și interese sunt acum disponibile ca două îmbogățiri independente. Îmbogățirile separate vă oferă flexibilitatea de a le configura și gestiona individual, în funcție de cerințele sau nevoile dvs. de afaceri.    
-  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft-graph.md).
+  Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft.md).
 
 #### <a name="extensibility"></a>Extensibilitate
 

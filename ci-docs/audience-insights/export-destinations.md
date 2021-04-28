@@ -1,7 +1,7 @@
 ---
-title: Destinații export
-description: Exportați date și gestionați destinațiile de export.
-ms.date: 07/21/2020
+title: Exportați date din Customer Insights
+description: Gestionați exporturile către partajare date.
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,102 +9,73 @@ ms.topic: conceptual
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5557442983f8c48cd46387009e0060beb6e764bb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 354ce9ef30fe918975d06290430996c84f8bd3f7
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596100"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896158"
 ---
-# <a name="export-destinations-preview-overview"></a>Prezentare generală destinații export (versiune preliminară)
+# <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
-Pagina **Destinații de export** vă arată toate locațiile pe care le-ați configurat pentru a exporta date. Puteți adăuga, de asemenea, noi destinații pentru export. În plus, arată opțiunile de export disponibile în prezent. Obțineți o privire de ansamblu rapidă, descriere și aflați ce puteți face cu fiecare opțiune de extensibilitate. Exportați profiluri, măsuri și segmente unificate în aplicații acceptate relevante pentru compania dvs.
+Pagina **Exporturi** vă arată toate exporturile configurate. Exporturile partajează date specifice cu diferite aplicații. Ele pot include profiluri sau entități ale clienților, scheme și detalii de mapare. Fiecare export necesită o [conexiune, configurată de un administrator, pentru a gestiona autentificarea și accesul](connections.md).
 
-Acccesați **Admin** > **Destinații de export** pentru a găsi următoarele opțiuni de extensibilitate:
+> [!NOTE]
+> Până în martie 2021, exporturile au creat automat o conexiune la serviciul corespunzător. Exporturile necesită acum o [conexiune, creată și partajată de un administrator](connections.md) înainte de a le putea crea.
 
-- [Adobe Campaign Standard](export-adobe-campaign-standard.md)
-- [Platformă Adobe Experience](export-adobe-experience-platform.md)
-- [AdRoll](export-adroll.md)
-- [Autopilot](export-autopilot.md)
-- [Stocare de bloburi Azure](export-azure-blob-storage.md)
-- [Azure Data Lake Storage Gen2](export-azure-data-lake-storage-gen2.md)
-- [Bot pentru Microsoft Teams](export-teams-bot.md)
-- [API Customer Insights](apis.md)
-- [DotDigital](export-dotdigital.md)
-- [Dynamics 365 Customer Service (Program de completare Customer Card)](customer-card-add-in.md)
-- [Dynamics 365 Marketing](export-dynamics365-marketing.md)
-- [Dynamics 365 Sales](export-dynamics365-sales.md)
-- [Dynamics 365 Hub vânzări (Program de completare Customer Card)](customer-card-add-in.md)
-- [Facebook Ads Manager](export-facebook.md)
-- [Google Ads](export-google-ads.md)
-- [LiveRamp&reg;](export-liveramp.md)
-- [Mailchimp](export-mailchimp.md)
-- [Marketo](export-marketo.md)
-- [Power Automate](export-power-automate.md)
-- [Power Apps](export-power-apps.md)
-- [Power BI](export-power-bi.md)
-- [SendGrid](export-sendgrid.md)
-- [SFTP](export-sftp.md)
+Faceți salt la **Date** > **Exporturi** pentru a vizualiza pagina exporturilor. Toate rolurile utilizatorilor au acces la vizualizarea exporturilor configurate. Utilizarea câmpului de căutare din bara de comandă pentru a găsi exporturile după nume, numele conexiunii sau tipul conexiunii.
 
-## <a name="add-a-new-export-destination"></a>Adăugați o nouă destinație de export
+## <a name="set-up-a-new-export"></a>Configurați un nou export
 
-Pentru a adăuga destinații de export, aveți [permisiuni de administrator](permissions.md). Dacă exportați către servicii Microsoft, presupunem că ambele servicii sunt în aceeași organizație.
+Pentru a configura sau edita un export, trebuie să existe conexiuni disponibile pentru dvs. Conexiunile depind de [rolul dvs. de utilizator](permissions.md):
+- Administratorii au acces la toate conexiunile. De asemenea, pot crea conexiuni noi atunci când configurează un export.
+- Contribuitorii pot avea acces la conexiuni specifice. Acestea depind de administratori pentru a configura și partaja conexiuni. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Spectatorii pot vizualiza doar exporturile existente, dar nu le pot crea.
 
-1. Accesați **Administrator** > **Destinații de export**.
+1. Faceți salt la **Date** > **Exporturi**.
 
-1. Comutați la fila **Destinațiile mele de export**.
+1. Selectați **Adăugare export** pentru a crea o nouă destinație de export.
 
-1. Selectați **Adăugați destinația** pentru a crea o nouă destinație de export.
+1. În panoul **Configurați exportul**, selectați ce conexiune să utilizați. [Conexiunile](connections.md) sunt gestionate de administratori. 
 
-1. În panoul **Adăugați destinația**, selectați **Tipul** destinației de export în meniul derulant.
+1. Furnizați detaliile necesare și selectați **Salvare** pentru a crea exportul.
 
-1. Furnizați detaliile necesare și selectați **Următor** pentru a crea destinația de export.
+### <a name="edit-an-export"></a>Editarea unui export
 
-Puteți selecta, de asemenea **Configurare** pe o dală de pe fila **Descoperire**.
+1. Selectați elipsa verticală pentru destinația de export pe care doriți să o editați.
 
-## <a name="view-export-destinations"></a>Vizualizarea Export destinații
+1. Selectați **Editați** din meniul derulant.
 
-După crearea destinațiilor de export, le veți găsi într-un tabel din fila **Destinațiile mele de export**. Acest tabel are trei coloane:
+1. Schimbați valorile pe care doriți să le actualizați și selectați **Salvați**.
 
-- **Nume afișat**: numele pe care l-ați introdus la crearea destinației.
-- **Tip**: Tipul de destinație de export setat atunci când creați destinația.
-- **Creat**: data la care ați creat destinația.
+## <a name="view-exports-and-export-details"></a>Vizualizați Exporturi și detalii despre export
 
-## <a name="edit-an-export-destination"></a>Editați o destinație de export
+După crearea destinațiilor de export, acestea sunt listate pe **Date** > **Exporturi**. Toți utilizatorii pot vedea ce date sunt partajate și starea cea mai recentă a acestora.
 
-1. Selectați elipsa verticală pentru destinația Export pe care doriți să o editați.
+1. Faceți salt la **Date** > **Exporturi**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Elipsă verticală](media/export-destinations-page-ellipsis.png "Elipsă verticală")
+1. Utilizatorii fără permisiuni de editare selectează **Vizualizare** în loc de **Editare** pentru a vizualiza detaliile exportului.
 
-1. Selectați **Editare** din meniul de listă derulantă.
+1. Acest panou lateral arată configurarea acestui export. Fără permisiuni de editare, nu puteți modifica valorile. Selectați **Închidere** pentru a reveni la pagina de exporturi.
 
-1. Modificați valorile care necesită actualizare și selectați **Salvare**.
+## <a name="run-exports-on-demand"></a>Executați exporturi la cerere
 
-## <a name="export-data-on-demand"></a>Exportați date la cerere
+După configurarea unui export, acesta va rula cu fiecare [reîmprospătare programată](system.md#schedule-tab) atâta timp cât are o conexiune care funcționează.
 
-După configurarea unui conector pentru o destinație de export, exporturile vor rula cu fiecare [actualizare programată](system.md#schedule-tab).
+Pentru a exporta date fără a aștepta o reîmprospătare programată, accesați **Date** > **Exporturi**. Aveţi două opţiuni:
 
-Pentru a exporta date fără a aștepta o actualizare programată, mergeți la fila **Destinațiile mele de export** de pe **Administrator** > **Destinații de export**.
+- Pentru a rula toate exporturile, selectați **Executare totală** în bara de comandă. 
+- Pentru a rula un singur export, selectați puncte de suspensie (...) pe un element din listă și apoi alegeți **Executare**.
 
-> [!div class="mx-imgBorder"]
-> ![Elipsă verticală](media/export-destinations-page-ellipsis.png "Elipsă verticală")
+## <a name="remove-an-export"></a>Eliminați un export
 
-- Selectați **Export** deasupra listei pentru a rula exportul către toate destinațiile de export simultan.
-- Selectați punctele de suspensie (...) după un element de listă și apoi alegeți opțiunea **Export** pentru a rula exportul pentru o singură destinație de export.
+1. Faceți salt la **Date** > **Exporturi**.
 
-## <a name="remove-an-export-destination"></a>Eliminați o destinație de export
+1. Selectați elipsa verticală pentru Exportul pe care doriți să-l eliminați.
 
-Pentru a elimina o destinație Export, porniți de la pagina principală **Destinații de export**.
+1. Selectați **Eliminare** din meniul vertical.
 
-1. Selectați elipsa verticală pentru destinația Export pe care doriți să o eliminați.
-
-   > [!div class="mx-imgBorder"]
-   > ![Elipsă verticală](media/export-destinations-page-ellipsis.png "Elipsă verticală")
-
-2. Selectați **Eliminare** din meniul vertical.
-
-3. Confirmați eliminarea selectând **Eliminare** pe ecranul de confirmare.
+1. Confirmați eliminarea selectând **Eliminare** pe ecranul de confirmare.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

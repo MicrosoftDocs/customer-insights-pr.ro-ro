@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights în Adobe Campaign Standard
 description: Aflați cum utilizați segmentele de statistici privind publicul în Adobe Campaign Standard.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: a5d0154c3d7c473dcba03fac0847bafcf97de2f2
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596330"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760296"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizați segmentele de Customer Insights în Adobe Campaign Standard (previzualizare)
 
@@ -48,15 +48,21 @@ E-mailul de ofertă pe care doriți să îl trimiteți va conține prenume, nume
 
 ## <a name="export-your-target-audience"></a>Expportați-vă publicul țintă
 
+### <a name="configure-a-connection"></a>Configurați o conexiune
+
 Odată cu publicul țintă identificat, putem configura exportul din statistici privind publicul către un cont de stocare Blob Azure.
 
-1. În Detalii despre audiență, accesați **Administrator** > **Destinații export**.
+1. În statisticile publicului, accesați **Administrator** > **Conexiuni**.
 
-1. În dala **Campanie Adobe**, selectați **Configurare**.
+1. Selectați **Adăugare conexiune** și alegeți **Adobe Campaign** pentru a configura conexiunea sau a selecta **Configurat** în dala **Adobe Campaign**
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Placă de configurare pentru Adobe Campaign Standard.":::
 
-1. Furnizează un **Nume afișat** pentru această nouă destinație de export și apoi introduceți **Nume de cont**, **Cheia contului** și **Recipient** din contul Azure Blob Storage în care doriți să exportați segmentul.  
+1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
+
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Introduceți **Nume de cont**, **Cheia de cont** și **Recipient** pentru contul Azure Blob Storage în care doriți să exportați segmentul.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captură de ecran a configurării contului de stocare. "::: 
 
@@ -64,7 +70,17 @@ Odată cu publicul țintă identificat, putem configura exportul din statistici 
 
    - Pentru a afla cum să creați un container, consultați [Creați un container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Selectați **Următorul**.
+1. Selectați **Salvare** pentru a finaliza conexiunea.
+
+### <a name="configure-an-export"></a>Configurați un export
+
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Faceți salt la **Date** > **Exporturi**.
+
+1. Pentru a crea un nou export, selectați **Adăugare export**.
+
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Adobe Campaign. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
 1. Alegeți segmentul pe care doriți să îl exportați. În acest exemplu, este **ChurnProneCustomers**.
 
@@ -83,11 +99,9 @@ Odată cu publicul țintă identificat, putem configura exportul din statistici 
 
 1. Selectați **Salvare**.
 
-După salvarea destinației de export, o găsiți pe **Administrator** > **Exporturi** > **Destinațiile mele de export**.
+După salvarea destinației de export, o veți găsi pe **Date** > **Exporturi**.
 
-:::image type="content" source="media/export-destination-adobe-campaign-standard.png" alt-text="Captură de ecran cu lista exporturilor și segmentul eșantion evidențiat.":::
-
-Acum puteți [exporta segmentul la cerere](export-destinations.md#export-data-on-demand). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md).
+Acum puteți [exporta segmentul la cerere](export-destinations.md#run-exports-on-demand). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md).
 
 > [!NOTE]
 > Asigurați-vă că numărul de înregistrări din segmentul exportat se încadrează în limita permisă a licenței dvs. Adobe Campaign Standard.

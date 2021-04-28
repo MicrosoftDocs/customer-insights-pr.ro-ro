@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire cu îmbogățiri terță parte Experian
 description: Informații generale despre îmbogățirea terță parte Experian.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4d4723e8f793ee857c4f5204a42be8338c71d4c3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 9cf2a7fa18ecc022ea67f6829f52381ad59f3172
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597802"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896388"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Îmbogățirea profilurilor clienților cu date demografice de la Experian (previzualizare)
 
@@ -25,10 +25,10 @@ Experian este lider global în raportarea creditelor pentru consumatori și afac
 Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealabile:
 
 - Aveți un abonament Experian activ. Pentru a obține un abonament, [contactați Experian](https://www.experian.com/marketing-services/contact) direct. [Aflați mai multe despre îmbogățirea datelor Experian](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
-- Aveți ID-ul de utilizator, ID-ul de parte și numărul de model pentru contul dvs. cu SSH activat Secure Transport (ST) creat de Experian pentru dvs.
-- Aveți permisiuni de [Administrator](permissions.md#administrator) în Detalii despre audiență.
 
-## <a name="configuration"></a>Configurație
+- O conexiune Experian a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#administrator). De asemenea, aveți nevoie de ID de utilizator, ID parte și numărul de model pentru contul dvs. de transport securizat (ST) activat SSH creat de Experian pentru dvs.
+
+## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
 1. Accesați **Date** > **Îmbogățire** și selectați fila **Descoperire**.
 
@@ -36,26 +36,46 @@ Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealab
 
    > [!div class="mx-imgBorder"]
    > ![Dală Experian](media/experian-tile.png "Dală Experian")
+   > 
 
-1. Selectați **Începere** și introduceți ID-ul de utilizator, ID-ul de parte și numărul de model pentru contul dvs. Experian Secure Transport. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **Sunt de acord**. Confirmați toate intrările selectând **Aplicare**.
+1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând Experian din meniul cu lista verticală. 
 
-## <a name="map-your-fields"></a>Mapați câmpurile
+1. Selectați **Conectați-vă la Experian** pentru a confirma alegerea.
 
-1.  Selectați **Adăugați date** și alegeți **Set de date client** pe care doriți să îl îmbogățiți cu date demografice din Experian. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+1.  Selectați **Următorul** și alegeți **Set de date client** pe care doriți să le îmbogățiți cu date demografice de la Experian. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
 
-1. Selectați identificatorii cheie din **Numele și adresa**, **E-mail**, sau **Telefon** pentru a trimite la Experian pentru rezolvarea identității.
+    :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captură de ecran atunci când alegeți setul de date pentru clienți.":::
 
-   > [!TIP]
-   > Mai multe atribute de identificare cheie trimise către Experian generează probabil o rată de potrivire mai mare.
+1. Selectați **Următorul** și definiți ce tip de câmpuri din profilurile dvs. unificate ar trebui să fie utilizate pentru a căuta date demografice potrivite de la Experian. Cel puțin unul dintre câmpurile **Numele și adresa**, **Telefon** sau **E-mail** este necesar. Pentru o acuratețe mai mare a potrivirii, pot fi adăugate până la alte două câmpuri. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
 
-1. Selectați **Următorul** și mapați atributele corespunzătoare de la entitatea dvs. client unificată pentru câmpurile de identificare cheie selectate.
+    > [!TIP]
+    > Mai multe atribute de identificare cheie trimise către Experian generează probabil o rată de potrivire mai mare.
 
-1. Selectați **Adăugare atribut** pentru a mapa orice atribute suplimentare pe care doriți să le trimiteți către Experian.
+1. Selectați **Următorul** pentru a începe maparea câmpului.
 
-1.  Selectați **Salvați** pentru a finaliza maparea câmpului.
+1. Definiți câmpurile din profilurile dvs. unificate care ar trebui să fie utilizate pentru a căuta date demografice potrivite de la Experian. Câmpurile obligatorii sunt marcate.
 
-    > [!div class="mx-imgBorder"]
-    > ![Mapare câmp Experian](media/experian-field-mapping.png "Mapare câmp Experian")
+1. Furnizați un nume pentru îmbogățire și un nume pentru entitatea de ieșire.
+
+1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
+
+## <a name="configure-the-connection-for-experian"></a>Configurați conexiunea pentru Experian 
+
+Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Experian.
+
+1. Selectați **Începeți lucrul**.
+
+1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
+
+1. Introduceți ID de utilizator, ID parte și număr de model valid pentru contul dvs. de transport securizat Experian.
+
+1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **De acord**
+
+1. Selectați **Verificare** pentru a valida configurația.
+
+1. După finalizarea verificării, selectați **Salvare**.
+   
+   :::image type="content" source="media/enrichment-Experian-connection.png" alt-text="Panoul de configurare a conexiunii Experian.":::
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 

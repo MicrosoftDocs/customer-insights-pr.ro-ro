@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către DotDigital
-description: Aflați cum să configurați conexiunea la DotDigital.
-ms.date: 11/14/2020
+description: Aflați cum să configurați conexiunea și să exportați la DotDigital.
+ms.date: 03/03/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,33 +9,40 @@ ms.topic: how-to
 author: phkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 51a28bdf0de34f0555d8ad7e3d13b2ef8911d417
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 235bcdfa4a7c4c1a382778bd4f66c1a9f5b7beb1
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598032"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759974"
 ---
-# <a name="connector-for-dotdigital-preview"></a>Conector pentru DotDigital (previzualizare)
+# <a name="export-segment-lists-to-dotdigital-preview"></a>Exportați listele de segmente în DotDigital (previzualizare)
 
 Exportați segmente de profiluri de clienți unificate în agende DotDigital și folosiți-le pentru campanii, marketing prin e-mail și pentru a crea segmente de clienți cu DotDigital. 
 
-## <a name="prerequisites"></a>Cerințe preliminare
+## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
 
 -   Aveți un [cont DotDigital](https://dotdigital.com/) și acreditările de administrator corespunzătoare.
 -   Există agende în DotDigital și ID-urile corespunzătoare. ID-ul poate fi găsit în adresa URL atunci când selectați și deschideți o agendă. Pentru mai multe informații, consultați [Agende DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Aveți [segmente configurate](segments.md) în Detalii despre audiență.
 -   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
-## <a name="connect-to-dotdigital"></a>Conectarea la DotDigital
+## <a name="known-limitations"></a>Limitări cunoscute
 
-1. Accesați **Administrator** > **Destinații de export**.
+- Până la 1 milion de profiluri per export către DotDigital.
+- Exportul către DotDigital este limitat la segmente.
+- Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 3 ore din cauza limitărilor din partea furnizorului. 
+- Numărul de profiluri pe care le puteți exporta către DotDigital este dependent și limitat de contractul dvs. cu DotDigital.
 
-1. Sub **DotDigital**, selectați **Configurare**.
+## <a name="set-up-connection-to-dotdigital"></a>Configurarea conexiunii la DotDigital
 
-1. Dați destinației dvs. de export un nume ușor de recunoscut în câmpul **Nume afișat**.
+1. Salt la **Administrator** > **Conexiuni**.
 
-   :::image type="content" source="media/DotDigital_config.PNG" alt-text="Panoul de configurare pentru exportul DotDigital.":::
+1. Selectați **Adăugați conexiune** și alegeți **DotDigital** pentru a configura conexiunea.
+
+1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
+
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduceți **numele de utilizator și parola DotDigital**.
 
@@ -47,9 +54,18 @@ Exportați segmente de profiluri de clienți unificate în agende DotDigital și
 
 1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
 
-1. Selectați **Continuare** pentru a configura exportul.
+1. Selectați **Salvare** pentru a finaliza conexiunea. 
 
-## <a name="configure-the-connector"></a>Configurați conectorul
+## <a name="configure-an-export"></a>Configurați un export
+
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Faceți salt la **Date** > **Exporturi**.
+
+1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea DotDigital. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+
 
 1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume de familie**, **Nume complet**, **Gen**, și **Cod poștal**.
 
@@ -57,16 +73,12 @@ Exportați segmente de profiluri de clienți unificate în agende DotDigital și
 
 1. Selectați **Salvare**.
 
-## <a name="export-the-data"></a>Exportați datele
+Salvarea unui export nu se execută imediat.
 
-Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab). În DotDigital, puteți găsi acum segmentele dvs. în [Agendele DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+ 
+În DotDigital, puteți găsi acum segmentele dvs. în [Agendele DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
-## <a name="known-limitations"></a>Limitări cunoscute
-
-- Până la 1 milion de profiluri per export către DotDigital.
-- Exportul către DotDigital este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 3 ore din cauza limitărilor din partea furnizorului. 
-- Numărul de profiluri pe care le puteți exporta către DotDigital este dependent și limitat de contractul dvs. cu DotDigital.
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

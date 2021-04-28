@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 75f5f9f8f56a33b2a43a605595a463ca2e937c6b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595671"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906917"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicție renunțare la abonament (previzualizare)
 
@@ -49,6 +49,12 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
         - **Marcaj temporal:** Data și ora evenimentului identificate de cheia primară.
         - **Eveniment:** Numele evenimentului pe care doriți să-l utilizați. De exemplu, un câmp numit „UserAction” într-un serviciu de redare în flux video ar putea avea valoarea „Vizualizat”.
         - **Detalii:** Informații detaliate despre eveniment. De exemplu, un câmp numit „ShowTitle” într-un serviciu de redare în flux video ar putea avea valoarea unui videoclip vizualizat de un client.
+- Caracteristici de date sugerate:
+    - Date istorice suficiente: date despre abonament pentru cel puțin dublul intervalului de timp selectat. De preferință, doi-trei ani de date de abonament.
+    - Starea abonamentului: datele includ abonamente active și inactive pentru fiecare client, astfel încât există mai multe intrări pe ID-ul clientului.
+    - Număr de clienți: cel puțin 10 profiluri de clienți, de preferință mai mult de 1.000 de clienți unici. Modelul va eșua cu mai puțin de 10 clienți și cu date istorice insuficiente.
+    - Completitatea datelor: mai puțin de 20% din valorile lipsă din câmpul de date al entității furnizate.
+   
    > [!NOTE]
    > Veți avea nevoie de cel puțin două înregistrări de activitate pentru 50% din clienții pentru care doriți să calculați problemele.
 
@@ -67,7 +73,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 ### <a name="define-customer-churn"></a>Definiți retragerea clienților
 
 1. Introduceți numărul de **Zile de la încheierea abonamentului** la care compania dvs. consideră că un client s-a retras. În această perioadă companiile se concentrează pe activități precum ofertele sau alte eforturi de marketing care încearcă să prevină pierderea clientului.
-1. Introduceți numărul de **Zile pentru a investiga viitorul pentru a prezice problemele** pentru a seta o fereastră pentru care să prezică problemele. De exemplu, pentru a prezice riscul problemelor pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de păstrare a marketingului. Predicția riscului de probleme pentru perioade mai lungi sau mai scurte de timp poate face mai dificilă abordarea factorilor din profilul dvs. de probleme, dar acest lucru depinde în mare măsură de cerințele dvs. specifice de afaceri. Selectați **Următorul** pentru a continua
+1. Introduceți numărul de **Zile pentru a investiga viitorul pentru a prezice problemele** pentru a seta o fereastră pentru care să prezică problemele. De exemplu, pentru a prezice riscul problemelor pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de păstrare a marketingului. Predicția riscului de retragere pentru perioade mai lungi sau mai scurte de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, în funcție de cerințele dvs. comerciale specifice. Selectați **Următorul** pentru a continua
    >[!TIP]
    > Puteți selecta **Salvare și închidere** pentru a salva oricând predicția ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
@@ -113,7 +119,8 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. Selectați predicția pe care doriți să o revizuiți.
    - **Numele predicției:** Numele predicției furnizat la crearea acesteia.
    - **Tip de predicție:** Tipul de model utilizat pentru predicție
-   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.
+   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.    
+     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-new-segment) cu pragul preferat.
    - **Câmp prognozat:** Acest câmp este populat doar pentru anumite tipuri de predicții și nu este utilizat în predicția de renunțare la abonament.
    - **Stare:** Starea curentă a rulării predicției.
         - **În coadă:** În prezent, predicția așteaptă să fie rulate alte procese.

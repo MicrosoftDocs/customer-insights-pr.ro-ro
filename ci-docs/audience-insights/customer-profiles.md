@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: d6a9e7872a488b6d68afce35b547f93cc4a7c652
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 433e6ceda0ec7827bd672cff40f895d7719561df
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596882"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896342"
 ---
 # <a name="customer-profiles"></a>Profiluri de client
 
@@ -59,7 +59,7 @@ Detaliile clientului includ:
 
 -   **Dală profil client:** Această dală arată diferitele valori din entitatea de profil client unificat. Aceste detalii pot include adresa de e-mail, numele, orașul și așa mai departe. 
 
--   **Interese potențiale, mărci potențiale:** Arată dacă ați configurat o îmbogățire primară. Reprezintă potențiale interese și afinități pentru mărci pe care le poate avea un client cu un profil similar cu acest client. Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft-graph.md).
+-   **Interese potențiale, mărci potențiale:** Arată dacă ați configurat o îmbogățire primară. Reprezintă potențiale interese și afinități pentru mărci pe care le poate avea un client cu un profil similar cu acest client. Pentru mai multe informații, consultați [Îmbogățiți profilurile clienților cu afinități de brand și interes](enrichment-microsoft.md).
 
 -   **Măsuri:** Arată dacă ați configurat una sau mai multe măsuri de un anumit tip: măsuri de atribut client. Acestea includ indicatorii KPI calculați în jurul clienților dvs. la nivel de client individual. Pentru mai multe informații, consultați [Definire și gestionare măsuri](measures.md).
 

@@ -1,7 +1,7 @@
 ---
 title: Îmbogățirea profilurilor companiei cu îmbogățirea terță parte Leadspace
 description: Informații generale despre îmbogățirea terță parte Leadspace.
-ms.date: 11/24/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,46 +9,67 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 41c56aece043c2d7658fd2655713e1e98775edec
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597664"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5895928"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Îmbogățirea profilurilor companiei cu Leadspace (previzualizare)
 
-Leadspace este o companie de știință a datelor care oferă o platformă de date pentru clienți B2B. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute suplimentare cum ar fi dimensiunea firmei, locația, domeniul de activitate și multe altele.
+Leadspace este o companie de știință a datelor care oferă o platformă de date pentru clienți B2B. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ mai multe atribute, cum ar fi dimensiunea companiei, locația, industria și multe altele.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 Pentru a configura Leadspace, trebuie îndeplinite următoarele cerințe preliminare:
 
-- Aveți o licență Leadspace activă și „cheia perpetuă” (denumită **Token Leadspace**). Contactați direct [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) pentru detalii despre produsul lor.
-- Aveți permisiuni de [Administrator](permissions.md#administrator).
+- Aveți o licență Leadspace activă.
 - Aveți [profiluri de clienți unificate](customer-profiles.md) pentru companii.
+- O conexiune Leadspace a fost deja configurată de un administrator sau aveți permisiuni de [administrator](permissions.md#administrator) și „cheia perpetuă" (denumită **Tokenul Leadspace**). Luați legătura în mod direct cu [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) pentru detalii despre produsul lor.
 
-## <a name="configuration"></a>Configurație
+## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
 1. În Detalii despre audiență, accesați **Date** > **Îmbogățire**.
 
-1. Selectați **Doresc îmbogățirea datelor** pe dala Leadspace.
+1. Selectați **Doresc îmbogățirea datelor** pe dala Leadspace și selectați **Începeți**.
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Captură de ecran a dalei Leadspace.":::
 
-1. Selectați **Începeți** și apoi introduceți un **token Leadspace** activ (cheie perpetuă). Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **Sunt de acord**. Confirmați ambele intrări selectând **Conectați-vă la Leadspace**.
+1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând **Leadspace**. 
 
-1. Selectați **Mapare date** și alegeți setul de date pe care doriți să îl îmbogățiți cu date de companie din Leadspace. Puteți selecta entitatea *Client* pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+1. Selectați **Conectați-vă la Leadspace** pentru a confirma conexiunea.
 
-   :::image type="content" source="media/enrichment-leadspace-select-segment.png" alt-text="Alegeți între profilul clientului și îmbogățirea segmentului":::
+1. Selectați **Următorul** și alegeți **Set de date client** pe care doriți să le îmbogățiți cu date despre companie de la Leadspace. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
 
-1. Faceți clic pe **Următorul** și definiți ce câmpuri din profilurile dvs. unificate ar trebui utilizate pentru a căuta datele companiei potrivite din Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
+    :::image type="content" source="media/enrichment-Leadspace-configuration-customer-data-set.png" alt-text="Captură de ecran atunci când alegeți setul de date pentru clienți.":::
+
+1. Selectați **Următorul** și definiți ce câmpuri din profilurile dvs. unificate sunt utilizate pentru a căuta datele companiei potrivite de la Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panoul de mapare a câmpului Leadspace.":::
-   
-1. Selectați **Aplicare** pentru a finaliza maparea câmpului.
 
-1. Selectați **Rulare** pentru a îmbogăți profilurile companiei. Cât durează o îmbogățire depinde de numărul de profiluri unificate ale clienților.
+1. Selectați **Următorul** pentru a completa maparea câmpului.
+
+1. Furnizați un nume pentru îmbogățire și selectați **Salvați îmbogățirea** după ce v-ați analizat alegerile.
+
+
+## <a name="configure-the-connection-for-leadspace"></a>Configurați conexiunea pentru Leadspace 
+
+Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Leadspace.
+
+1. Selectați **Începeți lucrul** 
+
+1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
+
+1. Furnizați un token Leadspace valid.
+
+1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **De acord**
+
+1. Selectați **Verificare** pentru a valida configurația.
+
+1. După finalizarea verificării, selectați **Salvare**.
+   
+   :::image type="content" source="media/enrichment-Leadspace-connection.png" alt-text="Pagina de configurare a conexiunii Leadspace.":::
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 

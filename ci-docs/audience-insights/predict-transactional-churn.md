@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f120e9e3cf8d40d913c7fa6a81fbf9facd045e3c
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597204"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906871"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prezicerea retragerii tranzacționale (previzualizare)
 
@@ -46,6 +46,14 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
         - **Marcaj temporal:** Data și ora evenimentului identificate de cheia primară.
         - **Eveniment:** Numele evenimentului pe care doriți să-l utilizați. De exemplu, un câmp numit „UserAction” într-un magazin alimentar ar putea fi o utilizare a cuponului de către client.
         - **Detalii:** Informații detaliate despre eveniment. De exemplu, un câmp numit „CouponValue” într-un magazin alimentar ar putea fi valoarea valutară a cuponului.
+- Caracteristici de date sugerate:
+    - Date istorice suficiente: date despre tranzacție pentru cel puțin dublul intervalului de timp selectat. De preferință, doi-trei ani de date de abonament. 
+    - Achiziții multiple pe client: ideal cel puțin două tranzacții pe client.
+    - Număr de clienți: cel puțin 10 profiluri de clienți, de preferință mai mult de 1.000 de clienți unici. Modelul va eșua cu mai puțin de 10 clienți și cu date istorice insuficiente.
+    - Completitatea datelor: mai puțin de 20% din valorile lipsă din câmpul de date al entității furnizate.
+
+> [!NOTE]
+> Pentru o companie cu frecvență ridicată de cumpărare a clienților (la fiecare câteva săptămâni), se recomandă să selectați o fereastră mai scurtă predicție și să definiți churn. Pentru o frecvență scăzută de cumpărare (o dată la câteva luni sau o dată pe an), alegeți o fereastră mai lungă predicție și definiția retragerii.
 
 ## <a name="create-a-transactional-churn-prediction"></a>Creați o predicție a retragerii tranzacționale
 
@@ -129,7 +137,9 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
 1. Selectați predicția pe care doriți să o revizuiți.
    - **Nume predicție:** Numele predicției furnizat la crearea acesteia.
    - **Tip predicție:** Tipul modelului utilizat pentru predicție
-   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.
+   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.    
+     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-new-segment) cu pragul preferat.
+     Nu toți clienții sunt în mod necesar clienți activi. Este posibil ca unii dintre ei să nu fi avut nicio activitate de mult timp și să fie considerați deja derutați, pe baza definiției dvs. de retragere. Prezicerea riscului de retragere pentru clienții care deja s-au retras nu este utilă deoarece nu sunt publicul de interes.
    - **Câmp estimat:** Acest câmp este populat numai pentru anumite tipuri de predicții și nu este utilizat în predicția retragerii.
    - **Stare:** Starea rulării predicției.
         - **În așteptare:** Predicția așteaptă să se execute alte procese.

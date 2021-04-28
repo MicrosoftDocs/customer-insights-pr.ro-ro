@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 11/02/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 36e6f7f8fcd64fc2591e913910918b83bf27567b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 10c338b89a6f9971912d05986c105cba1221b01b
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597710"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896020"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -27,8 +27,8 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 
 Pe fila **Descoperire**, veți găsi următoarele îmbogățiri:
 
-- [Mărcile](enrichment-microsoft-graph.md) furnizate de Microsoft Graph
-- [Interesele](enrichment-microsoft-graph.md) furnizate de Microsoft Graph
+- [Branduri](enrichment-microsoft.md) furnizate de Microsoft
+- [Interese](enrichment-microsoft.md) furnizate de Microsoft
 - [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
 - [Date demografice](enrichment-experian.md) furnizate de Experian
 - [Date despre locație](enrichment-here.md) furnizate de HERE Technologies
@@ -40,7 +40,7 @@ Pe fila **Îmbogățirile mele**, puteți vedea îmbogățirile pe care le-ați 
 
 Accesați **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate. Fiecare îmbogățire este reprezentată ca un rând care include informații suplimentare despre îmbogățire.
 
-Selectați o îmbogățire pentru a vedea opțiunile disponibile. Alternativ, puteți selecta elipsele (...) de pe un element din listă pentru a vedea opțiunile.
+Selectați o îmbogățire pentru a vedea opțiunile disponibile. De asemenea, puteți selecta punctele de suspensie (...) pe un element din listă pentru a vedea opțiunile.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opțiuni de gestionare a îmbogățirilor din lista îmbogățirilor":::
 
@@ -52,5 +52,12 @@ Selectați o îmbogățire pentru a vedea opțiunile disponibile. Alternativ, pu
 
 Puteți rula sau dezactiva mai multe îmbogățiri simultan selectându-le în listă. Opțiunile de vizualizare și editare nu sunt disponibile ca acțiune în bloc și funcționează doar pentru câte o îmbogățire pe rând.
 
+## <a name="enrichments-and-connections"></a>Îmbogățiri și conexiuni
+
+Îmbogățirile terților sunt configurate folosind [conexiuni](connections.md), pe care un administrator le înființează cu acreditări și oferă consimțământul pentru transferurile de date. Conexiunea poate fi utilizată de administratori și contribuitori pentru a configura îmbogățiri.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
+
+Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. Pentru exemple, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe pagina **Îmbogățire**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

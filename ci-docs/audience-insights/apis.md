@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 011fa700563c53534554a6b73e87c2391bfdf714
-ms.sourcegitcommit: a872f59e6febe4d4bd678ddd0b60a1660acca0f3
+ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
+ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "5710475"
+ms.lasthandoff: 04/09/2021
+ms.locfileid: "5873677"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -78,7 +78,7 @@ Puteți utiliza ID-ul aplicației/clientului pentru această înregistrare a apl
 
 :::image type="content" source="media/grant-admin-consent.gif" alt-text="GIF animat pentru a acorda consimțământul administratorului.":::
 
-Pentru mai multe informații despre MSAL, consultați [Prezentare generală a bibliotecii de autentificare Microsoft (MSAL)](https://docs.microsoft.com/azure/active-directory/develop/msal-overview).
+Pentru mai multe informații despre MSAL, consultați [Prezentare generală a bibliotecii de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
 Pentru mai multe informații despre înregistrarea aplicațiilor în Azure, consultați [Noua experiență de înregistrare a aplicației în portalul Azure](/azure/active-directory/develop/app-registration-portal-training-guide).
 

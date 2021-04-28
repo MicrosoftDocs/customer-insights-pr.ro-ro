@@ -1,7 +1,7 @@
 ---
 title: Utilizați sursele de date pentru ingerarea datelor
 description: Aflați cum să importați date din diverse surse.
-ms.date: 11/03/2020
+ms.date: 04/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 780dc61a82d6ed9856a37dc8f164fa946d982bbe
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 0fc13d3ac0a5176637b6fe481dabe0b2aec11649
+ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595962"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "5887909"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -32,8 +32,15 @@ Puteți adăuga o sursă de date în trei moduri principale:
 - [Dintr-un folder Common Data Model](connect-common-data-model.md)
 - [Din propriul Common Data Service lake](connect-common-data-service-lake.md)
 
-> [!NOTE]
-> Nu puteți adăuga încă date din sursele de date locale.
+## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
+
+Ingerarea datelor din sursele de date locale în Detalii despre audiență este acceptată pe baza de fluxuri de date Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) la configurarea mediului.
+
+Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-urile de date. Eliminați și recreați sursele de date care existau înainte ca mediul Dataverse să fi fost asociat pentru a utiliza gateway-urile de date locale.
+
+Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Power Platform în care puteți vizualiza și configura gateway-urile de date locale.
+
+:::image type="content" source="media/data-sources-onpremises-gateways.png" alt-text="Captură de ecran a paginii surselor de date care prezintă link-uri care indică spre mediul Power Platform.":::
 
 ## <a name="review-ingested-data"></a>Examinați datele ingerate
 

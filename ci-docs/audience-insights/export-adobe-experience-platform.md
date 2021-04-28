@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights în Adobe Experience Platform
 description: Aflați cum utilizați segmentele de statistici privind publicul în Adobe Experience Platform.
-ms.date: 02/26/2021
+ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: d1856861562be55c6d1d051050fe965560fa42f8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 884f4d30f354bed29909d57be84dce4c8e46965a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596284"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760116"
 ---
 # <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizați segmentele de Customer Insights în Adobe Experience Platform (previzualizare)
 
@@ -51,21 +51,36 @@ E-mailul de ofertă pe care doriți să îl trimiteți va conține prenume, nume
 
 Odată cu publicul țintă identificat, putem configura exportul din statistici privind publicul către un cont de stocare Blob Azure.
 
-1. În Detalii despre audiență, accesați **Administrator** > **Destinații export**.
+### <a name="configure-a-connection"></a>Configurați o conexiune
 
-1. În dala **Stocare Blob Azure**, selectați **Configurat**.
+1. Salt la **Administrator** > **Conexiuni**.
 
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Dală de configurare pentru stocare Blob Azure.":::
+1. Selectați **Adăugați conexiune** și alegeți **Stocare bloburi Azure** sau selectați **Configurat** în dala **Stocare bloburi Azure**:
 
-1. Furnizează un **Nume afișat** pentru această nouă destinație de export și apoi introduceți **Nume de cont**, **Cheia contului** și **Recipient** din contul Azure Blob Storage în care doriți să exportați segmentul.  
+   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Dală de configurare pentru stocare Blob Azure."::: pentru a configura conexiunea.
+
+1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
+
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduceți **Nume de cont**, **Cheia de cont** și **Recipient** pentru contul dvs. de stocare de bloburi în care doriți să exportați segmentul.  
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captură de ecran a configurării contului de stocare. "::: 
+   
+    - Pentru a afla mai multe despre cum să aflați numele contului de stocare de bloburi și cheia de cont, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
+    - Pentru a afla cum să creați un container, consultați [Creați un container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-   - Pentru a afla mai multe despre cum puteți găsi numele contului Stocarea de bloburi Azure și cheia contului, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
+1. Selectați **Salvare** pentru a finaliza conexiunea. 
 
-   - Pentru a afla cum să creați un container, consultați [Creați un container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
+### <a name="configure-an-export"></a>Configurați un export
 
-1. Selectați **Următorul**.
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Faceți salt la **Date** > **Exporturi**.
+
+1. Pentru a crea un nou export, selectați **Adăugare export**.
+
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Stocare bloburi Azure. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
 1. Alegeți segmentul pe care doriți să îl exportați. În acest exemplu, este **ChurnProneCustomers**.
 
@@ -73,11 +88,9 @@ Odată cu publicul țintă identificat, putem configura exportul din statistici 
 
 1. Selectați **Salvare**.
 
-După salvarea destinației de export, o găsiți pe **Administrator** > **Exporturi** > **Destinațiile mele de export**.
+După salvarea destinației de export, o veți găsi pe **Date** > **Exporturi**.
 
-:::image type="content" source="media/export-destination-azure-blob-storage.png" alt-text="Captură de ecran cu lista exporturilor și segmentul eșantion evidențiat.":::
-
-Acum puteți [exporta segmentul la cerere](export-destinations.md#export-data-on-demand). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md).
+Acum puteți [exporta segmentul la cerere](export-destinations.md#run-exports-on-demand). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md).
 
 > [!NOTE]
 > Asigurați-vă că numărul de înregistrări din segmentul exportat se încadrează în limita permisă a licenței dvs. Adobe Campaign Standard.

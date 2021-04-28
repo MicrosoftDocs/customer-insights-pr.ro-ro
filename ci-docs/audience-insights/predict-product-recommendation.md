@@ -1,7 +1,7 @@
 ---
 title: Predicție de recomandare de produse
 description: Preziceți produsele pe care un client este probabil să le cumpere sau să interacționeze cu acestea.
-ms.date: 02/15/2021
+ms.date: 03/17/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,20 +9,20 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 5ae78b6bbc51fd8a25bc408050a23479698a1414
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
+ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598078"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "5906779"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicție de recomandare de produse (previzualizare)
 
 Modelul de recomandare a produsului creează seturi de recomandări predictive pentru produse. Recomandările se bazează pe comportamentul de cumpărare anterior și pe clienții cu modele de achiziție similare. Puteți crea predicții de recomandări de produse noi pe pagina **Inteligență** > **Predicții**. Selectați **Predicțiile mele** pentru a vedea alte predicții pe care le-ați creat.
 
-Recomandările de produse pot fi supuse legilor și reglementărilor locale, precum și așteptărilor clienților, pe care modelul nu este conceput pentru a le ține seama în mod specific.  Ca utilizator al acestei capacități predictive, **trebuie să examinați recomandările înainte de a le livra clienților dvs.** pentru a vă asigura că respectați orice legi sau reglementări aplicabile, precum și așteptările clienților pentru ceea ce ați putea recomanda. 
+Recomandările de produse pot fi supuse legilor și reglementărilor locale și așteptărilor clienților, pe care modelul nu este conceput pentru a le lua în considerare în mod specific.  Ca utilizator al acestei capacități predictive, **trebuie să examinați recomandările înainte de a le trimite clienților dvs.** pentru a vă asigura că respectați orice legi sau reglementări aplicabile și așteptările clienților pentru ceea ce ați putea recomanda. 
 
-În plus, rezultatul acestui model vă va oferi recomandări pe baza ID-ului produsului. Mecanismul dvs. de livrare va trebui să preia codurile de produs prevăzute și să le mapeze la conținutul adecvat pentru ca clienții dvs. să țină cont de localizare, conținut de imagine și alte tipuri de conținut sau comportament specific companiei.
+În plus, rezultatul acestui model vă va oferi recomandări pe baza ID-ului produsului. Mecanismul dvs. de livrare va trebui să asocieze ID-urile de produs prevăzute la conținutul adecvat pentru ca clienții dvs. să țină cont de localizare, conținut de imagine și alte tipuri de conținut sau comportament specific companiei.
 
 ## <a name="sample-guide"></a>Ghid de probă
 
@@ -31,19 +31,31 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Cel puțin [Permisiuni de contributor](permissions.md) în Customer Insights.
+
 - Cunoașterea afacerii pentru a înțelege diferite tipuri de produse pentru afacerea dvs. și modul în care clienții dvs. interacționează cu ei. Susținem recomandarea de produse care au fost achiziționate anterior de clienții dvs. sau recomandări pentru produse noi.
+
 - Date despre tranzacțiile, achizițiile dvs. și istoricul acestora:
     - Identificatori de tranzacții pentru a distinge achizițiile sau tranzacțiile.
     - Identificatorii clienților pentru a mapa tranzacțiile cu clienții dvs.
     - Datele evenimentului tranzacției, care specifică datele la care a avut loc tranzacția.
-    - (Opțional) Informații despre ID produs pentru tranzacție.
+    - Informații despre ID produs pentru tranzacție.
+    - (Opțional) O entitate de date din catalogul de produse pentru a utiliza un filtru de produse.
     - (Opțional) Dacă o tranzacție este sau nu o returnare.
     - Schema de date semantice necesită următoarele informații:
         - **ID-ul de tranzacție:** Un identificator unic al unei achiziții sau al unei tranzacții.
-        - **Data tranzacției:** Data cumpărării sau tranzacției.
+        - **Data tranzacției:** Data achiziționării sau tranzacției.
         - **Valoarea tranzacției:** Valoarea numerică a achiziției sau tranzacției.
         - **Cod unic produs:** ID-ul produsului sau serviciului achiziționat dacă datele dvs. se află la un nivel de element rând.
-        - (Opțional) **Achiziție sau returnare:** Un câmp adevărat/fals care identifică dacă tranzacția a fost un retur sau nu. Dacă **Valoarea tranzacției** este negativă, vom folosi și aceste informații pentru a deduce un retur.
+        - (Opțional) **Achiziționați sau returnați:** Un câmp boolean în care valoarea *adevărat* identifică faptul că o tranzacție a fost o returnare. Dacă datele de achiziționare sau returnare nu sunt furnizate, modelul și **Valoarea tranzacției** este negativ, vom folosi și aceste informații pentru a deduce o rentabilitate.
+- Caracteristici de date sugerate:
+    - Date istorice suficiente: cel puțin un an de date tranzacționale, de preferință doi până la trei ani pentru a include o anumită sezonalitate.
+    - Achiziții multiple pe client: Trei sau mai multe tranzacții pe ID-ul clientului
+    - Număr de clienți: cel puțin 100 de clienți, de preferință mai mult de 10.000 de clienți. Modelul va eșua cu mai puțin de 100 de clienți.
+
+> [!NOTE]
+> - Modelul necesită istoricul tranzacțiilor clienților dvs. Definiția unei tranzacții este destul de flexibilă. Orice date care descriu o interacțiune utilizator-produs pot funcționa ca o intrare. De exemplu, achiziționarea unui produs, participarea la un curs sau participarea la un eveniment.
+> - În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități de cumpărare, uniți-le în Power Query înainte de ingestia de date.
+> - Dacă detaliile comenzii și comenzii sunt entități diferite, alăturați-vă acestora înainte de a le utiliza în model. Modelul nu funcționează doar cu un ID de comandă sau un ID de primire într-o entitate.
 
 
 ## <a name="create-a-product-recommendation-prediction"></a>Creați o predicție de recomandare de produs
@@ -71,7 +83,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 1. Alegeți dacă doriți să **Sugerați produse pe care clienții le-au achiziționat recent**.
 
-1. Dacă ați ales să *nu* recomandați produsele achiziționate recent, setați **Fereastră de privire retrospectivă**. Această setare specifică intervalul de timp pe care îl are în vedere modelul înainte de a recomanda produsului utilizatorului din nou. De exemplu, indicați că un client achiziționează un laptop la fiecare 2 ani. Această fereastră va analiza istoricul achizițiilor din ultimii 2 ani și, dacă găsesc un element, acesta va fi filtrat din recomandări.
+1. Dacă ați ales să *nu* recomandați produsele achiziționate recent, setați **Fereastră de privire retrospectivă**. Această setare specifică intervalul de timp pe care îl are în vedere modelul înainte de a recomanda produsului utilizatorului din nou. De exemplu, indicați că un client achiziționează un laptop la fiecare doi ani. Această fereastră va analiza istoricul achizițiilor din ultimii doi ani și, dacă găsesc un articol, articolul va fi filtrat din recomandări.
 
 1. Selectați **Următorul**
 
@@ -95,7 +107,31 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 1. Selectați **Următorul**.
 
-### <a name="set-schedule-and-review-configuration"></a>Setați programul și examinați configurația
+### <a name="configure-product-filters"></a>Configurați filtre de produse
+
+Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predicție pe care îl construiți. Filtrele de produse vă permit să identificați un subset de produse cu caracteristici specifice pe care să le recomandați clienților dvs. Modelul va utiliza toate produsele disponibile pentru a învăța modele, dar va utiliza numai produsele care corespund filtrului de produs în ieșirea sa.
+
+1. În pasul **Adăugați informații despre produs**, adăugați catalogul dvs. de produse cu informații pentru fiecare produs. Hartați informațiile solicitate în selectați **Următorul**.
+
+3. În pasul **Filtre pentru produse**, alegeți dintre următoarele opțiuni.
+
+   * **Fără filtre**: Utilizați toate produsele din recomandarea produsului predicție.
+
+   * **Definiți anumite filtre de produse**: Utilizați produse specifice în recomandarea produsului predicție.
+
+1. Selectați **Următorul**.
+
+1. Dacă alegeți să definiți un filtru de produs, trebuie să îl definiți acum. În panoul **Atributele catalogului de produse**, selectați atributele din *Entitatea din catalogul de produse* pe care doriți să le includeți în filtru.
+
+   :::image type="content" source="media/product-filters-sidepane.png" alt-text="Panoul lateral afișat atribuit în entitatea din catalogul de produse de selectat pentru filtrele de produse.":::
+
+1. Alegeți dacă doriți ca filtrul de produse să folosească conectorii **și** sau **sau** pentru a combina în mod logic selecția dvs. de atribute din catalogul de produse.
+   
+   :::image type="content" source="media/product-filters-sample.png" alt-text="Exemplu de configurație a filtrelor de produs combinate cu conectori AND logici.":::
+
+1. Selectați **Următorul**.
+
+### <a name="set-update-schedule-and-review-configuration"></a>Setați planificarea de actualizare și examinați configurația
 
 1. Setați o frecvență pentru a vă reinstrui modelul. Această setare este importantă pentru a actualiza precizia predicțiilor, deoarece datele noi sunt importate în Customer Insights. Majoritatea firmelor pot reinstrui o dată pe lună și pot obține o precizie bună pentru predicția lor.
 
@@ -114,8 +150,9 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 1. Selectați predicția pe care doriți să o revizuiți.
    - **Numele predicției:** Numele predicției furnizat la crearea acesteia.
    - **Tip de predicție:** Tipul de model utilizat pentru predicție
-   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.
-   - **Câmp estimat:** Acest câmp este populat numai pentru anumite tipuri de predicții și nu este utilizat în predicția retragerii.
+   - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.    
+      *Scor* în entitatea de ieșire este o măsură cantitativă a recomandării. Modelul recomandă produse cu un scor mai mare față de produsele cu un scor mai mic.
+   - **Câmp estimat:** Acest câmp este completat numai pentru anumite tipuri de predicții și nu este utilizat în Recomandarea produsului predicție.
    - **Stare:** Starea curentă a rulării predicției.
         - **În coadă:** În prezent, predicția așteaptă să fie rulate alte procese.
         - **Reîmprospătare:** Predicția rulează în prezent etapa de „evaluare” a procesării pentru a produce rezultate care vor trece în entitatea de ieșire.
@@ -128,11 +165,11 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
    > [!div class="mx-imgBorder"]
    > ![Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere](media/product-recommendation-verticalellipses.PNG "Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere")
 
-1. Există trei secțiuni principale de date în pagina de rezultate:
+1. Există cinci secțiuni principale de date în pagina de rezultate:
     1. **Performanța modelului de instruire:** A, B sau C sunt scoruri posibile. Acest scor indică performanța predicției și vă poate ajuta să luați decizia de a utiliza rezultatele stocate în entitatea de ieșire.
         - Scorurile sunt determinate pe baza următoarelor reguli:
             - **A** Modelul va fi considerat de calitate **A** dacă valoarea „Success @ K” este cu cel puțin 10% mai mare decât valoarea de bază. 
-            - **B** Modelul va fi considerat de calitate **B** dacă valoarea „Success @ K” este cu 0 până la 10% mai mare decât valoarea de bază.
+            - **B** Modelul va fi considerat de calitate **B** dacă valoarea „Success @ K” este cu 0% până la 10% mai mare decât valoarea de bază.
             - **C** Modelul va fi considerat de calitate **C** dacă valoarea „Success @ K” este mai mică decât valoarea de bază.
                
                > [!div class="mx-imgBorder"]
@@ -140,11 +177,31 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
             - **De bază**: Modelul ia cele mai recomandate produse în funcție de numărul de achiziții pentru toți clienții și folosește reguli învățate identificate de model pentru a crea un set de recomandări pentru clienți. Predicțiile sunt apoi comparate cu produsele de top, calculate după numărul de clienți care au achiziționat produsul. Dacă un client are cel puțin un produs recomandat în produsele sale, care a fost văzut și în produsele cumpărate de top, acesta este considerat o parte a liniei de bază. Dacă ar exista 10 dintre acești clienți care au achiziționat un produs recomandat din 100 de clienți în total, valoarea inițială ar fi de 10%.
             - **Succes @ K**: Folosind un set de validare a perioadei de timp a tranzacțiilor, se creează recomandări pentru toți clienții și se compară cu setul de validare al tranzacțiilor. De exemplu, într-o perioadă de 12 luni, luna 12 ar putea fi rezervată ca set de date de validare. Dacă modelul prezice cel puțin un lucru pe care l-ați cumpăra în luna 12 pe baza a ceea ce a învățat din cele 11 luni anterioare, clientul ar crește măsurătoarea „Success @ K”.
     
-    1. **Cele mai sugerate produse (cu număr):** Primele 5 produse care au fost prezise pentru clienții dvs.
+    1. **Cele mai sugerate produse (cu număr):** Primele cinci produse care au fost prezise pentru clienții dvs.
        > [!div class="mx-imgBorder"]
        > ![Grafic care prezintă primele 5 cele mai recomandate produse](media/product-recommendation-topproducts.PNG "Grafic care prezintă primele 5 cele mai recomandate produse")
     
-    1. **Recomandări de produse de înaltă încredere:** Un eșantion de recomandări oferite clienților dvs. despre care modelul consideră că este probabil să fie cumpărate de client.
+    1. **Factori cheie de recomandare:** Modelul folosește istoricul tranzacțiilor clienților pentru a face recomandări de produse. Învață modele bazate pe achiziții anterioare și găsește similitudini între clienți și produse. Aceste asemănări sunt apoi utilizate pentru a genera recomandări de produse.
+    Următorii sunt factorii care ar putea influența o recomandare de produs generată de model. 
+        - **Tranzacții anterioare**: Modelele de achiziționare din trecut au fost utilizate de model pentru a genera recomandări de produse. De exemplu, modelul poate recomanda un _Surface Arc Mouse_ dacă cineva a cumpărat recent un _Surface Book 3_ și un _Surface Pen_. Modelul a aflat că, din punct de vedere istoric, mulți clienți au cumpărat un _Surface Arc Mouse_ după achiziționarea unui _Surface Book 3_ și a unui _Surface Pen_.
+        - **Similitudinea clientului**: Un produs recomandat a fost achiziționat în mod istoric de alți clienți care prezintă modele de achiziție similare. De exemplu, lui John is s-au recomandat _Surface Headphones 2_ pentru că Jennifer și Brad au cumpărat recent _Surface Headphones 2_. Modelul crede că John este similar cu Jennifer și Brad, deoarece au avut în mod istoric modele de cumpărare similare.
+        - **Asemănarea produsului**: Un produs recomandat este similar cu alte produse cumpărate anterior de client. Modelul consideră că două produse sunt similare dacă au fost cumpărate împreună sau de către clienți similari. De exemplu, cineva primește o recomandare pentru o _Unitate de stocare USB_ deoarece anterior au cumpărat un _Adaptor USB-C la USB_ iar modelul crede că _Unitate de stocare USB_ este similar cu _Adaptor USB-C la USB_ pe baza modelelor istorice de cumpărare.
+
+        Fiecare recomandare de produs este influențată de unul sau mai mulți dintre acești factori. Procentul recomandărilor în care fiecare factor de influență a jucat un rol este vizualizat într-un grafic. În exemplul următor, 100% din recomandări au fost influențate de tranzacțiile anterioare, 60% de similitudinea clienților și 22% de similaritatea produsului. Plasați cursorul peste barele din grafic pentru a vedea procentajul exact la care au contribuit factorii de influență.
+
+        > [!div class="mx-imgBorder"]
+        > ![Principalii factori pentru recomandări](media/product-recommendation-keyrecommendationfactors.png "Factorii cheie de recomandare învățați de model pentru a genera recomandări de produse")
+       
+     
+   1. **Statistici de date**: Oferă o prezentare generală a numărului de tranzacții, clienți și produse pe care le-a luat în considerare modelul. Se bazează pe datele de intrare care au fost utilizate pentru a învăța tiparele și a genera recomandări de produse.
+
+      > [!div class="mx-imgBorder"]
+      > ![Statistici de date](media/product-recommendation-datastatistics.png "Statistici de date despre datele inout utilizate de model pentru a învăța tiparele")
+
+      Această secțiune prezintă statistici în jurul punctelor de date care au fost utilizate de model pentru a învăța modele și a genera recomandări de produse. Filtrarea, așa cum este configurată în configurația modelului, se va aplica la ieșirea generată de model. Cu toate acestea, modelul folosește toate datele disponibile pentru a învăța tiparele. Prin urmare, dacă utilizați filtrarea produselor în configurația modelului, această secțiune va arăta numărul total de produse pe care modelul le-a analizat pentru a învăța modele, care ar putea diferi de numărul de produse care corespund criteriilor de filtrare definite.
+
+   1. **Recomandări de produse de înaltă încredere:** Un eșantion de recomandări oferite clienților dvs. despre care modelul consideră că este probabil să fie cumpărate de client.    
+      Dacă se adaugă un catalog de produse, codurile de produs vor fi înlocuite cu nume de produse. Numele produselor oferă informații mai ușor de acționat și mai intuitive despre predicții.
        > [!div class="mx-imgBorder"]
        > ![Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali](media/product-recommendation-highconfidence.PNG "Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali")
 
@@ -154,7 +211,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 1. Selectați predicția pentru care doriți să vizualizați jurnalele de eroare și selectați **Jurnale**.
 
-1. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare pentru date insuficiente pentru o predicție exactă este de obicei rezolvată prin încărcarea de date suplimentare în Customer Insights.
+1. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare care nu conține suficiente date pentru a prezice cu precizie este de obicei rezolvată prin încărcarea mai multor date în Customer Insights.
 
 ## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
 

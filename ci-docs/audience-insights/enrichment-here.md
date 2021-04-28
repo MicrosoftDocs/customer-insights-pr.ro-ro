@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire cu îmbogățiri terță parte HERE Technologies
 description: Informații generale despre îmbogățirea terță parte HERE Technologies.
-ms.date: 12/10/2020
+ms.date: 04/09/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 8e8d6bfea4e0df54682501f60759c24c893444af
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
+ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597756"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "5896066"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Îmbogățirea profilurilor clienților cu HERE Technologies (previzualizare)
 
@@ -26,35 +26,54 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 
 - Aveți un abonament activ HERE Technologies. Pentru a obține un abonament, puteți să vă [înscrieți aici](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) sau [contactați HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) direct. [Aflați mai multe despre îmbogățirea locației HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Aveți cheia API HERE Technologies.
+- Este disponibilă o [conexiune](connections.md) HERE *sau* aveți permisiuni de [administrator](permissions.md#administrator) și cheia API HERE Technologies.
 
-- Aveți permisiuni de [Administrator](permissions.md#administrator).
+## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
-## <a name="configuration"></a>Configurație
+1. Accesați **Date** > **Îmbogățire**. 
 
-1. Accesați **Date** > **Îmbogățire**.
-
-1. Pe dala HERE Technologies, selectați **Doresc îmbogățirea datelor**.
+1. Selectați **Doresc îmbogățirea datelor** pe dala HERE Technologies și selectați **Începeți**.
 
    > [!div class="mx-imgBorder"]
    > ![Dală HERE Technologies](media/HERE-tile.png "Dală HERE Technologies")
 
-1. Introduceți o **cheie API HERE Technologies** activă. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **Sunt de acord**. 
+1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune**. Alegeți **HERE Tehnologii** din lista verticală. 
 
-1. Confirmați ambele intrări selectând **Conectați-vă la HERE**.
+1. Selectați **Conectați-vă la HERE Technologies** pentru a confirma selecția.
 
-1.  Selectați **Adăugați date** și alegeți **Set de date client** doriți să îmbogățiți cu date de localizare de la HERE Technologies. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+1.  Selectați **Următorul** și alegeți **Set de date client** pe care doriți să le îmbogățiți cu date de localizare de la HERE Technologies. Puteți selecta entitatea **Client** pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
 
     :::image type="content" source="media/enrichment-HERE-configuration-customer-data-set.png" alt-text="Captură de ecran atunci când alegeți setul de date pentru clienți.":::
 
-1. Alegeți dacă doriți să mapați câmpurile la adresa primară și/sau secundară. Puteți specifica o mapare a câmpului pentru ambele adrese (de exemplu, o adresă de domiciliu și una pentru companie) și puteți îmbogăți profilurile pentru ambele adrese separat. Selectați **Următorul**.
+1. Alegeți dacă doriți să mapați câmpurile la adresa primară și/sau secundară. Puteți specifica o mapare a câmpului pentru ambele adrese și puteți îmbogăți profilurile pentru ambele adrese separat. De exemplu, dacă există o adresă de domiciliu și a companiei. Selectați **Următorul**.
 
 1. Definiți ce câmpuri din profilurile dvs. unificate ar trebui utilizate pentru a căuta date de locație potrivite de la HERE Technologies. Câmpurile **Stradă 1** și **Cod poștal** sunt obligatorii pentru adresa primară și/sau secundară selectată. Pentru o precizie mai mare a potrivirii, pot fi adăugate mai multe câmpuri.
 
    > [!div class="mx-imgBorder"]
    > ![Pagina de configurare pentru îmbogățirii HERE Technologies](media/enrichment-HERE-configuration.png "Pagina de configurare pentru îmbogățirii HERE Technologies")
 
-1. Selectați **Aplicare** pentru a finaliza maparea câmpului.
+1. Selectați **Următorul** pentru a completa maparea câmpului.
+
+1. Oferiți un nume pentru îmbogățire. 
+
+1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
+
+## <a name="configure-the-connection-for-here-technologies"></a>Configurați conexiunea pentru HERE technologies 
+
+Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala HERE Technologies.
+
+1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
+
+1. Furnizați o cheie API HERE Technologies validă.
+
+1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **De acord**
+
+1. Selectați **Verificare** pentru a valida configurația.
+
+1. După finalizarea verificării, selectați **Salvare**.
+
+> [!div class="mx-imgBorder"]
+   > ![Pagina de configurare a conexiunii HERE Technologies](media/enrichment-HERE-connection.png "Pagina de configurare a conexiunii HERE Technologies")
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 

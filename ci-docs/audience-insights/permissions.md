@@ -1,7 +1,7 @@
 ---
 title: Gestionare permisiuni utilizator
 description: Aflați mai multe despre permisiuni și roluri de utilizator.
-ms.date: 10/27/2020
+ms.date: 03/25/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e58bb1a3bd4c0920ff984daffabbf16162185f3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 8638489dba908d4504278916d2c28454e3ea9e18
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595717"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760388"
 ---
 # <a name="user-permissions"></a>Permisiuni utilizator
 
@@ -31,7 +31,7 @@ Există trei tipuri de roluri:
 - Vizualizați și explorați pagina **Îmbogățire**.
 - Explorați și exportați entitățile utilizând pagina **Entități**.
 - Vizualizați starea proceselor sistemului folosind pagina **Sistem**.
-- Exportați segmente din pagina **Segmente**.
+- Vizualizați exporturile în pagina **Exporturi**.
 - Instalați și utilizați tabloul de bord **Power BI Customer Insights**.
 
 ## <a name="contributor"></a>Colaborator
@@ -43,6 +43,7 @@ Există trei tipuri de roluri:
 - Creați segmente folosind pagina **Segmente**.
 - Creați măsuri folosind pagina **Măsuri**.
 - Gestionați configurația și îmbogățiți profilurile clienților din pagina **Îmbogățire** (numai pentru îmbogățirea primară).
+- Gestionați și creați exporturi pe baza conexiunilor partajate cu colaboratorii. [Aflați mai multe despre modul în care administratorii permit colaboratorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="administrator"></a>Administrator
 
@@ -50,8 +51,9 @@ Există trei tipuri de roluri:
 - Modificați setările pe pagina **Sistem**, inclusiv limbajul de lucru și programele de actualizare pentru procesele sistemului.
 - Vizualizați și adăugați permisiunile folosind pagina **Permisiuni**.
 - Setați definițiile căutare și filtrare pentru pagina Clienți utilizând pagina **Index de căutare și filtrare** (accesibilă prin pagina **Clienți**).
-- Definiți destinațiile segmentului Dynamics 365 Sales utilizând pagina **Destinații export**.
+- Gestionați conexiunile și permiteți-le activarea altor roluri de utilizator pe pagina **Conexiuni**.
 - Gestionați configurația și îmbogățiți profilurile clienților din pagina **Îmbogățire** (pentru toate îmbogățirile).
+- Gestionați și creați exporturi pe pagina **Exporturi**.
 - Instalați și utilizați **Program de completare card client**.
 - Adăugați și utilizați **conectorul Power Apps**.
 - Activați utilizarea [API-urilor Customer Insights](apis.md).

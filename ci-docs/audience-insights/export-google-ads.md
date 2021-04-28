@@ -1,67 +1,35 @@
 ---
 title: Exportați datele Customer Insights către Google Ads
-description: Aflați cum să configurați conexiunea la Google Ads.
-ms.date: 11/18/2020
-ms.reviewer: mhart
+description: Aflați cum să configurați conexiunea și să exportați la Google Ads.
+ms.date: 03/03/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: phkieffer
 ms.author: philk
+ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6d9a25af3913e755cccec745c532b35aef3cccf9
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f4c094e486577d00d8c0c64e8527829820b335f6
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598262"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5759708"
 ---
-# <a name="connector-for-google-ads-preview"></a>Conector pentru Google Ads (previzualizare)
+# <a name="export-segments-to-google-ads-preview"></a>Exportați segmente în Google Ads (previzualizare)
 
 Exportați segmente de profiluri de clienți unificate în lista de audiență Google Ads și folosiți-le pentru publicitate în Căutarea Google, Gmail, YouTube și Rețeaua de vizualizare Google. 
 
-## <a name="prerequisites"></a>Cerințe preliminare
+## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
 
 -   Aveți un [cont Google Ads](https://ads.google.com/) și acreditările de administrator corespunzătoare.
+-   Aveți [aprobat un token pentru dezvoltatori Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
+-   Îndepliniți cerințele pentru [Politica Customer Match](https://support.google.com/adspolicy/answer/6299717)
+-   Îndepliniți cerințele pentru [remarketing al dimensiunilor listei](https://support.google.com/google-ads/answer/7558048) 
+
 -   Există audiențe în Google Ads și ID-urile corespunzătoare. Pentru informații suplimentare, consultați [Audiențe Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
 -   Aveți [segmente configurate](segments.md)
 -   Profilurile de clienți unificate din segmentele exportate conțin câmpuri care reprezintă o adresă de e-mail, prenumele și numele de familie
-
-## <a name="connect-to-google-ads"></a>Conectare la Google Ads
-
-1. Accesați **Administrator** > **Destinații de export**.
-
-1. Sub **Google Ads**, selectați **Configurare**.
-
-1. Dați destinației dvs. de export un nume ușor de recunoscut în câmpul **Nume afișat**.
-
-1. Introduceți **[ID-ul de client Google Ads](https://support.google.com/google-ads/answer/1704344)**.
-
-1. Introduceți **[Tokenul de dezvoltator aprobat de Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
-
-1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
-
-1. Introduceți **[ID-ul de audiență Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** și selectați **Conectare** pentru a inițializa conexiunea la Google Ads.
-
-1. Selectați **Autentificare cu Google Ads** și furnizați acreditările dvs. Google Ads.
-
-1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
-
-   :::image type="content" source="media/export-segments-googleads.PNG" alt-text="Exportați captura de ecran pentru conexiunea Google Ads":::
-
-1. Selectați **Continuare** pentru a configura exportul.
-
-## <a name="configure-the-connector"></a>Configurați conectorul
-
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru câmpurile **Prenume** și **Nume de familie**.
-
-1. Selectați segmentele pe care doriți să le exportați. Puteți exporta până la 1 milion de profiluri de client în total către Google Ads.
-
-1. Selectați **Salvare**.
-
-## <a name="export-the-data"></a>Exportați datele
-
-Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab). În Google Ads, puteți găsi acum segmentele dvs. sub [Segmente de audiență Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en/).
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
@@ -69,6 +37,48 @@ Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de a
 - Exportul către Google Ads este limitat la segmente.
 - Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 5 minute din cauza limitărilor din partea furnizorului. 
 - Potrivirea în Google Ads poate dura până la 48 de ore.
+
+## <a name="set-up-connection-to-google-ads"></a>Configurarea conexiunii la Google Ads
+
+1. Salt la **Administrator** > **Conexiuni**.
+
+1. Selectați **Adăugați conexiune** și alegeți **Google Ads** pentru a configura conexiunea.
+
+1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
+
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+
+1. Introduceți **[ID-ul de client Google Ads](https://support.google.com/google-ads/answer/1704344)**.
+
+1. Introduceți **[Tokenul de dezvoltator aprobat de Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token)**.
+
+1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
+
+1. Selectați **Autentificare cu Google Ads** și furnizați acreditările dvs. Google Ads.
+
+1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
+
+1. Selectați **Salvare** pentru a finaliza conexiunea. 
+
+## <a name="configure-an-export"></a>Configurați un export
+
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+
+1. Faceți salt la **Date** > **Exporturi**.
+
+1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Google Ads. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+
+1. Introduceți **[ID-ul de audiență Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** și selectați **Conectare** pentru a inițializa conexiunea la Google Ads.
+
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru câmpurile **Prenume** și **Nume de familie**.
+
+1. Selectați segmentele pe care doriți să le exportați. Puteți exporta până la 1 milion de profiluri de client în total către Google Ads.
+
+Salvarea unui export nu se execută imediat.
+
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

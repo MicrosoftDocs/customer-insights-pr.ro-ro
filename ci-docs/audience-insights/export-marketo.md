@@ -6,15 +6,15 @@ ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: phkieffer
+author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 01290d5fae7af1737b73373d75e334ae1ed67d37
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b5a644e286bd44d4ebf7d1837255326c005b48d6
+ms.sourcegitcommit: 74cd4fa9cbb784d9dff174c0eec7b4dcb408d66b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5759836"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059331"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportați segmente către Marketo (previzualizare)
 
@@ -44,7 +44,7 @@ Exportați segmentele profilurilor client unificate pentru a genera campanii, a 
 
 1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduceți **[ID-ul de client Marketo, secretul clientului și Numele de gazdă punct final REST](https://developers.marketo.com/rest-api/authentication/)**.
+1. Introduceți **[ID-ul de client Marketo, secretul clientului și Numele de gazdă punct final REST](https://developers.marketo.com/rest-api/authentication/)**. Numele de gazdă REST Endpoint este doar numele gazdei, fără `https://`. Exemplu:`xyz-abc-123.mktorest.com`. 
 
 1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor** și selectați **Conectare** pentru a inițializa conexiunea la Marketo.
 
@@ -62,7 +62,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Marketo. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
-1. Introduceți **[ID-ul listă Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)** 
+1. Introduceți **[ID-ul listă Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID-ul listei este o valoare pur numerică. De exemplu, dacă ID-ul listei Marketo este ST12345A7, eliminați caracterul înainte și după cifre și introduceți `12345`. 
 
 1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. 
 
@@ -74,7 +74,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). În Marketo, puteți găsi acum segmentele dvs. sub [Listele Marketo](ttps://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). În Marketo, puteți găsi acum segmentele dvs. sub [Listele Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists).
 
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor

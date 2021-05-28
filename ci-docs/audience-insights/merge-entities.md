@@ -1,7 +1,7 @@
 ---
 title: Îmbinați entitățile în unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 04/16/2020
+ms.date: 05/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,61 +9,100 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4ad06a0baf57e612fc0e0214dfd23d28e7d2b6be
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 2cab702509596dd87c0c9b9769d1af8ba8387f9d
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896526"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085591"
 ---
 # <a name="merge-entities"></a>Îmbinare entități
 
 Faza de îmbinare este ultima fază din procesul de unificare a datelor. Scopul său este reconcilierea datelor conflictuale. Exemple de date conflictuale ar putea include un nume de client care se găsește în două seturi de date, dar care apare puțin diferit în fiecare („Grant Marshall” față de „Grant Marshal”) sau un număr de telefon care diferă în format (617-803-091X versus 617803091X ). Fuzionarea acelor puncte de date conflictuale se face pe baza atributelor.
 
+:::image type="content" source="media/merge-fields-page.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
+
 După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala **Îmbinare** pe pagina **Unificare**.
 
 ## <a name="review-system-recommendations"></a>Revizuiți recomandările sistemului
 
-Pe pagina **Îmbinare**, alegeți și excludeți atributele de îmbinat în cadrul entității dvs. de profil de client unificat (rezultatul procesului de configurare). Unele atribute sunt combinate automat de sistem.
+În secțiunea **Date** > **Unificare** > **Îmbinare**, alegeți și excludeți atributele de îmbinat cu entitatea de profil de client unificat. Profilul de client unificat este rezultat al procesului de unificare a datelor. Unele atribute sunt combinate automat de sistem.
 
-### <a name="view-merged-attributes"></a>Vizualizare atribute îmbinate
+Pentru a vedea atributele ce sunt incluse într-unul dintre atributele dvs. îmbinate automat, selectați acel atribut îmbinat în fila de tabel **Câmpurile clienților**. Atributele care compun atributul îmbinat apar în două rânduri noi sub atributul îmbinat.
 
-Pentru a vizualiza atributele care sunt incluse într-unul dintre atributele combinate automat, selectați acel atribut combinat. Cele două atribute care compun acel atribut combinat apar în două rânduri noi sub atributul îmbinat.
+## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Separarea, redenumirea, excluderea și editarea câmpurilor îmbinate
 
-> [!div class="mx-imgBorder"]
-> ![Selectați atributul îmbinat](media/configure-data-merge-profile-attributes.png "Selectați atributul îmbinat")
+Puteți să modificați modul în care sistemul procesează atributele îmbinate pentru a genera profilul de client unificat. Selectați **Afișați mai multe** și alegeți ce vreți să schimbați.
 
-### <a name="separate-merged-attributes"></a>Separați atribute îmbinate
+:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opțiuni din meniul vertical Afișați mai multe pentru gestionarea atributelor combinate.":::
 
-Pentru a separa sau a despărți oricare dintre atributele combinate automat, găsiți atributul în tabelul **Atribute profil**.
+Pentru mai multe informații vedeți secțiunile următoare.
 
-1. Selectați butonul elipsă (...).
+## <a name="separate-merged-fields"></a>Câmpuri îmbinate separate
+
+Pentru a separa câmpurile îmbinate, găsiți atributul în tabel. Câmpurile separate sunt afișate drept puncte de date individuale în profilul de client unificat. 
+
+1. Selectați câmpul îmbinat.
   
-2. În lista verticală, selectați **Câmpuri separate**.
+1. Selectați **Afișați mai multe** și alegeți **Câmpuri separate**.
+ 
+1. Confirmați separarea.
 
-### <a name="remove-merged-attributes"></a>Eliminați atribute îmbinate
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
 
-Pentru a exclude un atribut de la entitatea profilului de client final, găsiți-l în tabelul **Atribute profil**.
+## <a name="rename-merged-fields"></a>Redenumiți câmpurile îmbinate
 
-1. Selectați butonul elipsă (...).
+Schimbați numele afișat al atributelor combinate. Nu puteți modifica numele entității de ieșire.
+
+1. Selectați câmpul îmbinat.
   
-2. În lista verticală, selectați **Nu îmbinați**.
+1. Selectați **Afișați mai multe** și alegeți **Redenumire**.
 
-   Atributul este mutat la secțiunea **Eliminat din înregistrarea client**.
+1. Confirmați numele afișat modificat. 
 
-## <a name="manually-add-a-merged-attribute"></a>Adăugați manual un atribut combinat
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
 
-Pentru a adăuga un atribut combinat, accesați pagina **Îmbinare**.
+## <a name="exclude-merged-fields"></a>Câmpuri îmbinate excluse
 
-1. Selectați **Adăugați atributul îmbinat**.
+Excludeți un atribut din profilul de client unificat. Dacă câmpul e utilizat în alte procese, de exemplu într-un segment, eliminați-l din aceste procese înainte de a-l exclude din profilul clientului. 
 
-2. Furnizați un **Nume** pentru a-l identifica mai târziu pe pagina **Îmbinare**.
+1. Selectați câmpul îmbinat.
+  
+1. Selectați **Afișați mai multe** și alegeți **Excludere**.
 
-3. Opțional, furnizați un **Numele afișat** ce apare în entitatea de profil a clientului unificată.
+1. Confirmați excluderea.
 
-4. Configurare **Selectați atributele dublate** pentru a selecta atributele pe care doriți să le îmbinați dintre entitățile potrivite. De asemenea, puteți căuta atribute.
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
 
-5. Configurați **Clasificare după importanță** pentru a acorda prioritate unui atribut asupra celorlalte. De exemplu, dacă entitatea *WebAccountCSV* include cele mai precise date despre atribute *Nume complete*, puteți acorda prioritate acestei entități *ContactCSV* prin selectarea *WebAccountCSV*. Ca urmare, *WebAccountCSV* trece la prima prioritate, în timp ce *ContactCSV* trece la a doua prioritate atunci când asamblați valori pentru atributul *Numele complet*.
+Pe pagina **Îmbinare**, selectați **Câmpuri excluse** pentru a vedea lista tuturor câmpurilor excluse. Acest panou vă permite să adăugați câmpuri excluse înapoi.
+
+## <a name="manually-combine-fields"></a>Îmbinați manual câmpurile
+
+Specificați manual un atribut îmbinat. 
+
+1. Pe pagina **Combinare**, selectați **Combinați câmpuri**.
+
+1. Furnizați un **Nume** și un **Nume al câmpului de ieșire**.
+
+1. Alegeți un câmp de adăugat. Selectați **Adăugați câmpuri** pentru combinarea mai multor câmpuri.
+
+1. Confirmați excluderea.
+
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
+
+## <a name="change-the-order-of-fields"></a>Modificarea ordinii câmpurilor
+
+Unele entități conțin mai multe detalii decât altele. Dacă o entitate include cele mai recente date despre un câmp, le puteți oferi prioritate față de alte entități atunci când îmbinați valorile.
+
+1. Selectați câmpul îmbinat.
+  
+1. Selectați **Afișați mai multe** și alegeți **Editare**.
+
+1. În panoul **Combinați câmpurile**, selectați **Mutați în sus / în jos** pentru a seta ordinea sau glisați și fixați-le în poziția dorită.
+
+1. Confirmați modificarea.
+
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
 
 ## <a name="run-your-merge"></a>Executați-vă unificarea
 
@@ -72,11 +111,11 @@ Indiferent dacă fuzionați manual atributele sau lăsați sistemul să le îmbi
 > [!div class="mx-imgBorder"]
 > ![Îmbinare date Salvați și rulați](media/configure-data-merge-save-run.png "Îmbinare date Salvați și rulați")
 
-Pentru a face modificări suplimentare și a relua pasul, puteți anula o îmbinare în curs. Selectați **Se reîmprospătează ...** și selectați **Anulare operațiune** în panoul lateral care apare.
+Alege **Rulați numai îmbinarea** dacă doriți doar să vedeți rezultatul reflectat în entitatea client unificată. Procesele din aval vor fi reîmprospătate ca [definite în programul de reîmprospătare](system.md#schedule-tab).
 
-După schimbarea textului de la **Se reîmprospătează ...** la **Reușit**, îmbinarea s-a finalizat și a rezolvat contradicțiile din datele dvs. în conformitate cu politicile pe care le-ați definit. Atributele îmbinate și neîmbinate sunt incluse în entitatea de profil unificat. Atributele excluse nu sunt incluse în entitatea de profil unificat.
+Alegeți **Rulați procesele de îmbinare și flux spre aval** pentru a reîmprospăta sistemul cu modificările dvs. Toate procesele, inclusiv îmbogățirea, segmentele și măsurile vor fi reluate automat. După ce toate procesele din aval s-au finalizat, profilurile clienților reflectă orice modificare făcută.
 
-Dacă nu a fost prima dată când ați executat o îmbinare cu succes, toate procesele din aval, inclusiv îmbogățirea, segmentarea și măsurile se vor repeta în mod automat. După ce toate procesele din aval au fost reluate, profilurile clienților reflectă orice modificări pe care le-ați efectuat.
+Pentru a face mai multe modificări și a relua pasul, puteți anula o îmbinare în curs. Selectați **Se reîmprospătează ...** și selectați **Anulare operațiune** în panoul lateral care apare.
 
 > [!TIP]
 > Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
@@ -85,9 +124,6 @@ Dacă nu a fost prima dată când ați executat o îmbinare cu succes, toate pro
 
 Configurați [Activități](activities.md), [Îmbogățire](enrichment-hub.md), sau [Relații](relationships.md) pentru a obține mai multe informații despre clienți.
 
-Dacă ați configurat deja activități, îmbogățire sau relații sau dacă ați definit segmente, acestea vor fi procesate automat pentru a utiliza cele mai recente date despre clienți.
-
-
-
+Dacă ați configurat deja activități, îmbogățire sau segmente, acestea vor fi procesate automat pentru a utiliza cele mai recente date despre clienți.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

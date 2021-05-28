@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 383523bad5105e08e57758838e90a49e805b5f9b
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
+ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596422"
+ms.lasthandoff: 05/17/2021
+ms.locfileid: "6049409"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
@@ -37,12 +37,12 @@ Selectați o entitate pentru a explora diferitele câmpuri și înregistrări in
 > [!div class="mx-imgBorder"]
 > ![Selectați o entitate](media/data-manager-entities-data.png "Selectați o entitate")
 
-- Fila **Date** este selectată implicit și arată un tabel cu detalii despre înregistrările individuale ale entității.
+- Fila **Date** afișează un tabel cu detalii despre înregistrările individuale ale entității.
 
 > [!div class="mx-imgBorder"]
 > ![Tabelul câmpurilor](media/data-manager-entities-fields.PNG "Tabelul câmpurilor")
 
-- Fila **Câmpuri** arată un tabel pentru a revizui detaliile pentru entitatea selectată, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Acestea sunt tipuri semantice care pot diferi de tipurile de date ale atributelor - de exemplu, câmpul *E-mail* de mai jos are un tip de date *Text* dar tipul său (semantic) de Common Data Model ar putea fi *E-mail* sau *EmailAddress*.
+- Fila **Atribute** fila este selectată implicit și afișează un tabel pentru a examina detaliile entității selectate, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Acestea sunt tipuri semantice care pot diferi de tipurile de date ale atributelor - de exemplu, câmpul *E-mail* de mai jos are un tip de date *Text* dar tipul său (semantic) de Common Data Model ar putea fi *E-mail* sau *EmailAddress*.
 
 > [!NOTE]
 > Ambele tabele prezintă doar un eșantion de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați pagina **Surse de date**, selectați o entitate, selectați **Editați**, apoi vizualizați datele acestei entități cu editorul Power Query, așa cum este explicat în [Surse de date](data-sources.md).

@@ -1,7 +1,7 @@
 ---
-title: Instalați și configurați Programul de completare card client
-description: Instalarea și configurarea programului de completare card client pentru Dynamics 365 Customer Insights.
-ms.date: 01/20/2021
+title: Aplicații program de completare Card client pentru Dynamics 365
+description: Afișați date din detalii privind publicul în aplicațiile Dynamics 365 cu acest supliment.
+ms.date: 05/18/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,30 +9,31 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f3c4a01f9ce7749eeee72f7901620dae7cb9b8d3
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
+ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597342"
+ms.lasthandoff: 05/18/2021
+ms.locfileid: "6059603"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Vizualizați datele demografice, informațiile și cronologiile de activitate cu ajutorul programului de completare card client.
+Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare Card de clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați date demografice, detalii și cronologii de activitate. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată. 
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- Aplicația Dynamics 365 (cum ar fi Hub de vânzări sau Hub de servicii pentru clienți), versiunea 9.0 și ulterior cu Interfață unificată activată.
-- Profilurile clienților [ingerate din aplicația Dynamics 365 folosind Common Data Service](connect-power-query.md).
-- Utilizatorii programului de completare card client trebuie să fie [adăugați ca utilizatori](permissions.md) în Detalii despre audiență.
-- [Capabilități de căutare și filtrare configurate](search-filter-index.md).
-- Control demografic: câmpurile demografice (cum ar fi vârsta sau sexul), sunt disponibile în profilul de client unificat.
-- Controlul îmbogățirii: necesită [îmbogățiri](enrichment-hub.md) active aplicate profilurilor clienților.
-- Control inteligent: Necesită date generate în Azure Machine Learning ([Predicții](predictions.md) sau [Modele particularizate](custom-models.md))
-- Controlul măsurii: Necesită [măsuri configurate](measures.md).
-- Controlul cronologiei: Necesită [activități configurate](activities.md).
+- Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
+- Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Common Data Service](connect-power-query.md).
+- Toți utilizatorii Dynamics 365 ai programului de completare Card client trebuie să fie [adăugați ca utilizatori](permissions.md) în detaliile despre public pentru a vedea datele.
+- [Sunt necesare capacități de căutare și filtrare configurate](search-filter-index.md) în detaliile despre public pentru ca datele să funcționeze.
+- Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența:
+  - Controlul măsurii: Necesită [măsuri configurate](measures.md).
+  - Controlul inteligent: necesită date generate folosind [predicții](predictions.md) sau [modele particularizate](custom-models.md).
+  - Control demografic: câmpurile demografice (cum ar fi vârsta sau sexul), sunt disponibile în profilul de client unificat.
+  - Controlul îmbogățirii: necesită [îmbogățiri](enrichment-hub.md) active aplicate profilurilor clienților.
+  - Controlul cronologiei: Necesită [activități configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalați suplimentul cardului client
 
@@ -56,9 +57,9 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
    > [!NOTE]
    > Verificați dacă funcția de blocare a ferestrelor pop-up a browserului nu blochează fereastra de autentificare atunci când selectați butonul **Conectare**.
 
-1. Selectați mediul de la care doriți să preluați date.
+1. Selectați mediul Customer Insights de la care doriți să preluați date.
 
-1. Definiți maparea câmpului către înregistrări în aplicația Dynamics 365.
+1. Definiți maparea de la câmp la înregistrări în aplicația Dynamics 365. În funcție de datele din Customer Insights, puteți alege să mapați următoarele opțiuni:
    - Pentru a mapa un contact, selectați câmpul din entitatea Client care se potrivește cu ID-ul entității dvs. de contact.
    - Pentru a mapa un cont, selectați câmpul din entitatea Client care se potrivește cu ID-ul entității dvs. de cont.
 

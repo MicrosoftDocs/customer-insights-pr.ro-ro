@@ -1,7 +1,7 @@
 ---
 title: Lucrați cu API-uri
 description: Folosirea de API-uri și înțelegerea limitărilor.
-ms.date: 03/10/2021
+ms.date: 05/10/2021
 ms.reviewer: wimohabb
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 59161456914df84d7e72402ed1f5faf70a5119ba
-ms.sourcegitcommit: a39e00a50ad3eda820fd756c5611081f0ca04662
+ms.openlocfilehash: 4d41d7d328dfa6699b5f5e992d3a5bf3179490d8
+ms.sourcegitcommit: 33a8e21b3bf6521bdb8346f81f79fce88091ddfd
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "5873677"
+ms.lasthandoff: 05/10/2021
+ms.locfileid: "6016635"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -90,19 +90,13 @@ Pentru informații despre utilizarea API-urilor cu bibliotecile clienților noș
 
 1. În înregistrarea aplicației dvs. în portalul Azure, accesați **Permisiuni API**.
 
-1. Selectați **Adăugați o permisiune** și selectați **Customer Insights** în panoul lateral.
+1. Selectați **Adăugați o permisiune**. 
+
+1. Selectați fila **API-urile pe care le folosește organizația mea** și alegeți **Dynamics 365 AI for Customer Insights** din listă. 
 
 1. Pentru **Tip permisiune**, selectați **Permisiuni aplicație** și selectați permisiunea **CustomerInsights.Api.All**.
 
 1. Selectați **Adăugare permisiuni**.
-
-1. Pentru a da consimțământul administratorului pentru această permisiune de aplicație, trebuie să adăugați o entitate principală de serviciu.
-
-   1. Instalați modulul (AD) PowerShell Azure Active Directory: `Install-Module -Name AzureAD -AllowClobber -Scope AllUsers`
-   1. Conectați-vă la contul AD: `Connect-AzureAD -TenantId <your tenant id>`. Puteți găsi ID-ul entității găzduite din **Prezentare generală** > **Azure Active Directory**.
-   1. Rulați următoarea comandă pentru a adăuga o entitate principală de serviciu Azure AD: `New-AzureADServicePrincipal -AppId "38c77d00-5fcb-4cce-9d93-af4738258e3c" -DisplayName "Microsoft Dynamics 365 Customer Insights"` Parametrul AppId se referă la aplicația API Customer Insights.
-
-   :::image type="content" source="media/azureAD-service-principal.png" alt-text="Eșantion entitate principală de serviciu":::
 
 1. Reveniți la **Permisiuni API** pentru înregistrarea aplicației.
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2eb84c44aa530346a73ba720106734d705a45f23
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
+ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595579"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "6085637"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -103,6 +103,18 @@ Regulile de potrivire reprezintă seturi de condiții. Pentru a potrivi entită�
 
 > [!NOTE]
 > Ordinea regulilor contează. Algoritmul de potrivire încearcă să se potrivească pe baza primei reguli și continuă la a doua regulă numai dacă nu au fost identificate potriviri cu prima regulă.
+
+### <a name="change-the-entity-order-in-match-rules"></a>Modificați ordinea entității în regulile de potrivire
+
+Puteți reordona entitățile pentru regulile de potrivire pentru a modifica ordinea în care sunt procesate. Regulile care sunt conflictuale din cauza unei comenzi modificate vor fi eliminate. Trebuie să recreați regulile eliminate cu o configurație actualizată.
+
+1. Mergeți la **Date** > **Unificare** > **Potirvire** și selectați **Editați**.
+
+1. În **Editați regula**, selectați controluk **Mutați în sus/jos** sau glisați și fixați entități pentru a modifica ordinea.
+
+   :::image type="content" source="media/reorder-match-rules.png" alt-text="Opțiuni pentru modificarea în care entități de ordine sunt procesate în faza de potrivire.":::
+
+1. Selectați **Terminat** pentru a salva regula.
 
 ## <a name="define-deduplication-on-a-match-entity"></a>Definiți eliminarea informațiilor duplicate pentru o entitate de potrivire
 

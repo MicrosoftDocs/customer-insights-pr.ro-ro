@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 835a9f3371a8c1b1a10d5c6901c03e1df5379d3d
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
+ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595824"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "5954594"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Valoare ciclu de viață client (versiune preliminară) (CLV)
 
@@ -38,11 +38,11 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
 - Identificator client: identificator unic pentru a potrivi tranzacțiile cu un client individual
 
 - Istoricul tranzacțiilor: jurnalul istoric al tranzacțiilor cu schema de date semantice de mai jos
-    - ID-ul de tranzacție: identificator unic al fiecărei tranzacții
-    - Data tranzacției: Data, de preferință un marcaj de timp al fiecărei tranzacții
-    - Valoarea tranzacției: valoarea monetară (de exemplu, venitul sau marja de profit) a fiecărei tranzacții
-    - Etichetă atribuită returnărilor (opțional): valoare booleană care indică dacă tranzacția este o returnare 
-    - ID produs (opțional): ID produs al produsului implicat în tranzacție
+    - **ID-ul de tranzacție**: identificator unic al fiecărei tranzacții
+    - **Data tranzacției**: Data, de preferință un marcaj de timp al fiecărei tranzacții
+    - **Valoarea tranzacției**: valoarea monetară (de exemplu, venitul sau marja de profit) a fiecărei tranzacții
+    - **Etichetă atribuită returnărilor** (opțional): valoare booleană care indică dacă tranzacția este o returnare 
+    - **ID produs** (opțional): ID produs al produsului implicat în tranzacție
 
 - Date suplimentare (opțional), de exemplu
     - Activități web: istoricul vizitelor site-ului web, istoricul e-mailurilor
@@ -53,10 +53,20 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
     - Identificatori ai clienților pentru asocia activitățile cu clienții dvs.
     - Informații despre activitate care conțin numele și data activității
     - Schema de date semantice pentru activități include: 
-        - Cheia primară: Un identificator unic pentru o activitate
-        - Marcaj temporal: Data și ora evenimentului identificate de cheia primară
-        - Eveniment (numele activității): numele evenimentului pe care doriți să îl utilizați
-        - Detalii (suma sau valoarea): detalii despre activitatea clientului
+        - **Cheia primară**: Un identificator unic pentru o activitate.
+        - **Marcaj temporal**: Data și ora evenimentului identificate de cheia primară.
+        - **Eveniment** (numele activității): numele evenimentului pe care doriți să îl utilizați
+        - **Detalii (suma sau valoarea)**: detalii despre activitatea clientului
+
+- Caracteristici de date sugerate:
+    - Date istorice suficiente: cel puțin un an de date tranzacționale. De preferință, doi-trei ani de date tranzacționale pentru a prezice CLV pentru un an.
+    - Achiziții multiple pe client: în mod ideal, cel puțin două până la trei tranzacții pe ID-ul clientului, de preferință pe mai multe date.
+    - Număr de clienți: cel puțin 100 de clienți unici, de preferință mai mult de 10.000 de clienți. Modelul va eșua cu mai puțin de 100 clienți și cu date istorice insuficiente.
+    - Completitatea datelor: mai puțin de 20% lipsesc valorile din câmpurile obligatorii din datele de intrare   
+
+> [!NOTE]
+> - Modelul necesită istoricul tranzacțiilor clienților dvs. În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități tranzațcii de cumpărare, puteți să le uniți-le în Power Query înainte de ingestia de date.
+> - Cu toate acestea, pentru date suplimentare despre activitatea clienților (opțional), puteți adăuga oricâte entități de activitate ale clienților doriți, pentru a fi considerate de model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Creați o predicție a valorii duratei de viață a clientului
 
@@ -76,7 +86,7 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
    În mod implicit, unitatea este setată ca luni. Îl puteți schimba în ani pentru a privi mai departe în viitor.
 
    > [!TIP]
-   > Pentru a prezice cu precizie CLV pentru perioada de timp setată, aveți nevoie de o perioadă comparabilă de date istorice. De exemplu, dacă doriți să preziceți pentru următoarele 12 luni, se recomandă să aveți cel puțin 18 - 24 de luni de date istorice.
+   > Pentru a prezice cu precizie CLV pentru perioada de timp setată, aveți nevoie de o perioadă comparabilă de date istorice. De exemplu, dacă doriți să preziceți CLV pentru următoarele 12 luni, se recomandă să aveți cel puțin 18 - 24 de luni de date istorice.
 
 1. Specificați ce înseamnă **Clienți activi** pentru afacerea ta. Setați intervalul de timp în care un client trebuie să fi avut cel puțin o tranzacție pentru a fi considerat activ. Modelul va prezice CLV numai pentru clienții activi. 
    - **Lăsați modelul să calculeze intervalul de cumpărare (recomandat)**: Modelul analizează datele dvs. și determină o perioadă de timp pe baza achizițiilor istorice.
@@ -181,14 +191,14 @@ Există trei secțiuni principale de date în pagina de rezultate.
   Folosind definiția clienților cu valoare ridicată furnizată în timp ce configurați predicție, sistemul evaluează modul în care a funcționat modelul AI în prezicerea clienților cu valoare ridicată în comparație cu un model de bază.    
 
   Nivelurile sunt stabilite pe baza următoarelor reguli:
-  - A când modelul a prezis cu precizie cu cel puțin 5% mai mulți clienți de valoare ridicată în comparație cu modelul de bază.
-  - B când modelul a prezis cu precizie între 0-5% mai mulți clienți de valoare ridicată în comparație cu modelul de bază.
-  - C când modelul a prezis cu precizie mai puțini clienți de valoare ridicată în comparație cu modelul de bază.
+  - **A** când modelul a prezis cu precizie cu cel puțin 5% mai mulți clienți de valoare ridicată în comparație cu modelul de bază.
+  - **B** când modelul a prezis cu precizie între 0-5% mai mulți clienți de valoare ridicată în comparație cu modelul de bază.
+  - **C** când modelul a prezis cu precizie mai puțini clienți de valoare ridicată în comparație cu modelul de bază.
 
   Panoul **Evaluarea modelului** afișează detalii suplimentare despre performanța modelului AI și modelul de bază. Modelul de bază folosește o abordare care nu se bazează pe IA pentru a calcula valoarea pe viață a clienților pe baza în principal a achizițiilor istorice efectuate de clienți.     
   Formula standard utilizată pentru a calcula CLV după modelul de bază:    
 
-  *CLV pentru fiecare client = cumpărarea medie lunară efectuată de client în fereastra activă a clientului * Numărul de luni în perioada CLV predicție * Rata de retenție în ansamblu a tuturor clienților*
+  _**CLV pentru fiecare client** = cumpărarea medie lunară efectuată de client în fereastra activă a clientului * Numărul de luni în perioada CLV predicție * Rata de retenție în ansamblu a tuturor clienților_
 
   Modelul AI este comparat cu modelul de bază bazat pe două valori de performanță ale modelului.
   

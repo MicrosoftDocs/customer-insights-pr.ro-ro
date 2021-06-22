@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a7fa6515bd6e79dedfb21aa0f0b8e24b873a6771
-ms.sourcegitcommit: 8341fa964365c185b65bc4b71fc0c695ea127dc0
+ms.openlocfilehash: 6cb7bd62bf0f61e6dc5811b20e5011e4a086c743
+ms.sourcegitcommit: 84283d523a891298fca8aaf629d9f9ab2a1bc067
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/14/2021
-ms.locfileid: "6034027"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "6111402"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
@@ -32,22 +32,13 @@ Sunt mai multe moduri de a crea un segment nou:
 - Sugestii bazate pe AI bazate pe măsuri sau atribute: [Segmente sugerate pentru îmbunătățirea măsurilor](suggested-segments.md)
 - Sugestii bazate pe activități: [Segmente sugerate pe baza activității clienților](suggested-segments-activity.md)
 
-## <a name="get-insights-on-existing-segments"></a>Obțineți informații despre segmentele existente
-
-Descoperiți informații suplimentare despre segmentele dvs. existente cu [Statistici de segment](segment-insights.md). Aflați ce diferențiază două segmente sau ce au în comun.
-
-## <a name="find-similar-customers"></a>Găsiți clienți similari
-
-Găsiți clienți care sunt similari cu membrii unui segment selectat cu ajutorul inteligenței artificiale. Pentru informaţii suplimentare, consultaţi [clienți similari ](find-similar-customer-segments.md).
-
 ## <a name="manage-existing-segments"></a>Gestionarea segmentelor existente
 
 Mergeș la **Segmente** pagina, pentru a vizualiza toate segmentele salvate și a le gestiona.
 
 Fiecare segment este reprezentat de un rând care include informații suplimentare despre segment.
 
-> [!div class="mx-imgBorder"]
-> ![Opțiuni de gestionare a unui segment existent](media/segments-selected-segment.png "Opțiuni de gestionare a unui segment existent")
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment selectat cu listă verticală de opțiuni și opțiuni disponibile.":::
 
 Următoarea acțiune este disponibilă când selectați un segment:
 
@@ -59,7 +50,7 @@ Următoarea acțiune este disponibilă când selectați un segment:
   Alternativ, puteți utiliza funcționalitatea **Planifică mai târziu** în lista derulantă **Activare/Dezactivare** pentru a specifica data și ora viitoare pentru activarea și dezactivarea unui anumit segment.
 - **Redenumire** segment.
 - **Descarcați** lista membrilor ca fișier .CSV.
-- Opțiunea **Adăugare la** trimite lista ID-urilor de clienți din segment pentru procesare într-o altă aplicație.
+- **Gestionați exporturile** pentru a vedea segmentul aferent exporturilor și a le gestiona. [Aflați mai multe despre exporturi.](export-destinations.md)
 - **Se șterge** segmentul.
 
 ## <a name="refresh-segments"></a>Se reîmprospătează segmentele
@@ -68,6 +59,24 @@ Puteți reîmprospăta toate segmentele simultan, selectând **Reîmprospătați
 
 > [!TIP]
 > Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+
+## <a name="export-segments"></a>Export segmente
+
+Puteți exporta un segment din pagina de segmente sau din [pagina exporturilor](export-destinations.md). 
+
+1. Salt la pagina **Segmente**.
+
+1. Selectați **Afișați mai multe [...]** pentru segmentul pe care doriți să-l exportați.
+
+1. Selectați **Gestionați exporturile** din lista verticală de acțiuni.
+
+1. Pagina **Exporturi (versiune preliminară) pentru segment** se deschide. Puteți vedea toate exporturile configurate grupate după exporturi care conțin segmentul curent sau nu îl conțin.
+
+   1. Pentru a adăuga segmentul selectat la un export, selectați exportul din listă și selectați **Adăugați un segment**.
+
+   1. Pentru a crea un nou export cu segmentul selectat, selectați **Adăugați export**. Pentru mai multe informații despre crearea exporturilor, consultați [Configurați un nou export](export-destinations.md#set-up-a-new-export).
+
+1. Selectați **Înapoi** pentru a reveni la pagina principală pentru segmente.
 
 ## <a name="view-processing-history-and-segment-members"></a>Vizualizați istoricul procesării și membrii segmentului
 

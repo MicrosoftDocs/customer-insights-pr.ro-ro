@@ -9,12 +9,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 04c4252aae374cf25c16b71415ee4a89b51b0040
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: e2f92a64d01a443bcf3c1605621abe045b93ee5e
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954594"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095525"
 ---
 # <a name="customer-lifetime-value-clv-prediction-preview"></a>Valoare ciclu de viață client (versiune preliminară) (CLV)
 
@@ -149,7 +149,6 @@ Datele care reflectă interacțiunile cheie ale clienților (cum ar fi web, serv
 
 1. Selectați **Următorul**.
 
-
 ### <a name="review-and-run-the-model-configuration"></a>Examinați și rulați configurația modelului
 
 1. În pasul **Examinați detaliile modelului**, validați configurația predicției. Puteți reveni la orice parte a configurării predicției selectând **Editare** sub valoarea afișată. De asemenea, puteți selecta un pas de configurare din indicatorul de progres.
@@ -170,11 +169,10 @@ Datele care reflectă interacțiunile cheie ale clienților (cum ar fi web, serv
 - **Stare**: Starea rulării predicției.
     - **În așteptare**: Predicția așteaptă să se finalizeze alte procese.
     - **Reîmprospătare**: Predicția rulează în prezent pentru a crea rezultate care vor curge în entitatea de ieșire.
-    - **Eșuat**: Rularea predicției a eșuat. Pentru mai multe detalii, [consultați fișierele-jurnal](#troubleshoot-a-failed-prediction).
+    - **Eșuat**: Rularea predicției a eșuat. Pentru mai multe detalii, [consultați fișierele-jurnal](manage-predictions.md#troubleshoot-a-failed-prediction).
     - **Reușit**: Predicția a reușit. Selectați **Vizualizare** sub elipsele verticale pentru a examina rezultatele predicției.
 - **Editat**: Data la care configurația predicției a fost modificată.
 - **Ultima actualizare**: Data la care predicția a fost reîmprospătată având ca rezultat entitatea de ieșire.
-
 
 ### <a name="review-prediction-results"></a>Examinați rezultatele predicției
 
@@ -216,28 +214,8 @@ Există trei secțiuni principale de date în pagina de rezultate.
 
 - **Cei mai influenți factori**: Diverși factori sunt luați în considerare atunci când creați CLV-ul predicție pe baza datelor de intrare furnizate modelului AI. Fiecare dintre factori are o importanță calculată pentru predicțiile agregate pe care le creează un model. Puteți utiliza acești factori pentru a vă ajuta la validarea rezultatelor predicției. Acești factori oferă, de asemenea, mai multe informații despre cei mai influenți factori care au contribuit la prezicerea CLV pentru toți clienții dvs.
 
-## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
+## <a name="manage-predictions"></a>Gestionați predicțiile
 
-Predicțiile se reîmprospătează automat pe același [program cu care se reîmprospătează datele](system.md#schedule-tab) așa cum este configurat în setări. Le puteți reîmprospăta și manual.
-
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-2. Selectați elipsele verticale de lângă predicția pe care doriți să o reîmprospătați.
-3. Selectați **Reîmprospătare**.
-
-## <a name="delete-a-prediction"></a>Ștergerea unei predicții
-
-Ștergerea unui predicții elimină și entitatea acesteia de ieșire.
-
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-2. Selectați elipsele verticale de lângă predicția pe care doriți să o ștergeți.
-3. Selectați **Ștergere**.
-
-## <a name="troubleshoot-a-failed-prediction"></a>Depanarea unei predicții eșuate
-
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-2. Selectați elipsele verticale de lângă predicția pentru care doriți să vedeți jurnalele de erori.
-3. Selectați **Jurnale**.
-4. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare conform căreia nu există suficiente date pentru a prezice cu precizie este de obicei rezolvată prin încărcarea mai multor date în detalii despre public.
-
+Este posibil să optimizați, să depanați, să reîmprospătați sau să ștergeți predicțiile. Examinați un raport de utilizare a datelor de intrare pentru a afla cum să faceți o predicție mai rapid și mai fiabil. Pentru mai multe informații, consultați [Gestionați o predicție](manage-predictions.md).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

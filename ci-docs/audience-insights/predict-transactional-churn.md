@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 43fcd37f8dd71e2890334a4cc53d49dae97d63c6
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906871"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095617"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prezicerea retragerii tranzacționale (previzualizare)
 
@@ -144,7 +144,7 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
    - **Stare:** Starea rulării predicției.
         - **În așteptare:** Predicția așteaptă să se execute alte procese.
         - **Reîmprospătare:** Predicția rulează în prezent pentru a produce rezultate care vor curge în entitatea de ieșire.
-        - **Eșuat:** Rularea predicției a eșuat. Pentru mai multe detalii, [consultați fișierele-jurnal](#troubleshoot-a-failed-prediction).
+        - **Eșuat:** Rularea predicției a eșuat. Pentru mai multe detalii, [consultați fișierele-jurnal](manage-predictions.md#troubleshoot-a-failed-prediction).
         - **Reușit:** Predicția a reușit. Selectați **Vizualizare** sub elipsele verticale pentru a analiza predicția
    - **Editat:** Data la care configurația predicției a fost modificată.
    - **Ultima actualizare:** Data la care predicția a fost reîmprospătată având ca rezultat entitatea de ieșire.
@@ -168,35 +168,9 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
        
     1. **Cei mai influenți factori:** Există mulți factori care sunt luați în considerare atunci când vă creați predicția. Fiecare dintre factori are importanța sa calculată pentru predicțiile agregate pe care le creează un model. Puteți utiliza acești factori pentru a vă ajuta la validarea rezultatelor predicției. Sau puteți utiliza aceste informații mai târziu pentru a [crea segmente](segments.md) care ar putea ajuta la influențarea riscului de retragere pentru clienți.
 
-## <a name="troubleshoot-a-failed-prediction"></a>Depanarea unei predicții eșuate
+## <a name="manage-predictions"></a>Gestionați predicțiile
 
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-
-1. Selectați elipsele verticale de lângă predicția pentru care doriți să vedeți jurnalele de erori.
-
-1. Selectați **Jurnale**.
-
-1. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare pentru date insuficiente pentru o predicție exactă este de obicei rezolvată prin încărcarea de date suplimentare în Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
-
-Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reîmprospătare a datelor](system.md#schedule-tab) așa cum este configurat în setări. Le puteți reîmprospăta și manual.
-
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o reîmprospătați.
-
-1. Selectați **Reîmprospătare**.
-
-## <a name="delete-a-prediction"></a>Ștergerea unei predicții
-
-Ștergerea unui predicții elimină și entitatea acesteia de ieșire.
-
-1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
-
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o ștergeți.
-
-1. Selectați **Ștergere**.
+Este posibil să optimizați, să depanați, să reîmprospătați sau să ștergeți predicțiile. Examinați un raport de utilizare a datelor de intrare pentru a afla cum să faceți o predicție mai rapid și mai fiabil. Pentru mai multe informații, consultați [Gestionați o predicție](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

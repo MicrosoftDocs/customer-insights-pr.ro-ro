@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 05/06/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: c66b37d6e4d6ed830238566fbc09934832892b34
-ms.sourcegitcommit: 3f9981df97fa7b1f432a446d3f11936ea4cfbde5
+ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
+ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "5988935"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6263266"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
@@ -26,6 +26,37 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="may-2021-updates"></a>Actualizări mai 2021
+
+Actualizările din mai 2021 includ mai multe funcții, actualizări de performanță și remedieri de erori.
+
+### <a name="data-ingestion"></a>Ingestie date
+
+- **Vizualizați sau modificați metadatele sau definiția entității atunci când atașați date de pe Azure Data Lake Storage** Acum puteți vizualiza și edita metadatele sau definiția entității în detaliile despre public atunci când atașați date dintr-un dosar Common Data Model în Azure Data Lake Storage. Această capacitate oferă feedback în timp real, validarea modelului și verificarea erorilor. Aceasta vă permite să editați fără probleme atât model.json cât și manifest.json.
+
+### <a name="extensibility"></a>Extensibilitate
+
+- **Exporturi de segmente îmbunătățite, programare personalizată și duplicare** Acuma puteți [vizualiza toate exporturile pentru un anumit segment](export-destinations.md#view-exports-and-export-details) într-o listă. Această vizualizare nouă ajută la gestionarea modului în care este utilizat un anumit segment și la adaptarea de exporturi existente sau la crearea de noi exporturi.    
+  Puteți [defini programe de reîmprospătare personalizate](export-destinations.md#schedule-and-run-exports) pentru exporturi individuale sau mai multe exporturi simultan. Până în prezent, toate exporturile erau efectuate cu fiecare reîmprospătare a sistemului.    
+  În loc să creați un nou export de la zero, puteți începe bazându-vă pe unul existent pentru a economisi ceva timp.
+
+- **Exportați segmente în Microsoft Advertising** Am extins destinațiile noastre de export pentru a include Microsoft Advertising. Creați audiențe Customer Match în Microsoft Advertising cu datele de profil unificate ale clienților dvs. și să utilizați aceste audiențe pentru campanii de publicitate. Pentru mai multe informații, consultați [Exportați segmente în Microsoft Advertising](export-microsoft-advertising.md).
+
+- **Exportați segmente în anunțuri LinkedIn** Am extins destinațiile noastre de export pentru a include anunțuri LinkedIn și pentru a vă permite să deblocați direcționarea prin contact, precum și direcționarea către companii prin LinkedIn, exportând datele unificate ale profilului dvs. de client. Pentru mai multe informații, consultați [Exportați segmente în Anunțuri LinkedIn](export-linkedin-ads.md).
+
+
+- **Exportați segmente în Omnisend** Am extins destinațiile noastre de export pentru a include Omnisend. Utilizați segmentele create în detaliile despre public pentru a genera campanii, a oferi marketing prin e-mail și a utiliza anumite grupuri de clienți cu Omnisend. Pentru mai multe informații, consultați [Exportați segmente în Omnisend](export-omnisend.md)
+
+### <a name="predictions"></a>Predicții
+
+- **Raport de utilizare a datelor de intrare** Raportul de utilizare a datelor de intrare oferă o imagine consolidată a erorilor și avertismentelor pe care le pot genera predicțiile dvs. predefinite. De asemenea, oferă recomandări despre cum să îmbunătățim performanța modelului.    
+  Raportul este disponibil după ce un model a finalizat procesul de instruire. Este creat pentru fiecare model separat, indiferent dacă s-a finalizat cu succes sau nu.
+  În prezent, această caracteristică este disponibilă numai pentru modelul Transaction Churn. Pentru mai multe informații, consultați [Raport de utilizare a datelor de intrare](manage-predictions.md#input-data-usability-report).
+
+### <a name="relationships"></a>Relații
+
+- **Vizualizator de relații** Vizualizarea vizualizatorului de relații vă permite să vedeți toate relațiile existente între entități și cardinalitatea acestora. Relațiile sunt acum organizate în grupuri: creat de utilizator, sistem și relații moștenite. De asemenea, puteți exporta o vizualizare ca imagine. Pentru mai multe informații, consultați [Vizualizați relațiile](relationships.md#view-relationships). 
 
 ## <a name="april-2021-updates"></a>Actualizări aprilie 2021
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e46e31131a2dd5235af8221eafcd2e1d1394f3d4
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906779"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095571"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicție de recomandare de produse (previzualizare)
 
@@ -205,33 +205,9 @@ Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predic�
        > [!div class="mx-imgBorder"]
        > ![Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali](media/product-recommendation-highconfidence.PNG "Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali")
 
-## <a name="fix-a-failed-prediction"></a>Remediați o predicție eșuată
+## <a name="manage-predictions"></a>Gestionați predicțiile
 
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-
-1. Selectați predicția pentru care doriți să vizualizați jurnalele de eroare și selectați **Jurnale**.
-
-1. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare care nu conține suficiente date pentru a prezice cu precizie este de obicei rezolvată prin încărcarea mai multor date în Customer Insights.
-
-## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
-
-Predicțiile se reîmprospătează automat pe același [program cu care se reîmprospătează datele](system.md#schedule-tab) așa cum este configurat în setări.
-
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o reîmprospătați.
-
-1. Selectați **Reîmprospătare**.
-
-## <a name="delete-a-prediction"></a>Ștergerea unei predicții
-
-Ștergerea unui predicții va elimina și entitatea acesteia de ieșire.
-
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o ștergeți.
-
-1. Selectați **Ștergere**.
+Este posibil să optimizați, să depanați, să reîmprospătați sau să ștergeți predicțiile. Examinați un raport de utilizare a datelor de intrare pentru a afla cum să faceți o predicție mai rapid și mai fiabil. Pentru mai multe informații, consultați [Gestionați o predicție](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

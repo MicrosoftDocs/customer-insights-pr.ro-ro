@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b6bf4f715768b18d69be3bea4085acd96933e8da
-ms.sourcegitcommit: 6d5dd572f75ba4c0303ec77c3b74e4318d52705c
+ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
+ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "5906917"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "6095663"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicție renunțare la abonament (previzualizare)
 
@@ -147,30 +147,9 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
        > [!div class="mx-imgBorder"]
        > ![Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii](media/subscription-churn-influentialfactors.PNG "Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii")
 
-## <a name="fix-a-failed-prediction"></a>Remediați o predicție eșuată
+## <a name="manage-predictions"></a>Gestionați predicțiile
 
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-1. Selectați predicția pentru care doriți să vizualizați jurnalele de eroare și selectați **Jurnale**.
-   > [!div class="mx-imgBorder"]
-   > ![Vizualizarea barei de meniu a rezultatelor, inclusiv butoanele de închidere, editare a modelului și jurnale](media/subscription-churn-logsbutton.PNG "Vizualizarea barei de meniu a rezultatelor, inclusiv butoanele de închidere, editare a modelului și jurnale")
-1. Analizarea tuturor erorilor. Există mai multe tipuri de erori care pot apărea și ce descriu condiția care a cauzat eroarea. De exemplu, o eroare conform căreia nu există suficiente date pentru a prezice cu precizie este de obicei rezolvată prin încărcarea de date suplimentare.
-
-## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
-
-Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reîmprospătare a datelor](system.md#schedule-tab) așa cum este configurat în setări.
-
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o reîmprospătați.
-1. Selectați **Reîmprospătare**.
-
-## <a name="delete-a-prediction"></a>Ștergerea unei predicții
-
-1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
-1. Selectați elipsele verticale de lângă predicția pe care doriți să o ștergeți.
-1. Selectați **Ștergere**.
-
-> [!NOTE]
-> Ștergerea unui previziuni va elimina entitatea de ieșire.
+Este posibil să optimizați, să depanați, să reîmprospătați sau să ștergeți predicțiile. Examinați un raport de utilizare a datelor de intrare pentru a afla cum să faceți o predicție mai rapid și mai fiabil. Pentru mai multe informații, consultați [Gestionați o predicție](manage-predictions.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

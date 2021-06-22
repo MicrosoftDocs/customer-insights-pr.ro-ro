@@ -1,7 +1,7 @@
 ---
 title: Îmbogățiți profilurile clienților cu date de la Microsoft
 description: Folosiți date cu caracter proprietar de la Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă și de interes.
-ms.date: 04/09/2021
+ms.date: 06/14/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: be042dd139607849b795c903fa58da2edb9ff589
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
+ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064906"
+ms.lasthandoff: 06/14/2021
+ms.locfileid: "6245722"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
 
@@ -69,12 +69,10 @@ O experiență ghidată vă ajută prin configurarea îmbogățirilor.
 
 ### <a name="define-your-brands-or-interests"></a>Definiți-vă brandurile sau interesele
 
-Selectați una dintre următoarele opțiuni:
+Alegeți până la cinci mărci sau interese folosind una sau ambele opțiuni:
 
-- **Industrie**: Sistemul identifică cele mai importante mărci sau interese relevante pentru industria dvs. și îmbogățește datele clientului cu acestea.
-- **Alegeți-vă una proprie**: Selectați până la cinci articole din lista mărcilor sau a intereselor care sunt cele mai relevante pentru organizația dvs.
-
-Pentru a adăuga o marcă sau interes, introduceți-o în zona de intrare pentru a primi sugestii bazate pe termeni potriviți. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
+- **Industrie**: Selectați-vă industria din lista verticală și apoi alegeți dintre cele mai importante mărci sau interese pentru industria respectivă.
+- **Alegeți-vă una proprie**: Introduceți o marcă sau un interes relevant pentru organizația dvs. și apoi alegeți dintre sugestiile potrivite. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
 
 ### <a name="review-enrichment-preferences"></a>Recenzie preferințe de îmbogățire
 

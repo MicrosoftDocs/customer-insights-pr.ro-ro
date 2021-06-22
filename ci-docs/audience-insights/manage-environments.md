@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 03/26/2021
+ms.date: 06/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 8cc1401251ed7c45c598bd4a8fb33a9709fabbc8
-ms.sourcegitcommit: d89b19b2a3497722b78362aeee688ae7e94915d9
+ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
+ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "5888001"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "6259114"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -76,9 +76,9 @@ Pentru crearea unui mediu:
    > Acceptăm numai conturi Azure Data Lake Storage Gen2 din aceeași regiune Azure pe care ați selectat-o la crearea mediului.
    > Acceptăm numai conturile de stocare activate pentru Nume Spațiu Ierarhic Azure Data Lake Gen2 (HNS).
 
-   - Pentru opțiunea Azure Data Lake Storage Gen2, puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi „customerinsights”.
+   - Pentru opțiunea Azure Data Lake Storage Gen2, puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi `customerinsights`.
    
-   - Dacă doriți să utilizați [predicții](predictions.md), configurați partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, sau activați ingestia de date din sursele de date local, furnizați URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
+   - Dacă doriți să utilizați [predicții](predictions.md), configurați partajarea datelor cu Microsoft Dataverse, sau activați ingestia de date din sursele de date local, furnizați URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
 
      > [!NOTE]
      > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
@@ -87,7 +87,7 @@ Pentru crearea unui mediu:
      > [!div class="mx-imgBorder"]
      > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
 
-   Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate la subfolderele respective pe baza procesului pe care îl derulați.
+   Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate în dosare pe baza numelui procesului.
 
    Dacă creați mai multe medii de Customer Insights și alegeți să salvați entitățile de ieșire din acele medii în contul dvs. de stocare, vor fi create dosare separate pentru fiecare mediu cu ci_<environmentid> în recipient.
 
@@ -146,7 +146,7 @@ Puteți edita câteva dintre detaliile mediilor existente.
    > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
    > - [Predicție a valorilor lipsă într-o entitate](predictions.md) momentan nu este acceptat atunci când activați partajarea datelor cu Microsoft Dataverse Data Lake gestionat.
 
-   Odată ce activați partajarea datelor cu Microsoft Dataverse, se va declanșa o reîmprospătare completă, unică, a surselor de date și a altor procese. Dacă procesele rulează și se află în coadă, nu veți vedea opțiunea de a permite partajarea datelor cu Microsoft Dataverse. Puteți aștepta ca acele procese să se finalizeze sau să le anulați pentru a permite partajarea datelor. 
+   După ce activați partajarea datelor cu Microsoft Dataverse, începe o reîmprospătare completă, unică, a surselor de date și a altor procese. Dacă procesele rulează, nu vedeți opțiunea de a permite partajarea datelor cu Microsoft Dataverse. Așteptați ca acele procese să se finalizeze sau să le anulați pentru a permite partajarea datelor. 
    
    :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
    

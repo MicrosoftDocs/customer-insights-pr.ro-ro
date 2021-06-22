@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
+ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595288"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6129914"
 ---
 # <a name="product-recommendation-prediction-preview-sample-guide"></a>Eșantion de ghid pentru recomandarea produsului predicție (previzualizare)
 
@@ -22,7 +22,7 @@ Vă vom explica un exemplu complet de predicție a recomandării de produs folos
 
 ## <a name="scenario"></a>Scenariu
 
-Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vinde prin intermediul site-ului web Contoso Coffee. Scopul lor este să înțeleagă ce produse ar trebui să recomande clienților lor recurenti. Știind ce sunt mai mulți clienți **probabil să cumpere**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe anumite elemente.
+Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vând prin intermediul site-ului lor de cafea Contoso. Scopul lor este să înțeleagă ce produse ar trebui să recomande clienților lor recurenti. Știind ce sunt mai mulți clienți **probabil să cumpere**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe anumite elemente.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -65,7 +65,7 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
 
 1. În câmpul **Nume** din panoul lateral, redenumiți sursa de date din **Interogare** în **eCommercePurchases**.
 
-1. Salvați sursa de date.
+1. **Salvați** sursa de date.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerați datele clienților din schema de loialitate
@@ -83,11 +83,11 @@ Examinați articolele [despre ingestia de date](data-sources.md) și în mod spe
 
 1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
 
-1. Salvați sursa de date.
+1. **Salvați** sursa de date.
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinare** pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
+După ingerarea datelor, începem acum procesul de unificare a datelor pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
 
 ### <a name="map"></a>Hartă
 
@@ -156,7 +156,7 @@ Odată stabilite profilurile de clienți unificate, putem rula acum predicția d
 
    - **Numărul de produse**: Setați această valoare la **5**. Această setare definește câte produse doriți să le recomandați clienților dvs.
 
-   - **Sugerați produse achiziționate recent de clienți?**: Selectați **Da** pentru a indica faptul că doriți să includeți produse în recomandarea pe care clienții dvs. au achiziționat-o anterior.
+   - **Se așteaptă repetarea achizițiilor**: Selectați **Da** pentru a indica faptul că doriți să includeți produse în recomandarea pe care clienții dvs. au achiziționat-o anterior.
 
    - **Fereastră de privire retrospectivă:** Selectați cel puțin **365 de zile**. Această setare definește cât de departe va privi modelul înapoi spre activitatea clientului pentru a o utiliza drept intrare pentru recomandările sale.
    

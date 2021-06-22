@@ -96,30 +96,40 @@
           href: audience-insights/measures.md
     - name: Predicții
       items:
-        - name: Completați date folosind predicții de valoare
-          href: audience-insights/predictions.md
-        - name: Previzionați retragerea abonamentului
-          href: audience-insights/predict-subscription-churn.md
-        - name: Ghid eșantion de predicție a retragerii abonamentelor
-          href: audience-insights/sample-guide-predict-subscription-churn.md
-        - name: Preziceți retragerea tranzacțională
-          href: audience-insights/predict-transactional-churn.md
-        - name: Ghid eșantion de predicție a retragerii tranzacționale
-          href: audience-insights/sample-guide-predict-transactional-churn.md
-        - name: Preziceți valoarea ciclului de viață a clientului (CLV)
-          href: audience-insights/predict-customer-lifetime-value.md
-        - name: Preziceți recomandări de produse
-          href: audience-insights/predict-product-recommendation.md
-        - name: Exemplu de ghid pentru recomandarea produsului predicție
-          href: audience-insights/sample-guide-predict-product-recommendation.md
+        - name: Preziceți date cu ajutorul AI
+          items:
+            - name: Predicție prezentare generală a modelelor
+              href: audience-insights/predictions-overview.md
+            - name: Preziceți valoarea ciclului de viață a clientului (CLV)
+              href: audience-insights/predict-customer-lifetime-value.md
+            - name: Preziceți recomandări de produse
+              href: audience-insights/predict-product-recommendation.md
+            - name: Previzionați retragerea abonamentului
+              href: audience-insights/predict-subscription-churn.md
+            - name: Preziceți retragerea tranzacțională
+              href: audience-insights/predict-transactional-churn.md
+            - name: Utilizați modele personalizate de la Azure Machine Learning
+              href: audience-insights/custom-models.md
+            - name: Completați datele parțial lipsă
+              href: audience-insights/predictions.md
+        - name: Ghiduri cu exemple
+          items:
+            - name: Exemplu de ghid pentru predicție CLV
+              href: audience-insights/sample-guide-predict-clv.md
+            - name: Ghid eșantion de predicție a retragerii abonamentelor
+              href: audience-insights/sample-guide-predict-subscription-churn.md
+            - name: Ghid eșantion de predicție a retragerii tranzacționale
+              href: audience-insights/sample-guide-predict-transactional-churn.md
+            - name: Exemplu de ghid pentru recomandarea produsului predicție
+              href: audience-insights/sample-guide-predict-product-recommendation.md
+            - name: Experimente cu Azure Machine learning
+              href: audience-insights/azure-machine-learning-experiments.md
+            - name: Experimente cu Azure Machine Learning Studio
+              href: audience-insights/machine-learning-studio-experiments.md
+        - name: Gestionați predicțiile
+          href: audience-insights/manage-predictions.md
         - name: Crearea segmentelor pe baza predicțiilor
           href: audience-insights/prediction-based-segment.md
-        - name: Implementați modele particularizate de învățare programată
-          href: audience-insights/custom-models.md
-        - name: Experimente cu Azure Machine learning
-          href: audience-insights/azure-machine-learning-experiments.md
-        - name: Experimente cu Azure Machine Learning Studio
-          href: audience-insights/machine-learning-studio-experiments.md
     - name: Opțiuni export
       items:
         - name: Exporturi
@@ -154,12 +164,18 @@
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
+            - name: Anunțuri LinkedIn
+              href: audience-insights/export-linkedin-ads.md
             - name: LiveRamp
               href: audience-insights/export-liveramp.md
             - name: Mailchimp
               href: audience-insights/export-mailchimp.md
             - name: Marketo
               href: audience-insights/export-marketo.md
+            - name: Microsoft Advertising
+              href: audience-insights/export-microsoft-advertising.md
+            - name: Omnisend
+              href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
             - name: SendGrid
@@ -200,6 +216,8 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Analizați schemele de entități din Common Data Model
           href: audience-insights/entity-schemas.md
+        - name: Date Customer Insights în Dataverse
+          href: audience-insights/customer-insights-dataverse.md
         - name: Lucrați cu API-uri
           href: audience-insights/apis.md
         - name: Referințe API
@@ -240,6 +258,12 @@
           href: engagement-insights/custom-reports.md
         - name: Creați rapoarte de profil unificate
           href: engagement-insights/profile-reports.md
+        - name: Vizualizați și creați dimensiuni
+          href: engagement-insights/dimensions.md
+        - name: Vizualizați și creați măsurători
+          href: engagement-insights/metrics.md
+        - name: Vizualizați și creați segmente
+          href: engagement-insights/segments.md
     - name: Analiza călătoriei
       items:
         - name: Creați și gestionați rapoarte de pâlnie

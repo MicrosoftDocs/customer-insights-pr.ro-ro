@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: 0c728fad4ed00d1bf085fed60057211861b3a195
-ms.sourcegitcommit: f0855bd7762b1f0a1d3dd5259e23c95e1b0a6a93
+ms.openlocfilehash: 342aeb33f652d5d60cd25e13969766954bf56370
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "5866422"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304941"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
@@ -53,19 +53,19 @@ Sursele dvs. de date pot include entități cu date tranzacționale și de activ
 
 1. În pasul **Unificarea activităților**, alegeți evenimentul de activitate și ora de începere a activității dvs. 
    - **Câmpuri obligatorii**
-      1. **Activitatea evenimentului**: Câmp care este evenimentul pentru această activitate
-      2. **Marcă de timp**: Câmp care reprezintă ora de începere a activității dvs.
+      - **Activitatea evenimentului**: Câmp care este evenimentul pentru această activitate.
+      - **Marcă de timp**: Câmp care reprezintă ora de începere a activității dvs.
 
    - **Câmpuri opționale**
-      1. **Detalii suplimentare**: Câmp cu informații relevante pentru această activitate.
-      2. **Pictogramă**: Pictogramă care reprezintă cel mai bine acest tip de activitate.
-      3. **Adresa web**: Câmp care conține o adresă URL cu informații despre această activitate. De exemplu, sistemul tranzacțional care furnizează această activitate. Această adresă URL poate fi orice câmp din sursa de date sau poate fi construită ca un câmp nou folosind o transformare Power Query. Datele URL vor fi stocate în entitatea *Activitate unificată*, care poate fi consumată descendent folosind [API-uri](apis.md).
+      - **Detalii suplimentare**: Câmp cu informații relevante pentru această activitate.
+      - **Pictogramă**: Pictogramă care reprezintă cel mai bine acest tip de activitate.
+      - **Adresa web**: Câmp care conține o adresă URL cu informații despre această activitate. De exemplu, sistemul tranzacțional care furnizează această activitate. Această adresă URL poate fi orice câmp din sursa de date sau poate fi construită ca un câmp nou folosind o transformare Power Query. Datele URL vor fi stocate în entitatea *Activitate unificată*, care poate fi consumată descendent folosind [API-uri](apis.md).
    
    :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specificați datele despre activitatea clienților într-o entitate de activitate unificată.":::
 
 1. Selectați **Următorul** pentru a trece la următorul pas. Puteți selecta **Finalizați și examinați** pentru a salva activitatea acum cu tipul de activitate setat la **Altele**. 
 
-1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, tipurile de activități *Abonament* & *SalesOrderLine* pot fi mapate semantic după acceptarea mapării câmpurilor. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
+1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, *Abonament* și tipurile de activități *SalesOrderLine* pot fi mapate semantic după acceptarea mapării câmpurilor. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
 
 1. Selectați **Următorul** pentru a trece la următorul pas. 
 
@@ -89,7 +89,7 @@ Următoarele acțiuni sunt disponibile când selectați o activitate.
 
 - **Editați**: Deschide configurarea activității la pasul de revizuire. Puteți modifica oricare sau toate configurațiile curente din acest pas. După modificarea configurației, selectați **Salvați activitatea** și apoi selectați **Rulați** pentru a procesa modificările.
 
-- **Redenumiți**: Deschide o casetă de dialog în care să introduceți un nume diferit pentru activitatea selectată. Selectați **Salvare** pentru a vă aplica modificările.
+- **Redenumire**: Deschide un dialog în care puteți introduce un nume diferit pentru activitatea selectată. Selectați **Salvare** pentru a vă aplica modificările.
 
 - **Ștergeți**: Deschide o casetă de dialog pentru a confirma ștergerea activității selectate. De asemenea, puteți șterge mai multe activități simultan selectând activitățile și apoi selectând pictograma de ștergere. Selectați **Ștergere**, apoi confirmați ștergerea.
 

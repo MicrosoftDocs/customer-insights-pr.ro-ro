@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ccf4f661ecffb281556a4545b1f26ee809c697cd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 0496d10c994cd077a778a6e745e3774e316765ae
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5895928"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305217"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Îmbogățirea profilurilor companiei cu Leadspace (previzualizare)
 
@@ -36,7 +36,7 @@ Pentru a configura Leadspace, trebuie îndeplinite următoarele cerințe prelimi
 
    :::image type="content" source="media/leadspace-tile.png" alt-text="Captură de ecran a dalei Leadspace.":::
 
-1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând **Leadspace**. 
+1. Selectați o [conexiune](connections.md) din lista derulantă. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând **Leadspace**. 
 
 1. Selectați **Conectați-vă la Leadspace** pentru a confirma conexiunea.
 
@@ -57,13 +57,13 @@ Pentru a configura Leadspace, trebuie îndeplinite următoarele cerințe prelimi
 
 Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Leadspace.
 
-1. Selectați **Începeți lucrul** 
+1. Selectați **Începeți lucrul**. 
 
 1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
 
 1. Furnizați un token Leadspace valid.
 
-1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **De acord**
+1. Examinați și furnizați consimțământul pentru **Confidențialitatea și respectarea datelor** prin selectarea **Sunt de acord**.
 
 1. Selectați **Verificare** pentru a valida configurația.
 
@@ -81,12 +81,12 @@ Pentru informații suplimentare, consultați [API-uri Leadspace](https://support
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md), [măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 
 Când activați Dynamics 365 Customer Insights pentru a transmite date către Leadspace, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Leadspace îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
+Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

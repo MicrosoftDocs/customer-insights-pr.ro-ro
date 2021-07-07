@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: b935be08199f20e83bceb3317985b0e1dc120016
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: dccb8dcca8f65f64973e46fed9d83034d58282e2
+ms.sourcegitcommit: bcc47d15d4f0eacf008e4dbc09baac7f062b3ca8
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095742"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6315893"
 ---
 # <a name="manage-predictions"></a>Gestionați predicțiile
 
@@ -35,9 +35,6 @@ Acest articol discută câteva sarcini pe care le partajează majoritatea scenar
 Raportul de utilizare a datelor de intrare oferă o imagine consolidată a erorilor și avertismentelor pe care le pot genera predicțiile dvs. predefinite. De asemenea, oferă recomandări despre cum să îmbunătățim performanța modelului.
 
 Raportul este disponibil după ce un model a finalizat procesul de instruire. Este creat pentru fiecare model separat, indiferent dacă s-a finalizat cu succes sau nu.
-
-> [!NOTE]
-> În prezent, această caracteristică funcționează numai pentru modelul Transaction Churn.
 
 ### <a name="view-the-input-data-usability-report"></a>Vizualizați raportul de utilizare a datelor de intrare
 

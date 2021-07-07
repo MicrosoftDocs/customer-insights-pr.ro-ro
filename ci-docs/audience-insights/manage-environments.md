@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 06310ea6fc72f26e21e185a6abcb5d19d4b201f6
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 904ce68336cba4b7a4d5a37692b72d091400559d
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259114"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304895"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -54,29 +54,32 @@ Pentru crearea unui mediu:
 1. Selectați **Nou**.
 
    > [!div class="mx-imgBorder"]
-   > ![Setări ale mediului](media/environment-settings-dialog.png)
+   > ![Setări de mediu.](media/environment-settings-dialog.png)
 
-1. În caseta de dialog **Creare mediu nou**, selectați **Mediu nou**.
+1. În dialogul **Creați un mediu**, selectați **Mediu nou**.
 
    Dacă doriți să [copiați date din mediul actual](#considerations-for-copy-configuration-preview), selectați **Copiere din mediul existent**. Veți vedea o listă cu toate mediile disponibile în organizația dvs. de unde puteți copia datele.
 
 1. Furnizați următoarele detalii:
    - **Nume**: Numele pentru acest mediu. Acest câmp este deja completat dacă ați copiat dintr-un mediu existent, dar îl puteți modifica.
-   - **Regiune**: Regiunea în care este implementat și găzduit serviciul.
    - **Tip**: Selectați dacă doriți să creați un mediu de producție sau sandbox.
-
+   - **Regiune**: Regiunea în care este implementat și găzduit serviciul.
+   
 1. Opțional, puteți selecta **Setări complexe**:
 
-   - **Se salvează toate datele în**: Specifică unde doriți să stocați datele de ieșire generate de Customer Insights. Veți avea două opțiuni: **spațiu de stocare Customer Insights** (un Azure Data Lake gestionat de echipa Customer Insights) și **Azure Data Lake Storage Gen2** (Azure Data Lake Storage ale dvs.). Opțiunea de stocare a Customer Insights este selectată în mod implicit.
+   - **Se salvează toate datele în**: Specifică unde doriți să stocați datele de ieșire generate de Customer Insights. Veți avea două opțiuni: **Depozitare Customer Insights** (un Azure Data Lake administrat de echipa Customer Insights) și **Azure Data Lake Storage** (Azure Data Lake Storage al dvs). Opțiunea de stocare a Customer Insights este selectată în mod implicit.
 
-   > [!NOTE]
-   > Prin salvarea datelor în Azure Data Lake Storage, sunteți de acord că datele vor fi transferate și stocate în locația geografică corespunzătoare pentru respectivul cont de stocare Azure, care poate diferi de locul în care sunt stocate datele în Dynamics 365 Customer Insights. [Aflați mai multe de la Centrul de autorizare Microsoft.](https://www.microsoft.com/trust-center)
-   >
-   > În prezent, entitățile ingerate sunt întotdeauna stocate în data lake gestionat de Customer Insights.
-   > Acceptăm numai conturi Azure Data Lake Storage Gen2 din aceeași regiune Azure pe care ați selectat-o la crearea mediului.
-   > Acceptăm numai conturile de stocare activate pentru Nume Spațiu Ierarhic Azure Data Lake Gen2 (HNS).
+     > [!NOTE]
+     > Prin salvarea datelor în Azure Data Lake Storage, sunteți de acord că datele vor fi transferate și stocate în locația geografică corespunzătoare pentru respectivul cont de stocare Azure, care poate diferi de locul în care sunt stocate datele în Dynamics 365 Customer Insights. [Aflați mai multe de la Centrul de autorizare Microsoft.](https://www.microsoft.com/trust-center)
+     >
+     > În prezent, entitățile ingerate sunt mereu stocate în Customer Insights Managed Data Lake. 
+     > 
+     > Acceptăm numai conturi Azure Data Lake Storage din aceeași regiune Azure pe care ați selectat-o la crearea mediului. 
+     > 
+     > Noi acceptăm numai conturi Azure Data Lake Storage care au activat spațiul de nume ierarhic.
 
-   - Pentru opțiunea Azure Data Lake Storage Gen2, puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi `customerinsights`.
+
+   - Pentru opțiunea Azure Data Lake Storage, puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** nu poate fi schimbat și va fi `customerinsights`.
    
    - Dacă doriți să utilizați [predicții](predictions.md), configurați partajarea datelor cu Microsoft Dataverse, sau activați ingestia de date din sursele de date local, furnizați URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data Lake gestionat.
 
@@ -85,7 +88,7 @@ Pentru crearea unui mediu:
      > - [Predicția valorilor lipsă într-o entitate](predictions.md) momentan nu este acceptată atunci când activați partajarea datelor cu Microsoft Dataverse Data Lake gestionat.
 
      > [!div class="mx-imgBorder"]
-     > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse](media/datasharing-with-DataverseMDL.png)
+     > ![Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.](media/datasharing-with-DataverseMDL.png)
 
    Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate în dosare pe baza numelui procesului.
 
@@ -113,14 +116,14 @@ Următoarele setări *nu* sunt copiate:
 
 - Profiluri de client.
 - Acreditările sursă de date. Va trebui să furnizați acreditările pentru fiecare sursă de date și să reîmprospătați sursele de date manual.
-- Surse de date din folderul Common Data Model și lake-ul gestionat Common Data Service. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
+- Surse de date din folderul Model de date comune și Dataverse Data Lake gestionat. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
 
 Când copiați un mediu, veți vedea un mesaj de confirmare a faptului că noul mediu a fost creat. Selectați **Accesați sursele de date** pentru a vedea lista surselor de date.
 
 Toate sursele de date vor arăta o stare **Acreditări necesare**. Editați sursele de date și introduceți acreditările pentru a le reîmprospăta.
 
 > [!div class="mx-imgBorder"]
-> ![Surse de date copiate](media/data-sources-copied.png)
+> ![Surse de date copiate.](media/data-sources-copied.png)
 
 După reîmprospătarea surselor de date, accesați **Date** > **Unificare**. Aici veți găsi setările din mediul sursă. Editați-le după cum este necesar sau selectați **Rulează** pentru a începe procesul de unificare a datelor și a crea entitatea clientului unificat.
 
@@ -136,7 +139,7 @@ Puteți edita câteva dintre detaliile mediilor existente.
 
 3. În caseta **Editați mediul**, puteți actualiza **Numele afișat** al mediului, dar nu puteți schimba **Regiune** sau **Tip**.
 
-4. Dacă un mediu este configurat pentru a stoca date în Azure Data Lake Storage Gen2, puteți actualiza **Cheia contului**. Cu toate acestea, nu puteți schimba **Numele de cont** sau numele **Containerului**.
+4. Dacă un mediu este configurat pentru a stoca date în Azure Data Lake Storage, puteți actualiza fișierul **Cheia contului**. Cu toate acestea, nu puteți schimba **Numele de cont** sau numele **Containerului**.
 
 5. Opțional, puteți actualiza de la o conexiune bazată pe cheie de cont la o conexiune bazată pe resurse sau bazată pe abonament. După actualizare, nu puteți reveni la cheia de cont după actualizare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Nu puteți schimba informațiile legate de **Recipient** la actualizarea conexiunii.
 
@@ -158,19 +161,19 @@ Ca administrator, puteți reseta un mediu la o stare goală dacă doriți să ș
 
 1.  Selectați selectorul **Mediu** în antetul aplicației. 
 
-2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie **...**. 
+2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie (**...**). 
 
 3. Alegeți opțiunea **Resetați**. 
 
 4.  Pentru a confirma ștergerea, introduceți numele mediului și selectați **Resetare**.
 
-## <a name="delete-an-existing-environment-available-only-for-admins"></a>Ștergeți un mediu existent (disponibil numai pentru administratori)
+## <a name="delete-an-existing-environment"></a>Ștergerea unui mediu existent
 
 În calitate de administrator, puteți șterge un mediu pe care îl administrați.
 
 1.  Selectați selectorul **Mediu** în antetul aplicației.
 
-2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie **...**. 
+2.  Selectați mediul pe care doriți să îl resetați și selectați punctele de suspensie (**...**). 
 
 3. Alegeți opțiunea **Ștergere**. 
 

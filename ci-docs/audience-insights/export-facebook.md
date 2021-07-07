@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 37d25aa038ea32b98f2d1850d7b42b701292438d
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: e20c7b7fd3989d7621cb7765f38b85c8ab4adfcb
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976057"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305125"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportați lista de segmente în Facebook Ads Manager (previzualizare)
 
@@ -22,12 +22,12 @@ Exportați segmente de profiluri de client unificate către Managerul de reclame
 
 ## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
 
-- Trebuie să aveți un [**cont de publicitate Facebook**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) care să includă un [**cont Facebook Business**](https://business.facebook.com/).
-- Trebuie să fiți administrator pe [**Facebook Contul publicitar**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- Trebuie să aveți un [**Cont Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) care include un [**Cont Facebook Business**](https://business.facebook.com/).
+- Trebuie să fiți administrator pe [**Contul Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Profil de client de până la 10 milioane pe export către Facebook Ads Manager.
+- Până la 10 milioane de profiluri de clienți pe export către Facebook Ads Manager.
 - Exportul către Facebook Ads Manager este limitat la segmente.
 - Creați sau actualizați segmente de public personalizate în Facebook de tip doar *lista de clienți*.
 - Exportul de segmente cu un total de 10 milion de profiluri poate dura până la 90 de minute până la finalizare.
@@ -42,19 +42,19 @@ Exportați segmente de profiluri de client unificate către Managerul de reclame
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi **Administratori**. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Autentificare cu Facebook Ads: 
 
-   1. Selectați **Continuă cu Facebook** pentru a vă conecta la Contul dvs. publicitar Facebook.
+   1. Selectați **Continuați cu Facebook** pentru a vă conecta la contul Facebook Ads.
 
    1. Acceptați permisiunea **ads_management** după autentificare cu Facebook.
 
    1. Selectați **Contul publicitar Facebook** cu care doriți să lucrați.
 
-   1. Selectați un **Public personalizat existent** din lista derulantă sau creați un **Public personalizat nou**. Pentru mai multe informații, consultați [**Publicuri în Managerul de reclame Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
+   1. Selectați un **Public particularizat existent** din lista derulantă sau creați un **Public nou particularizat**. Pentru mai multe informații, consultați [**Publicuri în Managerul de reclame Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
       > [!NOTE]
-      > Puteți crea sau actualiza numai segmente de public personalizate pe Facebook de tipul *lista de clienți* cu acest export. În unele cazuri, vedeți segmente de public personalizate de diferite tipuri în lista verticală. Selectarea unui alt tip decât *lista de clienți* va duce la un eșec al exportului. 
+      > Puteți crea sau actualiza numai segmente de public personalizate pe Facebook de tipul *lista de clienți* cu acest export. În unele cazuri, vedeți segmente de public particularizate de diferite tipuri în lista derulantă. Selectarea unui alt tip decât *lista de clienți* va duce la un eșec al exportului. 
 
 1. Examinați **Confidențialitatea și conformitatea datelor** și selectați **De acord**.
 
@@ -68,16 +68,17 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Pentru a crea un nou export, selectați **Adăugare destinație**. 
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea **Facebook Ads Manager**. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea **Facebook Ads Manager**. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
 
 1. În **Alegeți câmpul dvs. de identificare cheie**, selectați **E-mail**, **Nume și adresă** sau **Telefon** pentru a trimite la Managerul de reclame Facebook. 
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**.
 
 1. Mapați atributele corespunzătoare de la entitatea clientului dvs. unificat pentru identificatorul de cheie selectat.
-   > [TIP] Cele mai bune șanse pentru o corespondență apar dacă selectați **E-mail** ca identificator cheie. Adăugarea identificatorilor suplimentari poate îmbunătăți corespondența.
+   > [!TIP]
+   > Cele mai bune șanse pentru o corespondență apar dacă selectați **E-mail** ca identificator cheie. Adăugarea identificatorilor suplimentari poate îmbunătăți corespondența.
 
-1. Selectați **Adăugați un atribut** pentru a mapa mai multe atribute de trimis către Facebook Ads Manager. Atributele din Manager de reclame Facebook mapează la următoarele nume ușor de utilizat: **FN** = **Prenume**, **LN** = **Nume de familie**, **FI** = **Prima inițială**, **TELEFON** = **Telefon**, **GEN** = **Gen**, **DOB** = **Data nașterii**, **ST** = **Statul**, **CT** = **Oraș**, **ZIP** = **Cod poștal / Zip code**, **ȚARA** = **Tara / Regiunea**
+1. Selectați **Adăugați un atribut** pentru a mapa mai multe atribute de trimis către Facebook Ads Manager. Atributele din Facebook Ads Manager mapează la următoarele nume ușor de utilizat: **FN** = **Prenume**, **LN** = **Nume de familie**, **FI** = **Prima inițială**, **TELEFON** = **Telefon**, **GEN** = **Gen**, **DOB** = **Data nașterii**, **ST** = **Statul**, **CT** = **Oraș**, **ZIP** = **Cod poștal**, **ȚARA** = **Țară/Regiune**
 
 1. Selectați segmentele pe care doriți să le exportați.
 
@@ -85,7 +86,9 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). 
+
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

@@ -72,7 +72,7 @@
           href: audience-insights/enrichment-here.md
         - name: Îmbogățire cu Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Îmbogățiți-vă cu Experian
+        - name: Îmbogățiți cu Experian
           href: audience-insights/enrichment-experian.md
         - name: Îmbogățiți cu importul particularizat SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -136,6 +136,8 @@
           items:
             - name: Prezentare generală a exporturilor
               href: audience-insights/export-destinations.md
+            - name: Campanie activă
+              href: audience-insights/export-active-campaign.md
             - name: AdRoll
               href: audience-insights/export-adroll.md
             - name: Autopilot
@@ -178,8 +180,12 @@
               href: audience-insights/export-omnisend.md
             - name: RollWorks
               href: audience-insights/export-rollworks.md
+            - name: Salesforce Marketing Cloud
+              href: audience-insights/export-salesforce.md
             - name: SendGrid
               href: audience-insights/export-sendgrid.md
+            - name: SendInBlue
+              href: audience-insights/export-sendinblue.md
             - name: Snapchat
               href: audience-insights/export-snapchat.md
             - name: SFTP
@@ -240,15 +246,15 @@
           href: engagement-insights/get-started.md
         - name: Creați un spațiu de lucru
           href: engagement-insights/create-workspace.md
-        - name: Creați instrumente pentru site-ul dvs. web
-          href: engagement-insights/instrument-website.md
+        - name: Capturați evenimente din site-uri web și aplicații mobile
+          href: engagement-insights/developer-resources.md
         - name: Concepte și terminologie
           href: engagement-insights/glossary.md
     - name: Evenimente
       items:
         - name: Creați și modificați evenimente
           href: engagement-insights/refined-events.md
-        - name: Exportați evenimente
+        - name: Export evenimente
           href: engagement-insights/export-events.md
     - name: Rapoarte
       items:
@@ -272,10 +278,18 @@
       items:
         - name: Prezentare generală Resurse pentru dezvoltatori
           href: engagement-insights/developer-resources.md
-        - name: Tutorial Web SDK
+        - name: Tutorial SDK web
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Eșantion SDK web
           href: engagement-insights/websdk-sample.md
+        - name: Tutorial Android SDK
+          href: engagement-insights/get-started-android.md
+        - name: Eșantion Android SDK
+          href: engagement-insights/androidsdk-sample.md
+        - name: Tutorial SDK iOS
+          href: engagement-insights/get-started-ios.md
+        - name: Eșantion SDK iOS
+          href: engagement-insights/iossdk-sample.md
     - name: Administrare
       items:
         - name: Roluri și permisiuni

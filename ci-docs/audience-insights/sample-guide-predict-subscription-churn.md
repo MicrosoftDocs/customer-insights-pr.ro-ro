@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 324e5c19778230dd978b2f4e9156a2dd82b3d2bd
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: fa460fa5c79bc8a356ec5e90050ec85e05c55be8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595533"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306318"
 ---
 # <a name="subscription-churn-prediction-preview-sample-guide"></a>Ghid eșantion de predicție a retragerii abonamentelor (previzualizare)
 
@@ -22,7 +22,7 @@ Vă vom explica un exemplu complet de predicție a retragerii de abonamente folo
 
 ## <a name="scenario"></a>Scenariu
 
-Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vinde prin intermediul site-ului web Contoso Coffee. Recent, au început o afacere cu abonamente pentru ca clienții lor să poată obține cafea în mod regulat. Obiectivul lor este să înțeleagă care clienți abonați ar putea anula abonamentul în următoarele câteva luni. Știind care dintre clienții lor este **susceptibil să se retragă**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe păstrarea lor.
+Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vând prin intermediul site-ului lor de cafea Contoso. Recent, au început o afacere cu abonamente pentru ca clienții lor să poată obține cafea în mod regulat. Obiectivul lor este să înțeleagă care clienți abonați ar putea anula abonamentul în următoarele câteva luni. Știind care dintre clienții lor este **susceptibil să se retragă**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe păstrarea lor.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -128,9 +128,9 @@ După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinar
 
 1. Accesați fila **Potrivire** și selectați **Setare ordine**.
 
-1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și includeți toate înregistrările.
+1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
 
-1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și includeți toate înregistrările.
+1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
 
    :::image type="content" source="media/unify-match-order.PNG" alt-text="Potriviți unificarea de comerț electronic și loialitate.":::
 
@@ -138,16 +138,16 @@ După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinar
 
 1. Adăugați prima condiție folosind FullName.
 
-   * Pentru eCommerceContacts selectați **FullName** din meniul derulant.
-   * Pentru loyCustomers selectați **FullName** din meniul derulant.
+   * Pentru eCommerceContacts selectați **FullName** în meniul derulant.
+   * Pentru loyCustomers selectați **FullName** în lista derulantă.
    * Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
    * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 
 1. Introduceți numele **FullName, Email** pentru noua regulă.
 
    * Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   * Pentru entitatea eCommerceContacts, alegeți **E-mail** din meniul derulant.
-   * Pentru entitatea loyCustomers, alegeți **E-mail** din meniul derulant. 
+   * Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
+   * Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă. 
    * Lăsați Normalizarea necompletată. 
    * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 

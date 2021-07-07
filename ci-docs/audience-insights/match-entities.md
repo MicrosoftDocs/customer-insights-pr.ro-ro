@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2155042d86cda0cffee1588760a06d6c7eb7077e
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085637"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306043"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -209,7 +209,7 @@ Examinați regulile unei perechi de potriviri pentru a vedea procentul de înreg
 
 Puteți reconfigura și regla fin majoritatea parametrilor de potrivire.
 
-:::image type="content" source="media/match-rules-management.png" alt-text="Captură de ecran a meniului derulant cu opțiuni de regulă de potrivire.":::
+:::image type="content" source="media/match-rules-management.png" alt-text="Captură de ecran a meniului derulant cu opțiuni pentru regulile de potrivire.":::
 
 - **Modificați ordinea regulilor** dacă ați definit mai multe reguli. Puteți reordona regulile de potrivire selectând opțiunile **Mutați în sus** și **Mutați în jos** sau prin glisare și fixare.
 
@@ -247,7 +247,7 @@ Puteți specifica condițiile la care anumite înregistrări trebuie să se potr
 
 1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi. Odată ingerate, le puteți utiliza pentru a specifica configurația Potrivire.
 
-1. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul vertical.
+1. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul derulant.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 

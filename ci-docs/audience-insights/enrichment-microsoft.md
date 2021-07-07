@@ -9,16 +9,16 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e92360bb886739cfe477ce1d2eb62219228a0292
-ms.sourcegitcommit: d4b4053f6ee8f60f1a214982c4726c9de84615ef
+ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6245722"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305171"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
 
-Folosiți datele cu caracter proprietar ale Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă și de interes. Aceste afinități sunt determinate pe baza datelor de la persoane cu o demografie similară pentru clienții dvs. Aceste informații vă ajută să vă înțelegeți și să vă segmentați mai bine clienții în funcție de afinitățile lor către anumite mărci și interese.
+Folosiți datele cu caracter proprietar ale Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă și de interes. Aceste afinități se bazează pe date de la persoane dntr-o categorie demografică similară cu cea a clienților dvs. Aceste informații vă ajută să vă înțelegeți și să vă segmentați mai bine clienții în funcție de afinitățile lor către anumite mărci și interese.
 
 În detalii despre audiență, accesați **Date** > **Îmbogățire** pentru a [configura și vizualiza îmbogățiri](enrichment-hub.md).
 
@@ -27,7 +27,7 @@ Pentru a configura îmbogățirea afinităților de marcă, accesați fila **Des
 Pentru a configura îmbogățirea afinităților de interes, accesați fila **Descoperire** și selectați **Îmbogățiți-mi datele** pe dala **Interese**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dale Branduri și interese](media/BrandsInterest-tile-Hub.png "Dale Branduri și interese")
+   > ![Dale de branduri și dobânzi](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
 
 ## <a name="how-we-determine-affinities"></a>Cum determinăm afinitățile
 
@@ -53,7 +53,7 @@ Pe fiecare profil de client îmbogățit, oferim două valori conexe - nivelul d
 
 În prezent, acceptăm următoarele opțiuni de țară/regiune: Australia, Canada (engleză), Franța, Germania, Regatul Unit sau Statele Unite (engleză).
 
-Pentru a selecta o țară, deschideți **Îmbogățirea mărcilor** sau **Îmbogățirea intereselor** și selectați **Schimbare** lângă **Țară/Regiune**. În panoul **Setări de țară/regiune**, alegeți o opțiune și selectați **Aplicare**.
+Pentru a selecta o țară sau o regiune, deschideți **Îmbogățirea mărcilor** sau **Îmbogățirea dobânzii** și selectați **Schimbare** chiar lângă **Țară / Regiune**. În panoul **Setări de țară/regiune**, alegeți o opțiune și selectați **Aplicare**.
 
 ### <a name="implications-related-to-country-selection"></a>Implicații legate de selecția țării
 
@@ -61,9 +61,9 @@ Pentru a selecta o țară, deschideți **Îmbogățirea mărcilor** sau **Îmbog
 
 - Când [alegeți o industrie](#define-your-brands-or-interests), veți obține cele mai relevante mărci sau interese în funcție de țara sau regiunea selectată.
 
-- Când [îmbogățim profiluri](#refresh-enrichment), vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și interesele selectate. Inclusiv profiluri care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date disponibile pentru mărcile și interesele selectate din SUA.
+- Când [îmbogățim profilurile](#refresh-enrichment), vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și dobânzile selectate, inclusiv profilurile care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date disponibile pentru mărcile și interesele selectate din SUA.
 
-## <a name="configure-enrichment"></a>Configurați îmbogățirea
+## <a name="configure-enrichment"></a>Configurarea îmbogățirii
 
 O experiență ghidată vă ajută prin configurarea îmbogățirilor. 
 
@@ -71,7 +71,7 @@ O experiență ghidată vă ajută prin configurarea îmbogățirilor.
 
 Alegeți până la cinci mărci sau interese folosind una sau ambele opțiuni:
 
-- **Industrie**: Selectați-vă industria din lista verticală și apoi alegeți dintre cele mai importante mărci sau interese pentru industria respectivă.
+- **Industrie**: Selectați-vă industria din lista derulantă, apoi alegeți dintre mărcile sau dobânzile de top pentru industria respectivă.
 - **Alegeți-vă una proprie**: Introduceți o marcă sau un interes relevant pentru organizația dvs. și apoi alegeți dintre sugestiile potrivite. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
 
 ### <a name="review-enrichment-preferences"></a>Recenzie preferințe de îmbogățire
@@ -88,19 +88,19 @@ Selectați **Entitate îmbogățită** și alegeți setul de date pe care doriț
 
 Hartați câmpurile de la entitatea dvs. client unificată pentru a defini segmentul demografic pe care doriți să îl utilizeze sistemul pentru îmbogățirea datelor despre clienți. Mapați Țară/Regiune și cel puțin Data nașterii sau atributele de gen. În plus, trebuie să mapați cel puțin unul dintre oraș (și stat/provincie) sau cod poștal. Selectați **Editați** pentru a defini maparea câmpurilor și selectați **Aplicare** când ați terminat. Selectați **Salvați** pentru a finaliza maparea câmpului.
 
-Următoarele formate și valori sunt acceptate, valorile nu sunt sensibile la litere mari și mici:
+Următoarele formate și valori sunt acceptate (valorile nu sunt sensibile la litere mari și mici):
 
-- **Data de naștere**: Recomandăm ca data nașterii să fie transformată în tip DateTime în timpul ingestiei de date. Alternativ, poate fi un șir în format [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format „aaaa-LL-zz” sau „aaaa-LL-zzTOO:mm:ssZ”.
-- **Sex**: Bărbat, Femeie, Necunoscut
-- **Cod poștal**: Coduri poștale de cinci cifre pentru SUA, cod poștal standard în restul locațiilor
-- **Oraș**: Numele orașului în engleză
-- **Stat/Provincie**: Abreviere cu două litere pentru SUA și Canada. Abreviere cu două sau trei litere pentru Australia. Nu se aplică Franței, Germaniei sau Regatului Unit.
+- **Data de naștere**: Recomandăm ca data nașterii să fie transformată în tip DateTime în timpul ingestiei de date. Alternativ, poate fi un șir în formatul [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „aaaa-LL-zz” sau „aaaa-LL-zzTHTH: mm: ss”.
+- **Sex**: Bărbat, Femeie, Necunoscut.
+- **Cod poștal**: Coduri poștale din cinci cifre pentru Statele Unite, cod poștal standard peste tot.
+- **Oraș**: Numele orașului în engleză.
+- **Stat/Provincie**: Abreviere cu două litere pentru SUA și Canada. Abreviere de două sau trei litere pentru Australia. Nu se aplică Franței, Germaniei sau Regatului Unit.
 - **Țară/regiune**:
 
   - SUA: Statele Unite ale Americii, Statele Unite, SUA, SUA, America
   - CA: Canada, CA
   - GB: Regatul Unit, UK, Marea Britanie, GB, Regatul Unit al Marii Britanii și Irlandei de Nord, Regatul Unit al Marii Britanii
-  - AU: Australia, AU, Commonwealth-ul Australiei
+  - AU: Australia, UA, Commonwealth of Australia
   - FR: Franța, FR, Republica Franceză
   - DE: Germania, German, Deutschland, Allemagne, DE, Republica Federală Germania, Republica Germania
 
@@ -113,10 +113,11 @@ Următoarele formate și valori sunt acceptate, valorile nu sunt sensibile la li
 ## <a name="refresh-enrichment"></a>Reîmprospătare îmbogățire
 
 Rulați îmbogățirea după configurarea mărcilor, a intereselor și a mapării câmpului pentru demografie. Pentru a începe procesul, selectați **Rulare** pe pagina de configurare a mărcii sau a intereselor. În plus, puteți lăsa sistemul să ruleze automat îmbogățirea ca parte a unei actualizări programate.
+
 În funcție de dimensiunea datelor clientului dvs., este posibil să dureze câteva minute pentru a finaliza o îmbogățire.
 
 > [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectare **Vezi detalii** pentru una dintre activitățile operațiunii, veți găsi informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității.
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
@@ -134,7 +135,7 @@ Afinitățile de marcă și interes pot fi, de asemenea, vizualizate pe carduri 
 
 ## <a name="next-steps"></a>Următorii pași
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [Segmente](segments.md), [Măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+Creați în plus față de datele îmbogățite ale clienților. Creați [Segmente](segments.md) și [Măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

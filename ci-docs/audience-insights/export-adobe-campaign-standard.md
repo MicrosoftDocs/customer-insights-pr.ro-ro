@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: b6c010d84119c2fa8b3ef99017c65f9939bf28c4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: 917ab9559416f3ee0ffd66e471e590e8da3faffc
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760296"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305401"
 ---
 # <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizați segmentele de Customer Insights în Adobe Campaign Standard (previzualizare)
 
-Ca utilizator al statisticilor publicului pentru Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă face campaniile de marketing mai eficiente, vizând publicuri relevante. Pentru a utiliza un segment din statisticile publicului în Adobe Experience Platform și aplicații precum Adobe Campaign Standard, trebuie să urmați câțiva pași descriși în acest articol.
+În calitate de utilizator al statisticilor publicului în Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă face campaniile de marketing mai eficiente, vizând segmente de public relevante. Pentru a utiliza un segment din statisticile publicului în Adobe Experience Platform și aplicații precum Adobe Campaign Standard, trebuie să urmați câțiva pași descriși în acest articol.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de proces a pașilor descriși în acest articol.":::
 
@@ -28,7 +28,7 @@ Ca utilizator al statisticilor publicului pentru Dynamics 365 Customer Insights,
 -   Licență Adobe Campaign Standard
 -   Cont Azure Blob Storage
 
-## <a name="campaign-overview"></a>Prezentare generală campanie
+## <a name="campaign-overview"></a>Prezentare generală de campanie
 
 Pentru a înțelege mai bine modul în care puteți utiliza segmente din statisticile publicului în platforma Adobe Experience, haideți să analizăm un exemplu de campanie fictivă.
 
@@ -54,7 +54,7 @@ Odată cu publicul țintă identificat, putem configura exportul din statistici 
 
 1. În statisticile publicului, accesați **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugare conexiune** și alegeți **Adobe Campaign** pentru a configura conexiunea sau a selecta **Configurat** în dala **Adobe Campaign**
+1. Selectați **Adăugare conexiune** și alegeți **Adobe Campaign** pentru a configura conexiunea sau a selecta **Configurat** în dala **Adobe Campaign**.
 
    :::image type="content" source="media/adobe-campaign-standard-tile.png" alt-text="Placă de configurare pentru Adobe Campaign Standard.":::
 
@@ -66,7 +66,7 @@ Odată cu publicul țintă identificat, putem configura exportul din statistici 
       
    :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captură de ecran a configurării contului de stocare. "::: 
 
-   - Pentru a afla mai multe despre cum puteți găsi numele contului Stocarea de bloburi Azure și cheia contului, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
+   - Pentru a afla mai multe despre cum puteți găsi numele contului de Stocare bloburi Azure și cheia contului, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
 
    - Pentru a afla cum să creați un container, consultați [Creați un container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
@@ -80,7 +80,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Pentru a crea un nou export, selectați **Adăugare export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Adobe Campaign. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Adobe Campaign. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
 
 1. Alegeți segmentul pe care doriți să îl exportați. În acest exemplu, este **ChurnProneCustomers**.
 
@@ -106,7 +106,7 @@ Acum puteți [exporta segmentul la cerere](export-destinations.md#run-exports-on
 > [!NOTE]
 > Asigurați-vă că numărul de înregistrări din segmentul exportat se încadrează în limita permisă a licenței dvs. Adobe Campaign Standard.
 
-Datele exportate sunt stocate în containerul de stocare Azure Blob pe care l-ați configurat mai sus. Următoarea cale a folderului este creată automat în container:
+Datele exportate sunt stocate în containerul de Stocare bloburi Azure pe care l-ați configurat mai sus. Următoarea cale a folderului este creată automat în container:
 
 *%ContainerName%/CustomerInsights_%instanceID%/% exportdestination-name%_%segmentname%_%timestamp%.csv*
 
@@ -118,7 +118,7 @@ Atunci când un segment din statistici privind publicul este exportat, acesta co
 
 Pentru a utiliza segmentul în Adobe Campaign Standard, trebuie să extindem schema de profil în Adobe Campaign Standard pentru a include două câmpuri suplimentare. Aflați cum să [extindeți resursa profilului](https://experienceleague.adobe.com/docs/campaign-standard/using/developing/use-cases--extending-resources/extending-the-profile-resource-with-a-new-field.html#developing) cu câmpuri noi în Adobe Campaign Standard.
 
-În exemplul nostru, aceste câmpuri sunt *Numele segmentului și data segmentului (opțional).*
+În exemplul nostru, aceste câmpuri sunt *Numele segmentului și data segmentului (opțional)*.
 
 Vom folosi aceste câmpuri pentru a identifica profilurile din Adobe Campaign Standard pe care dorim să le vizăm pentru această campanie.
 
@@ -128,7 +128,7 @@ Dacă nu există alte înregistrări în Adobe Campaign Standard, în afară de 
 
 Acum că totul este la locul său, trebuie să importăm datele pregătite despre audiență din statistici despre audiență în Adobe Campaign Standard pentru a crea profiluri. Învățați [cum să importați profiluri în Adobe Campaign Standard](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/managing-profiles/creating-profiles.html#profiles-and-audiences) folosind un flux de lucru.
 
-Fluxul de lucru de import din imaginea de mai jos a fost configurat să ruleze la fiecare 8 ore și caută segmente de informații despre publicul exportat (fișier .csv în Azure Blob Storage). Fluxul de lucru extrage conținutul fișierului .csv într-o ordine de coloane specificată. Acest flux de lucru a fost creat pentru a efectua tratarea erorilor de bază și pentru a se asigura că fiecare înregistrare are o adresă de e-mail înainte de a hidrata datele în Adobe Campaign Standard. Fluxul de lucru extrage, de asemenea, numele segmentului din numele fișierului înainte de a fi introdus în datele profilului ACS.
+Fluxul de lucru de import din imaginea de mai jos a fost configurat să ruleze la fiecare opt ore și să caute segmente de informații despre audiență exportate (fișier .csv în Stocare bloburi Azure). Fluxul de lucru extrage conținutul fișierului .csv într-o ordine de coloane specificată. Acest flux de lucru a fost creat pentru a efectua tratarea erorilor de bază și pentru a se asigura că fiecare înregistrare are o adresă de e-mail înainte de a hidrata datele în Adobe Campaign Standard. Fluxul de lucru extrage, de asemenea, numele segmentului din numele fișierului înainte de a fi introdus în datele de profil Adobe Campaign Standard.
 
 :::image type="content" source="media/ACS-import-workflow.png" alt-text="Captură de ecran a unui flux de lucru de import în interfața cu utilizatorul Adobe Campaign Standard.":::
 

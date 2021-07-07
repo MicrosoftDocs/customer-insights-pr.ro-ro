@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 87fb517e9f0b380f9721f77470dceb3bcb7e5616
-ms.sourcegitcommit: 55c00ea61c78db7b3b54894c01afb3246dff31c8
+ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "5700683"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305661"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
 
@@ -72,7 +72,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
       > [!div class="mx-imgBorder"]
       > ![Panou parametru de ieșire model](media/intelligence-screen3-outputparameters.png "Panou parametru de ieșire model")
 
-1. Selectați atributul de potrivire din lista verticală **ID client în rezultate** care identifică clienții și selectați **Salvare**.
+1. Selectați atributul de potrivire din lista verticală **ID Client în rezultate** care identifică clienții și selectați **Salvare**.
 
    > [!div class="mx-imgBorder"]
    > ![Corelare rezultate cu panoul datele clienților](media/intelligence-screen4-relatetocustomer.png "Corelare rezultate cu panoul datele clienților")
@@ -100,7 +100,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
       1. Selectați **Nume parametru ieșire depozit de date** pentru canalul de testare.
       1. Selectați **Nume parametru ieșire cale** pentru canalul de testare.
 
-1. Selectați atributul de potrivire din lista verticală **ID client în rezultate** care identifică clienții și selectați **Salvare**.
+1. Selectați atributul de potrivire din lista verticală **ID Client în rezultate** care identifică clienții și selectați **Salvare**.
    Alegeți un atribut din rezultatul inferenței cu valori similare coloanei ID client a entității client. Dacă nu aveți o astfel de coloană în setul de date, alegeți un atribut care identifică în mod unic rândul.
 
 ## <a name="run-a-workflow"></a>Executarea unui flux de lucru

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c8e4a7247ccf575a62440038180010916b09d51b
-ms.sourcegitcommit: f9e2fa3f11ecf11a5d9cccc376fdeb1ecea54880
+ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/28/2021
-ms.locfileid: "5954502"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305263"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -22,7 +22,8 @@ Utilizați date din surse precum Microsoft și de la alți parteneri pentru a v�
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagină hub de îmbogățire":::
 
-În statisticile publicului, accesați **Date** > **Îmbogățire** pentru a lucra cu opțiuni de îmbogățire.    
+În statisticile publicului, accesați **Date** > **Îmbogățire** pentru a lucra cu opțiuni de îmbogățire.  
+
 Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau edita îmbogățirile. Pentru mai multe informații, consultați [Permisiuni](permissions.md).
 
 Pe fila **Descoperire**, veți găsi următoarele îmbogățiri:
@@ -39,7 +40,7 @@ Pe fila **Îmbogățirile mele**, puteți vedea îmbogățirile pe care le-ați 
 
 ## <a name="manage-existing-enrichments"></a>Gestionarea îmbogățirilor existente
 
-Accesați **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate. Fiecare îmbogățire este reprezentată ca un rând care include informații suplimentare despre îmbogățire.
+Accesați fila **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate. Fiecare îmbogățire este reprezentată ca un rând care include informații suplimentare despre îmbogățire.
 
 Selectați o îmbogățire pentru a vedea opțiunile disponibile. De asemenea, puteți selecta punctele de suspensie (...) pe un element din listă pentru a vedea opțiunile.
 
@@ -59,6 +60,6 @@ Puteți rula sau dezactiva mai multe îmbogățiri simultan selectându-le în l
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
 
-Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. Pentru exemple, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe pagina **Îmbogățire**.
+Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. De exemplu, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe pagina **Îmbogățire**.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

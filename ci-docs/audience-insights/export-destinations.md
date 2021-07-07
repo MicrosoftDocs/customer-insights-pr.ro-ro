@@ -9,18 +9,18 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 6e7793fa99f8431d9d420529b39e0b5b5dbf6748
-ms.sourcegitcommit: 0689e7ed4265855d1f76745d68af390f8f4af8a0
+ms.openlocfilehash: 28563e3a76535cb0c92bfcda4ef5037430d00cfa
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "6253055"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305493"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
 Pagina **Exporturi** vă arată toate exporturile configurate. Exporturile partajează date specifice cu diferite aplicații. Ele pot include profiluri sau entități ale clienților, scheme și detalii de mapare. Fiecare export necesită o [conexiune, configurată de un administrator, pentru a gestiona autentificarea și accesul](connections.md).
 
-Faceți salt la **Date** > **Exporturi** pentru a vizualiza pagina exporturilor. Toate rolurile utilizatorilor au acces la vizualizarea exporturilor configurate. Utilizarea câmpului de căutare din bara de comandă pentru a găsi exporturile după nume, numele conexiunii sau tipul conexiunii.
+Faceți salt la **Date** > **Exporturi** pentru a vizualiza pagina exporturilor. Toate rolurile de utilizatori pot vizualiza exporturile configurate. Utilizați câmpul de căutare din bara de comenzi pentru a găsi exporturile după numele, numele conexiunii sau tipul conexiunii.
 
 ## <a name="set-up-a-new-export"></a>Configurați un nou export
 
@@ -65,7 +65,7 @@ După crearea destinațiilor de export, acestea sunt listate pe **Date** > **Exp
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Utilizatorii fără permisiuni de editare selectează **Vizualizare** în loc de **Editare** pentru a vizualiza detaliile exportului.
+1. Utilizatorii fără permisiuni de editare selectează **Vizualizare** în loc de **Editați** pentru a vedea detaliile exportului.
 
 1. Panoul lateral arată configurația unui export. Fără permisiuni de editare, nu puteți modifica valorile. Selectați **Închidere** pentru a reveni la pagina de exporturi.
 
@@ -73,7 +73,7 @@ După crearea destinațiilor de export, acestea sunt listate pe **Date** > **Exp
 
 Fiecare export pe care îl configurați are o planificare de reîmprospătare. În timpul unei reîmprospătări, sistemul caută date noi sau actualizate pentru a le include într-un export. În mod implicit, exporturile sunt executate ca parte a fiecărui [reîmprospătare planificată a sistemului](system.md#schedule-tab). Puteți particulariza planificarea de reîmprospătare sau îl puteți dezactiva pentru a rula manual exporturile.
 
-Planificările de export depind de starea mediului dvs. Dacă există actualizări pe [dependențele](system.md#refresh-policies) în curs când ar trebui să înceapă un export planificat, sistemul va finaliza mai întâi dependențele și apoi va rula exportul. Puteți vedea când a fost actualizat ultima oară exportul în coloana **Reîmprospătat**.
+Planificările de export depind de starea mediului dvs. Dacă există actualizări în curs pe [dependențe](system.md#refresh-policies) când ar trebui să înceapă un export planificat, sistemul va finaliza mai întâi actualizările și apoi va rula exportul. Puteți vedea când a fost actualizat ultima oară exportul în coloana **Reîmprospătat**.
 
 ### <a name="schedule-exports"></a>Planificare export
 

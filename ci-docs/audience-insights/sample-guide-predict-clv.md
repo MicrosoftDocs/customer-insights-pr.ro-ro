@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 73d294a285b4ad706bec7fe925c1daa0b839ddd6
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
+ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
+ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129960"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6306364"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului (CLV)
 
@@ -123,9 +123,9 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 1. Accesați fila **Potrivire** și selectați **Setare ordine**.
 
-1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și includeți toate înregistrările.
+1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
 
-1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și includeți toate înregistrările.
+1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
 
    ![Potriviți unificarea de comerț electronic și loialitate.](media/unify-match-order.png)
 
@@ -133,16 +133,16 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 1. Adăugați prima condiție folosind FullName.
 
-   - Pentru eCommerceContacts selectați **FullName** din meniul derulant.
-   - Pentru loyCustomers selectați **FullName** din meniul derulant.
-   - Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
+   - Pentru eCommerceContacts selectați **FullName** în meniul derulant.
+   - Pentru loyCustomers selectați **FullName** în lista derulantă.
+   - Selectați lista derulantă **Normalizare** și alegeți **Tip (Telefon, Nume, Adresă, ...)**.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 
 1. Introduceți numele **FullName, Email** pentru noua regulă.
 
    - Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   - Pentru entitatea eCommerceContacts, alegeți **E-mail** din meniul derulant.
-   - Pentru entitatea loyCustomers, alegeți **E-mail** din meniul derulant.
+   - Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
+   - Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă.
    - Lăsați Normalizarea necompletată.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 

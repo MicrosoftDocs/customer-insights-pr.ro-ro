@@ -1,5 +1,5 @@
 ---
-title: Îmbogățire cu îmbogățiri terță parte HERE Technologies
+title: Îmbogățirea HERE Technologies de terță parte
 description: Informații generale despre îmbogățirea terță parte HERE Technologies.
 ms.date: 04/09/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 5d1f037377010153045c9255d2d01f98ebf1fdfd
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896066"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305309"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Îmbogățirea profilurilor clienților cu HERE Technologies (previzualizare)
 
@@ -26,7 +26,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 
 - Aveți un abonament activ HERE Technologies. Pentru a obține un abonament, puteți să vă [înscrieți aici](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) sau [contactați HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) direct. [Aflați mai multe despre îmbogățirea locației HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- Este disponibilă o [conexiune](connections.md) HERE *sau* aveți permisiuni de [administrator](permissions.md#administrator) și cheia API HERE Technologies.
+- O [conexiune](connections.md) HERE este disponibilă *sau* aveți permisiuni de [administrator](permissions.md#administrator) și cheia API HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
@@ -37,7 +37,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
    > [!div class="mx-imgBorder"]
    > ![Dală HERE Technologies](media/HERE-tile.png "Dală HERE Technologies")
 
-1. Selectați o [conexiune](connections.md) din lista verticală. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune**. Alegeți **HERE Tehnologii** din lista verticală. 
+1. Selectați o [conexiune](connections.md) din lista derulantă. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune**. Alegeți **HERE Technologies** din lista derulantă. 
 
 1. Selectați **Conectați-vă la HERE Technologies** pentru a confirma selecția.
 
@@ -58,7 +58,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 
 1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
 
-## <a name="configure-the-connection-for-here-technologies"></a>Configurați conexiunea pentru HERE technologies 
+## <a name="configure-the-connection-for-here-technologies"></a>Configurați conexiunea pentru HERE Technologies 
 
 Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergeți la **Administrator** > **Conexiuni** și selectați **Configurare** pe dala HERE Technologies.
 
@@ -66,13 +66,13 @@ Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Ad�
 
 1. Furnizați o cheie API HERE Technologies validă.
 
-1. Analizați și acordați-vă consimțământul pentru **Confidențialitatea și conformitatea datelor** prin selectarea casetei de selectare **De acord**
+1. Examinați și furnizați consimțământul pentru **Confidențialitatea și respectarea datelor** prin selectarea **Sunt de acord**.
 
 1. Selectați **Verificare** pentru a valida configurația.
 
 1. După finalizarea verificării, selectați **Salvare**.
 
-> [!div class="mx-imgBorder"]
+   > [!div class="mx-imgBorder"]
    > ![Pagina de configurare a conexiunii HERE Technologies](media/enrichment-HERE-connection.png "Pagina de configurare a conexiunii HERE Technologies")
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
@@ -85,12 +85,12 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md), [măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 
 Când activați Dynamics 365 Customer Insights pentru a transmite date către HERE Technologies, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că HERE Technologies îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
+Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

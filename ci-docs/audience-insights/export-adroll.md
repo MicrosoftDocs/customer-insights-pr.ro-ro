@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dbebc3ee3978ca6ee9d1ad1c15c226479876709f
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.openlocfilehash: 67bfa23d56b26ae592efa4d7197713664bb02623
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124380"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304848"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportați segmente în AdRoll (previzualizare)
 
@@ -28,11 +28,11 @@ Exportați segmente de profiluri unificate ale clienților în AdRoll și folosi
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 250.000 de profiluri per export în AdRoll.
+- Aveți posibilitatea să exportați simultan până la 250.000 de profiluri în AdRoll.
 - Nu puteți exporta segmente cu mai puțin de 100 de profiluri în AdRoll. 
 - Exportul către AdRoll este limitat la segmente.
-- Exportul până la 250.000 de profiluri în AdRoll poate dura până la 10 minute. 
-- Numărul de profiluri pe care le puteți exporta către AdRoll este dependent și limitat de contractul dvs. cu AdRoll.
+- Exportul a până la 250.000 de profiluri în AdRoll poate dura până la 10 minute. 
+- Numărul de profiluri pe care le puteți exporta în AdRoll depinde de contractul dvs. cu AdRoll.
 
 ## <a name="set-up-connection-to-adroll"></a>Configurarea conexiunii la AdRoll
 
@@ -62,19 +62,21 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Pentru a crea un nou export, selectați **Adăugare destinație**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea AdRoll. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea AdRoll. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
 
-1. Introduceți **ID-ul de agent de publicitate AdRoll** Pentru mai multe informații, consultați [Profiluri de agent de publicitate AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
+1. Introduceți **ID-ul de agent de publicitate AdRoll**. Pentru mai multe informații, consultați [Profiluri de agent de publicitate AdRoll](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
 3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente în AdRoll.
 
-1. Selectați segmentele pe care doriți să le exportați. Selectați un segment cu cel puțin 100 de membri. Nu puteți exporta segmente mai mici. În plus, dimensiunea maximă a unui segment de export este de 250.000 de membri pe export. 
+1. Selectați segmentele pe care doriți să le exportați. Selectați un segment cu cel puțin 100 de membri. Nu puteți exporta segmente mai mici. În plus, dimensiunea maximă a unui segment de export este de 250.000 de membri per export. 
 
 1. Selectați **Salvare**.
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). 
+
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
 
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor

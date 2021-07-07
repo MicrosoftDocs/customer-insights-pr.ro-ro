@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c0b4690e18285aa37eef481b3cfac951884ead6
-ms.sourcegitcommit: fcc94f55dc2dce84eae188d582801dc47696c9cc
+ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "6085545"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304711"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -30,15 +30,15 @@ Puteți adăuga o sursă de date în trei moduri principale:
 
 - [Prin zeci de conectori Power Query](connect-power-query.md)
 - [Dintr-un folder Common Data Model](connect-common-data-model.md)
-- [Din propriul Common Data Service lake](connect-common-data-service-lake.md)
+- [Din propriul Microsoft Dataverse lake](connect-common-data-service-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
 
-Ingerarea datelor din sursele de date locale în Detalii despre audiență este acceptată pe baza de fluxuri de date Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) la configurarea mediului.
+Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) la configurarea mediului.
 
-Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Eliminați și recreați sursele de date care existau înainte ca un mediu Dataverse să fi fost asociat pentru [utilizarea gateway-urilor de date locale](/powerapps/maker/data-platform/using-dataflows-with-on-premises-data.md).
+Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Eliminați și recreați sursele de date care existau înainte ca un mediu Dataverse să fi fost asociat pentru [utilizarea gateway-urilor de date locale](/data-integration/gateway/service-gateway-app.md).
 
-Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Power Platform în care puteți vizualiza și configura gateway-urile de date locale.
+Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
 ## <a name="review-ingested-data"></a>Examinați datele ingerate
 
@@ -56,7 +56,7 @@ Veți vedea numele fiecărei surse de date ingerate, starea acesteia și ultima 
 
 Selectați valoarea în coloana **Stare** a oricărei sursă de date pentru a revizui mai multe detalii. În panoul **Detalii despre progres**, extindeți **Surse de date**. Selectați **Consultați detalii** pentru mai multe informații despre starea de reîmprospătare, inclusiv detalii despre erori și actualizări de proces descendent.
 
-Încărcarea datelor ar putea lua ceva timp. După o reîmprospătare reușită, datele ingerate pot fi revizuite din pagina **Entități**. Pentru mai multe informații, consultați [Entități](entities.md).
+Încărcarea datelor poate dura timp. După o reîmprospătare reușită, datele ingerate pot fi revizuite din pagina **Entități**. Pentru mai multe informații, consultați [Entități](entities.md).
 
 ## <a name="refresh-a-data-source"></a>Reîmprospătați o sursă de date
 
@@ -66,9 +66,9 @@ Accesați **Administrator** > **Sistem** > [**Planificare**](system.md#schedule-
 
 Pentru a actualiza o sursă de date la cerere, urmați acești pași:
 
-1. În Detalii despre audiență, accesați **Date** > **Surse de date**
+1. În Detalii despre audiență, accesați **Date** > **Surse de date**.
 
-2. Selectați elipsele verticale de lângă sursa de date pe care doriți să o reîmprospătați și selectați **Reîmprospătare** din lista verticală.
+2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o reîmprospătați și selectați **Reîmprospătare** din lista derulantă.
 
 3. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
 
@@ -78,7 +78,7 @@ Pentru a actualiza o sursă de date la cerere, urmați acești pași:
 
 1. În Detalii despre audiență, accesați **Date** > **Surse de date**.
 
-2. Selectați elipsa verticală de lângă sursa de date pe care doriți să o eliminați și selectați **Ștergeți** din meniul cu selectare multiplă.
+2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o eliminați și selectați **Ștergți** din meniul derulant.
 
 3. Confirmați ștergerea.
 

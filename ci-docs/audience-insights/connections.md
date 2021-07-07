@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 106dbc26f95b309821d738e1484b1eaa79dd225b
-ms.sourcegitcommit: aaa275c60c0c77c88196277b266a91d653f8f759
+ms.openlocfilehash: 17e04b243e9b3d4375c86f5a890a18be35956835
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "5896112"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6304987"
 ---
 # <a name="connections-preview-overview"></a>Prezentare generală a conexiunilor (previzualizare)
 
@@ -74,7 +74,9 @@ Când configurați sau editați o conexiune de export, alegeți căror utilizato
 
 ## <a name="remove-a-connection"></a>Eliminați o conexiune
 
-Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau exporturi, trebuie mai întâi să le detașați sau să le eliminați. Dialogul de eliminare vă va ghida către îmbogățirea sau exporturile relevante. Îmbogățirile și exporturile detașate devin inactive. Le reactivați adăugându-le o altă conexiune pe pagina [Îmbogățiri](enrichment-hub.md) sau [Exporturi](export-destinations.md).
+Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau exporturi, trebuie mai întâi să le detașați sau să le eliminați. Dialogul de eliminare vă va ghida către îmbogățirea sau exporturile relevante. 
+
+Îmbogățirile și exporturile detașate devin inactive. Le reactivați adăugându-le o altă conexiune pe pagina [Îmbogățiri](enrichment-hub.md) sau [Exporturi](export-destinations.md).
 
 1. Salt la **Administrator** > **Conexiuni (previzualizare)**.
 
@@ -89,5 +91,5 @@ Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau expor
       - **Îmbogățiri:** Puteți alege să eliminați sau să dezactivați îmbogățirile pentru a putea elimina conexiunea. 
    1. Odată ce conexiunea nu mai are dependențe, reveniți la **Administrator** > **Conexiuni** și încercați să eliminați din nou conexiunea.
 
-1. Pentru a confirma ștergerea, selectați **Ștergere**.
+1. Pentru a confirma ștergerea selectați **Ștergere**.
 

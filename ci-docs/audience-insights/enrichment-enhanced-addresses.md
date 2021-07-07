@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 07271d491460764f2c738e760e41c3492f2b6de9
-ms.sourcegitcommit: 27f9dd837304ef9fc00f055a6e900fbf6fce1429
+ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/30/2021
-ms.locfileid: "5965593"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305447"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
@@ -22,7 +22,7 @@ Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utiliza
 
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 
-Modelul nostru trece printr-un proces în doi pași pentru a îmbunătăți o adresă. În primul rând, analizează adresa pentru a identifica componentele sale și le plasează într-un format structurat. Apoi, folosim inteligența artificială pentru a corecta, completa și standardiza valorile din adresă.
+Modelul nostru trece printr-un proces în doi pași pentru a îmbunătăți o adresă. În primul rând, analizează adresa pentru a identifica componentele sale și le plasează într-un format structurat. Apoi, folosim AI pentru a corecta, completa și standardiza valorile din adresă.
 
 ### <a name="example"></a>Exemplu
 
@@ -50,7 +50,7 @@ Adresele îmbunătățite funcționează numai cu valorile care există deja în
 2. Verifică dacă oricare dintre valori, cum ar fi codurile poștale sau numele străzilor, sunt valide.
 3. Schimbă valorile pe care nu le recunoaște.
 
-Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunătăți adresele. În timp ce aplicăm un prag de încredere ridicat pentru când modelul modifică o valoare de intrare, la fel ca în cazul oricărui model bazat pe ML, precizia 100% nu este garantată.
+Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunătăți adresele. În timp ce aplicăm un prag ridicat de încredere atunci când modelul modifică o valoare de intrare, la fel ca în cazul oricărui model bazat pe învățarea automată, precizia de 100% nu este garantată.
 
 ## <a name="supported-countries-or-regions"></a>Țări sau regiuni sprijinite
 
@@ -76,7 +76,7 @@ Adresele trebuie să conțină o valoare a țării/regiunii. Nu procesăm adrese
 1. Selectați formatatul adreselor în setul de date al dvs. Alegeți **Adresă cu un singur atribut** dacă adresele din datele dvs. utilizează un singur câmp. Alegeți **Adresă cu atribute multiple** dacă adresele din datele dvs. utilizează mai mult de un singur câmp de date.
 
    > [!NOTE]
-   > Țara/regiunea este obligatorie atât în adresa cu atribut unic, cât și în adresa cu atribut multiplu. Adresele care nu conțin valori valabile sau acceptate de țară/regiune nu vor fi îmbogățite
+   > Țara/regiunea este obligatorie atât în adresele cu un singur atribut, cât și cu mai multe atribute. Adresele care nu conțin valori valabile sau acceptate de țară/regiune nu vor fi îmbogățite.
 
 1.  Mapați câmpurile de adresă de la entitatea client unificată.
 
@@ -98,6 +98,6 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md), [măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

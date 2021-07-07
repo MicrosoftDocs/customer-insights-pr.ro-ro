@@ -9,27 +9,26 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 73f3257a3ae6e8423f45410546535df5e3b400ce
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: c23c8b4e6758df08e04bf1e3ae0cba4dee06fe2b
+ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5976333"
+ms.lasthandoff: 06/24/2021
+ms.locfileid: "6305355"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportați segmente în Google Ads (previzualizare)
 
-Exportați segmente de profiluri de clienți unificate în lista de audiență Google Ads și folosiți-le pentru publicitate în Căutarea Google, Gmail, YouTube și Rețeaua de vizualizare Google. 
+Exportați segmente de profiluri de clienți unificate într-o listă de public pentru Google Ads și folosiți-le pentru a face publicitate în Căutarea Google, Gmail, YouTube și Google Display Network. 
 
 ## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
 
 -   Aveți un [cont Google Ads](https://ads.google.com/) și acreditările de administrator corespunzătoare.
--   Aveți [aprobat un token pentru dezvoltatori Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token) 
--   Îndepliniți cerințele pentru [Politica Customer Match](https://support.google.com/adspolicy/answer/6299717)
--   Îndepliniți cerințele pentru [remarketing al dimensiunilor listei](https://support.google.com/google-ads/answer/7558048) 
-
+-   Aveți un [token aprobat pentru dezvoltatori Google Ads](https://developers.google.com/google-ads/api/docs/first-call/dev-token). 
+-   Îndepliniți cerințele pentru [Politica Customer Match](https://support.google.com/adspolicy/answer/6299717).
+-   Îndepliniți cerințele pentru [remarketing al dimensiunilor listei](https://support.google.com/google-ads/answer/7558048).
 -   Există audiențe în Google Ads și ID-urile corespunzătoare. Pentru informații suplimentare, consultați [Audiențe Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.).
--   Aveți [segmente configurate](segments.md)
--   Profilurile de clienți unificate din segmentele exportate conțin câmpuri care reprezintă o adresă de e-mail, prenumele și numele de familie
+-   Aveți [segmente configurate](segments.md).
+-   Profilurile de clienți unificate din segmentele exportate conțin câmpuri care reprezintă o adresă de e-mail, prenumele și numele de familie.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
@@ -68,7 +67,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Pentru a crea un nou export, selectați **Adăugare destinație**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Google Ads. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Google Ads. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
 
 1. Introduceți **[ID-ul de audiență Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** și selectați **Conectare** pentru a inițializa conexiunea la Google Ads.
 
@@ -78,7 +77,9 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). 
+
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

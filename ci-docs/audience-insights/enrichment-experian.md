@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7c82fe92b3351a782a4fa6510300d870b742d042
-ms.sourcegitcommit: 42b3bce1e20e7cc707d232844dacfeed3d6fc096
+ms.openlocfilehash: abe9ee447745081e3c462d44e5901b6dac919adf
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/28/2021
-ms.locfileid: "6309835"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555368"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Îmbogățiți profilurile clienților cu date demografice din Experian (previzualizare)
 
@@ -39,7 +39,7 @@ Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealab
 1. Selectați **Îmbogățește datele mele** pe dala Experian.
 
    > [!div class="mx-imgBorder"]
-   > ![dala Experian](media/experian-tile.png "Experian tile")
+   > ![dală Experian.](media/experian-tile.png "Experian tile")
    > 
 
 1. Selectați o [conexiune](connections.md) din lista derulantă. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune** și alegând Experian din lista derulantă. 

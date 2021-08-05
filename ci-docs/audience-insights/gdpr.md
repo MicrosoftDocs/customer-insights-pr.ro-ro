@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9c453c9b416bff0e6362a8ccf7ff534f4efa1e00
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e832fbbdfb59cb06d98715223edca438d2c3a7f2
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597526"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554358"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -40,7 +40,7 @@ Un administrator al Customer Insights poate urma acești pași pentru a elimina 
    2. Verificați starea sursei de date din **Stare**. O bifă înseamnă că actualizarea a reușit. Un triunghi de avertizare înseamnă că a apărut o problemă. Dacă este afișat un triunghi de avertizare, contactați D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
-> ![Manipularea RGPD de ștergere a cererilor pentru datele clienților](media/gdpr-data-sources.png "Manipularea RGPD de ștergere a cererilor pentru datele clienților")
+> ![Manipularea RGPD de ștergere a cererilor pentru datele clienților.](media/gdpr-data-sources.png "Manipularea RGPD de ștergere a cererilor pentru datele clienților")
 
 #### <a name="manage-delete-requests-for-user-data"></a>Gestionați ștergerea cererilor pentru datele utilizatorilor
 
@@ -52,7 +52,7 @@ Un administrator al Customer Insights poate urma acești pași pentru ștergerea
 4. Selectați **Eliminare**.
 
 > [!div class="mx-imgBorder"]
-> ![Gestionarea cererilor de ștergere conform RGPD a datelor utilizatorilor](media/gdpr-permissions.png "Gestionarea cererilor de ștergere conform RGPD a datelor utilizatorilor")
+> ![Gestionarea cererilor de ștergere conform RGPD a datelor utilizatorilor.](media/gdpr-permissions.png "Gestionarea cererilor de ștergere conform RGPD a datelor utilizatorilor")
 
 ## <a name="responding-to-gdpr-data-subject-export-requests"></a>Răspunsul la cererile de export al datelor persoanei vizate în temeiul RGPD
 

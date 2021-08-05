@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2856888d6ac64d5daabcc5a234f13bc6f88bb3df
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 0803be651662480ddf1fd22952f6a69ee1603001
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306089"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555000"
 ---
 # <a name="segment-insights-preview"></a>Detalii despre segment (previzualizare)
 
@@ -44,7 +44,7 @@ De asemenea, puteți analiza modul în care se suprapun modificările pentru atr
 După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment.":::
 
 Selectați un detaliu pentru a vedea rezultatele analizei:
 
@@ -77,7 +77,7 @@ Diferențiatori de segmente vă ajută să aflați ce diferențiază un segment 
 După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment.":::
 
 Selectați un detaliu pentru a vedea rezultatele analizei. O analiză a diferențiatorului include două file. Fila **Atribute** listează atributele profilului considerate ca diferențiatori. Fila **Măsuri** listează diferențiatori. Fiecare filă include următoarele detalii:
 

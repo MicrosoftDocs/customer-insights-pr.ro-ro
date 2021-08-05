@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: c9adb4d7db74573d0512ae7a68a0e7ab51c994a0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 8ab55d101f98169b8f794ce580ddd0a71ede6642
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304619"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554633"
 ---
 # <a name="customer-profiles"></a>Profiluri de client
 
@@ -23,7 +23,7 @@ Pagina **Clienți** arată o vizualizare combinată a clienților dvs., pe baza 
 Clienții pot fi persoane fizice sau organizații (previzualizare). Fiecare profil de client sau organizație este reprezentat printr-o dală. Selectați o dală pentru a vedea informații suplimentare despre respectivul client sau organizație. Utilizați controalele de paginare din partea de jos a paginii pentru a vedea înregistrări suplimentare.
 
 > [!div class="mx-imgBorder"] 
-> ![Profiluri de clienți B2C](media/profiles-customers.png "Profiluri de clienți B2C")
+> ![Profiluri de clienți B2C.](media/profiles-customers.png "Profiluri de clienți B2C")
 
 Organizații (previzualizare)
 > [!div class="mx-imgBorder"] 
@@ -47,7 +47,7 @@ Puteți filtra clienții după câmpurile entității Profilul clienților. Simi
 2. Bifați casetele de lângă atributele prin care doriți să filtrați clienții.
 
    > [!div class="mx-imgBorder"] 
-   > ![Profiluri de client](media/profiles-customers3.png "Profiluri de client")
+   > ![Profiluri de client.](media/profiles-customers3.png "Profiluri de client")
 
 3. Eliminați filtrele selectând **Ștergere filtre** pe pagina **Clienți**.
 

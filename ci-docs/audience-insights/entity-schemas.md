@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 6667e411a1b56e13105a6b59b7b5d249bc8141ea
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596376"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692320"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
@@ -24,7 +24,7 @@ ms.locfileid: "5596376"
 
 Acest model de date partajat permite aplicațiilor și integratorilor de date să colaboreze mai ușor prin furnizarea unei definiții unificate a datelor. Common Data Model include un sistem bogat de metadate cu entități standard, relații, ierarhii, trăsături și multe altele. Provine din aplicațiile Dynamics 365, cu sursă deschisă la GitHub, cu peste 260 de entități standard. Un sistem mare de parteneri interni și externi contribuie cu concepte specifice industriei la Common Data Model.
 
-Mai multe sisteme și platforme implementează astăzi Common Data Model, inclusiv fluxuri de date Power BI și servicii de date Azure. Este deja acceptat în Common Data Service, Dynamics 365, Power Apps , Power BI și serviciile de date Azure viitoare, acumulând în mod direct valoare în [Open Data Initiative](https://www.microsoft.com/open-data-initiative).
+Mai multe sisteme și platforme implementează astăzi Common Data Model, inclusiv fluxuri de date Power BI și Servicii de date Azure. Este deja acceptat în Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, și viitoarele servicii de date Azure, care acumulează direct valoare pentru [Inițiativa Open Data](https://www.microsoft.com/open-data-initiative).
 
 ## <a name="customer-insights-entity-schemas"></a>Scheme de entitate Customer Insights
 
@@ -44,7 +44,7 @@ Pentru informații suplimentare, consultați documentația despre [Scheme de ent
 
 Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați **Încărcare de la GitHub!** buton și navigați la **foundationCommon** > **crmCommon** > **soluții** > **customerInsights** unde veți găsi lista entităților Customer Insights și a definițiilor acestora.
 > [!div class="mx-imgBorder"]
-> ![Navigator entitate CDM care arată entitatea CustomerActivity](media/CDM-entity-navigator.png "Navigator entitate CDM care arată entitatea CustomerActivity")
+> ![Navigator entitate CDM care arată entitatea CustomerActivity.](media/CDM-entity-navigator.png "Navigator entitate CDM care arată entitatea CustomerActivity")
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

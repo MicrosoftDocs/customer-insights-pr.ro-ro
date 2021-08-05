@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea segmentelor
 description: Creați segmente de clienți pentru a îi grupa pe baza diferitelor atribute.
-ms.date: 05/03/2021
+ms.date: 07/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,14 +9,24 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 550e509a24701fe5fcdeb9d54311872dc954156c
-ms.sourcegitcommit: 72603fb39c4d5dbca71128815a2e1692542ea4dc
+ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
+ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "6064952"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "6685477"
 ---
 # <a name="create-and-manage-segments"></a>Crearea și gestionarea segmentelor
+
+> [!IMPORTANT]
+> Există câteva modificări care au fost lansate în experiența de creare a segmentului în septembrie 2021: 
+> - Constructorul de segmente va arăta ușor diferit cu elemente restilizate și un flux de utilizatori îmbunătățit.
+> - Operatorii noi datetime și un selector de date îmbunătățit sunt activate în generatorul de segmente.
+> - Veți putea adăuga sau elimina condiții și reguli din segmente. 
+> - Regulile imbricate care încep cu o condiție SAU vor deveni disponibile. Nu mai aveți nevoie de o afecțiune AND la nivelul cel mai exterior.
+> - Un panou lateral pentru selectarea atributelor va fi disponibil în mod constant.
+> - O opțiune pentru a selecta căile relației entității.
+> Pentru a încerca noul constructor de segmente, trimiteți un e-mail cu subiectul „Solicitați activarea noului constructor de segmente” la cihelp [at] microsoft.com. Includeți numele organizației dvs. și ID-ul mediului dvs. sandbox.
 
 Definiți filtre complexe pe baza entității client unificate și a entităților conexe. Fiecare segment, după procesare, creează un set de înregistrări ale clienților pe care le puteți exporta și pe care puteți acționa. Segmentele sunt gestionate pe pagina **Segmente**. 
 
@@ -50,7 +60,7 @@ Când creați un segment, puteți salva o schiță. Aceasta va fi salvată ca se
 1. Alegeți un operator și o valoare pentru atributul selectat.
 
    > [!div class="mx-imgBorder"]
-   > ![Particularizați filtrul de grup](media/customer-group-numbers.png "Filtrul de grup de clienți")
+   > ![Particularizați filtrul de grup.](media/customer-group-numbers.png "Filtrul de grup de clienți")
 
    |Număr |Definiție  |
    |---------|---------|
@@ -66,7 +76,7 @@ Când creați un segment, puteți salva o schiță. Aceasta va fi salvată ca se
       - Operatorul **SAU**: Fiecare dintre condiții trebuie îndeplinită ca parte a procesului de segmentare. Această opțiune este cea mai utilă atunci când definiți condiții multiple pentru aceeași entitate.
 
       > [!div class="mx-imgBorder"]
-      > ![Operatorul SAU unde fiecare condiție trebuie îndeplinită](media/segmentation-either-condition.png "Operatorul SAU unde fiecare condiție trebuie îndeplinită")
+      > ![Operatorul SAU unde fiecare condiție trebuie îndeplinită.](media/segmentation-either-condition.png "Operatorul SAU unde fiecare condiție trebuie îndeplinită")
 
       În prezent este posibil să imbricați un operator **SAU** sub unul **ȘI**, dar nu și invers.
 
@@ -74,12 +84,12 @@ Când creați un segment, puteți salva o schiță. Aceasta va fi salvată ca se
    Selectați **Adăugați un grup**.
 
       > [!div class="mx-imgBorder"]
-      > ![Grup Adăugare grup de clienți](media/customer-group-add-group.png "Grup Adăugare grup de clienți")
+      > ![Grup Adăugare grup de clienți.](media/customer-group-add-group.png "Grup Adăugare grup de clienți")
 
    1. Selectați unul dintre operatorii de mulțimi: **Reuniune**, **Intersecție** sau **Cu excepția**.
 
    > [!div class="mx-imgBorder"]
-   > ![Uniune Adăugare grup de clienți](media/customer-group-union.png "Uniune Adăugare grup de clienți")
+   > ![Uniune Adăugare grup de clienți.](media/customer-group-union.png "Uniune Adăugare grup de clienți")
 
    - **Uniune** unește cele două grupuri.
 
@@ -90,7 +100,7 @@ Când creați un segment, puteți salva o schiță. Aceasta va fi salvată ca se
 1. Dacă entitatea este conectată la entitatea client unificată prin [relații](relationships.md), trebuie să definiți calea relației pentru a crea un segment valid. Adăugați entitățile din calea relației până când puteți selecta entitatea **Client: CustomerInsights** din meniul listă verticală. Apoi alegeți **Toate înregistrările** pentru fiecare pas.
 
    > [!div class="mx-imgBorder"]
-   > ![Calea relației în timpul creării segmentului](media/segments-multiple-relationships.png "Calea relației în timpul creării segmentului")
+   > ![Calea relației în timpul creării segmentului.](media/segments-multiple-relationships.png "Calea relației în timpul creării segmentului")
 
 1. În mod implicit, segmentele generează o entitate de ieșire care conține toate atributele profilurilor clienților care se potrivesc cu filtrele definite. Dacă un segment se bazează pe alte entități decât entitatea *Client*, puteți adăuga mai multe atribute de la aceste entități la entitatea de ieșire. Selectați **Atributele proiectului** pentru a alege atributele care vor fi anexate entității de ieșire.  
   
@@ -127,7 +137,7 @@ Segmentele rapide permit crearea de segmente simple cu un singur operator rapid 
 4. Sistemul vă va oferi o **Dimensiunea estimată segment**. Puteți alege dacă vreți să generați segmentul pe care l-ați definit sau să îl revizuiți mai întâi pentru a obține o dimensiune diferită a segmentului.
 
     > [!div class="mx-imgBorder"]
-    > ![Numele și estimarea pentru un segment rapid](media/quick-segment-name.png "Numele și estimarea pentru un segment rapid")
+    > ![Numele și estimarea pentru un segment rapid.](media/quick-segment-name.png "Numele și estimarea pentru un segment rapid")
 
 5. Furnizați un **Nume** pentru segmentul dvs. Opțional, furnizați un **Nume afișat**.
 

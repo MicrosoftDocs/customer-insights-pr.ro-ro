@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: b0e587739f9f4d03942d70a72de4f9378822054d
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 28c89693239393d93b7a816535b8c3fffe353935
+ms.sourcegitcommit: e57d51ae3cc233f7b6185c074c66efd9800c02c1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095617"
+ms.lasthandoff: 07/14/2021
+ms.locfileid: "6559420"
 ---
 # <a name="transactional-churn-prediction-preview"></a>Prezicerea retragerii tranzacționale (previzualizare)
 
@@ -47,7 +47,7 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
         - **Eveniment:** Numele evenimentului pe care doriți să-l utilizați. De exemplu, un câmp numit „UserAction” într-un magazin alimentar ar putea fi o utilizare a cuponului de către client.
         - **Detalii:** Informații detaliate despre eveniment. De exemplu, un câmp numit „CouponValue” într-un magazin alimentar ar putea fi valoarea valutară a cuponului.
 - Caracteristici de date sugerate:
-    - Date istorice suficiente: date despre tranzacție pentru cel puțin dublul intervalului de timp selectat. De preferință, doi-trei ani de date de abonament. 
+    - Date istorice suficiente: date despre tranzacție pentru cel puțin dublul intervalului de timp selectat. De preferință, doi până la trei ani de istoric al tranzacțiilor. 
     - Achiziții multiple pe client: ideal cel puțin două tranzacții pe client.
     - Număr de clienți: cel puțin 10 profiluri de clienți, de preferință mai mult de 1.000 de clienți unici. Modelul va eșua cu mai puțin de 10 clienți și cu date istorice insuficiente.
     - Completitatea datelor: mai puțin de 20% din valorile lipsă din câmpul de date al entității furnizate.

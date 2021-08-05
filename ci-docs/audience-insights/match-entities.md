@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50b11e7d6f62d7a25eb25a0f2b1c4ad7d859def1
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: de53927f7ed1f58176a7ba83f89be7c39064947c
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306043"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650333"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -138,7 +138,7 @@ Specificarea regulilor de eliminare a informațiilor duplicate nu este obligator
    - **Cea mai puțin recentă**: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
  
    > [!div class="mx-imgBorder"]
-   > ![Reguli de eliminare a informațiilor duplicate pasul 1](media/match-selfconflation.png "Reguli de eliminare a informațiilor duplicate pasul 1")
+   > ![Reguli de eliminare a informațiilor duplicate pasul 1.](media/match-selfconflation.png "Reguli de eliminare a informațiilor duplicate pasul 1")
  
 1. Odată ce entitățile sunt selectate și preferința lor de îmbinare este setată, selectați **Adăugați regulă** pentru a defini regulile de eliminare a informațiilor duplicate la nivel de entitate.
    - **Selectați câmpul** listează toate câmpurile disponibile de la acea entitate. Alegeți câmpul pe care doriți să îl verificați pentru duplicate. Alegeți câmpuri care sunt probabil unice pentru fiecare client. De exemplu, o adresă de e-mail sau combinația dintre nume, oraș și număr de telefon.
@@ -146,7 +146,7 @@ Specificarea regulilor de eliminare a informațiilor duplicate nu este obligator
    - Definiți mai multe condiții selectând **Adăugare condiție**.
  
    > [!div class="mx-imgBorder"]
-   > ![Reguli de eliminare a informațiilor duplicate pasul 2](media/match-selfconflation-rules.png "Reguli de eliminare a informațiilor duplicate pasul 2")
+   > ![Reguli de eliminare a informațiilor duplicate pasul 2.](media/match-selfconflation-rules.png "Reguli de eliminare a informațiilor duplicate pasul 2")
 
   Puteți crea mai multe reguli de eliminare a informațiilor duplicate pentru o entitate. 
 
@@ -179,7 +179,9 @@ Accesați **Date** > **Unificare** > **Potrivire** și selectați **Rulare** pen
 Veți găsi rezultatul unei rulări reușite, entitatea unificată a profilului de client, pe pagina **Entități**. Entitatea dvs. unificatăe de client se numește **Clienți** în secțiunea **Profiluri**. Prima rundă de potrivire reușită creează entitatea unificată *Client*. Toate rulările de potrivire ulterioare extind entitatea respectivă.
 
 > [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+> După rularea procesului de potrivire, selectați starea procesului pentru a deschide panoul **Detalii despre activitate**. Oferă o prezentare generală despre timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității. Selectați **Consultați detalii** pentru a vedea ce entități au participat la procesul de potrivire, care reguli li s-au aplicat și dacă actualizările au fost publicate cu succes.  
+> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
 
 ## <a name="review-and-validate-your-matches"></a>Examinați și validați-vă potrivirile
 

@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 86ab3cefa70e5fab4bdb27cde363adee26efee4c
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 24b523786158ff36c314601846ee25ea64cfabbe
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305668"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650241"
 ---
 # <a name="merge-entities"></a>Îmbinare entități
 
@@ -109,7 +109,7 @@ Unele entități conțin mai multe detalii decât altele. Dacă o entitate inclu
 Indiferent dacă fuzionați manual atributele sau lăsați sistemul să le îmbine, puteți rula întotdeauna fuziunea. Selectați **Executare** pe pagina **Îmbinare** pentru a porni procesul.
 
 > [!div class="mx-imgBorder"]
-> ![Îmbinare date Salvați și rulați](media/configure-data-merge-save-run.png "Îmbinare date Salvați și rulați")
+> ![Îmbinare date Salvați și rulați.](media/configure-data-merge-save-run.png "Îmbinare date Salvați și rulați")
 
 Alege **Rulați numai îmbinarea** dacă doriți doar să vedeți rezultatul reflectat în entitatea client unificată. Procesele din aval vor fi reîmprospătate ca [definite în programul de reîmprospătare](system.md#schedule-tab).
 
@@ -118,7 +118,9 @@ Alegeți **Rulați procesele de îmbinare și flux spre aval** pentru a reîmpro
 Pentru a face mai multe modificări și a relua pasul, puteți anula o îmbinare în curs. Selectați **Se reîmprospătează ...** și selectați **Anulare operațiune** în panoul lateral care apare.
 
 > [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+> După rularea procesului de îmbinare, selectați starea procesului pentru a deschide panoul **Detalii despre activitate**. Oferă o prezentare generală despre timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității. Selectați **Vezi detalii** pentru a vedea ce entități au participat la procesul de potrivire, dacă soluționarea conflictului a reușit și dacă actualizările au fost publicate cu succes.  
+> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies).  
+> :::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
 
 ## <a name="next-step"></a>Următorul pas
 

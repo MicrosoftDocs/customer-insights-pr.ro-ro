@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 88492943ddbf9ae30c64d92b261433b74f34f682
-ms.sourcegitcommit: d74430270f1b754322287c4f045d7febdae35be2
+ms.openlocfilehash: 6a7137730ab8cc43bc93daf647d9d55d02d96cd8
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/18/2021
-ms.locfileid: "6059603"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692220"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
@@ -25,7 +25,7 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
-- Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Common Data Service](connect-power-query.md).
+- Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Microsoft Dataverse](connect-power-query.md).
 - Toți utilizatorii Dynamics 365 ai programului de completare Card client trebuie să fie [adăugați ca utilizatori](permissions.md) în detaliile despre public pentru a vedea datele.
 - [Sunt necesare capacități de căutare și filtrare configurate](search-filter-index.md) în detaliile despre public pentru ca datele să funcționeze.
 - Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența:
@@ -50,7 +50,7 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 1. Selectați legătura **Nume afișat** pentru soluția **Dynamics 365 Customer Insights Program de completare card client (Previzualizare)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selectați numele afișat](media/select-display-name.png "Selectați numele afișat")
+   > ![Selectați numele afișat.](media/select-display-name.png "Selectați numele afișat")
 
 1. Selectați **Conectare** și introduceți acreditările pentru contul de administrator pe care îl utilizați pentru a configura Customer Insights.
 
@@ -64,7 +64,7 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
    - Pentru a mapa un cont, selectați câmpul din entitatea Client care se potrivește cu ID-ul entității dvs. de cont.
 
    > [!div class="mx-imgBorder"]
-   > ![Câmpul ID persoană de contact](media/contact-id-field.png "Câmpul ID persoană de contact")
+   > ![Câmpul ID persoană de contact.](media/contact-id-field.png "Câmpul ID persoană de contact")
 
 1. Selectați **Salvare configurație** pentru a salva setările.
 
@@ -83,7 +83,7 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 1. Selectați formularul de contact la care doriți să adăugați controalele Card client.
 
     > [!div class="mx-imgBorder"]
-    > ![Selectați formularul de contact](media/contact-active-forms.png "Selectați formularul de contact")
+    > ![Selectați formularul de contact.](media/contact-active-forms.png "Selectați formularul de contact")
 
 1. Pentru a adăuga un control, în editorul de formulare, trageți orice câmp din **Exploratorul de câmp** în locul în care doriți să apară controlul.
 
@@ -110,7 +110,7 @@ Programul de completare pentru Customer Card nu se actualizează automat. Pentru
 
 1. Selectați **Aplicați actualizarea soluției** în bara de acțiune.
 
-   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizați soluția în zona de particularizare a aplicațiilor Dynamics 365":::
+   :::image type="content" source="media/customer-card-add-in-upgrade.png" alt-text="Actualizați soluția în zona de particularizare a aplicațiilor Dynamics 365.":::
 
 1. După ce începeți procesul de actualizare, veți vedea un indicator de încărcare până la finalizarea actualizării. Dacă nu există o versiune mai nouă, actualizarea va afișa un mesaj de eroare.
 

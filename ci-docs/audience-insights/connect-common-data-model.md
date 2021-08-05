@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 385406b706890d741fec2694c190c0fada7809d7
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 49bab0605197912cd4b81ff193b914599a092792
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596560"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554909"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 
@@ -45,7 +45,7 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 1. Puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Introduceți informația **Recipient** și selectați **Următorul**.
    > [!div class="mx-imgBorder"]
-   > ![Casetă de dialog pentru a introduce noi detalii de conexiune pentru Azure Data Lake](media/enter-new-storage-details.png)
+   > ![Casetă de dialog pentru a introduce noi detalii de conexiune pentru Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
    > Aveți nevoie de unul dintre următoarele roluri, fie la container, fie la contul de stocare menționat mai sus, pentru a vă putea conecta la și crea o sursă de date:
    >  - Cititor de date Blob de stocare
@@ -58,11 +58,11 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 1. Veți obține o listă de entități disponibile în fișierul model.json sau manifest.json selectat. Puteți analiza și selecta din lista de entități disponibile și selectați **Salvare**. Toate entitățile selectate vor fi ingerate din noua sursă de date.
    > [!div class="mx-imgBorder"]
-   > ![Casetă de dialog care arată o listă de entități dintr-un fișier model.json](media/review-entities.png)
+   > ![Casetă de dialog care arată o listă de entități dintr-un fișier model.json.](media/review-entities.png)
 
 8. Indicați cu ce entități de date doriți să activați profilarea datelor și selectați **Salvare**. Profilarea datelor permite analiza și alte capacități. Puteți selecta întreaga entitate, care selectează toate atributele din entitate, sau puteți selecta anumite atribute dorite. În mod implicit, nu este activată nicio entitate pentru profilarea datelor.
    > [!div class="mx-imgBorder"]
-   > ![Casetă de dialog care prezintă o profilare a datelor](media/dataprofiling-entities.png)
+   > ![Casetă de dialog care prezintă o profilare a datelor.](media/dataprofiling-entities.png)
 
 9. După salvarea selecțiilor, se deschide pagina **Surse de date**. Acum ar trebui să vedeți conexiunea folderului Common Data Model ca o sursă de date.
 
@@ -81,12 +81,12 @@ Puteți actualiza cheia de acces pentru contul de stocare care conține director
 
 4. Opțional, actualizați **Cheie de acces** și selectați **Următorul**.
 
-   ![Dialog pentru a edita și a actualiza o cheie de acces pentru o sursă de date existentă](media/edit-access-key.png)
+   ![Dialog pentru a edita și a actualiza o cheie de acces pentru o sursă de date existentă.](media/edit-access-key.png)
 
 5. Opțional, puteți actualiza de la o conexiune cu cheie de cont la o conexiune bazată pe resurse sau bazată pe abonament. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Nu puteți schimba informațiile legate de **Recipient** la actualizarea conexiunii.
    > [!div class="mx-imgBorder"]
 
-   > ![Casetă de dialog pentru a introduce detaliile conexiunii pentru Azure Data Lake la un cont de stocare existent](media/enter-existing-storage-details.png)
+   > ![Casetă de dialog pentru a introduce detaliile conexiunii pentru Azure Data Lake la un cont de stocare existent.](media/enter-existing-storage-details.png)
 
    > [!NOTE]
    > Aveți nevoie de unul dintre următoarele roluri, fie la container, fie la contul de stocare menționat mai sus, pentru a vă putea conecta la și crea o sursă de date:

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 4e7065b61940ef0d7b2a30f96f6225df29e30383
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: 9eb0593f93d713124e4113dcb62c588819f5b97b
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095663"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556322"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicție renunțare la abonament (previzualizare)
 
@@ -63,7 +63,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. În Detalii despre public, accesați **Informații** > **Predicții**.
 1. Selectați dala **Model de predicție de abonament (previzualizare)** și selectați **Utilizați acest model**.
    > [!div class="mx-imgBorder"]
-   > ![Dală de model de predicție de reducere abonament cu buton Utilizați acest model](media/subscription-churn-usethismodel.PNG "Dală de model de predicție de reducere abonament cu buton Utilizați acest model")
+   > ![Dală de model de predicție de reducere abonament cu buton Utilizați acest model.](media/subscription-churn-usethismodel.PNG "Dală de model de predicție de reducere abonament cu buton Utilizați acest model")
 
 ### <a name="name-model"></a>Denumire model
 
@@ -86,11 +86,11 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
     1. Selectați **Entitatea client** care se potrivește cu entitatea clientului primar.
     1. Introduceți un nume care descrie relația.
        > [!div class="mx-imgBorder"]
-       > ![Pagina istoric abonamente care arată crearea unei relații cu clientul](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina istoric abonamente care arată crearea unei relații cu clientul")
+       > ![Pagina istoric abonamente care arată crearea unei relații cu clientul.](media/subscription-churn-subscriptionhistoryrelationship.PNG "Pagina istoric abonamente care arată crearea unei relații cu clientul")
 1. Selectați **Următorul**.
 1. Asociați câmpurile semantice cu atributele din entitatea istoricul abonamentelor și selectați **Salvare**. Pentru descrierea câmpurilor, consultați secțiunea [Cerințe preliminare](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Pagina istoric abonamente care prezintă atribute semantice care sunt asociate câmpurilor din entitatea istoric abonamente selectată](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina istoric abonamente care prezintă atribute semantice care sunt asociate câmpurilor din entitatea istoric abonamente selectată")
+   > ![Pagina istoric abonamente care prezintă atribute semantice care sunt asociate câmpurilor din entitatea istoric abonamente selectată.](media/subscription-churn-subscriptionhistorymapping.PNG "Pagina istoric abonamente care prezintă atribute semantice care sunt asociate câmpurilor din entitatea istoric abonamente selectată")
 1. Selectați **Adăugare date** pentru **Activitățile clienților** și alegeți entitatea care furnizează informațiile despre activitățile clienților descrise în Cerințele preliminare.
 1. Selectați un tip de activitate care să corespundă tipului de activitate a clientului pe care o configurați.  Selectați **Creare nou** și furnizați un nume dacă nu vedeți o opțiune care se potrivește tipului de activitate de care aveți nevoie.
 1. Va trebui să configurați relația de la entitatea activitatea clientului la entitatea client.
@@ -101,7 +101,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. Asociați câmpurile semantice cu atributele din entitatea activitatea clientului și selectați **Salvare**. Pentru descrierea câmpurilor, consultați secțiunea [Cerințe preliminare](#prerequisites).
 1. (Opțional) Dacă aveți orice alte activități ale clienților pe care doriți să le includeți, repetați pașii de mai sus.
    > [!div class="mx-imgBorder"]
-   > ![Definiți relația dintre entități](media/subscription-churn-customeractivitiesmapping.PNG "Pagina activități clienți care prezintă atribute semantice care sunt asociate câmpurilor din entitatea activități clienți selectată")
+   > ![Definiți relația dintre entități.](media/subscription-churn-customeractivitiesmapping.PNG "Pagina activități clienți care prezintă atribute semantice care sunt asociate câmpurilor din entitatea activități clienți selectată")
 1. Selectați **Următorul**.
 
 ### <a name="set-schedule-and-review-configuration"></a>Setați programul și examinați configurația
@@ -115,7 +115,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 
 1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
    > [!div class="mx-imgBorder"]
-   > ![Vizualizare a paginii Predicțiile mele](media/subscription-churn-mypredictions.PNG "Vizualizare a paginii Predicțiile mele")
+   > ![Vizualizare a paginii Predicțiile mele.](media/subscription-churn-mypredictions.PNG "Vizualizare a paginii Predicțiile mele")
 1. Selectați predicția pe care doriți să o revizuiți.
    - **Numele predicției:** Numele predicției furnizat la crearea acesteia.
    - **Tip de predicție:** Tipul de model utilizat pentru predicție
@@ -131,7 +131,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
    - **Ultima actualizare:** Data la care predicția a fost reîmprospătată având ca rezultat entitatea de ieșire.
 1. Selectați elipsele verticale de lângă predicția pentru care doriți să analizați rezultatele și selectați **Vizualizare**.
    > [!div class="mx-imgBorder"]
-   > ![Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere](media/subscription-churn-verticalellipses.PNG "Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere")
+   > ![Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere.](media/subscription-churn-verticalellipses.PNG "Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere")
 1. Există trei secțiuni principale de date în pagina de rezultate:
     1. **Performanța modelului de instruire:** A, B sau C sunt scoruri posibile. Acest scor indică performanța predicției și vă poate ajuta să luați decizia de a utiliza rezultatele stocate în entitatea de ieșire.
         - Scorurile sunt determinate pe baza următoarelor reguli:
@@ -139,13 +139,13 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
             - **B** atunci când modelul a prezis cu exactitate cel puțin 50% din totalul previziunilor și când procentul de previziuni exacte pentru clienții care s-au retras este cu până la 10% mai mare decât rata medie de retragere a ratei medii istorice.
             - **C** când modelul a prezis cu precizie mai puțin de 50% din totalul previziunilor sau când procentul de previziuni exacte pentru clienții care s-au retras este mai mic decât rata medie istorică.
                > [!div class="mx-imgBorder"]
-               > ![Vizualizarea rezultatului performanței modelului](media/subscription-churn-modelperformance.PNG "Vizualizarea rezultatului performanței modelului")
+               > ![Vizualizarea rezultatului performanței modelului.](media/subscription-churn-modelperformance.PNG "Vizualizarea rezultatului performanței modelului")
     1. **Probabilitatea de retragere (număr de clienți):** Grupuri de clienți în funcție de riscul de retragere prognozat. Aceste date vă pot ajuta mai târziu dacă doriți să creați un segment de clienți cu risc ridicat de retragere. Astfel de segmente vă ajută să înțelegeți unde ar trebui să fie delimitarea dvs. pentru membrii segmentului.
        > [!div class="mx-imgBorder"]
-       > ![Graficul care arată distribuția rezultatelor retragerii, împărțită în intervale cuprinse între 0-100%](media/subscription-churn-resultdistribution.PNG "Graficul care arată distribuția rezultatelor retragerii, împărțită în intervale cuprinse între 0-100%")
+       > ![Graficul care arată distribuția rezultatelor retragerii, împărțită în intervale cuprinse între 0-100%.](media/subscription-churn-resultdistribution.PNG "Graficul care arată distribuția rezultatelor retragerii, împărțită în intervale cuprinse între 0-100%")
     1. **Cei mai influenți factori:** Există mulți factori care sunt luați în considerare atunci când vă creați predicția. Fiecare dintre factori are o importanță calculată pentru predicțiile agregate pe care le creează un model. Puteți utiliza acești factori pentru a vă ajuta la validarea rezultatelor predicției. Sau puteți utiliza aceste informații mai târziu pentru a [crea segmente](segments.md) care ar putea ajuta la influențarea riscului de retragere pentru clienți.
        > [!div class="mx-imgBorder"]
-       > ![Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii](media/subscription-churn-influentialfactors.PNG "Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii")
+       > ![Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii.](media/subscription-churn-influentialfactors.PNG "Listă care arată factorii influenți și importanța lor în predicția rezultatului retragerii")
 
 ## <a name="manage-predictions"></a>Gestionați predicțiile
 

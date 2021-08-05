@@ -9,12 +9,13 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54dd7b629d4b4e7f640b932b0f9246e0602f46bd
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304711"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692450"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -30,13 +31,13 @@ Puteți adăuga o sursă de date în trei moduri principale:
 
 - [Prin zeci de conectori Power Query](connect-power-query.md)
 - [Dintr-un folder Common Data Model](connect-common-data-model.md)
-- [Din propriul Microsoft Dataverse lake](connect-common-data-service-lake.md)
+- [Din propriul Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
 
-Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](manage-environments.md#create-an-environment-in-an-existing-organization) la configurarea mediului.
+Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](get-started-paid.md) la configurarea mediului.
 
-Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Eliminați și recreați sursele de date care existau înainte ca un mediu Dataverse să fi fost asociat pentru [utilizarea gateway-urilor de date locale](/data-integration/gateway/service-gateway-app.md).
+Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Eliminați și recreați sursele de date care existau înainte ca un mediu Dataverse să fi fost asociat pentru [utilizarea gateway-urilor de date locale](/data-integration/gateway/service-gateway-app).
 
 Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
@@ -45,9 +46,9 @@ Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi viz
 Veți vedea numele fiecărei surse de date ingerate, starea acesteia și ultima dată când datele au fost actualizate pentru sursa respectivă. Puteți sorta lista surselor de date după fiecare coloană.
 
 > [!div class="mx-imgBorder"]
-> ![Sursă de date adăugată](media/configure-data-datasource-added.png "Sursă de date adăugată")
+> ![Sursă de date adăugată.](media/configure-data-datasource-added.png "Sursă de date adăugată")
 
-|Stare  |Descriere  |
+|Status  |Descriere  |
 |---------|---------|
 |Reușit   |Sursa de date a fost ingerată cu succes dacă este menționat un timp în coloana **Reîmprospătat**.
 |Neînceput   |Sursa de date nu are încă date ingerate sau este încă în modul schiță.         |

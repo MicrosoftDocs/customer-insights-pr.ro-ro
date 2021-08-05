@@ -9,12 +9,12 @@ author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: edd2cf488b52cef87b09b90336e48fdc7f470a68
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 3f97e22687ae4f5536d492bac83bdf9c711e2c94
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5597434"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554450"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizați modele bazate pe Azure Machine Learning
 
@@ -52,7 +52,7 @@ Trebuie să creați seturi de date pentru a utiliza datele entității din Custo
      În designer, deschideți **Selectare Coloane în setul de date** și selectați **Setare ca parametru al canalului** unde furnizați un nume pentru parametru.
 
      > [!div class="mx-imgBorder"]
-     > ![Parametrizare set de date în designer](media/intelligence-designer-dataset-parameters.png "Parametrizare set de date în designer")
+     > ![Parametrizare set de date în proiectant.](media/intelligence-designer-dataset-parameters.png "Parametrizare set de date în designer")
    
 * Parametru set de date în SDK (Python)
    
@@ -78,7 +78,7 @@ Trebuie să creați seturi de date pentru a utiliza datele entității din Custo
 
 * Designerul oferă [modulul Export date](/azure/machine-learning/algorithm-module-reference/export-data) care permite exportarea ieșirii unui canal în stocarea Azure. În prezent, modulul trebuie să utilizeze tipul de depozit de date **Stocare Blob Azure** și parametrizează **Depozitul de date** și **Calea** relativă. Customer Insights anulează ambii acești parametri în timpul executării canalului cu un depozit de date și o cale accesibilă produsului.
    > [!div class="mx-imgBorder"]
-   > ![Exportul configurării modulului de date](media/intelligence-designer-importdata.png "Exportul configurării modulului de date")
+   > ![Exportul configurării modulului de date.](media/intelligence-designer-importdata.png "Exportul configurării modulului de date")
    
 * Când scrieți ieșirea de inferență folosind cod, puteți încărca ieșirea către cale dintr-un *depozit de date înregistrat* în spațiul de lucru. Când calea și depozitul de date sunt parametrizate în canal, Customer Insights va putea citi și importa ieșirea de inferență. În prezent, este acceptată o singură ieșire tabulară în format csv. Calea trebuie să includă directorul și numele fișierului.
 

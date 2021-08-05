@@ -1,7 +1,7 @@
 ---
 title: Conector Power BI
 description: Aflați cum să utilizați conectorul Dynamics 365 Customer Insights în Power BI.
-ms.date: 09/21/2020
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e43e2f9dbc84ebfbf2154990a752740f973296cb
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: faeb95bd7d2fe3cb220308cdee559b3347c5af54
+ms.sourcegitcommit: f98b6b2058f384365f222d1f9ba0cc9ce801f09d
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596054"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6661117"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector pentru Power BI (previzualizare)
 
@@ -39,7 +39,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 1. În caseta de dialog **Navigator**. Veți vedea lista tuturor mediilor la care aveți acces. Extindeți un mediu și deschideți oricare dintre directoare (entități, măsuri, segmente, îmbogățiri). De exemplu, deschideți folderul **Entități**, pentru a vedea toate entitățile pe care le puteți importa.
 
-   ![Power BI Conector Navigator](media/power-bi-navigator.png "Conector Navigator Power BI")
+   ![Power BI Conector Navigator.](media/power-bi-navigator.png "Conector Navigator Power BI")
 
 1. Selectați casetele de selectare de lângă entitățile pe care să le includeți și **Încărcare**. Puteți selecta mai multe entități din mai multe medii.
 
@@ -68,5 +68,11 @@ Puteți identifica și elimina relațiile duplicate.
 3. Eliminați orice relație duplicat identificată.
 
 După eliminarea relațiilor duplicate, încercați să configurați conectorul Power BI din nou. Mediul ar trebui să fie disponibil acum.
+
+### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Erori la câmpurile de dată la încărcarea entităților în Power BI Desktop
+
+Când încărcați entități care conțin câmpuri cu un format de dată, cum ar fi LL/ZZ/AAAA, puteți întâlni erori din cauza formatelor locale nepotrivite. Această nepotrivire se întâmplă atunci când fișierul Power BI Desktop este setat în alte setări regionale decât engleza (Statele Unite), deoarece câmpurile de date din statisticile publicului sunt salvate în format SUA.
+
+Fișierul Power BI Desktop are o singură setare regională, care se aplică la preluarea datelor. Obțineți aceste câmpuri de dată interpretate corect, setați localizarea fișierului .BPI la engleză (Statele Unite). [Aflați cum să schimbați setările locale ale unui fișier Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

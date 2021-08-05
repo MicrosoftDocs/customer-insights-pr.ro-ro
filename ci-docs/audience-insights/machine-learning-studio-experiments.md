@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: ameetj
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 71881f7e1f9448fe0a7d6d92b8102b8b42de7c2a
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 2eb44604e72b32292f971754d4f8c4fd1988c697
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5598354"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555184"
 ---
 # <a name="use-models-based-on-azure-machine-learning-studio-classic"></a>Utilizați modele bazate pe Azure Machine Learning Studio (clasic)
 
@@ -41,7 +41,7 @@ Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru constru
 
 1. După crearea resursei, va apărea tabloul de bord al spațiului de lucru Machine Learning Studio. Selectați **Lansați Machine Learning Studio**.
 
-   ![Interfața de utilizator a Studio pentru Învățare programată Azure](media/azure-machine-learning-studio.png)
+   ![Interfața de utilizator a Studio pentru Învățare programată Azure.](media/azure-machine-learning-studio.png)
 
 ## <a name="work-with-azure-machine-learning-studio"></a>Lucrul cu Studio pentru Învățare programată Azure
 
@@ -55,7 +55,7 @@ Acum puteți crea un experiment nou sau puteți importa un model de experiment e
 
 1. Dacă creați un nou experiment sau utilizați un șablon de experiment din galerie, trebuie să configurați proprietatea **Importați date**. Utilizați experiența ghidată sau furnizați direct detalii pentru a accesa stocarea Azure Blob care conține datele dvs.  
 
-   ![Experiment cu Studio pentru Învățare programată Azure](media/azure-machine-learning-studio-experiment.png)
+   ![Experiment cu Studio pentru Învățare programată Azure.](media/azure-machine-learning-studio-experiment.png)
 
 1. Acum puteți construi un canal de procesare personalizată pentru curățarea și preprocesarea datelor, extragerea funcțiilor și instruirea unui model adecvat.
 
@@ -63,15 +63,15 @@ Acum puteți crea un experiment nou sau puteți importa un model de experiment e
 
 1. Când sunteți mulțumit de calitatea unui model, selectați **Configurați serviciul web** > **Serviciul web predictiv**. Această opțiune importă modelul instruit și canalul featurizării din experimentul de instruire într-un serviciu predictiv. Serviciul predictiv poate lua un alt set de date de intrare cu schema folosită în experimentul de instruire pentru a face predicții.
 
-   ![Configurați un serviciu web predictiv](media/predictive-webservice-control.png)
+   ![Configurați un serviciu web predictiv.](media/predictive-webservice-control.png)
 
 1. După ce experimentul de servicii web predictiv are succes, îl puteți implementa pentru planificarea automată. Pentru ca serviciul web să funcționeze cu Customer Insights, selectați **Implementați serviciul Web** > **Previzualizare Implementați serviciul web [Nou]**. [Aflați mai multe despre implementarea de servicii web](/azure/machine-learning/studio/deploy-a-machine-learning-web-service).
 
-   ![Implementați un serviciu web predictiv](media/predictive-webservice-deploy.png)
+   ![Implementați un serviciu web predictiv.](media/predictive-webservice-deploy.png)
 
 ## <a name="sample-models-from-the-gallery"></a>Modele de exemple din galerie
 
-Vom folosi un scenariu fictiv al hotelului Contoso pentru modelele din acest articol. Hotelul Contoso colectează următoarele date:
+Vom folosi un scenariu fictiv de Contoso Hotel pentru modelele din acest articol. Hotelul Contoso adună următoarele date:
 
 - Date CRM constând în activitatea de ședere la hotel. Setul de date include informații despre datele de ședere pentru fiecare client înregistrat. De asemenea, conține informații despre rezervare, tipuri de cameră, detalii despre cheltuieli și așa mai departe. Datele se întind pe patru ani, din ianuarie 2014 până în ianuarie 2018.
 - Profilele clienților oaspeților hotelului. Aceste profiluri conțin informații despre fiecare client, inclusiv numele, data nașterii, adresa poștală, sexul și numărul de telefon.
@@ -87,13 +87,13 @@ Definiția scăderii poate diferi în funcție de scenariu. În acest exemplu, u
 
 Modelul de experiment poate fi importat din galerie. În primul rând, asigurați-vă că importați datele pentru **Activitate de ședere la hotel**, **Date despre consumator**, și **Date de utilizare a serviciului** din stocarea Azure Blob.
 
-   ![Importați datele pentru modelul de redus](media/import-data-azure-blob-storage.png)
+   ![Importați datele pentru modelul de redus.](media/import-data-azure-blob-storage.png)
 
 ### <a name="featurization"></a>Featizarea
 
 Pe baza definiției scăderii, identificăm mai întâi caracteristicile brute care vor influența eticheta. Apoi, procesăm aceste caracteristici brute în caracteristici numerice care pot fi utilizate cu modele de învățare programată. Integrarea datelor are loc în Customer Insights, astfel încât să putem alătura aceste tabele folosind *ID client*.
 
-   ![Alăturați-vă datele importate](media/join-imported-data.png)
+   ![Alăturați-vă datele importate.](media/join-imported-data.png)
 
 Crearea de caracteristici pentru construirea modelului pentru analiza puterii poate fi un pic dificilă. Datele sunt o funcție de timp, iar noua activitate hotelieră este înregistrată zilnic. În timpul featurizării, dorim să generăm caracteristici statice din datele dinamice. În acest caz, generăm multiple caracteristici din activitatea hotelului cu o fereastră glisantă de un an. De asemenea, extindem caracteristicile în funcție de categorie, cum ar fi tipul camerei sau tipul de rezervare, în funcții separate, utilizând o codare unică.  
 
@@ -114,7 +114,7 @@ Acum trebuie să alegem algoritmul optim pe care să-l utilizăm. În acest caz,
 
 Următoarea imagine arată canalul de formare și evaluare a modelului de la Studio pentru Învățare programată Azure:
 
-![Modelul de scădere în Studio pentru Învățare programată Azure](media/azure-machine-learning-model.png)
+![Modelul de retragere în Studio pentru Învățare programată Azure.](media/azure-machine-learning-model.png)
 
 De asemenea, aplicăm o tehnică numită **Importanța caracteristicilor de permutare**, un aspect important al optimizării modelului. Modelele încorporate au prea puțin detaliu sau nu au deloc asupra impactului vreunei funcții specifice pe predicția finală. Calculatorul pentru importanța caracteristicilor folosește un algoritm personalizat pentru a calcula influența caracteristicilor individuale asupra rezultatului unui model specific. Importanța caracteristicii este normalizată între +1 și -1. O influență negativă înseamnă că caracteristica corespunzătoare are o influență contra-intuitivă asupra rezultatului și ar trebui eliminată din model. O influență pozitivă indică faptul că caracteristica contribuie puternic la predicție. Aceste valori nu sunt coeficienți de corelație, deoarece sunt valori diferite. Pentru mai multe informații, consultați [Importanța caracteristicii de permutare](/azure/machine-learning/studio-module-reference/permutation-feature-importance).
 
@@ -148,7 +148,7 @@ Definim obiectivul ca maximizarea sumei în dolari a utilizării serviciilor ofe
 
 La fel ca modelul de scădere, ne alăturăm serviciului hotelier ServiceCustomerID cu CustomerID pentru a crea recomandări în mod constant per CustomerID.
 
-![Caracterizarea modelului de recomandare](media/azure-machine-learning-model-featurization.png)
+![Caracterizarea modelului de recomandare.](media/azure-machine-learning-model-featurization.png)
 
 Datele sunt furnizate de la trei entități diferite și funcțiile sunt derivate din ele. Featurizarea problemei de recomandare este diferită în comparație cu scenariile de declin sau CLTV. Modelul de recomandare are nevoie de date de intrare sub forma a trei seturi de caracteristici.
 
@@ -156,13 +156,13 @@ Datele sunt furnizate de la trei entități diferite și funcțiile sunt derivat
 
 Prezicem produse sau servicii folosind algoritmul numit **Recomandare pentru potrivirea de instruiri** pentru a instrui modelul de recomandare.
 
-![Algoritm Recomandări produs](media/azure-machine-learning-model-recommendation-algorithm.png)
+![Algoritm Recomandări produs.](media/azure-machine-learning-model-recommendation-algorithm.png)
 
 Cele trei porturi de intrare pentru modelul **Recomandare pentru potrivirea de instruiri** preiau datele de utilizare a serviciului de instruire, descrierea clientului (opțional) și descrierea serviciului. Există trei moduri diferite de notare a modelului. Unul este pentru evaluarea modelului în care se calculează un scor normalizat cu câștiguri cumulative cu reducere (NDCG) pentru a obține punctele clasificate. În acest experiment, scorul NDCG este 0,97. Celelalte două opțiuni sunt notarea modelului pe întregul catalog de servicii recomandabil sau punctarea numai pe elementele pe care utilizatorii nu le-au folosit până acum.
 
 Privind mai departe distribuțiile recomandărilor pe întregul catalogul de servicii, observăm că telefonul, WiFi-ul și curierul sunt serviciile de top care trebuie recomandate. Acest lucru este în concordanță cu ceea ce am găsit din distribuțiile datelor privind consumul de servicii:
 
-![Model de recomandare de ieșire](media/azure-machine-learning-model-output.png)
+![Model de recomandare de ieșire.](media/azure-machine-learning-model-output.png)
 
 Întregul [experiment de recomandare a produsului poate fi accesat în Azure AI Gallery.](https://gallery.azure.ai/Experiment/Recommendation-4)
 

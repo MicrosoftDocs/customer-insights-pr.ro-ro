@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b3c1da0f541efb85b2ca9d87a2e3b97bbfb6ca7f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 00be15367001a5f4342d60bb284726ef7154d05c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305309"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555322"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Îmbogățirea profilurilor clienților cu HERE Technologies (previzualizare)
 
@@ -35,7 +35,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 1. Selectați **Doresc îmbogățirea datelor** pe dala HERE Technologies și selectați **Începeți**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dală HERE Technologies](media/HERE-tile.png "Dală HERE Technologies")
+   > ![Dală HERE Technologies.](media/HERE-tile.png "Dală HERE Technologies")
 
 1. Selectați o [conexiune](connections.md) din lista derulantă. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune selectând **Adăugați conexiune**. Alegeți **HERE Technologies** din lista derulantă. 
 
@@ -50,7 +50,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 1. Definiți ce câmpuri din profilurile dvs. unificate ar trebui utilizate pentru a căuta date de locație potrivite de la HERE Technologies. Câmpurile **Stradă 1** și **Cod poștal** sunt obligatorii pentru adresa primară și/sau secundară selectată. Pentru o precizie mai mare a potrivirii, pot fi adăugate mai multe câmpuri.
 
    > [!div class="mx-imgBorder"]
-   > ![Pagina de configurare pentru îmbogățirii HERE Technologies](media/enrichment-HERE-configuration.png "Pagina de configurare pentru îmbogățirii HERE Technologies")
+   > ![Pagina de configurare pentru îmbogățirii HERE Technologies.](media/enrichment-HERE-configuration.png "Pagina de configurare pentru îmbogățirii HERE Technologies")
 
 1. Selectați **Următorul** pentru a completa maparea câmpului.
 
@@ -73,7 +73,7 @@ Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Ad�
 1. După finalizarea verificării, selectați **Salvare**.
 
    > [!div class="mx-imgBorder"]
-   > ![Pagina de configurare a conexiunii HERE Technologies](media/enrichment-HERE-connection.png "Pagina de configurare a conexiunii HERE Technologies")
+   > ![Pagina de configurare a conexiunii HERE Technologies.](media/enrichment-HERE-connection.png "Pagina de configurare a conexiunii HERE Technologies")
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 

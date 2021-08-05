@@ -9,12 +9,12 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 82f6f363497f8f1b45fa84acd49bcaed332e60e8
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: 72ccb2d86c698939d0ff018b4d36203e793df9ae
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305661"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554863"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
 
@@ -42,7 +42,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 1. Dați modelului dvs. particularizat un nume ușor de recunoscut în câmpul **Nume**.
 
    > [!div class="mx-imgBorder"]
-   > ![Captură de ecran a panoului noului flux de lucru](media/new-workflowv2.png "Captură de ecran a panoului noului flux de lucru")
+   > ![Captură de ecran a panoului noului flux de lucru.](media/new-workflowv2.png "Captură de ecran a panoului noului flux de lucru")
 
 1. Selectați organizația care conține serviciul web din **Entitate găzduită care conține serviciul dvs. web**.
 
@@ -59,7 +59,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
    > Fluxul de lucru al modelului personalizat va aplica euristică pentru a mapa câmpurile de intrare ale serviciului web la atributele entității pe baza numelui și tipului de date al câmpului. Veți vedea o eroare dacă un câmp de servicii web nu poate fi mapat la o entitate.
 
    > [!div class="mx-imgBorder"]
-   > ![Configurați un flux de lucru](media/intelligence-screen2-updated.png "Configurați un flux de lucru")
+   > ![Configurați un flux de lucru.](media/intelligence-screen2-updated.png "Configurați un flux de lucru")
 
 1. În pasul **Parametri de ieșire model**, setați următoarele proprietăți:
    - Machine Learning Studio (clasic)
@@ -70,12 +70,12 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
       1. Selectați **Nume parametru cale de ieșire** din canalul lotului din meniul vertical.
 
       > [!div class="mx-imgBorder"]
-      > ![Panou parametru de ieșire model](media/intelligence-screen3-outputparameters.png "Panou parametru de ieșire model")
+      > ![Panou parametru de ieșire model.](media/intelligence-screen3-outputparameters.png "Panou parametru de ieșire model")
 
 1. Selectați atributul de potrivire din lista verticală **ID Client în rezultate** care identifică clienții și selectați **Salvare**.
 
    > [!div class="mx-imgBorder"]
-   > ![Corelare rezultate cu panoul datele clienților](media/intelligence-screen4-relatetocustomer.png "Corelare rezultate cu panoul datele clienților")
+   > ![Corelare rezultate cu panoul datele clienților.](media/intelligence-screen4-relatetocustomer.png "Corelare rezultate cu panoul datele clienților")
 
 1. Vei vedea ecranul **Flux de lucru salvat** cu detalii despre fluxul de lucru.    
    Dacă ați configurat un flux de lucru pentru un canal Azure Machine Learning, Detaliile despre audiență se vor atașa la spațiul de lucru care conține canalul. Detaliile despre audiență vor avea un rol de **Colaborator** în spațiul de lucru Azure.

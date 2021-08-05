@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 36b7f7b2fac9497245cf6759506c53753972f173
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 7fc05aca61d1136f620019ee82dc6937ea39d8e5
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596008"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555138"
 ---
 # <a name="map-entities-and-attributes"></a>Entități de hartă și atribute
 
@@ -35,14 +35,14 @@ Pentru mai multe informații despre fluxul general de unificare a datelor, consu
 3. Selectați entitățile și atributele pe care doriți să le utilizați în fazele *potrivire* și *îmbinare*. Puteți selecta atributele necesare individual dintr-o entitate sau puteți include toate atributele dintr-o entitate selectând caseta de selectare **Includeți toate câmpurile** de la nivelul entității. Vă recomandăm să selectați cel puțin două entități pentru a beneficia de procesul de unificare a datelor.
 
    > [!div class="mx-imgBorder"]
-   > ![Adăugați exemple de entități](media/data-manager-configure-map-add-entities-example.png "Adăugați exemple de entități")
+   > ![Adăugați exemple de entități.](media/data-manager-configure-map-add-entities-example.png "Adăugați exemple de entități")
 
    În acest exemplu, adăugăm entitățile **eCommerceContacts** și **loyCustomers**. Alegând aceste entități, puteți obține informații despre care dintre clienții de afaceri online sunt membri ai programului de loialitate.
    
    Puteți căuta cuvinte cheie în toate atributele și entitățile pentru a selecta atributele necesare pe care doriți să le mapați.
    
      > [!div class="mx-imgBorder"]
-   > ![Exemplu de câmpuri de căutare](media/data-manager-configure-map-search-fields-example.png "Exemplu de câmpuri de căutare")
+   > ![Exemplu de câmpuri de căutare.](media/data-manager-configure-map-search-fields-example.png "Exemplu de câmpuri de căutare")
 
 4. Selectați **Aplicare** pentru a vă confirma selecțiile.
 
@@ -55,7 +55,7 @@ După selectarea entităților dvs., pagina **Hartă** listează entitățile se
 - **Tip de atribut semantic**: Categorii de atribute, cum ar fi adresa de e-mail sau numele. Pentru a utiliza modele de inteligență artificială pentru predicție inteligentă de semantică, economie de timp și îmbunătățirea preciziei, setați **Mapare inteligentă** la **PORNITĂ**. Maparea inteligentă evidențiază recomandările semantice bazate pe inteligență artificială în câmpul **Tip**. Dacă o setați la **OPRIT**, veți vedea recomandările noastre regulate de mapare. Puteți selecta orice tip semantic din lista de opțiuni disponibile și puteți înlocui selecția sugerată.
 
 > [!div class="mx-imgBorder"]
-> ![Tipul de atribut și predicție semantică](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipul de atribut și predicție semantică")
+> ![Tipul de atribut și predicție semantică.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipul de atribut și predicție semantică")
 
 Adăugarea unui tip semantic particularizat este de asemenea posibilă. Selectați câmpul tip pentru un atribut și introduceți numele dvs. de tip semantic particularizat. Astfel, puteți modifica tipurile de atribute care au fost identificate automat de sistem.
 
@@ -64,7 +64,7 @@ Toate atributele pentru care un tip semantic este identificat automat sunt grupa
 Atributele care nu sunt mapate automat la un tip semantic sunt grupate în secțiunea **Definiți datele în câmpurile nemapate**. Selectați câmpul de tip semantic pentru atributele nemapate sau introduceți numele tipului de atribut personalizat.
 
 > [!div class="mx-imgBorder"]
-> ![Cheie primară și tip de atribut](media/data-manager-configure-map-add-attributes.png "Cheie primară și tip de atribut")
+> ![Cheie primară și tip de atribut.](media/data-manager-configure-map-add-attributes.png "Cheie primară și tip de atribut")
 
 > [!NOTE]
 > Un câmp ar trebui să fie mapat la tipul semantic Person.FullName pentru a completa numele clientului pe cardul clientului. În caz contrar, cărțile client vor apărea fără nume. 
@@ -76,7 +76,7 @@ Atributele care nu sunt mapate automat la un tip semantic sunt grupate în secț
 2. În panoul **Editați câmpurile**, adăugați sau eliminați atribute și entități. Folosiți căutarea sau derulați pentru a găsi și selecta atributele și entitățile de interes. Nu puteți elimina un atribut sau o entitate dacă au fost deja potrivite.
 
    > [!div class="mx-imgBorder"]
-   > ![Adăugare sau eliminare atribute](media/configure-data-map-edit.png "Adăugare sau eliminare atribute")
+   > ![Adăugare sau eliminare atribute.](media/configure-data-map-edit.png "Adăugare sau eliminare atribute")
 
 3. Selectați **Se aplică**.
 

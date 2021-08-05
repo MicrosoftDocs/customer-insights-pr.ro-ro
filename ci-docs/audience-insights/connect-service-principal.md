@@ -9,18 +9,18 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c670b0065a2833a6dc311d9e86d2b351140382ce
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5596514"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692128"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu Azure pentru Detalii despre audiență
 
 Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Citiți mai departe pentru a afla cum să conectați Detalii despre audiență cu un cont Gen2 Azure Data Lake Storage care utilizează o entitate principală de serviciu Azure în loc de chei de cont de stocare. 
 
-Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) sau [crea un mediu nou sau actualiza un mediu existent](manage-environments.md#create-an-environment-in-an-existing-organization) în siguranță.
+Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) sau [crea un mediu nou sau actualiza un mediu existent](get-started-paid.md) în siguranță.
 
 > [!IMPORTANT]
 > - Contul de stocare Azure Data Lake Gen2 care intenționează să utilizeze principalul serviciului trebuie să aibă [Spațiul de nume ierarhic (HNS) activat](/azure/storage/blobs/data-lake-storage-namespace).
@@ -81,7 +81,7 @@ Poate dura până la 15 minute pentru propagarea schimbărilor.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduceți ID-ul resursei Azure sau detaliile abonamentului Azure în atașarea contului de stocare la Detalii despre audiență.
 
-Atașați un cont Azure Data Lake Storage în Detalii despre audiență pentru [stocarea datelor de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-common-data-service-lake.md). Alegerea opțiunii Azure Data Lake vă permite să alegeți între o abordare bazată pe resurse sau o abordare bazată de abonament.
+Atașați un cont Azure Data Lake Storage în Detalii despre audiență pentru [stocarea datelor de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-dataverse-managed-lake.md). Alegerea opțiunii Azure Data Lake vă permite să alegeți între o abordare bazată pe resurse sau o abordare bazată de abonament.
 
 Urmați pașii de mai jos pentru a furniza informațiile necesare despre abordarea selectată.
 

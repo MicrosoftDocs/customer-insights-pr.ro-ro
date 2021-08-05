@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 50c231070ff9930c1ea82971bf4f8541a89d5027
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
+ms.openlocfilehash: b37bb5dfeed2326784ef276a93a04bec626aaf6e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305906"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554702"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la o sursă de date Power Query
 
@@ -42,7 +42,7 @@ Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea ac
 1. Dialogul **Power Query - Editați interogările** vă permite să examinați și să rafinați datele. Entitățile identificate de sisteme în sursa de date selectată apar în panoul din stânga.
 
    > [!div class="mx-imgBorder"]
-   > ![Editați interogările de dialog](media/data-manager-configure-edit-queries.png "Editați interogările de dialog")
+   > ![Editați interogările de dialog.](media/data-manager-configure-edit-queries.png "Editați interogările de dialog")
 
 1. De asemenea, vă puteți transforma datele. Selectați o entitate de editat sau de transformat. Utilizați opțiunile din fereastra Power Query pentru a aplica transformări. Fiecare transformare este listată sub **Pași aplicați**. Power Query oferă numeroase opțiuni de transformare pre-construite. Pentru informații suplimentare, consultați [Transformări Power Query](/power-query/power-query-what-is-power-query#transformations).
 
@@ -75,7 +75,7 @@ Conectori cu bifă în coloana **Customer Insights (fluxuri de date)** sunt disp
 2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o modificați și selectați **Editaț** din meniul derulant.
 
    > [!div class="mx-imgBorder"]
-   > ![Opțiunea editare](media/edit-option-data-sources.png "Opțiunea editare")
+   > ![Opțiunea editare.](media/edit-option-data-sources.png "Opțiunea editare")
 
 3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** așa cum au fost descrise în secțiunea [Creați o nouă sursă de date](#create-a-new-data-source).
 

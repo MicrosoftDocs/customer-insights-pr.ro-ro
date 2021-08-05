@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 06/15/2021
+ms.date: 07/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 355dc22ac381145b231848830cefc47eda7968f4
-ms.sourcegitcommit: 6944c1592877eb92ec789df5f2e0dbecef638837
+ms.openlocfilehash: 1c54d74c999eb4776074951a129019843017964e
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6263266"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692404"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
@@ -26,6 +26,28 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="june-2021-updates"></a>Actualizări iunie 2021
+
+Actualizările din iunie 2021 includ mai multe caracteristici, actualizări de performanță și remedieri de erori.
+
+### <a name="data-ingestion"></a>Ingestie date
+
+- **Actualizări îmbunătățite ale progresului unificării datelor** Acum puteți vizualiza actualizări de stare dinamică mai granulare și îmbunătățite pe pașii [procesul de unificare a datelor](data-unification.md). Această caracteristică vă permite să urmăriți progresul detaliat pentru a înțelege fluxul procesului și să luați măsuri dacă vreun pas necesită atenție.
+
+### <a name="extensibility"></a>Extensibilitate
+
+- **Exportați segmente și alte date în Salesforce Marketing Cloud** Am extins destinațiile noastre de export pentru a include [Salesforce Marketing Cloud](export-salesforce.md). Acum puteți exporta segmente și alte tipuri de date în Salesforce Marketing Cloud printr-un export SFTP de brand. Importul de date poate fi complet automatizat în Salesforce și utilizat pentru a crea campanii de marketing mai eficiente.  
+ 
+- **Exportați segmente în ActiveCampaign** Am extins destinațiile noastre de export pentru a include [Campanie activă](export-active-campaign.md). Acum puteți exporta segmente pentru a genera campanii, rula marketing prin e-mail și lucra cu grupuri specifice de clienți în ActiveCampaign.
+ 
+- **Exportați segmente în Sendinblue** Am extins destinațiile noastre de export pentru a include [Sendinblue](export-sendinblue.md). Acum puteți exporta segmente pentru a genera campanii, rula marketing prin e-mail și lucra cu grupuri specifice de clienți în Sendinblue.
+ 
+### <a name="ux-updates"></a>Actualizări UX 
+
+- **Pagina de clienți noi și îmbunătățite și pagina de detalii a profilului** Am reproiectat pagina Clienți și paginile de detalii ale profilului pentru o experiență îmbunătățită a utilizatorului și o performanță mai bună. Aceste modificări vă permit să vizualizați, să sortați, să căutați și să filtrați clienții. Filtrele sunt acum reprezentate în adresa URL pentru a partaja rezultatele căutării cu alți utilizatori fără probleme. Rezultatele căutării pot fi salvate și ca segment.    
+  Pagina de detalii pentru profilurile clienților acum grupează date în diferite subsecțiuni, cum ar fi date demografice, ID-uri și alte atribute de profil pentru o mai bună lizibilitate. Alte secțiuni de pe pagina cu detalii despre profil sunt acum mai interactive. De exemplu, secțiunea de activități permite acum filtrarea și sortarea.
+
 
 ## <a name="may-2021-updates"></a>Actualizări mai 2021
 
@@ -170,7 +192,7 @@ Actualizările din februarie 2021 includ mai multe caracteristici, actualizări 
 
 - **Mediul de copiere acceptă mai multe tipuri de surse de date**
 
-  Administratorii pot copia configurațiile de mediu într-un mediu nou din aceeași organizație. Această caracteristică extinde funcționalitatea mediului de copiere pentru cazurile în care sursele de date se bazează pe un data lake Common Data Service sau se utilzează un folder Common Data Model.
+  Administratorii pot copia configurațiile de mediu într-un mediu nou din aceeași organizație. Această caracteristică extinde funcționalitatea mediului de copiere pentru cazurile în care sursele de date bazate pe un data lake gestionat Microsoft Dataverse sau un folder Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizări din ianuarie 2021
 

@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights în Salesforce Marketing Cloud
 description: Aflați cum să configurați conexiunea și să exportați către Salesforce Marketing Cloud.
-ms.date: 06/24/2021
+ms.date: 07/23/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 123f8b2dbb6140785dec6c1b4164d2f513f66a53
-ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
+ms.openlocfilehash: 8ce243918c2388e931a98df3bbe576ddf692f707
+ms.sourcegitcommit: 4823684a1399fd66ffecfce21735f2bc90a1733c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "6314660"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "6660282"
 ---
 # <a name="export-segments-and-other-data-to-salesforce-marketing-cloud-preview"></a>Exportați segmente și alte date în Salesforce Marketing Cloud (previzualizare)
 
@@ -23,11 +23,6 @@ Folosiți datele clienților dvs. în Salesforce Marketing Cloud exportându-le 
 ## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
 
 - Disponibilitatea unei gazde SFTP și acreditările de administrator corespunzătoare. [Cum se configurează locațiile SFTP pentru Salesforce Marketing Cloud](https://help.salesforce.com/articleView?id=sf.mc_es_configure_enhanced_ftp.htm&type=5) 
-
-## <a name="known-limitations"></a>Limitări cunoscute
-
-- Runtime-ul unui export depinde de performanța sistemului dvs. Vă recomandăm două nuclee CPU și 1 Gb de memorie ca configurație minimă a serverului dvs. 
-- Entitățile exportatoare cu până la 100 de milioane de profiluri de clienți pot dura 90 de minute când se utilizează configurația minimă recomandată. 
 
 ## <a name="set-up-the-connection-to-salesforce-marketing-cloud"></a>Configurați conexiunea la Salesforce Marketing Cloud
 

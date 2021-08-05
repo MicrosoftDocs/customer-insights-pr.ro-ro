@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 987457966fe1fc034d9e3cd2a1ce33902c7a84f4
-ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.openlocfilehash: b377a3500c5d91962e59d46fbc259db5cc8fa7d0
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "5760342"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555460"
 ---
 # <a name="export-segments-to-liverampreg-preview"></a>Exportați segmente către LiveRamp&reg; (previzualizare)
 
@@ -56,7 +56,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. În câmpul **Alegeți identificatorul de cheie**, selectați **E-mail**,  **Numele și adresa**, sau **Telefon** pentru a trimite la LiveRamp pentru rezolvarea identității.
    > [!div class="mx-imgBorder"]
-   > ![Conector LiveRamp cu mapare de atribute](media/export-liveramp-segments.png "Conector LiveRamp cu mapare de atribute")
+   > ![Conector LiveRamp cu mapare de atribute.](media/export-liveramp-segments.png "Conector LiveRamp cu mapare de atribute")
 
 1. Mapați atributele corespunzătoare de la entitatea clientului dvs. unificat pentru identificatorul de cheie selectat.
 

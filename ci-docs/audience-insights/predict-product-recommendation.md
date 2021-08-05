@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 01704f78cfe1f6ceeee19ff825fc65150894d4ed
-ms.sourcegitcommit: 6b07c9c3102761be162e4842f3c9fbc19f948a9b
+ms.openlocfilehash: bcbafa513c2c61b0280c91aa7ed71e211c32c35c
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "6095571"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6556139"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicție de recomandare de produse (previzualizare)
 
@@ -64,7 +64,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 1. Selectați dala **Model de recomandări de produse (previzualizare)** și selectați **Utilizați acest model**.
    > [!div class="mx-imgBorder"]
-   > ![Recomandarea produsului model de dale cu Utilizați acest buton model](media/product-recommendation-usethismodel.PNG "Recomandarea produsului model de dale cu Utilizați acest buton model")
+   > ![Recomandarea produsului model de dale cu Utilizați acest buton model.](media/product-recommendation-usethismodel.PNG "Recomandarea produsului model de dale cu Utilizați acest buton model")
 
 1. Consultați informațiile despre cerințele modelului. Dacă aveți datele necesare, selectați **Începeți**.
 
@@ -93,7 +93,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 1. Asociați câmpurile semantice la atributele din cadrul entității din istoricul achizițiilor și selectați **Următorul**. Pentru descrierea câmpurilor, consultați secțiunea [Cerințe preliminare](#prerequisites).
    > [!div class="mx-imgBorder"]
-   > ![Definiți relația dintre entități](media/product-recommendation-purchasehistorymapping.PNG "Pagina istoric achiziții care arată atributele semantice care sunt mapate la câmpurile din entitatea istoric achiziții selectată")
+   > ![Definiți relația dintre entități.](media/product-recommendation-purchasehistorymapping.PNG "Pagina istoric achiziții care arată atributele semantice care sunt mapate la câmpurile din entitatea istoric achiziții selectată")
 
 1. Dacă câmpurile nu sunt completate, configurați relația de la entitatea din istoricul achizițiilor la entitatea *Client*.
     1. Selectați **Entitate istoric achiziții**.
@@ -101,7 +101,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
     1. Selectați **Entitatea client** care se potrivește cu entitatea clientului primar.
     1. Introduceți un nume care descrie relația.
        > [!div class="mx-imgBorder"]
-       > ![Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul](media/model-purchase-join.png "Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul")
+       > ![Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul.](media/model-purchase-join.png "Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul")
 
 1. Selectați **Salvare**.
 
@@ -145,7 +145,7 @@ Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predic�
 
 1. Accesați fila **Predicțiile mele** din **Informații** > **Predicții**.
    > [!div class="mx-imgBorder"]
-   > ![Vizualizare a paginii Predicțiile mele](media/product-recommendation-mypredictions.PNG "Vizualizare a paginii Predicțiile mele")
+   > ![Vizualizare a paginii Predicțiile mele.](media/product-recommendation-mypredictions.PNG "Vizualizare a paginii Predicțiile mele")
 
 1. Selectați predicția pe care doriți să o revizuiți.
    - **Numele predicției:** Numele predicției furnizat la crearea acesteia.
@@ -163,7 +163,7 @@ Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predic�
 
 1. Selectați elipsele verticale de lângă predicția pentru care doriți să analizați rezultatele și selectați **Vizualizare**.
    > [!div class="mx-imgBorder"]
-   > ![Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere](media/product-recommendation-verticalellipses.PNG "Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere")
+   > ![Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere.](media/product-recommendation-verticalellipses.PNG "Vizualizarea opțiunilor din meniul elipselor verticale pentru o predicție, incluzând editare, actualizare, vizualizare, jurnale și ștergere")
 
 1. Există cinci secțiuni principale de date în pagina de rezultate:
     1. **Performanța modelului de instruire:** A, B sau C sunt scoruri posibile. Acest scor indică performanța predicției și vă poate ajuta să luați decizia de a utiliza rezultatele stocate în entitatea de ieșire.
@@ -173,13 +173,13 @@ Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predic�
             - **C** Modelul va fi considerat de calitate **C** dacă valoarea „Success @ K” este mai mică decât valoarea de bază.
                
                > [!div class="mx-imgBorder"]
-               > ![Vizualizarea rezultatului performanței modelului](media/product-recommendation-modelperformance.PNG "Vizualizarea rezultatului performanței modelului")
+               > ![Vizualizarea rezultatului performanței modelului.](media/product-recommendation-modelperformance.PNG "Vizualizarea rezultatului performanței modelului")
             - **De bază**: Modelul ia cele mai recomandate produse în funcție de numărul de achiziții pentru toți clienții și folosește reguli învățate identificate de model pentru a crea un set de recomandări pentru clienți. Predicțiile sunt apoi comparate cu produsele de top, calculate după numărul de clienți care au achiziționat produsul. Dacă un client are cel puțin un produs recomandat în produsele sale, care a fost văzut și în produsele cumpărate de top, acesta este considerat o parte a liniei de bază. Dacă ar exista 10 dintre acești clienți care au achiziționat un produs recomandat din 100 de clienți în total, valoarea inițială ar fi de 10%.
             - **Succes @ K**: Folosind un set de validare a perioadei de timp a tranzacțiilor, se creează recomandări pentru toți clienții și se compară cu setul de validare al tranzacțiilor. De exemplu, într-o perioadă de 12 luni, luna 12 ar putea fi rezervată ca set de date de validare. Dacă modelul prezice cel puțin un lucru pe care l-ați cumpăra în luna 12 pe baza a ceea ce a învățat din cele 11 luni anterioare, clientul ar crește măsurătoarea „Success @ K”.
     
     1. **Cele mai sugerate produse (cu număr):** Primele cinci produse care au fost prezise pentru clienții dvs.
        > [!div class="mx-imgBorder"]
-       > ![Grafic care prezintă primele 5 cele mai recomandate produse](media/product-recommendation-topproducts.PNG "Grafic care prezintă primele 5 cele mai recomandate produse")
+       > ![Grafic care prezintă primele 5 cele mai recomandate produse.](media/product-recommendation-topproducts.PNG "Grafic care prezintă primele 5 cele mai recomandate produse")
     
     1. **Factori cheie de recomandare:** Modelul folosește istoricul tranzacțiilor clienților pentru a face recomandări de produse. Învață modele bazate pe achiziții anterioare și găsește similitudini între clienți și produse. Aceste asemănări sunt apoi utilizate pentru a genera recomandări de produse.
     Următorii sunt factorii care ar putea influența o recomandare de produs generată de model. 
@@ -190,20 +190,20 @@ Uneori, numai anumite produse sunt benefice sau adecvate pentru tipul de predic�
         Fiecare recomandare de produs este influențată de unul sau mai mulți dintre acești factori. Procentul recomandărilor în care fiecare factor de influență a jucat un rol este vizualizat într-un grafic. În exemplul următor, 100% din recomandări au fost influențate de tranzacțiile anterioare, 60% de similitudinea clienților și 22% de similaritatea produsului. Plasați cursorul peste barele din grafic pentru a vedea procentajul exact la care au contribuit factorii de influență.
 
         > [!div class="mx-imgBorder"]
-        > ![Principalii factori pentru recomandări](media/product-recommendation-keyrecommendationfactors.png "Factorii cheie de recomandare învățați de model pentru a genera recomandări de produse")
+        > ![Principalii factori pentru recomandări.](media/product-recommendation-keyrecommendationfactors.png "Factorii cheie de recomandare învățați de model pentru a genera recomandări de produse")
        
      
    1. **Statistici de date**: Oferă o prezentare generală a numărului de tranzacții, clienți și produse pe care le-a luat în considerare modelul. Se bazează pe datele de intrare care au fost utilizate pentru a învăța tiparele și a genera recomandări de produse.
 
       > [!div class="mx-imgBorder"]
-      > ![Statistici de date](media/product-recommendation-datastatistics.png "Statistici de date despre datele inout utilizate de model pentru a învăța tiparele")
+      > ![Statistici de date.](media/product-recommendation-datastatistics.png "Statistici de date despre datele inout utilizate de model pentru a învăța tiparele")
 
       Această secțiune prezintă statistici în jurul punctelor de date care au fost utilizate de model pentru a învăța modele și a genera recomandări de produse. Filtrarea, așa cum este configurată în configurația modelului, se va aplica la ieșirea generată de model. Cu toate acestea, modelul folosește toate datele disponibile pentru a învăța tiparele. Prin urmare, dacă utilizați filtrarea produselor în configurația modelului, această secțiune va arăta numărul total de produse pe care modelul le-a analizat pentru a învăța modele, care ar putea diferi de numărul de produse care corespund criteriilor de filtrare definite.
 
    1. **Recomandări de produse de înaltă încredere:** Un eșantion de recomandări oferite clienților dvs. despre care modelul consideră că este probabil să fie cumpărate de client.    
       Dacă se adaugă un catalog de produse, codurile de produs vor fi înlocuite cu nume de produse. Numele produselor oferă informații mai ușor de acționat și mai intuitive despre predicții.
        > [!div class="mx-imgBorder"]
-       > ![Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali](media/product-recommendation-highconfidence.PNG "Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali")
+       > ![Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali.](media/product-recommendation-highconfidence.PNG "Listă care prezintă sugestii de mare încredere pentru un set selectat de clienți individuali")
 
 ## <a name="manage-predictions"></a>Gestionați predicțiile
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 822082d661863e737ea3d3a749a6c878db766967
-ms.sourcegitcommit: e8e03309ba2515374a70c132d0758f3e1e1851d0
+ms.openlocfilehash: 7ee57aa9e86ebf9bd1989d88750642f0b01bd4bf
+ms.sourcegitcommit: f18635c29bb25d9e424a3f5825dc2696278450cf
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/04/2021
-ms.locfileid: "5977392"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "6327379"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele la Azure Synapse Analytics (versiune preliminară)
 
@@ -74,8 +74,10 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 1. Dați un **Nume afișat** pentru exportul dvs. și un **Nume al bazei de date**.
 
 1. Selectați ce entități doriți să exportați la Azure Synapse Analytics.
+   > [!NOTE]
+   > Surse de date bazate pe un [Dosar Common Data Model](connect-common-data-model.md) nu sunt acceptate.
 
-1. Selectați **Salvare**.
+2. Selectați **Salvare**.
 
 Salvarea unui export nu se execută imediat.
 

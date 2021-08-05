@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: 3b10fb23cca03ed918aa7fd46478b568d5ebbf1a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305171"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555506"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
 
@@ -27,7 +27,7 @@ Pentru a configura îmbogățirea afinităților de marcă, accesați fila **Des
 Pentru a configura îmbogățirea afinităților de interes, accesați fila **Descoperire** și selectați **Îmbogățiți-mi datele** pe dala **Interese**.
 
    > [!div class="mx-imgBorder"]
-   > ![Dale de branduri și dobânzi](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
+   > ![Dale de branduri și interese.](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
 
 ## <a name="how-we-determine-affinities"></a>Cum determinăm afinitățile
 
@@ -131,9 +131,9 @@ Verificați datele îmbogățite selectând **Vizualizați date îmbogățite** 
 
 Afinitățile de marcă și interes pot fi, de asemenea, vizualizate pe carduri individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul de client, veți găsi diagrame pentru mărcile sau interesele pentru care persoanele din profilul demografic al clientului au afinitate.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Card de client cu date îmbogățite":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Card de client cu date îmbogățite.":::
 
-## <a name="next-steps"></a>Următorii pași
+## <a name="next-steps"></a>Pașii următori
 
 Creați în plus față de datele îmbogățite ale clienților. Creați [Segmente](segments.md) și [Măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
 

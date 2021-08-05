@@ -2,6 +2,8 @@
   href: index.yml
 - name: Prezentare generală produs
   href: overview.md
+- name: Creați o versiune de încercare
+  href: audience-insights/get-started-trial.md
 - name: Accesați-vă mediul
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Detalii despre audiență
@@ -10,12 +12,10 @@
       href: audience-insights/index.yml
     - name: Prezentare generală a capacității
       href: audience-insights/overview.md
-    - name: Versiune de încercare gratuită
-      href: 'https://dynamics.microsoft.com/get-started/?appname=customerinsights'
     - name: Caracteristici noi și actualizate
       href: audience-insights/whats-new-audience-insights.md
-    - name: Creați un nou mediu
-      href: audience-insights/home.md
+    - name: Creați un mediu nou
+      href: audience-insights/get-started-paid.md
     - name: Aflați module
       items:
         - name: Ingerare date
@@ -34,8 +34,8 @@
           href: audience-insights/connect-power-query.md
         - name: Adăugați un folder Common Data Model ca o sursă de date
           href: audience-insights/connect-common-data-model.md
-        - name: Adăugați data lake gestionat de Common Data Service
-          href: audience-insights/connect-common-data-service-lake.md
+        - name: Adăugați data lake gestionat de Dataverse
+          href: audience-insights/connect-dataverse-managed-lake.md
         - name: Reîmprospătare incrementală pentru surse de date
           href: audience-insights/incremental-refresh-data-sources.md
         - name: Ingestie date în timp real
@@ -76,11 +76,11 @@
           href: audience-insights/enrichment-experian.md
         - name: Îmbogățiți cu importul particularizat SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Segmente și măsuri
+    - name: Segmente
       items:
         - name: Prezentare generală a segmentelor
           href: audience-insights/segments.md
-        - name: Creați segmente și grupuri de clienți
+        - name: Creare segmente
           href: audience-insights/segment-builder.md
         - name: Segmente sugerate bazate pe măsuri
           href: audience-insights/suggested-segments.md
@@ -254,11 +254,13 @@
       items:
         - name: Creați și modificați evenimente
           href: engagement-insights/refined-events.md
+        - name: Recunoașteți evenimentele web de la vizitatori autentificați anterior
+          href: engagement-insights/unknown-to-known.md
         - name: Export evenimente
           href: engagement-insights/export-events.md
-    - name: Rapoarte
+    - name: 'Rapoarte  '
       items:
-        - name: Vizualizare rapoarte
+        - name: Vizualizați rapoartele
           href: engagement-insights/view-reports.md
         - name: Creați rapoarte particularizate
           href: engagement-insights/custom-reports.md
@@ -304,6 +306,8 @@
       items:
         - name: Ștergeți și exportați datele cu caracter personal
           href: engagement-insights/delete-export-personal-data.md
+    - name: Disponibilitate regională
+      href: engagement-insights/regional-availability.md
     - name: Limite de serviciu
       href: engagement-insights/quotas.md
 - name: Contactați asistența

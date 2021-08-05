@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9326f821f9970ba2254ab804814e369abb677eb0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: f98af8fb1c1d1ae050a5273286d35cf276d9fb17
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6304757"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554496"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -35,7 +35,7 @@ Acest articol descrie cum să accesați API-urile Customer Insights, să creați
  
    Activarea API-urilor creează o cheie de abonament primară și una secundară pentru instanța dvs. care este folosită în solicitările API. Puteți regenera cheile selectând **Regenerare cheie primară** sau **Regenerare cheie secundară** din **Administrator** > **Permisiuni** > **API-uri**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Activați API-urile Customer Insights":::
+   :::image type="content" source="media/enable-apis.gif" alt-text="Activați API-urile Customer Insights.":::
 
 1. Selectați **Explorați API-urile noastre** pentru [a încerca API-urile](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -129,7 +129,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
  
    Alternativ, rulați această comandă în **Consola Manager pachet NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adăugați pachetul NuGet la un proiect Visual Studio":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adăugați pachetul NuGet la un proiect Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Utilizați biblioteca de client C#
 
@@ -141,7 +141,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
 
 1. Introduceți această `HttpClient` în construcția clientului `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Eșantion de httpclient":::
+   :::image type="content" source="media/httpclient-sample.png" alt-text="Eșantion de httpclient.":::
 
 1. Efectuați apeluri cu clientul pentru „metodele de extensie”,"—de exemplu, `GetAllInstancesAsync`. Dacă accesul la `Microsoft.Rest.HttpOperationResponse` subiacent este preferat, utilizați „metode de mesaj http”—de exemplu `GetAllInstancesWithHttpMessagesAsync`.
 

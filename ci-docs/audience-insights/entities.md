@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: f81128183b6e20e1078ad38c42c771d343909270
-ms.sourcegitcommit: c1841ab91fbef9ead9db0f63fbc669cc3af80c12
+ms.openlocfilehash: ac8b0671b20123091bef64e672fc53398fe8955a
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/17/2021
-ms.locfileid: "6049409"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6553990"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
@@ -30,19 +30,19 @@ Pagina **Entități** listează entitățile și include mai multe coloane:
 - **Ultima actualizare**: Data și ora ultimei actualizări a entității
 - **Ultima actualizare**: Data și ora ultimei actualizări de date
 
-## <a name="exploring-a-specific-entitys-data"></a>Explorarea datelor unei entități specifice
+## <a name="explore-a-specific-entitys-data"></a>Explorați datele unei entități specifice
 
 Selectați o entitate pentru a explora diferitele câmpuri și înregistrări incluse în acea entitate.
 
 > [!div class="mx-imgBorder"]
-> ![Selectați o entitate](media/data-manager-entities-data.png "Selectați o entitate")
+> ![Selectați o entitate.](media/data-manager-entities-data.png "Selectați o entitate")
 
 - Fila **Date** afișează un tabel cu detalii despre înregistrările individuale ale entității.
 
 > [!div class="mx-imgBorder"]
-> ![Tabelul câmpurilor](media/data-manager-entities-fields.PNG "Tabelul câmpurilor")
+> ![Tabelul câmpurilor.](media/data-manager-entities-fields.PNG "Tabelul câmpurilor")
 
-- Fila **Atribute** fila este selectată implicit și afișează un tabel pentru a examina detaliile entității selectate, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Acestea sunt tipuri semantice care pot diferi de tipurile de date ale atributelor - de exemplu, câmpul *E-mail* de mai jos are un tip de date *Text* dar tipul său (semantic) de Common Data Model ar putea fi *E-mail* sau *EmailAddress*.
+- Fila **Atribute** fila este selectată implicit și afișează un tabel pentru a examina detaliile entității selectate, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Aceste tipuri sunt tipuri semantice care pot diferi de tipurile de date ale atributelor. De exemplu, câmpul *E-mail* mai jos are un tip de date *Text* dar tipul său Common Data Model (semantic) ar putea fi *E-mail* sau *Adresa de e-mail*.
 
 > [!NOTE]
 > Ambele tabele prezintă doar un eșantion de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați pagina **Surse de date**, selectați o entitate, selectați **Editați**, apoi vizualizați datele acestei entități cu editorul Power Query, așa cum este explicat în [Surse de date](data-sources.md).
@@ -52,11 +52,28 @@ Pentru a afla mai multe despre datele ingerate în entitate, coloana **Rezumat**
 Selectați pictograma diagramă pentru a vedea rezumatul datelor.
 
 > [!div class="mx-imgBorder"]
-> ![Simbol rezumat](media/data-manager-entities-summary.png "Tabel Rezumat date")
+> ![Simbol rezumat.](media/data-manager-entities-summary.png "Tabel Rezumat date")
 
-### <a name="next-step"></a>Următorul pas
+## <a name="entity-specific-information"></a>Informații specifice entității
 
-Consultați subiectul [Unificare](data-unification.md) pentru a afla despre cum să *mapați*, *potriviți*, și *combinați* datele ingerate.
+Următoarea secțiune oferă informații despre unele entități create de sistem.
+
+### <a name="corrupted-data-sources"></a>Surse de date deteriorate
+
+Câmpurile dintr-o sursă de date ingerate pot conține date deteriorate. Înregistrările cu câmpuri deteriorate sunt expuse în entități create de sistem. Cunoașterea înregistrărilor deteriorate vă ajută să identificați ce date să revizuiți și să actualizați pe sistemul sursă. După următoarea reîmprospătare a sursă de date, înregistrările corectate sunt ingerate către Customer Insights și transmise proceselor din aval. 
+
+De exemplu, o coloană „zi de naștere” are tipul de date setat ca „dată”. Înregistrarea unui client are ziua de naștere înregistrată ca „01/01/19777”. Sistemul va semnaliza această înregistrare ca fiind deteriorată. Cineva poate schimba acum ziua de naștere din sistemul sursă în „1977”. După o reîmprospătare automată a surselor de date, câmpul are acum un format valid și înregistrarea va fi eliminată din entitatea deteriorată. 
+
+Accesați **Date** > **Entități** și căutați entitățile deteriorate în secțiunea **Sistem**. Schema de denumire a entităților deteriorate: „DataSourceName_EntityName_corrupt”.
+
+Customer Insights procesează încă înregistrări deteriorate. Cu toate acestea, acestea pot cauza probleme atunci când lucrați cu datele unificate.
+
+Următoarele verificări rulează pe datele ingerate pentru a expune înregistrările deteriorate: 
+
+- Valoarea unui câmp nu se potrivește cu tipul de date al coloanei sale.
+- Câmpurile conțin caractere care fac ca coloanele să nu se potrivească cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără scăpare sau caracterele cu linie nouă.
+- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul ISO standard.
+
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -9,12 +9,12 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3342328b9eead9bdcb8b41f119a1d0a5823001c8
-ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.openlocfilehash: 31b9b1b709540896c1dbc19f974df4ab056a7b8d
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "5595916"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692542"
 ---
 # <a name="complete-your-partial-data-with-predictions"></a>Finalizați-vă datele parțiale cu predicții
 
@@ -31,11 +31,11 @@ Predicțiile vă permit să creați cu ușurință valori previzionate care vă 
 
 Înainte ca organizația dvs. să poată utiliza funcția de predicții, trebuie să fie îndeplinite următoarele cerințe preliminare:
 
-1. Organizația dvs. are o instanță [înființată în Common Data Service](/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
+1. Organizația dvs. are o instanță [instalată în Microsoft Dataverse](/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
 
-2. Mediul dvs. este atașat la instanța Common Data Service.
+2. Mediul dvs. de detalii despre public este atașat instanța dvs. Dataverse.
 
-Dacă ați [creat un mediu nou](manage-environments.md), configurați-l în dialogul **Creați un mediu** și selectați **Avansat**. Dacă ați creat deja un mediu, accesați setările acestuia și selectați **Avansat**. Oricum, în secțiunea **Utilizare predicții**, introduceți URL-ul instanței Common Data Service la care doriți să vă atașați mediul.
+Dacă ați [creat un mediu nou](get-started-paid.md), configurați-l în dialogul **Creați un mediu** și selectați **Avansat**. Dacă ați creat deja un mediu, accesați setările acestuia și selectați **Avansat**. Oricum, în secțiunea **Utilizare predicții**, introduceți URL-ul instanței Dataverse la care doriți să vă atașați mediul.
 
 ## <a name="create-a-prediction-in-the-customer-entity"></a>Creați o predicție în entitatea client
 
@@ -47,17 +47,17 @@ Dacă ați [creat un mediu nou](manage-environments.md), configurați-l în dial
 
 4. Găsiți numele atributului pentru care doriți să preziceți valorile, apoi selectați pictograma **Prezentare generală** din coloana **Rezumat**.
    > [!div class="mx-imgBorder"]
-   > ![Pictograma Prezentare generală](media/intelligence-overviewicon.png "Pictograma Prezentare generală")
+   > ![Pictograma Prezentare generală.](media/intelligence-overviewicon.png "Pictograma Prezentare generală")
 
 5. Dacă există o rată mare de valori lipsă pentru atributul dvs., selectați **Prognozare valori lipsă** pentru a continua cu predicția dvs.
    > [!div class="mx-imgBorder"]
-   > ![Prezentarea generală a stării cu afișarea butonului valorilor care lipsesc](media/intelligence-overviewpredictmissingvalues.png "Prezentarea generală a stării cu afișarea butonului valorilor care lipsesc")
+   > ![Prezentarea generală a stării cu afișarea butonului valorilor care lipsesc.](media/intelligence-overviewpredictmissingvalues.png "Prezentarea generală a stării cu afișarea butonului valorilor care lipsesc")
 
 6. Furnizați un **Nume afișat** și un **Nume entitate de ieșire** pentru rezultatele de predicție.
 
 7. Se afișează o listă de opțiuni pre-populată unde puteți mapa valorile cu o categorie prognozată. În acest caz, singurele dvs. opțiuni de categorie vor fi 0 sau 1, pe măsură ce acestea se potrivesc cu valorile true/false sau cu caracterul binar al predicției. În coloana Categorie, mapați valorile câmpului pe care doriți să le clasificați la „0” în predicția finală la „0”, și elementele pe care doriți să le clasificați drept „1” în predicția finală la „1”.
    > [!div class="mx-imgBorder"]
-   > ![Exemplu care arată valorile câmpului mapat la categorii](media/intelligence-categorymapping.png "Exemplu care arată valorile câmpului mapat la categorii")
+   > ![Exemplu care arată valorile câmpului mapat la categorii.](media/intelligence-categorymapping.png "Exemplu care arată valorile câmpului mapat la categorii")
 
 8. Selectați **Terminat** iar predicția va fi procesată. Procesarea va dura ceva timp, în funcție de dimensiunea și complexitatea datelor. Rezultatele vor fi disponibile într-o nouă entitate pe baza **Nume entitate de ieșire** din predicția pe care ai creat-o.
 
@@ -77,7 +77,7 @@ Ca parte a acestui flux,veți alege un atribut specific pentru a vă defini segm
 
 5. Dacă segmentul pe care l-ați creat are date incomplete în câmpul sursă, puteți alege să preziceți valorile lipsă.
    > [!div class="mx-imgBorder"]
-   > ![Buton de predicție](media/segments-predictoption.png "Buton de predicție")
+   > ![Buton de predicție.](media/segments-predictoption.png "Buton de predicție")
 
 6. Furnizați un **Nume afișat** și un **Nume entitate de ieșire** pentru rezultatele de predicție.
 
@@ -93,7 +93,7 @@ Ca parte a acestui flux,veți alege un atribut specific pentru a vă defini segm
 
 4. Veți vedea o serie de puncte de date în vizualizarea predicției dvs.
    > [!div class="mx-imgBorder"]
-   > ![Pagina Predicții](media/intelligence-predictionsviewpage.png "Pagina Predicții")
+   > ![Pagina Predicții.](media/intelligence-predictionsviewpage.png "Pagina Predicții")
 
    - **Valori previzionate** arată maparea pe care ați creat-o în faza de mapare a valorii câmpului la Categorie. Acestea sunt valorile din setul dvs. de date care au fost mapate într-o anumită categorie.
    -**Factori de influență principali** sunt factorii din setul dvs. de date care sunt cel mai probabil să vă fi influențat încrederea predicției pentru ca valoarea câmpului dvs. să fie mapată într-o anumită categorie.
@@ -139,7 +139,7 @@ Următoarea execuție a predicției dvs. va utiliza modelul actualizat pe care l
 
 ## <a name="troubleshooting"></a>Depanare
 
-Dacă nu puteți completa procesul Common Data Service atașat din cauza unei erori, puteți încerca să finalizați procesul manual. Există două probleme cunoscute care pot apărea în procesul de atașare:
+Dacă nu puteți completa procesul Dataverse atașat din cauza unei erori, puteți încerca să finalizați procesul manual. Există două probleme cunoscute care pot apărea în procesul de atașare:
 
 - Soluția de completare a cardului pentru clienți nu este instalată.
     1. Completați instrucțiunile pentru a [instala și configura soluția](customer-card-add-in.md).

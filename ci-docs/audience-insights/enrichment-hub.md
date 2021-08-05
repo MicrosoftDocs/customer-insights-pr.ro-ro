@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 04/09/2021
+ms.date: 07/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,19 @@ ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c35e73b366fcd5db2ba5a757295ddda6db30efa0
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.custom: intro-internal
+ms.openlocfilehash: d12c0a9dd65d31f9ae8a9cafeafab2767d57893e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305263"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6555276"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
 Utilizați date din surse precum Microsoft și de la alți parteneri pentru a vă îmbogăți datele clienților.
 
-:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagină hub de îmbogățire":::
+:::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagină hub de îmbogățire.":::
 
 În statisticile publicului, accesați **Date** > **Îmbogățire** pentru a lucra cu opțiuni de îmbogățire.  
 
@@ -42,17 +43,17 @@ Pe fila **Îmbogățirile mele**, puteți vedea îmbogățirile pe care le-ați 
 
 Accesați fila **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate. Fiecare îmbogățire este reprezentată ca un rând care include informații suplimentare despre îmbogățire.
 
-Selectați o îmbogățire pentru a vedea opțiunile disponibile. De asemenea, puteți selecta punctele de suspensie (...) pe un element din listă pentru a vedea opțiunile.
+Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta punctele de suspensie (...) pe un element din listă pentru a vedea opțiunile. Dacă ați configurat mai multe îmbogățiri, puteți utiliza caseta de căutare pentru a o găsi rapid.
 
-:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opțiuni de gestionare a îmbogățirilor din lista îmbogățirilor":::
+:::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opțiuni de gestionare a îmbogățirilor din lista îmbogățirilor.":::
 
 - **Vizualizare** detalii de îmbogățire cu numărul de profiluri de clienți îmbogățite.
 - **Editați** configurația de îmbogățire.
 - **Rulați** îmbogățirea pentru actualizarea profilurilor clienților cu cele mai recente date.
 - **Dezactivați** o îmbogățire existentă pentru a o opri din actualizarea automată cu fiecare actualizare programată. Datele din ultima actualizare reușită vor continua să fie disponibile. **Activați** o îmbogățire inactivă pentru a reporni actualizarea automată cu fiecare actualizare programată.
-- **Ștergeți** o îmbogățire.
+- **Ștergeți** îmbogățirea.
 
-Puteți rula sau dezactiva mai multe îmbogățiri simultan selectându-le în listă. Opțiunile de vizualizare și editare nu sunt disponibile ca acțiune în bloc și funcționează doar pentru câte o îmbogățire pe rând.
+Rulați sau dezactivați mai multe îmbogățiri simultan selectându-le în listă. Opțiunile de vizualizare și editare nu sunt disponibile ca acțiune în bloc. Lucrează doar pentru o singură îmbogățire la un moment dat.
 
 ## <a name="enrichments-and-connections"></a>Îmbogățiri și conexiuni
 

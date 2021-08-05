@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7157ad930f3cea17c12bd4f95028d291483329d3
-ms.sourcegitcommit: e5425f060c8d80f9510283dc610ce70a4e709b1e
+ms.openlocfilehash: 220e01a06711a5d35b8df09e265017a6d8fd0490
+ms.sourcegitcommit: 5c9c54ffe045017c19f0042437ada2c101dcaa0f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "6259206"
+ms.lasthandoff: 07/22/2021
+ms.locfileid: "6650057"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
@@ -24,11 +24,11 @@ Customer Insights oferă opțiunea de a face entitățile de ieșire disponibile
 
 **Organizații cu medii Dataverse existente**
 
-Organizațiile care folosesc deja Dataverse pot să [folosească unul dintre cele mediile Dataverse existente](manage-environments.md#create-an-environment-in-an-existing-organization) atunci când un administrator stabilește informații despre audiență. Prin furnizarea adresei URL pentru mediul Dataverse, se atașează noului mediu de detalii despre public. Pentru a asigura cea mai bună performanță posibilă, Customer Insights și mediile Dataverse trebuie găzduite în aceeași regiune.
+Organizațiile care folosesc deja Dataverse pot să [folosească unul dintre cele mediile Dataverse existente](get-started-paid.md) atunci când un administrator stabilește informații despre audiență. Prin furnizarea adresei URL pentru mediul Dataverse, se atașează noului mediu de detalii despre public. Pentru a asigura cea mai bună performanță posibilă, Customer Insights și mediile Dataverse trebuie găzduite în aceeași regiune.
 
 Pentru a atașa un mediu Dataverse, extindeți **Setări avansate** atunci când creați mediul de detalii despre public. Furnizați **adresa URL a mediului Microsoft Dataverse** și bifați caseta de selectare la **Activați partajarea datelor**.
 
-:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt":::
+:::image type="content" source="media/Datasharing-with-DataverseMDL.png" alt-text="alt.":::
 
 **Nouă organizație**
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
-ms.openlocfilehash: d5b9566ec88096fec31d8e164a51598159ec26d4
-ms.sourcegitcommit: ece48f80a7b470fb33cd36e3096b4f1e9190433a
+ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "6171179"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7035246"
 ---
 # <a name="relationships-between-entities"></a>Relații între entități
 
@@ -82,7 +82,7 @@ Această pagină oferă un set de opțiuni pentru relațiile existente și noi:
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorați vizualizatorul de relații
 
-Vizualizatorul de relații arată o diagramă de rețea a relațiilor existente între entitățile conectate și cardinalitatea acestora.
+Vizualizatorul de relații arată o diagramă de rețea a relațiilor existente între entitățile conectate și cardinalitatea acestora. De asemenea, vizualizează calea relației.
 
 Pentru a personaliza vizualizarea, puteți schimba poziția casetelor glisându-le pe pânză.
 
@@ -92,6 +92,20 @@ Opțiuni disponibile:
 - **Exportați ca imagine**: Salvați vizualizarea curentă ca fișier imagine.
 - **Treceți la aspectul orizontal/vertical**: Schimbați alinierea entităților și a relațiilor.
 - **Editați**: Actualizați proprietățile relațiilor particularizate în panoul de editare și salvați modificările.
+
+### <a name="relationship-path"></a>Calea relației
+
+Calea relației descrie entitățile care sunt conectate cu relațiile dintre o entitate sursă și o entitate țintă. Este utilizat atunci când creați un segment sau o măsură care include alte entități decât entitatea de profil unificat și există mai multe opțiuni pentru a ajunge la entitatea de profil unificat.
+
+Calea relației informează sistemul despre care relații pentru a accesa entitatea de profil unificat. Căile de relație diferite pot produce rezultate diferite.
+
+De exemplu, entitatea *eCommerce_eCommercePurchases* are următoarele relații cu entitatea profilul unificat *Client*:
+
+- eCommerce_eCommercePurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
+
+Calea relației determină ce entități puteți utiliza atunci când creați reguli pentru măsuri sau segmente. Alegerea opțiunii cu cea mai lungă cale de relație va produce probabil mai puține rezultate, deoarece înregistrările de potrivire trebuie să facă parte din toate entitățile. În acest exemplu, un client trebuie să fi achiziționat bunuri prin e-commerce (eCommerce_eCommercePurchases), la un punct de vânzare (POS_posPurchases) și să participe la programul nostru de fidelizare (loyaltyScheme_loyCustomers). Atunci când alegeți prima opțiune, veți obține probabil mai multe rezultate, deoarece clienții trebuie să existe doar într-o singură entitate suplimentară.
 
 ## <a name="manage-existing-relationships"></a>Gestionați relațiile existente 
 
@@ -105,6 +119,6 @@ Selectați o relație și alegeți una dintre următoarele opțiuni:
 
 ## <a name="next-step"></a>Următorul pas
 
-Relațiile de sistem și particularizate sunt utilizate pentru [a crea segmente](segments.md) bazate pe mai multe surse de date care nu mai sunt izolate.
+Relațiile de sistem și personalizate sunt obișnuite să [creeze segmente](segments.md) și cu [măsuri](measures.md) pe baza mai multor surse de date care nu mai sunt în silozuri.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

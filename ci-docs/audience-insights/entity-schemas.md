@@ -1,7 +1,7 @@
 ---
 title: Scheme de entități Customer Insights din Common Data Model
 description: Lucrul cu entități din Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 66d846c3e9404ca7993cae742ea6e16833233fba
+ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692320"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7380758"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
@@ -42,7 +42,7 @@ Pentru informații suplimentare, consultați documentația despre [Scheme de ent
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Vizualizați entitățile care utilizează Navigator entitate Common Data Model
 
-Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați **Încărcare de la GitHub!** buton și navigați la **foundationCommon** > **crmCommon** > **soluții** > **customerInsights** unde veți găsi lista entităților Customer Insights și a definițiilor acestora.
+Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați o entitate din secțiunea Aplicație Insights pentru a obține lista entităților Customer Insights și definițiile acestora.
 > [!div class="mx-imgBorder"]
 > ![Navigator entitate CDM care arată entitatea CustomerActivity.](media/CDM-entity-navigator.png "Navigator entitate CDM care arată entitatea CustomerActivity")
 

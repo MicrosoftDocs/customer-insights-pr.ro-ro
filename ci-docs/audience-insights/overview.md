@@ -1,7 +1,7 @@
 ---
 title: Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 description: Prezentare generală a detaliilor de public pentru Dynamics 365 Customer Insights.
-ms.date: 01/18/2021
+ms.date: 08/04/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,16 +10,16 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 19fc79873d32f268e194c4ebac4cf469a8b9b09f
-ms.sourcegitcommit: b78c9680b213204e6b0ed47f0147205083f6a98f
+ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "6539130"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034375"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 
-Detaliile privind publicul vă ajută să construiți o înțelegere mai profundă a clienților dvs. Conectați date din diverse surse tranzacționale, comportamentale și de observație pentru a crea o vedere a clienților la 360 de grade. Utilizați aceste informații pentru a genera experiențe și procese centrate pe client. Unificați și înțelegeți datele clienților și valorificați-le pentru detalii și acțiuni inteligente.
+[Detalii despre public, o capacitate de Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/) vă ajută să construiți o înțelegere mai profundă a clienților dvs. Conectați date din diverse surse tranzacționale, comportamentale și de observație pentru a crea o vedere a clienților la 360 de grade. Utilizați aceste informații pentru a genera experiențe și procese centrate pe client. Unificați și înțelegeți datele clienților și valorificați-le pentru detalii și acțiuni inteligente.
 
 ## <a name="main-benefits"></a>Principalele beneficii 
 
@@ -34,9 +34,9 @@ Detaliile privind publicul vă ajută să construiți o înțelegere mai profund
 
 - **Alimentați-vă procesele de afaceri și experiențele personalizate ale clienților**
 
-  - Creșteți implicarea personalizată pe canale - ajutați profesioniștii de marketing, vânzări și servicii cu carduri de profil de client predefinite, perspective contextuale și adaptate pentru clienți, infuzate în aplicațiile de afaceri pe care le folosesc deja în fiecare zi
-  - Automatizați experiențele și procesele centrate pe clienți, bazate pe profile, măsuri de afaceri și segmente particularizabile.
-  - Activați și extindeți experiențele line-of-business construite pe [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construiți rapid aplicații cu detalii încorporate utilizând o abordare puternică de codare redusă de la PowerApps.  
+  - Sporiți implicarea personalizată pe mai multe canale - împuterniciți profesioniștii în marketing, vânzări și servicii. Utilizați livrări rapide, informații și carduri de profil personalizate pentru clienți, care se integrează cu aplicațiile de afaceri pe care le folosesc deja.
+  - Automatizați experiențele și procesele, bazate pe profile, măsuri de afaceri și segmente particularizabile.
+  - Activați și extindeți experiențele line-of-business construite pe [Microsoft Power Platform](https://powerplatform.microsoft.com/). Construiți rapid aplicații cu detalii încorporate utilizând o abordare puternică de codare redusă de la Power Apps.  
 
 ## <a name="key-audiences"></a>Public cheie
 
@@ -50,13 +50,18 @@ Detaliile privind publicul vă ajută să construiți o înțelegere mai profund
 
 - **Utilizatori de business:**
 
-  - Informații despre profilurile clienților de 360 de grade și vizualizări complete ale călătoriei clientului.
+  - Informații despre profilurile clienților de 360 de grade și călătorii ale clientului.
   - Vizualizați datele clienților la 360 de grade în cadrul proceselor de afaceri Dynamics 365 cu pachete pre-construite.
 
 - **Analiști de afaceri:**
 
   - Creează profiluri particularizabile, definesc măsuri și creează segmente și beneficiați de analiză predictivă pentru a obține o vizualizare la 360 de grade a clientului dvs, specific organizației dvs.  
-  - Utilizați conectori de tip box pentru mai multe aplicații sau API-uri Microsoft și terțe părți pentru a procesa în continuare informațiile.
+  - Utilizați conectori de tip box pentru mai multe aplicații sau API-uri Microsoft și terțe părți pentru a procesa statisticile.
 
+## <a name="pricing-and-licensing"></a>Prețuri și licențiere
+
+Customer Insights este licențiat per entitate găzduită și include mai multe funcții. Capacitățile prevăzute includ un set de profile, reîmprospătări zilnice ale sistemului, solicitări Power Platform și două medii. Puteți achiziționa capacitate suplimentară și licență pentru a crește cota implicită. 
+- Capacitate și drepturi detaliate: [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- Prezentare generală a prețurilor: [Tarifare Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

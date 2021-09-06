@@ -1,7 +1,7 @@
 ---
-title: Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu
-description: Utilizați o entitate principală de serviciu Azure pentru Detalii despre audiență pentru a vă conecta la propriul data lake la atașarea la Detalii despre audiență.
-ms.date: 02/10/2021
+title: Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu
+description: Utilizați un principal de serviciu Azure pentru a vă conecta la propriul data lake.
+ms.date: 07/23/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,54 +9,63 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cc94ad49f12067d513db4663bff60620d6501eb0
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
+ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692128"
+ms.lasthandoff: 08/30/2021
+ms.locfileid: "7461163"
 ---
-# <a name="connect-to-an-azure-data-lake-storage-gen2-account-with-an-azure-service-principal-for-audience-insights"></a>Conectați-vă la un cont Gen2 Azure Data Lake Storage cu o entitate principală de serviciu Azure pentru Detalii despre audiență
+# <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
+<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Citiți mai departe pentru a afla cum să vă conectați Dynamics 365 Customer Insights cu un cont Azure Data Lake Storage utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
 
-Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Citiți mai departe pentru a afla cum să conectați Detalii despre audiență cu un cont Gen2 Azure Data Lake Storage care utilizează o entitate principală de serviciu Azure în loc de chei de cont de stocare. 
-
-Puteți utiliza o entitate principală de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) sau [crea un mediu nou sau actualiza un mediu existent](get-started-paid.md) în siguranță.
+Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) în siguranță, sau [crea sau actualiza un mediu](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
 
 > [!IMPORTANT]
-> - Contul de stocare Azure Data Lake Gen2 care intenționează să utilizeze principalul serviciului trebuie să aibă [Spațiul de nume ierarhic (HNS) activat](/azure/storage/blobs/data-lake-storage-namespace).
+> - Contul de stocare Data Lake care va utiliza<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> directorul serviciului trebuie să aibă [activat spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace).
 > - Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
 
-## <a name="create-azure-service-principal-for-audience-insights"></a>Creați entitatea principală de serviciu Azure pentru Detalii despre audiență
+## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creați un director de serviciu Azure pentru Customer Insights
 
-Înainte de a crea o nouă entitate principală de serviciu pentru Detalii despre audiență, verificați dacă acesta există deja în organizația dvs.
+Înainte de a crea un nou serviciu principal pentru statistici despre public sau statistici despre implicare, verificați dacă acesta există deja în organizația dvs.
 
 ### <a name="look-for-an-existing-service-principal"></a>Căutați o entitate principală de serviciu existentă
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com) și conectați-vă la organizația dvs.
 
-2. Selectați **Azure Active Directory** din serviciile Azure.
+2. Din **Servicii Azure**, selectați **Azure Active Directory**.
 
 3. Sub **Gestionare**, selectați **aplicații Enterprise**.
 
-4. Căutați ID-ul aplicației pentru prima parte din Detalii despre audiență `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` sau numele `Dynamics 365 AI for Customer Insights`.
+4. Căutați Microsoft<!--note from editor: Via Microsoft Writing Style Guide.--> ID-ul aplicației:
+   - Detalii despre public: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` cu numele `Dynamics 365 AI for Customer Insights`
+   - Detalii despre angajament: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` cu denumirea `Dynamics 365 AI for Customer Insights engagement insights`
 
-5. Dacă găsiți o înregistrare potrivită, înseamnă că există o entitate principală de serviciu pentru Detalii despre audiență. Nu este nevoie să o creați din nou.
+5. Dacă găsiți o înregistrare potrivită, înseamnă că directorul serviciului există deja. 
    
-   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captură de ecran care arată entitatea principală de serviciu existentă.":::
+   :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captură de ecran care arată un director de serviciu existent.":::
    
 6. Dacă nu se returnează rezultate, creați o nouă entitate principală de serviciu.
 
+>[!NOTE]
+>A face uz de întreaga putere a Dynamics 365 Customer Insights, vă sugerăm să adăugați ambele aplicații la directorul serviciului.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+
 ### <a name="create-a-new-service-principal"></a>Creare pentru o nouă entitate principală de serviciu
+<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+1. Instalați cea mai nouă versiune a Azure Active Directory PowerShell for Graph. Pentru mai multe informații, accesați [Instalare Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
 
-1. Instalați cea mai recentă versiune a **Azure Active Directory PowerShell pentru reprezentare grafică**. Pentru mai multe informații, consultați [Instalare Azure Active Directory PowerShell pentru reprezentare grafică](/powershell/azure/active-directory/install-adv2).
-   - Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și **Rulați ca administrator**.
+   1. Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
    
-   - În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
+   1. În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
 
-2. Creați entitatea principală de serviciu pentru Detalii despre audiență cu modulul PowerShell Azure AD.
-   - În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Înlocuiți „ID-ul entității dvs. găzduite” cu ID-ul propriu-zis al entității găzduite în care doriți să creați entitatea principală de serviciu. Parametrul numele mediului `AzureEnvironmentName` este opțional.
+2. Creați directorul de servicii pentru Customer Insights cu modul Azure AD PowerShell.
+
+   1. În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Înlocuiți *„[ID entitate găzduită]”*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> cu ID-ul real al entității găzduite în care doriți să creați directorul serviciului. Parametrul numelui mediului, `AzureEnvironmentName`, este opțional.
   
-   - Introduceți `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Această comandă creează entitatea principală de serviciu pentru Detalii despre audiență în entitatea găzduită selectată.  
+   1. Introduceți `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Această comandă creează entitatea principală de serviciu pentru Detalii despre audiență în entitatea găzduită selectată. 
+
+   1. Introduceți `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Această comandă creează principalul de serviciu pentru statistici de implicare<!--note from editor: Edit okay?--> pe entitatea găzduită selectată.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Acordați permisiuni entității principale de serviciu pentru a accesa contul de stocare
 
@@ -66,51 +75,49 @@ Accesați portalul Azure pentru a acorda permisiuni entității principale de se
 
 1. Deschideți contul de stocare la care doriți să aibă acces entitatea principală de serviciu pentru Detalii despre audiență.
 
-1. Selectați **Control acces (IAM)** din panoul de navigare și selectați **Adăugare** > **Adăugare atribuire de rol**.
-   
-   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captură de ecran care arată portalul Azure în timp ce se adaugă o atribuire de rol.":::
-   
-1. În panoul **Adăugare atribuirea de rol**, setați următoarele proprietăți:
-   - Rol: *Contribuitor de date blob de stocare*
-   - Atribuiți accesul la: *utilizator, grup sau entitate principală de serviciu*
-   - Selectați: *Dynamics 365 AI for Customer Insights* ([entitatea principală de serviciu pe care ați creat-o](#create-a-new-service-principal))
+1. În panoul din stânga, selectați **Control acces (IAM)**, apoi selectați **Adăugare** > **Adăugați atribuirea de roluri**.
+
+   :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captură de ecran care arată portalul Azure în timp ce se adaugă o atribuire de roluri.":::
+
+1. Pe panoul **Adăugați atribuirea de roluri**, setați următoarele proprietăți:
+   - Rol: **Contribuitor de date blob de stocare**
+   - Atribuiți accesul la: **utilizator, grup sau entitate principală de serviciu**
+   - Selectați: **Dynamics 365 AI for Customer Insights** și **Dynamics 365 AI for Customer Insights** (cei doi [directorii serviciului](#create-a-new-service-principal) creați mai devreme în această procedură)
 
 1.  Selectați **Salvare**.
 
 Poate dura până la 15 minute pentru propagarea schimbărilor.
 
-## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduceți ID-ul resursei Azure sau detaliile abonamentului Azure în atașarea contului de stocare la Detalii despre audiență.
+## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduceți ID-ul resursei Azure sau detaliile abonamentului Azure în atașarea contului de stocare la detalii despre public.
 
-Atașați un cont Azure Data Lake Storage în Detalii despre audiență pentru [stocarea datelor de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-dataverse-managed-lake.md). Alegerea opțiunii Azure Data Lake vă permite să alegeți între o abordare bazată pe resurse sau o abordare bazată de abonament.
-
-Urmați pașii de mai jos pentru a furniza informațiile necesare despre abordarea selectată.
+Aveți posibilitatea să<!--note from editor: Edit suggested only if this section is optional.--> atașați un cont Data Lake Storage în statisticile publicului la [stochează datele de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-common-data-service-lake.md). Această opțiune vă permite să alegeți între o abordare bazată pe resurse sau abonament. În funcție de abordarea pe care o alegeți, urmați procedura din una dintre următoarele secțiuni.<!--note from editor: Suggested.-->
 
 ### <a name="resource-based-storage-account-connection"></a>Conexiune la contul de stocare bazat pe resurse
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com), conectați-vă la abonament și deschideți contul de stocare.
 
-1. Accesați **Setări** > **Proprietăți** din panoul de navigare.
+1. În panoul din stânga, accesați **Setări** > **Proprietăți**.
 
 1. Copiați valoarea ID-ului resursei contului de stocare.
 
    :::image type="content" source="media/ADLS-SP-ResourceId.png" alt-text="Copiați ID-ul resursei contului de stocare.":::
 
-1. În Detalii despre audiență, introduceți ID-ul resursei în câmpul resursei afișat în ecranul de conectare a contului de stocare.
+1. În statistici privind publicul, introduceți ID-ul resursei în câmpul de resurse afișat pe ecranul de conectare a contului de stocare.
 
    :::image type="content" source="media/ADLS-SP-ResourceIdConnection.png" alt-text="Introduceți informația ID-ului resursei contului de stocare.":::   
-   
+
 1. Continuați cu pașii rămași din Detalii despre audiență pentru a atașa contul de stocare.
 
 ### <a name="subscription-based-storage-account-connection"></a>Conexiune la contul de stocare bazată pe abonament
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com), conectați-vă la abonament și deschideți contul de stocare.
 
-1. Accesați **Setări** > **Proprietăți** din panoul de navigare.
+1. În panoul din stânga, accesați **Setări** > **Proprietăți**.
 
 1. Analizați **Abonament**, **Grup de resurse**, și **Numele** din contul de stocare pentru a vă asigura că selectați valorile potrivite în Detalii despre audiență.
 
-1. În Detalii despre audiență, alegeți valorile sau câmpurile corespunzătoare atunci când atașați contul de stocare.
-   
+1. În detalii privind publicul, alegeți valorile pentru câmpurile corespunzătoare atunci când atașați contul de stocare.
+
 1. Continuați cu pașii rămași din Detalii despre audiență pentru a atașa contul de stocare.
 
 

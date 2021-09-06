@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 4a19661abea42618ef1848110c05d635a925c68f
-ms.sourcegitcommit: c45b094072cbe3fbf61d1e9e7d220e1f29ffebd0
+ms.openlocfilehash: e759872643cc7387cf732d73c7a320ae8901e5a9
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "6685477"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377803"
 ---
 # <a name="create-and-manage-segments"></a>Crearea și gestionarea segmentelor
 
@@ -27,6 +27,23 @@ ms.locfileid: "6685477"
 > - Un panou lateral pentru selectarea atributelor va fi disponibil în mod constant.
 > - O opțiune pentru a selecta căile relației entității.
 > Pentru a încerca noul constructor de segmente, trimiteți un e-mail cu subiectul „Solicitați activarea noului constructor de segmente” la cihelp [at] microsoft.com. Includeți numele organizației dvs. și ID-ul mediului dvs. sandbox.
+> :::image type="content" source="media/segment-builder-overview.png" alt-text="Elemente ale constructorului de segmente." lightbox="media/segment-builder-overview.png":::
+>
+> 1 - Organizați-vă segmentul cu reguli și subreguli. Fiecare regulă sau subregulă constă din condiții. Combinați condițiile cu operatorii logici
+>
+> 2 - Alegeți [calea relației](relationships.md) între entități care se aplică unei reguli. Calea relației determină ce atribute pot fi utilizate într-o condiție.
+>
+> 3 - Gestionați regulile și subregulile. Schimbați poziția unei reguli sau ștergeți-o.
+>
+> 4 - Adăugați condiții și construiți nivelul potrivit de cuibărire folosind subreguli.
+>
+> 5 - Aplicați operațiile de setare la regulile conectate.
+>
+> 6 - Utilizați panoul de atribute pentru a adăuga atribute de entitate disponibile sau pentru a crea condiții pe baza atributelor. Panoul afișează lista entităților și atributelor, bazate pe calea relației selectate, care sunt disponibile pentru regula selectată.
+>
+> 7 - Adăugați condiții bazate pe atribute regulilor și subregulilor existente sau adăugați-o la o nouă regulă.
+>
+> 8 - Anulați și refaceți modificările în timp ce construiți segmentul.
 
 Definiți filtre complexe pe baza entității client unificate și a entităților conexe. Fiecare segment, după procesare, creează un set de înregistrări ale clienților pe care le puteți exporta și pe care puteți acționa. Segmentele sunt gestionate pe pagina **Segmente**. 
 
@@ -147,6 +164,6 @@ Segmentele rapide permit crearea de segmente simple cu un singur operator rapid 
 
 ## <a name="next-steps"></a>Pașii următori
 
-[Exportați un segment](export-destinations.md) și explorați [Card client](customer-card-add-in.md) și [Conectori](export-power-bi.md) pentru a obține informații despre nivelul clientului.
+[Exportați un segment](export-destinations.md) și explorați [Integrarea Cardului Clientului](customer-card-add-in.md) pentru a utiliza segmente în alte aplicații.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

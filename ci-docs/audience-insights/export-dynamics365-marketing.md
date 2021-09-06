@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Dynamics 365 Marketing
 description: Aflați cum să configurați conexiunea și să exportați la Dynamics 365 Marketing.
-ms.date: 03/03/2021
+ms.date: 08/24/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bd8189f8daee1a6aea75e75e116186f62a360ba4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.openlocfilehash: b8e63a738abaf4fbb902e3edbf83f5a815978478
+ms.sourcegitcommit: 8e89575fe2acb4b289fc157fa7c4c29caf9be967
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692496"
+ms.lasthandoff: 08/24/2021
+ms.locfileid: "7417220"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizarea segmentelor în Dynamics 365 Marketing (previzualizare)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Utilizați [segmentele](segments.md) pentru a genera campanii și a contacta anumite grupuri de clienți cu Dynamics 365 Marketing. Pentru mai multe informații, consultați [Utilizați segmente din Dynamics 365 Customer Insights cu Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments)
+Utilizați [segmentele](segments.md) pentru a genera campanii și a contacta anumite grupuri de clienți cu Dynamics 365 Marketing. Pentru mai multe informații, consultați [Utilizați segmente din Dynamics 365 Customer Insights cu Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
+
+Dacă utilizați noile capabilități ale Dynamics 365 Marketing pentru orchestrarea călătoria clientului în timp real într-o organizație Dataverse, nu este nevoie să creați un export standard către Dynamics 365 Marketing. Persoanele de contact și segmentele din statistici privind publicul sunt disponibile direct în Dynamics 365 Marketing după conectarea Marketing Insights și Customer Insights. Înainte de a șterge exporturile existente, consultați documentația de pe [cum să conectați statisticile publicului și orchestrarea Dynamics 365 Marketing călătoria clientului](/dynamics365/marketing/real-time-marketing-ci-profile).
 
 ## <a name="prerequisite-for-a-connection"></a>Cerință preliminară pentru o conexiune
 

@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 1af2e4c42dc5890556c90bb3e5ef1aeb0621fda0
-ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
+ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/13/2021
-ms.locfileid: "6554174"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "7377849"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Reîmprospătare incrementală pentru sursele de date bazate pe Power Query
 
@@ -44,8 +44,7 @@ Statisticile despre public permit reîmprospătarea incrementală pentru sursele
 
 1. Pe **Setări de reîmprospătare incrementală**, veți configura reîmprospătarea incrementală pentru toate entitățile pe care le-ați selectat la crearea sursei de date.
 
-   > [!div class="mx-imgBorder"]
-   > ![Configurați entitățile dintr-o sursă de date pentru reîmprospătare incrementală.](media/incremental-refresh-settings.png "Configurați entitățile dintr-o sursă de date pentru reîmprospătare incrementală")
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurați entitățile dintr-o sursă de date pentru reîmprospătare incrementală.":::
 
 1. Selectați o entitate și furnizați următoarele detalii:
 

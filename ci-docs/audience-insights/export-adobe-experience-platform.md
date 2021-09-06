@@ -1,6 +1,6 @@
 ---
-title: Exportați datele Customer Insights în Adobe Experience Platform
-description: Aflați cum să utilizați segmente de statistici despre public în Adobe Experience Platform.
+title: Exportați datele Customer Insights către Adobe Experience Platform
+description: Aflați cum utilizați segmentele de detalii privind publicul în Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,31 +9,31 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 1045d0e373fd5ea8987684e51bd9a07b7b535ee3
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+ms.openlocfilehash: fac976a49b1b5c5485b75e1262135738c913bd2230be7df8aa0ec12c59734053
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305539"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7032132"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizați segmentele de Customer Insights în Adobe Experience Platform (previzualizare)
+# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizați segmentele Customer Insights în Adobe Experience Platform (previzualizare)
 
-În calitate de utilizator al statisticilor publicului în Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă face campaniile de marketing mai eficiente, vizând segmente de public relevante. Pentru a utiliza un segment din statisticile publicului în Adobe Experience Platform și aplicații precum Adobe Campaign Standard, trebuie să urmați câțiva pași descriși în acest articol.
+În calitate de utilizator al statisticilor publicului în Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă face campaniile de marketing mai eficiente, vizând segmente de public relevante. Pentru a utiliza un segment din statistici despre public în Adobe Experience Platform și aplicații precum Adobe Campaign Standard, trebuie să urmați câțiva pași descriși în acest articol.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de proces a pașilor descriși în acest articol.":::
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 -   Licență Dynamics 365 Customer Insights
--   Licență Platformă Adobe Experience
+-   Licență Adobe Experience Platform
 -   Licență Adobe Campaign Standard
 -   Cont Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Prezentare generală campanie
 
-Pentru a înțelege mai bine modul în care puteți utiliza segmente din statisticile publicului în platforma Adobe Experience, haideți să analizăm un exemplu de campanie fictivă.
+Pentru a înțelege mai bine modul în care puteți utiliza segmente din detaliile publicului Adobe Experience Platform, să ne uităm la un eșantion de campanie fictivă.
 
-Să presupunem că compania dvs. oferă clienților dvs. din Statele Unite un serviciu lunar, bazat pe abonament. Doriți să identificați clienții ale căror abonamente trebuie reînnoite în următoarele opt zile, dar nu și-au reînnoit abonamentul. Pentru a păstra acești clienți, doriți să le trimiteți o ofertă promoțională prin e-mail, utilizând Adobe Experience Platform.
+Să presupunem că compania dvs. oferă clienților dvs. din Statele Unite un serviciu lunar, bazat pe abonament. Doriți să identificați clienții ale căror abonamente trebuie reînnoite în următoarele opt zile, dar nu și-au reînnoit abonamentul. Pentru a păstra acești clienți, doriți să le trimiteți o ofertă promoțională prin e-mail, folosind Adobe Experience Platform.
 
 În acest exemplu, dorim să derulăm o dată campania de e-mail promoțională. Acest articol nu acoperă cazul de utilizare al desfășurării campaniei de mai multe ori.
 
@@ -105,23 +105,23 @@ Example: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 Exemplu: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
-## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiți modelul de date pentru experiență (XDM) în platforma Adobe Experience
+## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiți Experience Data Mode (XDM) în Adobe Experience Platform
 
-Înainte ca datele exportate din statistici privind publicul să poată fi utilizate în platforma Adobe Experience, trebuie să definim schema modelului de date experiență și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Înainte de a putea folosi datele exportate din detaliile despre public în cadrul Adobe Experience Platform, trebuie să definim Experience Data Model și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Învățați [ce este XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) și înțelegeți [elementele de bază ale compoziției schemei](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
-## <a name="import-data-into-adobe-experience-platform"></a>Importați date în Adobe Experience Platform
+## <a name="import-data-into-adobe-experience-platform"></a>Importul datelor în Adobe Experience Platform
 
-Acum că totul este la locul său, trebuie să importăm datele pregătite despre audiență din statistici despre audiență în Adobe Experience Platform.
+Acum, că totul este la locul lor, trebuie să importăm datele pregătite despre public din statistici despre audiență în Adobe Experience Platform.
 
 În primul rând, [creați o conexiune sursă Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
 
-După definirea conexiunii sursă, [configurați un flux de date](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pentru o conexiune batch de stocare în cloud pentru a importa ieșirea segmentului din statisticile publicului în Adobe Experience Platform.
+După definirea conexiunii sursă, [configurați un flux de date](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pentru o conexiune lot de stocare în cloud pentru a importa ieșirea segmentului din statisticile publicului în Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Creați un public în Adobe Campaign Standard
 
-Pentru a trimite e-mailul pentru această campanie, vom folosi Adobe Campaign Standard. După importul datelor în Adobe Experience Platform, trebuie să [creați un public](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) în Adobe Campaign Standard folosind datele din Adobe Experience Platform.
+Pentru a trimite e-mailul pentru această campanie, vom utiliza Adobe Campaign Standard. După importul datelor în Adobe Experience Platform, avem nevoie să [creăm un public](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) în Adobe Campaign Standard folosind datele din Adobe Experience Platform.
 
 
 Aflați cum să [utilizați generatorul de segmente](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) în Adobe Campaign Standard pentru a defini un public pe baza datelor din Adobe Experience Platform.
@@ -130,4 +130,4 @@ Aflați cum să [utilizați generatorul de segmente](https://experienceleague.ad
 
 Creați conținutul e-mailului și apoi [testați și trimiteți](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) email-ul dvs.
 
-:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Eșantion de e-mail cu ofertă de reînnoire de la Adobe Campaign Standard.":::
+:::image type="content" source="media/contoso-sample-email.jpg" alt-text="Exemplu de e-mail cu ofertă de reînnoire de la Adobe Campaign Standard.":::

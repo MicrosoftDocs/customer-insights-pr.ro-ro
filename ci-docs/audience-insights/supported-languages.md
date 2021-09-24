@@ -1,24 +1,23 @@
 ---
-title: Limbi acceptate pentru detalii despre public
+title: Limbi acceptate pentru Dynamics 365 Customer Insights
 description: Înțelegeți și configurați suportul lingvistic.
-ms.date: 02/26/2021
+ms.date: 09/01/2021
 ms.service: customer-insights
-ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e9161ebbfdf3ae6c48c12cdf7515b77ca49ae8055ae9a69f9ec314bc1247aeaf
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f80c3019df9b5d82273842ca6f6f18bef0239687
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035154"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483357"
 ---
-# <a name="supported-languages-for-audience-insights-capability"></a>Limbi acceptate pentru capabilitatea detalii despre public
+# <a name="supported-languages-for-dynamics-365-customer-insights"></a>Limbi acceptate pentru Dynamics 365 Customer Insights
 
-Detalii despre audiență pentru Dynamics 365 Customer Insights este tradus în multe limbi. Următoarea listă conține limbile disponibile și informații despre ceea ce este tradus. De asemenea, puteți afla mai multe despre cum să modificați setările de limbă. 
+Dynamics 365 Customer Insights este tradus în multe limbi. Următoarea listă conține limbile disponibile și informații despre ceea ce este tradus. De asemenea, puteți afla mai multe despre cum să modificați setările de limbă. 
 
 ## <a name="languages"></a>Limbi
 
@@ -69,7 +68,7 @@ Detalii despre audiență pentru Dynamics 365 Customer Insights este tradus în 
 
 ## <a name="whats-translated"></a>Ce este tradus
 
-Aplicația vă folosește preferințele de limbă pentru a afișa elemente precum meniul, textul de etichete și mesajele de sistem în limba dvs. preferată.
+Customer Insights utilizează preferințele de limbă pentru a afișa elemente precum meniul, textul de pe etichetă și mesaje de sistem în limba dvs. preferată.
 
 Deoarece majoritatea funcțiilor se bazează pe datele dvs., unele elemente rămân în limba lor originală. De exemplu:
 

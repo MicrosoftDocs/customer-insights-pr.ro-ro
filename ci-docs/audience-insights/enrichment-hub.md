@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 07/01/2021
+ms.date: 08/31/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: a64bbd754d4013d0a6243074ac9f55991547be82b269047a9937b583baf98697
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
+ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032543"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "7470021"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -29,6 +29,7 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 
 Pe fila **Descoperire**, veți găsi următoarele îmbogățiri:
 
+- [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
 - [Branduri](enrichment-microsoft.md) furnizate de Microsoft
 - [Interese](enrichment-microsoft.md) furnizate de Microsoft
 - [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft
@@ -62,5 +63,17 @@ Rulați sau dezactivați mai multe îmbogățiri simultan selectându-le în lis
 ## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
 
 Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. De exemplu, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe pagina **Îmbogățire**.
+
+## <a name="see-the-progress-of-the-enrichment-process"></a>Vedeți progresul procesului de îmbogățire
+
+Puteți găsi detalii despre procesarea unei îmbogățiri, inclusiv starea acesteia și problemele potențiale în timp ce este reîmprospătată sau după finalizarea unei reîmprospătări. Înțelegeți ce procese sunt implicate pentru a reîmprospăta o îmbogățire și cât timp a durat pentru a rula procesele. Starea de îmbogățire este acceptată pentru Experian, Leadspace, HERE Technologies, SFTP Import și Azure Maps.
+
+Pentru a vedea starea de îmbogățire
+
+1. Accesați **Date** > **Îmbogățire**. 
+1. În fila **Îmbogățirile mele**, selectați starea unei îmbogățiri pentru a deschide un panou lateral. 
+1. În panoul **Detalii despre progres**, extindeți secțiunea **Îmbogățiri**. 
+1. Sub îmbogățirea pe care doriți să vedeți progresul, selectați **Vezi detalii**. 
+1. În panoul **Detalii despre activitate**, selectați **Arată detaliile** pentru a vedea procesele care sunt implicate în actualizarea îmbogățirii și a statutului lor. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

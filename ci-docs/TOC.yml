@@ -6,7 +6,7 @@
   href: audience-insights/get-started-trial.md
 - name: Accesați-vă mediul
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Detalii despre audiență
+- name: Detalii despre public
   items:
     - name: Centrul de ajutor
       href: audience-insights/index.yml
@@ -14,8 +14,14 @@
       href: audience-insights/overview.md
     - name: Caracteristici noi și actualizate
       href: audience-insights/whats-new-audience-insights.md
-    - name: Creați un mediu nou
-      href: audience-insights/get-started-paid.md
+    - name: Începeți
+      items:
+        - name: Ghid de inițiere rapidă
+          href: audience-insights/get-started.md
+        - name: Creați un mediu nou
+          href: audience-insights/get-started-paid.md
+        - name: Explorați detalii despre public
+          href: audience-insights/home.md
     - name: Aflați module
       items:
         - name: Ingerare date
@@ -68,6 +74,8 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adrese optimizate
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Îmbogățiți cu Azure Maps
+          href: audience-insights/enrichment-azure-maps.md
         - name: Îmbogăți cu HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Îmbogățire cu Leadspace
@@ -230,21 +238,15 @@
           href: audience-insights/apis.md
         - name: Referințe API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
-    - name: Limite de serviciu
-      href: audience-insights/service-limits.md
-    - name: Cereri DSR în cadrul RGPD
-      href: audience-insights/gdpr.md
 - name: Detalii despre angajamente (versiune preliminară)
   items:
     - name: Centrul de ajutor
       href: engagement-insights/index.yml
     - name: Prezentare generală a capacității
       href: engagement-insights/overview.md
-    - name: Versiune de încercare gratuită
-      href: 'https://pi.dynamics.com/'
     - name: Începeți
       items:
-        - name: Începeți
+        - name: Ghid de inițiere rapidă
           href: engagement-insights/get-started.md
         - name: Creați un spațiu de lucru
           href: engagement-insights/create-workspace.md
@@ -300,18 +302,10 @@
           href: engagement-insights/user-roles.md
         - name: Gestionați mediile și spațiile de lucru
           href: engagement-insights/manage-environments-workspaces.md
-        - name: Configurați conexiunile
-          href: engagement-insights/configure-connections.md
         - name: Gestionați cookie-urile și consimțământul utilizatorului
           href: engagement-insights/user-consent-storage.md
-    - name: RGPD
-      items:
-        - name: Ștergeți și exportați datele cu caracter personal
-          href: engagement-insights/delete-export-personal-data.md
     - name: Disponibilitate regională
       href: engagement-insights/regional-availability.md
-    - name: Limite de serviciu
-      href: engagement-insights/quotas.md
 - name: Integrați informații despre public și angajament
   items:
     - name: Legați detaliile despre public și despre angajament
@@ -320,5 +314,9 @@
       href: engagement-insights/integrate-audience-insights-segments.md
     - name: Utilizați dimensiunile demografice pentru divizarea datelor comportamentale
       href: engagement-insights/curate-dimensions.md
+- name: Limite de serviciu
+  href: service-limits.md
+- name: Drepturi și solicitări DSR
+  href: dsr-rights-requests.md
 - name: Obțineți asistență
-  href: 'https://dynamics.microsoft.com/en-us/support/'
+  href: 'https://dynamics.microsoft.com/support/'

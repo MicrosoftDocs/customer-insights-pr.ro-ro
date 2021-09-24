@@ -4,17 +4,17 @@ description: Cum să utilizați rapoartele de pâlnie pentru a înțelege modul 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 06/23/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 7c6b7b7285556f8a531ce9e29f0d1de162562be6fb43dd826a65fd9e00d87b30
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032270"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498657"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Creați și gestionați rapoarte de pâlnie
 
@@ -158,4 +158,21 @@ Puteți schimba numele unui raport de pâlnie, îl puteți șterge sau modifica 
 1. Selectați un nume pentru a deschide raportul.
 
 1. Selectați pașii pe care doriți să-i eliminați și selectați **Ștergeți**.
+
+## <a name="funnel-insights"></a>Informații despre pâlnie 
+
+Statisticile despre implicare oferă acum informații despre canal pentru clienți. Utilizați informații despre canal pentru a obține o perspectivă mai profundă asupra comportamentului clienților cu privire la pașii din raportul dvs. privind canalele. Când creați și salvați un nou raport de canal, statistici despre canal sunt generate automat pentru raportul dvs. 
+
+Puteți vizualiza statistici privind canalele din următoarele categorii, atât la nivel principal, cât și la nivel de pas: 
+
+ - Rata de conversie 
+ - Timp de tranziție 
+ - Timpul de finalizare 
+
+Utilizați aceste informații pentru a explora mai adânc comportamentul clienților și pentru a înțelege mai bine punctele de renunțare și conversiile pentru raportul dvs. de canal. 
+
+Statisticile despre pâlnie sunt recalculate la fiecare 24 de ore sau când **Salvați** raportul dvs. de pâlnie. 
+
+> [!NOTE]
+> Pentru a vizualiza statistici pentru canalul dvs., trebuie să salvați raportul de fiecare dată când efectuați modificări. 
 

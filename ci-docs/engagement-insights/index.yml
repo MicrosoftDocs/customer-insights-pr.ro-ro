@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Capabilitate Detalii despre angajamente (versiune preliminară) în Dynamics 365 Customer Insights
+title: Capabilitate detalii de angajament în Dynamics 365 Customer Insights (previzualizare)
 summary: Colectați date pentru site-urile dvs. web. Înțelegeți interacțiunile de clienți și utilizarea pe site-urile dvs., în mod interactiv. Utilizați integrarea profundă dintre datele de implicare și perspectivele publicului pentru a vă îmbogăți analiza comportamentală în timp real cu rapoarte de profil ale clienților. Îmbogățiți profilurile clienților cu activități web pentru a obține date comportamentale în timp real, alături de datele relevante ale clienților. Transformați-vă afacerea pentru a obține valoare imediată din datele clienților.
 metadata:
-  title: Documentație Detalii despre angajamente(versiune preliminară)
+  title: Documentație detalii despre angajamente (versiune preliminară)
   description: Ajutați hubul cu linkuri cheie pentru detalii despre implicare.
   ms.service: customer-insights
   ms.subservice: engagement-insights
@@ -10,24 +10,24 @@ metadata:
   author: m-hartmann
   ms.author: mhart
   ms.reviewer: mhart
-  ms.date: 07/30/2021
-  ms.openlocfilehash: 9951b1834d18acf0c4961a776d9d6247d4ae3505b5721a41314266e41f8ae928
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.date: 09/15/2021
+  ms.openlocfilehash: bf2e40b1ca304e7b26687eaff298d2e70615cd2b
+  ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
   ms.translationtype: HT
   ms.contentlocale: ro-RO
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036253"
+  ms.lasthandoff: 09/15/2021
+  ms.locfileid: "7494199"
 landingContent:
 - title: Despre
   linkLists:
   - linkListType: overview
     links:
-    - text: Prezentare generală a capacității
+    - text: Beneficii de capacitate
       url: overview.md
-    - text: Termeni și concepte
+    - text: Glosar de termeni
       url: glossary.md
-    - text: Descoperiți detalii despre implicare
-      url: https://dynamics.microsoft.com/ai/customer-insights/engagement-insights-capability/
+    - text: Caracteristici noi și actualizate
+      url: /dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Înrolare
   linkLists:
   - linkListType: how-to-guide
@@ -38,28 +38,30 @@ landingContent:
       url: create-workspace.md
     - text: Creați instrumente pentru site-ul dvs. web
       url: instrument-website.md
-- title: Rapoarte
+- title: Vizualizare și filtrare rapoarte
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Vizualizare rapoarte
+    - text: Vizualizați rapoartele
       url: view-reports.md
-    - text: Creați rapoarte particularizate
-      url: custom-reports.md
     - text: Vizualizați raportul profilurilor unificate
       url: profile-reports.md
-    - text: Creați rapoarte pâlnie
-      url: funnel-reports.md
-- title: Evenimente
+    - text: Utilizați segmente de audiență pentru a filtra rapoartele
+      url: integrate-audience-insights-segments.md
+- title: Analiză
   linkLists:
   - linkListType: how-to-guide
     links:
+    - text: Creați rapoarte pâlnie
+      url: funnel-reports.md
+    - text: Analizați datele comportamentale
+      url: curate-dimensions.md
+    - text: Creați rapoarte particularizate
+      url: custom-reports.md
     - text: Creați evenimente rafinate
       url: refined-events.md
     - text: Export evenimente
       url: export-events.md
-    - text: Ștergeți și exportați datele cu caracter personal
-      url: delete-export-personal-data.md
 - title: Resurse pentru dezvoltatori
   linkLists:
   - linkListType: reference
@@ -81,6 +83,10 @@ landingContent:
     - text: Gestionați mediile și spațiile de lucru
       url: manage-environments-workspaces.md
     - text: Conectare la detaliile despre public
-      url: configure-connections.md
+      url: integrate-audience-insights-engagement-insights.md
     - text: Gestionați cookie-urile și consimțământul utilizatorului
       url: user-consent-storage.md
+    - text: Ștergeți și exportați datele cu caracter personal
+      url: delete-export-personal-data.md
+    - text: Limite de serviciu
+      url: ../service-limits.md

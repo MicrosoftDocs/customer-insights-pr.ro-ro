@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu
 description: Utilizați un principal de serviciu Azure pentru a vă conecta la propriul data lake.
-ms.date: 07/23/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 845d1f55eb99f2adf9b437124addec4f6d016fec
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: b96c7f580b4067e059e00a9cdb4e872e9acd4a5c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461163"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483540"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
-<!--note from editor: The Cloud Style Guide would have us just use "Azure Data Lake Storage" to mean the current version, unless the old version (Gen1) is mentioned. I've followed this guidance, even though it seems that our docs and Azure docs are all over the map on this.-->
+
 Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Citiți mai departe pentru a afla cum să vă conectați Dynamics 365 Customer Insights cu un cont Azure Data Lake Storage utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
 
-Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) în siguranță, sau [crea sau actualiza un mediu](get-started-paid.md).<!--note from editor: Suggested. Or it could be ", or create a new environment or update an existing one". I think "new" is implied with "create". The comma is necessary.-->
+Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) în siguranță, sau [crea sau actualiza un mediu](get-started-paid.md).
 
 > [!IMPORTANT]
-> - Contul de stocare Data Lake care va utiliza<!--note from editor: Suggested. Or perhaps it could be "The Data Lake Storage account to which you want to give access to the service principal..."--> directorul serviciului trebuie să aibă [activat spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace).
+> - Contul Data Lake Storage care va utiliza principalul serviciului trebuie să aibă [activat spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace).
 > - Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creați un director de serviciu Azure pentru Customer Insights
@@ -38,7 +38,7 @@ Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Co
 
 3. Sub **Gestionare**, selectați **aplicații Enterprise**.
 
-4. Căutați Microsoft<!--note from editor: Via Microsoft Writing Style Guide.--> ID-ul aplicației:
+4. Căutați ID-ul aplicației Microsoft:
    - Detalii despre public: `0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` cu numele `Dynamics 365 AI for Customer Insights`
    - Detalii despre angajament: `ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd` cu denumirea `Dynamics 365 AI for Customer Insights engagement insights`
 
@@ -49,23 +49,23 @@ Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Co
 6. Dacă nu se returnează rezultate, creați o nouă entitate principală de serviciu.
 
 >[!NOTE]
->A face uz de întreaga putere a Dynamics 365 Customer Insights, vă sugerăm să adăugați ambele aplicații la directorul serviciului.<!--note from editor: Using the note format is suggested, just so this doesn't get lost by being tucked up in the step.-->
+>A face uz de întreaga putere a Dynamics 365 Customer Insights, vă sugerăm să adăugați ambele aplicații la directorul serviciului.
 
 ### <a name="create-a-new-service-principal"></a>Creare pentru o nouă entitate principală de serviciu
-<!--note from editor: Some general formatting notes: The MWSG wants bold for text the user enters (in addition to UI strings and the settings users select), but there's plenty of precedent for using code format for entering text in PowerShell so I didn't change that. Note that italic should be used for placeholders, but not much else.-->
+
 1. Instalați cea mai nouă versiune a Azure Active Directory PowerShell for Graph. Pentru mai multe informații, accesați [Instalare Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
 
-   1. Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.<!--note from editor: Or should this be something like "search for **Windows PowerShell** and, if asked, select **Run as administrator**."?-->
+   1. Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.
    
    1. În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
 
 2. Creați directorul de servicii pentru Customer Insights cu modul Azure AD PowerShell.
 
-   1. În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Înlocuiți *„[ID entitate găzduită]”*<!--note from editor: Edit okay? Or should the quotation marks stay in the command line, in which case it would be "Replace *[your tenant ID]* --> cu ID-ul real al entității găzduite în care doriți să creați directorul serviciului. Parametrul numelui mediului, `AzureEnvironmentName`, este opțional.
+   1. În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your tenant ID]" -AzureEnvironmentName Azure`. Înlocuiți *[D-ul entității dvs. găzduite]* cu ID-ul real al entității găzduite unde doriți să creați entitatea principală de serviciu. Parametrul numelui mediului, `AzureEnvironmentName`, este opțional.
   
    1. Introduceți `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Această comandă creează entitatea principală de serviciu pentru Detalii despre audiență în entitatea găzduită selectată. 
 
-   1. Introduceți `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Această comandă creează principalul de serviciu pentru statistici de implicare<!--note from editor: Edit okay?--> pe entitatea găzduită selectată.
+   1. Introduceți `New-AzureADServicePrincipal -AppId "ffa7d2fe-fc04-4599-9f6d-7ca06dd0c4fd" -DisplayName "Dynamics 365 AI for Customer Insights engagement insights"`. Această comandă creează principalul de serviciu pentru statistici de implicare pe entitatea găzduită selectată.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Acordați permisiuni entității principale de serviciu pentru a accesa contul de stocare
 
@@ -90,7 +90,7 @@ Poate dura până la 15 minute pentru propagarea schimbărilor.
 
 ## <a name="enter-the-azure-resource-id-or-the-azure-subscription-details-in-the-storage-account-attachment-to-audience-insights"></a>Introduceți ID-ul resursei Azure sau detaliile abonamentului Azure în atașarea contului de stocare la detalii despre public.
 
-Aveți posibilitatea să<!--note from editor: Edit suggested only if this section is optional.--> atașați un cont Data Lake Storage în statisticile publicului la [stochează datele de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-common-data-service-lake.md). Această opțiune vă permite să alegeți între o abordare bazată pe resurse sau abonament. În funcție de abordarea pe care o alegeți, urmați procedura din una dintre următoarele secțiuni.<!--note from editor: Suggested.-->
+Puteți atașa un cont Data Lake Storage în statisticile publicului la [stochează datele de ieșire](manage-environments.md) sau [folosiți-l ca sursă de date](connect-common-data-service-lake.md). Această opțiune vă permite să alegeți între o abordare bazată pe resurse sau abonament. În funcție de abordarea pe care o alegeți, urmați procedura din una dintre următoarele secțiuni.
 
 ### <a name="resource-based-storage-account-connection"></a>Conexiune la contul de stocare bazat pe resurse
 

@@ -4,17 +4,17 @@ description: Aflați cum să particularizați și să rulați Android SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 77e63929bbcc7ecff34a3839af525b76ec3c7f21173ddc5f8f2d69f11c25c441
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a060ac60db71a7b0fb8c0d7a3b0e266004fbee6a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036933"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494290"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Începeți cu Android SDK
 
@@ -35,17 +35,38 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
 
 - O cheie de ingestie (a se vedea mai jos pentru instrucțiuni despre cum să o obțineți)
 
-## <a name="step-1-integrate-the-sdk-into-your-application"></a>Pasul 1. Integrați kitul SDK în aplicația dvs.
+## <a name="integrate-the-sdk-into-your-application"></a>Integrați kitul SDK în aplicația dvs.
 Începeți procesul selectând un spațiu de lucru, selectând platforma mobilă Android și descărcarea fișierului Android SDK.
 
 - Utilizați comutatorul spațiului de lucru din panoul de navigare din stânga pentru a vă selecta spațiul de lucru.
 
 - Dacă nu aveți un spațiu de lucru existent, selectați  **Spațiu de lucru nou** și urmați pașii pentru a crea un [spațiu de lucru nou](create-workspace.md).
 
-## <a name="step-2-configure-the-sdk"></a>Pasul 2. Configurarea SDK-ului
+- După ce creați un spațiu de lucru, accesați **Administrator** > **Spațiu de lucru** și apoi selectați  **Ghid de instalare**. 
 
-1. După ce creați un spațiu de lucru, accesați **Administrator** > **Spațiu de lucru** și apoi selectați  **Ghid de instalare**. 
+## <a name="configure-the-sdk"></a>Configurarea SDK-ului
 
+Odată ce descărcați SDK, puteți lucra cu acesta în Android Studio pentru a activa și defini evenimente. Există două moduri de a face asta:
+### <a name="option-1-using-jitpack-recommended"></a>Opțiunea 1: Utilizarea JitPack (recomandat)
+1. Adăugați depozitul JitPack la rădăcina `build.gradle`:
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+    ```
+
+1. Adăugați dependența:
+    ```gradle
+    dependencies {
+        implementation 'com.github.microsoft:engagementinsights-sdk-android:1.0.0'
+        api 'com.google.code.gson:gson:2.8.1'
+    }
+    ```
+
+### <a name="option-2-using-download-link"></a>Opțiunea 2: Folosind linkul de descărcare
 1. Descărcați fișierul [detalii de implicare Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), și așezați fișierul `eiandroidsdk-debug.aar` în folderul `libs`.
 
 1. Deschideți fișierul la nivelul de proiect `build.gradle` și adăugați următoarele fragmente:
@@ -62,7 +83,17 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
     }
     ```
 
-1. Configurați configurația SDK statistici de implicare prin intermediul fișierului `AndroidManifest.xml` aflat sub folderul `manifests`. 
+1. Adăugați permisiunea pentru rețea și internet în fișierul `AndroidManifest.xml` aflat sub folderul `manifests`. 
+    ```xml
+    <manifest>
+        ...
+        <uses-permission android:name="android.permission.INTERNET" />
+        <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    ```
+    
+1. Configurați detaliile de implicare SDK prin fișierul dvs. `AndroidManifest.xml`. 
+
+## <a name="enable-auto-instrumentation"></a>Activați instrumentarea automată
 1. Copiază XML fragment din **Ghid de instalare**. `Your-Ingestion-Key` ar trebui să fie populată automat.
 
    > [!NOTE]
@@ -85,7 +116,7 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
    </application>
    ```
 
-1. Activați sau dezactivați captarea automată a evenimentelor `View` setând câmpul `autoCapture` de mai sus la `true` sau `false`.
+1. Activați sau dezactivați captarea automată a evenimentelor `View` setând câmpul `autoCapture` de mai sus la `true` sau `false`. În prezent evenimentele `Action` trebuie adăugate manual.
 
 1. (Opțional) Alte configurații includ setarea adresei URL a colectorului de punct final. Acestea pot fi adăugate sub metadatele cheie de ingestie în `AndroidManifest.xml`:
     ```xml
@@ -94,9 +125,9 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
             android:value="https://some-endpoint-url.com" />
     ```
 
-## <a name="step-3-initialize-the-sdk-from-mainactivity"></a>Pasul 3. Inițializați SDK-ul din MainActivity 
+## <a name="implement-custom-events"></a>Implementați evenimente particularizate
 
-După ce inițializați kitul SDK, puteți lucra cu evenimente și proprietățile acestora în mediul MainActivity.
+După ce inițializați kitul SDK, puteți lucra cu evenimente și proprietățile acestora în mediul `MainActivity`.
 
     
 Java:
@@ -147,7 +178,7 @@ event.setProperty("ad_shown", true)
 analytics.trackEvent(event)
 ```
 
-### <a name="set-user-details-for-your-event-optional"></a>Setați detaliile utilizatorului pentru evenimentul dvs. (opțional)
+## <a name="set-user-details-for-your-event-optional"></a>Setați detaliile utilizatorului pentru evenimentul dvs. (opțional)
 
 SDK vă permite să definiți informații despre utilizator care pot fi trimise cu fiecare eveniment. Puteți specifica informații despre utilizator apelând `setUser(user: User)` API pe nivelul `Analytics`.
 

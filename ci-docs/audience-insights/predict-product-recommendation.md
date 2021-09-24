@@ -1,20 +1,20 @@
 ---
 title: Predicție de recomandare de produse
 description: Preziceți produsele pe care un client este probabil să le cumpere sau să interacționeze cu acestea.
-ms.date: 03/17/2021
+ms.date: 09/13/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: zacookmsft
-ms.author: zacook
+author: wmelewong
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 60d511181aa85e3e939eff3e5931f0de7807c01c8f38134ebca5c5604cd53871
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034971"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494554"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicție de recomandare de produse (previzualizare)
 
@@ -89,23 +89,24 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 ### <a name="add-required-data"></a>Adăugați datele necesare
 
-1. Selectați **Adăugați date** pentru **Istoricul tranzacțiilor de client** și alegeți entitatea care furnizează informațiile despre istoricul tranzacțiilor/achizițiilor, așa cum este descris în [cerințe preliminare](#prerequisites).
+1. Selectați **Adăugați date** și alegeți tipul de activitate panoul lateral care conține informațiile necesare despre tranzacții sau istoricul achizițiilor.
 
-1. Asociați câmpurile semantice la atributele din cadrul entității din istoricul achizițiilor și selectați **Următorul**. Pentru descrierea câmpurilor, consultați secțiunea [Cerințe preliminare](#prerequisites).
-   > [!div class="mx-imgBorder"]
-   > ![Definiți relația dintre entități.](media/product-recommendation-purchasehistorymapping.PNG "Pagina istoric achiziții care arată atributele semantice care sunt mapate la câmpurile din entitatea istoric achiziții selectată")
+1. Sub **Alegeți activitățile**, alegeți activitățile specifice din activitatea selectată pe care doriți să se concentreze calculul.
 
-1. Dacă câmpurile nu sunt completate, configurați relația de la entitatea din istoricul achizițiilor la entitatea *Client*.
-    1. Selectați **Entitate istoric achiziții**.
-    1. Selectați **Câmpul** care identifică clientul în entitatea de istoric al achizițiilor. Trebuie să fie asociat ID-ului clientului primar al entității dvs. *Client*.
-    1. Selectați **Entitatea client** care se potrivește cu entitatea clientului primar.
-    1. Introduceți un nume care descrie relația.
-       > [!div class="mx-imgBorder"]
-       > ![Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul.](media/model-purchase-join.png "Pagina cu istoricul achizițiilor care arată crearea unei relații cu clientul")
+   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panoul lateral care arată alegerea activităților specifice sub tipul semantic.":::
+
+1. Dacă nu ați mapat încă activitatea la un tip semantic, selectați **Editați** pentru a face acest lucru. Se deschide experiența ghidată pentru cartografierea activităților semantice. Mapați datele dvs. la câmpurile corelate în tipul de activitate selectat.
+
+   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipul activității de setare a paginii.":::
+
+1. După maparea activității la tipul semantic corespunzător, selectați **Următorul** pentru, a merge mai departe 
+ 
+1. Asociați atributele semantice câmpurilor necesare pentru a rula modelul.
 
 1. Selectați **Salvare**.
 
 1. Selectați **Următorul**.
+
 
 ### <a name="configure-product-filters"></a>Configurați filtre de produse
 

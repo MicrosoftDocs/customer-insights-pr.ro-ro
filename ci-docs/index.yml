@@ -7,12 +7,12 @@ metadata:
   ms.date: 07/30/2021
   ms.service: customer-insights
   ms.topic: landing-page
-  ms.openlocfilehash: 1446a2bcb24739187a37b2024c9a6070ab008989d722ebf84ef5259ec2ee4d5c
-  ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+  ms.openlocfilehash: e6a658f43b382934ee9b9b55c54fc1dff3f4df72
+  ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
   ms.translationtype: HT
   ms.contentlocale: ro-RO
-  ms.lasthandoff: 08/10/2021
-  ms.locfileid: "7036572"
+  ms.lasthandoff: 09/17/2021
+  ms.locfileid: "7498612"
 title: Documentație Dynamics 365 Customer Insights
 summary: Găsiți resurse utile pentru a începe și a afla despre caracteristicile și capacitățile Customer Insights.
 landingContent:
@@ -26,16 +26,16 @@ landingContent:
       url: /dynamics365-release-plan/
     - text: Descoperiți CDP
       url: https://dynamics.microsoft.com/ai/customer-insights/
-- title: Începeți cu detalii despre public
+- title: Porniți cu Customer Insights
   linkLists:
   - linkListType: get-started
     links:
     - text: Înregistrați-vă pentru o versiune de încercare
       url: https://dynamics.microsoft.com/en-us/get-started/?appname=customerinsights
-    - text: Noutăți
+    - text: Ce este nou în detalii despre public
       url: audience-insights/whats-new-audience-insights.md
-    - text: Documentația despre detalii despre public
-      url: audience-insights/index.yml
+    - text: Ce este nou în detalii despre angajament
+      url: https://docs.microsoft.com/dynamics365-release-plan/2021wave1/customer-data-platform/engagement-insights/planned-features
 - title: Intrați în legătură
   linkLists:
   - linkListType: overview
@@ -46,16 +46,16 @@ landingContent:
       url: https://go.microsoft.com/fwlink/?linkid=2074172
     - text: Raportați o problemă
       url: https://go.microsoft.com/fwlink/?linkid=2079641
-- title: Tutoriale Detalii despre audiență
+- title: Partajați date între capabilități
   linkLists:
-  - linkListType: tutorial
+  - linkListType: how-to-guide
     links:
-    - text: Creați un nou mediu
-      url: audience-insights/home.md
-    - text: Creați un profil de client unificat
-      url: /learn/modules/unified-customer-profile/
-    - text: Lucrul cu aplicația
-      url: /learn/modules/working-with-customer-insights/
+    - text: Creați o legătură între capacități
+      url: engagement-insights/integrate-audience-insights-engagement-insights.md
+    - text: Creați segmente pentru utilizare în rapoarte
+      url: engagement-insights/integrate-audience-insights-segments.md
+    - text: Utilizați proprietățile profilului pentru analize interactive
+      url: engagement-insights/curate-dimensions.md
 - title: Exportați date cu detalii privind publicul
   linkLists:
   - linkListType: how-to-guide

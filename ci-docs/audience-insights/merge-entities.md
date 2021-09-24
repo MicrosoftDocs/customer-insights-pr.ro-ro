@@ -1,7 +1,7 @@
 ---
 title: Îmbinați entitățile în unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 05/10/2021
+ms.date: 09/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6e64154dc58f679d13033fa55a60cd0c306f62f31548b8ce98ea1ed5f423b3e9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035017"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494334"
 ---
 # <a name="merge-entities"></a>Îmbinare entități
 
@@ -66,7 +66,7 @@ Schimbați numele afișat al atributelor combinate. Nu puteți modifica numele e
 
 Excludeți un atribut din profilul de client unificat. Dacă câmpul e utilizat în alte procese, de exemplu într-un segment, eliminați-l din aceste procese înainte de a-l exclude din profilul clientului. 
 
-1. Selectați câmpul îmbinat.
+1. Selectați un câmp îmbinat.
   
 1. Selectați **Afișați mai multe** și alegeți **Excludere**.
 
@@ -76,17 +76,40 @@ Excludeți un atribut din profilul de client unificat. Dacă câmpul e utilizat 
 
 Pe pagina **Îmbinare**, selectați **Câmpuri excluse** pentru a vedea lista tuturor câmpurilor excluse. Acest panou vă permite să adăugați câmpuri excluse înapoi.
 
+## <a name="edit-a-merged-field"></a>Editați un câmp îmbinat
+
+1.  Selectați un câmp îmbinat.
+
+1.  Selectați **Afișați mai multe** și alegeți **Editare**.
+
+1.  Specificați cum să combinați sau să combinați câmpurile dintr-una dintre cele trei opțiuni:
+    - **Importanţă**: Identifică valoarea câștigătorului pe baza rangului de importanță specificat pentru câmpurile participante. Este opțiunea implicită de combinare. Selectați **Mutați în sus/în jos** pentru a stabili clasamentul importanței.
+    :::image type="content" source="media/importance-merge-option.png" alt-text="Opțiunea de importanță din dialogul câmpurilor de îmbinare."::: 
+    - **Cel mai recent**: Identifică valoarea câștigătorului pe baza celui mai recent. Necesită o dată sau un câmp numeric pentru fiecare entitate participantă în domeniul câmpurilor de îmbinare pentru a defini actualitatea.
+    :::image type="content" source="media/recency-merge-option.png" alt-text="Opțiunea de noutate din dialogul câmpurilor de îmbinare.":::
+    - **Cel mai puțin recent**: Identifică valoarea câștigătorului pe baza celui mai puțin recent. Necesită o dată sau un câmp numeric pentru fiecare entitate participantă în domeniul câmpurilor de îmbinare pentru a defini actualitatea.
+
+1.  Puteți adăuga câmpuri suplimentare pentru a participa la procesul de îmbinare.
+
+1.  Puteți redenumi câmpul combinat.
+
+1. Selectați **Finalizat** pentru a vă aplica modificările.
+
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
+
 ## <a name="manually-combine-fields"></a>Îmbinați manual câmpurile
 
 Specificați manual un atribut îmbinat. 
 
 1. Pe pagina **Combinare**, selectați **Combinați câmpuri**.
 
-1. Furnizați un **Nume** și un **Nume al câmpului de ieșire**.
+1. Specificați politica câștigătorului de îmbinare în lista derulantă **Combinați câmpurile după**.
 
 1. Alegeți un câmp de adăugat. Selectați **Adăugați câmpuri** pentru combinarea mai multor câmpuri.
 
-1. Confirmați excluderea.
+1. Furnizați un **Nume** și un **Nume al câmpului de ieșire**.
+
+1. Selectați **Finalizat** pentru a aplica modificările.
 
 1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
 
@@ -103,6 +126,27 @@ Unele entități conțin mai multe detalii decât altele. Dacă o entitate inclu
 1. Confirmați modificarea.
 
 1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
+
+## <a name="configure-customer-id-generation"></a>Configurați generarea ID-ului de client 
+
+După configurarea câmpurilor de fuzionare, puteți defini cum să generați valori CustomerId, identificatorii unici ai profilului clientului. Pasul de îmbinare în procesul de unificare a datelor generează identificatorul unic al profilului clientului. Identificatorul este CustomerId din entitatea *Client* care rezultă din procesul de unificare a datelor. 
+
+CustomerId-ul din entitatea Client se bazează pe un hash cu prima valoare a cheilor primare non-câștigătoare nule. Aceste chei provin de la entitățile utilizate în faza de potrivire și fuzionare și sunt influențate de ordinea de potrivire. Deci, CustomerID generat se poate modifica atunci când o valoare a cheii primare se modifică în entitatea primară a comenzii de potrivire. În consecință, valoarea cheii principale ar putea să nu reprezinte întotdeauna același client.
+
+Configurarea unui ID de client stabil vă permite să evitați acel comportament.
+
+**Configurați un ID unic al clientului**
+
+1. Accesați **Unificare** > **Îmbinare**.
+
+1. Pe pagina **Îmbinare** selectați fila **Taste**. 
+
+1. Plasați cursorul pe rândul **CustomerId** și selectați opțiunea **Configurați**.
+   :::image type="content" source="media/customize-stable-id.png" alt-text="Control pentru a personaliza generarea ID-ului.":::
+
+1. Selectați până la cinci câmpuri care vor cuprinde un ID de client unic și care sunt mai stabile. Înregistrările care nu se potrivesc configurației dvs. utilizează în schimb un ID configurat de sistem.  
+
+1. Selectați **Terminat** și rulați procesul de îmbinare pentru a aplica modificările.
 
 ## <a name="run-your-merge"></a>Executați-vă unificarea
 

@@ -4,17 +4,17 @@ description: Cum să creați, redenumiți și să ștergeți spațiile de lucru 
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 07/01/2021
+ms.date: 09/09/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: bf310b1a50ba7baac5d11d5f22ff42003fbba516efd7d165c00b59adc958da2e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034057"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486050"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestionați mediile și spațiile de lucru
 
@@ -85,13 +85,11 @@ Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](
 
 1. Selectați **Adăugați membri** pentru a da acces și [atribuiți roluri](user-roles.md). În prezent, numai **Administrator de spațiu de lucru** este disponibil.
 
-1. Dacă configurați o [conectare la detaliile despre public](configure-connections.md), puteți selecta **Permiteți accesul la datele de profil** pentru a permite membrilor să vadă rapoarte bazate pe [profilurile de utilizator](profile-reports.md).
-
 1. Selectați **Adăugați membri** pentru a-i adăuga în spațiul dvs. de lucru.
 
 ## <a name="manage-an-environment"></a>Gestionați un mediu
 
-În calitate de administrator de mediu, puteți accesa un mediu din panoul de navigare din stânga. Puteți configura setările de mediu, alți administratori de mediu, spațiile de lucru și [conectare la detaliile despre public](configure-connections.md). Selectați filele pentru a vă deplasa între diferite zone din centrul de administrare.
+În calitate de administrator de mediu, puteți accesa un mediu din panoul de navigare din stânga. Puteți configura setările de mediu, alți administratori de mediu și spațiile de lucru. Selectați filele pentru a vă deplasa între diferite zone din centrul de administrare.
 
 :::image type="content" source="media/New-environment.png" alt-text="Centrul de administrare pentru mediu.":::
 
@@ -123,8 +121,6 @@ Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](
 
 1. Selectați **Adăugați membri** pentru a actualiza membrii și [atribuiți roluri](user-roles.md). În prezent, numai **Administrator de mediu** este disponibil.
 
-1. Dacă configurați o [conectare la detaliile despre public](configure-connections.md), puteți selecta **Permiteți accesul la datele de profil** pentru a permite membrilor să vadă rapoarte bazate pe [profilurile de utilizator](profile-reports.md).
-
 1. Selectați **Adăugați membri** pentru a-i adăuga în mediul dvs.
 
 ### <a name="delete-an-environment"></a>Ștergerea unui mediu
@@ -143,7 +139,7 @@ Administratorii de mediu pot șterge mediile. Înainte de a putea șterge un med
 
 Stabilirea conectărilor la detaliile despre public vă permite să vedeți rapoarte în Detalii despre angajamente bazate pe profiluri unificate ale clienților. 
 
-Pentru mai multe informații, consultați [Configurarea de conectări](configure-connections.md).
+Pentru mai multe informații, consultați [Creați o legătură între detaliile despre public și detalii despre angajament](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="manage-personal-data"></a>Gestionarea datelor personale
 

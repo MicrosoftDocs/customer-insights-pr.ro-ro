@@ -1,20 +1,20 @@
 ---
 title: Activități ale clienților
-description: Definiți activitățile clienților și vizualizați-le în cronologia clienților.
-ms.date: 04/07/2021
+description: Definiți activitățile clienților și vizualizați-le într-o cronologie pe profilurile clienților.
+ms.date: 09/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 6ebe899d3e3da43c4108678cd2e4f9a986e18ab35e839044becab4619adb0f14
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033646"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494426"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
@@ -60,12 +60,15 @@ Sursele dvs. de date pot include entități cu date tranzacționale și de activ
       - **Detalii suplimentare**: Câmp cu informații relevante pentru această activitate.
       - **Pictogramă**: Pictogramă care reprezintă cel mai bine acest tip de activitate.
       - **Adresa web**: Câmp care conține o adresă URL cu informații despre această activitate. De exemplu, sistemul tranzacțional care furnizează această activitate. Această adresă URL poate fi orice câmp din sursa de date sau poate fi construită ca un câmp nou folosind o transformare Power Query. Datele URL vor fi stocate în entitatea *Activitate unificată*, care poate fi consumată descendent folosind [API-uri](apis.md).
-   
-   :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specificați datele despre activitatea clienților într-o entitate de activitate unificată.":::
+
+   - **Afișați în cronologie**
+      - Alegeți dacă doriți să arătați această activitate în vizualizarea cronologiei pe profilele clienților dvs. Selectați **Da** pentru a arăta activitatea în cronologie sau **Nu** să-l ascundă.
+
+      :::image type="content" source="media/Activity_Wizard3.PNG" alt-text="Specificați datele despre activitatea clienților într-o entitate de activitate unificată.":::
 
 1. Selectați **Următorul** pentru a trece la următorul pas. Puteți selecta **Finalizați și examinați** pentru a salva activitatea acum cu tipul de activitate setat la **Altele**. 
 
-1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, *Abonament* și tipurile de activități *SalesOrderLine* pot fi mapate semantic după acceptarea mapării câmpurilor. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
+1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, tipuri de activități *Feedback*, *Loialitate*, *SalesOrder*, *SalesOrderLine* și *Abonament* pot fi mapate semantic după acceptarea mapării câmpurilor. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
 
 1. Selectați **Următorul** pentru a trece la următorul pas. 
 

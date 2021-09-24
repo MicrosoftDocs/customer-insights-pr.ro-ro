@@ -4,17 +4,17 @@ description: Aflați cum să particularizați și să rulați iOS SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/15/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: de8291fc429ae6433301a47bfdf9a3271b1b77294fd58448c7aa6bd0783edc97
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f05929435eeee9cf3f891ab18842c5861e39d5ba
+ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036888"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "7494245"
 ---
 # <a name="get-started-with-the-ios-sdk"></a>Începeți cu iOS SDK
 
@@ -45,11 +45,36 @@ Următoarele opțiuni de configurare pot fi transmise către SDK prin intermediu
 
 - Dacă nu aveți un spațiu de lucru existent, selectați  **Spațiu de lucru nou** și urmați pașii pentru a crea un [spațiu de lucru nou](create-workspace.md).
 
+- După ce creați un spațiu de lucru, accesați **Administrator** > **Spațiu de lucru** și apoi selectați **Ghid de instalare**.
+
 ## <a name="configure-the-sdk"></a>Configurarea SDK-ului
 
-După ce descărcați SDK-ul, puteți lucra cu acesta în Xcode pentru a activa și defini evenimente.
+După ce descărcați SDK-ul, puteți lucra cu acesta în Xcode pentru a activa și defini evenimente. Există două moduri de a face asta
 
-1. După ce creați un spațiu de lucru, accesați **Administrator** > **Spațiu de lucru** și apoi selectați **Ghid de instalare**.
+### <a name="option-1-using-cocoapods-recommended"></a>Opțiunea 1: Utilizarea CocoaPods (recomandat)
+CocoaPods este un manager de dependență pentru proiectele Swift și Objective-C Cocoa. Utilizarea acestuia face mai ușoară integrarea SDK-urilor de implicare pentru iOS. CocoaPods vă permite, de asemenea, să faceți upgrade la cea mai recentă versiune a SDK-ului Statistici de implicare. Iată cum să utilizați CocoaPods pentru a integra SDK-urile de implicare în proiectul dvs. Xcode. 
+
+1. Instalați CocoaPods. 
+
+1. Creați un fișier nou numit Podfile în directorul rădăcină al proiectului dvs. și adăugați următoarele instrucțiuni. Înlocuiți YOUR_TARGET_PROJECT_NAME cu numele proiectului dvs. Xcode. 
+```objectivec
+platform :ios, '9.0'  
+
+ target '${YOUR_TARGET_PROJECT_NAME}' do 
+
+     use_frameworks!   
+
+     pod 'EIObjC.framework.debug' 
+
+     pod 'EIObjC.framework.release' 
+
+ end 
+```
+Configurația podului de mai sus conține atât versiunile de depanare, cât și versiunea SDK. Alegeți unul dintre cele mai bune pentru proiectul dvs.
+
+1. Instalați podul executând următoarea comandă: `pod install --repo-update `
+
+### <a name="option-2-using-download-link"></a>Opțiunea 2: Folosind linkul de descărcare
 
 1. Descărcați [detaliile de implicare iOS SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-ios-sdk.zip) și plasați fișierul `EIObjC.xcframework` în folderul `Frameworks`.
 

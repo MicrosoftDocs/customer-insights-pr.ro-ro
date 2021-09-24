@@ -10,12 +10,12 @@ author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 15cc495359af1faefe32225ae490fd7e7b6b08cc7a411e0a9804da6ec704099c
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 925cb5c2ccb4279ae5db2eb927a356708d310360
+ms.sourcegitcommit: 048d65bded22abadcbbad1e22f15b05828bb977b
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034375"
+ms.lasthandoff: 09/06/2021
+ms.locfileid: "7474072"
 ---
 # <a name="audience-insights-for-dynamics-365-customer-insights-overview"></a>Statistici ale publicului pentru prezentare generală Dynamics 365 Customer Insights
 
@@ -57,11 +57,5 @@ ms.locfileid: "7034375"
 
   - Creează profiluri particularizabile, definesc măsuri și creează segmente și beneficiați de analiză predictivă pentru a obține o vizualizare la 360 de grade a clientului dvs, specific organizației dvs.  
   - Utilizați conectori de tip box pentru mai multe aplicații sau API-uri Microsoft și terțe părți pentru a procesa statisticile.
-
-## <a name="pricing-and-licensing"></a>Prețuri și licențiere
-
-Customer Insights este licențiat per entitate găzduită și include mai multe funcții. Capacitățile prevăzute includ un set de profile, reîmprospătări zilnice ale sistemului, solicitări Power Platform și două medii. Puteți achiziționa capacitate suplimentară și licență pentru a crește cota implicită. 
-- Capacitate și drepturi detaliate: [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
-- Prezentare generală a prețurilor: [Tarifare Dynamics 365](https://dynamics.microsoft.com/pricing/#CustomerDataPlatform)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

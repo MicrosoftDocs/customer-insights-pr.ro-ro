@@ -1,19 +1,19 @@
 ---
 title: Creați o legătură între detaliile despre public și detalii despre angajament
 description: Creați o legătură activă între statistici despre public și statistici despre angajament pentru a permite partajarea bidirecțională a datelor.
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 870209a7e19fec464ec41462a02365771bd653bd
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
+ms.openlocfilehash: 0fdbc93292291814b2e1a62fee2c5ff796ae14e2
+ms.sourcegitcommit: 4e5b7ec50c7612765a9ec2c8673e0cc43b357abb
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461028"
+ms.lasthandoff: 09/10/2021
+ms.locfileid: "7487122"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creați o legătură între detaliile despre public și detalii despre angajament
 
@@ -26,14 +26,14 @@ Utilizați profiluri și segmente unificate din statistici privind publicul pent
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Profilurile cu detalii despre public trebuie să fie stocate într-un cont Azure Data Lake Storage pe care îl dețineți sau într-un data lake [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;gestionat. 
-
+- Mediul detaliilor dvs. despre public ar trebui să aibă un mediu Dataverse asociat. Și dacă și acel mediu utilizează Dataverse pentru stocarea datelor, asigurați-vă că verificați opțiunea **Activați partajarea datelor** în detaliile despre public. Pentru mai multe informații, consultați [Creați și configurați un mediu plătit în detalii despre public](../audience-insights/get-started-paid.md).
 - Aveți nevoie de permisiuni de administrator atât pentru mediile de angajament, cât și pentru medii de public.
-
 - Mediile conectate trebuie să se afle în aceeași regiune geografică.
 
 > [!NOTE]
-> - În cazul în care abonamentul dvs. de detalii privind publicul este o versiune de încercare, care utilizează un Data Lake gestionat intern cu statistici de public, contactați [pirequest@microsoft.com](mailto:pirequest@microsoft.com) pentru ajutor. 
-> - În cazul în care mediul dvs. de detalii despre public îl folosește pe al dvs. Azure Data Lake Storage pentru a stoca date, trebuie să adăugați un cont principal de serviciu Azure cu privire la angajament în contul dvs. de stocare. Pentru detalii, accesați [Conectați-vă la un cont Azure Data Lake Storage cu un director de serviciu Azure pentru informații despre public](../audience-insights/connect-service-principal.md). De asemenea, mediul dvs. de cunoștințe despre public ar trebui să aibă un mediu [Dataverse asociat](../audience-insights/get-started-paid.md). 
+> - În cazul în care abonamentul dvs. de detalii privind publicul este o versiune de încercare care utilizează un data lake gestionat intern cu statistici de public, contactați [pirequest@microsoft.com](mailto:pirequest@microsoft.com) pentru ajutor. 
+> - În cazul în care mediul dvs. de detalii despre public îl folosește pe al dvs. Azure Data Lake Storage pentru a stoca date, trebuie să adăugați un cont principal de serviciu Azure cu privire la angajament în contul dvs. de stocare. Pentru detalii, accesați [Conectați-vă la un cont Azure Data Lake Storage cu un director de serviciu Azure pentru informații despre public](../audience-insights/connect-service-principal.md). 
+
 
 ## <a name="create-an-environment-link"></a>Crearea unui link de mediu
 
@@ -75,6 +75,7 @@ După conectarea mediilor, puteți selecta caracteristici opționale pentru medi
 
    > [!IMPORTANT]
    > Dacă nu adăugați în mod explicit utilizatori în acest pas, datele vor fi ascunse utilizatorilor în detalii despre angajament.
+   > Pentru ca segmentele de statistici privind publicul să apară în statistici despre implicare, trebuie mai întâi să [rulați procesele de îmbinare și aval](../audience-insights/merge-entities.md). Procesele din aval sunt importante, deoarece generează un tabel unic care pregătește segmentele de informații despre public pentru a fi partajate cu datele de implicare. (Dacă este programată o reîmprospătare a sistemului, aceasta va include automat procesele din aval.)
 
 1. Examinați selecția, apoi selectați **Finalizare**.
 

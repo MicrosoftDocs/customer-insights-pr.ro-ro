@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 726edb19a9fd97d80ae357103dc7d48ed38b005131ad44137b47d629a1c60b12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45c81a037258e42d8975e0372c104865a9d4cbfe
+ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033876"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466639"
 ---
 # <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
 
@@ -126,6 +126,8 @@ După executarea procesului de îmbogățire, accesați **Îmbogățirile mele**
 :::image type="content" source="media/my-enrichments.png" alt-text="Previzualizarea rezultatelor după executarea procesului de îmbogățire":::
 
 Verificați datele îmbogățite selectând **Vizualizați date îmbogățite** în grafic. Datele îmbogățite pentru mărci se includ în entitatea **BrandAffinityFromMicrosoft**. Datele pentru interese sunt în entitatea **InterestAffinityFromMicrosoft**. De asemenea, veți găsi aceste entități listate în grupul **Îmbogățire** în **Date** > **Entități**.
+
+Veți vedea o diagramă cu numărul de profiluri de clienți îmbogățiți în timp și o previzualizare a entității îmbogățite. Selectați **Afișați mai multe** în dala de previzualizare pentru a deschide entitatea îmbogățită.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 

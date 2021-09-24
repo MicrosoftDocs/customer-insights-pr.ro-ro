@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 3aa9599fc780098a2f7f31f0210d76ed2ef27ece774dd6212b5cb2a599ad537e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
+ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033967"
+ms.lasthandoff: 09/09/2021
+ms.locfileid: "7486135"
 ---
 # <a name="out-of-box-profile-reports"></a>Rapoarte de profil predefinite
 
@@ -31,7 +31,7 @@ Dacă utilizați o versiune de încercare a capacității de detaliilor despre p
 
 ## <a name="enable-the-customer-profile-report"></a>Activați raportul profilului de client
 
-Un administrator de mediu trebuie [să creeze o conexiune la detaliile despre public](configure-connections.md).
+Un administrator de mediu trebuie să [conecteze statistici despre implicare și informații despre public](integrate-audience-insights-engagement-insights.md).
 
 După specificarea detaliilor conexiunii, administratorul poate acorda acces altor persoane din organizație pentru a vedea raportul. Administratorul de mediu care configurează conexiunea are automat acces la raport. 
 

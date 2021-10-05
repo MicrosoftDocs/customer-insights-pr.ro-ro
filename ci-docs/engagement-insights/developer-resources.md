@@ -4,27 +4,27 @@ description: Aflați informații despre SDK-uri și despre cum să le utilizați
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 06/23/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5880e9507cc192424989c7fc9c2733ac5d770a7be8a2b42a446ffd8681fa7612
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 2e2df207802f8de501661d247bd80d6cc792636f
+ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036298"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7558761"
 ---
 # <a name="developer-resources-overview"></a>Prezentare generală Resurse pentru dezvoltatori
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Acest articol listează toate fragmentele de cod disponibile și mostrele pentru referință rapidă. Obțineți codul pentru un expeditor de evenimente pentru platforma dvs. și urmați tutorialele. 
+Acest articol enumeră toate fragmentele de cod și eșantioanele de set de instrumente de dezvoltare software (SDK) disponibile pentru ca dezvoltatorii să partajeze date cu Dynamics 365 Customer Insights. Obțineți codul pentru evenimente specifice platformei dvs. urmând tutorialele.
 
 ## <a name="capture-events-from-websites"></a>Captează evenimente de pe site-uri web
 
-- [Cum se adaugă fragment de cod pe un site web](instrument-website.md)
+- [Instrumentarea unui site web](instrument-website.md)
 - [Eșantion SDK web](websdk-sample.md)
 - [Instrumentare avansată SDK web](advanced-SDK-implementation.md)
 

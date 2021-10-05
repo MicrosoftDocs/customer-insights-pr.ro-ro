@@ -242,7 +242,7 @@
   items:
     - name: Centrul de ajutor
       href: engagement-insights/index.yml
-    - name: Prezentare generală a capacității
+    - name: Despre detalii despre angajamente
       href: engagement-insights/overview.md
     - name: Începeți
       items:
@@ -306,7 +306,7 @@
           href: engagement-insights/user-consent-storage.md
     - name: Disponibilitate regională
       href: engagement-insights/regional-availability.md
-- name: Integrați informații despre public și angajament
+- name: Partajați date între capabilități
   items:
     - name: Legați detaliile despre public și despre angajament
       href: engagement-insights/integrate-audience-insights-engagement-insights.md
@@ -318,5 +318,3 @@
   href: service-limits.md
 - name: Drepturi și solicitări DSR
   href: dsr-rights-requests.md
-- name: Obțineți asistență
-  href: 'https://dynamics.microsoft.com/support/'

@@ -1,20 +1,20 @@
 ---
 title: Relații între entități și căi de entități
 description: Creați și gestionați relații între entități din mai multe surse de date.
-ms.date: 06/01/2020
+ms.date: 09/27/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: MichelleDevaney
-ms.author: midevane
+author: CadeSanthaMSFT
+ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 1853fcd8db2918a0b4a19fa0934e2f0ddbcf6d093c85fdf2068a13f954035dec
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
+ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035246"
+ms.lasthandoff: 09/27/2021
+ms.locfileid: "7557367"
 ---
 # <a name="relationships-between-entities"></a>Relații între entități
 
@@ -93,11 +93,11 @@ Opțiuni disponibile:
 - **Treceți la aspectul orizontal/vertical**: Schimbați alinierea entităților și a relațiilor.
 - **Editați**: Actualizați proprietățile relațiilor particularizate în panoul de editare și salvați modificările.
 
-### <a name="relationship-path"></a>Calea relației
+## <a name="relationship-paths"></a>Căi de relație
 
-Calea relației descrie entitățile care sunt conectate cu relațiile dintre o entitate sursă și o entitate țintă. Este utilizat atunci când creați un segment sau o măsură care include alte entități decât entitatea de profil unificat și există mai multe opțiuni pentru a ajunge la entitatea de profil unificat.
+O cale de relație descrie entitățile care sunt conectate cu relațiile dintre o entitate sursă și o entitate țintă. Este utilizat atunci când creați un segment sau o măsură care include alte entități decât entitatea de profil unificat și există mai multe opțiuni pentru a ajunge la entitatea de profil unificat. 
 
-Calea relației informează sistemul despre care relații pentru a accesa entitatea de profil unificat. Căile de relație diferite pot produce rezultate diferite.
+O cale de relație informează sistemul despre care relații pentru a accesa entitatea de profil unificat. Căile de relație diferite pot produce rezultate diferite.
 
 De exemplu, entitatea *eCommerce_eCommercePurchases* are următoarele relații cu entitatea profilul unificat *Client*:
 
@@ -105,7 +105,43 @@ De exemplu, entitatea *eCommerce_eCommercePurchases* are următoarele relații c
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
 
-Calea relației determină ce entități puteți utiliza atunci când creați reguli pentru măsuri sau segmente. Alegerea opțiunii cu cea mai lungă cale de relație va produce probabil mai puține rezultate, deoarece înregistrările de potrivire trebuie să facă parte din toate entitățile. În acest exemplu, un client trebuie să fi achiziționat bunuri prin e-commerce (eCommerce_eCommercePurchases), la un punct de vânzare (POS_posPurchases) și să participe la programul nostru de fidelizare (loyaltyScheme_loyCustomers). Atunci când alegeți prima opțiune, veți obține probabil mai multe rezultate, deoarece clienții trebuie să existe doar într-o singură entitate suplimentară.
+O cale de relație determină ce entități puteți utiliza atunci când creați reguli pentru măsuri sau segmente. Alegerea opțiunii cu cea mai lungă cale de relație va produce probabil mai puține rezultate, deoarece înregistrările de potrivire trebuie să facă parte din toate entitățile. În acest exemplu, un client trebuie să fi achiziționat bunuri prin e-commerce (eCommerce_eCommercePurchases), la un punct de vânzare (POS_posPurchases) și să participe la programul nostru de fidelizare (loyaltyScheme_loyCustomers). Atunci când alegeți prima opțiune, veți obține probabil mai multe rezultate, deoarece clienții trebuie să existe doar într-o singură entitate suplimentară.
+
+### <a name="direct-relationship"></a>Relație directă
+
+O relație este clasificată ca **relație directă** atunci când o entitate sursă se referă la o entitate țintă cu o singură relație.
+
+De exemplu, dacă o entitate de activitate a apelat *eCommerce_eCommercePurchases* se conectează la o entitate țintă *eCommerce_eCommerceContacts* entitate prin *ContactId* numai că este o relație directă.
+
+:::image type="content" source="media/direct_Relationship.png" alt-text="Entitatea sursă se conectează direct la entitatea țintă.":::
+
+#### <a name="multi-path-relationship"></a>Relație cu mai multe căi
+
+O **relație multi-cale** este un tip special de relație directă care conectează o entitate sursă la mai multe entități țintă.
+
+De exemplu, dacă o entitate de activitate a apelat *eCommerce_eCommercePurchases* se referă la două entități țintă, ambele *eCommerce_eCommerceContacts* și *loyaltyScheme_loyCustomers*, este o relație cu mai multe căi.
+
+:::image type="content" source="media/multi-path_relationship.png" alt-text="Entitatea sursă se conectează direct la mai multe entități țintă printr-o relație multi-hop.":::
+
+### <a name="indirect-relationship"></a>Relație indirectă
+
+O relație este clasificată ca o **relație indirectă** atunci când o entitate sursă se referă la una sau mai multe entități adiționale înainte să relaționeze cu o entitate țintă.
+
+#### <a name="multi-hop-relationship"></a>Relație multi-hop
+
+O *relație multi-hop* este o *relație indirectă* care vă permite să conectați o entitate sursă la o entitate țintă prin una sau mai multe alte entități intermediare.
+
+De exemplu, dacă o entitate de activitate a apelat *eCommerce_eCommercePurchasesWest* se conectează la o entitate intermediară numită *eCommerce_eCommercePurchasesEast* și apoi se conectează la o entitate țintă numită *eCommerce_eCommerceContacts*, este o relație multi-hop.
+
+:::image type="content" source="media/multi-hop_relationship.png" alt-text="Entitatea sursă se conectează direct la o entitate țintă cu o entitate intermediară.":::
+
+### <a name="multi-hop-multi-path-relationship"></a>Relație multi-hop, multi-path
+
+Relațiile multi-hop și multi-path pot fi utilizate împreună pentru a crea **relații multi-hop, multi-path**. Acest tip special combină funcțiile de relații **multi-hop** și **relații multi-path**. Vă permite să vă conectați la mai multe entități țintă în timp ce utilizați entități intermediare.
+
+De exemplu, dacă o entitate de activitate numită *eCommerce_eCommercePurchasesWest* se conectează la o entitate intermediară numită *eCommerce_eCommercePurchasesEast* și apoi se conectează la două entități țintă, atât *eCommerce_eCommerceContacts*, cât și *loyaltyScheme_loyCustomers*, este o relație multi-hop, multi-path.
+
+:::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entitatea sursă se conectează direct la o entitate țintă și se conectează la o altă entitate țintă printr-o entitate intermediară.":::
 
 ## <a name="manage-existing-relationships"></a>Gestionați relațiile existente 
 

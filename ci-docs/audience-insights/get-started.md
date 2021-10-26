@@ -10,12 +10,12 @@ ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
-ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.openlocfilehash: 5e8545bc9bf0d953150248fa859c6ca71a12f9cf
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466592"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645279"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Începeți cu capacitatea de analiză a publicului Dynamics 365 Customer Insights
 
@@ -23,7 +23,7 @@ Detalii despre public, vă pot ajuta să construiți o înțelegere mai profund�
 
 ## <a name="step-1-create-an-environment"></a>Pasul 1: Crearea unui mediu
 
-Pentru început, trebuie mai întâi să creați un mediu în care să lucrați. Dacă organizația dvs. a achiziționat deja o licență, consultați [Începeți cu un abonament plătit](get-started-paid.md). Pentru a începe o încercare pentru informații despre public, consultați [Configurați un mediu de încercare](get-started-trial.md). 
+Pentru început, trebuie mai întâi să creați un mediu în care să lucrați. Dacă organizația dvs. a achiziționat deja o licență, consultați [Creați un mediu](create-environment.md). Pentru a începe o încercare pentru informații despre public, consultați [Configurați un mediu de încercare](../trial-signup.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Pasul 2: Explorați detalii despre public
 

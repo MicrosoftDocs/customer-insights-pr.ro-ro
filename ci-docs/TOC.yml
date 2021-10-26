@@ -2,8 +2,14 @@
   href: index.yml
 - name: Prezentare generală produs
   href: overview.md
-- name: Creați o versiune de încercare
-  href: audience-insights/get-started-trial.md
+- name: Versiune de încercare gratuită
+  items:
+    - name: Înregistrați-vă pentru o versiune de încercare gratuită
+      href: trial-signup.md
+    - name: Întrebări frecvente despre versiunea de încercare
+      href: trial-FAQ.md
+- name: Începeți cu o licență plătită
+  href: paid-license.md
 - name: Accesați-vă mediul
   href: 'https://home.ci.ai.dynamics.com/'
 - name: Detalii despre public
@@ -19,9 +25,11 @@
         - name: Ghid de inițiere rapidă
           href: audience-insights/get-started.md
         - name: Creați un mediu nou
-          href: audience-insights/get-started-paid.md
+          href: audience-insights/create-environment.md
         - name: Explorați detalii despre public
           href: audience-insights/home.md
+    - name: Lucrul cu conturi de business
+      href: audience-insights/work-with-business-accounts.md
     - name: Aflați module
       items:
         - name: Ingerare date
@@ -66,6 +74,8 @@
           href: audience-insights/relationships.md
         - name: Listă activități pentru client
           href: audience-insights/activities.md
+        - name: Definiți mapări semantice
+          href: audience-insights/semantic-mappings.md
     - name: Îmbogățire date
       items:
         - name: Îmbogățiși profilele clientului
@@ -114,7 +124,7 @@
               href: audience-insights/predict-product-recommendation.md
             - name: Previzionați retragerea abonamentului
               href: audience-insights/predict-subscription-churn.md
-            - name: Preziceți retragerea tranzacțională
+            - name: Previzionați retragere din tranzacții
               href: audience-insights/predict-transactional-churn.md
             - name: Utilizați modele personalizate de la Azure Machine Learning
               href: audience-insights/custom-models.md
@@ -126,7 +136,7 @@
               href: audience-insights/sample-guide-predict-clv.md
             - name: Ghid eșantion de predicție a retragerii abonamentelor
               href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Ghid eșantion de predicție a retragerii tranzacționale
+            - name: Eșantion de ghid pentru previziuni de retrageri de tranzacție
               href: audience-insights/sample-guide-predict-transactional-churn.md
             - name: Exemplu de ghid pentru recomandarea produsului predicție
               href: audience-insights/sample-guide-predict-product-recommendation.md
@@ -222,10 +232,14 @@
           href: audience-insights/connections.md
         - name: Gestionați mai multe medii
           href: audience-insights/manage-environments.md
-        - name: Conectați-vă la un cont de stocare ADLS cu ajutorul unei entități principale de serviciu
-          href: audience-insights/connect-service-principal.md
         - name: Limbi acceptate
           href: audience-insights/supported-languages.md
+        - name: Securitate
+          items:
+            - name: Aduceți-vă propria Key Vault
+              href: audience-insights/use-azure-key-vault.md
+            - name: Conectați-vă la un cont de stocare ADLS cu ajutorul unei entități principale de serviciu
+              href: audience-insights/connect-service-principal.md
     - name: Extensibilitate
       items:
         - name: Integrați date web din statistici despre implicare
@@ -244,10 +258,12 @@
       href: engagement-insights/index.yml
     - name: Despre detalii despre angajamente
       href: engagement-insights/overview.md
-    - name: Începeți
+    - name: Începere
       items:
         - name: Ghid de inițiere rapidă
           href: engagement-insights/get-started.md
+        - name: Creați un mediu
+          href: engagement-insights/create-new-environment.md
         - name: Creați un spațiu de lucru
           href: engagement-insights/create-workspace.md
         - name: Capturați evenimente din site-uri web și aplicații mobile

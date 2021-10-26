@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 08/31/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 992c45e30e2dff00f5207290940b56b2fe1c08ad
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
+ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470021"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617570"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -27,16 +27,26 @@ Utilizați date din surse precum Microsoft și de la alți parteneri pentru a v�
 
 Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau edita îmbogățirile. Pentru mai multe informații, consultați [Permisiuni](permissions.md).
 
-Pe fila **Descoperire**, veți găsi următoarele îmbogățiri:
+Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptate.
 
-- [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+
 - [Branduri](enrichment-microsoft.md) furnizate de Microsoft
 - [Interese](enrichment-microsoft.md) furnizate de Microsoft
-- [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft
-- [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
+- [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft 
 - [Date demografice](enrichment-experian.md) furnizate de Experian
-- [Date despre locație](enrichment-here.md) furnizate de HERE Technologies
-- [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP)
+- [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+
+# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+
+- [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
+- [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft 
+- [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
+- [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
+- [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+
+---
 
 Pe fila **Îmbogățirile mele**, puteți vedea îmbogățirile pe care le-ați configurat și le puteți edita proprietățile.
 
@@ -58,7 +68,7 @@ Rulați sau dezactivați mai multe îmbogățiri simultan selectându-le în lis
 
 ## <a name="enrichments-and-connections"></a>Îmbogățiri și conexiuni
 
-Îmbogățirile terților sunt configurate folosind [conexiuni](connections.md), pe care un administrator le înființează cu acreditări și oferă consimțământul pentru transferurile de date. Conexiunea poate fi utilizată de administratori și contribuitori pentru a configura îmbogățiri.  
+Îmbogățirile terților sunt configurate folosind [conexiuni](connections.md), pe care un administrator le înființează cu acreditări și oferă consimțământul pentru transferurile de date. Conexiunile pot fi utilizate de administratori și cei care contribuie pentru a configura îmbogățiri.  
 
 ## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
 

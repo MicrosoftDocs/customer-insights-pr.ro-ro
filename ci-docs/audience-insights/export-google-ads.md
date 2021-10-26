@@ -9,12 +9,12 @@ author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: c958f58c927b76364f305dad8f524dde29b2a638
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: ce9579f3d31207e666665237fd8935bb86889f8d
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558987"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617938"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportați segmente în Google Ads (previzualizare)
 
@@ -35,9 +35,9 @@ Exportați segmente de profiluri de clienți unificate într-o listă de public 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 1 milion de profiluri per export către Google Ads.
+- Până la 1 milion de profiluri de clienți per export către Google Ads.
 - Exportul către Google Ads este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 5 minute din cauza limitărilor din partea furnizorului. 
+- Exportul de segmente cu un total de 1 milion de profiluri de clienți poate dura până la 5 minute din cauza limitărilor din partea furnizorului. 
 - Potrivirea în Google Ads poate dura până la 48 de ore.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurarea conexiunii la Google Ads
@@ -74,7 +74,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **[ID-ul de audiență Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)** și selectați **Conectare** pentru a inițializa conexiunea la Google Ads.
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client.
 
 1. Selectați segmentele pe care doriți să le exportați. Puteți exporta până la 1 milion de profiluri de client în total către Google Ads.
 

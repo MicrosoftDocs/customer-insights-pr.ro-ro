@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 07/22/2021
+ms.date: 10/14/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e3f99f8f151aea5f120084382babd5e46e109545a4f63aafc51c3ecb1400cc33
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: ce2fdd435a81bb04148057554c5958e3ab59f125
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034192"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645141"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -26,7 +26,7 @@ Selectați controlul **Mediu** din colțul din dreapta sus al paginii pentru a m
 
 :::image type="content" source="media/home-page-environment-switcher.png" alt-text="Captură de ecran a comenzii pentru a schimba mediul.":::
 
-Administratorii pot [crea](get-started-paid.md) și gestiona medii.
+Administratorii pot [crea](create-environment.md) și gestiona medii.
 
 ## <a name="edit-an-existing-environment"></a>Editați un mediu existent
 
@@ -36,23 +36,9 @@ Puteți edita câteva dintre detaliile mediilor existente.
 
 2.  Selectați pictograma **Editare**.
 
-3. În caseta **Editați mediul**, puteți actualiza **Numele afișat** al mediului, dar nu puteți schimba **Regiune** sau **Tip**.
+3. În caseta **Editați mediul**, puteți actualiza setările de mediu.
 
-4. Dacă un mediu este configurat pentru a stoca date în Azure Data Lake Storage, puteți actualiza fișierul **Cheia contului**. Cu toate acestea, nu puteți schimba **Numele de cont** sau numele **Containerului**.
-
-5. Opțional, puteți actualiza de la o conexiune bazată pe cheie de cont la o conexiune bazată pe resurse sau bazată pe abonament. După actualizare, nu puteți reveni la cheia de cont după actualizare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Nu puteți schimba informațiile legate de **Recipient** la actualizarea conexiunii.
-
-6. Opțional, puteți furniza un URL de mediu Microsoft Dataverse sub **Configurați partajarea datelor cu Microsoft Dataverse și activați capabilități suplimentare**. Aceste capacități includ partajarea datelor cu aplicații și soluții bazate pe Microsoft Dataverse, ingestia de date din sursele de date local sau utilizarea de [predicții](predictions.md). Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Microsoft Dataverse Data lake gestionat.
-
-   > [!NOTE]
-   > - Partajarea datelor cu Microsoft Dataverse Data Lage gestionat nu este acceptat atunci când salvați toate datele pe propriul Azure Data Lake Storage.
-   > - [Predicție a valorilor lipsă într-o entitate](predictions.md) și rapoartele PowerBI Embedded în statistici privind audiența (dacă sunt activate în mediul dvs.) nu sunt în prezent acceptate atunci când activați partajarea datelor cu data lake Microsoft Dataverse gestionat.
-
-   După ce activați partajarea datelor cu Microsoft Dataverse, începe o reîmprospătare completă, unică, a surselor de date și a altor procese. Dacă procesele rulează, nu vedeți opțiunea de a permite partajarea datelor cu Microsoft Dataverse. Așteptați ca acele procese să se finalizeze sau să le anulați pentru a permite partajarea datelor. 
-   
-   :::image type="content" source="media/datasharing-with-DataverseMDL.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
-   
-   Când rulați procese, cum ar fi ingestia de date sau crearea de segmente, folderele corespunzătoare vor fi create în contul de stocare pe care l-ați specificat mai sus. Fișierele de date și fișierele model.json vor fi create și adăugate în subfolderele respective, în funcție de procesul pe care îl executați.
+Pentru informații suplimentare despre setările de mediu, consultați [Creați un mediu nou](create-environment.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiați configurația mediului
 

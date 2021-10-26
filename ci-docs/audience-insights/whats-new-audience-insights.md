@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: fcc45c24e9d89516dba9964ee16f57caf439eff0
-ms.sourcegitcommit: 2abe9b661b8c3c01e9730c629e383402e3f6a655
+ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "7465220"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606119"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
@@ -26,6 +26,20 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2021-updates"></a>Actualizări din septembrie 2021
+
+Actualizările din septembrie 2021 includ noi caracteristici, actualizări de performanță și remedieri de erori.
+
+### <a name="activities"></a>Activități
+
+- **Îmbunătățiri ale cronologiei activității** Am extins filtrele pentru cronologia activității pe profilurile clienților. În plus, puteți utiliza noua pană de filtrare pentru a filtra după tipul de activitate și după dată. Datele pot fi filtrate în condiții diferite. Pentru mai multe informații, consultați [Vizualizați cronologiile activității în profilurile clienților](activities.md#view-activity-timelines-on-customer-profiles).
+
+### <a name="relationships"></a>Relații
+
+- **Suport pentru relații multi-hop** Utilizați relații multi-hop atunci când configurați activități și definiți relații între entități. Relațiile multi-hop folosesc o entitate intermediară pentru a conecta două entități. Când configurați o activitate, puteți utiliza o relație multi-hop pentru a vă conecta entitatea de activitate la o entitate intermediară și apoi la o entitate client. Puteți combina relații multi-hop cu relații cu mai multe căi. Pentru mai multe informații, consultați [Relație multi-hop](relationships.md#multi-hop-relationship).
+
+- **Suport pentru relații cu mai multe căi** Utilizați relații multi-cale atunci când configurați activități și definiți relații între entități. Relațiile cu mai multe căi relaționează o entitate sursă cu mai multe entități. Când configurați o activitate, puteți utiliza o relație cu mai multe căi pentru a vă conecta entitatea de activitate la mai mult de o entitate client. Puteți combina relații cu mai multe căi cu relații multi-hop. Pentru mai multe informații, consultați [Relație cu mai multe căi](relationships.md#multi-path-relationship).
 
 ## <a name="august-2021-updates"></a>Actualizări august 2021
 

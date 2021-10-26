@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c639cfca30cf1b57ada7d728311210b7210a37ac
-ms.sourcegitcommit: f72d5b86dfdc7282c6c1918b1ab3962d7a1c9852
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7557367"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623184"
 ---
 # <a name="relationships-between-entities"></a>Relații între entități
 
@@ -67,6 +67,20 @@ Relația constă dintr-o *entitate sursă* care conține cheia străină și o *
    - **Câmpul cheie țintă**: Câmpul cheie al entității țintă. Exemplu Clientul ar putea folosi câmpul cheie **Număr de înregistrare client**.
 
 4. Pentru a crea conexiunea particularizată, selectați **Salvare**.
+
+## <a name="set-up-account-hierarchies"></a>Configurați ierarhii de cont
+
+Mediile care sunt configurate pentru a utiliza conturile de afaceri ca public țintă principal pot configura ierarhii de conturi pentru conturile de afaceri conexe. De exemplu, o companie care are unități de afaceri separate. 
+
+Organizațiile creează ierarhii de conturi pentru a gestiona mai bine conturile și relațiile lor între ele. Capacitatea de analiză a publicului acceptă ierarhii de cont părinte-copil care există deja în datele despre clienți ingerate. De exemplu, conturi din Dynamics 365 Sales. Aceste ierarhii pot fi configurate pe pagina **Relații** în statistici privind publicul, sub fila ierarhiei contului.
+
+1. Accesați **Date** > **Relații**.
+1. Selectați fila **Ierarhie de cont**.
+1. Selectați **Ierarhie nouă de cont**. 
+1. În panoul **Ierarhia contului**, furnizați un nume pentru ierarhie. Sistemul creează un nume pentru entitatea de ieșire. Puteți schimba numele entității de nume de ieșire.
+1. Selectați entitatea care conține ierarhia contului dvs. De obicei se află în aceeași entitate care conține conturile.
+1. Selectați **ID Cont** și **ID Cont părinte** din entitatea selectată 
+1. Selectați **Salvați** pentru a aplica setările și a finaliza ierarhia contului.
 
 ## <a name="view-relationships"></a>Vizualizare relații
 

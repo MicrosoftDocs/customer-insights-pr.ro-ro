@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Autopilot
 description: Aflați cum să configurați conexiunea și să exportați la Autopilot.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9ada8a6f4e4546990a1360567b400033050119c4c4c9a3df1af8fcaab75e157
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4cceb64484e8e257a90b8cbaedff4419659bb399
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032040"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618444"
 ---
 # <a name="export-segments-to-autopilot-preview"></a>Exportați segmente către Autopilot (previzualizare)
 
@@ -28,10 +28,10 @@ Exportați segmente de profiluri unificate ale clienților în Autopilot și uti
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 100.000 de profiluri de client în total către Autopilot.
+- Puteți exporta până la 100.000 de profiluri de clienți în total către Autopilot.
 - Exportul către Autopilot este limitat la segmente.
-- Exportul până la 100'000 de profiluri către Autopilot poate dura până la câteva ore. 
-- Numărul de profiluri pe care le puteți exporta către Autopilot este dependent și limitat de contractul dvs. cu Autopilot.
+- Exportul până la 100.000 de profiluri de clienți în Autopilot poate dura până la câteva ore. 
+- Numărul de profiluri de clienți pe care le puteți exporta în Autopilot depinde și este limitat de contractul dvs. cu Autopilot.
 
 ## <a name="set-up-connection-to-autopilot"></a>Configurarea conexiunii la Autopilot
 
@@ -43,7 +43,7 @@ Exportați segmente de profiluri unificate ale clienților în Autopilot și uti
 
 1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-3. Introduceți [Cheie API Autopilot](https://autopilot.docs.apiary.io/#).
+1. Introduceți [Cheie API Autopilot](https://autopilot.docs.apiary.io/#).
 
 1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
 
@@ -63,7 +63,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Autopilot. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
-3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume**.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume**.
 
 1. Selectați segmentele pe care doriți să le exportați. Ferm **recomandăm să nu exportați mai mult de 100.000 de profiluri de clienți în total** la Autopilot. 
 

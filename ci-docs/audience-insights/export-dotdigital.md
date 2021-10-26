@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către DotDigital
 description: Aflați cum să configurați conexiunea și să exportați la DotDigital.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f09be0dfa599c1ef7cf0055b7ce1df8784cf447ada64b56bc7543c214f9a5b99
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3e3a79603f9f5746ee176d3d4299a30510c7459e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034651"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618398"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exportați segmente în DotDigital (previzualizare)
 
@@ -22,17 +22,17 @@ Exportați segmente de profiluri de clienți unificate în agende DotDigital și
 
 ## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
 
--   Aveți un [cont DotDigital](https://dotdigital.com/) și acreditările de administrator corespunzătoare.
+-   Aveți un [Cont DotDigital](https://dotdigital.com/) și ați creat un [Utilizator API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Va trebui să utilizați acreditările de utilizator API pentru a crea o conexiune
 -   Există agende în DotDigital și ID-urile corespunzătoare. ID-ul poate fi găsit în adresa URL atunci când selectați și deschideți o agendă. Pentru mai multe informații, consultați [Agende DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 -   Aveți [segmente configurate](segments.md) în Detalii despre audiență.
 -   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 1 milion de profiluri per export către DotDigital.
+- Până la 1 milion de profiluri de clienți per export către DotDigital.
 - Exportul către DotDigital este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 3 ore din cauza limitărilor din partea furnizorului. 
-- Numărul de profiluri pe care le puteți exporta către DotDigital este dependent și limitat de contractul dvs. cu DotDigital.
+- Exportul de segmente cu un total de 1 milion de profiluri de clienți poate dura până la 3 ore din cauza limitărilor din partea furnizorului. 
+- Numărul de profiluri de clienți pe care le puteți exporta în DotDigital depinde și este limitat de contractul dvs. cu DotDigital.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Configurarea conexiunii la DotDigital
 
@@ -44,7 +44,7 @@ Exportați segmente de profiluri de clienți unificate în agende DotDigital și
 
 1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduceți **numele de utilizator și parola DotDigital**.
+1. Introduceți **numele de utilizator API și parola DotDigital**. 
 
 1. Introduceți **[ID-ul agendei DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
 
@@ -67,7 +67,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea DotDigital. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume de familie**, **Nume complet**, **Gen**, și **Cod poștal**.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume de familie**, **Nume complet**, **Gen**, și **Cod poștal**.
 
 1. Selectați segmentele pe care doriți să le exportați. Puteți exporta până la 1 milion de profiluri de client în total către DotDigital.
 

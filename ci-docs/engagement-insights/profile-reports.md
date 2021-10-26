@@ -1,39 +1,34 @@
 ---
-title: Activați rapoartele de profil predefinite
-description: Cum să creați rapoarte de profil predefinite grupate în funcție de sex, vârstă și județ sau regiune de origine.
+title: Activați rapoartele de profil predefinite (OOB)
+description: Cum să creați rapoarte de profil predefinite (OOB) grupate în funcție de sex, vârstă și județ sau regiune de origine.
 author: darrinw-docs
 ms.reviewer: mhart
 ms.author: darrinw
-ms.date: 05/03/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: bf2ec67c9fb99918b87841d3c0b131934e31b58b
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: cba2c112e9e475ceb047fe627fb41e6c8a27e1e7
+ms.sourcegitcommit: d9965f4bfc09391698a34042f6b44367e53819e3
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486135"
+ms.lasthandoff: 09/30/2021
+ms.locfileid: "7582801"
 ---
-# <a name="out-of-box-profile-reports"></a>Rapoarte de profil predefinite
+# <a name="out-of-box-oob-unified-profile-reports"></a>Rapoarte de profil predefinite (OOB) unificate
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un raport este o colecție de vizualizări de date pentru a vă ajuta să înțelegeți cum se comportă utilizatorii. Conectându-vă la informații despre publicul Customer Insights, Detalii despre angajamente pot afișa un raport cu informații despre profilurile unificate ale clienților. Acest raport include numărul de profiluri pe care le aveți, grupate după sex, vârstă și locație geografică.
+Un raport de profil unificat este o colecție de vizualizare a datelor pentru a vă ajuta să înțelegeți cum se comportă utilizatorii. Prin conectarea la capacitatea de a obține informații despre audiență Customer Insights, datele de angajament pot afișa rapoarte OOB cu informații despre profilurile de clienți unificate. Acest raport include numărul de profiluri pe care le aveți, grupate după sex, vârstă și locație geografică. Pentru informații despre profilurile clienților, consultați [Profilurile clienților](../audience-insights/customer-profiles.md).
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-Mediul detaliilor despre public trebuie să stocheze date într-un cont gestionat de client Azure Data Lake Storage.
-
-Dacă utilizați o versiune de încercare a capacității de detaliilor despre public sau un mediu într-un Data Lake gestionat de Customer Insights, [contactați-ne](https://go.microsoft.com/fwlink/?linkid=2145734) pentru asistență.  
-
+Un administrator de mediu trebuie să [creați o legătură între statistici despre implicare și statistici despre public](integrate-audience-insights-engagement-insights.md).
 
 ## <a name="enable-the-customer-profile-report"></a>Activați raportul profilului de client
 
-Un administrator de mediu trebuie să [conecteze statistici despre implicare și informații despre public](integrate-audience-insights-engagement-insights.md).
-
-După specificarea detaliilor conexiunii, administratorul poate acorda acces altor persoane din organizație pentru a vedea raportul. Administratorul de mediu care configurează conexiunea are automat acces la raport. 
+După ce a specificat legătura dintre statistici despre implicare și statistici despre public, administratorul poate acorda acces altor persoane din organizație pentru a vedea raportul. Administratorul de mediu care configurează conexiunea are automat acces la raport. 
 
 După finalizarea conexiunii, funcția **Profiluri** va fi disponibilă în panoul de navigare din stânga. 
 

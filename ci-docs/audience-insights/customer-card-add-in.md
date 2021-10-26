@@ -1,7 +1,7 @@
 ---
 title: Aplicații program de completare Card client pentru Dynamics 365
 description: Afișați date din detalii privind publicul în aplicațiile Dynamics 365 cu acest supliment.
-ms.date: 05/18/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,18 +9,20 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0f6c922104df229980b308136a4d764938121b35d6d744f41b1530bdb5515e7f
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033003"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643463"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare Card de clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați date demografice, detalii și cronologii de activitate. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată. 
+Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare a cardului pentru clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați câmpurile de profil ale clienților, informații și cronologia activității. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN1qv]
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -28,20 +30,19 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 - Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Microsoft Dataverse](connect-power-query.md).
 - Toți utilizatorii Dynamics 365 ai programului de completare Card client trebuie să fie [adăugați ca utilizatori](permissions.md) în detaliile despre public pentru a vedea datele.
 - [Sunt necesare capacități de căutare și filtrare configurate](search-filter-index.md) în detaliile despre public pentru ca datele să funcționeze.
-- Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența:
-  - Controlul măsurii: Necesită [măsuri configurate](measures.md).
-  - Controlul inteligent: necesită date generate folosind [predicții](predictions.md) sau [modele particularizate](custom-models.md).
-  - Control demografic: câmpurile demografice (cum ar fi vârsta sau sexul), sunt disponibile în profilul de client unificat.
-  - Controlul îmbogățirii: necesită [îmbogățiri](enrichment-hub.md) active aplicate profilurilor clienților.
-  - Controlul cronologiei: Necesită [activități configurate](activities.md).
+- Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurarea suplimentului vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
+  - **Măsurați controlul**: Necesită [măsuri configurate](measures.md) de tipul atributelor clientului.
+  - **Control informații**: Necesitp date generate utilizând [predicții](predictions.md) sau [modele particularizate](custom-models.md).
+  - **Controlul detaliilor clientului**: Toate câmpurile din profil sunt disponibile în profilul de client unificat.
+  - **Control îmbogățire**: solicită [îmbogățiri](enrichment-hub.md) active aplicate profilelor de client.
+  - **Controlul contactelor**: Necesită definirea entității semantice a contactelor de tip.
+  - **Control cronologie**: necesită [activități configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalați suplimentul cardului client
 
 Adăugarea programului de completare Card client este o soluție pentru aplicațiile de implicare a clienților din Dynamics 365. Pentru a instala soluția, accesați AppSource și căutați **Card de client Dynamics**. Selectați [Programul de completare card de client AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) și selectați **Obțineți acum**.
 
-Este posibil să fie nevoie să vă autentificați cu datele dvs. de acreditare pentru aplicația Dynamics 365 pentru a instala soluția.
-
-Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
+Este posibil să fie nevoie să vă autentificați cu datele dvs. de acreditare pentru aplicația Dynamics 365 pentru a instala soluția. Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 
 ## <a name="configure-the-customer-card-add-in"></a>Configurați programul de completare pentru card client
 
@@ -50,7 +51,7 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 1. Selectați legătura **Nume afișat** pentru soluția **Dynamics 365 Customer Insights Program de completare card client (Previzualizare)**.
 
    > [!div class="mx-imgBorder"]
-   > ![Selectați numele afișat.](media/select-display-name.png "Selectați numele afișat")
+   > ![Selectați numele afișat.](media/select-display-name.png "Selectați numele afișat.")
 
 1. Selectați **Conectare** și introduceți acreditările pentru contul de administrator pe care îl utilizați pentru a configura Customer Insights.
 
@@ -64,7 +65,7 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
    - Pentru a mapa un cont, selectați câmpul din entitatea Client care se potrivește cu ID-ul entității dvs. de cont.
 
    > [!div class="mx-imgBorder"]
-   > ![Câmpul ID persoană de contact.](media/contact-id-field.png "Câmpul ID persoană de contact")
+   > ![Câmpul ID persoană de contact.](media/contact-id-field.png "Câmpul ID persoană de contact.")
 
 1. Selectați **Salvare configurație** pentru a salva setările.
 
@@ -73,17 +74,19 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 1. Atribuiți rolul **Utilizator standard card Customer Insights** pentru utilizatorii care vor personaliza conținutul afișat pe card pentru întreaga organizație.
 
 ## <a name="add-customer-card-controls-to-forms"></a>Adăugare controale Card client la formulare
-  
+
+În funcție de scenariul dvs., puteți alege să adăugați controale fie la formularul **Persoană de contact** sau formularul **Cont**. Dacă mediul dvs. de informații despre public este destinat conturilor de afaceri, vă recomandăm să adăugați comenzile în formularul Cont. În acest caz, înlocuiți „contact” în pașii de mai jos cu „cont”.
+
 1. Pentru a adăuga controale pentru cardul clientului în formularul dvs. de contact, accesați secțiunea **Setări** > **Particularizări** în Dynamics 365.
 
 1. Selectați **Particularizați sistemul**.
 
-1. Navigați la entitatea **Persoană de contact**, extindeți-o și selectați **Formulare**.
+1. Navigați la entitatea **Persoană de contact** și extindeți-o și selectați **Formulare**.
 
 1. Selectați formularul de contact la care doriți să adăugați controalele Card client.
 
     > [!div class="mx-imgBorder"]
-    > ![Selectați formularul de contact.](media/contact-active-forms.png "Selectați formularul de contact")
+    > ![Selectați formularul de contact.](media/contact-active-forms.png "Selectați formularul de contact.")
 
 1. Pentru a adăuga un control, în editorul de formulare, trageți orice câmp din **Exploratorul de câmp** în locul în care doriți să apară controlul.
 
@@ -102,7 +105,8 @@ Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 1. Pentru a particulariza ceea ce doriți să afișați în controlul particularizat, selectați butonul de editare din colțul din dreapta sus.
 
 ## <a name="upgrade-customer-card-add-in"></a>Faceți upgrade la programul de completare Customer Card
-Programul de completare pentru Customer Card nu se actualizează automat. Pentru a face upgrade la cea mai recentă versiune, urmați această procedură în aplicația Dynamics 365 care are instalat programul de completare.
+
+Programul de completare pentru Customer Card nu se actualizează automat. Pentru a trece la cea mai recentă versiune, urmați acești pași în aplicația Dynamics 365 care are instalat programul de completare.
 
 1. În aplicația Dynamics 365, accesați **Setări** > **Particularizare** și selectați **Soluții**.
 

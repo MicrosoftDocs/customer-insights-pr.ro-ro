@@ -1,7 +1,7 @@
 ---
 title: Îmbinați entitățile în unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 09/14/2021
+ms.date: 10/10/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -9,12 +9,14 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b038cd3f5b433fedf918d34bbfaf2261e11c5c17
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+searchScope:
+- ci-merge
+ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494334"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648269"
 ---
 # <a name="merge-entities"></a>Îmbinare entități
 
@@ -89,7 +91,7 @@ Pe pagina **Îmbinare**, selectați **Câmpuri excluse** pentru a vedea lista tu
     :::image type="content" source="media/recency-merge-option.png" alt-text="Opțiunea de noutate din dialogul câmpurilor de îmbinare.":::
     - **Cel mai puțin recent**: Identifică valoarea câștigătorului pe baza celui mai puțin recent. Necesită o dată sau un câmp numeric pentru fiecare entitate participantă în domeniul câmpurilor de îmbinare pentru a defini actualitatea.
 
-1.  Puteți adăuga câmpuri suplimentare pentru a participa la procesul de îmbinare.
+1.  Puteți adăuga mai multe câmpuri pentru a participa la procesul de îmbinare.
 
 1.  Puteți redenumi câmpul combinat.
 
@@ -131,15 +133,15 @@ Unele entități conțin mai multe detalii decât altele. Dacă o entitate inclu
 
 După configurarea câmpurilor de fuzionare, puteți defini cum să generați valori CustomerId, identificatorii unici ai profilului clientului. Pasul de îmbinare în procesul de unificare a datelor generează identificatorul unic al profilului clientului. Identificatorul este CustomerId din entitatea *Client* care rezultă din procesul de unificare a datelor. 
 
-CustomerId-ul din entitatea Client se bazează pe un hash cu prima valoare a cheilor primare non-câștigătoare nule. Aceste chei provin de la entitățile utilizate în faza de potrivire și fuzionare și sunt influențate de ordinea de potrivire. Deci, CustomerID generat se poate modifica atunci când o valoare a cheii primare se modifică în entitatea primară a comenzii de potrivire. În consecință, valoarea cheii principale ar putea să nu reprezinte întotdeauna același client.
+CustomerId-ul din entitatea Client se bazează pe un hash cu prima valoare a cheilor primare non-câștigătoare nule. Aceste chei provin de la entitățile utilizate în faza de potrivire și fuzionare și sunt influențate de ordinea de potrivire. Deci, CustomerID generat se poate modifica atunci când o valoare a cheii primare se modifică în entitatea primară a comenzii de potrivire. Deci, valoarea cheii principale ar putea să nu reprezinte întotdeauna același client.
 
-Configurarea unui ID de client stabil vă permite să evitați acel comportament.
+Configurarea unui ID stabil de client vă permite să evitați acel comportament.
 
 **Configurați un ID unic al clientului**
 
 1. Accesați **Unificare** > **Îmbinare**.
 
-1. Pe pagina **Îmbinare** selectați fila **Taste**. 
+1. Selectați fila **Chei**. 
 
 1. Plasați cursorul pe rândul **CustomerId** și selectați opțiunea **Configurați**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Control pentru a personaliza generarea ID-ului.":::
@@ -147,6 +149,30 @@ Configurarea unui ID de client stabil vă permite să evitați acel comportament
 1. Selectați până la cinci câmpuri care vor cuprinde un ID de client unic și care sunt mai stabile. Înregistrările care nu se potrivesc configurației dvs. utilizează în schimb un ID configurat de sistem.  
 
 1. Selectați **Terminat** și rulați procesul de îmbinare pentru a aplica modificările.
+
+## <a name="group-profiles-into-households-or-clusters"></a>Profiluri de grup în gospodării sau clustere
+
+Ca parte a procesului de configurare a generării profilului clientului, puteți defini reguli pentru a grupa profilurile aferente într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
+
+**Definiți o gospodărie sau un grup**
+
+1. Accesați **Unificare** > **Îmbinare**.
+
+1. Pe fila **Îmbinare**, selectați **Avansat** > **Creați cluster**.
+
+   :::image type="content" source="media/create-cluster.png" alt-text="Control pentru a crea un nou cluster.":::
+
+1. Alegeți între un o **Gospodărie** sau un cluster **Particularizat**. Dacă câmpurile semantice *Person.LastName* și *Location.Address* în entitatea *Client*, gospodăria este selectată automat.
+
+1. Furnizați un nume pentru cluster și selectați **Terminat**.
+
+1. Selectați fila **Clustere** pentru a găsi clusterul pe care l-ați creat.
+
+1. Specificați regulile și condițiile pentru a defini clusterul.
+
+1. Selectați **Rulare** pentru a rula procesul de îmbinare și a crea clusterul.
+
+După rularea procesului de îmbinare, identificatorii de cluster sunt adăugați ca câmpuri noi în entitatea *Client*.
 
 ## <a name="run-your-merge"></a>Executați-vă unificarea
 

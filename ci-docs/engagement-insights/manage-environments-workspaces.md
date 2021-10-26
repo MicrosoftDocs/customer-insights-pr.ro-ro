@@ -4,17 +4,17 @@ description: Cum să creați, redenumiți și să ștergeți spațiile de lucru 
 author: jusali
 ms.reviewer: mhart
 ms.author: jusali
-ms.date: 09/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: a5b48db5ae23ea65bf608d67348d493bfdc7678f
-ms.sourcegitcommit: 0ceb46c4f57ab49d3a2ebb1c8a816bbafe979e3d
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/09/2021
-ms.locfileid: "7486050"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645461"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestionați mediile și spațiile de lucru
 
@@ -22,42 +22,20 @@ ms.locfileid: "7486050"
 
 ## <a name="overview"></a>Prezentare generală
 
-Un spațiu de lucru este un spațiu în care stocați și gestionați evenimente și rapoarte. Aici puteți vizualiza activitatea utilizatorilor în timp real. Când creați un spațiu de lucru, selectați tipul de date pe care să îl trimiteți la spațiul de lucru. În prezent sunt acceptate datele web și aplicațiile mobile.
+Acest subiect discută despre cum să gestionați spațiile de lucru și mediile după ce acestea au fost deja create. 
 
-Un mediu este un spațiu în care vă gestionați spațiile de lucru și conexiunile. Modul în care utilizați mediile depinde de organizația dvs. și de cazul dvs. de utilizare. De exemplu, puteți să creați:
+- Un *spațiu de lucru* este un spațiu în care stocați și gestionați evenimente și rapoarte. Aici puteți vizualiza activitatea utilizatorilor în timp real. Când creați un spațiu de lucru, selectați tipul de date pe care să îl trimiteți la spațiul de lucru. În prezent sunt acceptate datele web și aplicațiile mobile. Pentru mai multe informații, consultați [Creați un spațiu de lucru și adăugați membri](create-workspace.md).
 
--   Un mediu unic.
--   Medii separate pentru testare și producție.
--   Medii separate pentru anumite echipe sau departamente din organizația dvs. care conțin evenimente relevante pentru fiecare public.
--   Medii separate pentru diferite ramuri globale ale companiei dvs.
--   Conexiuni cu capacitatea de detalii despre public pentru Customer Insights.
+- Un *mediu* este un spațiu în care vă gestionați spațiile de lucru și conexiunile. Pentru informații suplimentare, consultați [Creați un mediu nou](create-new-environment.md).
 
-## <a name="choose-an-environment-and-create-a-workspace"></a>Alegeți un mediu și creați un spațiu de lucru 
-
-Fiecare spațiu de lucru trebuie să se afle într-un mediu. Puteți selecta un mediu preexistent sau puteți crea unul nou atunci când creați un spațiu de lucru. Apoi puteți alege să adăugați membri ai spațiului de lucru și să începeți să colectați date.
-
-**Pentru a vă crea primul spațiu de lucru**
-
-1. În Detalii despre angajamente, selectați **Nou** din comutatorul spațiului de lucru. 
-
-   :::image type="content" source="media/New-workspace.png" alt-text="Selectorul spațiului de lucru al paginii Customer Insights.":::
-
-1. Alegeți un mediu din listă sau selectați **Creați un mediu nou**.
-
-1. Introduceți un nume în **Nume de spațiu de lucru**. 
-
-1. Selectați tipul de mediu pe care doriți să îl creați, în funcție de dacă doriți să măsurați ce se întâmplă pe un site web sau într-o aplicație mobilă. 
-
-1. Puteți adăuga membri și le puteți atribui nivelul de permisiune din lista **Rol**. Apoi selectați **Terminat** pentru a crea spațiul de lucru sau **Următorul** pentru a instala codul. 
-
-1. Instalați fragment de cod pentru a începe să primiți date și apoi selectați **Terminat**. 
-
-## <a name="manage-a-workspace"></a>Gestionați un spațiu de lucru
+## <a name="manage-an-existing-workspace"></a>Gestionați un spațiu de lucru existent
 
 Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](user-roles.md) dvs. determină modul în care puteți lucra în ele. 
 
  - Trebuie să fiți administrator de mediu sau un administrator de spațiu de lucru pentru a gestiona spațiul de lucru.
  - În calitate de administrator de spațiu de lucru, puteți redenumi spațiile de lucru existente sau le puteți șterge. 
+
+:::image type="content" source="media/workspace-edit.png" alt-text="Centru de administrare spațiu de lucru.":::
 
 ### <a name="edit-a-workspace-name"></a>Editați numele unui spațiu de lucru
 
@@ -75,7 +53,7 @@ Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](
 
 1. Selectați **Ștergeți spațiul de lucru**. 
 
-1. Introduceți **„CONFIRMAȚI ȘTERGEREA”** în dialogul **Ștergeți spațiul de lucru**. 
+1. În caseta de dialog **Ștergeți spațiul de lucru**, introduceți **CONFIRMĂ ȘTERGEREA** în toate majusculele. 
 
 1. Selectați **Ștergeți** pentru a șterge definitiv spațiul de lucru.
 
@@ -87,27 +65,11 @@ Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](
 
 1. Selectați **Adăugați membri** pentru a-i adăuga în spațiul dvs. de lucru.
 
-## <a name="manage-an-environment"></a>Gestionați un mediu
+## <a name="manage-an-existing-environment"></a>Gestionați un mediu existent
 
-În calitate de administrator de mediu, puteți accesa un mediu din panoul de navigare din stânga. Puteți configura setările de mediu, alți administratori de mediu și spațiile de lucru. Selectați filele pentru a vă deplasa între diferite zone din centrul de administrare.
+Ca administrator de mediu, puteți accesa un mediu din panoul de navigare din stânga. Puteți configura setările de mediu, alți administratori de mediu și spațiile de lucru. Selectați filele pentru a vă deplasa între diferite zone din centrul de administrare.
 
-:::image type="content" source="media/New-environment.png" alt-text="Centrul de administrare pentru mediu.":::
-
-### <a name="create-an-environment"></a>Creați un mediu
-
-1. În selectorul spațiului de lucru, selectați **+Nou**.
-
-1. În experiența ghidată, deschideți meniul derulant **Mediu** și selectați **Creați un mediu nou**. 
-
-1. Furnizați un **Numele mediului**.
-
-   :::image type="content" source="media/create-environment.png" alt-text="Pas în experiența ghidată pentru a specifica detaliile mediului.":::
-
-1. Alegeți **Regiune** și selectați **Următorul**. 
-
-1. Furnizați un nume de spațiu de lucru și alegeți ce tip de spațiu de lucru doriți să creați. 
-
-1.  Opțional, adăugați membri și copiați fragment de cod finalizați procesul de creare.
+:::image type="content" source="media/environment-edit.png" alt-text="Centrul de administrare pentru mediu.":::
 
 ### <a name="rename-an-environment"></a>Redenumiți un mediu
 
@@ -131,7 +93,7 @@ Administratorii de mediu pot șterge mediile. Înainte de a putea șterge un med
 
 1. Selectați **Ștergere mediu**. 
 
-1. Introduceți **„CONFIRMAȚI ȘTERGEREA”** în dialogul **Ștergeți spațiul de lucru**. 
+1. În caseta de dialog **Ștergeți spațiul de lucru**, introduceți **CONFIRMĂ ȘTERGEREA** în toate majusculele. 
 
 1. Selectați **Ștergere** pentru a șterge permanent mediul.
 

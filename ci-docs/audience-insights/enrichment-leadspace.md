@@ -1,32 +1,32 @@
 ---
 title: Îmbogățirea profilurilor companiei cu îmbogățirea terță parte Leadspace
 description: Informații generale despre îmbogățirea terță parte Leadspace.
-ms.date: 04/09/2021
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: kishorem-MS
-ms.author: kishorem
+author: jodahlMSFT
+ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 34b73b37670ed45e2c31ea164c0788b793bee433829ce21317c83903f3fca1fe
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031718"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617416"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Îmbogățirea profilurilor companiei cu Leadspace (previzualizare)
 
-Leadspace este o companie de știință a datelor care oferă o platformă de date pentru clienți B2B. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ mai multe atribute, cum ar fi dimensiunea companiei, locația, industria și multe altele.
+Leadspace este o companie de știință a datelor care oferă o platformă de date pentru clienți B2B. Permite medii cu profiluri de clienți unificate bazate pe conturi să își îmbogățească datele. Îmbogăţiți *Profilurile clienților* cu atribute precum dimensiunea companiei, locația sau industria. Îmbogăţiți *Profiluri de contact* cu atribute precum titlul, persoana sau verificarea prin e-mail.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 Pentru a configura Leadspace, trebuie îndeplinite următoarele cerințe preliminare:
 
 - Aveți o licență Leadspace activă.
-- Aveți [profiluri de clienți unificate](customer-profiles.md) pentru companii.
-- O conexiune Leadspace a fost deja configurată de un administrator sau aveți permisiuni de [administrator](permissions.md#administrator) și „cheia perpetuă" (denumită **Tokenul Leadspace**). Luați legătura în mod direct cu [Leadspace](https://www.leadspace.com/products/leadspace-on-demand/) pentru detalii despre produsul lor.
+- Aveți [profiluri unificate ale clienților](customer-profiles.md) pe baza conturilor.
+- O conexiune Leadspace a fost deja configurată de un administrator sau aveți permisiuni de [administrator](permissions.md#administrator) și „cheia perpetuă" (denumită **Tokenul Leadspace**). Luați legătura în mod direct cu [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) pentru detalii despre produsul lor.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
@@ -50,6 +50,10 @@ Pentru a configura Leadspace, trebuie îndeplinite următoarele cerințe prelimi
 
 1. Selectați **Următorul** pentru a completa maparea câmpului.
 
+1. Bifați caseta de selectare dacă aveți *Profiluri de contact* pe care ați vrea să-l îmbogățiți. Statisticile publicului vor mapa automat câmpurile obligatorii.
+
+   :::image type="content" source="media/enrichment-leadspace-contacts.png" alt-text="Contactul Leadspace înregistrează îmbogățirea.":::
+ 
 1. Furnizați un nume pentru îmbogățire și selectați **Salvați îmbogățirea** după ce v-ați analizat alegerile.
 
 
@@ -81,7 +85,8 @@ Pentru informații suplimentare, consultați [API-uri Leadspace](https://support
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
+
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

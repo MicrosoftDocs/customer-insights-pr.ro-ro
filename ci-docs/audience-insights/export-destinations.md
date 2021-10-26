@@ -1,7 +1,7 @@
 ---
 title: Exportați date din Customer Insights
 description: Gestionați exporturile către partajare date.
-ms.date: 06/14/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,25 +10,48 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be4d142e0f9f422cac459f603aa5dd8bb490321cfe1b2de58f4a128ae56f4ba3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034697"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623148"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
-Pagina **Exporturi** vă arată toate exporturile configurate. Exporturile partajează date specifice cu diferite aplicații. Ele pot include profiluri sau entități ale clienților, scheme și detalii de mapare. Fiecare export necesită o [conexiune, configurată de un administrator, pentru a gestiona autentificarea și accesul](connections.md).
+Pagina **Exporturi** vă arată toate exporturile configurate. Exporturile partajează date specifice cu diferite aplicații. Acestea pot include profiluri de clienți, entități, scheme și detalii de mapare. Fiecare export necesită o [conexiune, configurată de un administrator, pentru a gestiona autentificarea și accesul](connections.md).
 
 Faceți salt la **Date** > **Exporturi** pentru a vizualiza pagina exporturilor. Toate rolurile de utilizatori pot vizualiza exporturile configurate. Utilizați câmpul de căutare din bara de comenzi pentru a găsi exporturile după numele, numele conexiunii sau tipul conexiunii.
 
-## <a name="set-up-a-new-export"></a>Configurați un nou export
+## <a name="export-types"></a>Tipuri de export
 
+Există două tipuri principale de exporturi:  
+
+- **Exporturi de date** vă permit să exportați orice tip de entitate disponibilă în statistici privind publicul. Entitățile pe care le selectați pentru export sunt exportate cu toate câmpurile de date, metadate, scheme și detalii de mapare. 
+- **Segmentați exporturile** vă permite să exportați entități de segment din statistici privind publicul. Segmentele reprezintă o listă a profilurilor clienților. Când configurați exportul, selectați câmpurile de date incluse, în funcție de sistemul țintă către care exportați datele. 
+
+### <a name="export-segments"></a>Export segmente
+
+**Exportarea segmentelor în medii pentru conturi de afaceri (B2B) sau clienți individuali (B2C)**  
+Majoritatea opțiunilor de export acceptă ambele tipuri de medii. Exportul de segmente către diferite sisteme țintă are cerințe specifice. În general, un membru al segmentului, profilul clientului, conține informații de contact. Deși acest lucru este de obicei cazul segmentelor construite pe clienți individuali (B2C), nu este neapărat cazul segmentelor bazate pe conturi de afaceri (B2B). 
+
+**Segmentați mediile de export pentru conturi de afaceri (B2B)**  
+- Segmentele din contextul mediilor pentru conturile de afaceri sunt construite pe baza entității *cont*. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea **companie** la definirea exportului.
+- Toate celelalte sisteme țintă necesită câmpuri de la entitatea de contact. Pentru a vă asigura că segmentele de cont pot prelua date din contactele asociate, definiția segmentului dvs. trebuie să proiecteze atributele entității de contact. Aflați mai multe despre cum să [configurați segmente și atribute de proiect](segment-builder.md).
+
+**Segmentați exporturile în medii pentru clienți individuali (B2C)**  
+- Segmentele din contextul mediilor pentru clienții individuali sunt construite pe baza entității *profil client unificat*. Fiecare segment care îndeplinește cerințele sistemelor țintă (de exemplu, o adresă de e-mail) poate fi exportat.
+
+**Limite la exporturile pe segmente**  
+- Sistemele țintă terțe pot limita numărul de profiluri de clienți pe care le puteți exporta. 
+- Pentru clienții individuali, veți vedea numărul real de membri ai segmentului atunci când selectați un segment pentru export. Veți primi un avertisment dacă un segment este prea mare. 
+- Pentru conturile de afaceri, veți vedea numărul de conturi dintr-un segment; cu toate acestea, numărul de contacte care pot fi proiectate nu apare. În unele cazuri, acest lucru ar putea duce la segmentul exportat care conține de fapt mai multe profiluri de clienți decât acceptă sistemul țintă. Depășirea limitelor rezultatelor sistemelor țintă va sări peste export. 
+
+## <a name="set-up-a-new-export"></a>Configurați un nou export  
 Pentru a configura sau edita un export, trebuie să existe conexiuni disponibile pentru dvs. Conexiunile depind de [rolul dvs. de utilizator](permissions.md):
-- Administratorii au acces la toate conexiunile. De asemenea, pot crea conexiuni noi atunci când configurează un export.
-- Contribuitorii pot avea acces la conexiuni specifice. Acestea depind de administratori pentru a configura și partaja conexiuni. Lista exporturilor afișează contribuabili dacă pot edita sau vizualiza doar un export în coloana **Permisiuni**. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
-- Spectatorii pot vizualiza doar exporturile existente, dar nu le pot crea.
+- **Administratorii** au acces la toate conexiunile. De asemenea, pot crea conexiuni noi atunci când configurează un export.
+- **Contributorii** pot avea acces la conexiuni specifice. Acestea depind de administratori pentru a configura și partaja conexiuni. Lista exporturilor afișează contribuabili dacă pot edita sau vizualiza doar un export în coloana **Permisiuni**. Pentru mai multe informații, accesați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- **Vizualizatori** pot vizualiza doar exporturile existente - nu le poate crea.
 
 ### <a name="define-a-new-export"></a>Definiți un nou export
 

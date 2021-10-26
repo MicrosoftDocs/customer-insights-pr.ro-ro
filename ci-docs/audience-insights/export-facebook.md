@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 34dc753aa9d2420ef8780d436e14c3c27377e4779eda0f83ca6b5424f2328f22
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 4403c6f535f5dc60919be3717073d52640bbe61a
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031452"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619226"
 ---
 # <a name="export-segments-list-to-facebook-ads-manager-preview"></a>Exportați lista de segmente în Facebook Ads Manager (previzualizare)
 
@@ -30,7 +30,7 @@ Exportați segmente de profiluri de client unificate către Managerul de reclame
 - Până la 10 milioane de profiluri de clienți pe export către Facebook Ads Manager.
 - Exportul către Facebook Ads Manager este limitat la segmente.
 - Creați sau actualizați segmente de public personalizate în Facebook de tip doar *lista de clienți*.
-- Exportul de segmente cu un total de 10 milion de profiluri poate dura până la 90 de minute până la finalizare.
+- Exportarea de segmente cu un total de 10 milion de profiluri de clienți poate dura până la 90 minute.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurarea conexiunii la Facebook Ads Manager
 

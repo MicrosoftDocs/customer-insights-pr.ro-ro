@@ -1,7 +1,7 @@
 ---
 title: Prezentare generală despre scenariile de predicție acceptate
 description: Predicție scenarii și opțiuni acoperite de aplicația Dynamics 365 Customer Insights.
-ms.date: 05/18/2021
+ms.date: 09/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 57c61895d636273fc90a0ac5a942fd0c9abf583c687ae20621949554e581cdf8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036024"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618858"
 ---
 # <a name="predictions-overview"></a>Prezentare generală a predicțiilor
 
@@ -24,10 +24,20 @@ Dynamics 365 Customer Insights vine cu o varietate de opțiuni care folosesc AI 
 ## <a name="out-of-box-models"></a>Modele predefinite
 
 Cel mai simplu mod de a începe cu prezicerea datelor sunt modelele predefinite, adesea denumite modele predefinite. Acestea necesită doar anumite date și structură pentru a genera informații rapide. În prezent, sunt disponibile următoarele modele: 
-- [Valoarea ciclului de viață a clientului](predict-customer-lifetime-value.md): Prezice veniturile potențiale ale unui client pe parcursul întregii interacțiuni cu o companie. 
+
+# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+
+- [Valoarea ciclului de viață a clientului](predict-customer-lifetime-value.md): Prezice veniturile potențiale ale unui client pe parcursul întregii interacțiuni cu o companie.
 - [Recomandarea produsului](predict-product-recommendation.md): Sugerează seturi de recomandări predictive de produse pe baza comportamentului de cumpărare și a clienților cu modele de achiziție similare.
 - [Retragere din abonament](predict-subscription-churn.md): Prezice dacă un client riscă să nu mai utilizeze produsele sau serviciile cu abonament ale firmei dvs.
 - [Modificare tranzacțională](predict-transactional-churn.md) : Prezice dacă un client nu va mai cumpăra produsele sau serviciile dvs. într-un anumit interval de timp.
+
+# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+
+- [Modificare tranzacțională](predict-transactional-churn.md) : Prezice dacă un client nu va mai cumpăra produsele sau serviciile dvs. într-un anumit interval de timp.
+
+---
+
 
 ## <a name="azure-machine-learning-integration"></a>Integrare pentru învățarea programată Azure
 

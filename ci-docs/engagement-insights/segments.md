@@ -4,17 +4,17 @@ description: Cum să creați, să editați și să ștergeți segmente și unde 
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: cedcd58373428dd35ba29ce8fdd00007257f8fa59b0d25bc584b4e832df13604
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f6bba645a78173fb00dc75e6080f2aeda0b5a143
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036163"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623602"
 ---
 # <a name="view-and-create-segments"></a>Vizualizați și creați segmente
 
@@ -44,22 +44,27 @@ Această secțiune descrie modul de a crea un *segment necompletat* de la zero.
 
 1. Selectați **Segment nou**.
 
-1. În **Biblioteca de resurse**, alegeți atributul după care doriți să filtrați. În prezent, puteți crea segmente numai pe baza dimensiunilor.
+1. În **Biblioteca de resurse**, selectați (+) de lângă atributul pe care doriți să îl filtrați. În prezent, puteți crea segmente numai pe baza dimensiunilor.
 
-1. Alegeți un operator și o valoare pentru atributul selectat. Următoarele operații sunt acceptate.
+   :::image type="content" source="media/create-new-segment.png" alt-text="Crearea unui nou segment.":::
+
+1. În secțiunea **Regulă**, alegeți un operator și o valoare pentru atributul selectat. Următoarele operații sunt acceptate.
+
+   :::image type="content" source="media/choose-operator-segment.png" alt-text="Alegeți un operator pentru noul dvs. segment.":::
+
    - **este**: necesită o corespondență exactă pentru a include valori. Utilizări **egal cu** pentru o singură valoare sau **oricare dintre** pentru a include valori multiple.
    - **nu este**: necesită o corespondență exactă pentru a exclude valori. Utilizări **egal cu** pentru o singură valoare sau **oricare dintre** pentru a include valori multiple.
    - **începe cu**: un șir care începe cu valorile corespondente.
    - **se termină cu**: un șir care se termină cu valorile corespondente.
    - **conține**: un șir conținut în valori corespondente.
 
-1. Pentru a adăuga mai multe condiții unui grup, puteți utiliza doi operatori logici. Atributele proiectate sunt luate în calcul atunci când se utilizează operatori de mulțimi.
+1. Pentru a adăuga mai multe condiții unui grup, puteți utiliza operatori logici. Atributele proiectate sunt luate în calcul atunci când se utilizează operatori de mulțimi.
    - Operator **ȘI**: Ambele condiții trebuie îndeplinite ca parte a procesului de segmentare. Această opțiune este cea mai utilă atunci când definiți condiții pentru diferite entități.
    - Operatorul **SAU**: Fiecare dintre condiții trebuie îndeplinită ca parte a procesului de segmentare. Această opțiune este cea mai utilă atunci când definiți condiții multiple pentru aceeași entitate.
 
 1. Selectați **Salvare** și numele segmentului. 
 
-Segmentul va fi listat în pagina Segmente și îl puteți aplica tuturor rapoartelor și canalelor din spațiul de lucru.
+Segmentul va fi listat în pagina **Segmente** și îl puteți aplica tuturor rapoartelor și canalelor din spațiul de lucru.
 
 ## <a name="use-a-segment-in-a-report-or-funnel"></a>Utilizați un segment într-un raport sau într-o pâlnie
 
@@ -67,7 +72,7 @@ Puteți aplica segmente unui raport sau unei pâlnii pentru a le filtra pe baza 
 
 :::image type="content" source="media/segment-reports-filter.png" alt-text="Un raport de vizualizare a paginii cu o listă verticală extinsă pentru a alege care segmente să aplicați.":::
 
-Pentru a aplica un segment, deschideți raportul sau canalul. Selectați **Adăugați o condiție** și alegeți **Filtrați după segment**. Alegeți segmentul din lista pe care doriți să o aplicați. Segmentul va fi aplicat raportului. Dacă un grafic nu acceptă segmentul, apare o eroare.
+Pentru a aplica un segment, deschideți raportul sau canalul. Selectați **+ Adăugați o condiție** și alegeți **Filtrați după segment**. Alegeți segmentul din lista pe care doriți să o aplicați. Segmentul va fi aplicat raportului. Dacă un grafic nu acceptă segmentul, apare o eroare. Pentru mai multe informații, consultați [Creați și gestionați rapoarte de canalizare](funnel-reports.md).
  
 Puteți aplica *până la trei segmente* la un raport sau o pâlnie.
 
@@ -91,5 +96,7 @@ Puteți aplica *până la trei segmente* la un raport sau o pâlnie.
 1. În lista de segmente, selectați **Mai mult [...]**. 
 1. Din lista derulantă, alegeți **Ștergeți**.
 1. Pentru a confirma, selectați **Ștergeți**.
+
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

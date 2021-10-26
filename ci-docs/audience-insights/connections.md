@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 37c5d152a4cc91a90df8db387d25923ed150e238bc6b54c54f7bba59fbd48c82
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3689c7016454ed44e22b4d4ff5a338836a8fe288
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033233"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7605964"
 ---
 # <a name="connections-preview-overview"></a>Prezentare generală a conexiunilor (previzualizare)
 
@@ -47,6 +47,7 @@ Pentru a adăuga conexiuni, trebuie să aveți [permisiuni de administrator](per
 1. În panoul **Configurarea conexiunii**, furnizați detaliile necesare. 
    1. **Numele afișat** și tipul conexiunii descriu o conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta acestei conexiuni.
    1. Câmpurile exacte depind de serviciul la care vă conectați. Puteți afla detalii despre un anumit tip de conexiune din articolul despre serviciul țintă.
+   1. Dacă [vă utilizați propria Key Vault](use-azure-key-vault.md) pentru a stoca secrete, activați **Utilizați Kay Vault** și alegeți secretul din listă.
 
 1. Pentru a crea conexiunea, selectați **Salvare**.
 
@@ -93,3 +94,6 @@ Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau expor
 
 1. Pentru a confirma ștergerea selectați **Ștergere**.
 
+## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurați conexiuni cu secrete gestionate de propria Key Vault
+
+Unele conexiuni au nevoie de secrete, cum ar fi cheile API sau parolele. Unele conexiuni acceptă secretele stocate în propria Key Vault. Aflați mai multe despre conexiunile acceptate și despre cum să vă configurați [propria Key Vault pentru informații despre public](use-azure-key-vault.md).

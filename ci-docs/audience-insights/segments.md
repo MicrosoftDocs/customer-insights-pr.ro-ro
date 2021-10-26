@@ -1,7 +1,7 @@
 ---
 title: Segmente din statisticile publicului
 description: Prezentare generală a segmentelor și modul de creare și gestionare a acestora.
-ms.date: 05/03/2021
+ms.date: 09/30/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: f1003b53b17e3ba2c37c0f2d94b89f7e97c2b6f10e28b7bbe93160e4c7f08d54
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036388"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617390"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
@@ -26,11 +26,19 @@ Profilurile clienților care corespund filtrelor unei definiții de segmente sun
 
 Sunt mai multe moduri de a crea un segment nou: 
 
-- Segment complex cu constructor de segmente: [Segment gol](segment-builder.md#create-a-new-segment)
-- Segmente simple cu un singur operator: [Segment rapid](segment-builder.md#quick-segments)
-- Modalitate bazată pe AI pentru a găsi clienți similari: [Clienți similari](find-similar-customer-segments.md)
-- Sugestii bazate pe AI bazate pe măsuri sau atribute: [Segmente sugerate pentru îmbunătățirea măsurilor](suggested-segments.md)
-- Sugestii bazate pe activități: [Segmente sugerate pe baza activității clienților](suggested-segments-activity.md)
+# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+
+- Segment complex cu constructor de segmente: [Construiți-le pe ale noastre](segment-builder.md#create-a-new-segment) 
+- Segmente simple cu un singur operator: [Segment rapid](segment-builder.md#quick-segments) 
+- Modalitate bazată pe AI pentru a găsi clienți similari: [Clienți similari](find-similar-customer-segments.md) 
+- Sugestii bazate pe AI bazate pe măsuri sau atribute: [Segmente sugerate pentru îmbunătățirea măsurilor](suggested-segments.md) 
+- Sugestii bazate pe activități: [Segmente sugerate pe baza activității clienților](suggested-segments-activity.md) 
+
+# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+
+- Segment complex cu constructor de segmente: [Construiți-le pe ale noastre](segment-builder.md#create-a-new-segment)
+
+---
 
 ## <a name="manage-existing-segments"></a>Gestionarea segmentelor existente
 
@@ -70,9 +78,9 @@ Puteți exporta un segment din pagina de segmente sau din [pagina exporturilor](
 
 1. Selectați **Gestionați exporturile** din lista derulantă de acțiuni.
 
-1. Pagina **Exporturi (versiune preliminară) pentru segment** se deschide. Puteți vedea toate exporturile configurate grupate după exporturi care conțin segmentul curent sau nu îl conțin.
+1. Pagina **Exporturi (versiune preliminară) pentru segment** se deschide. Puteți vedea toate exporturile configurate grupate în funcție de faptul că acestea conțin sau nu segmentul curent.
 
-   1. Pentru a adăuga segmentul selectat la un export, selectați exportul din listă și selectați **Adăugați un segment**.
+   1. Pentru a adăuga segmentul selectat la un export, **Editați** exportul respectiv pentru a selecta segmentul corespunzător, apoi salvați. În medii pentru clienți individuali, puteți selecta exportul în listă și selectați **Adăugați un segment** pentru a obține același rezultat.
 
    1. Pentru a crea un nou export cu segmentul selectat, selectați **Adăugați export**. Pentru mai multe informații despre crearea exporturilor, consultați [Configurați un nou export](export-destinations.md#set-up-a-new-export).
 

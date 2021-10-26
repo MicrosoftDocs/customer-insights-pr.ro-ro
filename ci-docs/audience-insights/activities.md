@@ -1,7 +1,7 @@
 ---
 title: Activități ale clienților
 description: Definiți activitățile clienților și vizualizați-le într-o cronologie pe profilurile clienților.
-ms.date: 09/12/2021
+ms.date: 09/27/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c5697df8a7d011c70384c8bc5e4773d7fcc25a62
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
+ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494426"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617984"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
@@ -24,8 +24,7 @@ Combinați activitățile clienților din [diverse surse de date](data-sources.m
 
 Sursele dvs. de date pot include entități cu date tranzacționale și de activitate din mai multe surse de date. Identificați aceste entități și selectați activitățile pe care doriți să le vizualizați în cronologia clientului. Alegeți entitatea care include activitatea sau activitățile dvs. țintă.
 
-> [!NOTE]
-> O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi inclus într-o cronologie a clienților și nu puteți adăuga entități fără câmpuri **Date**. Controlul **Adăugați activitate** este dezactivat dacă nu se găsește o astfel de entitate.
+O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi inclus într-o cronologie a clienților și nu puteți adăuga entități fără câmpuri **Date**. Controlul **Adăugați activitate** este dezactivat dacă nu se găsește o astfel de entitate.
 
 1. În Detalii despre audiență, accesați **Date** > **Activități**.
 
@@ -41,13 +40,16 @@ Sursele dvs. de date pot include entități cu date tranzacționale și de activ
 
 1. Selectați **Următorul** pentru a trece la pasul următor.
 
-1. La pasul **Relație**, configurați detaliile pentru a vă conecta datele de activitate la clientul corespunzător. Acest pas vizualizează conexiunea dintre entități.  
+1. În pasul **Relație**, configurați detaliile pentru a vă conecta datele de activitate la înregistrarea de cont corespunzătoare. Acest pas vizualizează conexiunea dintre entități.  
 
    - **Primul pas**: Câmp străin din entitatea dvs. de activitate care va fi utilizat pentru a stabili o relație cu o altă entitate.
    - **Al doilea pas**: Entitate client sursă corespunzătoare cu care entitatea de activitate va fi în relație. Vă puteți raporta doar la entitățile client sursă care sunt utilizate în procesul de unificare a datelor.
    - **Al treilea pas**: Dacă există deja o relație între această entitate de activitate și entitatea client sursă selectată, numele relației va fi în modul doar în citire. Dacă nu există o astfel de relație, va fi creată o nouă relație cu numele pe care îl furnizați în această casetă.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiți relația dintre entități.":::
+
+   > [!TIP]
+   > În mediile B2B, puteți selecta între entități de cont și alte entități. Dacă selectați o entitate de cont, calea relației este setată automat. Pentru alte entități, trebuie să definiți calea relației pentru una sau mai multe entități intermediare până când ajungeți la o entitate de cont.
 
 1. Selectați **Următorul** pentru a trece la pasul următor. 
 
@@ -95,5 +97,34 @@ Următoarele acțiuni sunt disponibile când selectați o activitate.
 - **Redenumire**: Deschide un dialog în care puteți introduce un nume diferit pentru activitatea selectată. Selectați **Salvare** pentru a vă aplica modificările.
 
 - **Ștergeți**: Deschide o casetă de dialog pentru a confirma ștergerea activității selectate. De asemenea, puteți șterge mai multe activități simultan selectând activitățile și apoi selectând pictograma de ștergere. Selectați **Ștergere**, apoi confirmați ștergerea.
+
+## <a name="view-activity-timelines-on-customer-profiles"></a>Vizualizați cronologiile activității în profilurile clienților
+
+După ce ați configurat activitățile clienților, selectați **Afișați în cronologia activității** în configurația activității pentru a găsi toate activitățile clienților dvs. în profilul lor de client.
+
+Pentru a deschide cronologia pentru un client, accesați **Clienți** și alegeți profilul de client pe care doriți să îl vizualizați.
+
+Dacă un client a participat la o activitate pe care ați configurat-o, o veți găsi în secțiunea **Cronologia activității**.
+
+:::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Vizualizați activitățile configurate în Profilurile clienților.":::
+
+Există mai multe moduri de a filtra activitățile în cronologia activității:
+
+- Puteți selecta una sau mai multe dintre pictogramele de activitate pentru a vă rafina rezultatele, pentru a include numai tipurile selectate.
+
+  :::image type="content" source="media/Activity_Timeline2.PNG" alt-text="Filtrați activitățile după tip folosind pictogramele.":::
+
+- Puteți selecta **Filtru** pentru a deschide un panou de filtrare pentru a vă configura filtrele cronologiei.
+
+   1. Puteți filtra după *ActivityType* și *Data*
+   1. Selectați **Aplicare** pentru a utiliza filtrele din cronologia activității.
+
+   :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilizați panoul de filtrare pentru a configura condițiile de filtrare.":::
+
+Pentru a elimina filtrele, selectați **x** lângă fiecare filtru aplicat cronologiei sau selectați **Ștergeți filtrele**.
+
+
+> [!NOTE]
+> Filtrele de activitate sunt eliminate când părăsiți profilul unui client. Trebuie să le aplicați de fiecare dată când deschideți un profil de client.
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

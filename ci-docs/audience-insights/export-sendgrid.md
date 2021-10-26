@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către SendGrid
 description: Aflați cum să configurați conexiunea și să exportați la SendGrid.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 03df2ab5fce1da1f4f662e1975533f2b538b47dbdd5cf96aae4f1007163e3729
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: da3da5ea68d178deab3b9ab31dd810dee610f607
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036116"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617846"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Exportați segmente către SendGrid (previzualizare)
 
@@ -29,10 +29,10 @@ Exportați segmente de profiluri unificate ale clienților în SendGrid și util
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 100.000 de profiluri în total la SendGrid.
+- Până la 100.000 de profiluri de clienți în total la SendGrid.
 - Exportul către SendGrid este limitat la segmente.
-- Exportul până la 100'000 de profiluri către SendGrid poate dura până la câteva ore. 
-- Numărul de profiluri pe care le puteți exporta către SendGrid este dependent și limitat de contractul dvs. cu SendGrid.
+- Exportul până la 100.000 de profiluri de clienți în SendGrid poate dura până la câteva ore. 
+- Numărul de profiluri de clienți pe care le puteți exporta în SendGrid depinde și este limitat de contractul dvs. cu SendGrid.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Configurarea conexiunii la SendGrid
 
@@ -66,7 +66,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **[ID-ul listă SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale precum **Prenume**, **Nume**, **Țară/Regiune**, **Stare**, **Oraș** și **Cod poștal**.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale precum **Prenume**, **Nume**, **Țară/Regiune**, **Stare**, **Oraș** și **Cod poștal**.
 
 1. Selectați segmentele pe care doriți să le exportați. Ferm **recomandăm să nu exportați mai mult de 100.000 de profiluri de clienți în total** la SendGrid. 
 

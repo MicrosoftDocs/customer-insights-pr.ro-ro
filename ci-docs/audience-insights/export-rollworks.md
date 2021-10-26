@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către RollWorks
 description: Aflați cum să configurați conexiunea și să exportați la RollWorks.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d8ce4d867835dcb7cf56c6fffff4e25d1f5c109af0e401fc0eb8b3a7427c1de4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f8f6a79db9cb4bb109c03a464d9f8c7f3b862ad5
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034605"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7617459"
 ---
 # <a name="export-segments-to-rollworks-preview"></a>Exportați segmente în RollWorks (previzualizare)
 
@@ -28,11 +28,11 @@ Exportați segmente de profiluri de clienți unificate în RollWorks și folosi�
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 250 000 de profiluri per export către RollWorks.
-- Nu puteți exporta segmente cu mai puțin de 100 de profiluri către RollWorks. 
+- Puteți exporta până la 250.000 de profiluri de clienți per export către RollWorks.
+- Nu puteți exporta segmente cu mai puțin de 100 de profiluri de clienți în RollWorks. 
 - Exportul către RollWorks este limitat la segmente.
-- Exportul de până la 250 000 de profiluri către RollWorks poate dura până la 10 minute. 
-- Numărul de profiluri pe care le puteți exporta în RollWorks depinde și este limitat de contractul dvs. cu RollWorks.
+- Exportul până la 250.000 de profiluri de clienți în RollWorks poate dura până la 10 minute. 
+- Numărul de profiluri de clienți pe care le puteți exporta în RollWorks depinde și este limitat de contractul dvs. cu RollWorks.
 
 ## <a name="set-up-connection-to-rollworks"></a>Configurarea conexiunii la RollWorks
 
@@ -66,7 +66,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **ID-ul agentului de publicitate RollWorks** [Publicitate RollWorks](https://help.adroll.com/hc/articles/212011838-Advertiser-Profiles).
 
-3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către RollWorks.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către RollWorks.
 
 1. Selectați segmentele pe care doriți să le exportați. Selectați un segment cu cel puțin 100 de membri. Nu puteți exporta segmente mai mici. În plus, dimensiunea maximă a unui segment de export este de 250.000 de membri pe export. 
 

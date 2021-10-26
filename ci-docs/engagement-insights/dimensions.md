@@ -4,17 +4,17 @@ description: Cum se creează, se editează și se șterg dimensiunile.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: b575c5e84197d76f53a722bac60c5af928c917f9671720ede1de38c4a7478be4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 136da1e1265c7087d861712d34d011b09cb60ad5
+ms.sourcegitcommit: 565637f49cbdd05a82f42784f594c19cac299140
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7034012"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623647"
 ---
 # <a name="view-and-create-dimensions"></a>Vizualizați și creați dimensiuni
 
@@ -22,7 +22,7 @@ ms.locfileid: "7034012"
 
 O dimensiune este un atribute pentru un eveniment care poate descrie, filtra sau grupa date. Dacă desfășurați o promoție de marketing pe site-ul dvs. web, puteți utiliza dimensiunile pentru a sorta vizitatorii după utilizatorii noi și recenți.  
 
-Detaliile despre angajamente includ dimensiuni predefinite pentru proprietățile evenimentului. Exemplele includ:
+Detaliile despre angajamente includ dimensiuni predefinite (OOB) pentru proprietățile evenimentului. Exemplele includ:
 
 - Nume de browser
 - Nume de pagină
@@ -44,17 +44,21 @@ Dimensiunile se bazează pe proprietățile evenimentelor existente. Când utili
 Pe lângă dimensiunile generate de sistem, administratorii de mediu și de spațiu de lucru pot crea dimensiuni personalizate. Dimensiunile particularizate se bazează pe proprietățile implicite ale evenimentelor de bază sau pot fi utilizate [proprietățile personalizate ale unui eveniment](advanced-SDK-implementation.md).
 
 1. Accesați **Date** > **Dimensiuni**.
-1. Selectați **Adăugați o dimensiune**.
+1. Selectați **Dimensiune nouă**.
 
    :::image type="content" source="media/add-dimension.png" alt-text="Adăugați o dimensiune unui eveniment.":::
 
 1. În **Creați o dimensiune**, selectați o proprietate pentru a o utiliza ca bază a dimensiunii. Lista de proprietăți va afișa toate proprietățile din spațiul de lucru neatribuite unei dimensiuni.
-1. Introduceți un nume în caseta **Nume afișat**. Opțional, puteți adăuga o descriere.
-1. Selectați **Creați** pentru a salva dimensiunea. Poate dura până la un minut înainte de a putea utiliza dimensiunea într-un [raport particularizat](custom-reports.md) sau [segment](segments.md). 
+   
+   :::image type="content" source="media/create-new-dimension.png" alt-text="Crearea unei noi dimensiuni.":::
+      
+3. Introduceți un nume în caseta **Nume afișat**. Opțional, puteți adăuga o **Descriere**.
+4. Selectați **Creați** pentru a salva dimensiunea. Poate dura până la un minut înainte de a putea utiliza dimensiunea într-un [raport particularizat](custom-reports.md) sau [segment](segments.md). 
 
 ## <a name="edit-a-dimension"></a>Editați o dimensiune
 
-Puteți schimba numele și descrierea unei dimensiuni.
+Puteți schimba numele și descrierea unei dimensiuni. Puteți edita numai dimensiunile create de utilizator, dar nu puteți edita dimensiunile sistemului.
+
 
 1. Accesați **Date** > **Dimensiuni**.
 1. Selectați dimensiunea pe care doriți să îl ștergeți.

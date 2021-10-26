@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: fb3fee72b3420c636d549b600c468c574ee33a662bfafd096247dfddf40150bd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
+ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032681"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "7643411"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
@@ -23,6 +23,8 @@ Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utiliza
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 
 Modelul nostru trece printr-un proces în doi pași pentru a îmbunătăți o adresă. În primul rând, analizează adresa pentru a identifica componentele sale și le plasează într-un format structurat. Apoi, folosim AI pentru a corecta, completa și standardiza valorile din adresă.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Exemplu
 
@@ -102,6 +104,6 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

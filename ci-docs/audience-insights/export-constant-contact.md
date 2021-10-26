@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Constant Contact
 description: Aflați cum să configurați conexiunea și exportul la Constant Contact.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 30dfe4d6c2374ba9979827ea70a71c52a1334b45dd3e36ccb1de90fae0c61ad9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b25e4f11e21d059c2d867e925c0ae5635a87addc
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031856"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619134"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportați segmente în Constant Contact (previzualizare)
 
@@ -28,10 +28,10 @@ Exportați segmente de profiluri de clienți unificate în Constant Contact și 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 1 milion de profiluri per export către Constant Contact.
+- Puteți exporta până la 1 milion de profiluri de clienți per export către Constant Contact.
 - Exportul către Constant Contact este limitat la segmente.
-- Exportul de până la 1 milion de profiluri pe Constant Contact poate dura până la 1 oră. 
-- Numărul de profiluri pe care le puteți exporta în Constant Contact depinde și este limitat de contractul dvs. cu Constant Contact.
+- Exportul până la 1 milion de profiluri de clienți în Constant Contact poate dura până la 1 oră. 
+- Numărul de profiluri de clienți pe care le puteți exporta în Constant Contact depinde și este limitat de contractul dvs. cu Constant Contact.
 
 ## <a name="set-up-connection-to-constant-contact"></a>Configurați conexiunea la Constant Contact
 
@@ -65,7 +65,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți [**ID-ul listei de Constant Contact**](https://app.constantcontact.com/pages/contacts/ui#lists). Deschideți o listă în Constant Contact pentru a găsi ID-ul listei în URL.
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Constant Contact.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Constant Contact.
 
 1. Opțional, puteți exporta Prenume și Nume de familie ca câmpuri suplimentare pentru a crea e-mailuri mai personalizate. Selectați **Adăugare atribut** pentru a mapa aceste câmpuri.
 

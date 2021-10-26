@@ -4,17 +4,17 @@ description: Aflați cum să personalizați și să rulați un eșantion web SDK
 author: britl
 ms.reviewer: mhart
 ms.author: britl
-ms.date: 10/30/2020
+ms.date: 10/01/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 97e50a51231bcf05f3e381397f0cf41e49afc10e3c3674d7c709c8f521979e12
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 545f4a7e9660e339dee1070ad727d5d398eb6254
+ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036618"
+ms.lasthandoff: 10/06/2021
+ms.locfileid: "7606258"
 ---
 # <a name="run-the-web-sdk-sample-for-dynamics-365-customer-insights-engagement-insights-capability"></a>Rulați eșantionul web SDK pentru capacitatea Dynamics 365 Customer Insights Detalii despre angajamente
 
@@ -26,7 +26,7 @@ Biblioteca web SDK pentru Detalii despre angajamente este o bibliotecă JavaScri
 
 - Instalați [Visual Studio Code](https://code.visualstudio.com/).
 - [Instalați extensia Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) în Visual Studio Code și familiarizați-vă cu cum să rulați Live Server.
-- Trebuie să aveți [cheia de ingestie](instrument-website.md).
+- Trebuie să aveți un [spațiu de lucru pentru perspectivele de angajament](create-workspace.md).
 
 ## <a name="run-sample"></a>Rulați eșantionul
 
@@ -36,7 +36,11 @@ Biblioteca web SDK pentru Detalii despre angajamente este o bibliotecă JavaScri
 
 1. Deschideți folderul dezarhivat în Visual Studio Code.
 
-1. În fișierul `ei_websdk_sample.html`, înlocuiți șirul „INGESTION_KEY” cu cheia de ingestie de pe portalul Detalii despre angajamente și șirul „NAME” cu numele global în care doriți să fie instanțiat SDK-ul. Asigurați-vă că înlocuiți toate aparițiile.
+1. Accesați portalul de informații despre angajament pentru spațiul dvs. de lucru. Selectați **Administrator** > **Spațiu de lucru**  și apoi **Ghid de instalare**. Urmați prima opțiune și selectați **Copiați codul** pentru a copia fragmentul de cod JavaScript.
+
+1. În fișierul `ei_websdk_sample.html`, lipiți fragment de cod pe care tocmai l-ați copiat sub această linie:
+
+   - <-- LIPIȚI FRAGMENTUL DE COD JAVASCRIPT DIN PORTALUL DE INFORMAȚII PRIVIND ACHIZIȚIA AICI SUB ACEASTĂ LINIE ->
 
 1. Deschideți fișierul `ei_websdk_sample.html` folosind Live Server în Visual Studio Code prin selectarea **Treceți în direct** din bara de stare.
 

@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Marketo
 description: Aflați cum să configurați conexiunea și să exportați la Marketo.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 0d5eaa769973c861d89287bba0ed29509ab2efc653bdd8e177cc49b3560c698e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 71a16bd71a58b5cc0a6a2ed421561d91f782dd8e
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033508"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7619180"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportați segmente către Marketo (previzualizare)
 
@@ -29,10 +29,10 @@ Exportați segmentele profilurilor client unificate pentru a genera campanii, a 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 1 milion de profiluri per export către Marketo.
+- Până la 1 milion de profiluri de clienți per export către Marketo.
 - Exportul către Marketo este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri poate dura până la 3 ore. 
-- Numărul de profiluri pe care le puteți exporta către Marketo este dependent și limitat de contractul dvs. cu Marketo.
+- Exportarea de segmente cu un total de 1 milion de profiluri de clienți poate dura până la 3 ore. 
+- Numărul de profiluri de clienți pe care le puteți exporta în Marketo depinde și este limitat de contractul dvs. cu Marketo.
 
 ## <a name="set-up-connection-to-marketo"></a>Configurarea conexiunii la Marketo
 
@@ -64,7 +64,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **[ID-ul listă Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID-ul listei este o valoare pur numerică. De exemplu, dacă ID-ul listei Marketo este ST12345A7, eliminați caracterul înainte și după cifre și introduceți `12345`. 
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. 
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. 
 
 1. Opțional, puteți exporta **Prenume**, **Nume de familie**, **Oraș**, **Stat** și **Țară/Regiune** pentru a crea e-mailuri mai personalizate. Selectați **Adăugare atribut** pentru a mapa aceste câmpuri.
 

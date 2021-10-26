@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b67aa7477033222b0bc9512a962a1580edd973b4882ce925620ff5ec14f83fe3
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: fa1d4ffd9f77e128b5d804e4562e964561f4684f
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032727"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618720"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Îmbogățiți profilurile clienților cu date particularizate (previzualizare)
 
@@ -44,6 +44,8 @@ Pentru a configura importul particularizat SFTP, trebuie îndeplinite următoare
 1.  Selectați **Următorul** și introduceți **Cale** și **Nume de fișier** din fișierul de date pe care doriți să îl importați.
 
     :::image type="content" source="media/enrichment-SFTP-path-and-filename.png" alt-text="Captură de ecran la introducerea locației datelor.":::
+
+1. Selectați **Următorul** și alegeți setul de date pentru clienți. Acesta poate fi fie toate profilurile clienților, fie un segment.
 
 1. Selectați **Următorul** și furnizați un nume pentru îmbogățire și un nume pentru entitatea de ieșire. 
 
@@ -123,6 +125,6 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

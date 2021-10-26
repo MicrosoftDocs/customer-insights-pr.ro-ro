@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Mailchimp
 description: Aflați cum să configurați conexiunea și să exportați la Mailchimp.
-ms.date: 03/03/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a6bdf43bb40345b868bf2e7d2c91de169c8ba841ba77f732f455f4c4d496a7f5
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 94a9fead56ce8c40b35d4eb41ebdc0d672798dce
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033554"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618629"
 ---
 # <a name="export-segments-to-mailchimp-preview"></a>Exportați segmente în Mailchimp (previzualizare)
 
@@ -29,10 +29,10 @@ Exportați segmente de profiluri unificate ale clienților către Mailchimp pent
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 1 milion de profiluri per export către Mailchimp.
+- Până la 1 milion de profiluri de clienți per export către Mailchimp.
 - Exportul către Mailchimp este limitat la segmente.
-- Exportarea segmentelor cu 1 milion de profiluri poate dura până la trei ore. 
-- Numărul de profiluri pe care le puteți exporta către Mailchimp este dependent și limitat de contractul dvs. cu Mailchimp.
+- Exportarea segmentelor cu 1 milion de profiluri de clienți poate dura până la trei ore. 
+- Numărul de profiluri de clienți pe care le puteți exporta în Mailchimb depinde și este limitat de contractul dvs. cu Mailchimp.
 
 ## <a name="set-up-connection-to-mailchimp"></a>Configurarea conexiunii la Mailchimp
 
@@ -66,7 +66,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **[ID public Mailchimp](https://mailchimp.com/help/find-audience-id/)**
 
-3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. 
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. 
 
 1. Opțional, puteți exporta **Prenume** și **Nume de familie** pentru a crea e-mailuri mai personalizate. Selectați **Adăugare atribut** pentru a mapa aceste câmpuri.
 

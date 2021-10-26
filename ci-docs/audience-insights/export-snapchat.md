@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către Snapchat
 description: Aflați cum să configurați conexiunea și să exportați la Snapchat.
-ms.date: 03/22/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 421dcd5ba5421597cf9dea71a9f9f25c7972a4f26fb49d4b042f8667a317ab5d
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b7a929d65a730b60e77ae111b458c68d3cce2020
+ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033416"
+ms.lasthandoff: 10/08/2021
+ms.locfileid: "7618698"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportați segmente în Snapchat (previzualizare)
 
@@ -29,7 +29,7 @@ Exportați segmente de profiluri de clienți unificate în Snapchat și folosiț
 ## <a name="known-limitations"></a>Limitări cunoscute
 
 - Exportul către Snapchat este limitat la segmente.
-- Exportul de până la 1 milion de profiluri pe Snapchat poate dura până la 15 minute. 
+- Exportul până la 1 milion de profiluri de clienți în Snapchat poate dura până la 15 minute. 
 
 ## <a name="set-up-connection-to-snapchat"></a>Configurarea conexiunii la Snapchat
 
@@ -63,7 +63,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți [**ID-ul de audiență Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Snapchat.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Snapchat.
 
 1. Selectați segmentele pe care doriți să le exportați. 
 

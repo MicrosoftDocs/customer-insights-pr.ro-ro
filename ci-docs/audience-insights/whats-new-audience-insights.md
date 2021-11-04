@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 5262ad20019e90e73ab121a5ab90e602c1a32b7e
-ms.sourcegitcommit: 693458e13e4b4d94b6205093559912f6a4dc4a1c
+ms.openlocfilehash: e501df8701493a1c5b83c4d06da3a73fd226165f
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/06/2021
-ms.locfileid: "7606119"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673879"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
@@ -166,7 +166,7 @@ Actualizările din martie 2021 includ mai multe funcții, actualizări de perfor
 - **Exportați segmente în Persoană de contact constantă** Am extins destinațiile noastre de export pentru a include Persoană de contact constantă. Acum puteți exporta segmente din Customer Insights în listele Persoană de contact constantă și le puteți folosi ca bază pentru campaniile dvs. de marketing.   
    Pentru informații suplimentare, consultați [Exportați în Persoană de contact constantă](export-constant-contact.md).
 
-- **Exportați segmente în RollWorks** Am extins destinațiile noastre de export pentru a include RollWorks. Acum puteți exporta segmente din Customer Insights în publicurile RollWorks și le puteți folosi ca bază pentru publicitatea dvs. B2B.    
+- **Exportați segmente în RollWorks** Am extins destinațiile noastre de export pentru a include RollWorks. Acum puteți exporta segmente din Customer Insights către publicuri RollWorks și să le utilizați ca bază pentru publicitatea dvs. B-la-B.    
    Pentru informații suplimentare, consultați [Exportați în RollWorks ](export-rollworks.md).
 
 - **Exportați segmente în Snapchat** Am extins destinațiile noastre de export pentru a include Snapchat. Acum puteți exporta segmente din Customer Insights în publicurile Snapchat și le puteți folosi ca bază pentru publicitatea dvs.     

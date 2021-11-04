@@ -1,7 +1,7 @@
 ---
 title: Configurarea sistemului în Detalii despre public
 description: Aflați despre setările sistemului în capabilitatea de detalii privind publicul Dynamics 365 Customer Insights.
-ms.date: 02/12/2021
+ms.date: 10/15/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 2af8728009b4f1d53ebc2557bab8c79537a0dc5dda54477493ab1ad16f3f9a8a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
+ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035931"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7651855"
 ---
 # <a name="system-configuration"></a>Configurări sistem
 
@@ -24,9 +24,9 @@ Pagina **Sistem** include următoarele file:
 - [Utilizare API](#api-usage-tab)
 - [Despre](#about-tab)
 - [General](#general-tab)
+- [Securitate](#security-tab)
 
-> [!div class="mx-imgBorder"]
-> ![Pagina de sistem.](media/system-tabs.png "Pagina de sistem")
+:::image type="content" source="media/system-tabs.png" alt-text="Filele de setări pe pagina de sistem.":::
 
 ## <a name="status-tab"></a>Fila Stare
 
@@ -84,9 +84,15 @@ Fila **Despre** conține **Numele afișat** al organizației dvs., **ID de mediu
 
 ## <a name="general-tab"></a>Fila General
 
-Există două opțiuni pe fila **General**, **Limba** și **Format țară/regiune**.
+Puteți schimba limba și formatul de țară/regiune pe fila **General**.
 
-Aplicația [acceptă mai multe limbi](supported-languages.md). Pentru a schimba limba preferată, alegeți o **Limbă** din lista verticală.
+Customer Insights [acceptă o serie de limbi](/dynamics365/get-started/availability). Aplicația vă folosește preferințele de limbă pentru a afișa elemente precum meniul, textul de etichete și mesajele de sistem în limba dvs. preferată.
+
+Datele și informațiile importate și pe care le-ați introdus manual nu sunt traduse.
+
+### <a name="update-the-settings"></a>Actualizați setările
+
+Pentru a schimba limba preferată, alegeți o **Limbă** din lista verticală.
 
 Pentru a schimba formatarea dvs. preferată pentru date, oră și numere, utilizați lista verticală **Format țară/regiune**. O previzualizare de formatare este afișată sub acest câmp. Sistemul va sugera automat o selecție atunci când alegeți o nouă limbă.
 
@@ -105,6 +111,13 @@ Găsiți detalii despre utilizarea API-ului în timp real și vedeți ce evenime
 
    Operațiuni care utilizează [ingestie de date în timp real](real-time-data-ingestion.md) conțin un buton cu un simbol binocular pentru a vizualiza utilizarea API-ului în timp real. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.   
    Utilizați caseta **Grupare după** din panoul **Utilizare API în timp real** pentru a alege cum să vă prezentați cel mai bine interacțiunile în timp real. Puteți grupa datele după metoda API, numele calificat de entitate (entitatea ingerată), creat de (sursa evenimentului), rezultat (succes sau eșec) sau coduri de eroare. Datele sunt disponibile ca un grafic istoric și ca un tabel.
+
+## <a name="security-tab"></a>Fila Securitate
+
+Fila **Securitate** vă permite să vă conectați și să vă gestionați propriul [Seif de chei Azure](/azure/key-vault/general/basic-concepts) la mediu.
+Seiful de chei dedicat poate fi utilizat pentru a etapiza și a folosi secrete în limita de conformitate a unei organizații. Statisticile publicului pot folosi secretele din Azure Key Vault pentru a [configura conexiuni](connections.md) către sisteme terțe.
+
+Pentru mai multe informații, vedeți [Aduceți-vă propriul seif de chei Azure](use-azure-key-vault.md).
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

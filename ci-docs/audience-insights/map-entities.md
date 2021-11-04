@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-map
-ms.openlocfilehash: 7ee3feea8423f35f32ff471b3ed8eb3447584089
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: 8b84ed1a860e383e4eb3f7499be6d397ba3f1db1
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648178"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673290"
 ---
 # <a name="map-entities-and-attributes"></a>Entități de hartă și atribute
 
@@ -96,9 +96,9 @@ Continuați cu pașii de unificare și asigurați-vă că atributul care conțin
 
 Pentru organizații (previzualizare), tipul de atribut ar trebui să fie asociat cu „Organization.Name”
 > [!div class="mx-imgBorder"]
-> ![Cheie primară și tip de atribut B2B](media/configure-data-map-edit-b2b.png "Cheie primară și tip de atribut B2B")
+> ![Cheie primară și tip de atribut B-la-B.](media/configure-data-map-edit-b2b.png "Cheie primară și tip de atribut B-la-B")
 
-## <a name="next-step"></a>Următorul pas
+## <a name="next-step"></a>Pasul următor
 
 Ca parte a procesului de unificare a datelor, accesați pagina **Potrivire**. Vizita [**Potrivire**](match-entities.md) pentru a vă informa cu privire la această fază.
 

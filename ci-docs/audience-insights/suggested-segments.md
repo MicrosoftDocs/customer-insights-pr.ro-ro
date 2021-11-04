@@ -1,7 +1,7 @@
 ---
 title: Segmente sugerate alimentate de învățare programată
 description: Lăsați învățare programată să vă ajute să găsiți segmente noi și interesante pe baza atributelor clienților.
-ms.date: 02/01/2021
+ms.date: 10/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: JimsonChalissery
 ms.author: jimsonc
 manager: shellyha
-ms.openlocfilehash: f743853826cee0427618abccfba27f10016a0f05cc674f5f7da2210366d60305
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: 44e46bb650b6f090afcab3bc940d03a304e9c375
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7028375"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673198"
 ---
 # <a name="suggested-segments-preview"></a>Segmente sugerate (previzualizare)
 
@@ -23,7 +23,7 @@ Descoperiți segmente interesante ale clienților dvs. cu ajutorul unui model AI
 > [!NOTE]
 > Funcția de segmente sugerate utilizează mijloace automate pentru a evalua datele și a face predicții pe baza acestor date și, prin urmare, are capacitatea de a fi utilizată ca metodă de profilare, deoarece acest termen este definit de Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții pentru prelucrarea datelor poate face obiectul GDPR sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv această caracteristică, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.
 
-:::image type="content" source="media/suggested-segments-details.png" alt-text="Pagina de segmente sugerate din Customer Insights care afișează detalii despre o sugestie într-un panou lateral.":::
+:::image type="content" source="media/suggested-segments.png" alt-text="Pagină cu segmente sugerate care afișează detaliile unei sugestii într-un panou lateral.":::
 
 ## <a name="suggested-segments-to-improve-your-kpis"></a>Segmente sugerate pentru a vă îmbunătăți indicatorii de performanță
 
@@ -49,7 +49,7 @@ Sugestiile de segmente sunt diferite dacă alegeți un atribut numeric sau un at
 
 Cu un atribut numeric precum *venit anual* sau *perioada de membru* ca atribut principal, sistemul sugerează segmente care au o valoare medie mai mare sau mai mică a atributului numeric în comparație cu toți clienții.
 
-Un atribut categoric precum *satisfacția clientului* deoarece atributul principal are ca rezultat segmente sugerate care au un procent mai mare sau mai mic de clienți care aparțin unei anumite categorii în comparație cu procentul tuturor clienților care aparțin aceleiași categorii. De exemplu, *satisfacția clientului* este ales ca atribut principal și constă din trei categorii (*Scăzut*, *Mediu* și *Înalt*). Pentru fiecare categorie, se vor sugera segmente care au un procent semnificativ mai mare sau mai mic de clienți aparținând categoriei respective, comparativ cu proporția tuturor clienților din aceeași categorie. Dacă 22% din toți clienții au o satisfacție *Înaltă*, atunci, numai segmente care au o proporție semnificativ mai mare sau mai mică de clienți cu o satisfacție *Înaltă* față de 22% va fi sugerată pentru acea categorie. În mod similar, vor fi sugerate segmente pentru fiecare dintre celelalte categorii (*Scăzut* și *Mediu*) dacă sunt semnificative statistic.
+Un atribut categoric precum *satisfacția clientului* deoarece atributul principal are ca rezultat segmente sugerate care au un procent mai mare sau mai mic de clienți care aparțin unei anumite categorii în comparație cu procentul tuturor clienților care aparțin aceleiași categorii. De exemplu, *satisfacția clientului* este ales ca atribut principal și constă din trei categorii (*Scăzut*, *Mediu* și *Înalt*). Pentru fiecare categorie, vor fi sugerate segmente care au un procent mai mare sau mai mic de clienți aparținând respectivei categorii, în comparație cu proporția tuturor clienților din aceeași categorie. Dacă 22% dintre toți clienții au un nivel de satisfacție *Înalt*, atunci numai segmentele care au o proporție mai mare sau mai mică de clienți cu un nivel de satisfacție *Înalt* în comparație cu 22% vor fi sugerate pentru acea categorie. În mod similar, vor fi sugerate segmente pentru fiecare dintre celelalte categorii (*Scăzut* și *Mediu*) dacă sunt semnificative statistic.
 
 > [!NOTE]
 > În prezent, acceptăm numai atribute categorice primare care au până la 10 categorii. Dacă doriți să vedeți sugestii de segmente bazate pe un atribut principal cu mai mult de 10 categorii, vă recomandăm să grupați unele dintre categorii pentru a reduce numărul de categorii la 10 sau mai puțin. Această limitare se aplică numai atributelor principale. Pentru influențarea atributelor categorice, în prezent acceptăm maximum 100 de categorii.
@@ -77,7 +77,7 @@ Un atribut categoric precum *satisfacția clientului* deoarece atributul princip
 
 Odată ce modelul AI a generat sugestiile, le veți găsi în listă **Segmente** > **Sugestii (previzualizare)**.
  
-Selectați un segment sugerat pentru a examina detaliile acelei sugestii, inclusiv o comparație a valorii medii și a numărului de membri ai segmentului. De asemenea, puteți revizui valorile atributelor sau regulile pe care modelul AI le-a învățat pentru a sugera segmentul selectat.
+Selectați un segment sugerat pentru a revizui detaliile sugestiei respective. De asemenea, puteți revizui valorile atributelor sau regulile pe care modelul AI le-a învățat pentru a sugera segmentul selectat.
 
 ## <a name="save-a-suggestion-as-a-segment"></a>Salvați o sugestie ca segment
 

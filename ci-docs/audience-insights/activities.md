@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: c250efcd54ec126c0726b22a971cdedd89760d6b
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617984"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673153"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
@@ -49,7 +49,7 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi i
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiți relația dintre entități.":::
 
    > [!TIP]
-   > În mediile B2B, puteți selecta între entități de cont și alte entități. Dacă selectați o entitate de cont, calea relației este setată automat. Pentru alte entități, trebuie să definiți calea relației pentru una sau mai multe entități intermediare până când ajungeți la o entitate de cont.
+   > În mediile B la B, puteți selecta între entități de cont și alte entități. Dacă selectați o entitate de cont, calea relației este setată automat. Pentru alte entități, trebuie să definiți calea relației pentru una sau mai multe entități intermediare până când ajungeți la o entitate de cont.
 
 1. Selectați **Următorul** pentru a trece la pasul următor. 
 

@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 6840f4bc345b0821fb2349666130b39d542878e7
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: ac33a6dcde4c710cecd3c6836aad3e26ce5c7de6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617390"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673856"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
@@ -26,7 +26,7 @@ Profilurile clienților care corespund filtrelor unei definiții de segmente sun
 
 Sunt mai multe moduri de a crea un segment nou: 
 
-# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
 - Segment complex cu constructor de segmente: [Construiți-le pe ale noastre](segment-builder.md#create-a-new-segment) 
 - Segmente simple cu un singur operator: [Segment rapid](segment-builder.md#quick-segments) 
@@ -34,7 +34,7 @@ Sunt mai multe moduri de a crea un segment nou:
 - Sugestii bazate pe AI bazate pe măsuri sau atribute: [Segmente sugerate pentru îmbunătățirea măsurilor](suggested-segments.md) 
 - Sugestii bazate pe activități: [Segmente sugerate pe baza activității clienților](suggested-segments-activity.md) 
 
-# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 - Segment complex cu constructor de segmente: [Construiți-le pe ale noastre](segment-builder.md#create-a-new-segment)
 

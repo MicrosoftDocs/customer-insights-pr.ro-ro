@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 39acca78c022bc15ebc15dc80f21fe175da04d4d
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622985"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673487"
 ---
 # <a name="define-and-manage-measures"></a>Definiți și gestionați măsurile
 
@@ -28,7 +28,7 @@ Utilizați instrumentul de măsurare pentru a planifica activități comerciale 
 
 Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți crea o măsură cu atribute de date de la entități de date care au o relație configurată pentru a se conecta cu entitatea de profil de client unificat.
 
-# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
 1. În Detalii despre public, accesați **Măsuri**.
 
@@ -92,7 +92,7 @@ Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți c
 
 1. Accesați **Măsuri** pentru a vedea măsurarea nou creată în listă.
 
-# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 1. În Detalii despre public, accesați **Măsuri**.
 
@@ -164,7 +164,7 @@ Această secțiune vă ajută să creați o nouă măsură de la zero. Puteți c
 
 Puteți utiliza șabloane predefinite de măsuri utilizate în mod obișnuit pentru a le crea. Descrieri detaliate ale șabloanelor și o experiență ghidată vă ajută la crearea eficientă a măsurilor. Șabloanele se bazează pe date cartografiate din entitatea *Activitate unificată*. Deci, asigurați-vă că ați configurat [activitățile clienților](activities.md) înainte de a crea o măsură dintr-un șablon.
 
-# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
 Puteți utiliza șabloane predefinite de măsuri utilizate în mod obișnuit pentru a le crea. Descrieri detaliate ale șabloanelor și o experiență ghidată vă ajută la crearea eficientă a măsurilor. Șabloanele se bazează pe date cartografiate din entitatea *Activitate unificată*. Deci, asigurați-vă că ați configurat [activitățile clienților](activities.md) înainte de a crea o măsură dintr-un șablon.
 
@@ -212,7 +212,7 @@ Următoarea procedură prezintă pașii pentru a construi o nouă măsură folos
 
 1. Acum puteți selecta **Rulare** pentru a calcula rezultatele măsurii. Pentru a-l rafina mai târziu, selectați **Salvați schița**.
 
-# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 Această funcție este disponibilă numai pentru măsurile create în medii cu clienți individuali ca public țintă principal.
 

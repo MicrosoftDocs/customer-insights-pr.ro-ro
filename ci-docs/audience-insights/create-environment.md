@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 95afd1fedb98a451e4978ee66be2ea98ad7a4a76
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645720"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673406"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creați un mediu în detalii despre public
 
@@ -46,7 +46,7 @@ O experiență ghidată vă ajută să parcurgeți pașii pentru a aduna toate i
 
 Furnizați următoarele detalii:
    - **Nume**: Numele pentru acest mediu. Acest câmp este deja completat dacă ați copiat dintr-un mediu existent, dar îl puteți modifica.
-   - **Alegeți-vă afacerea**: Alegeți publicul principal pentru noul mediu. Puteți lucra cu clienți individuali (B2C) sau [conturi de business](work-with-business-accounts.md) (B2B).
+   - **Alegeți-vă afacerea**: alegeți publicul principal pentru noul mediu. Puteți lucra cu consumatori individuali (B-la-C) sau cu [conturi de business](work-with-business-accounts.md) (B-la-B).
    - **Tip**: Selectați dacă doriți să creați un mediu de tip producție sau sandbox. Mediile Sandbox nu permit reîmprospătarea datelor programate și sunt destinate pre-implementării și testării. Mediile Sandbox utilizează același public principal ca mediul de producție selectat în prezent.
    - **Regiune**: Regiunea în care este implementat și găzduit serviciul.
 
@@ -54,7 +54,7 @@ Furnizați următoarele detalii:
 
 În pasul **Stocarea datelor**, alege unde să stochezi datele din statisticile publicului.
 
-Veți avea două opțiuni: **Depozitare Customer Insights** (un Azure Data Lake administrat de echipa Customer Insights) și **Azure Data Lake Storage** (Azure Data Lake Storage al dvs). Opțiunea de stocare a Customer Insights este selectată în mod implicit.
+Veți avea două opțiuni: **Stocare Customer Insights** (un Azure Data Lake administrat de echipa Customer Insights) și **Azure Data Lake Storage** (Azure Data Lake Storage al dvs). Opțiunea de stocare a Customer Insights este selectată în mod implicit.
 
 :::image type="content" source="media/data-storage-environment.png" alt-text="Alegeți Azure Data Lake Storage pentru a stoca datele statistice ale publicului dvs. în.":::
 
@@ -66,7 +66,7 @@ Prin salvarea datelor în Azure Data Lake Storage, sunteți de acord că datele 
 > - Conturi Azure Data Lake Storage din aceeași regiune Azure pe care ați selectat-o la crearea mediului.
 > - Conturi Azure Data Lake Storage care au *spațiu de nume ierarhic*.
 
-Pentru opțiunea Azure Data Lake Storage, puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Numele **Recipient** va fi `customerinsights` și nu poate fi schimbat.
+Pentru opțiunea Azure Data Lake Storage, puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. Pentru mai multe informații, vedeți [Conectați-vă la un cont Azure Data Lake Storage folosind un cont principal de serviciu Azure](connect-service-principal.md). Numele **Recipient** va fi `customerinsights` și nu poate fi schimbat.
 
 Când procesele de sistem, cum ar fi ingestia de date, sunt finalizate, sistemul creează dosare corespunzătoare în contul de stocare pe care l-ați specificat. Fișierele de date și fișierele *model.json* sunt create și adăugate în dosare pe baza numelui procesului.
 
@@ -76,14 +76,14 @@ Dacă creați mai multe medii ale Customer Insights și alegeți să salvați en
    
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse.
 
-Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un Dataverse Data Lake gestionat.
+Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un  data lake gestionat de Dataverse.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights nu acceptă următoarele scenarii de partajare:
-> - Dacă salvați toate datele pe propriul Azure Data Lake Storage, nu veți putea activa partajarea datelor cu un Data Lake gestionat de Microsoft Dataverse.
-> - Dacă activați partajarea datelor cu un Data Lake gestionat de Microsoft Dataverse, nu veți putea [crea valori prezise sau lipsă într-o entitate](predictions.md).
+> - Dacă salvați toate datele pe propriul Azure Data Lake Storage, nu veți putea activa partajarea datelor cu un Data Lake gestionat de Dataverse.
+> - Dacă activați partajarea datelor Dataverse, nu veți putea [crea valori prezise sau lipsă într-o entitate](predictions.md).
 
 ### <a name="step-4-finalize-the-settings"></a>Pasul 4: finalizați setările
 
@@ -93,10 +93,10 @@ De asemenea, puteți modifica majoritatea setărilor ulterior. Pentru informați
 
 ## <a name="work-with-your-new-environment"></a>Lucrați cu noul dvs. mediu
 
-Consultați următoarele articole pentru a vă ajuta să începeți cu configurarea Customer Insights. 
+Consultați următoarele articole pentru a vă ajuta să începeți configurarea Customer Insights: 
 
 - [Adăugați mai mulți utilizatori și atribuiți permisiuni](permissions.md).
 - [Ingerați sursele de date](data-sources.md) și rulați-le prin [procesul de unificare a datelor](data-unification.md) pentru a obține [profiluri unificate ale clienților](customer-profiles.md).
 - [Îmbogățiți profilurile unificate ale clienților](enrichment-hub.md) sau [rulați modele predictive](predictions-overview.md).
-- [Creați segmente](segments.md) pentru a grupa clienții și [măsuri](measures.md) și a revizui indicatorii KPI.
+- [Creați segmente](segments.md) pentru a grupa clienți și [măsuri](measures.md) pentru a reviziui indicatorii KPI.
 - [Configurați conexiuni](connections.md) și [exporturi](export-destinations.md) pentru a procesa subseturi de date în alte aplicații.

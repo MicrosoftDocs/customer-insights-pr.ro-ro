@@ -10,12 +10,12 @@ author: zacookmsft
 ms.author: zacook
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: be452e4f1515f637f6edbc3ae3aaf6a3d3471489
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 63e22bf9a457ea43c65132643681cffb295ae7e5
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618858"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673977"
 ---
 # <a name="predictions-overview"></a>Prezentare generală a predicțiilor
 
@@ -25,14 +25,14 @@ Dynamics 365 Customer Insights vine cu o varietate de opțiuni care folosesc AI 
 
 Cel mai simplu mod de a începe cu prezicerea datelor sunt modelele predefinite, adesea denumite modele predefinite. Acestea necesită doar anumite date și structură pentru a genera informații rapide. În prezent, sunt disponibile următoarele modele: 
 
-# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
 - [Valoarea ciclului de viață a clientului](predict-customer-lifetime-value.md): Prezice veniturile potențiale ale unui client pe parcursul întregii interacțiuni cu o companie.
 - [Recomandarea produsului](predict-product-recommendation.md): Sugerează seturi de recomandări predictive de produse pe baza comportamentului de cumpărare și a clienților cu modele de achiziție similare.
 - [Retragere din abonament](predict-subscription-churn.md): Prezice dacă un client riscă să nu mai utilizeze produsele sau serviciile cu abonament ale firmei dvs.
 - [Modificare tranzacțională](predict-transactional-churn.md) : Prezice dacă un client nu va mai cumpăra produsele sau serviciile dvs. într-un anumit interval de timp.
 
-# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 - [Modificare tranzacțională](predict-transactional-churn.md) : Prezice dacă un client nu va mai cumpăra produsele sau serviciile dvs. într-un anumit interval de timp.
 

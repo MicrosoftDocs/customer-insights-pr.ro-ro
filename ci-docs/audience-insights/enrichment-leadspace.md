@@ -9,16 +9,16 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c57eb0ceb50e3b778acac72a4bbfd733a5b0c401
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 685b1683b0c90eab04b130552d2cb23a8ab7a235
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617416"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673247"
 ---
 # <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Îmbogățirea profilurilor companiei cu Leadspace (previzualizare)
 
-Leadspace este o companie de știință a datelor care oferă o platformă de date pentru clienți B2B. Permite medii cu profiluri de clienți unificate bazate pe conturi să își îmbogățească datele. Îmbogăţiți *Profilurile clienților* cu atribute precum dimensiunea companiei, locația sau industria. Îmbogăţiți *Profiluri de contact* cu atribute precum titlul, persoana sau verificarea prin e-mail.
+Leadspace este o companie ce se ocupă cu știința datelor și care oferă o platformă de date pentru clienți B la B. Permite medii cu profiluri de clienți unificate bazate pe conturi să își îmbogățească datele. Îmbogăţiți *Profilurile clienților* cu atribute precum dimensiunea companiei, locația sau industria. Îmbogăţiți *Profiluri de contact* cu atribute precum titlul, persoana sau verificarea prin e-mail.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 

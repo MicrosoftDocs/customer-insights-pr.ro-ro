@@ -1,7 +1,7 @@
 ---
 title: Începeți cu conturile de business ca public țintă principal
 description: Aflați despre conturile de business ca public țintă principal Dynamics 365 Customer Insights.
-ms.date: 09/30/2021
+ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,16 @@ author: m-hartmann
 ms.author: wimohabb
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: ea036cf3a3623a314a6d0d7da85b2c30c030ccea
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: ac5ae950a44f7f32e3cb9fdc0ffad05b78fddef0
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645003"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673702"
 ---
 # <a name="work-with-business-accounts-in-audience-insights"></a>Lucrați cu conturi de business în statistici despre public
 
-Publicul prezintă capacitatea în Dynamics 365 Customer Insights vă permite să vă configurați mediul pentru diferite segmente de public principale: clienți individuali (B2C) și conturi de business (B2B). În scenariile B2C, datele sunt centrate în jurul persoanelor. Pentru B2B, principalele segmente de public vizate sunt conturile - organizații sau companii - și contactele. Acest articol vă ajută să începeți cu un mediu pentru conturile de afaceri. Acesta enumeră diferențele pentru zonele de caracteristici din statisticile publicului, în funcție de mediul dvs. de interes. Pentru mai multe informații despre diferențe, consultați documentele din zonele de caracteristici. 
+Publicul prezintă capacitatea în Dynamics 365 Customer Insights vă permite să vă configurați mediul pentru diferite segmente de public principale: consumatori individuali (B la C) și conturi de business (B la B). În scenariile B la C, datele sunt centrate în jurul persoanelor. Pentru scenarii B la B, principalele segmente de public vizate sunt conturile - organizații sau companii - și contactele. Acest articol vă ajută să începeți cu un mediu pentru conturile de afaceri. Acesta enumeră diferențele pentru zonele de caracteristici din statisticile publicului, în funcție de mediul dvs. de interes. Pentru mai multe informații despre diferențe, consultați documentele din zonele de caracteristici. 
 
 ## <a name="create-an-environment-for-business-accounts"></a>Creați un mediu pentru conturi de business
 
@@ -32,7 +32,7 @@ După unificarea datelor, [specificați ierarhiile contului](relationships.md#se
 
 Dacă organizația dvs. menține medii pentru clienți individuali și conturi de afaceri, puteți utiliza comutatorul din panoul din stânga pentru a alege publicul țintă principal.
 
-:::image type="content" source="media/switch-primary-target-audience.PNG" alt-text="Comutator pentru a schimba publicul țintă principal între clienții individuali și conturile de business.":::
+:::image type="content" source="media/switch-primary-target-audience.png" alt-text="Comutator pentru a schimba publicul țintă principal între clienții individuali și conturile de business.":::
 
 ## <a name="supported-feature-areas"></a>Zone cu caracteristică acceptată
 

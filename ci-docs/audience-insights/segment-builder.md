@@ -1,7 +1,7 @@
 ---
 title: Creați segmente cu generatorul de segmente
 description: Creați segmente de clienți pentru a îi grupa pe baza diferitelor atribute.
-ms.date: 09/07/2021
+ms.date: 10/18/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: e089c475234935742fc42fc3f2bada47711305bf
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: bd01edfe7d63d6c7712a808224171f1bb8ad8a2b
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623044"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673565"
 ---
 # <a name="create-segments"></a>Creare segmente
 
@@ -23,6 +23,7 @@ Definiți filtre complexe pe baza entității client unificate și a entitățil
 > [!TIP]
 > - Segmentele rapide sunt acceptate numai în medii pentru **clienți individuali**.    
 > - Segmente bazate pe **clienți individuali** includ automat informațiile de contact disponibile pentru membrii segmentului. În medii pentru **conturi de business**, segmentele se bazează pe conturi (companii sau filiale). Pentru a include informații de contact într-un segment, utilizați funcționalitatea **Atributele proiectului** în generatorul de segmente.
+>    - Asigurați-vă că sursele de date de contact sunt [mapate semantic la ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) pentru entitate.
 
 ## <a name="segment-builder"></a>Constructor de segmente
 
@@ -52,7 +53,7 @@ Exemplul de mai sus ilustrează capacitatea de segmentare. Am definit un segment
 
 Sunt mai multe moduri de a crea un segment nou. Această secțiune descrie cum să-ți construiești propriul segment de la zero. De asemenea, puteți să creați un *segment rapid* pe baza entităților existente sau să valorificați modelele de învățare programată pentru a obține *segmente sugerate*. Pentru informații suplimentare, accesați [Prezentare generală segmente](segments.md).
 
-Când creați un segment, puteți salva o schiță. În etapa de schiță, un segment este salvat ca segment inactiv. Când finalizați configurația segmentului, rulați-o pentru a activa segmentul. Alternativ, puteți ***Activa** _ un segment din pagina _ *Toate segmentele**.
+Când creați un segment, puteți salva o schiță. În etapa de schiță, un segment este salvat ca segment inactiv. Când finalizați configurația segmentului, rulați-o pentru a activa segmentul. De asemenea, puteți **Activa** un segment din pagina **Toate segmentele**.
 
 1. Salt la pagina **Segmente**.
 
@@ -86,17 +87,25 @@ Când creați un segment, puteți salva o schiță. În etapa de schiță, un se
 
    Atunci când utilizați operatorul SAU, toate condițiile trebuie să se bazeze pe entități incluse în calea relației.
 
-   - Puteți crea mai multe reguli pentru a crea seturi diferite de înregistrări ale clienților. Puteți combina mai multe grupuri pentru a include clienții necesari pentru cazul dvs. de afaceri. Pentru a crea o nouă regulă, selectați **Adăugați regulă**. Mai exact, dacă nu puteți include și entitatea într-o regulă din cauza căii de relație specificate, trebuie să creați o nouă regulă pentru a alege atributele din aceasta.
+   - Puteți crea mai multe reguli pentru a crea seturi diferite de înregistrări ale clienților. Puteți combina mai multe grupuri pentru a include clienții necesari pentru cazul dvs. de afaceri. Pentru a crea o nouă regulă, selectați **Adăugați regulă**. Mai exact, dacă nu puteți include o entitate într-o regulă din cauza traseului de relație specificat, trebuie să creați o nouă regulă pentru a alege atributele din aceasta.
 
       :::image type="content" source="media/segment-rule-grouping.png" alt-text="Adăugați o nouă regulă la un segment și alegeți operatorul setat.":::
 
    - Selectați unul dintre operatorii de mulțimi: **Reuniune**, **Intersecție** sau **Cu excepția**.
 
       - **Uniune** unește cele două grupuri.
-      - **Intersectare** suprapune cele două grupuri. Doar datele care *sunt comune* pentru ambele grupuri sunt reținute în grupul unificat.
-      - **Excepție** combină cele două grupuri. Doar datele din grupul A care *nu sunt comune* cu datele din grupul B sunt reținute.
+      - **Intersectare** suprapune cele două grupuri. Numai datele ce *sunt comune* pentru ambele grupuri vor rămâne în grupul unificat.
+      - **Excepție** combină cele două grupuri. Se păstrează numai datele din grupul A care *nu sunt comune* cu datele din grupa B.
 
-1. În mod implicit, segmentele generează entitatea de ieșire care conține toate atributele profilurilor clienților care se potrivesc cu filtrele definite. Dacă un segment se bazează pe alte entități decât entitatea *Client*, puteți adăuga mai multe atribute de la aceste entități la entitatea de ieșire. Selectați **Atributele proiectului** pentru a alege atributele care vor fi anexate entității de ieșire.  
+1. În mod implicit, segmentele generează entitatea de ieșire care conține toate atributele profilurilor clienților care se potrivesc cu filtrele definite. Dacă un segment se bazează pe alte entități decât entitatea *Client*, puteți adăuga mai multe atribute de la aceste entități la entitatea de ieșire. Selectați **Atributele proiectului** pentru a alege atributele care vor fi anexate entității de ieșire. 
+
+   > [!IMPORTANT]
+   > Pentru segmentele bazate pe conturi comerciale, detaliile unuia sau mai multor contacte ale fiecărui cont din entitatea *ContactProfile* trebuie incluse în segment pentru a permite activarea sau exportarea segmentului respectiv către destinații care necesită informații de contact. Pentru mai multe informații despre entitatea *ContactProfile*, vedeți [Mapări semantice](semantic-mappings.md).
+   > Un exemplu de ieșire pentru un segment bazat pe conturi de business cu atributele proiectate ale persoanelor de contact ar putea arăta astfel: 
+   >
+   > |ID  |Nume cont  |Venituri  |Nume persoană de contact  | Rol persoană de contact|
+   > |---------|---------|---------|---------|---|
+   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, manager achiziții]
 
    :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplu de atribute proiectate selectate în panoul lateral pentru a fi adăugate la entitatea de ieșire.":::
   
@@ -107,13 +116,14 @@ Când creați un segment, puteți salva o schiță. În etapa de schiță, un se
    > - Dacă atributul pe care doriți să îl proiectați este la mai mult de un salt de entitatea *Client*, așa cum este definită de relație, acel atribut ar trebui să fie utilizat în fiecare regulă a interogării de segment pe care o construiți. 
    > - Dacă atributul pe care doriți să îl proiectați este la doar un salt de entitatea *Client*, acel atribut nu trebuie să fie prezent în fiecare regulă a interogării de segment pe care o construiți. 
    > - **Atributele proiectate** sunt luate în calcul atunci când se utilizează operatori de mulțimi.
-   > - Pentru segmentele bazate pe conturi comerciale, detaliile unuia sau mai multor contacte ale fiecărui cont trebuie incluse în segment pentru a permite activarea sau exportarea segmentului respectiv către destinații care necesită informații de contact.
 
 1. Înainte de a salva și rula segmentul, selectați **Editează detaliile** lângă numele segmentului. Furnizați un nume pentru segmentul dvs. și actualizați **Numele entității de ieșire** sugerat pentru segment. De asemenea, puteți adăuga o descriere la segment.
 
 1. Selectați **Rulare** pentru a salva segmentul, activați-l și începeți să procesați segmentul pe baza tuturor regulilor și condițiilor. În caz contrar, va fi salvat ca segment inactiv.
-
+   
 1. Selectați **Înapoi la segmente** pentru a reveni la pagina **Segmente**.
+
+1. În mod implicit, segmentul este creat drept segment dinamic. Asta înseamnă că segmentul este reîmprospătat în timpul reîmprospătărilor sistemului. Pentru a [opri reîmprospătarea automată](segments.md#manage-existing-segments), selectați segmentul și alegeți opțiunea **Faceți static**. Segmentele statice pot fi [reîmprospătate manual](segments.md#refresh-segments) oricând.
 
 > [!TIP]
 > - Generatorul de segmente nu va sugera valori valide de la entități atunci când setează operatorii pentru condiții. Puteți accesa **Date** > **Entități** și descărcați datele entității pentru a vedea ce valori sunt disponibile.

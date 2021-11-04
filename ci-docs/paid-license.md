@@ -1,19 +1,19 @@
 ---
 title: Începeți cu o licență plătită de Dynamics 365 Customer Insights
 author: m-hartmann
-description: Familiarizați-vă cu prima experiență din Dynamics 365 Customer Insights și explorați capacitățile sale.
+description: Familiarizați-vă cu experiența de primă rulare din Dynamics 365 Customer Insights și explorați capacitățile sale.
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: b4228a36069f4adb8098ea96cefec0eef81a6560
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645719"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673486"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Începeți după ce ați achiziționat Customer Insights
 
@@ -29,7 +29,7 @@ Dacă doriți să încercați serviciul și caracteristicile, consultați [Confi
 
 ## <a name="start-with-customer-insights"></a>Începeți cu Customer Insights
 
-Experiența la prima rundă vă ajută să vă alegeți focalizarea inițială cu Customer Insights și să explorați capacitățile cu eșantion de date. Ca un pas următor, vă puteți crea propriul mediu și puteți lucra cu propriile date.
+Experiența la prima rundă vă ajută să alegeți focalizarea inițială cu Customer Insights și să explorați capacitățile cu eșantion de date. Ca un pas următor, vă puteți crea propriul mediu și puteți lucra cu propriile date.
 
 **Pentru a vă conecta pentru prima oară**:
 

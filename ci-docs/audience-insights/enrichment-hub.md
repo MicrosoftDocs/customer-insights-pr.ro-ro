@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5d5e12ee44dfa40c470738eaee5c68fdf23d1b2d
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7617570"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673014"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -29,7 +29,7 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 
 Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptate.
 
-# <a name="individual-customers-b2c"></a>[Clienți individuali (B2C)](#tab/b2c)
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
 - [Branduri](enrichment-microsoft.md) furnizate de Microsoft
 - [Interese](enrichment-microsoft.md) furnizate de Microsoft
@@ -38,7 +38,7 @@ Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptat
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
 
-# <a name="business-accounts-b2b"></a>[Conturi de business (B2B)](#tab/b2b)
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 - [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
 - [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft 

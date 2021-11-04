@@ -10,12 +10,12 @@ author: pkieffer
 ms.author: philk
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 45a4c964e9810640c764357a72b9794f4fda89f4
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.openlocfilehash: 61e95e47489495e367498547687b0065169519e6
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7623148"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673338"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
@@ -32,14 +32,14 @@ Există două tipuri principale de exporturi:
 
 ### <a name="export-segments"></a>Export segmente
 
-**Exportarea segmentelor în medii pentru conturi de afaceri (B2B) sau clienți individuali (B2C)**  
-Majoritatea opțiunilor de export acceptă ambele tipuri de medii. Exportul de segmente către diferite sisteme țintă are cerințe specifice. În general, un membru al segmentului, profilul clientului, conține informații de contact. Deși acest lucru este de obicei cazul segmentelor construite pe clienți individuali (B2C), nu este neapărat cazul segmentelor bazate pe conturi de afaceri (B2B). 
+**Exportul segmentelor în medii pentru conturi de business (B la B) sau consumatori individuali (B la C)**  
+Majoritatea opțiunilor de export acceptă ambele tipuri de medii. Exportul de segmente către diferite sisteme țintă are cerințe specifice. În general, un membru al segmentului, profilul clientului, conține informații de contact. Deși acest lucru este de obicei cazul segmentelor construite pe consumatori individuali (B la C), nu este neapărat cazul segmentelor bazate pe conturi de business (B la B). 
 
-**Segmentați mediile de export pentru conturi de afaceri (B2B)**  
+**Mediile de export ale segmentelor pentru conturi de business (B la B)**  
 - Segmentele din contextul mediilor pentru conturile de afaceri sunt construite pe baza entității *cont*. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea **companie** la definirea exportului.
 - Toate celelalte sisteme țintă necesită câmpuri de la entitatea de contact. Pentru a vă asigura că segmentele de cont pot prelua date din contactele asociate, definiția segmentului dvs. trebuie să proiecteze atributele entității de contact. Aflați mai multe despre cum să [configurați segmente și atribute de proiect](segment-builder.md).
 
-**Segmentați exporturile în medii pentru clienți individuali (B2C)**  
+**Exporturile de segmente în medii pentru consumatori individuali (B la C)**  
 - Segmentele din contextul mediilor pentru clienții individuali sunt construite pe baza entității *profil client unificat*. Fiecare segment care îndeplinește cerințele sistemelor țintă (de exemplu, o adresă de e-mail) poate fi exportat.
 
 **Limite la exporturile pe segmente**  

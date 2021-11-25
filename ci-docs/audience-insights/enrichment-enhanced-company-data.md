@@ -1,7 +1,7 @@
 ---
 title: Îmbunătățirea datelor companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
-ms.date: 11/05/2021
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 9bfb96d47de4ec98325e644c60752fc7cab2706c
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
-ms.translationtype: HT
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770185"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813933"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
@@ -51,7 +51,8 @@ Există câteva limitări cu datele îmbunătățite. Elementele din lista de ma
 
 1.  Confirmați identitatea companiei. Nu verificăm dacă intrarea este o organizație existentă sau dacă o companie folosește rezultatul ca nume standard.
 2.  Acoperiți cuprinzător companiile la nivel global. Datele companiei compilate de Microsoft au acoperire globală, dar oferă cea mai mare acoperire în Australia, Canada, Regatul Unit și Statele Unite.
-3.  Garantați acuratețea sau prospețimea datelor. Deoarece informațiile comerciale se schimbă adesea, nu putem garanta că datele îmbunătățite ale companiei furnizate sunt întotdeauna exacte sau actualizate.
+3.  Standardizați adresele companiei la nivel global. În prezent, acceptăm standardizarea adreselor în aceste țări sau regiuni: Australia, Canada, Franța, Germania, Italia, Japonia, Regatul Unit și Statele Unite.
+4.  Garantați acuratețea sau prospețimea datelor. Deoarece informațiile comerciale se schimbă adesea, nu putem garanta că datele îmbunătățite ale companiei furnizate sunt întotdeauna exacte sau actualizate.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 

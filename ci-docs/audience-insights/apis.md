@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 8404515a20529c00708d84813f3a022ad98c45362a2f1e68d7aa890d085071a9
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033600"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732279"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
-Dynamics 365 Customer Insights furnizează API-uri pentru a vă crea propriile aplicații pe baza datelor dvs. în Customer Insights.
+Dynamics 365 Customer Insights oferă API-uri pentru a vă crea propriile aplicații pe baza datelor dvs. din Customer Insights.
 
 > [!IMPORTANT]
 > Detaliile acestor API-uri sunt listate în [Referința de API-uri Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Acestea includ informații suplimentare despre operațiuni, parametri și răspunsuri.
@@ -117,25 +117,25 @@ Această secțiune vă ajută să începeți să utilizați bibliotecile client 
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org. Pentru mai multe informații despre pachetul NuGet, consultați [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). În prezent, acest pachet vizează cadrele netstandard2.0 și netcoreapp2.0.
+Aflați cum să începeți să utilizați bibliotecile client C# din NuGet.org. Pentru mai multe informații despre pachetul NuGet, consultați [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). În prezent, acest pachet vizează cadrele netstandard2.0 și netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Adăugați biblioteca client C# la un proiect C#
 
-1. În Visual Studio, deschideți **Manager pachet NuGet** pentru proiectul dumneavoastră.
+1. În Visual Studio, deschideți **NuGet Manager de pachete** pentru proiectul dvs.
 
 1. Căutați **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Selectați **Instalare** pentru a adăuga pachetul la proiect.
  
-   Alternativ, rulați această comandă în **Consola Manager pachet NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Alternativ, rulați această comandă în **NuGet Consola de gestionare a pachetelor** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adăugați pachetul NuGet la un proiect Visual Studio.":::
+   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adăugați pachetul NuGet la proiectul Visual Studio.":::
 
 #### <a name="use-the-c-client-library"></a>Utilizați biblioteca de client C#
 
 1. Folosiți [Biblioteca de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pentru a obține un `AccessToken` folosind [înregistrarea aplicației Azure](#create-a-new-app-registration-in-the-azure-portal) existentă.
 
-1. După autentificarea și achiziționarea cu succes a unui token, construiți un nou `HttpClient` sau utilizați unul existent cu suplimentul **DefaultRequestHeaders „Autorizare”** setat la **Purtător <access token>** și **Ocp-Apim-Subscription-Key** setat la [**cheie de abonament** din mediul dvs. Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. După autentificarea și achiziția cu succes a unui token, construiți unul nou sau utilizați unul existent`HttpClient` cu suplimentar **DefaultRequestHeaders „Autorizare”** setat la **„Jeton de acces” purtător** și **Ocp-Apim-Subscription-Key** setat la [**cheie de abonament** din mediul dvs. Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Resetați antetul **Autorizare** când este cazul. De exemplu, când tokenul a expirat.
 

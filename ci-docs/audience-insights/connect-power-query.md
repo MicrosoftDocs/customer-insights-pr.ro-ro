@@ -1,7 +1,7 @@
 ---
 title: Ingerare date printr-un conector Power Query
 description: Conectori pentru surse de date bazate pe Power Query.
-ms.date: 09/29/2020
+ms.date: 11/01/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: ab6edc3f33ebacb81f55c0882a78c5827b4384ed
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643509"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732233"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la o sursă de date Power Query
 
-Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea acestor conectori sunt suportați de Dynamics 365 Customer Insights. Adăugarea surselor de date pe baza conectorilor Power Query urmează în general pașii descriși în secțiunea următoare. Cu toate acestea, în funcție de conectorul pe care îl utilizați, sunt necesare informații diferite. Pentru mai multe informații, consultați documentația despre conectorii individuali din [Conectorul de referință Power Query](/power-query/connectors/).
+Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea acestor conectori sunt acceptați de Dynamics 365 Customer Insights. Adăugarea surselor de date pe baza conectorilor Power Query urmează în general pașii descriși în secțiunea următoare. Cu toate acestea, în funcție de conectorul pe care îl utilizați, sunt necesare informații diferite. Pentru mai multe informații, consultați documentația despre conectorii individuali din [Conectorul de referință Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -79,6 +79,8 @@ Conectori cu bifă în coloana **Customer Insights (fluxuri de date)** sunt disp
    > [!div class="mx-imgBorder"]
    > ![Opțiunea editare.](media/edit-option-data-sources.png "Opțiunea editare")
 
+   [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+   
 3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** așa cum au fost descrise în secțiunea [Creați o nouă sursă de date](#create-a-new-data-source).
 
 4. Selectați **Salvare** în Power Query după finalizarea modificărilor pentru a salva modificările.

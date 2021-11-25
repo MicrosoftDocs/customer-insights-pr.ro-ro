@@ -9,22 +9,22 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: d43d3c49c81ab343db5623ee4f5ebeb100d3b2b7
-ms.sourcegitcommit: 302910e39153f4b5c850ed9b1a62cb867e4df358
-ms.translationtype: HT
+ms.openlocfilehash: e6b69a6f681c929ddc4fe1877e4ad1c45ffe5c57b42f1485f55728eb4f9988b6
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "6218953"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7774127"
 ---
 # <a name="microsoft-dynamics-365-customer-insights--engagement-insights-preview"></a>MICROSOFT DYNAMICS 365 CUSTOMER INSIGHTS - Detalii despre angajamente (versiune preliminară) 
 
-Detalii despre angajamente (versiune preliminară) este o capacitate în versiune preliminară, înainte de lansare, ceea ce înseamnă că are măsuri de securitate, confidențialitate și localizare a datelor mai puține sau diferite decât caracteristicile și capabilitățile disponibile în general în Dynamics 365 Customer Insights. Consultați termenii de mai jos și documentația produsului pentru a determina dacă Detalii despre angajamente (versiune preliminară) e adecvate pentru datele dvs.
+Perspectivele de implicare (previzualizare) este o capacitate de previzualizare înainte de lansare, ceea ce înseamnă că are mai puține sau diferite măsuri de securitate, confidențialitate și locație a datelor decât caracteristicile și capabilitățile care sunt disponibile în general în Dynamics 365 Customer Insights. Consultați termenii de mai jos și documentația produsului pentru a determina dacă Detalii despre angajamente (versiune preliminară) e adecvate pentru datele dvs.
 
 ## <a name="preview-terms-of-service"></a>CONDIȚII DE FURNIZARE A SERVICIILOR VERSIUNE PRELIMINARĂ
 
 ULTIMA ACTUALIZARE OCTOMBRIE 2020 
 
-Accesând sau utilizând versiunea preliminară a serviciilor Dynamics 365 Customer Insights - Detalii despre angajamente (împreună cu orice surse de date furnizate de Microsoft, „Serviciile”), acceptați termenii și condițiile prezentului Acord. Dacă nu le acceptați, nu accesați și nu utilizați Serviciile.
+Prin accesarea sau utilizarea previzualizării serviciilor din Dynamics 365 Customer Insights – Perspective de implicare (împreună cu orice sursă de date furnizată de Microsoft, „Serviciile”), acceptați termenii și condițiile acestui Acord. Dacă nu le acceptați, nu accesați și nu utilizați Serviciile.
 
 ## <a name="1-what-this-agreement-covers"></a>1. DOMENIUL CONTRACTULUI
 
@@ -154,7 +154,7 @@ FURNIZĂM SERVICIILE ŞI SERVICIILE DE ASISTENŢĂ (DACĂ EXISTĂ) „CA ATARE�
 
 ### <a name="111-term"></a>11.1. Termen
 
-Prezentul Contract va intra în vigoare la data la care îl acceptaţi pentru prima dată. Prezentul acord înlocuiește orice acord anterior în cadrul căruia ați utilizat Dynamics 365 Product Insights sau orice servicii precursoare. Prezentul Acord se va încheia la cea mai timpurie dată dintre următoarele (i) data primei disponibilități a unei versiuni comerciale a Serviciilor (dacă va exista) sau (ii) data la care Microsoft vă anunță despre reziliere. Microsoft are dreptul de a suspenda sau de a revoca în orice moment utilizarea și accesul dvs. la Servicii, integral sau parțial, sau de a rezilia acest Acord, din orice motiv și la libera sa alegere.
+Prezentul Contract va intra în vigoare la data la care îl acceptaţi pentru prima dată. Acest acord înlocuiește orice acord anterior în baza căruia ați folosit Dynamics 365 Product Insights sau orice servicii precursoare. Prezentul Acord se va încheia la cea mai timpurie dată dintre următoarele (i) data primei disponibilități a unei versiuni comerciale a Serviciilor (dacă va exista) sau (ii) data la care Microsoft vă anunță despre reziliere. Microsoft are dreptul de a suspenda sau de a revoca în orice moment utilizarea și accesul dvs. la Servicii, integral sau parțial, sau de a rezilia acest Acord, din orice motiv și la libera sa alegere.
 
 ### <a name="112-effect-of-termination"></a>11.2. Efectele încetării Contractului
 

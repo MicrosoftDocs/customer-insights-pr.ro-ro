@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea măsurilor
 description: Definiți măsuri pentru a analiza și reflecta performanța afacerii dvs.
-ms.date: 09/30/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,12 +9,12 @@ author: m-hartmann
 ms.author: wameng
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: d77d1901fee4771537554c05d3963316d0fb37cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: f6be11bd97be71bc0c3a58eaee4d8ed45f535877
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673487"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732741"
 ---
 # <a name="define-and-manage-measures"></a>Definiți și gestionați măsurile
 
@@ -238,10 +238,9 @@ Selectați o măsură din listă pentru următoarele opțiuni:
 - **Ștergeți** măsura.
 - **Activați** sau **Dezactivați**. Măsurile inactive nu vor fi reîmprospătate în timpul unei [reîmprospătări planificate](system.md#schedule-tab).
 
-> [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectare **Vezi detalii** pentru una dintre activitățile operațiunii, veți găsi informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
-## <a name="next-step"></a>Următorul pas
+## <a name="next-step"></a>Pasul următor
 
 Puteți utiliza măsurile existente pentru a crea [un segment de clienți](segments.md).
 

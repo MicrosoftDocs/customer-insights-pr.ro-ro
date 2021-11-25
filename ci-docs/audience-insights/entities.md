@@ -1,7 +1,7 @@
 ---
 title: Entități și seturi de date
 description: Vizualizați datele pe pagina Entități.
-ms.date: 04/16/2020
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 137de726b243b501491fcbe7866820aaee26097fcf379270c423c277374ae9a4
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033830"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732096"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
-După [configurarea surselor de date](data-sources.md), accesați pagina **Entități** pentru a evalua calitatea datelor ingerate. Entitățile sunt considerate seturi de date. Capacități multiple ale Dynamics 365 Customer Insights sunt construite în jurul acestor entități. Revizuirea acestora îndeaproape vă poate ajuta să validați rezultatele acestor funcții.
+După [configurarea surselor de date](data-sources.md), accesați pagina [Entități](data-sources.md) pentru a evalua calitatea datelor ingerate. Entitățile sunt considerate seturi de date. Capacitățile multiple ale Dynamics 365 Customer Insights sunt construite în jurul acestor entități. Revizuirea acestora îndeaproape vă poate ajuta să validați rezultatele acestor funcții.
 
 Pagina **Entități** listează entitățile și include mai multe coloane:
 
@@ -26,9 +26,10 @@ Pagina **Entități** listează entitățile și include mai multe coloane:
 - **Sursa**: tipul sursei de date care au ingerat entitatea
 - **Creat de**: numele persoanei care a creat entitatea
 - **Creată**: Data și ora creării entității
-- **Actualizată de**: numele persoanei care a actualizat entitatea
-- **Ultima actualizare**: Data și ora ultimei actualizări a entității
-- **Ultima actualizare**: Data și ora ultimei actualizări de date
+- **Actualizat** : Numele persoanei care a actualizat entitatea
+- **stare** : Detalii despre ultima actualizare a entității
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Explorați datele unei entități specifice
 

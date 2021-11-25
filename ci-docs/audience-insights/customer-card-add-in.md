@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c9c7cfbf9f47cca53e5543e2cda2584e25ad855d
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
-ms.translationtype: HT
+ms.openlocfilehash: dbcdcbea8ffd1755b58c322233c08c70a065db36
+ms.sourcegitcommit: 31a9b531dacd3a6465b3030c704ff5c085b7e122
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643463"
+ms.lasthandoff: 11/10/2021
+ms.locfileid: "7792042"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
@@ -27,20 +27,20 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
-- Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Microsoft Dataverse](connect-power-query.md).
+- Pentru ca datele dvs. Dynamics 365 să fie mapate la statisticile despre public profilurile clienților, acestea trebuie să fie [ingerat din aplicația Dynamics 365 folosind conectorul Microsoft Dataverse](connect-power-query.md).
 - Toți utilizatorii Dynamics 365 ai programului de completare Card client trebuie să fie [adăugați ca utilizatori](permissions.md) în detaliile despre public pentru a vedea datele.
 - [Sunt necesare capacități de căutare și filtrare configurate](search-filter-index.md) în detaliile despre public pentru ca datele să funcționeze.
 - Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurarea suplimentului vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
   - **Măsurați controlul**: Necesită [măsuri configurate](measures.md) de tipul atributelor clientului.
   - **Control informații**: Necesitp date generate utilizând [predicții](predictions.md) sau [modele particularizate](custom-models.md).
   - **Controlul detaliilor clientului**: Toate câmpurile din profil sunt disponibile în profilul de client unificat.
-  - **Control îmbogățire**: solicită [îmbogățiri](enrichment-hub.md) active aplicate profilelor de client.
+  - **Control îmbogățire**: solicită [îmbogățiri](enrichment-hub.md) active aplicate profilelor de client. Suplimentul de card acceptă aceste îmbogățiri: [Mărci](enrichment-microsoft.md) furnizat de Microsoft, [Interese](enrichment-microsoft.md) furnizate de Microsoft.
   - **Controlul contactelor**: Necesită definirea entității semantice a contactelor de tip.
   - **Control cronologie**: necesită [activități configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalați suplimentul cardului client
 
-Adăugarea programului de completare Card client este o soluție pentru aplicațiile de implicare a clienților din Dynamics 365. Pentru a instala soluția, accesați AppSource și căutați **Card de client Dynamics**. Selectați [Programul de completare card de client AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) și selectați **Obțineți acum**.
+Adăugarea programului de completare Card client este o soluție pentru aplicațiile de implicare a clienților din Dynamics 365. Pentru a instala soluția, accesați AppSource și căutați **Card de client Dynamics**. Selectează [Supliment pentru cardul de client pe AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) și selectați **Ia-l acum**.
 
 Este posibil să fie nevoie să vă autentificați cu datele dvs. de acreditare pentru aplicația Dynamics 365 pentru a instala soluția. Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 
@@ -48,7 +48,7 @@ Este posibil să fie nevoie să vă autentificați cu datele dvs. de acreditare 
 
 1. În calitate de administrator, accesați secțiunea **Setări** din Dynamics 365 și selectați **Soluții**.
 
-1. Selectați legătura **Nume afișat** pentru soluția **Dynamics 365 Customer Insights Program de completare card client (Previzualizare)**.
+1. Selectează **Numele afisat** link pentru **Dynamics 365 Customer Insights Supliment pentru cardul client (previzualizare)** soluţie.
 
    > [!div class="mx-imgBorder"]
    > ![Selectați numele afișat.](media/select-display-name.png "Selectați numele afișat.")

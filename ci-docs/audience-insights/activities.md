@@ -1,7 +1,7 @@
 ---
 title: Activități ale clienților
 description: Definiți activitățile clienților și vizualizați-le într-o cronologie pe profilurile clienților.
-ms.date: 09/27/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: bcb8d42963719f5d225556c31b3fc06db8573e5b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673153"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732475"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
-Combinați activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights pentru a crea o cronologie care listează activitățile cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu soluția [Program de completare card client](customer-card-add-in.md) sau într-un tablou de bord Power BI.
+Combină activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights pentru a crea o cronologie care listează activitățile în mod cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul de client](customer-card-add-in.md) soluție sau într-un tablou de bord Power BI.
 
 ## <a name="define-an-activity"></a>Definiți o activitate
 
@@ -82,9 +82,7 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi i
 
 1. Pe pagina **Activități**, selectați **Rulați** pentru a rula activitatea. 
 
-> [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
-
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-activities"></a>Gestionați activitățile existente
 

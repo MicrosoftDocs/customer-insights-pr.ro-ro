@@ -1,7 +1,7 @@
 ---
 title: Mapări semantice (Versiune preliminară)
 description: Prezentare generală a mapărilor semantice și modul de utilizare a acestora.
-ms.date: 09/28/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
-ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
-ms.translationtype: HT
+ms.openlocfilehash: f23c622572ff9f967eca07de7898419d1ffc18b0
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/11/2021
-ms.locfileid: "7622950"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7731958"
 ---
 # <a name="semantic-mappings"></a>Mapări semantice
 
@@ -75,8 +75,7 @@ Asocierile semantice vă permit să vă mapați datele de non-activitate în sch
 
 1. Pentru a rula o mapare semantică într-un punct ulterior, selectați maparea semantică și selectați **Reîmprospătare**.
 
-> [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="manage-existing-semantic-mappings"></a>Gestionați mapările semantice existente
 
@@ -91,5 +90,6 @@ Pe **Date** > **Mapări semantice (previzualizare)**, puteți vizualiza toate ma
 - **Redenumiți**: Deschide un dialog în care puteți introduce un nume diferit pentru maparea semantică selectată. Selectați **Salvare** pentru a vă aplica modificările.
 
 - **Șterge**: Deschide un dialog pentru a confirma ștergerea mapării semantice selectate. De asemenea, puteți șterge mai multe mapări semantice simultan selectând mapările semantice și pictograma de ștergere. Selectați **Ștergere**, apoi confirmați ștergerea.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

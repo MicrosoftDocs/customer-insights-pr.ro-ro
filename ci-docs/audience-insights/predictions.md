@@ -1,7 +1,7 @@
 ---
 title: Completați datele parțiale folosind predicții
 description: Utilizați predicții pentru a completa datele incomplete ale clienților.
-ms.date: 05/05/2020
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,31 +9,32 @@ author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 3100acf383d85c00a6ff0a8ebc54e038bd813427
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645049"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732441"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Finalizați-vă datele parțiale cu predicții
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completați datele parțiale cu predicții (învechit)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Această caracteristică va fi **depreciat** ca din **5 noiembrie 2021**. Implementările actuale vor continua să funcționeze până când caracteristica este eliminată, dar nu veți putea crea noi integrări folosind instrucțiunile de mai jos.
 
 Predicțiile vă permit să creați cu ușurință valori previzionate care vă pot îmbunătăți înțelegerea despre un client. Pe pagina **Informații** > **Predicții**, puteți selecta **Predicțiile mele** pentru a vedea predicțiile pe care le-ați configurat în alte părți ale detaliilor privind publicul și vă permit să le personalizați în continuare.
 
 > [!NOTE]
 > Nu puteți utiliza această caracteristică dacă mediul dvs. utilizează stocarea Azure Data Lake Gen 2.
 >
-> Funcția de predicții folosește mijloace automate pentru a evalua datele și pentru a face predicții bazate pe acele date și, prin urmare, are capacitatea de a fi utilizată ca metodă de profilare, deoarece acest termen este definit de Regulamentul general privind protecția datelor („RGPD”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv predicțiile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.
+> Funcția de predicții folosește mijloace automate pentru a evalua datele și pentru a face predicții bazate pe acele date și, prin urmare, are capacitatea de a fi utilizată ca metodă de profilare, deoarece acest termen este definit de Regulamentul general privind protecția datelor („RGPD”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil să vă asigurați că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv previziunile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date personale, date biometrice, protecția datelor și confidențialitatea comunicațiilor.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 Înainte ca organizația dvs. să poată utiliza funcția de predicții, trebuie să fie îndeplinite următoarele cerințe preliminare:
 
-1. Organizația dvs. are o instanță [instalată în Microsoft Dataverse](/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
+1. Organizația dvs. are o instanță [configurat în Microsoft Dataverse](/ai-builder/build-model#prerequisites) și se află în aceeași organizație cu Customer Insights.
 
-2. Mediul dvs. de detalii despre public este atașat instanța dvs. Dataverse.
+2. Mediul dvs. de informații despre public este atașat instanței dvs. Dataverse.
 
 Pentru informații suplimentare, consultați [Creați un mediu nou](create-environment.md).
 
@@ -60,6 +61,8 @@ Pentru informații suplimentare, consultați [Creați un mediu nou](create-envir
    > ![Exemplu care arată valorile câmpului mapat la categorii.](media/intelligence-categorymapping.png "Exemplu care arată valorile câmpului mapat la categorii")
 
 8. Selectați **Terminat** iar predicția va fi procesată. Procesarea va dura ceva timp, în funcție de dimensiunea și complexitatea datelor. Rezultatele vor fi disponibile într-o nouă entitate pe baza **Nume entitate de ieșire** din predicția pe care ai creat-o.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Creați o predicție în timp ce creați un segment
 
@@ -139,7 +142,7 @@ Următoarea execuție a predicției dvs. va utiliza modelul actualizat pe care l
 
 ## <a name="troubleshooting"></a>Depanare
 
-Dacă nu puteți completa procesul Dataverse atașat din cauza unei erori, puteți încerca să finalizați procesul manual. Există două probleme cunoscute care pot apărea în procesul de atașare:
+Dacă nu puteți finaliza procesul de atașare Dataverse din cauza unei erori, puteți încerca să finalizați procesul manual. Există două probleme cunoscute care pot apărea în procesul de atașare:
 
 - Soluția de completare a cardului pentru clienți nu este instalată.
     1. Completați instrucțiunile pentru a [instala și configura soluția](customer-card-add-in.md).

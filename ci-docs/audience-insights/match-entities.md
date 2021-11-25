@@ -1,7 +1,7 @@
 ---
 title: Asociați entitățile pentru unificarea datelor
 description: Potriviți entitățile pentru a combina seturi de date și a crea profiluri unificate de clienți.
-ms.date: 02/23/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: 67e17495fa6da1cfac7ee4ee165e798364f6cb27
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
+ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648223"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732649"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -79,7 +79,7 @@ Avertizarea **Are nevoie de reguli** de lângă un nume de entitate sugerează c
 
 1. Furnizați un **Nume** pentru regulă.
 
-1. [Adăugați mai multe condiții](#add-conditions-to-a-rule) sau selectați **Terminat** pentru a finaliza regula.
+1. [Adăugați mai multe condiții](#add-conditions-to-a-rule) sau selectați [Terminat](#add-conditions-to-a-rule) pentru a finaliza regula.
 
 1. Opțional, [adăugați mai multe reguli](#add-rules-to-a-match-pair).
 
@@ -180,10 +180,7 @@ Accesați **Date** > **Unificare** > **Potrivire** și selectați **Rulare** pen
 
 Veți găsi rezultatul unei rulări reușite, entitatea unificată a profilului de client, pe pagina **Entități**. Entitatea dvs. unificatăe de client se numește **Clienți** în secțiunea **Profiluri**. Prima rundă de potrivire reușită creează entitatea unificată *Client*. Toate rulările de potrivire ulterioare extind entitatea respectivă.
 
-> [!TIP]
-> După rularea procesului de potrivire, selectați starea procesului pentru a deschide panoul **Detalii despre activitate**. Oferă o prezentare generală despre timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității. Selectați **Consultați detalii** pentru a vedea ce entități au participat la procesul de potrivire, care reguli li s-au aplicat și dacă actualizările au fost publicate cu succes.  
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="review-and-validate-your-matches"></a>Examinați și validați-vă potrivirile
 

@@ -4,7 +4,7 @@
   href: overview.md
 - name: Versiune de încercare gratuită
   items:
-    - name: Înregistrați-vă pentru o versiune de încercare gratuită
+    - name: Înregistrarea pentru o versiune de încercare gratuită
       href: trial-signup.md
     - name: Întrebări frecvente despre versiunea de încercare
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Adăugați un folder Common Data Model ca o sursă de date
           href: audience-insights/connect-common-data-model.md
-        - name: Adăugați data lake gestionat de Dataverse
+        - name: Adăugați Dataverse lac de date gestionat
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Reîmprospătare incrementală pentru surse de date
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,13 +84,15 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adrese optimizate
           href: audience-insights/enrichment-enhanced-addresses.md
+        - name: Îmbunătățiți datele companiei
+          href: audience-insights/enrichment-enhanced-company-data.md
         - name: Îmbogățiți cu Azure Maps
           href: audience-insights/enrichment-azure-maps.md
         - name: Îmbogăți cu HERE Technologies
           href: audience-insights/enrichment-here.md
         - name: Îmbogățire cu Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Îmbogățiți cu Experian
+        - name: Îmbogățiți-vă cu Experian
           href: audience-insights/enrichment-experian.md
         - name: Îmbogățiți cu importul particularizat SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
@@ -168,7 +170,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
+            - name: Platformă Adobe Experience
               href: audience-insights/export-adobe-experience-platform.md
             - name: Monitor de campanie
               href: audience-insights/export-campaign-monitor.md
@@ -180,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Manager de reclame Facebook
+            - name: Facebook Manager de anunțuri
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -214,7 +216,7 @@
           items:
             - name: Program de completare Card client pentru Dynamics 365
               href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (robot)
+            - name: Microsoft Teams (bot)
               href: audience-insights/export-teams-bot.md
             - name: Power Apps
               href: audience-insights/export-power-apps.md
@@ -244,12 +246,46 @@
           href: audience-insights/integrate-engagement-insights.md
         - name: Analizați schemele de entități din Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Date Customer Insights în Dataverse
+        - name: Date despre Customer Insights în Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Lucrați cu API-uri
           href: audience-insights/apis.md
         - name: Referințe API
           href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+- name: Gestionarea consimțământului (previzualizare)
+  items:
+    - name: Centrul de ajutor
+      href: consent-management/index.yml
+    - name: Prezentare generală a capacității
+      href: consent-management/overview.md
+    - name: Începerea
+      items:
+        - name: Începerea
+          href: consent-management/get-started.md
+        - name: Concepte și terminologie
+          href: consent-management/glossary.md
+    - name: Import de date de consimțământ
+      items:
+        - name: Import de date de consimțământ
+          href: consent-management/import-consent-data.md
+        - name: Setați datele de consimțământ și aplicați preferințele de consimțământ
+          href: consent-management/set-consent-rules.md
+    - name: Gestionați datele consimțământului
+      items:
+        - name: Activați regulile de consimțământ în statisticile privind publicul
+          href: audience-insights/activate-consent.md
+        - name: Gestionați regulile implicite de consimțământ în segmentele de statistici privind publicul
+          href: audience-insights/change-default-consent-rules.md
+    - name: Gestionați setările și utilizatorii
+      items:
+        - name: Configurați setările sistemului
+          href: consent-management/system-settings.md
+        - name: Gestionați utilizatorii și permisiunile
+          href: consent-management/manage-users.md
+    - name: Utilizați datele de consimțământ
+      items:
+        - name: Creați predicții cu date de consimțământ
+          href: consent-management/predictions-consent-data.md
 - name: Detalii despre angajamente (versiune preliminară)
   items:
     - name: Centrul de ajutor
@@ -302,9 +338,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Eșantion SDK web
           href: engagement-insights/websdk-sample.md
-        - name: Tutorial Android SDK
+        - name: Tutorial SDK Android
           href: engagement-insights/get-started-android.md
-        - name: Eșantion Android SDK
+        - name: Android eșantion SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Tutorial SDK iOS
           href: engagement-insights/get-started-ios.md

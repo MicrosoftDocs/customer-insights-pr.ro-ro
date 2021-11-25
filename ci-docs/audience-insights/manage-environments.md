@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 10/14/2021
+ms.date: 11/12/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 2d977ef4eb585e26b36139681552db22d84759c9
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673759"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799651"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -39,6 +39,19 @@ Puteți edita câteva dintre detaliile mediilor existente.
 3. În caseta **Editați mediul**, puteți actualiza setările de mediu.
 
 Pentru informații suplimentare despre setările de mediu, consultați [Creați un mediu nou](create-environment.md).
+
+## <a name="connect-to-microsoft-dataverse"></a>Conectați-vă la Microsoft Dataverse
+   
+The **Microsoft Dataverse** pasul vă permite să conectați Customer Insights cu mediul dvs. Dataverse.
+
+A folosi [modele out-of-box predicție](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa absorbția de date din sursele de date local, furnizând adresa URL a mediului Microsoft Dataverse pe care o administrează organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire ale Customer Insights cu un lac de date gestionat de Dataverse.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a activa partajarea datelor cu Microsoft Dataverse.":::
+
+> [!NOTE]
+> Customer Insights nu acceptă următoarele scenarii de partajare:
+> - Dacă salvați toate datele în propriul dvs. Azure Data Lake Storage, nu veți putea activa partajarea datelor cu un lac de date gestionat de Dataverse.
+> - Dacă activați partajarea datelor cu Dataverse, nu veți putea [să creeze valori prezise sau lipsă într-o entitate](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiați configurația mediului
 
@@ -68,7 +81,7 @@ Următoarele date *nu* sunt copiate:
 - Profiluri de client.
 - Acreditările sursă de date. Va trebui să furnizați acreditările pentru fiecare sursă de date și să reîmprospătați sursele de date manual.
 
-- Sursele de date din folderul Common Data Model și data lake-ul gestionat de Dataverse. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
+- Surse de date din folderul Common Data Model și din lacul de date gestionat de Dataverse. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
 
 Când copiați un mediu, veți vedea un mesaj de confirmare a faptului că noul mediu a fost creat. Selectați **Accesați sursele de date** pentru a vedea lista surselor de date.
 

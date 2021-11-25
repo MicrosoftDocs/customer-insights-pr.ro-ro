@@ -1,7 +1,7 @@
 ---
 title: Îmbinați entitățile în unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 10/10/2021
+ms.date: 11/01/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-merge
-ms.openlocfilehash: 6b3002b21ea043315e50724ec103aef8a3ced98e
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648269"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732787"
 ---
 # <a name="merge-entities"></a>Îmbinare entități
 
@@ -24,7 +24,7 @@ Faza de îmbinare este ultima fază din procesul de unificare a datelor. Scopul 
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
 
-După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala **Îmbinare** pe pagina **Unificare**.
+După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala [Îmbinare](match-entities.md) pe pagina [Unificare](match-entities.md).
 
 ## <a name="review-system-recommendations"></a>Revizuiți recomandările sistemului
 
@@ -187,10 +187,9 @@ Alegeți **Rulați procesele de îmbinare și flux spre aval** pentru a reîmpro
 
 Pentru a face mai multe modificări și a relua pasul, puteți anula o îmbinare în curs. Selectați **Se reîmprospătează ...** și selectați **Anulare operațiune** în panoul lateral care apare.
 
-> [!TIP]
-> După rularea procesului de îmbinare, selectați starea procesului pentru a deschide panoul **Detalii despre activitate**. Oferă o prezentare generală despre timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității. Selectați **Vezi detalii** pentru a vedea ce entități au participat la procesul de potrivire, dacă soluționarea conflictului a reușit și dacă actualizările au fost publicate cu succes.  
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies).  
-> :::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+
+:::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
 
 ## <a name="next-step"></a>Următorul pas
 

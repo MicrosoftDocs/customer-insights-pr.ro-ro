@@ -1,7 +1,7 @@
 ---
 title: Sarcini partajate pentru scenarii de predicție
 description: Aflați cum să gestionați, să depanați și să rafinați predicțiile.
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: eaccf23a81ca4de19763b761cc5a27c14515fe522ee36dc78f294208b681966e
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 4e7e21a610564b30463b27ab703c291275725895
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7036480"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732003"
 ---
 # <a name="manage-predictions"></a>Gestionați predicțiile
 
@@ -50,12 +50,12 @@ Următoarele coloane din raport conțin informații utile pentru a îmbunătăț
 
 :::image type="content" source="media/input-data-usability-report.png" alt-text="Exemplu de raport de utilizare a datelor de intrare care prezintă un tabel cu erori, avertismente și recomandări.":::
 
-- Nume: Numele descriptiv al erorii, avertismentului sau al recomandării.
-- Pas: Faza pentru model, instruire sau scor, la care se referă informațiile.
-- Stare: Severitatea informațiilor (eroare, avertisment, recomandare).
-- Nume coloană: Coloana dintr-o entitate care trebuie modificată pentru a îmbunătăți performanța modelului.
-- Entitate: Numele entității care trebuie modificată pentru a îmbunătăți performanța modelului.
-- Detalii: Detalii despre eroare, avertisment sau recomandare.
+- **Nume:** Numele descriptiv al erorii, al avertismentului sau al recomandării.
+- **Etapa:** Faza de modelare, antrenament sau scor, la care se referă informațiile.
+- **Stat:** Severitatea informațiilor (eroare, avertisment, recomandare).
+- **Numele coloanei:** Coloană dintr-o entitate care trebuie modificată pentru a îmbunătăți performanța modelului.
+- **Numele entitatii:** Numele entității care trebuie modificată pentru a îmbunătăți performanța modelului.
+- **Detalii:** Detalii despre eroare, avertisment sau recomandare.
 
 ## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
 
@@ -66,6 +66,8 @@ Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reî
 1. Selectați elipsele verticale de lângă predicția pe care doriți să o reîmprospătați.
 
 1. Selectați **Reîmprospătare**.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="delete-a-prediction"></a>Ștergerea unei predicții
 

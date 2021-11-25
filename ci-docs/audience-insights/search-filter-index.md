@@ -1,7 +1,7 @@
 ---
 title: Căutați și filtrați profiluri de client
 description: Găsiți rapid informații despre profilurile de clienți unificate și filtrați pentru atributele specificate.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,19 +9,20 @@ ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 9eaeb0c93481283324f21122c9528ff5896b9866
-ms.sourcegitcommit: b9a81c2acd42d774669d2db3d0430c7d81de991c
-ms.translationtype: HT
+ms.openlocfilehash: e17d745974958b73683f1f9406c5ae95f2cbcb3c
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "7470022"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732049"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profilurile clienților: indexul de căutare și filtrare
 
 Rezultatul unificării datelor clientului dvs. este o entitate de profil pentru clienți care oferă o vizualizare unificată în baza dvs. totală de clienți. Pentru [găsirea rapidă a informațiilor despre un anumit client sau grup de clienți](customer-profiles.md), puteți configura capabilitățile **Căutare** și **Filtru** pe pagina **Clienți**. Citiți mai departe pentru a afla cum pot edita administratorii atributele de pe pagina **Index de căutare și filtrare**, care sunt disponibile utilizatorilor pentru căutare și filtrare.
 
-> [!div class="mx-imgBorder"]
-> ![Filtru de căutare.](media/search-filter.png "Filtru de căutare")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtru de căutare":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Adăugați câmpuri și specificați atributele
 

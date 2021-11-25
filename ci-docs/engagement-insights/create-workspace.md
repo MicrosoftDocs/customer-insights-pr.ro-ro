@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 816f948331a06794c15000eb779f93cc7fdda202
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: 1f8922703af506974c8b5b24086b61f05a83609d
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645325"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673508"
 ---
 # <a name="create-a-new-workspace-and-add-members"></a>Creați un spațiu de lucru nou și adăugați membri
 
@@ -26,17 +26,17 @@ Când creați un spațiu de lucru, selectați tipul de date pe care doriți să 
 
 ## <a name="create-a-new-workspace"></a>Creați un spațiu de lucru nou
 
-Procesul de creare al unui spațiu de lucru include configurarea *mediului* pentru a vă organiza spațiul de lucru. Un mediu este un spațiu care poate conține unul sau mai multe spații de lucru. Puteți utiliza un mediu pentru a vă gestiona spațiile dvs. de lucru și conexiunile la capacitatea de informații despre publicul Customer Insights.
+Procesul de creare al unui spațiu de lucru include configurarea *mediului* pentru a vă organiza spațiul de lucru. Un mediu este un spațiu care poate conține unul sau mai multe spații de lucru. Puteți folosi un mediu pentru a vă gestiona spațiile de lucru și conexiunile la capacitatea de statistici a publicului.
 
-1. Selectați **Nou** din comutatorul spațiului de lucru.
+1. Selectați **+Nou** de la comutatorul spațiului de lucru.
 
-   :::image type="content" source="media/new-workspace.png" alt-text="Pagina Customer insights cu explicația în panoul de navigare și descriere.":::
+   :::image type="content" source="media/new-workspace.png" alt-text="Pagina cu informații despre clienți cu înștiințări în panoul de navigare și descriere.":::
 
 1. În paboul **Spațiu de lucru**, introduceți un **Numele spațiului de lucru**.
 
    :::image type="content" source="media/workspace-name.png" alt-text="Tastați numele unui spațiu de lucru.":::
 
-1. Alegeți tipul de platformă (web sau mobil) pe care doriți să îl măsurați.
+1. Alegeți tipul de platformă (web sau mobil) pe care doriți să o măsurați.
 
 1. Selectați **Arată setări avansate** pentru a activa sau dezactiva aceste setări opționale:
 

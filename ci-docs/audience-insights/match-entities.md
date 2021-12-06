@@ -1,7 +1,7 @@
 ---
 title: Asociați entitățile pentru unificarea datelor
-description: Potriviți entitățile pentru a combina seturi de date și a crea profiluri unificate de clienți.
-ms.date: 11/01/2021
+description: Asociați entitățile pentru a crea profiluri de clienți unificate.
+ms.date: 11/24/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -11,12 +11,12 @@ ms.reviewer: mhart
 manager: shellyha
 searchScope:
 - ci-match
-ms.openlocfilehash: cabeddbc9d485108d166e6355175a01721b75a55
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: HT
+ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
+ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732649"
+ms.lasthandoff: 11/24/2021
+ms.locfileid: "7863826"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -79,7 +79,7 @@ Avertizarea **Are nevoie de reguli** de lângă un nume de entitate sugerează c
 
 1. Furnizați un **Nume** pentru regulă.
 
-1. [Adăugați mai multe condiții](#add-conditions-to-a-rule) sau selectați [Terminat](#add-conditions-to-a-rule) pentru a finaliza regula.
+1. [Adăugați mai multe condiții](#add-conditions-to-a-rule) sau selectați **Terminat** pentru a finaliza regula.
 
 1. Opțional, [adăugați mai multe reguli](#add-rules-to-a-match-pair).
 
@@ -224,17 +224,24 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire.
 
 ## <a name="specify-custom-match-conditions"></a>Specificați condițiile de potrivire personalizate
 
-Puteți specifica condițiile la care anumite înregistrări trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Aceste reguli pot fi încărcate pentru a suprascrie procesul de potrivire standard. De exemplu, dacă există în dosarele noastre John Doe I și John Doe II, sistemul s-ar putea să le potrivească ca o singură persoană. Regulile de potrivire personalizate vă permit să specificați că profilurile lor se referă la persoane diferite. 
+Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Există patru opțiuni disponibile: 
+
+|Opțiune  |Descriere |Exemplu  |
+|---------|---------|---------|
+|Se potrivesc întotdeauna     | Definește valori care se potrivesc întotdeauna.         |  Mereu potriviți *Mike* și *MikeR*.       |
+|Nu se potrivesc niciodată     | Definește valori care nu se potrivesc niciodată.        | Nu se potrivește niciodată *Ioan* și *Jonathan*.        |
+|Bypass particularizat     | Definește valori pe care sistemul ar trebui să le ignore întotdeauna în faza de potrivire. |  Ignorați valorile *11111* și *Necunoscut* în timpul meciului.        |
+|Mapare de alias    | Definirea valorilor pe care sistemul ar trebui să le considere ca fiind aceeași valoare.         | Considera *Joe* a fi egal cu *Iosif*.        |
 
 1. Accesați **Date** > **Unificare** > **Potrivire** și selectați **Potrivire particularizată** în secțiunea **Detalii înregistrări potrivite**.
 
-  :::image type="content" source="media/custom-match-create.png" alt-text="Captură de ecran a secțiunii regulilor de potrivire cu control de potrivire particularizat evidențiat.":::
+   :::image type="content" source="media/custom-match-create.png" alt-text="Captură de ecran a secțiunii regulilor de potrivire cu control de potrivire particularizat evidențiat.":::
 
-1. Dacă nu aveți setate reguli de potrivire personalizate, veți vedea un nou panou **Potrivire personalizată** cu mai multe detalii.
+1. În **Personalizat** panou, du-te la **Înregistrări** fila.
 
-1. Selectați **Completați șablonul** pentru a obține un fișier șablon care poate specifica înregistrările din ce entități trebuie să se potrivească întotdeauna sau să nu se potrivească niciodată. Va trebui să completați separat înregistrările "potrivire întotdeauna" și înregistrările "nu se potrivesc niciodată" în două fișiere diferite.
+1. Alegeți opțiunea de potrivire personalizată din **Tip personalizat** meniu derulant și selectați **Descărcați șablonul**. Aveți nevoie de un șablon separat pentru fiecare opțiune de potrivire.
 
-1. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
+1. Se descarcă un fișier șablon. Deschideți-l și completați detaliile. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
     - Entity1: Vânzări
     - Entity1Key: 12345
     - Entity2: Persoană de contact
@@ -244,26 +251,32 @@ Puteți specifica condițiile la care anumite înregistrări trebuie să se potr
    
    Dacă doriți să specificați potrivirea personalizată pentru deduplicare pe o entitate, furnizați aceeași entitate ca și Entity1 și Entity2 și setați diferitele valori ale cheii primare.
 
-1. După adăugarea tuturor suprascrierilor pe care doriți să le aplicați, salvați fișierul șablon.
+1. După ce ați adăugat toate înlocuirile, salvați fișierul șablon.
 
-1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi. Odată ingerate, le puteți utiliza pentru a specifica configurația Potrivire.
+1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi.
 
-1. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul derulant.
+1. După încărcarea fișierelor și entităților disponibile, selectați din nou opțiunea **Corespondență particularizată**. Veți vedea opțiuni pentru a specifica entitățile pe care doriți să le includeți. Selectați entitățile necesare din meniul drop-down și selectați **Terminat**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 
-1. Selectați entitățile pe care doriți să le utilizați pentru **Se potrivește întotdeauna** și **Nu se potrivesc niciodată** selectați **Efectuat**.
+1. Aplicarea potrivirii personalizate depinde de opțiunea de potrivire pe care doriți să o utilizați. 
+
+   - Pentru **Mereu potriviți** sau **Nu se potrivește niciodată**, treceți la pasul următor.
+   - Pentru **Bypass personalizat** sau **Maparea aliasului**, Selectați **Editați | ×** pe o regulă de potrivire existentă sau creați o regulă nouă. În meniul derulant Normalizări, alegeți **Bypass personalizat** sau **Maparea aliasului** opțiunea și selectați **Terminat**.
 
 1. Selectați **Salvare** pe **Potrivire** pentru a aplica configurația de potrivire personalizată.
 
 1. Selectați **Rulare** pe pagina **Potrivire** pentru a începe procesul de potrivire. Alte reguli de potrivire specificate sunt suprascrise de configurația de potrivire personalizată.
 
-> [!TIP]
-> Accesați **Date** > **Entități** și revizuiți entitatea **ConflationMatchPair** pentru a confirma că suprascrierile sunt aplicate.
+### <a name="known-issues"></a>Probleme cunoscute
 
-## <a name="next-step"></a>Următorul pas
+- Auto-conflația nu arată datele normalizate în entitățile de deduplicare. Cu toate acestea, aplică normalizarea intern în timpul deduplicarii. Este prin proiectare pentru toate normalizările. 
+- Dacă setarea tipului semantic este eliminată în **Hartă** faza în care o regulă de potrivire folosește maparea Alias sau ocolirea personalizată, normalizarea nu va fi aplicată. Se întâmplă doar dacă ștergeți tipul semantic după configurarea normalizării în regula de potrivire, deoarece tipul semantic va fi necunoscut.
 
-După finalizarea procesului de potrivire pentru cel puțin o pereche de potrivire, puteți rezolva posibilele contradicții din datele dvs. parcurgând subiectul [**Îmbinare**](merge-entities.md).
+
+## <a name="next-step"></a>Pasul următor
+
+După finalizarea procesului de potrivire pentru cel puțin o pereche de meciuri, continuați la [**Combina**](merge-entities.md) Etapa.
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

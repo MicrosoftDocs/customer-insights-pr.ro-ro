@@ -1,7 +1,7 @@
 ---
 title: Entități și seturi de date
 description: Vizualizați datele pe pagina Entități.
-ms.date: 11/01/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,51 +9,57 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 2a207a3dcad4bf192efb6ee1554195f10b19670b
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732096"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900442"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
-După [configurarea surselor de date](data-sources.md), accesați pagina [Entități](data-sources.md) pentru a evalua calitatea datelor ingerate. Entitățile sunt considerate seturi de date. Capacitățile multiple ale Dynamics 365 Customer Insights sunt construite în jurul acestor entități. Revizuirea acestora îndeaproape vă poate ajuta să validați rezultatele acestor funcții.
+După [configurarea surselor de date](data-sources.md), accesați pagina **Entități** pentru a evalua calitatea datelor ingerate. Entitățile sunt considerate seturi de date. Capacități multiple ale Dynamics 365 Customer Insights sunt construite în jurul acestor entități. Revizuirea acestora îndeaproape vă poate ajuta să validați rezultatele acestor funcții.
 
-Pagina **Entități** listează entitățile și include mai multe coloane:
+The **Entități** pagina listează entități și include aceste coloane:
 
-- **Nume**: Numele entității dvs. de date. Dacă vedeți un simbol de avertizare lângă un nume de entitate, înseamnă că datele pentru acea entitate nu s-au încărcat cu succes.
-- **Sursa**: tipul sursei de date care au ingerat entitatea
-- **Creat de**: numele persoanei care a creat entitatea
-- **Creată**: Data și ora creării entității
-- **Actualizat** : Numele persoanei care a actualizat entitatea
-- **stare** : Detalii despre ultima actualizare a entității
+- **Nume** : Numele entității de date. Dacă vedeți un simbol de avertizare lângă un nume de entitate, înseamnă că datele pentru acea entitate nu s-au încărcat cu succes.
+- **Sursă** : Tipul de sursă de date care a ingerat entitatea.
+- **La curent** : Ora la care entitatea a fost actualizată ultima dată.
+- **stare** : Detalii despre ultima actualizare a entității.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="explore-a-specific-entitys-data"></a>Explorați datele unei entități specifice
 
-Selectați o entitate pentru a explora diferitele câmpuri și înregistrări incluse în acea entitate.
+1. În Detalii despre public, accesați **Date** > **Entități**.
+1. De la **Entități** pagina, selectați o entitate pentru a deschide pagina de detalii.  
+1. Explorați diferitele câmpuri și înregistrări incluse pentru acea entitate.
 
-> [!div class="mx-imgBorder"]
-> ![Selectați o entitate.](media/data-manager-entities-data.png "Selectați o entitate")
-
-- Fila **Date** afișează un tabel cu detalii despre înregistrările individuale ale entității.
+- Fila **Atribute** fila este selectată implicit și afișează un tabel pentru a examina detaliile entității selectate, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Aceste tipuri sunt tipuri semantice care pot diferi de tipurile de date ale atributelor. De exemplu, câmpul *E-mail* mai jos are un tip de date *Text* dar tipul său Common Data Model (semantic) ar putea fi *E-mail* sau *Adresa de e-mail*.
 
 > [!div class="mx-imgBorder"]
 > ![Tabelul câmpurilor.](media/data-manager-entities-fields.PNG "Tabelul câmpurilor")
 
-- Fila **Atribute** fila este selectată implicit și afișează un tabel pentru a examina detaliile entității selectate, cum ar fi numele câmpurilor, tipurile de date și tipurile. Coloana **Tip** prezintă tipurile asociate Common Data Model, care sunt fie identificate automat de sistem sau [mapate manual](map-entities.md) de către utilizatori. Aceste tipuri sunt tipuri semantice care pot diferi de tipurile de date ale atributelor. De exemplu, câmpul *E-mail* mai jos are un tip de date *Text* dar tipul său Common Data Model (semantic) ar putea fi *E-mail* sau *Adresa de e-mail*.
-
 > [!NOTE]
-> Ambele tabele prezintă doar un eșantion de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați pagina **Surse de date**, selectați o entitate, selectați **Editați**, apoi vizualizați datele acestei entități cu editorul Power Query, așa cum este explicat în [Surse de date](data-sources.md).
+> Această pagină afișează doar o mostră de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați pagina **Surse de date**, selectați o entitate, selectați **Editați**, apoi vizualizați datele acestei entități cu editorul Power Query, așa cum este explicat în [Surse de date](data-sources.md).
 
-Pentru a afla mai multe despre datele ingerate în entitate, coloana **Rezumat** vă oferă câteva caracteristici importante ale datelor, cum ar fi valorile Null, valori lipsă, valori unice, numărări și distribuții, după cum se aplică datelor dumneavoastră.
-
-Selectați pictograma diagramă pentru a vedea rezumatul datelor.
+Pentru a afla mai multe despre datele ingerate în entitate, coloana **Rezumat** vă oferă câteva caracteristici importante ale datelor, cum ar fi valorile Null, valori lipsă, valori unice, numărări și distribuții, după cum se aplică datelor dumneavoastră. Selectați pictograma diagramă pentru a vedea rezumatul datelor.
 
 > [!div class="mx-imgBorder"]
 > ![Simbol rezumat.](media/data-manager-entities-summary.png "Tabel Rezumat date")
+
+- Fila **Date** afișează un tabel cu detalii despre înregistrările individuale ale entității. Detaliile enumerate depind de tipul de date al entității.
+
+> [!div class="mx-imgBorder"]
+> ![Selectați o entitate.](media/data-manager-entities-data.png "Selectați o entitate")
+
+- The **Rapoarte** fila (disponibilă pentru unele entități) vă permite să vă vizualizați datele prin crearea unui raport și include aceste coloane:
+
+  - **Numele raportului** : Numele raportului.
+  - **Creat de** : Numele persoanei care a creat entitatea.
+  - **Creată** : Data și ora creării entității.
+  - **Editat de** : Numele persoanei care a modificat entitatea.
+  - **Editat** : Data și ora modificării entității. 
 
 ## <a name="entity-specific-information"></a>Informații specifice entității
 
@@ -74,7 +80,6 @@ Următoarele verificări rulează pe datele ingerate pentru a expune înregistr�
 - Valoarea unui câmp nu se potrivește cu tipul de date al coloanei sale.
 - Câmpurile conțin caractere care fac ca coloanele să nu se potrivească cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără scăpare sau caracterele cu linie nouă.
 - Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul ISO standard.
-
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

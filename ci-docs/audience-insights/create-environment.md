@@ -1,7 +1,7 @@
 ---
 title: Creați medii în Customer Insights
 description: Pași pentru crearea de medii cu un abonament licențiat pentru Dynamics 365 Customer Insights.
-ms.date: 10/14/2021
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 914af46d2d82f3556d149f2836680c902f826d50
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673406"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892353"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creați un mediu în detalii despre public
 
@@ -77,6 +77,9 @@ Dacă creați mai multe medii ale Customer Insights și alegeți să salvați en
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse.
 
 Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un  data lake gestionat de Dataverse.
+
+> [!IMPORTANT]
+> Informații despre clienți și Dataverse trebuie să fie în aceeași regiune pentru a permite partajarea datelor.
 
 :::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
 

@@ -1,7 +1,7 @@
 ---
 title: Îmbunătățirea datelor companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
-ms.date: 11/15/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813933"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927597"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
@@ -83,6 +83,16 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
 Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+
+### <a name="overview-card"></a>Card de prezentare generală
+
+Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
+
+* **Clienții procesați și modificați** : Numărul de profiluri de clienți care au fost îmbogățite cu succes.
+
+* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+
+* **Clienții nu sunt procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

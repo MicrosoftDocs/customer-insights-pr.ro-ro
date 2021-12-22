@@ -1,7 +1,7 @@
 ---
-title: Îmbogățirea îmbunătățirii adreselor
+title: Îmbogățirea adresei (video)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
-ms.date: 07/25/2021
+ms.date: 12/16/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: f56be1f4ecdac124ed76a0fb0eb1e313099248bf
-ms.sourcegitcommit: 1565f4f7b4e131ede6ae089c5d21a79b02bba645
+ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "7643411"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927526"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
@@ -101,6 +101,16 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
 Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+
+### <a name="overview-card"></a>Card de prezentare generală
+
+Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
+
+* **Clienții procesați și modificați** : Numărul de profiluri de clienți care au fost îmbogățite cu succes.
+
+* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+
+* **Clienții nu sunt procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

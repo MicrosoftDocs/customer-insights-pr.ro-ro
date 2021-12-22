@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 11/04/2021
+ms.date: 12/02/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,23 +9,35 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: f7e2645e1608ea83b5d3af1073a5d6f6e97eec8f
-ms.sourcegitcommit: 2a0947cffb52eaf885aa2e50c95b3693f7e4c589
+ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "7753132"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884277"
 ---
-# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Ce este nou în capacitatea de statistică a publicului a Dynamics 365 Customer Insights
+# <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de funcții pe termen lung, aruncați o privire la [Planuri de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
+Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
 
 Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regiuni pot vedea caracteristici înaintea altora. Cu excepția cazului în care se specifică altfel, nu trebuie să luați nicio acțiune și vom actualiza automat aplicația fără întreruperi.
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="november-2021-updates"></a>Actualizări din noiembrie 2021
+
+Actualizările din noiembrie 2021 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="segment-membership-now-available-in-dataverse"></a>Calitatea de membru al segmentului este acum disponibilă în Dataverse
+
+Informațiile privind apartenența la segmente pentru profilurile clienților sunt acum disponibile în Dataverse împreună cu profilurile și perspectivele clienților. Aplicațiile de acțiune Dynamics 365 și aplicațiile bazate pe model pot utiliza aceste date pentru a căuta detaliile de apartenență la segment pentru un anumit client.
+
+### <a name="activities-support-contact-level-details-for-business-accounts"></a>Activitățile acceptă detalii la nivel de contact pentru conturile de afaceri
+
+Acum puteți configura, afișa și filtra activități pentru persoanele de contact din cronologia activității contului dvs. de afaceri pentru a înțelege mai bine care persoane de contact din cont au luat parte la anumite activități.
 
 ## <a name="october-2021-updates"></a>Actualizări din octombrie 2021
 
@@ -113,7 +125,7 @@ Actualizările din mai 2021 includ mai multe funcții, actualizări de performan
 
 ### <a name="data-ingestion"></a>Ingestie date
 
-- **Vizualizați sau modificați metadatele sau definiția entității atunci când atașați date din Azure Data Lake Storage dvs.** Acum puteți vedea și edita metadatele sau definiția entității în statisticile audienței atunci când atașați date dintr-un dosar Common Data Model în Azure Data Lake Storage. Această capacitate oferă feedback în timp real, validarea modelului și verificarea erorilor. Aceasta vă permite să editați fără probleme atât model.json cât și manifest.json.
+- **Vizualizați sau modificați metadatele sau definiția entității atunci când atașați date de pe Azure Data Lake Storage** Acum puteți vizualiza și edita metadatele sau definiția entității în detaliile despre public atunci când atașați date dintr-un dosar Common Data Model în Azure Data Lake Storage. Această capacitate oferă feedback în timp real, validarea modelului și verificarea erorilor. Aceasta vă permite să editați fără probleme atât model.json cât și manifest.json.
 
 ### <a name="extensibility"></a>Extensibilitate
 
@@ -188,7 +200,7 @@ Actualizările din martie 2021 includ mai multe funcții, actualizări de perfor
 
 ### <a name="data-ingestion"></a>Ingestie date
 
-- **Conectați-vă la sursele de date local folosind fluxuri de date și gateway-uri Power Platform** Suntem încântați să anunțăm previzualizarea fluxurilor de date Power Platform și a conectivității local folosind gateway-uri în Customer Insights cu un mediu asociat Power Platform sau Dataverse. Orice sursă de date nouă creată într-un mediu Customer Insights cu un mediu Dataverse conectat va fi implicit la Power Platform fluxuri de date care aduc conectivitatea de date local și un set bogat de conectori și capabilități de transformare.
+- **Conectați-vă la sursele de date local folosind fluxuri de date Power Platform și gateway-uri** Suntem încântați să anunțăm previzualizarea fluxurilor de date Power Platform și conectivitate local folosind gateway-uri în Customer Insights cu o Power Platform asociată sau un mediu Dataverse. Orice sursă de date nouă creată într-un mediu Customer Insights cu un mediu Dataverse legat va fi implicit la fluxuri de date Power Platform care aduc conectivitatea de date local și un set bogat de conectori și capabilități de transformare.
 
 ### <a name="extensibility"></a>Extensibilitate
 
@@ -202,7 +214,7 @@ Actualizările din martie 2021 includ mai multe funcții, actualizări de perfor
    Pentru informații suplimentare, consultați [Exportați în Persoană de contact constantă](export-constant-contact.md).
 
 - **Exportați segmente în RollWorks** Am extins destinațiile noastre de export pentru a include RollWorks. Acum puteți exporta segmente din Customer Insights către publicuri RollWorks și să le utilizați ca bază pentru publicitatea dvs. B-la-B.    
-   Pentru informații suplimentare, consultați [Exportați în RollWorks](export-rollworks.md).
+   Pentru informații suplimentare, consultați [Exportați în RollWorks ](export-rollworks.md).
 
 - **Exportați segmente în Snapchat** Am extins destinațiile noastre de export pentru a include Snapchat. Acum puteți exporta segmente din Customer Insights în publicurile Snapchat și le puteți folosi ca bază pentru publicitatea dvs.     
    Pentru informații suplimentare, consultați [Exportați în Snapchat](export-snapchat.md).
@@ -250,7 +262,7 @@ Actualizările din februarie 2021 includ mai multe caracteristici, actualizări 
 
 - **Mediul de copiere acceptă mai multe tipuri de surse de date**
 
-  Administratorii pot copia configurațiile de mediu într-un mediu nou din aceeași organizație. Această caracteristică extinde funcționalitatea mediului de copiere pentru cazurile în care sunt utilizate surse de date bazate pe un lac de date gestionat Microsoft Dataverse sau un folder Common Data Model.
+  Administratorii pot copia configurațiile de mediu într-un mediu nou din aceeași organizație. Această caracteristică extinde funcționalitatea mediului de copiere pentru cazurile în care sursele de date bazate pe un data lake gestionat Microsoft Dataverse sau un folder Common Data Model.
 
 ## <a name="january-2021-updates"></a>Actualizări din ianuarie 2021
 
@@ -276,7 +288,7 @@ Actualizările din ianuarie 2021 includ mai multe caracteristici, actualizări d
 
 #### <a name="system-administration"></a>Administrare de sistem
 
-- **Partajați fără probleme date către Microsoft Dataverse** Acum puteți partaja rezultatul Customer Insights cu aplicațiile Microsoft Dataverse folosind Microsoft Dataverse Managed Data Lake. După ce asociați un mediu Dataverse cu Customer Insights, aveți opțiunea de a activa partajarea datelor.
+- **Partajați fără probleme datele către Microsoft Dataverse** Acum puteți partaja rezultatele Customer Insights cu aplicații Microsoft Dataverse care utilizează Microsoft Dataverse Data Lake gestionat. Odată ce asociați un mediu Dataverse cu Customer Insights, aveți opțiunea de a activa partajarea datelor.
   Pentru informații suplimentare, consultați [Gestionare medii](manage-environments.md).
 
 

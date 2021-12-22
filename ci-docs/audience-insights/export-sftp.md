@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights către gazde SFTP
+title: Exportați datele despre Customer Insights către gazde SFTP (video)
 description: Aflați cum să configurați conexiunea și să exportați către o locație SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: a54025588945e4db6ab800dca034520b5f08d49b
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 568e5826175417175bd09435d697031f0ab64223
+ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673931"
+ms.lasthandoff: 12/17/2021
+ms.locfileid: "7927618"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportați segmente și alte date către SFTP (previzualizare)
 
@@ -28,6 +28,7 @@ Utilizați datele clienților dvs. în aplicații terțe, exportându-le într-o
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Destinațiile SFTP din spatele firewall-urilor nu sunt acceptate momentan. 
 - Runtime-ul unui export depinde de performanța sistemului dvs. Vă recomandăm două nuclee CPU și 1 Gb de memorie ca configurație minimă a serverului dvs. 
 - Entitățile exportatoare cu până la 100 de milioane de profiluri de clienți pot dura 90 de minute când se utilizează configurația minimă recomandată a două nuclee CPU și 1 Gb de memorie. 
 

@@ -1,7 +1,7 @@
 ---
 title: Conectați datele Common Data Model la un cont Azure Data Lake
 description: Lucrați cu datele Common Data Model folosind Azure Data Lake Storage.
-ms.date: 05/29/2020
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 93871f8029053d4ed4a116d3af3550b7684ee11ea8633e937138245e193a44e6
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7033141"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900212"
 ---
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 
@@ -30,7 +30,7 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 - Azure Data Lake la care doriți să vă conectați și să ingerați date trebuie să fie în aceeași regiune Azure ca și mediul Dynamics 365 Customer Insights. Conexiunile la un director Common Data Model dintr-un data lake dintr-o altă regiune Azure nu sunt acceptate. Pentru a afla regiunea Azure a mediului, accesați **Administrator** > **Sistem** > **Despre** în Detalii despre audiență.
 
-- Datele stocate în serviciile online pot fi stocate într-o locație diferită de locul în care sunt procesate sau stocate datele în Dynamics 365 Customer Insights. Prin importul sau conectarea la datele stocate în servicii online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights. [Aflați mai multe la Centrul de autorizare Microsoft.](https://www.microsoft.com/trust-center)
+- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care datele sunt procesate sau stocate în Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Conectare la un folder Common Data Model
 
@@ -38,12 +38,11 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 1. Selectați **Adăugați sursa de date**.
 
-1. Selectați **Conectare la un director Common Data Model**, introduceți un **Nume** pentru sursa de date și selectați **Următorul**. Recomandări de nume: 
-   - Începeți cu o literă.
-   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
-   - Folosiți între 3 și 64 de caractere.
+1. Selectați **Stocare Azure Data Lake**, introduceți a **Nume** pentru sursă de date, apoi selectați **Următorul**.
 
-1. Puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Introduceți informația **Recipient** și selectați **Următorul**.
+   - Dacă vi se solicită, selectați unul dintre seturile de date eșantion care se referă la industria dvs., apoi selectați **Următorul**. 
+
+1. Puteți alege între utilizarea unei opțiuni bazate pe resurse și o opțiune bazată pe abonament pentru autentificare. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md). Introduceți **Adresa serverului**, Selectați **Autentificare**, apoi selectați **Următorul**.
    > [!div class="mx-imgBorder"]
    > ![Casetă de dialog pentru a introduce noi detalii de conexiune pentru Azure Data Lake.](media/enter-new-storage-details.png)
    > [!NOTE]
@@ -56,11 +55,11 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
    > [!NOTE]
    > Orice fișier model.json sau manifest.json asociat cu o altă sursă de date din mediu nu va apărea în listă.
 
-1. Veți obține o listă de entități disponibile în fișierul model.json sau manifest.json selectat. Puteți analiza și selecta din lista de entități disponibile și selectați **Salvare**. Toate entitățile selectate vor fi ingerate din noua sursă de date.
+1. Veți vedea o listă de entități disponibile în fișierul model.json sau manifest.json selectat. Examinați și selectați din lista de entități disponibile, apoi selectați **salva**. Toate entitățile selectate vor fi ingerate din noua sursă de date.
    > [!div class="mx-imgBorder"]
    > ![Casetă de dialog care arată o listă de entități dintr-un fișier model.json.](media/review-entities.png)
 
-8. Indicați cu ce entități de date doriți să activați profilarea datelor și selectați **Salvare**. Profilarea datelor permite analiza și alte capacități. Puteți selecta întreaga entitate, care selectează toate atributele din entitate, sau puteți selecta anumite atribute dorite. În mod implicit, nu este activată nicio entitate pentru profilarea datelor.
+8. Indicați ce entități de date doriți să activați profilarea datelor, apoi selectați **salva**. Profilarea datelor permite analiza și alte capacități. Puteți selecta întreaga entitate, care selectează toate atributele din entitate, sau puteți selecta anumite atribute dorite. În mod implicit, nu este activată nicio entitate pentru profilarea datelor.
    > [!div class="mx-imgBorder"]
    > ![Casetă de dialog care prezintă o profilare a datelor.](media/dataprofiling-entities.png)
 

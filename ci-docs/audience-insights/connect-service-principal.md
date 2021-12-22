@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu
 description: Utilizați un principal de serviciu Azure pentru a vă conecta la propriul data lake.
-ms.date: 09/08/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,26 +9,26 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b901d799dbd73841a6ddbae754c4e4275f61146a
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645187"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900290"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
 
-Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Citiți mai departe pentru a afla cum să vă conectați Dynamics 365 Customer Insights cu un cont Azure Data Lake Storage utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
+Acest articol discută despre modul de conectare Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
 
-Puteți utiliza principalul de serviciu pentru a [adăuga sau edita un folder Common Data Model ca sursă de date](connect-common-data-model.md) în siguranță, sau [crea sau actualiza un mediu](create-environment.md).
+Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Puteți utiliza principalele de servicii în siguranță [adăugați sau editați un dosar Common Data Model ca sursă de date](connect-common-data-model.md) sau [creați sau actualizați un mediu](create-environment.md).
 
 > [!IMPORTANT]
 > - Contul Data Lake Storage care va utiliza principalul serviciului trebuie să aibă [activat spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace).
-> - Aveți nevoie de permisiuni de administrator pentru abonamentul dvs. Azure pentru a crea entitatea principală de serviciu.
+> - Aveți nevoie de permisiuni de administrator pentru abonamentul Azure pentru a crea un principal de serviciu.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creați un director de serviciu Azure pentru Customer Insights
 
-Înainte de a crea un nou serviciu principal pentru statistici despre public sau statistici despre implicare, verificați dacă acesta există deja în organizația dvs.
+Înainte de a crea un nou principal de serviciu pentru Customer Insights, verificați dacă acesta există deja în organizația dvs.
 
 ### <a name="look-for-an-existing-service-principal"></a>Căutați o entitate principală de serviciu existentă
 

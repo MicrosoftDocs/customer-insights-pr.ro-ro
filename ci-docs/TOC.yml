@@ -4,7 +4,7 @@
   href: overview.md
 - name: Versiune de încercare gratuită
   items:
-    - name: Înregistrarea pentru o versiune de încercare gratuită
+    - name: Înregistrați-vă pentru o versiune de încercare gratuită
       href: trial-signup.md
     - name: Întrebări frecvente despre versiunea de încercare
       href: trial-FAQ.md
@@ -48,7 +48,7 @@
           href: audience-insights/connect-power-query.md
         - name: Adăugați un folder Common Data Model ca o sursă de date
           href: audience-insights/connect-common-data-model.md
-        - name: Adăugați Dataverse lac de date gestionat
+        - name: Adăugați data lake gestionat de Dataverse
           href: audience-insights/connect-dataverse-managed-lake.md
         - name: Reîmprospătare incrementală pentru surse de date
           href: audience-insights/incremental-refresh-data-sources.md
@@ -84,7 +84,7 @@
           href: audience-insights/enrichment-microsoft.md
         - name: Adrese optimizate
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Îmbunătățiți datele companiei
+        - name: Date îmbunătățite despre firmă
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Îmbogățiți cu Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -92,8 +92,10 @@
           href: audience-insights/enrichment-here.md
         - name: Îmbogățire cu Leadspace
           href: audience-insights/enrichment-leadspace.md
-        - name: Îmbogățiți-vă cu Experian
+        - name: Îmbogățiți cu Experian
           href: audience-insights/enrichment-experian.md
+        - name: Îmbogățiți cu Office 365 date
+          href: audience-insights/enrichment-office.md
         - name: Îmbogățiți cu importul particularizat SFTP
           href: audience-insights/enrichment-SFTP-custom-import.md
     - name: Segmente
@@ -144,8 +146,6 @@
               href: audience-insights/sample-guide-predict-product-recommendation.md
             - name: Experimente cu Azure Machine learning
               href: audience-insights/azure-machine-learning-experiments.md
-            - name: Experimente cu Azure Machine Learning Studio
-              href: audience-insights/machine-learning-studio-experiments.md
         - name: Gestionați predicțiile
           href: audience-insights/manage-predictions.md
         - name: Crearea segmentelor pe baza predicțiilor
@@ -170,7 +170,7 @@
               href: audience-insights/export-azure-synapse-analytics.md
             - name: Adobe Campaign Standard
               href: audience-insights/export-adobe-campaign-standard.md
-            - name: Platformă Adobe Experience
+            - name: Adobe Experience Platform
               href: audience-insights/export-adobe-experience-platform.md
             - name: Monitor de campanie
               href: audience-insights/export-campaign-monitor.md
@@ -182,7 +182,7 @@
               href: audience-insights/export-dynamics365-marketing.md
             - name: Dynamics 365 Sales
               href: audience-insights/export-dynamics365-sales.md
-            - name: Facebook Manager de anunțuri
+            - name: Manager de reclame Facebook
               href: audience-insights/export-facebook.md
             - name: Google Ads
               href: audience-insights/export-google-ads.md
@@ -216,7 +216,7 @@
           items:
             - name: Program de completare Card client pentru Dynamics 365
               href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (bot)
+            - name: Microsoft Teams (robot)
               href: audience-insights/export-teams-bot.md
             - name: Power Apps
               href: audience-insights/export-power-apps.md
@@ -240,13 +240,15 @@
               href: audience-insights/use-azure-key-vault.md
             - name: Conectați-vă la un cont de stocare ADLS cu ajutorul unei entități principale de serviciu
               href: audience-insights/connect-service-principal.md
+            - name: Exportați jurnalele de diagnosticare
+              href: audience-insights/diagnostics.md
     - name: Extensibilitate
       items:
         - name: Integrați date web din statistici despre implicare
           href: audience-insights/integrate-engagement-insights.md
         - name: Analizați schemele de entități din Common Data Model
           href: audience-insights/entity-schemas.md
-        - name: Date despre Customer Insights în Dataverse
+        - name: Date Customer Insights în Dataverse
           href: audience-insights/customer-insights-dataverse.md
         - name: Lucrați cu API-uri
           href: audience-insights/apis.md
@@ -338,9 +340,9 @@
           href: engagement-insights/advanced-SDK-implementation.md
         - name: Eșantion SDK web
           href: engagement-insights/websdk-sample.md
-        - name: Tutorial SDK Android
+        - name: Tutorial Android SDK
           href: engagement-insights/get-started-android.md
-        - name: Android eșantion SDK
+        - name: Eșantion Android SDK
           href: engagement-insights/androidsdk-sample.md
         - name: Tutorial SDK iOS
           href: engagement-insights/get-started-ios.md

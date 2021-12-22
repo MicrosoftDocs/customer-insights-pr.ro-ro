@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: de27da92118b83dafa0742b6a1e10ee315750c61
-ms.sourcegitcommit: 6efcba688d1db1a5d6343c229f292a26c48fc007
+ms.openlocfilehash: e44e973bf7713ed5c31dfb9849419decd4ad1c78
+ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/05/2021
-ms.locfileid: "7770139"
+ms.lasthandoff: 12/03/2021
+ms.locfileid: "7884231"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -46,6 +46,7 @@ Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptat
 - [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+- [Date despre implicarea contului](enrichment-office.md) furnizate de Microsoft
 
 ---
 

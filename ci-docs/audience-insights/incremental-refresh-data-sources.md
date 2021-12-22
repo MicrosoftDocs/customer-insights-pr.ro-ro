@@ -1,7 +1,7 @@
 ---
 title: Reîmprospătare incrementală pentru sursele de date bazate pe Power Query
 description: Reîmprospătați date noi și actualizate pentru surse mari de date bazate pe Power Query.
-ms.date: 09/28/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,16 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: d204228f8d6881cbf0e7fac6609bf50dd5296610
-ms.sourcegitcommit: 42692a815695b9fdc93b9358eae09f2c3e97293c
-ms.translationtype: HT
+ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
+ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7377849"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "7900300"
 ---
 # <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Reîmprospătare incrementală pentru sursele de date bazate pe Power Query
+
+Acest articol discută cum să configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query.
 
 Reîmprospătarea incrementală pentru sursele de date oferă următoarele avantaje:
 
@@ -30,9 +32,9 @@ Statisticile despre public permit reîmprospătarea incrementală pentru sursele
 
 1. [Creați o nouă sursă de date bazată pe Power Query](connect-power-query.md).
 
-1. Furnizați un nume pentru sursa de date.
+1. Furnizeaza un **Nume** pentru sursă de date.
 
-1. Selectați o sursă de date care acceptă actualizare incrementală, cum ar fi baza de date SQL Azure.
+1. Selectați un sursă de date care acceptă reîmprospătarea incrementală, cum ar fi [Baza de date Azure SQL](/power-query/connectors/azuresqldatabase).
 
 1. Selectați entitățile sau tabelele de ingerat.
 

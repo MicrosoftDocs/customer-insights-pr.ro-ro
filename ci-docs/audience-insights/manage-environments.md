@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 11/12/2021
+ms.date: 12/06/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,12 +9,12 @@ ms.reviewer: mhart
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: 65c6a68f550c2873ec30c6ac54f1752d880ce12c
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
+ms.openlocfilehash: 309b2a900e50727ffa655fc6b5fe728ea55ba5bf
+ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799651"
+ms.lasthandoff: 12/06/2021
+ms.locfileid: "7892399"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -40,18 +40,21 @@ Puteți edita câteva dintre detaliile mediilor existente.
 
 Pentru informații suplimentare despre setările de mediu, consultați [Creați un mediu nou](create-environment.md).
 
-## <a name="connect-to-microsoft-dataverse"></a>Conectați-vă la Microsoft Dataverse
+## <a name="connect-to-microsoft-dataverse"></a>Conectare la Microsoft Dataverse
    
-The **Microsoft Dataverse** pasul vă permite să conectați Customer Insights cu mediul dvs. Dataverse.
+Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse.
 
-A folosi [modele out-of-box predicție](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa absorbția de date din sursele de date local, furnizând adresa URL a mediului Microsoft Dataverse pe care o administrează organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire ale Customer Insights cu un lac de date gestionat de Dataverse.
+Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un  data lake gestionat de Dataverse.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a activa partajarea datelor cu Microsoft Dataverse.":::
+> [!IMPORTANT]
+> Informații despre clienți și Dataverse trebuie să fie în aceeași regiune pentru a permite partajarea datelor.
+
+:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
 
 > [!NOTE]
 > Customer Insights nu acceptă următoarele scenarii de partajare:
-> - Dacă salvați toate datele în propriul dvs. Azure Data Lake Storage, nu veți putea activa partajarea datelor cu un lac de date gestionat de Dataverse.
-> - Dacă activați partajarea datelor cu Dataverse, nu veți putea [să creeze valori prezise sau lipsă într-o entitate](predictions.md).
+> - Dacă salvați toate datele pe propriul Azure Data Lake Storage, nu veți putea activa partajarea datelor cu un Data Lake gestionat de Dataverse.
+> - Dacă activați partajarea datelor Dataverse, nu veți putea [crea valori prezise sau lipsă într-o entitate](predictions.md).
 
 ## <a name="copy-the-environment-configuration"></a>Copiați configurația mediului
 
@@ -81,7 +84,7 @@ Următoarele date *nu* sunt copiate:
 - Profiluri de client.
 - Acreditările sursă de date. Va trebui să furnizați acreditările pentru fiecare sursă de date și să reîmprospătați sursele de date manual.
 
-- Surse de date din folderul Common Data Model și din lacul de date gestionat de Dataverse. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
+- Sursele de date din folderul Common Data Model și data lake-ul gestionat de Dataverse. Va trebui să creați acele surse de date manual cu același nume ca în mediul sursă.
 
 Când copiați un mediu, veți vedea un mesaj de confirmare a faptului că noul mediu a fost creat. Selectați **Accesați sursele de date** pentru a vedea lista surselor de date.
 

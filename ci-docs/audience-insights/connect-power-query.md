@@ -1,7 +1,7 @@
 ---
-title: Ingerare date printr-un conector Power Query
+title: Ingerați date printr-un conector Power Query (video)
 description: Conectori pentru surse de date bazate pe Power Query.
-ms.date: 11/01/2020
+ms.date: 12/06/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,16 +9,18 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: 5d54d33c235e646644e8874e5b0c28898dcff11a
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 38c447d80a25feca087ca9f110278b8401423018
+ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732233"
+ms.lasthandoff: 12/10/2021
+ms.locfileid: "7903855"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la o sursă de date Power Query
 
-Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea acestor conectori sunt acceptați de Dynamics 365 Customer Insights. Adăugarea surselor de date pe baza conectorilor Power Query urmează în general pașii descriși în secțiunea următoare. Cu toate acestea, în funcție de conectorul pe care îl utilizați, sunt necesare informații diferite. Pentru mai multe informații, consultați documentația despre conectorii individuali din [Conectorul de referință Power Query](/power-query/connectors/).
+Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea acestor conectori sunt suportați de Dynamics 365 Customer Insights. 
+
+Adăugarea surselor de date bazate pe conectorii Power Query urmează, în general, pașii descriși în această secțiune. Cu toate acestea, în funcție de conectorul pe care îl utilizați, sunt necesare informații diferite. Pentru a afla mai multe, consultați documentația despre conectorii individuali din [Referința conectorului Power Query](/power-query/connectors/).
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWN6EK]
 
@@ -28,14 +30,11 @@ Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea ac
 
 1. Selectați **Adăugați sursa de date**.
 
-1. Alegeți metoda **Importați date** și selectați **Următorul**.
+1. Selectați **Microsoft Power Query**, apoi selectați **Următorul**.
 
-1. Furnizați un **Nume** pentru sursa de date și selectați **Următorul** pentru a crea sursă de date. Numire recomandări: 
-   - Începeți cu o literă.
-   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
-   - Folosiți între 3 și 64 de caractere.
+1. Furnizați un **Nume** pentru sursa de date și selectați **Următorul** pentru a crea sursă de date.
 
-1. Alegeți unul dintre [conectorii disponibili](#available-power-query-data-sources). Pentru acest exemplu, selectăm conectorul **Text/CSV**.
+1. Alegeți unul dintre [conectorii disponibili](#available-power-query-data-sources). În acest exemplu, selectăm **Text/CSV** conector.
 
 1. Introduceți detaliile necesare în **Setări de conectare** pentru conectorul selectat și selectați **Următorul** pentru a vedea o previzualizare a datelor.
 
@@ -50,7 +49,7 @@ Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea ac
 
 1. Puteți adăuga entități suplimentare la sursa dvs. de date selectând **Preluare date** în dialogul **Editare interogări**.
 
-   Aceste transformări sunt foarte recomandate:
+   Vă recomandăm să utilizați următoarele transformări:
 
    - Dacă ingerați date dintr-un fișier CSV, primul rând conține adesea anteturi. Accesați **Transformați tabelul** și selectați **Folosiți anteturi ca primul rând**.
    - Asigurați-vă că tipul de date este setat corespunzător.
@@ -61,7 +60,7 @@ Power Query oferă un set larg de conectori pentru a ingera date. Majoritatea ac
 
 ## <a name="available-power-query-data-sources"></a>Surse de date Power Query disponibile
 
-Consultați [Conectorul de referință Power Query](/power-query/connectors/) pentru o listă actualizată de conectori pe care îi puteți selecta pentru a importa date în Customer Insights. 
+Vezi [Referința conectorului Power Query](/power-query/connectors/) pentru o listă de conectori pe care îi puteți utiliza pentru a importa date în Customer Insights. 
 
 Conectori cu bifă în coloana **Customer Insights (fluxuri de date)** sunt disponibili pentru a crea noi surse de date bazate pe Power Query. Consultați documentația unui conector specific pentru a afla mai multe despre cerințele preliminare, limitările și alte detalii.
 
@@ -70,7 +69,7 @@ Conectori cu bifă în coloana **Customer Insights (fluxuri de date)** sunt disp
 > [!NOTE]
 > Este posibil să nu fie posibilă modificarea surselor de date care sunt utilizate în prezent într-unul dintre procesele aplicației (*segmentare*, *potrivire* sau *îmbinare*, de exemplu). 
 >
-> Utilizând pagina **Setări**, puteți urmări progresul fiecărui proces activ. Când se termină un proces, aveți posibilitatea să reveniți la pagina **Surse de date** și să efectuați modificările.
+> În **Setări** pagina, puteți urmări progresul fiecărui proces activ. Când se termină un proces, aveți posibilitatea să reveniți la pagina **Surse de date** și să efectuați modificările.
 
 1. În Detalii despre audiență, accesați **Date** > **Surse de date**.
 

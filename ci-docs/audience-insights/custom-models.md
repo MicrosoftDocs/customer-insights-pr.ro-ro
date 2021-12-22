@@ -1,7 +1,7 @@
 ---
 title: Modele învățare programată particularizate | Documente Microsoft
 description: Lucrați cu modele particularizate de la Învățare programată Azure în Dynamics 365 Customer Insights.
-ms.date: 03/22/2021
+ms.date: 12/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,14 +9,20 @@ ms.topic: tutorial
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 187995cdf4d92a0609f8abb4c792e698ad4342cdb1f578744136add1bfcf3a53
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 47e2e5109ef8f21a782f6c8f87088009f8a40fdf
+ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032957"
+ms.lasthandoff: 12/02/2021
+ms.locfileid: "7881799"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
+
+> [!NOTE]
+> Asistența pentru învățare programată Studio (clasic) se va încheia pe 31 august 2024. Vă recomandăm să treceți la [Azure învățare programată](/azure/machine-learning/overview-what-is-azure-machine-learning) până la acea dată.
+>
+> Începând cu 1 decembrie 2021, nu veți putea crea resurse noi învățare programată Studio (clasic). Până la 31 august 2024, puteți continua să utilizați resursele existente învățare programată Studio (clasic). Pentru mai multe informații, vezi [Migrați la Azure învățare programată](/azure/machine-learning/migrate-overview).
+
 
 **Informații** > **Modele particularizate** vă permite să gestionați fluxurile de lucru pe baza modelelor Azure Machine Learning. Fluxurile de lucru vă ajută să alegeți datele din care doriți să generați detalii și să mapați rezultatele la datele unificate ale clienților. Pentru mai multe informații despre construirea de modele ML particularizate, consultați [Utilizare modele bazate pe Azure Machine Learning](azure-machine-learning-experiments.md).
 
@@ -26,7 +32,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- În prezent, această caracteristică acceptă serviciile web publicate prin intermediul [Machine Learning Studio (clasic)](https://studio.azureml.net) și [canalele lot Azure Machine Learning](/azure/machine-learning/concept-ml-pipelines).
+- Această caracteristică acceptă serviciile web publicate prin [Conducte batch învățare programată Azure](/azure/machine-learning/concept-ml-pipelines).
 
 - Aveți nevoie de un cont Azure Data Lake Storage Gen2 asociat instanței dvs. Azure Studio pentru a utiliza această caracteristică. Pentru mai multe informații, consultați [Creați un Cont de stocare Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
@@ -48,11 +54,10 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 1. Dacă abonamentul dvs. Azure Machine Learning se află într-o entitate găzduită diferită de Customer Insights, selectați **Autentificare** cu datele dvs. de acreditare pentru organizația selectată.
 
-1. Selectați **Spații de lucru** asociate cu serviciul dvs. web. Există două secțiuni listate, una pentru Azure Machine Learning v1 (Machine Learning Studio (clasic)) și Azure Machine Learning v2 (Azure Machine Learning). Dacă nu sunteți sigur care spațiu de lucru este cel potrivit pentru serviciul dvs. web Machine Learning Studio (clasic), selectați **Oricare**.
+1. Selectați **Spații de lucru** asociate cu serviciul dvs. web. 
 
-1. Alegeți serviciul web Machine Learning Studio (clasic) sau canalul Azure Machine Learning în lista verticală **Serviciu web care conține modelul dvs.**. Apoi, selectați **Următorul**.
-   - Aflați mai multe despre [publicarea unui serviciu web în Machine Learning Studio (clasic)](/azure/machine-learning/studio/deploy-a-machine-learning-web-service#deploy-it-as-a-new-web-service)
-   - Aflați mai multe despre [publicarea unui canal în Azure Machine Learning folosind designerul](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) sau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Canalul dvs. trebuie publicat sub un [punctul final al canalului](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
+1. Alegeți conducta Azure învățare programată în **Serviciu web care conține modelul dvs** scapă jos. Apoi, selectați **Următorul**.    
+   Aflați mai multe despre [publicarea unui canal în Azure Machine Learning folosind designerul](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-designer) sau [SDK](/azure/machine-learning/concept-ml-pipelines#building-pipelines-with-the-python-sdk). Canalul dvs. trebuie publicat sub un [punctul final al canalului](/azure/machine-learning/how-to-run-batch-predictions-designer#submit-a-pipeline-run).
 
 1. Pentru fiecare **Intrare serviciu web**, selectați **Entitatea** adecvată pentru Detalii despre audiență și selectați **Următorul**.
    > [!NOTE]
@@ -62,9 +67,6 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
    > ![Configurați un flux de lucru.](media/intelligence-screen2-updated.png "Configurați un flux de lucru")
 
 1. În pasul **Parametri de ieșire model**, setați următoarele proprietăți:
-   - Machine Learning Studio (clasic)
-      1. Introduceți ieșirea **Numele entității** în care doriți ca rezultatele de ieșire ale serviciului web să treacă.
-   - Învățare programată Azure
       1. Introduceți ieșirea **Numele entității** în care doriți ca rezultatele de ieșire ale canalului să treacă.
       1. Selectați **Nume parametru ieșire depozit de date** din canalul lotului din meniul vertical.
       1. Selectați **Nume parametru cale de ieșire** din canalul lotului din meniul vertical.
@@ -93,9 +95,6 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 1. Pentru fiecare **Intrare serviciu web**, puteți actualiza **Entitatea** potrivită din Detalii despre audiență. Apoi, selectați **Următorul**.
 
 1. În pasul **Parametri de ieșire model**, setați următoarele proprietăți:
-   - Machine Learning Studio (clasic)
-      1. Introduceți ieșirea **Numele entității** în care doriți ca rezultatele de ieșire ale serviciului web să treacă.
-   - Învățare programată Azure
       1. Introduceți ieșirea **Numele entității** în care doriți ca rezultatele de ieșire ale canalului să treacă.
       1. Selectați **Nume parametru ieșire depozit de date** pentru canalul de testare.
       1. Selectați **Nume parametru ieșire cale** pentru canalul de testare.

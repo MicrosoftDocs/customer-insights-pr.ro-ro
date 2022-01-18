@@ -44,7 +44,7 @@
       items:
         - name: Prezentare generală surse de date
           href: audience-insights/data-sources.md
-        - name: Adăugați surse de date prin conectorii Power Query
+        - name: Adăugați surse de date prin Power Query conectori
           href: audience-insights/connect-power-query.md
         - name: Adăugați un folder Common Data Model ca o sursă de date
           href: audience-insights/connect-common-data-model.md
@@ -80,11 +80,11 @@
       items:
         - name: Îmbogățiși profilele clientului
           href: audience-insights/enrichment-hub.md
-        - name: Afinități de marcă și interes
+        - name: Mărci și interese
           href: audience-insights/enrichment-microsoft.md
         - name: Adrese optimizate
           href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Date îmbunătățite despre firmă
+        - name: Date optimizate despre firmă
           href: audience-insights/enrichment-enhanced-company-data.md
         - name: Îmbogățiți cu Azure Maps
           href: audience-insights/enrichment-azure-maps.md
@@ -130,6 +130,8 @@
               href: audience-insights/predict-subscription-churn.md
             - name: Previzionați retragere din tranzacții
               href: audience-insights/predict-transactional-churn.md
+            - name: Analizați sentimentul în feedback-ul clienților
+              href: audience-insights/sentiment-analysis.md
             - name: Utilizați modele personalizate de la Azure Machine Learning
               href: audience-insights/custom-models.md
             - name: Completați datele parțial lipsă
@@ -284,7 +286,7 @@
           href: consent-management/system-settings.md
         - name: Gestionați utilizatorii și permisiunile
           href: consent-management/manage-users.md
-    - name: Utilizați datele de consimțământ
+    - name: Utilizați datele consimțământului
       items:
         - name: Creați predicții cu date de consimțământ
           href: consent-management/predictions-consent-data.md

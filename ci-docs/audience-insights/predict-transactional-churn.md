@@ -1,7 +1,7 @@
 ---
-title: Schimbarea tranzacției predicție (video)
+title: Schimbarea tranzacției predicție (conține videoclipul)
 description: Preziceți dacă un client prezintă riscul de a nu mai cumpăra produsele sau serviciile companiei dvs.
-ms.date: 10/20/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: ad87e0fd848168d1a18f28f2ac5c507bb01e1f28
-ms.sourcegitcommit: 12910882ca990ec0e890ed4deaf3dac7e01621e5
-ms.translationtype: HT
+ms.openlocfilehash: 602a86a67006925faac00add8e089d28f7071c14
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/10/2021
-ms.locfileid: "7904087"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967762"
 ---
 # <a name="transaction-churn-prediction-preview"></a>Predicție retragere din tranzacții (versiune preliminară)
 
@@ -103,10 +103,10 @@ Pentru medii bazate pe conturi de business, putem prezice retrageri din tranzac�
 
 1. Selectați dala **Modelul de retragere a clienților (previzualizare)** și selectați **Folosiți acest model**.
 
-1. În panoul **Modelul de retragere a clienților**, alegeți **Tranzacţie** și selectați **Începeți**.
+1. În **Model de retragere a clienților (previzualizare)** panou, alege **Tranzacţie** și selectați **Incepe**.
 
 :::image type="content" source="media/select-transaction-churn.PNG" alt-text="Captură de ecran cu opțiunea de tranzacție selectată în panoul modelului Retragerea clienților.":::
-
+ 
 ### <a name="name-model"></a>Denumire model
 
 1. Furnizați un nume pentru model pentru a-l distinge de alte modele.
@@ -117,11 +117,11 @@ Pentru medii bazate pe conturi de business, putem prezice retrageri din tranzac�
 
 ### <a name="define-customer-churn"></a>Definiți retragerea clienților
 
-1. Setați o fereastră de zile pentru a prezice retragerea în câmpul **Identificați clienții care s-ar putea re trage în următoarea perioadă de**. De exemplu, preziceți riscul de retragere pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de marketing de retenție. Predicția riscului de retragere pentru o perioadă mai lungă sau mai scurtă de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, dar depinde de cerințele dvs. de afaceri specifice.
+1. Seteaza **fereastra predicție**. De exemplu, preziceți riscul de retragere pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de marketing de retenție. Predicția riscului de retragere pentru o perioadă mai lungă sau mai scurtă de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, dar depinde de cerințele dvs. de afaceri specifice.
    >[!TIP]
-   > Puteți selecta **Salvare și închidere** pentru a salva oricând predicția ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
+   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
-1. Introduceți numărul de zile pentru a defini retragerea în câmpul **Un client este retras dacă nu a efectuat achiziții în:**. De exemplu, dacă un client nu a efectuat nicio achiziție în ultimele 30 de zile, acesta ar putea fi considerat ca fiind retras pentru afacerea dvs. 
+1. Introduceți numărul de zile pentru a defini abandonul în **Definiția churn** camp. De exemplu, dacă un client nu a efectuat nicio achiziție în ultimele 30 de zile, acesta ar putea fi considerat ca fiind retras pentru afacerea dvs. 
 
 1. Selectați **Următorul** pentru a continua.
 
@@ -129,19 +129,16 @@ Pentru medii bazate pe conturi de business, putem prezice retrageri din tranzac�
 
 1. Selectați **Adăugați date** și alegeți tipul de activitate panoul lateral care conține informațiile necesare despre tranzacții sau istoricul achizițiilor.
 
-1. Sub **Alegeți activitățile**, alegeți activitățile specifice din activitatea selectată pe care doriți să se concentreze calculul.
+1. Sub **Selectați activități**, alegeți activitățile specifice din tipul de activitate selectat pe care doriți să se concentreze calculul.
 
-   :::image type="content" source="media/product-recommendation-select-semantic-activity.PNG" alt-text="Panoul lateral care arată alegerea activităților specifice sub tipul semantic.":::
+   :::image type="content" source="media/transaction-churn-select-activity.PNG" alt-text="Panoul lateral care arată alegerea activităților specifice sub tipul semantic.":::
 
-1. Dacă nu ați mapat încă activitatea la un tip semantic, selectați **Editați** pentru a face acest lucru. Se deschide experiența ghidată pentru cartografierea activităților semantice. Mapați datele dvs. la câmpurile corelate în tipul de activitate selectat.
+   Dacă nu ați mapat încă activitatea la un tip semantic, selectați **Editați** pentru a face acest lucru. Se deschide experiența ghidată pentru cartografierea activităților semantice. Mapați datele dvs. la câmpurile corelate în tipul de activitate selectat.
 
-   :::image type="content" source="media/product-recommendation-set-activity-type.PNG" alt-text="Tipul activității de setare a paginii.":::
+1. Asociați atributele semantice câmpurilor necesare pentru a rula modelul. Dacă câmpurile de mai jos nu sunt completate, configurați relația de la entitatea din istoricul achizițiilor la entitatea *Client*. Selectați **Salvare**.
 
-1. După maparea activității la tipul semantic corespunzător, selectați **Următorul** pentru, a merge mai departe
+1. În **Adăugați datele necesare** pas, selectați **Următorul** pentru a continua dacă nu doriți să adăugați mai multe activități.
 
-1. Asociați atributele semantice câmpurilor necesare pentru a rula modelul. Dacă câmpurile de mai jos nu sunt completate, configurați relația de la entitatea din istoricul achizițiilor la entitatea *Client*.
-
-1. Selectați **Următorul**.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 

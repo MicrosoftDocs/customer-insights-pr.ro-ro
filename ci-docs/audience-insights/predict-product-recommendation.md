@@ -1,7 +1,7 @@
 ---
 title: Predicție de recomandare de produse
 description: Preziceți produsele pe care un client este probabil să le cumpere sau să interacționeze cu acestea.
-ms.date: 09/13/2021
+ms.date: 01/13/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: a75a245bc721d65643fa78d46f2be52291595a5a
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: 62b829b6ca3074e0ca52fb52584b74572bb05f05
+ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494554"
+ms.lasthandoff: 01/13/2022
+ms.locfileid: "7967854"
 ---
 # <a name="product-recommendation-prediction-preview"></a>Predicție de recomandare de produse (previzualizare)
 
@@ -54,7 +54,7 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 
 > [!NOTE]
 > - Modelul necesită istoricul tranzacțiilor clienților dvs. Definiția unei tranzacții este destul de flexibilă. Orice date care descriu o interacțiune utilizator-produs pot funcționa ca o intrare. De exemplu, achiziționarea unui produs, participarea la un curs sau participarea la un eveniment.
-> - În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități de cumpărare, uniți-le în Power Query înainte de ingestia de date.
+> - În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități de cumpărare, uniți-le Power Query înainte de ingerarea datelor.
 > - Dacă detaliile comenzii și comenzii sunt entități diferite, alăturați-vă acestora înainte de a le utiliza în model. Modelul nu funcționează doar cu un ID de comandă sau un ID de primire într-o entitate.
 
 
@@ -79,11 +79,11 @@ Dacă sunteți interesat să încercați această caracteristică, dar nu aveți
 1. Setați **Numărul de produse** pe care doriți să îl recomandați unui client. Această valoare depinde de modul în care metoda dvs. de livrare umple datele. Dacă puteți recomanda trei produse, setați această valoare în consecință.
    
    >[!TIP]
-   > Puteți selecta **Salvare și închidere** pentru a salva oricând predicția ca schiță. Veți găsi proiectul predicție în fila **Predicțiile mele**.
+   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi proiectul predicție în fila **Predicțiile mele**.
 
-1. Alegeți dacă doriți să **Sugerați produse pe care clienții le-au achiziționat recent**.
+1. Alegeți dacă doriți să includeți produse pe care clienții le-au achiziționat recent în **Achiziții repetate așteptate** camp.
 
-1. Dacă ați ales să *nu* recomandați produsele achiziționate recent, setați **Fereastră de privire retrospectivă**. Această setare specifică intervalul de timp pe care îl are în vedere modelul înainte de a recomanda produsului utilizatorului din nou. De exemplu, indicați că un client achiziționează un laptop la fiecare doi ani. Această fereastră va analiza istoricul achizițiilor din ultimii doi ani și, dacă găsesc un articol, articolul va fi filtrat din recomandări.
+1. Seteaza **Uită-te la fereastra din spate**. Această setare specifică intervalul de timp pe care îl are în vedere modelul înainte de a recomanda produsului utilizatorului din nou. De exemplu, indicați că un client achiziționează un laptop la fiecare doi ani. Această fereastră va analiza istoricul achizițiilor din ultimii doi ani și, dacă găsesc un articol, articolul va fi filtrat din recomandări.
 
 1. Selectați **Următorul**
 

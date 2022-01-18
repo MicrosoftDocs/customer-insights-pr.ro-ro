@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea adresei (video)
+title: Îmbogățirea adresei (conține videoclip)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
 ms.date: 12/16/2021
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d2c174b7882382faf4c363198982317ee21fdd4b
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: HT
+ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
+ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927526"
+ms.lasthandoff: 12/18/2021
+ms.locfileid: "7934938"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
@@ -108,9 +108,9 @@ Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățiri
 
 * **Clienții procesați și modificați** : Numărul de profiluri de clienți care au fost îmbogățite cu succes.
 
-* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
 
-* **Clienții nu sunt procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+* **Clienții nu au fost procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

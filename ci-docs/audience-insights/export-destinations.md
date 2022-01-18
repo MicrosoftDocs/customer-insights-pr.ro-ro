@@ -5,17 +5,16 @@ ms.date: 11/01/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: conceptual
+ms.topic: overview
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.custom: intro-internal
-ms.openlocfilehash: bff0486fdb3a02ecb0aa86e81abe1c506e234bc5
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 05485fc7def3d699d5179bcaa005ceb57024f840
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732178"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977982"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
@@ -36,7 +35,7 @@ Există două tipuri principale de exporturi:
 Majoritatea opțiunilor de export acceptă ambele tipuri de medii. Exportul de segmente către diferite sisteme țintă are cerințe specifice. În general, un membru al segmentului, profilul clientului, conține informații de contact. Deși acest lucru este de obicei cazul segmentelor construite pe consumatori individuali (B la C), nu este neapărat cazul segmentelor bazate pe conturi de business (B la B). 
 
 **Mediile de export ale segmentelor pentru conturi de business (B la B)**  
-- Segmentele din contextul mediilor pentru conturile de afaceri sunt construite pe baza entității *cont*. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea [companie](export-linkedin-ads.md) la definirea exportului.
+- Segmentele din contextul mediilor pentru conturile de afaceri sunt construite pe baza entității *cont*. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea **companie** la definirea exportului.
 - Toate celelalte sisteme țintă necesită câmpuri de la entitatea de contact. Pentru a vă asigura că segmentele de cont pot prelua date din contactele asociate, definiția segmentului dvs. trebuie să proiecteze atributele entității de contact. Aflați mai multe despre cum să [configurați segmente și atribute de proiect](segment-builder.md).
 
 **Exporturile de segmente în medii pentru consumatori individuali (B la C)**  

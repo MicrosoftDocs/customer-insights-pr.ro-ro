@@ -1,7 +1,7 @@
 ---
-title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (video)
+title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (conține videoclip)
 description: Afișați date din detalii privind publicul în aplicațiile Dynamics 365 cu acest supliment.
-ms.date: 12/07/2021
+ms.date: 12/22/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: f3d613d7183fd0af2998cd081d08d4316c7a5628
-ms.sourcegitcommit: ae3b92926ea1adfcc50e4bfd000b06ea0ccfc0ee
-ms.translationtype: HT
+ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
+ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "7921880"
+ms.lasthandoff: 12/22/2021
+ms.locfileid: "7945442"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
@@ -27,7 +27,7 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
-- Pentru ca datele dvs. din Dynamics 365 să se mapeze la profilurile de clienți din detalii despre public, ele trebuie să fie [ingerate din aplicația Dynamics 365 folosind conectorul Microsoft Dataverse](connect-power-query.md).
+- Pentru ca datele dvs. Dynamics 365 să fie mapate cu statisticile despre public profilurile clienților, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, trebuie să vă asigurați că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în pasul de hartă a procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
 - Toți utilizatorii Dynamics 365 ai programului de completare Card client trebuie să fie [adăugați ca utilizatori](permissions.md) în detaliile despre public pentru a vedea datele.
 - [Sunt necesare capacități de căutare și filtrare configurate](search-filter-index.md) în detaliile despre public pentru ca datele să funcționeze.
 - Fiecare control de program de completare se bazează pe date specifice din detaliile privind audiența. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurarea suplimentului vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).

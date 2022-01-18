@@ -5,21 +5,21 @@ description: Familiarizați-vă cu experiența de primă rulare din Dynamics 365
 ms.author: mhart
 ms.date: 10/05/2021
 ms.service: customer-insights
-ms.topic: overview
+ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 9f96a70d0cc316e8793921fedb0cc3fa4751c827
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+ms.openlocfilehash: e17b66217415c0b554a449f0d992deec7e2d96e7
+ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673486"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "7977687"
 ---
 # <a name="get-started-after-purchasing-customer-insights"></a>Începeți după ce ați achiziționat Customer Insights
 
 Acest articol explică cum să faceți primii pași în Dynamics 365 Customer Insights după ce organizația dvs. a achiziționat un abonament. Dacă doriți să achiziționați Customer Insights, opțiunile noastre de contact sunt listate în site-ul web [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/). 
 
-După achiziționarea unei licențe de abonament pentru Customer Insights, administratorul global al chiriașului Microsoft 365 primește un e-mail care îi invită să creeze mediul. 
+După achiziționarea unei licențe de abonament pentru Customer Insights, administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. 
 
 Customer Insights este licențiat per entitate găzduită și include mai multe funcții. Puteți achiziționa mai multă capacitate și licențe pentru a crește cota implicită. 
 - [Prezentare generală a prețurilor](https://dynamics.microsoft.com/ai/customer-insights/pricing/)

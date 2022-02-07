@@ -9,16 +9,11 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: 3927b5a13a5f9b4d2b39c7f0b389bc51cafeb213
-ms.sourcegitcommit: 3811dede65946c37aa7ed3cc364251f20ffd4d17
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 12/22/2021
-ms.locfileid: "7945442"
 ---
+
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare a cardului pentru clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați câmpurile de profil ale clienților, informații și cronologia activității. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată.
 

@@ -1,5 +1,5 @@
 ---
-title: Analiza semantică pentru feedback-ul clienților
+title: Analiza sentimentelor pentru feedback-ul clienților
 description: Aflați cum să utilizați un model de analiză a sentimentelor pentru feedback-ul clienților în Dynamics 365 Customer Insights.
 ms.date: 12/23/2021
 ms.service: customer-insights
@@ -9,13 +9,8 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 05e530a1bc96c5fd9c7a3bc0197563d8fe330387
-ms.sourcegitcommit: cb71e39de9b891c24bd5cd9c014eb3eeb537ac24
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 01/10/2022
-ms.locfileid: "7951115"
 ---
+
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizați sentimentul în feedbackul clienților (Previzualizare)
 
 Clienții se așteaptă la produse, servicii și experiențe de înaltă calitate în zilele noastre. În special clienții care își împărtășesc feedback-ul. Este foarte dificil pentru organizații să analizeze un volum din ce în ce mai mare de date fără a reduce acuratețea și costul forței de muncă mai mare. Dynamics 365 Customer Insights oferă un model de analiză a sentimentelor pentru feedback-ul clienților, care permite organizațiilor să își analizeze datele mai precis și la un cost mai mic.
@@ -24,7 +19,7 @@ Analiza sentimentelor vă permite să sintetizați sentimentul clienților și s
 
 ## <a name="overview"></a>Prezentare generală
 
-Funcția de analiză a sentimentelor generează două informații derivate pentru fiecare ID de client. Un scor de sentiment (de la -5 la 5) și o listă a aspectelor de afaceri aplicabile (domenii de activitate) împreună vă ajută să înțelegeți mai bine feedback-ul clienților. 
+Funcția de analiză a sentimentelor generează două informații derivate pentru fiecare ID de client. Un scor de sentiment (de la -5 la 5) și o listă de aspecte aplicabile de afaceri (domenii de activitate) împreună vă ajută să înțelegeți mai bine feedback-ul clienților. 
 
 Aceste informații vă pot ajuta să obțineți următoarele rezultate: 
 - Obțineți o imagine de ansamblu asupra sentimentelor clienților față de o marcă sau organizație
@@ -38,7 +33,7 @@ Pentru a ne asigura că puteți avea încredere în rezultatele modelelor, oferi
 
 Folosim două **Modele de procesare a limbajului natural (NLP).** : primul atribuie fiecărui comentariu de feedback un scor de sentiment. Al doilea model asociază fiecare feedback cu toate aspectele de afaceri aplicabile. Modelele sunt instruite pe date publice din surse din rețelele de socializare, retail, restaurante, produse de larg consum și industriile auto.    
   
-- Aspectele de afaceri predefinite pentru ca modelul să fie asociate cu datele de feedback includ:
+Aspectele de afaceri predefinite pentru ca modelul să fie asociate cu datele de feedback includ:
 -   Gestionarea conturilor
 -   Finalizarea comenzii și plata
 -   Asistență pentru clienți

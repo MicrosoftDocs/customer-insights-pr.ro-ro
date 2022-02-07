@@ -1,7 +1,7 @@
 ---
 title: Îmbinați entitățile în unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 11/01/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,21 +10,16 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-merge
-ms.openlocfilehash: c218f9c1a1b7711ee48419470bf6c352450ffc0c
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732787"
+  - ci-merge
 ---
+
 # <a name="merge-entities"></a>Îmbinare entități
 
 Faza de îmbinare este ultima fază din procesul de unificare a datelor. Scopul său este reconcilierea datelor conflictuale. Exemple de date conflictuale ar putea include un nume de client care se găsește în două seturi de date, dar care apare puțin diferit în fiecare („Grant Marshall” față de „Grant Marshal”) sau un număr de telefon care diferă în format (617-803-091X versus 617803091X ). Fuzionarea acelor puncte de date conflictuale se face pe baza atributelor.
 
 :::image type="content" source="media/merge-fields-page.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
 
-După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala [Îmbinare](match-entities.md) pe pagina [Unificare](match-entities.md).
+După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala **Îmbinare** pe pagina **Unificare**.
 
 ## <a name="review-system-recommendations"></a>Revizuiți recomandările sistemului
 
@@ -99,11 +94,13 @@ Pe pagina **Îmbinare**, selectați **Câmpuri excluse** pentru a vedea lista tu
 
 1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
 
-## <a name="manually-combine-fields"></a>Îmbinați manual câmpurile
+## <a name="combine-fields-manually"></a>Combinați câmpurile manual
 
-Specificați manual un atribut îmbinat. 
+Specificați manual un atribut îmbinat.
 
-1. Pe pagina **Combinare**, selectați **Combinați câmpuri**.
+1. Pe **Combina** pagina, selectați **Combina**.
+
+1. Alege **Câmpuri** opțiune.
 
 1. Specificați politica câștigătorului de îmbinare în lista derulantă **Combinați câmpurile după**.
 
@@ -114,6 +111,26 @@ Specificați manual un atribut îmbinat.
 1. Selectați **Finalizat** pentru a aplica modificările.
 
 1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
+
+## <a name="combine-a-group-of-fields"></a>Combinați un grup de câmpuri
+
+Tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresă1, Adresă2, Oraș, Stat și Cod. Probabil că nu dorim să îmbinăm în Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete
+
+1. Pe **Combina** pagina, selectați **Combina**.
+
+1. Alege **Grup de câmpuri** opțiune.
+
+1. Specificați politica câștigătorilor de îmbinare în **Clasează grupurile după** scapă jos.
+
+1. Selectați **Adăuga** și alegeți dacă doriți să adăugați mai multe câmpuri sau grupuri suplimentare la câmpuri.
+
+1. Furnizeaza un **Nume** si un **Nume de ieșire** pentru fiecare câmp combinat.
+
+1. Furnizeaza un **Nume** pentru grupul de câmpuri. 
+
+1. Selectați **Finalizat** pentru a aplica modificările.
+
+1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
 
 ## <a name="change-the-order-of-fields"></a>Modificarea ordinii câmpurilor
 

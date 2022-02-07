@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
-description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 12/02/2021
+description: 'Informații despre funcții noi, îmbunătățiri și remedieri de erori.'
+ms.date: 01/27/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,16 +9,11 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 346ef93e8471580b782618550ca4eb71b3f3c921
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7884277"
 ---
+
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +21,50 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="december-2021-updates"></a>Actualizările din decembrie 2021
+
+Actualizările din decembrie 2021 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="forward-customer-insights-logs-to-azure-monitor"></a>Redirecționați jurnalele Customer Insights către Azure Monitor
+
+Customer Insights oferă o integrare directă cu Azure Monitor. Această caracteristică include evenimente de audit și evenimente operaționale. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către Azure Storage, Azure Log Analytics sau să le transmiteți în flux către Azure Event Hubs.
+
+Pentru mai multe informații, vezi [Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)](diagnostics.md).
+
+### <a name="enrich-customer-profiles-with-engagement-data"></a>Îmbogățiți profilurile clienților cu date de implicare
+
+Utilizați datele de la Microsoft Office 365 pentru a vă îmbogăți profilurile contului de client cu informații despre angajamente prin intermediul Office 365 aplicații. Datele de implicare constau în e-mail și activitate de întâlnire, care este agregată la nivel de cont. De exemplu, numărul de e-mailuri dintr-un cont de afaceri sau numărul de întâlniri cu contul. Nu sunt partajate date despre utilizatorii individuali. Această îmbogățire este disponibilă în următoarele regiuni: Regatul Unit, Europa, America de Nord.
+
+Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de implicare (previzualizare)](enrichment-office.md)
+
+### <a name="advanced-data-unification-features"></a>Funcții avansate de unificare a datelor
+
+#### <a name="enable-conflict-resolution-policies-at-the-individual-attribute-level"></a>Activați politicile de soluționare a conflictelor la nivel de atribut individual
+
+Când deduplicați înregistrările clienților dintr-o entitate, este posibil să nu doriți să alegeți o înregistrare completă ca câștigător. Acum vă permitem să îmbinați cele mai bune câmpuri din diferite înregistrări pe baza regulilor pentru fiecare atribut. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. 
+
+Acum puteți defini reguli de îmbinare separate pentru atribute individuale în timp ce deduplicați și îmbinați înregistrările într-o singură entitate. Anterior, vă permiteam să selectați o singură regulă de îmbinare (păstrarea înregistrărilor pe baza caracterului complet al datelor recente) și acea regulă a fost aplicată la nivel de înregistrare tuturor atributelor. Acest lucru nu este ideal atunci când unele dintre datele pe care doriți să le păstrați sunt găsite în înregistrarea A și alte date bune găsite în înregistrarea B.
+
+Pentru mai multe informații, consultați [Definiți eliminarea informațiilor duplicate pentru o entitate de potrivire](match-entities.md#define-deduplication-on-a-match-entity).
+
+#### <a name="custom-rules-for-matching"></a>Reguli personalizate pentru potrivire
+
+Există momente când trebuie să specificați o excepție de la regulile generale pentru a NU potrivi înregistrările. Acest lucru se poate întâmpla atunci când mai multe persoane partajează suficiente informații, astfel încât sistemul să le potrivească ca un singur individ. De exemplu, gemeni cu același nume de familie, care locuiesc în același oraș și împărtășesc data nașterii.
+
+Excepțiile asigură că unificarea incorectă a datelor poate fi abordată în regulile de unificare. Puteți adăuga mai multe excepții la o regulă.
+
+Pentru mai multe informații, vezi [Adăugați excepții la o regulă](match-entities.md#add-exceptions-to-a-rule).
+
+#### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Furnizați politici suplimentare de rezolvare a conflictelor și permiteți gruparea atributelor
+
+Această caracteristică vă permite să tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresă1, Adresă2, Oraș, Stat și Cod. Probabil că nu dorim să îmbinăm în Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
+
+Acum puteți combina un grup de câmpuri înrudite și să aplicați grupului o singură politică de îmbinare. 
+
+Pentru mai multe informații, vezi [Combinați un grup de câmpuri](merge-entities.md#combine-a-group-of-fields).
+
 
 ## <a name="november-2021-updates"></a>Actualizări din noiembrie 2021
 

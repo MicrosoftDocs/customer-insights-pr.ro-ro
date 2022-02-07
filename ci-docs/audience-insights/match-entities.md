@@ -1,7 +1,7 @@
 ---
 title: Asociați entitățile pentru unificarea datelor
 description: Asociați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 11/24/2021
+ms.date: 01/28/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -10,14 +10,9 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-- ci-match
-ms.openlocfilehash: 253c1614725252eb4c794d77669a00b401f0198d
-ms.sourcegitcommit: 740e41ec965cee2229592a6d2610c12def116311
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 11/24/2021
-ms.locfileid: "7863826"
+  - ci-match
 ---
+
 # <a name="match-entities"></a>Potrivire entități
 
 Faza de potrivire specifică modul de combinare a seturilor de date într-un set de date de profil unificat pentru clienți. După finalizarea [pas de hartă](map-entities.md) în procesul de unificare a datelor, sunteți gata să vă potriviți cu entitățile. Faza de potrivire necesită cel puțin două entități mapate.
@@ -35,7 +30,7 @@ Fiecare potrivire unifică două sau mai multe entități într-o singură entit
 
 :::image type="content" source="media/match-page.png" alt-text="Captură de ecran a paginii Potrivire din zona Unificare a procesului de unificare a datelor.":::
   
-Entitatea primară *eCommerce: eCommerceContacts* se potrivește cu următoarea entitate *LoyaltyScheme: loyCustomers*. Setul de date care rezultă din primul pas de potrivire este asortat cu următoarea entitate dacă aveți mai mult de două entități.
+Entitatea primară *eCommerce: eCommerceContacts* se potrivește cu următoarea entitate *LoyaltyScheme: loyCustomers*. Setul de date care rezultă din primul pas de potrivire este asociat cu următoarea entitate dacă aveți mai mult de două entități.
 
 > [!IMPORTANT]
 > Entitatea pe care o alegeți ca entitate principală va servi drept bază pentru setul dvs. de date ale profilelor unificate. Entitățile suplimentare care sunt selectate în timpul fazei de potrivire vor fi adăugate la această entitate. Acest lucru nu înseamnă că entitatea unificată va include *toate* datele incluse în această entitate.
@@ -130,17 +125,21 @@ Specificarea regulilor de eliminare a informațiilor duplicate nu este obligator
 
 1. Mergeți la **Date** > **Unificare** > **Potrivire**.
 
-1. În secțiunea **Dubluri combinate**, selectați **Setare entități**. În cazul în care regulile de deduplicare sunt deja create, selectați **Editați**.
+1. În **Detaliile înregistrărilor deduplicate** secțiune, selectați **Setați entități**. În cazul în care regulile de deduplicare sunt deja create, selectați **Editați**.
 
 1. În panoul **Îmbinare preferințe**, alegeți entitățile pe care doriți să rulați deduplicarea.
 
-1. Specificați cum să combinați înregistrările duplicate și alegeți una dintre cele trei opțiuni:
-   - **Cea mai completată**: Identifică înregistrarea cu cele mai populate câmpuri de atribute drept înregistrare câștigătoare. Este opțiunea implicită de combinare.
-   - **Cea mai recentă**: Identifică înregistrarea câștigătoare pe baza celor mai recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
-   - **Cea mai puțin recentă**: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
+   1. Specificați cum să combinați înregistrările duplicate și alegeți una dintre cele trei opțiuni:
+      - **Cea mai completată**: Identifică înregistrarea cu cele mai populate câmpuri de atribute drept înregistrare câștigătoare. Este opțiunea implicită de combinare.
+      - **Cea mai recentă**: Identifică înregistrarea câștigătoare pe baza celor mai recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
+      - **Cea mai puțin recentă**: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
+
+   1. Opțional, selectați **Avansat** pentru a defini regulile de deduplicare pe atributele individuale ale unei entități. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie să specificați și un câmp de dată/ora care definește recentitatea. 
  
-   > [!div class="mx-imgBorder"]
-   > ![Reguli de eliminare a informațiilor duplicate pasul 1.](media/match-selfconflation.png "Reguli de eliminare a informațiilor duplicate pasul 1")
+      > [!div class="mx-imgBorder"]
+      > ![Reguli de eliminare a informațiilor duplicate pasul 1.](media/match-selfconflation.png "Reguli de eliminare a informațiilor duplicate pasul 1")
+
+   1. Selectați **Terminat** pentru a aplica preferințele de îmbinare pentru deduplicare.
  
 1. Odată ce entitățile sunt selectate și preferința lor de îmbinare este setată, selectați **Adăugați regulă** pentru a defini regulile de eliminare a informațiilor duplicate la nivel de entitate.
    - **Selectați câmpul** listează toate câmpurile disponibile de la acea entitate. Alegeți câmpul pe care doriți să îl verificați pentru duplicate. Alegeți câmpuri care sunt probabil unice pentru fiecare client. De exemplu, o adresă de e-mail sau combinația dintre nume, oraș și număr de telefon.
@@ -158,7 +157,7 @@ Specificarea regulilor de eliminare a informațiilor duplicate nu este obligator
 
 1. Orice regulă de potrivire personalizată definită suprascrie regulile de deduplicare. Dacă o regulă de eliminare a informațiilor duplicate identifică înregistrările de potrivire și o regulă de potrivire personalizată este setată să nu se potrivească niciodată cu aceste înregistrări, atunci aceste două înregistrări nu vor fi potrivite.
 
-1. După [rularea procesului de potrivire](#run-the-match-process), veți vedea statisticile de deduplicare în dalele de măsurători cheie.
+1. După [rulează procesul de potrivire](#run-the-match-process), veți vedea statisticile de deduplicare în plăcile de valori cheie.
 
 ### <a name="deduplication-output-as-an-entity"></a>Ieșire de deduplicare ca entitate
 
@@ -222,7 +221,23 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire.
 
 - **Ștergeți o regulă** selectând simbolul **Șterge**.
 
-## <a name="specify-custom-match-conditions"></a>Specificați condițiile de potrivire personalizate
+## <a name="advanced-options"></a>Opțiuni complexe
+
+### <a name="add-exceptions-to-a-rule"></a>Adăugați excepții la o regulă
+
+În majoritatea cazurilor, potrivirea entității duce la profiluri de utilizator unice cu date consolidate. Pentru a aborda în mod dinamic cazuri rare de fals pozitive și fals negative, puteți defini excepții pentru o regulă de potrivire. Excepțiile sunt aplicate după procesarea regulilor de potrivire și se evită potrivirea tuturor înregistrărilor, care îndeplinesc criteriile de excepție.
+
+De exemplu, dacă regula de potrivire combină nume de familie, orașul și data nașterii, sistemul va identifica gemeni cu același nume de familie care locuiesc în același oraș cu același profil. Puteți specifica o excepție care nu se potrivește cu profilurile dacă prenume din entitățile pe care le combinați nu sunt aceleași.
+
+1. Accesați **Date** > **Unificare** > **Potrivire** și selectați **Editare** pe regula la care doriți să adăugați condiții.
+
+1. În **Editați regula** panou, selectați **Adăugați o excepție**.
+
+1. Specificați criteriile de excepție. 
+
+1. Selectați **Terminat** pentru a salva regula.
+
+### <a name="specify-custom-match-conditions"></a>Specificați condițiile de potrivire personalizate
 
 Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Există patru opțiuni disponibile: 
 
@@ -241,7 +256,7 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 
 1. Alegeți opțiunea de potrivire personalizată din **Tip personalizat** meniu derulant și selectați **Descărcați șablonul**. Aveți nevoie de un șablon separat pentru fiecare opțiune de potrivire.
 
-1. Se descarcă un fișier șablon. Deschideți-l și completați detaliile. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
+1. Deschideți fișierul șablon descărcat și completați detaliile. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
     - Entity1: Vânzări
     - Entity1Key: 12345
     - Entity2: Persoană de contact
@@ -268,7 +283,7 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 
 1. Selectați **Rulare** pe pagina **Potrivire** pentru a începe procesul de potrivire. Alte reguli de potrivire specificate sunt suprascrise de configurația de potrivire personalizată.
 
-### <a name="known-issues"></a>Probleme cunoscute
+#### <a name="known-issues"></a>Probleme cunoscute
 
 - Auto-conflația nu arată datele normalizate în entitățile de deduplicare. Cu toate acestea, aplică normalizarea intern în timpul deduplicarii. Este prin proiectare pentru toate normalizările. 
 - Dacă setarea tipului semantic este eliminată în **Hartă** faza în care o regulă de potrivire folosește maparea Alias sau ocolirea personalizată, normalizarea nu va fi aplicată. Se întâmplă doar dacă ștergeți tipul semantic după configurarea normalizării în regula de potrivire, deoarece tipul semantic va fi necunoscut.

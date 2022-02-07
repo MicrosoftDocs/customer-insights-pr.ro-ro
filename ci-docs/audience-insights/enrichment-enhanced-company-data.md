@@ -1,7 +1,7 @@
 ---
 title: Îmbunătățirea datelor companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 616efe723313a6fbec7f1c7219c236a8f0aab3b2
-ms.sourcegitcommit: e141a6a34a985cca68f03082a700ed27f2f3c0c1
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 12/17/2021
-ms.locfileid: "7927597"
 ---
+
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
 Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei dvs. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
@@ -64,7 +59,7 @@ Există câteva limitări cu datele îmbunătățite. Elementele din lista de ma
 
 1. Selectați **Set de date client** și alegeți entitatea care conține adresele pe care doriți să le îmbogățiți. Puteți selecta entitatea *Client* pentru a îmbogăți adrese în toate profilurile dvs. de clienți sau selectați o entitate de segment pentru a îmbogăți adresele numai în profilurile de clienți din acel segment.
 
-1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui să fie utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
+1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
 
 1.  Hartați câmpurile companiei de la entitatea dvs. unificată client. Cu cât mapați mai mulți identificatori cheie și câmpuri, cu atât este mai probabilă o rată de potrivire mai mare.
 
@@ -82,17 +77,17 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
 
 ### <a name="overview-card"></a>Card de prezentare generală
 
 Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
 
-* **Clienții procesați și modificați** : Numărul de profiluri de clienți care au fost îmbogățite cu succes.
+* **Companiile procesate și schimbate** : Numărul de profiluri de companie clienți care au fost îmbogățite cu succes.
 
-* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+* **Companii procesate și neschimbate** : numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
 
-* **Clienții nu sunt procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+* **Companiile neprocesate și neschimbate** : Numărul de profiluri de companie client care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

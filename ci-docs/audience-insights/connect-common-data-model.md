@@ -1,7 +1,7 @@
 ---
 title: Conectați datele Common Data Model la un cont Azure Data Lake
 description: Lucrați cu datele Common Data Model folosind Azure Data Lake Storage.
-ms.date: 12/06/2021
+ms.date: 01/25/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -9,13 +9,8 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 5f9010f78ea4c24094e0df4f8e153fb832e05cc8
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900212"
 ---
+
 # <a name="connect-to-a-common-data-model-folder-using-an-azure-data-lake-account"></a>Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 
 Acest articol oferă informații despre cum să ingerați date dintr-un director Common Data Model folosindu-vă contul Azure Data Lake Storage Gen2.
@@ -26,11 +21,13 @@ Acest articol oferă informații despre cum să ingerați date dintr-un director
 
 - Ingestia de date acceptă exclusiv conturi Azure Data Lake Storage *Gen2*. Nu puteți utiliza conturile Azure Data Lake Storage Gen1 pentru a ingera date.
 
+- Contul de stocare Azure Data Lake trebuie să aibă [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace).
+
 - Pentru a vă autentifica cu o entitate principală de serviciu Azure, asigurați-vă că este configurat în entitatea găzduită. pentru mai multe informații, consultați [Conectați detaliile privind publicul la un cont Azure Data Lake Storage Gen2 cu o entitate principală de serviciu Azure](connect-service-principal.md).
 
 - Azure Data Lake la care doriți să vă conectați și să ingerați date trebuie să fie în aceeași regiune Azure ca și mediul Dynamics 365 Customer Insights. Conexiunile la un director Common Data Model dintr-un data lake dintr-o altă regiune Azure nu sunt acceptate. Pentru a afla regiunea Azure a mediului, accesați **Administrator** > **Sistem** > **Despre** în Detalii despre audiență.
 
-- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care datele sunt procesate sau stocate în Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
+- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care datele sunt procesate sau stocate în Dynamics 365 Customer Insights.Prin importul sau conectarea la date stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-common-data-model-folder"></a>Conectare la un folder Common Data Model
 

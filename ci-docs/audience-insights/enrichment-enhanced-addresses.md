@@ -1,7 +1,7 @@
 ---
 title: Îmbogățirea adresei (conține videoclip)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
-ms.date: 12/16/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,13 +9,8 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: afb1a6b4805702697889bb91ca36a96a714cba3d
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
-ms.contentlocale: ro-RO
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934938"
 ---
+
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
 Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utilizați modelele Microsoft pentru a vă normaliza și îmbogăți adresele în [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/address) pentru o mai bună acuratețe și informații.
@@ -100,17 +95,17 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
 
 ### <a name="overview-card"></a>Card de prezentare generală
 
 Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
 
-* **Clienții procesați și modificați** : Numărul de profiluri de clienți care au fost îmbogățite cu succes.
+* **Adresele procesate și schimbate** : Numărul de profiluri de clienți cu adrese care au fost îmbogățite cu succes.
 
-* **Clienții procesați și neschimbați** : numărul de profiluri de clienți care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+* **Adresele procesate și neschimbate** : numărul de profiluri de clienți cu adrese care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
 
-* **Clienții nu au fost procesați și nu au fost modificați** : numărul de profiluri care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+* **Adresele nu au fost procesate și nu au fost modificate** : numărul de profiluri cu adrese care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

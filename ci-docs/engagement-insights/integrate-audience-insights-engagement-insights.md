@@ -8,12 +8,12 @@ author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: db38778c0da862e119f9b374e07c82ead0d3a4f2
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
+ms.openlocfilehash: 6aadd6b5018f63362f86c0e3e3ce085e94c47391
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645597"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8116029"
 ---
 # <a name="create-a-link-between-audience-insights-and-engagement-insights"></a>Creați o legătură între detaliile despre public și detalii despre angajament
 
@@ -25,7 +25,7 @@ Utilizați profiluri și segmente unificate din statistici privind publicul pent
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- Profilurile cu detalii despre public trebuie să fie stocate într-un cont Azure Data Lake Storage pe care îl dețineți sau într-un data lake [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md)&ndash;gestionat. 
+- Profilurile cu detalii despre public trebuie să fie stocate într-un cont Azure Data Lake Storage pe care îl dețineți sau într-un data lake [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro)&ndash;gestionat. 
 - Mediul detaliilor dvs. despre public ar trebui să aibă un mediu Dataverse asociat. Și dacă și acel mediu utilizează Dataverse pentru stocarea datelor, asigurați-vă că verificați opțiunea **Activați partajarea datelor** în detaliile despre public. Pentru mai multe informații, consultați [Creați și configurați un mediu în statisticile publicului](../audience-insights/create-environment.md).
 - Aveți nevoie de permisiuni de administrator atât pentru mediile de angajament, cât și pentru medii de public.
 - Mediile conectate trebuie să se afle în aceeași regiune geografică.

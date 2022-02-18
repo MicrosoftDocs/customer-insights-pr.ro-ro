@@ -1,7 +1,7 @@
 ---
 title: Caracteristici noi și viitoare
-description: 'Informații despre funcții noi, îmbunătățiri și remedieri de erori.'
-ms.date: 01/27/2022
+description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
+ms.date: 03/02/2022
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -9,8 +9,13 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
+ms.openlocfilehash: 0e25ed4e4e25b130fda410d4ba1c78caded7f0f9
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088300"
 ---
-
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
 
 
@@ -21,6 +26,17 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+
+## <a name="january-2022-updates"></a>Actualizări din ianuarie 2022
+
+Actualizările din ianuarie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="sentiment-analysis-of-your-customers-feedback"></a>Analiza sentimentelor feedback-ului clientului dvs
+
+Customer Insights oferă o nouă funcție bazată pe inteligență artificială pentru a sintetiza sentimentul clienților și pentru a identifica aspecte specifice de afaceri ca oportunități pentru îmbunătățiri specifice. Analizând feedback-ul scris al clienților dvs., puteți obține informații precise la costuri reduse. Analiza sentimentelor bazată pe modele de procesare a limbajului natural (NLP) care generează două perspective derivate pentru fiecare ID de client. Un scor de sentiment (de la –5 la 5) și o listă a aspectelor de afaceri aplicabile. 
+
+Pentru mai multe informații, vezi [Analizați sentimentul în feedbackul clienților (Previzualizare)](sentiment-analysis.md).
 
 
 ## <a name="december-2021-updates"></a>Actualizările din decembrie 2021
@@ -37,7 +53,7 @@ Pentru mai multe informații, vezi [Redirecționarea conectării Dynamics 365 Cu
 
 Utilizați datele de la Microsoft Office 365 pentru a vă îmbogăți profilurile contului de client cu informații despre angajamente prin intermediul Office 365 aplicații. Datele de implicare constau în e-mail și activitate de întâlnire, care este agregată la nivel de cont. De exemplu, numărul de e-mailuri dintr-un cont de afaceri sau numărul de întâlniri cu contul. Nu sunt partajate date despre utilizatorii individuali. Această îmbogățire este disponibilă în următoarele regiuni: Regatul Unit, Europa, America de Nord.
 
-Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de implicare (previzualizare)](enrichment-office.md)
+Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de implicare (Previzualizare)](enrichment-office.md).
 
 ### <a name="advanced-data-unification-features"></a>Funcții avansate de unificare a datelor
 
@@ -59,7 +75,7 @@ Pentru mai multe informații, vezi [Adăugați excepții la o regulă](match-ent
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Furnizați politici suplimentare de rezolvare a conflictelor și permiteți gruparea atributelor
 
-Această caracteristică vă permite să tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresă1, Adresă2, Oraș, Stat și Cod. Probabil că nu dorim să îmbinăm în Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
+Această caracteristică vă permite să tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresa1, Adresa2, Orașul, Statul și Zip. Probabil că nu dorim să îmbinăm Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
 
 Acum puteți combina un grup de câmpuri înrudite și să aplicați grupului o singură politică de îmbinare. 
 

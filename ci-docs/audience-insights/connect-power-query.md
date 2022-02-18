@@ -9,12 +9,12 @@ ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: aae49be4364676ecc7a307e60eeca13859f1662a
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
-ms.translationtype: MT
+ms.openlocfilehash: 727cb9a4d754b6dbd74d6ecab1b183d41f713d8f
+ms.sourcegitcommit: aadee829eff111c95eb30c0a97a68dcc87994acf
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934993"
+ms.lasthandoff: 02/04/2022
+ms.locfileid: "8092087"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la a Power Query sursă de date
 
@@ -30,7 +30,7 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 
 1. Selectați **Adăugați sursa de date**.
 
-1. Selectați **Microsoft Power Query**, apoi selectați **Următorul**.
+1. Selectați **Microsoft Power Query**.
 
 1. Furnizați un **Nume** pentru sursa de date și selectați **Următorul** pentru a crea sursă de date.
 
@@ -47,12 +47,12 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 
 1. De asemenea, vă puteți transforma datele. Selectați o entitate de editat sau de transformat. Utilizați opțiunile din Power Query fereastra pentru a aplica transformări. Fiecare transformare este listată sub **Pași aplicați**. Power Query oferă numeroase opțiuni de transformare prefabricate. Pentru mai multe informații, vezi [Power Query Transformări](/power-query/power-query-what-is-power-query#transformations).
 
-1. Puteți adăuga entități suplimentare la sursa dvs. de date selectând **Preluare date** în dialogul **Editare interogări**.
-
    Vă recomandăm să utilizați următoarele transformări:
 
-   - Dacă ingerați date dintr-un fișier CSV, primul rând conține adesea anteturi. Accesați **Transformați tabelul** și selectați **Folosiți anteturi ca primul rând**.
-   - Asigurați-vă că tipul de date este setat corespunzător.
+   - Dacă ingerați date dintr-un fișier CSV, primul rând conține adesea anteturi. Mergi la **Transforma** și selectați **Utilizați primul rând ca antete**.
+   - Asigurați-vă că tipul de date este setat corespunzător. De exemplu, pentru câmpurile de dată, selectați un tip de dată.
+
+1. Pentru a adăuga entități suplimentare la sursă de date în fișierul **Editați interogările** dialog, accesați **Acasă** și selectați **Obțineți date**.
 
 1. Selectați **salva** în partea de jos a Power Query fereastra pentru a salva transformările. După salvare, veți găsi sursa de date la **Date** > **Surse de date**.
 
@@ -80,7 +80,7 @@ Conectori cu o bifă în **Informații despre clienți (fluxuri de date)** coloa
 
    [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
    
-3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
+3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogări** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
 
 4. Selectați **salva** în Power Query după finalizarea modificărilor pentru a salva modificările.
 

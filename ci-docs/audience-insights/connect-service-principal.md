@@ -9,21 +9,21 @@ author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: faef3583337fd495e7baf40b0a208f1d9f10281a
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: MT
+ms.openlocfilehash: 1af01e5579f85d7c8bc8976a003f53ef2dd280d1
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900290"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088162"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
 
-Acest articol discută despre modul de conectare Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
+Acest articol discută cum să vă conectați Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de cheile contului de stocare. 
 
 Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Puteți utiliza principalele de servicii în siguranță [adăugați sau editați un dosar Common Data Model ca sursă de date](connect-common-data-model.md) sau [creați sau actualizați un mediu](create-environment.md).
 
 > [!IMPORTANT]
-> - Contul Data Lake Storage care va utiliza principalul serviciului trebuie să aibă [activat spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace).
+> - Contul Data Lake Storage care va folosi principalul serviciu trebuie să fie Gen2 și să aibă [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Conturile de stocare Azure Data Lake Gen1 nu sunt acceptate.
 > - Aveți nevoie de permisiuni de administrator pentru abonamentul Azure pentru a crea un principal de serviciu.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creați un director de serviciu Azure pentru Customer Insights

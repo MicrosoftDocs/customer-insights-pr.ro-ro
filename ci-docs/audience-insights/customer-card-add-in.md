@@ -1,7 +1,7 @@
 ---
 title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (conține videoclip)
 description: Afișați date din detalii privind publicul în aplicațiile Dynamics 365 cu acest supliment.
-ms.date: 12/22/2021
+ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
+ms.openlocfilehash: ce6c8fab84fd4c5dfc9f78b91dde3483a1d358c1
+ms.sourcegitcommit: 11308ed275b4b25a35576eccfcae9dda9e2c2784
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 02/02/2022
+ms.locfileid: "8085263"
 ---
-
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
 
 
@@ -113,5 +118,26 @@ Programul de completare pentru Customer Card nu se actualizează automat. Pentru
 
 1. După ce începeți procesul de actualizare, veți vedea un indicator de încărcare până la finalizarea actualizării. Dacă nu există o versiune mai nouă, actualizarea va afișa un mesaj de eroare.
 
+## <a name="troubleshooting"></a>Depanare
+
+### <a name="controls-from-customer-card-add-in-dont-find-data"></a>Comenzile din Add-in-ul pentru cardul de client nu găsesc date
+
+**Problemă:**
+
+Chiar și cu câmpuri de ID configurate corect, controalele nu pot găsi date pentru niciun client.  
+
+**Rezolvare:**
+
+1. Asigurați-vă că ați configurat suplimentul pentru card conform instrucțiunilor: [Configurați suplimentul pentru cardul de client](#configure-the-customer-card-add-in) 
+
+1. Examinați configurația pentru absorbția datelor. Editați sursă de date pentru sistemul Dynamics 365 care conține GUID-ul ID-ului de contact. Dacă ID-ul contactului GUID este afișat cu caractere majuscule în Power Query editor, încercați următoarele: 
+    1. Editați sursă de date pentru a deschide sursă de date în Power Query Editor.
+    1. Selectați coloana ID de contact.
+    1. Selectați **Transforma** în bara de antet pentru a vedea acțiunile disponibile.
+    1. Selectați **litere mici**. Validați dacă GUID-urile din tabel sunt acum litere mici.
+    1. Salvați sursa de date.
+    1. Rulați procesele de asimilare, unificare și în aval de date pentru a propaga modificările la GUID. 
+
+După finalizarea reîmprospătării complete, comenzile Add-in pentru cardul client ar trebui să arate datele așteptate. 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

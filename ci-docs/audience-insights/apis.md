@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 7201ed9e5315d73e6b9c25b4bc4c4e4ed839a215
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
-ms.translationtype: MT
+ms.openlocfilehash: 413746e1896928d2c648ba59d67d4247a173da57
+ms.sourcegitcommit: 21854bb66ffa53948f659886f2e131236539ae88
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732279"
+ms.lasthandoff: 02/08/2022
+ms.locfileid: "8100155"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
-Dynamics 365 Customer Insights oferă API-uri pentru a vă crea propriile aplicații pe baza datelor dvs. din Customer Insights.
+Dynamics 365 Customer Insights furnizează API-uri pentru a vă crea propriile aplicații pe baza datelor dvs. în Customer Insights.
 
 > [!IMPORTANT]
 > Detaliile acestor API-uri sunt listate în [Referința de API-uri Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Acestea includ informații suplimentare despre operațiuni, parametri și răspunsuri.
@@ -35,7 +35,7 @@ Acest articol descrie cum să accesați API-urile Customer Insights, să creați
  
    Activarea API-urilor creează o cheie de abonament primară și una secundară pentru instanța dvs. care este folosită în solicitările API. Puteți regenera cheile selectând **Regenerare cheie primară** sau **Regenerare cheie secundară** din **Administrator** > **Permisiuni** > **API-uri**.
 
-   :::image type="content" source="media/enable-apis.gif" alt-text="Activați API-urile Customer Insights.":::
+<!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
 1. Selectați **Explorați API-urile noastre** pentru [a încerca API-urile](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
@@ -49,7 +49,7 @@ Acest articol descrie cum să accesați API-urile Customer Insights, să creați
 
 Răspunsul HTTP va apărea curând mai jos.
 
-   :::image type="content" source="media/try-apis.gif" alt-text="Cum să testați API-urile.":::
+<!--   :::image type="content" source="media/try-apis.gif" alt-text="How to test the APIs."::: -->
 
 ## <a name="create-a-new-app-registration-in-the-azure-portal"></a>Creați o nouă înregistrare a aplicației în portalul Azure
 
@@ -65,7 +65,7 @@ Acești pași vă ajută să începeți să utilizați API-urile Customer Insigh
 
 1. În noua înregistrare a aplicației, accesați **Permisiuni API**.
 
-   :::image type="content" source="media/app-registration-1.gif" alt-text="Cum să setați permisiunile API în înregistrarea aplicației.":::
+<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
 
 1. Selectați **Adăugați o permisiune** și selectați **Customer Insights** în panoul lateral.
 
@@ -77,7 +77,7 @@ Acești pași vă ajută să începeți să utilizați API-urile Customer Insigh
 
 Puteți utiliza ID-ul aplicației/clientului pentru această înregistrare a aplicației cu Biblioteca de autentificare Microsoft (MSAL) pentru a obține un token pentru purtător pe care îl trimiteți cu cererea dvs. către API.
 
-:::image type="content" source="media/grant-admin-consent.gif" alt-text="Cum se acordă consimțământul de administrator.":::
+<!-- :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 Pentru mai multe informații despre MSAL, consultați [Prezentare generală a bibliotecii de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
@@ -103,7 +103,7 @@ Pentru informații despre utilizarea API-urilor în bibliotecile noastre client,
 
 1. Selectați **Acordă consimțământul administratorului pentru...** pentru a finaliza înregistrarea aplicației.
 
-   :::image type="content" source="media/grant-admin-consent.gif" alt-text="Cum se acordă consimțământul de administrator.":::
+ <!--  :::image type="content" source="media/grant-admin-consent.gif" alt-text="How to grant admin consent."::: -->
 
 1. În concluzie, trebuie să adăugăm numele înregistrării aplicației ca utilizator în Customer Insights.  
    
@@ -117,19 +117,19 @@ Această secțiune vă ajută să începeți să utilizați bibliotecile client 
 
 ### <a name="c-nuget"></a>C# NuGet
 
-Aflați cum să începeți să utilizați bibliotecile client C# din NuGet.org. Pentru mai multe informații despre pachetul NuGet, consultați [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). În prezent, acest pachet vizează cadrele netstandard2.0 și netcoreapp2.0.
+Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org. Pentru mai multe informații despre pachetul NuGet, consultați [Microsoft.Dynamics.CustomerInsights.Api](https://www.nuget.org/packages/Microsoft.Dynamics.CustomerInsights.Api/). În prezent, acest pachet vizează cadrele netstandard2.0 și netcoreapp2.0.
 
 #### <a name="add-the-c-client-library-to-a-c-project"></a>Adăugați biblioteca client C# la un proiect C#
 
-1. În Visual Studio, deschideți **NuGet Manager de pachete** pentru proiectul dvs.
+1. În Visual Studio, deschideți **Manager pachet NuGet** pentru proiectul dumneavoastră.
 
 1. Căutați **Microsoft.Dynamics.CustomerInsights.Api**.
 
 1. Selectați **Instalare** pentru a adăuga pachetul la proiect.
  
-   Alternativ, rulați această comandă în **NuGet Consola de gestionare a pachetelor** :`Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
+   Alternativ, rulați această comandă în **Consola Manager pachet NuGet**: `Install-Package -Id Microsoft.Dynamics.CustomerInsights.Api -Source nuget.org -ProjectName <project name> [-Version <version>]`
 
-   :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Adăugați pachetul NuGet la proiectul Visual Studio.":::
+ <!--  :::image type="content" source="media/visual-studio-nuget-package.gif" alt-text="Add NuGet package to Visual Studio project."::: -->
 
 #### <a name="use-the-c-client-library"></a>Utilizați biblioteca de client C#
 
@@ -141,7 +141,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# din NuGet.org. 
 
 1. Introduceți această `HttpClient` în construcția clientului `CustomerInsights`.
 
-   :::image type="content" source="media/httpclient-sample.png" alt-text="Eșantion de httpclient.":::
+<!--   :::image type="content" source="media/httpclient-sample.png" alt-text="Sample of httpclient."::: -->
 
 1. Efectuați apeluri cu clientul pentru „metodele de extensie”,"—de exemplu, `GetAllInstancesAsync`. Dacă accesul la `Microsoft.Rest.HttpOperationResponse` subiacent este preferat, utilizați „metode de mesaj http”—de exemplu `GetAllInstancesWithHttpMessagesAsync`.
 

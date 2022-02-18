@@ -10,12 +10,12 @@ author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 4f26220f6ba7f5b5ae00c11216129f9ad814b77d
-ms.sourcegitcommit: 626d485dae1e001e63e4d4bf78f6770766822ba0
-ms.translationtype: MT
+ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
+ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/06/2021
-ms.locfileid: "7892353"
+ms.lasthandoff: 02/03/2022
+ms.locfileid: "8088128"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creați un mediu în detalii despre public
 
@@ -28,7 +28,7 @@ Organizațiile pot crea *două* medii pentru fiecare licență Customer Insights
 
 ## <a name="create-a-new-environment"></a>Creați un mediu nou
 
-După achiziționarea unei licențe de abonament pentru Customer Insights, administratorul global al chiriașului Microsoft 365 primește un e-mail care îi invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. 
+După achiziționarea unei licențe de abonament pentru Customer Insights, administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. 
 
 O experiență ghidată vă ajută să parcurgeți pașii pentru a aduna toate informațiile necesare pentru un nou mediu. Aveți nevoie de [permisiuni de administrator](permissions.md) în perspectivele publicului pentru a crea sau gestiona medii.
 
@@ -64,7 +64,7 @@ Prin salvarea datelor în Azure Data Lake Storage, sunteți de acord că datele 
 > Customer Insights acceptă în prezent următoarele:
 > - Entități ingerate din fluxurile de date Power BI care sunt stocate într-un Data Lake gestionat de Microsoft Dataverse.  
 > - Conturi Azure Data Lake Storage din aceeași regiune Azure pe care ați selectat-o la crearea mediului.
-> - Conturi Azure Data Lake Storage care au *spațiu de nume ierarhic*.
+> - Azure Data Lake Storage conturi care sunt Gen2 și au *spațiu de nume ierarhic* activat. Conturile de stocare Azure Data Lake Gen1 nu sunt acceptate.
 
 Pentru opțiunea Azure Data Lake Storage, puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. Pentru mai multe informații, vedeți [Conectați-vă la un cont Azure Data Lake Storage folosind un cont principal de serviciu Azure](connect-service-principal.md). Numele **Recipient** va fi `customerinsights` și nu poate fi schimbat.
 

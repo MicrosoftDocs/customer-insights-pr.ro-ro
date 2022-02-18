@@ -3,18 +3,18 @@ title: Întrebări frecvente Versiune de încercare Dynamics 365 Customer Insigh
 description: Soluții la întrebări comune legate de configurarea și gestionarea versiunii de încercare Customer Insights. Aflați să rezolvați problemele specifice platformei și aplicației.
 author: m-hartmann
 ms.author: mhart
-ms.date: 09/30/2021
+ms.date: 02/10/2022
 ms.topic: get-started
 ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 2837ae13b4150310193a2d09d59aed66b4a69c69
-ms.sourcegitcommit: e6020c178a61beb0ee31a031c11ded914d10d995
+ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
+ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/13/2021
-ms.locfileid: "7642902"
+ms.lasthandoff: 02/12/2022
+ms.locfileid: "8115983"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 
@@ -24,7 +24,7 @@ ms.locfileid: "7642902"
 
 Acceastă aplicație este un serviciu bazat pe cloud care nu necesită alt software special în afara unui browser de web actualizat, deși se aplică unele restricții. Pentru cea mai bună experiență de încercare, evitați accesarea site-ului de încercare în modul incognito și alegeți locația de încercare cea mai apropiată de dvs. [Aflați mai multe despre cerințele aplicației web.](/power-platform/admin/web-application-requirements)
 
-### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Cum mă înscriu la versiunea încercare fără o entitate găzduită Microsoft 365?
+### <a name="how-do-i-sign-up-for-the-trial-without-a-microsoft-365-tenant"></a>Cum mă înscriu pentru încercare fără a Microsoft 365 chiriaş?
 
 Puteți introduce o adresă de e-mail care nu este de serviciu și vă vom crea un cont și o entitate găzduită.
 
@@ -43,7 +43,7 @@ Când vă înscrieți pentru versiunea de încercare, veți primi un e-mail cu d
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Cum adaug mai mulți utilizatori la o versiune de încercare?
 
-Pentru a adăuga utilizatori, accesați [centrul de administrare Microsoft 365](https://admin.microsoft.com) utilizând contul de administrator pentru versiunea de încercare. Urmați [instrucțiunile centrului de administrare](/microsoft-365/admin/add-users/add-users) pentru a adăuga utilizatori până la limita licenței versiunii de încercare. Dacă utilizatorul pe care îl adăugați are deja un cont Microsoft 365, atribuiți-i un rol de securitate corespunzător în organizația de încercare. Pentru mai multe informații, consultați [Atribuiți un rol de securitate unui utilizator](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Pentru a adăuga utilizatori, accesați [Microsoft 365 centru de administrare](https://admin.microsoft.com) folosind contul de administrator de încercare. Urmați [instrucțiunile centrului de administrare](/microsoft-365/admin/add-users/add-users) pentru a adăuga utilizatori până la limita licenței versiunii de încercare. Dacă utilizatorul pe care îl adăugați are deja un Microsoft 365 cont, atribuiți-le un rol de securitate corespunzător în organizația de încercare. Pentru mai multe informații, vezi [Atribuiți un rol de securitate unui utilizator](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Câți utilizatori pot adăuga în mediul meu de încercare?
 
@@ -63,7 +63,7 @@ Puteți extinde procesul direct în aplicație. Puteți prelungi versiunea de î
 
 În general, vă recomandăm să începeți din nou cu propriile date atunci când faceți upgrade la versiunea plătită a Customer Insights. 
 
-Opțional, dacă utilizați statistici privind publicul, puteți copia datele dintr-un mediu de încercare dacă achiziționați Customer Insights. Trebuie să fiți administratorul perioadei de încercare Customer Insights și administratorul global al entității găzduite Microsoft 365 sau administratorul Dynamics 365 din organizația dvs. pentru a migra setările dintr-un mediu de încercare într-un mediu plătit. 
+Opțional, dacă utilizați statistici privind publicul, puteți copia datele dintr-un mediu de încercare dacă achiziționați Customer Insights. Trebuie să fiți administratorul testului Customer Insights și administratorul global al dvs Microsoft 365 chiriașului sau administratorul Dynamics 365 din organizația dvs. pentru a migra setările dintr-un mediu de probă într-un mediu cu plată. 
 
 După ce v-ați conectat pentru prima dată la instanța dvs. plătită de Customer Insights, vi se cere să creați un mediu nou. În acest proces, puteți alege să copiați configurația dintr-un mediu existent și să migrați majoritatea setărilor. Dacă aveți permisiunile menționate mai sus, mediul de încercare se va afișa în această listă. Pentru mai multe informații, consultați [Copiați configurația mediului](audience-insights/manage-environments.md#copy-the-environment-configuration).
 
@@ -82,8 +82,9 @@ După ce vă înscrieți pentru versiunea de încercare, veți ajunge în ecranu
 
 Majoritatea caracteristicilor capabilităților Customer Insights sunt disponibile în versiunea de încercare.
 
-Următoarea caracteristică nu este disponibilă: 
+Următoarele caracteristici sunt **nu e disponibil**: 
 - Nu puteți crea medii noi care utilizează propriul cont de stocare Azure Data Lake Storage.
+- Nu puteți șterge mediul de încercare. 
 
 ### <a name="how-long-does-the-trial-last"></a>Cât timp durează versiunea de încercare?
 

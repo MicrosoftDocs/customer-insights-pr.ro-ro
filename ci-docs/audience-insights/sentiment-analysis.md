@@ -9,8 +9,13 @@ ms.topic: conceptual
 author: wmelewong
 ms.author: wameng
 manager: shellyha
+ms.openlocfilehash: 8a4473c1c395bbcf8efa2bfa24cddb82e1784279
+ms.sourcegitcommit: 15ec8c5f54242feda9489e7665726ec5e0983dc9
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 01/19/2022
+ms.locfileid: "8008780"
 ---
-
 # <a name="analyze-sentiment-in-customer-feedback-preview"></a>Analizați sentimentul în feedbackul clienților (Previzualizare)
 
 Clienții se așteaptă la produse, servicii și experiențe de înaltă calitate în zilele noastre. În special clienții care își împărtășesc feedback-ul. Este foarte dificil pentru organizații să analizeze un volum din ce în ce mai mare de date fără a reduce acuratețea și costul forței de muncă mai mare. Dynamics 365 Customer Insights oferă un model de analiză a sentimentelor pentru feedback-ul clienților, care permite organizațiilor să își analizeze datele mai precis și la un cost mai mic.

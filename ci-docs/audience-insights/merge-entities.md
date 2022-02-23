@@ -10,9 +10,14 @@ ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
 searchScope:
-  - ci-merge
+- ci-merge
+ms.openlocfilehash: eb08ab38d23bf22a17896b63c93e6821431b002a
+ms.sourcegitcommit: 3807202283dd116a30f900a163d8141db621e5a8
+ms.translationtype: HT
+ms.contentlocale: ro-RO
+ms.lasthandoff: 01/28/2022
+ms.locfileid: "8046616"
 ---
-
 # <a name="merge-entities"></a>Îmbinare entități
 
 Faza de îmbinare este ultima fază din procesul de unificare a datelor. Scopul său este reconcilierea datelor conflictuale. Exemple de date conflictuale ar putea include un nume de client care se găsește în două seturi de date, dar care apare puțin diferit în fiecare („Grant Marshall” față de „Grant Marshal”) sau un număr de telefon care diferă în format (617-803-091X versus 617803091X ). Fuzionarea acelor puncte de date conflictuale se face pe baza atributelor.

@@ -1,26 +1,26 @@
 ---
-title: Gestionați cookie-urile și consimțământul utilizatorului pentru a stoca datele de utilizator în Dynamics 365 Customer Insights
+title: Gestionați cookie-urile și consimțământul utilizatorului pentru a stoca datele utilizatorului
 description: Înțelegeți modul în care cookie-urile și consimțământul utilizatorului sunt utilizate pentru a identifica vizitatorii site-ului web.
 author: mochimochi016
 ms.reviewer: mhart
 ms.author: jefhar
-ms.date: 09/27/2021
+ms.date: 10/30/2020
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: c824e50b723fe7f3b421048bb6ab96b7a9efc31f
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 7b3195a92c969ab36e5b43f4c2e4221ff477a0a8958838e1256528f58fe13dce
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558886"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036753"
 ---
 # <a name="manage-cookies-and-user-consent"></a>Gestionați cookie-urile și consimțământul utilizatorului
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Capacitatea de statistici de implicare Dynamics 365 Customer Insights folosește cookie-uri și chei (`localStorage`) pentru identificarea vizitatorilor site-ului.
+Capacitatea Dynamics 365 Customer Insights Engagement Insight folosește cookie-uri și stocare locală (`localStorage`) pentru a identifica vizitatorii site-ului.
 
 Cookie-urile sunt fișiere mici care stochează informații despre interacțiunile unui utilizator cu site-ul web. Sunt stocate în browsere web. Când utilizatorii vizitează un site web pentru care utilizatorii dvs. au stocat cookie-uri, browserul trimite aceste informații către server, care returnează informații care sunt unice pentru utilizator. Aceasta este tehnologia care permite, de exemplu, unui coș de cumpărături online să păstreze articolele selectate în el, chiar dacă un utilizator navighează departe de site.
 
@@ -28,29 +28,11 @@ Cookie-urile sunt fișiere mici care stochează informații despre interacțiuni
 
 Așa numitul [Regulament general privind protecția datelor (GDPR)](/dynamics365/get-started/gdpr/) este un regulament al Uniunii Europene (UE) care impune modul în care organizațiile ar trebui să gestioneze confidențialitatea și securitatea utilizatorilor lor. Cookie-urile stochează sau colectează adesea „date cu caracter personal”, cum ar fi un identificator online, care este acoperit de GDPR. Dacă firma dvs. angajează și/sau vinde către persoanele vizate din UE, GDPR vă afectează. [Aflați mai multe despre modul în care Microsoft vă poate ajuta să respectați GDPR](https://www.microsoft.com/trust-center/privacy/gdpr-faqs).
 
-Pentru a permite SDK-urilor de implicare să stocheze cookie-uri sau alte informații sensibile, trebuie să specificați dacă utilizatorii dvs. au consimțit. Acest lucru se întâmplă la inițializarea SDK prin setarea unui câmp `userConsent` din configurație.
+Pentru a permite SDK-urilor de implicare să stocheze cookie-uri sau alte informații sensibile, trebuie să specificați dacă utilizatorii dvs. au consimțit. Acest lucru se întâmplă la inițializarea SDK-ului.
 
 Dacă indicați că nu există consimțământul utilizatorului, SDK-ul nu va stoca date și nu va trimite evenimente care pot fi utilizate pentru a urmări comportamentul utilizatorului. Orice date stocate anterior vor fi șterse din browser.
 
 Dacă nu este specificată nicio valoare de consimțământ a utilizatorului, SDK-ul va presupune că utilizatorul a consimțit. Aceasta înseamnă că, dacă dvs. (în calitate de client al nostru) nu specificați o valoare pentru consimțământul utilizatorului în SDK, datele vor fi colectate. Cu toate acestea, dacă specificați că valoarea pentru consimțământul utilizatorului trebuie să fie „adevărată”, datele nu vor fi colectate dacă un utilizator refuză sau nu furnizează consimțământul explicit.
-
-Mai jos este un fragment de cod pentru a inițializa SDK-ul web cu acordul utilizatorului:
-```js
-<script>
-  (function(a,t,i){var e="MSEI";var s="Analytics";var o=e+"queue";a[o]=a[o]||[];var r=a[e]||function(n){var t={};t[s]={};function e(e){while(e.length){var r=e.pop();t[s][r]=function(e){return function(){a[o].push([e,n,arguments])}}(r)}}var r="track";var i="set";e([r+"Event",r+"View",r+"Action",i+"Property",i+"User","initialize","teardown"]);return t}(i.name);var n=i.name;if(!a[e]){a[n]=r[s];a[o].push(["new",n]);setTimeout(function(){var e="script";var r=t.createElement(e);r.async=1;r.src=i.src;var n=t.getElementsByTagName(e)[0];n.parentNode.insertBefore(r,n)},1)}else{a[n]=new r[s]}if(i.user){a[n].setUser(i.user)}if(i.props){for(var c in i.props){a[n].setProperty(c,i.props[c])}}a[n].initialize(i.cfg)})(window,document,{
-    src:"https://download.pi.dynamics.com/sdk/web/msei-1.min.js",
-    name:"EiJS",
-    cfg:{
-      ingestionKey:"YOUR-INGESTIONKEY",
-      autoCapture:{
-        view:true,
-        click:true
-      },
-      userConsent: true
-    }
-  });
-</script>
-```
 
 ## <a name="visitor-data-storage-in-engagement-insights-capability"></a>Stocarea datelor vizitatorilor în funcție de capacitatea de analiză a implicării
 
@@ -61,14 +43,14 @@ Mai jos este un fragment de cod pentru a inițializa SDK-ul web cu acordul utili
 
 ### <a name="local-storage"></a>Stocare locală
 
-Capacitatea de informare a angajamentului folosește și chei (`localStorage`) pentru urmărirea datelor nesensibile. Aceste date sunt stocate complet în browserul propriu-zis, fără trafic trimis către sau de la serverele dvs.
+Capacitatea Detalii despre angajamente folosește și stocarea locală (`localStorage`) pentru a urmări datele nesensibile. Aceste date sunt stocate complet în browserul propriu-zis, fără trafic trimis către sau de la serverele dvs.
 
-- *EISession.Id*
+- *EISession.Id* 
     - Stochează informații despre sesiunea utilizatorului în curs, cum ar fi ID-ul sesiunii, când a început și când expiră.
 - *EISession.Previous*
     - Stochează adresa URL a paginii vizitate anterior în sesiunea curentă.
-
-Cheile din spațiul de stocare local nu expiră automat și vor fi resetate în următoarea sesiune SDK.
+    
+Cheile din spațiul de stocare local nu expiră automat. Acestea vor fi resetate în următoarea sesiune de către SDK.
 
 ## <a name="deleting-cookies"></a>Ștergerea cookie-urilor
 

@@ -1,7 +1,7 @@
 ---
 title: Mapări semantice (Versiune preliminară)
 description: Prezentare generală a mapărilor semantice și modul de utilizare a acestora.
-ms.date: 12/01/2021
+ms.date: 09/28/2021
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-ms.openlocfilehash: 08b257b97704b219bb3277042516e00deb886a49
-ms.sourcegitcommit: 58651d33e0a7d438a2587c9ceeaf7ff58ae3b648
+ms.openlocfilehash: b0884b8b6a2c5abe4b3967d1b57d11a3a6d65c5b
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/02/2021
-ms.locfileid: "7881845"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7622950"
 ---
-# <a name="semantic-mappings-preview"></a>Mapări semantice (Versiune preliminară)
+# <a name="semantic-mappings"></a>Mapări semantice
 
 Asocierile semantice vă permit să vă mapați datele de non-activitate în scheme predefinite. Aceste scheme ajută statisticile publicului să vă înțeleagă mai bine atributele de date. Maparea semantică și datele furnizate permit noi informații și caracteristici în detaliile despre public. Pentru a vă mapa datele de activitate cu schemele, consultați documentația [activități](activities.md).
 
@@ -75,7 +75,8 @@ Asocierile semantice vă permit să vă mapați datele de non-activitate în sch
 
 1. Pentru a rula o mapare semantică într-un punct ulterior, selectați maparea semantică și selectați **Reîmprospătare**.
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+> [!TIP]
+> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectarea **Vizualizare detalii** pentru una dintre sarcinile jobului, găsiți informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate sarcinii.
 
 ## <a name="manage-existing-semantic-mappings"></a>Gestionați mapările semantice existente
 
@@ -90,41 +91,5 @@ Pe **Date** > **Mapări semantice (previzualizare)**, puteți vizualiza toate ma
 - **Redenumiți**: Deschide un dialog în care puteți introduce un nume diferit pentru maparea semantică selectată. Selectați **Salvare** pentru a vă aplica modificările.
 
 - **Șterge**: Deschide un dialog pentru a confirma ștergerea mapării semantice selectate. De asemenea, puteți șterge mai multe mapări semantice simultan selectând mapările semantice și pictograma de ștergere. Selectați **Ștergere**, apoi confirmați ștergerea.
-
-## <a name="use-a-contactprofile-semantic-entity-mapping-to-create-contact-level-activities"></a>Utilizați o mapare a entităților semantice ContactProfile pentru a crea activități la nivel de contact
-
-După crearea unui *Profil de contact* cartografierea entităților semantice, puteți captura activitățile contactelor. Vă permite să vedeți în cronologia activității pentru un cont care persoană de contact a fost responsabilă pentru fiecare activitate. Majoritatea pașilor urmează configurația tipică de mapare a activității.
-
-   > [!NOTE]
-   > Pentru ca activitățile la nivel de contact să funcționeze, trebuie să aveți ambele **Cont ID** și **ContactID** atribute pentru fiecare înregistrare din datele dvs. de activitate.
-
-1. [Definiți a *Profil de contact* maparea entităților semantice.](#define-a-contactprofile-semantic-entity-mapping) și rulați maparea semantică.
-
-1. În Detalii despre audiență, accesați **Date** > **Activități**.
-
-1. Selectați **Adăugați o activitate** pentru a crea o activitate nouă.
-
-1. Denumiți activitatea, selectați entitatea de activitate sursă și selectați cheia primară a entității de activitate.
-
-1. În **Relații** pas, creați o relație indirectă între datele dvs. sursă de activitate și conturi, folosind datele dvs. de contact ca entitate intermediară. Pentru mai multe informații, vezi [căi de relație directe și indirecte](relationships.md#relationship-paths).
-   - Relație de exemplu pentru o activitate numită *Achiziții*:
-      - **Date privind activitatea sursă de achiziții** > **Datele de contact** asupra atributului **ContactID**
-      - **Datele de contact** > **Datele contului** asupra atributului **Cont ID**
-
-   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemplu de configurare a relației.":::
-
-1. După configurarea relațiilor, selectați **Următorul** și finalizați configurația de cartografiere a activității. Pentru pașii detaliați despre crearea activității, consultați [defini o activitate](activities.md).
-
-1. Rulați mapările activității dvs.
-
-1. Activitățile tale la nivel de contact vor fi acum vizibile pe cronologia clientului.
-
-   :::image type="content" source="media/Contact_Activities2.png" alt-text="Rezultatul final după configurarea activităților de contact":::
-
-### <a name="contact-level-activity-timeline-filtering"></a>Filtrarea cronologiei activității la nivel de contact
-
-După ce configurați o mapare a activității la nivel de contact și o rulați, cronologia activității pentru clienții dvs. va fi actualizată. Include ID-urile sau numele lor, în funcție de dvs *Profil de contact* configuratie, pentru activitatile asupra carora au actionat. Puteți filtra activitățile după persoane de contact din cronologie pentru a vedea anumite persoane de contact care vă interesează. În plus, puteți vedea toate activitățile care nu sunt alocate unui anumit contact selectând **Activități care nu sunt mapate la o persoană de contact**.
-
-   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opțiuni de filtrare disponibile pentru activitățile la nivel de contact.":::
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

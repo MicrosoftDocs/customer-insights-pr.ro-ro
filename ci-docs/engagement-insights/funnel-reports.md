@@ -4,17 +4,17 @@ description: Cum să utilizați rapoartele de pâlnie pentru a înțelege modul 
 ms.reviewer: mhart
 ms.author: kamacdon
 author: kamacdon
-ms.date: 09/21/2021
+ms.date: 09/17/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: efb10f2664630a5851d9582ff09c378c01777b96
-ms.sourcegitcommit: f1e3cc51ea4cf68210eaf0210ad6e14b15ac4fe8
+ms.openlocfilehash: 901e7ec50037d66c7c5ceb635d1c6cda6cfff83b
+ms.sourcegitcommit: 3bafa27adae113948636b30c7462e0af060c7131
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "7558957"
+ms.lasthandoff: 09/17/2021
+ms.locfileid: "7498657"
 ---
 # <a name="create-and-manage-funnel-reports"></a>Creați și gestionați rapoarte de pâlnie
 
@@ -163,23 +163,13 @@ Puteți schimba numele unui raport de pâlnie, îl puteți șterge sau modifica 
 
 Statisticile despre implicare oferă acum informații despre canal pentru clienți. Utilizați informații despre canal pentru a obține o perspectivă mai profundă asupra comportamentului clienților cu privire la pașii din raportul dvs. privind canalele. Când creați și salvați un nou raport de canal, statistici despre canal sunt generate automat pentru raportul dvs. 
 
-:::image type="content" source="media/funnel-insights.png" alt-text="Detalii despre pâlnie.":::
-
-> [!NOTE]
-> Detaliile de pâlnie pot fi generate numai pentru pașii canalului care **nu** includ dimensiuni personalizate. Pentru a genera detalii de pâlnie pentru toți pașii din pâlnia dvs., utilizați dimensiuni de livrare pentru statistici de implicare pentru a crea pașii pâlniei. 
-
 Puteți vizualiza statistici privind canalele din următoarele categorii, atât la nivel principal, cât și la nivel de pas: 
 
- - Rata de conversie
- -    Rata conversiei dintre Checkout și Buy este de 22%.
+ - Rata de conversie 
  - Timp de tranziție 
- -    Timpul mediu de tranziție dintre Cart și Checkout este de 23 minute. 
  - Timpul de finalizare 
- -    Timpul mediu necesar clienților pentru a finaliza pâlnia este de 47 de minute. 
 
 Utilizați aceste informații pentru a explora mai adânc comportamentul clienților și pentru a înțelege mai bine punctele de renunțare și conversiile pentru raportul dvs. de canal. 
-
-Pentru a compara statistici în diferiți pași, selectați **A se vedea defalcarea pasului** sau **Comparați cu alți pași** din cardurile de informații. Acestea vor afișa un grafic cu bare comparând valori pentru fiecare pas al pâlniei. 
 
 Statisticile despre pâlnie sunt recalculate la fiecare 24 de ore sau când **Salvați** raportul dvs. de pâlnie. 
 

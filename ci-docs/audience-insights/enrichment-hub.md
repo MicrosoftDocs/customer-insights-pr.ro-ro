@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 02/07/2022
+ms.date: 09/30/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -10,12 +10,12 @@ author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 5c3dda3b9bae828857258025ff79958ee22bdb6f
-ms.sourcegitcommit: a399bd17523c8d06afd7d78af4fc711f93c0e8be
+ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
+ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/07/2022
-ms.locfileid: "8098804"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "7673014"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -37,17 +37,14 @@ Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptat
 - [Date demografice](enrichment-experian.md) furnizate de Experian
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
-- [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
 
 # <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 - [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
 - [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft 
-- [Date îmbunătățite ale companiei](enrichment-enhanced-company-data.md) furnizate de Microsoft
 - [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
-- [Date despre implicarea contului](enrichment-office.md) furnizate de Microsoft
 
 ---
 

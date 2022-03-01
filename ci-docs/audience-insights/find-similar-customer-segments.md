@@ -1,5 +1,5 @@
 ---
-title: Găsiți clienți similari cu AI (conține videoclip)
+title: Găsiți clienți similari cu AI
 description: Găsiți segmente de clienți similare cu inteligență artificială.
 ms.date: 06/25/2020
 ms.service: customer-insights
@@ -9,18 +9,16 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: de337ae989558c81fff25a6ff7cca01890ed306b
-ms.sourcegitcommit: 9132fdf54070cc551ab878378078e6285852818f
+ms.openlocfilehash: ee4d24ae0ae39c689956f70efe46c4226876484e6da6282dc874cec37bd287e2
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/18/2021
-ms.locfileid: "7934855"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7034558"
 ---
 # <a name="similar-customers-preview"></a>Clienți similari (previzualizare)
 
 Această caracteristică vă permite să găsiți clienți similari în baza de clienți utilizând inteligența artificială. Trebuie să aveți cel puțin un segment creat pentru a utiliza această caracteristică. Extinderea criteriilor unui segment existent vă ajută să găsiți clienți similari cu acel segment.
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
 > *Găsiți clienți similari* utilizează mijloace automate pentru a evalua datele și a face predicții pe baza acestor date și, prin urmare, are capacitatea de a fi utilizat ca metodă de profilare, deoarece acest termen este definit prin Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv predicțiile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.

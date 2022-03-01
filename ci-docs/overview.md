@@ -7,12 +7,13 @@ ms.date: 07/30/2021
 ms.service: customer-insights
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: b2dc5a1159f8baea1fa3c686de5ac294842b3e26
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.custom: intro-internal
+ms.openlocfilehash: 651bd151a77b9d7f44d5fcca15da0f131b9fb3f07ffc89bfac9c0aa6f799e9b1
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977613"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7036526"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Prezentare generală a produsului pentru Dynamics 365 Customer Insights
 
@@ -32,10 +33,5 @@ Pentru a alege o capacitate
 1. În panoul de navigare, selectați **Toate aplicațiile** pentru a deschide fereastra **Alegeți concentrarea**.
 1. Selectați **Accesați acum** pentru a naviga la capacitatea dorită.
 
-## <a name="pricing-and-licensing"></a>Prețuri și licențiere
-
-Customer Insights este licențiat per entitate găzduită și include mai multe funcții. Puteți achiziționa capacitate suplimentară și licență pentru a crește cota implicită. 
-- [Prezentare generală a prețurilor](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
-- Capacitate și drepturi: [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

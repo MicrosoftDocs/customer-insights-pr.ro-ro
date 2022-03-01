@@ -1,27 +1,27 @@
 ---
 title: Robot pentru Microsoft Teams
 description: Căutați profiluri unificate ale clienților în Microsoft Teams cu ajutorul unui robot.
-ms.date: 10/08/2021
+ms.date: 04/21/2020
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
+ms.topic: conceptual
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 6a9575de922bc2ff9c9d2212b99b4c0c8b61ab0e
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: 45ea23fbefe5f1d44c3961183b76d2cc5c45355e
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967834"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406695"
 ---
 # <a name="teams-bot-for-dynamics-365-customer-insights-preview"></a>Robot Teams pentru Dynamics 365 Customer Insights (previzualizare)
 
 Conectați-vă cu Microsoft Teams pentru a permite unui robot să caute profiluri de clienți unificate în canalele Teams.
 
 > [!div class="mx-imgBorder"]
-> ![Robot Teams care afișează o înregistrare de client.](media/teams-bot.png "Robot Teams care afișează o înregistrare de client")
+> ![Robot Teams care afișează o înregistrare de client](media/teams-bot.png "Robot Teams care afișează o înregistrare de client")
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -31,10 +31,7 @@ Pentru a configura și configura robotul, trebuie îndeplinite următoarele ceri
 - [Procesul de unificare](data-unification.md) este complet.
 - Câmpurile sunt adăugate la [indexul de căutare și filtrare](search-filter-index.md).
 - Customer Insights și Teams sunt în aceeași organizație.
-- Mediul dvs. are publicul țintă principal stabilit pentru clienții individuali. Conturile de afaceri nu sunt acceptate.
 
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWRElj]
 ## <a name="configure-the-bot"></a>Configurați robotul
 
 1. În Detalii despre audiență, accesați **Administrator** > **Export destinații**.
@@ -55,6 +52,3 @@ Robotul oferă funcții de căutare pentru profiluri de clienți unificate.
 - Dacă organizația dvs. menține mai multe medii Customer Insights în aceeași organizație, puteți introduce **switchinstance** pentru a alege la ce mediu doriți să conectați robotul.
 
 - Introduceți **ajutor** pentru a vedea o listă de comenzi disponibile pentru robot.  
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

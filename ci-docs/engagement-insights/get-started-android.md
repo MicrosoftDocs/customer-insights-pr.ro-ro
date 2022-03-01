@@ -1,27 +1,26 @@
 ---
 title: Începeți cu Android SDK
-description: Aflați cum să particularizați și să rulați Android SDK
+description: Aflați cum să personalizați și să rulați SDK-ul Android
 author: britl
 ms.reviewer: mhart
-ms.custom: intro-internal
 ms.author: britl
 ms.date: 10/19/2021
 ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
-ms.openlocfilehash: 71ec4841303bd17d3f605547be8d6032c58a7b21
-ms.sourcegitcommit: bb1ca84bc38e81fb2ff2961c457384b7beb5b5fa
+ms.openlocfilehash: c678c2dafbb77926269b5602bca363c678ec6b3f
+ms.sourcegitcommit: ef823f3d7fa28d3a90cfde9409be9465ffa2cf09
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "7977590"
+ms.lasthandoff: 10/19/2021
+ms.locfileid: "7655357"
 ---
 # <a name="get-started-with-the-android-sdk"></a>Începeți cu Android SDK
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Acest tutorial vă ghidează prin procesul de instrumentare a aplicației Android cu un SDK Dynamics 365 Customer Insights detalii despre angajament. Veți începe să vedeți evenimente în portalul dvs. în cinci minute sau mai devreme.
+Acest tutorial vă ghidează prin procesul de instrumentare a aplicației dvs. Android cu un SDK pentru informații despre implicare Dynamics 365 Customer Insights. Veți începe să vedeți evenimente în portalul dvs. în cinci minute sau mai devreme.
 
 ## <a name="configuration-options"></a>Opțiuni de configurare
 Următoarele opțiuni de configurare pot fi transmise SDK-ului:
@@ -32,12 +31,12 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
 
 - Android Studio
 
-- Minimum Android Nivelul API: 16 (Jelly Bean)
+- Nivel minim API Android: 16 (Jelly Bean)
 
 - O cheie de ingestie (a se vedea mai jos pentru instrucțiuni despre cum să o obțineți)
 
 ## <a name="integrate-the-sdk-into-your-application"></a>Integrați kitul SDK în aplicația dvs.
-Începeți procesul selectând un spațiu de lucru, selectând platforma mobilă Android și descărcarea fișierului Android SDK.
+Începeți procesul selectând un spațiu de lucru, selectând platforma mobilă Android și descarcând SDK-ul Android.
 
 - Utilizați comutatorul spațiului de lucru din panoul de navigare din stânga pentru a vă selecta spațiul de lucru.
 
@@ -47,7 +46,7 @@ Următoarele opțiuni de configurare pot fi transmise SDK-ului:
 
 ## <a name="configure-the-sdk"></a>Configurarea SDK-ului
 
-Odată ce descărcați SDK, puteți lucra cu acesta în Android Studio pentru a activa și defini evenimente. Există două moduri de a face asta:
+După ce descărcați SDK-ul, puteți lucra cu el în Android Studio pentru a activa și defini evenimente. Există două moduri de a face asta:
 ### <a name="option-1-use-jitpack-recommended"></a>Opțiunea 1: Utilizați JitPack (recomandat)
 1. Adăugați depozitul JitPack la rădăcina `build.gradle`:
     ```gradle
@@ -68,7 +67,7 @@ Odată ce descărcați SDK, puteți lucra cu acesta în Android Studio pentru a 
     ```
 
 ### <a name="option-2-use-download-link"></a>Opțiunea 2: Utilizați linkul de descărcare
-1. Descărcați fișierul [detalii de implicare Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), și așezați fișierul `eiandroidsdk-debug.aar` în folderul `libs`.
+1. Descărcați [statistici privind implicarea Android SDK](https://download.pi.dynamics.com/sdk/EI-SDKs/ei-android-sdk.zip), și plasați`eiandroidsdk-debug.aar` dosar în`libs` pliant.
 
 1. Deschideți fișierul la nivelul de proiect `build.gradle` și adăugați următoarele fragmente:
     ```gradle
@@ -123,7 +122,7 @@ Odată ce descărcați SDK, puteți lucra cu acesta în Android Studio pentru a 
    >[!NOTE]
    >`Action` evenimentele trebuie adăugate manual.
 
-1. (Opțional) Alte configurații includ setarea adresei URL a colectorului de punct final. Acestea pot fi adăugate sub metadatele cheii de asimilare în `AndroidManifest.xml`.
+1. (Opțional) Alte configurații includ setarea adresei URL a colectorului de punct final. Ele pot fi adăugate sub metadatele cheii de asimilare în `AndroidManifest.xml`.
 
    ```xml
         <meta-data

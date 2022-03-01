@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 8ff04a6b2ffbd513a77f7f8a33358f3d8f559c7e
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
+ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673657"
+ms.lasthandoff: 10/18/2021
+ms.locfileid: "7648132"
 ---
 # <a name="create-a-new-environment"></a>Creați un mediu nou 
 
@@ -40,13 +40,13 @@ Un mediu este un spațiu în care vă gestionați spațiile de lucru și conexiu
 
 1. Alegeți **Regiune** și selectați **Următorul**. 
 
-1. Tastați a **Numele spațiului de lucru**, care vă permite să colectați date pentru anumite site-uri web sau aplicații. Pentru informații suplimentare, consultați [Creați un spațiu de lucru](create-workspace.md).
+1. Tastați un **Nume de spațiu de lucru**, care vă permite să colectați date pentru anumite site-uri web sau aplicații. Pentru informații suplimentare, consultați [Creați un spațiu de lucru](create-workspace.md).
 
-1. Alege **Tipul spațiului de lucru** (web sau mobil) pe care doriți să le creați. 
+1. Alegeți **Tip de spațiu de lucru** (Web sau Mobil) pe care doriți să îl creați. 
 
 1. Selectați **Arată setări avansate** pentru a activa sau dezactiva aceste setări opționale:
 
-   - Comutați **Necunoscut la cunoscut** la „activat” pentru a asocia evenimentele web cu utilizatorii care s-au autentificat anterior. Pentru mai multe informații, vezi [Recunoașteți evenimentele web de la vizitatorii autentificați anterior](unknown-to-known.md).
+   - Comutați **Necunoscut la cunoscut** la „activat” pentru a asocia evenimentele web cu utilizatorii care s-au autentificat anterior. Pentru mai multe informații, consultați [Recunoașteți evenimentele web de la vizitatori autentificați anterior](unknown-to-known.md)
    - Comutați **Filtrați robotul de trafic** la „activat” pentru a elimina traficul web de roboți pentru acest spațiu de lucru. 
 
 1. Selectați **Terminat** după ce ați terminat. 

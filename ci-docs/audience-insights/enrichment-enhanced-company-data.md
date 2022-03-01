@@ -1,7 +1,7 @@
 ---
 title: Îmbunătățirea datelor companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
-ms.date: 01/19/2022
+ms.date: 11/15/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 693e2f410a77cbf2e87ff0132ce963aab7e8e3e4
-ms.sourcegitcommit: 4c9db6c124d7244e7e8bb2f8bfdc697523781c31
+ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
+ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/19/2022
-ms.locfileid: "8010944"
+ms.lasthandoff: 11/15/2021
+ms.locfileid: "7813933"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
@@ -64,7 +64,7 @@ Există câteva limitări cu datele îmbunătățite. Elementele din lista de ma
 
 1. Selectați **Set de date client** și alegeți entitatea care conține adresele pe care doriți să le îmbogățiți. Puteți selecta entitatea *Client* pentru a îmbogăți adrese în toate profilurile dvs. de clienți sau selectați o entitate de segment pentru a îmbogăți adresele numai în profilurile de clienți din acel segment.
 
-1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
+1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui să fie utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
 
 1.  Hartați câmpurile companiei de la entitatea dvs. unificată client. Cu cât mapați mai mulți identificatori cheie și câmpuri, cu atât este mai probabilă o rată de potrivire mai mare.
 
@@ -82,17 +82,7 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
-
-### <a name="overview-card"></a>Card de prezentare generală
-
-Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
-
-* **Companiile procesate și schimbate** : Numărul de profiluri de companie clienți care au fost îmbogățite cu succes.
-
-* **Companii procesate și neschimbate** : numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
-
-* **Companiile neprocesate și neschimbate** : Numărul de profiluri de companie client care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
 
 ## <a name="next-steps"></a>Pașii următori
 

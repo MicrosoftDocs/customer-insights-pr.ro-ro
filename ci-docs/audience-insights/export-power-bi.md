@@ -1,20 +1,20 @@
 ---
 title: Conector Power BI
 description: Aflați cum să utilizați conectorul Dynamics 365 Customer Insights în Power BI.
-ms.date: 07/23/2021
-ms.reviewer: mhart
+ms.date: 09/21/2020
+ms.reviewer: sthe
 ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: stefanie-msft
-ms.author: sthe
+ms.topic: conceptual
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a0ca431dbea839fe271cf3a512cd3a5dde6d920d396056e91b33bcf7ed84272a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: d497ca779a337c512a7254524f597cff226bcb45
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035522"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406667"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector pentru Power BI (previzualizare)
 
@@ -23,7 +23,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Aveți profiluri de clienți unificate.
-- Cea mai recentă versiune de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) este instalată pe computer. [Aflați mai multe despre Power BI Desktop](/power-bi/desktop-what-is-desktop).
+- Cea mai recentă versiune de [Microsoft Power BI Desktop](https://powerbi.microsoft.com/desktop/) este instalată pe computerul dvs. [Aflați mai multe despre Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-what-is-desktop).
 
 ## <a name="configure-the-connector-for-power-bi"></a>Configurați conectorul pentru Power BI
 
@@ -31,7 +31,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 1. Selectați **Vedeți mai multe** și căutați **Dynamics 365 Customer Insights**
 
-1. Selectați **Conectare**.
+1. Selectați rezultatul și selectați **Conectare**.
 
 1. **Conectați-vă** cu același cont organizațional pe care îl utilizați pentru Customer Insights și selectați **Conectare**.
    > [!NOTE]
@@ -39,7 +39,7 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 1. În caseta de dialog **Navigator**. Veți vedea lista tuturor mediilor la care aveți acces. Extindeți un mediu și deschideți oricare dintre directoare (entități, măsuri, segmente, îmbogățiri). De exemplu, deschideți folderul **Entități**, pentru a vedea toate entitățile pe care le puteți importa.
 
-   ![Power BI Conector Navigator.](media/power-bi-navigator.png "Conector Navigator Power BI")
+   ![Power BI Conector Navigator](media/power-bi-navigator.png "Conector Navigator Power BI")
 
 1. Selectați casetele de selectare de lângă entitățile pe care să le includeți și **Încărcare**. Puteți selecta mai multe entități din mai multe medii.
 
@@ -47,32 +47,8 @@ Creați vizualizări pentru datele dvs. cu Power BI Desktop. Generați informaț
 
 ## <a name="large-data-sets"></a>Seturi mari de date
 
-Conectorul Customer Insights pentru Power BI este proiectat pentru a funcționa pentru seturi de date care conțin până la 1 milion de profiluri de clienți. Importul seturilor de date mai mari poate funcționa, dar durează mult. În plus, procesul ar putea rula într-un time-out din cauza limitărilor Power BI. Pentru mai multe informații, consultați [Power BI : Recomandări pentru seturi mari de date](/power-bi/admin/service-premium-what-is#large-datasets). 
+Conectorul Customer Insights pentru Power BI este proiectat pentru a funcționa pentru seturi de date care conțin până la 1 milion de profiluri de clienți. Importul seturilor de date mai mari poate funcționa, dar durează mult. În plus, procesul ar putea rula într-un time-out din cauza limitărilor Power BI. Pentru mai multe informații, consultați [Power BI : Recomandări pentru seturi mari de date](https://docs.microsoft.com/power-bi/admin/service-premium-what-is#large-datasets). 
 
 ### <a name="work-with-a-subset-of-data"></a>Lucrați cu un subset de date
 
 Luați în considerare lucrul cu un subset de date. De exemplu, puteți crea [segmente](segments.md) în loc să exportați toate înregistrările clienților către Power BI.
-
-## <a name="troubleshooting"></a>Depanare
-
-### <a name="customer-insights-environment-doesnt-show-in-power-bi"></a>Mediul Customer Insights nu apare în Power BI
-
-Medii care au mai mult de o [relaţie](relationships.md) definită între două entități identice în statistici privind publicul nu vor fi disponibile în conectorul Power BI.
-
-Puteți identifica și elimina relațiile duplicate.
-
-1. În statisticile publicului, accesați **Date** > **Relații** asupra mediului care vă lipsește în Power BI.
-2. Identificați relațiile duplicate:
-   - Verificați dacă există mai multe relații definite între aceleași două entități.
-   - Verificați dacă există o relație creată între două entități care sunt ambele incluse în procesul de unificare. Există o relație implicită definită între toate entitățile incluse în procesul de unificare.
-3. Eliminați orice relație duplicat identificată.
-
-După eliminarea relațiilor duplicate, încercați să configurați conectorul Power BI din nou. Mediul ar trebui să fie disponibil acum.
-
-### <a name="errors-on-date-fields-when-loading-entities-in-power-bi-desktop"></a>Erori la câmpurile de dată la încărcarea entităților în Power BI Desktop
-
-Când încărcați entități care conțin câmpuri cu un format de dată, cum ar fi LL/ZZ/AAAA, puteți întâlni erori din cauza formatelor locale nepotrivite. Această nepotrivire se întâmplă atunci când fișierul Power BI Desktop este setat în alte setări regionale decât engleza (Statele Unite), deoarece câmpurile de date din statisticile publicului sunt salvate în format SUA.
-
-Fișierul Power BI Desktop are o singură setare regională, care se aplică la preluarea datelor. Obțineți aceste câmpuri de dată interpretate corect, setați localizarea fișierului .BPI la engleză (Statele Unite). [Aflați cum să schimbați setările locale ale unui fișier Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -2,19 +2,19 @@
 title: Ingerarea și limitările datelor în timp real
 description: Informații generale despre capacitățile în timp real în detalii despre public.
 ms.date: 10/27/2020
-ms.reviewer: mhart
+ms.reviewer: nikeller
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: Nils-2m
-ms.author: nikeller
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 897c876306a39cd9d5842487b96cb2f0a8df7e656de0fb7f10fe8c7f53e2db6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.openlocfilehash: b00a72e6a67e33c8e70ccc6139c5e62020f9d3e1
+ms.sourcegitcommit: b50c754481d0af6d0cf4b550775d7b31d95846ef
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035292"
+ms.lasthandoff: 12/06/2020
+ms.locfileid: "4689190"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
@@ -54,7 +54,7 @@ API-ul în timp real vă permite să publicați o activitate nouă din sistemul 
 
 Există două moduri de conectare la API-ul în timp real:
 
-- [indirect ](#connect-via-the-dynamics-365-customer-insights-connector), folosind [conectorul Dynamics 365 Customer Insights](/connectors/customerinsights/)
+- [indirect ](#connect-via-the-dynamics-365-customer-insights-connector), folosind [conectorul Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/)
 - [direct](#connect-directly-to-the-real-time-api), cu cod
 
 Ambele moduri au în comun următoarele condiții preliminare:
@@ -66,13 +66,13 @@ Ambele moduri au în comun următoarele condiții preliminare:
 
 ## <a name="connect-via-the-dynamics-365-customer-insights-connector"></a>Conectare prin intermediul conectorului Dynamics 365 Customer Insights
 
-API-ul în timp real poate ingera date dintr-un conector dedicat Power Platform, [conectorul Dynamics 365 Customer Insights](/connectors/customerinsights/), fără a fi nevoie să scrieți și să implementați niciun cod.    
-Conectorul poate efectua aceleași acțiuni în timp real ca API-ul. Aveți nevoie de o licență validă pentru conectori premium. Pentru mai multe informații, consultați [întrebările frecvente despre licențierea Power Apps și Power Automate](/power-platform/admin/powerapps-flow-licensing-faq).
+API-ul în timp real poate ingera date dintr-un conector dedicat Power Platform, [conectorul Dynamics 365 Customer Insights](https://docs.microsoft.com/connectors/customerinsights/), fără a fi nevoie să scrieți și să implementați niciun cod.    
+Conectorul poate efectua aceleași acțiuni în timp real ca API-ul. Aveți nevoie de o licență validă pentru conectori premium. Pentru mai multe informații, consultați [întrebările frecvente despre licențierea Power Apps și Power Automate](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq).
 
-- Power Platform [Power Apps și/sau Power Automate](/connectors/)
-- Azure [Logic Apps](/azure/connectors/apis-list)
+- Power Platform [Power Apps și/sau Power Automate](https://docs.microsoft.com/connectors/)
+- Azure [Logic Apps](https://docs.microsoft.com/azure/connectors/apis-list)
 
-Pentru detalii despre crearea fluxurilor, consultați secțiunea [documentație Power Automate](/power-automate/).
+Pentru detalii despre crearea fluxurilor, consultați secțiunea [documentație Power Automate](https://docs.microsoft.com/power-automate/).
 
 ## <a name="connect-directly-to-the-real-time-api"></a>Conectare direct la API-ul în timp real
 
@@ -83,7 +83,6 @@ Detalii despre acest API, inclusiv parametrii și răspunsurile, pot fi găsite 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Înțelegeți utilizarea dvs. în timp real cu telemetria
 
-Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#api-usage-tab). 
+Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#api-usage-tab) mergând la **Admin** > **Sistem** > **Utilizare API**. În tabelul **Operațiuni**, rândurile pentru operațiunile API care utilizează metodele în timp real conțin un buton pentru a vizualiza utilizarea API în timp real. Butonul este vizualizat cu un simbol de binoclu. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.
 
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]
+Folosiți selectorul **Grupare după** pentru a alege cum să prezentați cel mai bine interacțiunile în timp real pe o cronologie cuprinsă între ultimele 24 de ore și ultimele 30 de zile. Puteți grupa datele după metoda API, numele calificat de entitate (entitatea ingerată), creat de (sursa evenimentului), rezultat (succes sau eșec) sau coduri de eroare. Datele sunt disponibile ca un grafic istoric și ca un tabel.

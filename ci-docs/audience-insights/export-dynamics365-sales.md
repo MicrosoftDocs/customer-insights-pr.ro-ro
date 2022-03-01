@@ -1,48 +1,41 @@
 ---
 title: Exportați datele Customer Insights către Dynamics 365 Sales
-description: Aflați cum să configurați conexiunea și să exportați la Dynamics 365 Sales.
-ms.date: 03/03/2021
-ms.reviewer: mhart
+description: Aflați cum puteți configura conexiunea la Dynamics 365 Sales.
+ms.date: 02/01/2021
+ms.reviewer: philk
 ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: m-hartmann
+ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: d8a35424f4271b350b8d84e72a01deb6d69652a0
-ms.sourcegitcommit: 08a5dfcc4f9d293c8e7ac4fef604bc52985b1b78
+ms.openlocfilehash: 0013c4e6a96401d6cdbea55ed38f85f5e10dcc56
+ms.sourcegitcommit: 139548f8a2d0f24d54c4a6c404a743eeeb8ef8e0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/04/2022
-ms.locfileid: "8090938"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "5269023"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizarea segmentelor în Dynamics 365 Sales (previzualizare)
+# <a name="connector-for-dynamics-365-sales-preview"></a>Conector pentru Dynamics 365 Sales (previzualizare)
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxuri de lucru și a trimite promoții cu Dynamics 365 Sales.
 
-## <a name="known-limitations"></a>Limitări cunoscute
+## <a name="prerequisite"></a>Cerințe preliminare
 
-- Exporturile către Dynamics 365 Sales sunt limitate la 100.000 de membri pe segment.
-- Exporturile de segmente către Dynamics 365 Sales pot dura până la 3 ore. 
-
-## <a name="prerequisite-for-connection"></a>Cerință preliminară pentru conexiune
-
-1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Sales folosind Microsoft Dataverse](connect-power-query.md).
+1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Sales folosind Common Data Services](connect-power-query.md).
 
    > [!NOTE]
    > Exportul de segmente din perspectivele publicului către Sales nu va crea noi înregistrări de contact în instanțele de Sales. Înregistrările de contact din Sales trebuie să fie ingerate în statistici ale publicului și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
 
-## <a name="set-up-the-connection-to-sales"></a>Configurarea conexiunii la Sales
+## <a name="configure-the-connector-for-sales"></a>Configurați conectorul pentru Vânzări
 
-1. Salt la **Administrator** > **Conexiuni**.
+1. În Detalii despre audiență, accesați **Administrator** > **Destinații export**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Dynamics 365 Sales** pentru a configura conexiunea.
+1. Sub **Dynamics 365 Sales**, selectați **Configurare**.
 
-1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
-
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Dați destinației dvs. de export un nume ușor de recunoscut în câmpul **Nume afișat**.
 
 1. Introduceți adresa URL de vânzări a organizației dvs. în câmpul **Adresa serverului**.
 
@@ -50,24 +43,15 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 
 1. Mapați un câmp ID client la ID-ul de contact Dynamics 365.
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
-
-## <a name="configure-an-export"></a>Configurați un export
-
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
-
-1. Faceți salt la **Date** > **Exporturi**.
-
-1. Pentru a crea un nou export, selectați **Adăugare destinație**.
-
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Dynamics 365 Sales. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. Selectați **Următorul**.
 
 1. Alegeți unul sau mai multe segmente.
 
-1. Selectați **Salvare**
+1. Selectați **Salvare**.
 
-Salvarea unui export nu se execută imediat.
+## <a name="export-the-data"></a>Exportați datele
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Puteți [exporta date la cerere](export-destinations.md). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md#schedule-tab).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

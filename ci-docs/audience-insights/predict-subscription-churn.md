@@ -1,5 +1,5 @@
 ---
-title: Abonament churn predicție (conține videoclip)
+title: Predicție retragere abonament
 description: Prognozați dacă un client prezintă riscul de a nu mai utiliza produsele sau serviciile cu abonament ale companiei dvs.
 ms.date: 08/19/2020
 ms.reviewer: mhart
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 52ef7a8584cbae5dff0c800650b0238cc09fd6d5
-ms.sourcegitcommit: 15b1521041149716f8031cfa6d0dc61a56a5e2ff
+ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
+ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 01/13/2022
-ms.locfileid: "7967716"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "7799743"
 ---
 # <a name="subscription-churn-prediction-preview"></a>Predicție renunțare la abonament (previzualizare)
 
@@ -77,7 +77,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. Introduceți numărul de **Zile de la încheierea abonamentului** la care compania dvs. consideră că un client s-a retras. În această perioadă companiile se concentrează pe activități precum ofertele sau alte eforturi de marketing care încearcă să prevină pierderea clientului.
 1. Introduceți numărul de **Zile pentru a investiga viitorul pentru a prezice problemele** pentru a seta o fereastră pentru care să prezică problemele. De exemplu, pentru a prezice riscul problemelor pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de păstrare a marketingului. Predicția riscului de retragere pentru perioade mai lungi sau mai scurte de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, în funcție de cerințele dvs. comerciale specifice. Selectați **Următorul** pentru a continua
    >[!TIP]
-   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
+   > Puteți selecta **Salvare și închidere** pentru a salva oricând predicția ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
 ### <a name="add-required-data"></a>Adăugați datele necesare
 

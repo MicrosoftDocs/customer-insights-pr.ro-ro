@@ -9,12 +9,12 @@ ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 09cb3ddf0f8b4507b7eae6668ea3dad08cfcea29
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
+ms.openlocfilehash: 279af24358a1d6ea2b4cc75d5496042af73a7cae
+ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673812"
+ms.lasthandoff: 10/15/2021
+ms.locfileid: "7645461"
 ---
 # <a name="manage-environments-and-workspaces"></a>Gestionați mediile și spațiile de lucru
 
@@ -24,7 +24,7 @@ ms.locfileid: "7673812"
 
 Acest subiect discută despre cum să gestionați spațiile de lucru și mediile după ce acestea au fost deja create. 
 
-- Un *spațiu de lucru* este un spațiu în care stocați și gestionați evenimente și rapoarte. Aici puteți vizualiza activitatea utilizatorilor în timp real. Când creați un spațiu de lucru, selectați tipul de date pe care să îl trimiteți la spațiul de lucru. În prezent sunt acceptate datele web și aplicațiile mobile. Pentru mai multe informații, vezi [Creați un spațiu de lucru nou și adăugați membri](create-workspace.md).
+- Un *spațiu de lucru* este un spațiu în care stocați și gestionați evenimente și rapoarte. Aici puteți vizualiza activitatea utilizatorilor în timp real. Când creați un spațiu de lucru, selectați tipul de date pe care să îl trimiteți la spațiul de lucru. În prezent sunt acceptate datele web și aplicațiile mobile. Pentru mai multe informații, consultați [Creați un spațiu de lucru și adăugați membri](create-workspace.md).
 
 - Un *mediu* este un spațiu în care vă gestionați spațiile de lucru și conexiunile. Pentru informații suplimentare, consultați [Creați un mediu nou](create-new-environment.md).
 
@@ -47,7 +47,7 @@ Puteți întreține simultan mai multe spații de lucru într-un mediu. [Rolul](
 
 ### <a name="delete-a-workspace"></a>Ștergeți un spațiu de lucru
 
-Ștergerea unui spațiu de lucru elimină definitiv tot conținutul, datele, setările și permisiunile acestuia. Aceasta nu se poate anula.
+Ștergerea unui spațiu de lucru va elimina definitiv întregul conținut, datele, setările și permisiunile sale. Aceasta nu se poate anula.
 
 1. Accesați **Administrator** > **Spațiu de lucru** și selectați **Setări**.
 
@@ -71,11 +71,19 @@ Ca administrator de mediu, puteți accesa un mediu din panoul de navigare din st
 
 :::image type="content" source="media/environment-edit.png" alt-text="Centrul de administrare pentru mediu.":::
 
-### <a name="edit-an-environment-name"></a>Editați un nume de mediu
+### <a name="rename-an-environment"></a>Redenumiți un mediu
 
 1. Accesați **Administrator** > **Mediu** și selectați **Setări**.
 
 1. Actualizați **Numele mediului** și selectați **Salvare** pentru a aplica modificările.
+
+### <a name="manage-environment-members"></a>Gestionați membrii mediului
+
+1. Accesați **Administrator** > **Mediu** și selectați **Membrii**.
+
+1. Selectați **Adăugați membri** pentru a actualiza membrii și [atribuiți roluri](user-roles.md). În prezent, numai **Administrator de mediu** este disponibil.
+
+1. Selectați **Adăugați membri** pentru a-i adăuga în mediul dvs.
 
 ### <a name="delete-an-environment"></a>Ștergerea unui mediu
 
@@ -89,14 +97,6 @@ Administratorii de mediu pot șterge mediile. Înainte de a putea șterge un med
 
 1. Selectați **Ștergere** pentru a șterge permanent mediul.
 
-### <a name="manage-environment-members"></a>Gestionați membrii mediului
-
-1. Accesați **Administrator** > **Mediu** și selectați **Membrii**.
-
-1. Selectați **Adăugați membri** pentru a actualiza membrii și [atribuiți roluri](user-roles.md). În prezent, numai **Administrator de mediu** este disponibil.
-
-1. Selectați **Adăugați membri** pentru a-i adăuga în mediul dvs.
-
 ## <a name="manage-connections"></a>Gestionați conexiunile
 
 Stabilirea conectărilor la detaliile despre public vă permite să vedeți rapoarte în Detalii despre angajamente bazate pe profiluri unificate ale clienților. 
@@ -107,6 +107,7 @@ Pentru mai multe informații, consultați [Creați o legătură între detaliile
 
 Pentru a proteja datele personale ale clientului dvs., puteți șterge sau exporta datele identificabile ale utilizatorului final.
 
-Pentru mai multe informații, consultați [Ștergeți și să exportați date despre evenimente care conțin informații personale](../dsr-rights-requests.md#deleting-and-exporting-event-data-containing-end-user-identifiable-information).
+Pentru mai multe informații, consultați [Ștergeți și să exportați date despre evenimente care conțin informații personale](delete-export-personal-data.md).
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

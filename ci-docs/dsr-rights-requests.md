@@ -1,6 +1,6 @@
 ---
 title: Solicitări de drepturi privind datele subiecților sub RGPD | Microsoft Docs
-description: Răspundeți la solicitările subiectului de date pentru capacitatea Dynamics 365 Customer Insights de informații despre public.
+description: Răspundeți la solicitările persoanei vizate pentru capabilitatea de detalii despre public din Dynamics 365 Customer Insights.
 ms.date: 08/11/2021
 ms.reviewer: mhart
 ms.service: customer-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
-ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.openlocfilehash: 6faaeb6a1ee34c3e5c8e7d465b37cee589bc920c
+ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/02/2021
-ms.locfileid: "7732695"
+ms.lasthandoff: 09/08/2021
+ms.locfileid: "7483698"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -24,7 +24,7 @@ Ne-am angajat să ne ajutăm clienții să își îndeplinească cerințele RGPD
 
 ## <a name="audience-insights"></a>Detalii despre public
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Răspunsul la solicitările de ștergere a subiectului de date din GDPR pentru capacitatea Dynamics 365 Customer Insights de informații despre public
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Răspundeți la solicitările RGPD ale persoanei vizate pentru capabilitatea de detalii despre public din Dynamics 365 Customer Insights
 
 „Dreptul la eliminare” prin înlăturarea datelor cu caracter personal din datele clienților unei organizații reprezintă o protecție-cheie în Regulamentul general privind protecția datelor (RGPD). Îndepărtarea datelor personale include eliminarea tuturor datelor personale și a jurnalelor generate de sistem, cu excepția informațiilor din jurnalul de audit.
 
@@ -39,7 +39,7 @@ Detaliile despre public oferă următoarele experiențe în cadrul produsului pe
 
 Un administrator al Customer Insights poate urma acești pași pentru a elimina datele despre clienți care au fost șterse în sursa de date:
 
-1. conectați-vă la Dynamics 365 Customer Insights.
+1. Conectați-vă la Dynamics 365 Customer Insights.
 2. În Detalii despre audiență, accesați **Date** > **Surse de date**
 3. Pentru fiecare sursă de date din listă care conține datele șterse ale clienților:
    1. Selectați (...) și apoi selectați **Reîmprospătare**.
@@ -52,7 +52,7 @@ Un administrator al Customer Insights poate urma acești pași pentru a elimina 
 
 Un administrator al Customer Insights poate urma acești pași pentru ștergerea datelor de utilizator Customer Insights:
 
-1. conectați-vă la Dynamics 365 Customer Insights.
+1. Conectați-vă la Dynamics 365 Customer Insights.
 2. În detalii despre public, accesați **Admin** > **Permisiuni**.
 3. Bifați caseta de selectare pentru utilizatorul pe care doriți să-l eliminați.
 4. Selectați **Eliminare**.
@@ -79,14 +79,7 @@ Un administrator de entitate găzduită poate urma acești pași pentru a export
 2. Aprobați confirmarea de a exporta datele pentru utilizator solicitate.
 3. Primiți datele exportate prin intermediul adresei de e-mail de administrator de entitate găzduită.
 
-## <a name="consent-management-preview"></a>Gestionarea consimțământului (previzualizare)
-
-Capacitatea de gestionare a consimțământului nu colectează în mod direct datele utilizatorului. Importă și prelucrează doar datele de consimțământ furnizate de utilizatori în alte aplicații.
-
-Pentru a elimina datele privind consimțământul despre anumiți utilizatori, eliminați-le din sursele de date ingerate pentru capacitatea de gestionare a consimțământului. După reîmprospătarea sursă de date, datele eliminate vor fi șterse și din Centrul de consimțământ. Aplicațiile care utilizează entitatea de consimțământ vor șterge și datele care au fost eliminate de pe sursă după a [reîmprospăta](audience-insights/system.md#refresh-processes). Vă recomandăm să reîmprospătați sursele de date rapid după ce răspundeți la o solicitare a persoanei vizate pentru a elimina datele utilizatorului din toate celelalte procese și aplicații.
-
-
-## <a name="engagement-insights-preview"></a>Detalii despre angajamente (versiune preliminară)
+## <a name="engagement-insights"></a>Detalii despre angajamente
 
 ### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Ștergerea și exportarea datelor despre evenimente care conțin informații de identificare ale utilizatorului final
 

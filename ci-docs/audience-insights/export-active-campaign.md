@@ -1,7 +1,7 @@
 ---
 title: Exportați datele Customer Insights către ActiveCampaign
 description: Aflați cum să configurați conexiunea și să exportați către ActiveCampaign.
-ms.date: 10/08/2021
+ms.date: 06/29/2021
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4fbdd5a51a3df35d31ad072eef64d20ee967d7ee
-ms.sourcegitcommit: 23c8973a726b15050e368cc6e0aab78b266a89f6
+ms.openlocfilehash: 6d85fa9836618e27f7f3da6ce17c07b4bc89e187
+ms.sourcegitcommit: 057079532e31c12bac36f374857ba3dc847d6ad0
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/08/2021
-ms.locfileid: "7618168"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "6314662"
 ---
 # <a name="export-segments-to-activecampaign-preview"></a>Exportați segmente în ActiveCampaign (previzualizare)
 
@@ -28,9 +28,9 @@ Exportați segmente de profiluri unificate ale clienților în ActiveCampaign ș
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 1 milion de profiluri de clienți per export către ActiveCampaign și poate dura până la 90 minute până la finalizare.
+- Puteți exporta până la 1 milion de profiluri pe export către ActiveCampaign și poate dura până la 90 de minute pentru a finaliza.
 - Exportul către ActiveCampaign este limitat la segmente.
-- Numărul de profiluri de clienți pe care le puteți exporta în ActiveCampaign depinde de contractul dvs. cu ActiveCampaign.
+- Numărul de profiluri pe care le puteți exporta în ActiveCampaign depinde de contractul dvs. cu ActiveCampaign.
 
 ## <a name="set-up-connection-to-activecampaign"></a>Configurați conexiunea la ActiveCampaign
 
@@ -64,7 +64,7 @@ Puteți configura un export dacă aveți acces la o conexiune de acest tip. Pent
 
 1. Introduceți [**ID listă ActiveCampaign**](https://help.activecampaign.com/hc/articles/360000030559-How-to-create-a-list-in-ActiveCampaign).    
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este nevoie să exportați segmente la ActiveCampaign. Opțional, puteți exporta Prenume, Nume de familie, și Telefon pentru a crea e-mailuri mai particularizate. Selectați Adăugare atribut pentru a mapa aceste câmpuri.
+3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este nevoie să exportați segmente la ActiveCampaign. Opțional, puteți exporta Prenume, Nume de familie, și Telefon pentru a crea e-mailuri mai particularizate. Selectați Adăugare atribut pentru a mapa aceste câmpuri.
 
 1. Selectați **Salvare**.
 

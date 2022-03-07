@@ -1,49 +1,43 @@
 ---
 title: Utilizați sursele de date pentru ingerarea datelor
 description: Aflați cum să importați date din diverse surse.
-ms.date: 12/06/2021
+ms.date: 04/12/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: overview
+ms.topic: conceptual
 author: adkuppa
 ms.author: adkuppa
 ms.reviewer: mhart
 manager: shellyha
-searchScope:
-- ci-data-sources
-- ci-create-data-source
-- customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.custom: intro-internal
+ms.openlocfilehash: 0a017a37777adaaf7de079cf481ec10c70c7adba
+ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354064"
+ms.lasthandoff: 07/30/2021
+ms.locfileid: "6692450"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
-
+[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
 Capacitatea Detalii despre audiență din Dynamics 365 Customer Insights se conectează la date dintr-un set larg de surse. Conectarea la un sursă de date este adesea denumită procesul de *ingerare de date*. După ingerarea datelor, puteți [unifica](data-unification.md) și lua măsuri în legătură cu acestea.
 
 ## <a name="add-a-data-source"></a>Adăugați o sursă de date
 
-Consultați articolele detaliate pentru cum să adăugați un sursă de date, în funcție de opțiunea pe care o alegeți.
+Consultați articolele detaliate despre cum să adăugați o sursă de date, în funcție de opțiunea pe care o alegeți.
 
-Puteți adăuga următoarele surse de date:
+Puteți adăuga o sursă de date în trei moduri principale:
 
-- [Prin zeci de Power Query conectori](connect-power-query.md)
+- [Prin zeci de conectori Power Query](connect-power-query.md)
 - [Dintr-un folder Common Data Model](connect-common-data-model.md)
 - [Din propriul Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
-- [De la un Azure Synapse Analytics Bază de date](connect-synapse.md)
-
-> [!NOTE]
-> Dacă utilizați versiunea de încercare, secțiunea metode de import include a **Biblioteca de date Customer Insights** opțiune. Alegeți această opțiune pentru a selecta un set de date eșantion disponibil pentru diverse industrii. Pentru mai multe informații, vezi [Dynamics 365 Customer Insights proces](../trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
 
-Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Puteți activa fluxurile de date în Customer Insights prin [oferind Microsoft Dataverse URL de mediu](create-environment.md) la configurarea mediului.
+Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Fluxurile de date pot fi activate în Customer Insights prin [furnizarea adresei URL a mediului Microsoft Dataverse](get-started-paid.md) la configurarea mediului.
 
-Surse de date care sunt create după asocierea a Dataverse mediu cu utilizarea Customer Insights [Power Platform fluxuri de date](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Puteți elimina și recrea surse de date care existau înainte de a Dataverse mediu a fost asociat [folosind local gateway-uri de date](/data-integration/gateway/service-gateway-app).
+Sursele de date care sunt create după asocierea unui mediu Dataverse cu Customer Insights vor utiliza [fluxuri de date Power Platform](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Eliminați și recreați sursele de date care existau înainte ca un mediu Dataverse să fi fost asociat pentru [utilizarea gateway-urilor de date locale](/data-integration/gateway/service-gateway-app).
 
 Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
@@ -54,7 +48,14 @@ Veți vedea numele fiecărei surse de date ingerate, starea acesteia și ultima 
 > [!div class="mx-imgBorder"]
 > ![Sursă de date adăugată.](media/configure-data-datasource-added.png "Sursă de date adăugată")
 
-[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
+|Status  |Descriere  |
+|---------|---------|
+|Reușit   |Sursa de date a fost ingerată cu succes dacă este menționat un timp în coloana **Reîmprospătat**.
+|Neînceput   |Sursa de date nu are încă date ingerate sau este încă în modul schiță.         |
+|Se reîmprospătează    |Ingestia datelor este în curs. Aveți posibilitatea de a revoca această operațiune selectând **Oprire reîmprospătare** în coloana **Acțiuni**. Oprirea reîmprospătării unei surse de date o va readuce la ultima stare de reîmprospătare.       |
+|Nereușite     |Ingerarea de date s-a efectuat cu erori.         |
+
+Selectați valoarea în coloana **Stare** a oricărei sursă de date pentru a revizui mai multe detalii. În panoul **Detalii despre progres**, extindeți **Surse de date**. Selectați **Consultați detalii** pentru mai multe informații despre starea de reîmprospătare, inclusiv detalii despre erori și actualizări de proces descendent.
 
 Încărcarea datelor poate dura timp. După o reîmprospătare reușită, datele ingerate pot fi revizuite din pagina **Entități**. Pentru mai multe informații, consultați [Entități](entities.md).
 

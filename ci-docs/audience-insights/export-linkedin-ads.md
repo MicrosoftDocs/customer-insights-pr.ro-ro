@@ -1,19 +1,20 @@
 ---
 title: Exportați datele Customer Insights către Anunțuri LinkedIn
 description: Aflați cum să configurați conexiunea și să exportați la Anunțuri LinkedIn.
-ms.date: 10/08/2021
+ms.date: 05/12/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7a6bb466652b8703a4784329a5e675965f557e82
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 1c7b0c728bc4d4cf6b5aea79396cf0779fbf298d
+ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231118"
+ms.lasthandoff: 06/01/2021
+ms.locfileid: "6124539"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportați segmente în Anunțuri LinkedIn (previzualizare)
 
@@ -27,10 +28,9 @@ Exportați segmente de profiluri de clienți unificate în Anunțuri LinkedIn pe
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Segmentul dvs. din Customer Insights trebuie să conțină cel puțin 300 de profiluri unice. 
-- Puteți exporta până la 100.000 de profiluri de clienți per export către LinkedIn Ads.
+- Puteți exporta până la 100.000 de profiluri per export către Anunțuri LinkedIn.
 - Exportul către Anunțuri LinkedIn este limitat la segmente.
-- Exportul până la 100.000 de profiluri de clienți în LinkedIn Ads poate dura până la 10 minute. 
+- Se exportă până la 100.000 de profiluri pe Anunțuri LinkedIn poate dura până la 10 minute. 
 
 ## <a name="set-up-the-connection-to-linkedin-ads"></a>Configurați conexiunea la spațiul de Anunțuri LinkedIn.
 
@@ -66,7 +66,7 @@ Puteți configura un export dacă aveți acces la o conexiune de acest tip. Pent
 
 1. Alegeți dacă doriți să exportați date pentru a face [direcționarea prin contact](https://business.linkedin.com/marketing-solutions/ad-targeting/contact-targeting) sau [direcționarea către companii](https://business.linkedin.com/marketing-solutions/ad-targeting/account-targeting) pe LinkedIn. 
 
-1. În secțiunea **Potrivirea datelor**, pentru direcționarea prin contact, selectați cel puțin un câmp care reprezintă adresa de e-mail a unui client, Apple Ad ID, Google Ad ID, Google User ID sau nume și prenume. Dacă alegeți direcționarea în funcție de companie, selectați cel puțin un câmp care să reprezinte numele companiei, domeniul de e-mail, adresa URL a paginii LinkedIn, simbolul stocului sau site-ul web. Câmpuri suplimentare pot fi selectate pentru a defini în continuare exportul. 
+1. În secțiunea **Potrivirea datelor** selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Anunțuri LinkedIn.
 
 1. Selectați segmentele pe care doriți să le exportați. Publicul potrivit Matched audiences din LinkedIn Campaign Manager va fi creat automat cu numele segmentelor pe care le-ați selectat pentru export. Fiecare segment va avea ca rezultat un public separat Matched audience. 
 

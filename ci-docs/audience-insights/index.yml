@@ -4,17 +4,18 @@ summary: Ingerați, unificați și organizați datele clienților din mai multe 
 metadata:
   title: Documentația despre detalii despre public
   description: Centrul de ajutor cu linkuri cheie pentru detalii despre public.
+  ms.service: customer-insights
   ms.subservice: audience-insights
   ms.topic: hub-page
   author: m-hartmann
   ms.author: mhart
-  ms.date: 03/02/2022
-  ms.openlocfilehash: 44fac5d82313c491cf838404d9641e2d14261366
-  ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-  ms.translationtype: MT
+  ms.date: 10/16/2020
+  ms.openlocfilehash: ba5229067c7c338b4f8d0503aaf80f25b6c4002c
+  ms.sourcegitcommit: a8f7d5d0008b2d7d0ff0daeb746126abfc82c253
+  ms.translationtype: HT
   ms.contentlocale: ro-RO
-  ms.lasthandoff: 02/16/2022
-  ms.locfileid: "8231852"
+  ms.lasthandoff: 12/17/2020
+  ms.locfileid: "4745736"
 landingContent:
 - title: Despre Detalii despre public
   linkLists:
@@ -24,12 +25,8 @@ landingContent:
       url: overview.md
     - text: Caracteristici noi și actualizate
       url: whats-new-audience-insights.md
-    - text: Descoperiți detalii despre public
-      url: https://dynamics.microsoft.com/ai/customer-insights/audience-insights-capability/
-  - linkListType: learn
-    links:
-    - text: Calea de învățare despre Customer Insights
-      url: /learn/paths/build-customer-insights/
+    - text: Site de comunitate
+      url: https://go.microsoft.com/fwlink/?linkid=2073991
 - title: Unificați date
   linkLists:
   - linkListType: how-to-guide
@@ -40,11 +37,7 @@ landingContent:
       url: data-unification.md
     - text: Înțelegeți entități
       url: entities.md
-  - linkListType: learn
-    links:
-    - text: Creați un profil unificat
-      url: /learn/modules/unified-customer-profile/
-- title: Obțineți detalii
+- title: Îmbogățiți și rafinați datele
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -52,13 +45,9 @@ landingContent:
       url: enrichment-hub.md
     - text: Configurați relații
       url: relationships.md
-    - text: Completați datele cu predicții
-      url: predictions.md
-  - linkListType: learn
-    links:
-    - text: Îmbogățiți și preziceți datele
-      url: /learn/modules/enrich-data/
-- title: Construiți-vă pe datele dvs
+    - text: Listă activități pentru client
+      url: activities.md
+- title: Obțineți detalii
   linkLists:
   - linkListType: how-to-guide
     links:
@@ -66,12 +55,8 @@ landingContent:
       url: segments.md
     - text: Creați măsuri
       url: measures.md
-    - text: Listă activități pentru client
-      url: activities.md
-  - linkListType: learn
-    links:
-    - text: Lucrul cu aplicația
-      url: /learn/modules/working-with-customer-insights/
+    - text: Completați datele cu predicții
+      url: predictions.md
 - title: Exportați datele clientului
   linkLists:
   - linkListType: how-to-guide
@@ -82,10 +67,6 @@ landingContent:
       url: customer-card-add-in.md
     - text: Conector Power BI
       url: export-power-bi.md
-  - linkListType: learn
-    links:
-    - text: Gestionați conexiunile externe
-      url: /learn/modules/configure-third-party-connections/
 - title: Administrarea aplicației
   linkLists:
   - linkListType: how-to-guide
@@ -96,7 +77,3 @@ landingContent:
       url: permissions.md
     - text: Gestionați mai multe medii
       url: manage-environments.md
-  - linkListType: learn
-    links:
-    - text: Administrați Customer Insights
-      url: /learn/modules/administer-customer-data-platform/

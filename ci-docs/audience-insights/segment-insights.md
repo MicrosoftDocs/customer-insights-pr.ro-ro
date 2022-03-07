@@ -2,21 +2,19 @@
 title: Detalii de segment pentru segmentele existente
 description: Obțineți detalii despre segmentele existente pentru a vedea diferențele și punctele comune.
 ms.date: 06/10/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
-ms.topic: how-to
-author: JimsonChalissery
-ms.author: jimsonc
-ms.reviewer: mhart
+ms.topic: article
+author: m-hartmann
+ms.author: mhart
+ms.reviewer: jimsonc
 manager: shellyha
-searchScope:
-- ci-segment-insights
-- customerInsights
-ms.openlocfilehash: 8ae832c69c89bee08b8ef36ed99233b6e8e5a0f4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 92e1b05dd08588a5da446af5b17b2d6ce57490ce
+ms.sourcegitcommit: cf9b78559ca189d4c2086a66c879098d56c0377a
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355582"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "4406707"
 ---
 # <a name="segment-insights-preview"></a>Detalii despre segment (previzualizare)
 
@@ -46,13 +44,13 @@ De asemenea, puteți analiza modul în care se suprapun modificările pentru atr
 După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment.":::
+> :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment":::
 
 Selectați un detaliu pentru a vedea rezultatele analizei:
 
 - Numărul de membri care se suprapun segmentelor selectate pentru analiză.
 - Numărul de membri incluși într-unul dintre segmente, dar nu și în restul segmentelor.
-- Dacă ați selectat câmpuri în timp ce configurați analiza de suprapunere, le veți găsi în filele corespunzătoare. Puteți utiliza meniul derulant al filtrului pentru a selecta orice nivel de interes al atributului, iar tabelul din partea de jos va afișa datele corespunzătoare.
+- Dacă ați selectat câmpuri în timp ce configurați analiza de suprapunere, le veți găsi în filele corespunzătoare. Puteți utiliza funcția verticală a filtrului pentru a selecta orice nivel de interes al atributului, iar tabelul din partea de jos va afișa datele corespunzătoare.
 
 ## <a name="segment-differentiators"></a>Diferențiatori de segmente
 
@@ -79,7 +77,7 @@ Diferențiatori de segmente vă ajută să aflați ce diferențiază un segment 
 După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
 
 > [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment.":::
+> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment":::
 
 Selectați un detaliu pentru a vedea rezultatele analizei. O analiză a diferențiatorului include două file. Fila **Atribute** listează atributele profilului considerate ca diferențiatori. Fila **Măsuri** listează diferențiatori. Fiecare filă include următoarele detalii:
 
@@ -93,6 +91,3 @@ Puteți utiliza următoarele opțiuni pentru detaliile dvs. din bara de comenzi:
 - **Înapoi** pentru a returna lista de detalii
 - **Reîmprospăta** pentru a rula din nou analiza
 - **Ștergere** pentru a elimina acest detaliu
-
-
-[!INCLUDE[footer-include](../includes/footer-banner.md)]

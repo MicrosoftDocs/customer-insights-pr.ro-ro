@@ -1,23 +1,24 @@
 ---
 title: Experimente Azure Machine Learning
 description: Utilizați modele bazate pe Azure Machine Learning în Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 11/30/2020
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3c3bed3dca40be748140a8b339191e6a42725714
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 4c04a1d08aba152ce91d452ae2300c1ce0fc79e5d6980ac506dc40d9914c9fca
+ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228903"
+ms.lasthandoff: 08/10/2021
+ms.locfileid: "7033187"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizați modele bazate pe Azure Machine Learning
 
-Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru construirea de modele de învățare programată care pot genera informații suplimentare despre afaceri. Customer Insights se integrează cu învățare programată Azure pentru a utiliza propriile modele personalizate.
+Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru construirea de modele de învățare programată care pot genera informații suplimentare despre afaceri. Customer Insights se integrează cu Machine Learning Studio (clasic) și Azure Machine Learning pentru a utiliza propriile modele particularizate. Consultați [Experimente Machine Learning Studio (clasic)](machine-learning-studio-experiments.md) pentru exemple de experimente construite pe Machine Learning Studio (clasic). 
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -34,7 +35,7 @@ Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru constru
 
 ## <a name="work-with-azure-machine-learning-designer"></a>Lucrați cu designerul Azure Machine Learning
 
-Designerul Azure învățare programată oferă o pânză vizuală în care puteți glisa și plasa seturi de date și module. Un canal de lot creat din designer poate fi integrată în Customer Insights dacă acestea sunt configurate corespunzător. 
+Designerul Azure Machine Learning oferă o pânză vizuală în care puteți glisa și fixa seturi de date și module, similar cu Machine Learning Studio (clasic). Un canal de lot creat din designer poate fi integrată în Customer Insights dacă acestea sunt configurate corespunzător. 
    
 ## <a name="working-with-azure-machine-learning-sdk"></a>Lucrul cu SDK Azure Machine Learning
 

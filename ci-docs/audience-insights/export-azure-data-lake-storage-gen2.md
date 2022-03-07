@@ -1,31 +1,22 @@
 ---
 title: Exportați datele Customer Insights către Azure Data Lake Storage Gen2
 description: Aflați cum să configurați conexiunea la Azure Data Lake Storage Gen2.
-ms.date: 10/06/2021
+ms.date: 03/03/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: cc0b3aac11a33facc366e9c57071d1fb8be4ecc4
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: f431b707e1d65ffe47f8b3aa1c52abaa964e871a
+ms.sourcegitcommit: 1b671c6100991fea1cace04b5d4fcedcd88aa94f
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231689"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "5760066"
 ---
-# <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportați lista de segmente și alte date în Azure Data Lake Storage Gen2 (versiune preliminară)
-
-Stocați datele Customer Insights într-un cont Azure Data Lake Storage Gen2 sau le utilizați pentru a transfera datele la alte aplicații.
-
-## <a name="known-limitations"></a>Limitări cunoscute
-
-1. Pentru Azure Data Lake Storage Gen2 puteți alege între [Performanță standard și nivel de performanță Premium](/azure/storage/blobs/create-data-lake-storage-account) când creați un cont de stocare pentru depozitul dvs. de date. Dacă alegeți nivelul de performanță Premium, selectați bloburi bloc premium ca tip de cont. 
-
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurați conexiunea la Azure Data Lake Storage Gen2 
-
+# <a name="set-up-the-connection-to-azure-data-lake-storage-gen2-preview"></a>Configurați conexiunea la Azure Data Lake Storage Gen2 (previzualizare)
 
 1. Salt la **Administrator** > **Conexiuni**.
 

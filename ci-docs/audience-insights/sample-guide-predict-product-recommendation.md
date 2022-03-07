@@ -3,23 +3,20 @@ title: Eșantion de ghid de predicție pentru recomandarea produsului
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a recomandării de produs.
 ms.date: 02/10/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: m-hartmann
-ms.author: wameng
+author: diegogranados117
+ms.author: digranad
 manager: shellyha
-searchScope:
-- ci-predictions
-- ci-create-prediction
-- customerInsights
-ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 20072d14b160e54f5ad044adc1de6c079bf790e4
+ms.sourcegitcommit: bae40184312ab27b95c140a044875c2daea37951
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354662"
+ms.lasthandoff: 03/15/2021
+ms.locfileid: "5595288"
 ---
-# <a name="product-recommendation-prediction-sample-guide"></a>Eșantion de ghid de predicție pentru recomandarea produsului
+# <a name="product-recommendation-prediction-preview-sample-guide"></a>Eșantion de ghid pentru recomandarea produsului predicție (previzualizare)
 
 Vă vom explica un exemplu complet de predicție a recomandării de produs folosind datele eșantion furnizate mai jos.
 
@@ -34,7 +31,7 @@ Contoso este o companie care produce cafea și aparate de cafea de înaltă cali
 
 ## <a name="task-1---ingest-data"></a>Sarcina 1 - Ingerare date
 
-Examinați articolele [despre ingerarea de date](data-sources.md) și [importul surselor de date folosind Power Query conectori](connect-power-query.md) specific. Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
+Examinați articolele [despre ingestia de date](data-sources.md) și în mod specific [importul surselor de date utilizând conectori Power Query](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerarea datelor clienților de pe platforma de comerț electronic
 
@@ -68,7 +65,7 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. În câmpul **Nume** din panoul lateral, redenumiți sursa de date din **Interogare** în **eCommercePurchases**.
 
-1. **Salvați** sursa de date.
+1. Salvați sursa de date.
 
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerați datele clienților din schema de loialitate
@@ -86,11 +83,11 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
 
-1. **Salvați** sursa de date.
+1. Salvați sursa de date.
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de unificare a datelor pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
+După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinare** pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
 
 ### <a name="map"></a>Hartă
 
@@ -108,9 +105,9 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 1. Accesați fila **Potrivire** și selectați **Setare ordine**.
 
-2. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
+2. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și includeți toate înregistrările.
 
-3. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
+3. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și includeți toate înregistrările.
 
    ![Potriviți unificarea de comerț electronic și loialitate.](media/unify-match-order.png)
 
@@ -118,16 +115,16 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 5. Adăugați prima condiție folosind FullName.
 
-   - Pentru eCommerceContacts selectați **FullName** în meniul derulant.
-   - Pentru loyCustomers selectați **FullName** în lista derulantă.
+   - Pentru eCommerceContacts selectați **FullName** din meniul derulant.
+   - Pentru loyCustomers selectați **FullName** din meniul derulant.
    - Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 
 6. Introduceți numele **FullName, Email** pentru noua regulă.
 
    - Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   - Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
-   - Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă.
+   - Pentru entitatea eCommerceContacts, alegeți **E-mail** din meniul derulant.
+   - Pentru entitatea loyCustomers, alegeți **E-mail** din meniul derulant.
    - Lăsați Normalizarea necompletată.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 
@@ -159,7 +156,7 @@ Odată stabilite profilurile de clienți unificate, putem rula acum predicția d
 
    - **Numărul de produse**: Setați această valoare la **5**. Această setare definește câte produse doriți să le recomandați clienților dvs.
 
-   - **Se așteaptă repetarea achizițiilor**: Selectați **Da** pentru a indica faptul că doriți să includeți produse în recomandarea pe care clienții dvs. au achiziționat-o anterior.
+   - **Sugerați produse achiziționate recent de clienți?**: Selectați **Da** pentru a indica faptul că doriți să includeți produse în recomandarea pe care clienții dvs. au achiziționat-o anterior.
 
    - **Fereastră de privire retrospectivă:** Selectați cel puțin **365 de zile**. Această setare definește cât de departe va privi modelul înapoi spre activitatea clientului pentru a o utiliza drept intrare pentru recomandările sale.
    

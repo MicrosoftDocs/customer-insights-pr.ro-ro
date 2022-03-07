@@ -3,30 +3,18 @@ title: Relații între entități și căi de entități
 description: Creați și gestionați relații între entități din mai multe surse de date.
 ms.date: 09/27/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-semantic-mapping
-- ci-entities
-- ci-relationships
-- ci-activities
-- ci-activities-wizard
-- ci-measures
-- ci-segments
-- ci-segment-builder
-- ci-measure-builder
-- ci-measure-template
-- ci-permissions
-- customerInsights
-ms.openlocfilehash: db8822aa9e89afb9dc16428af6ca202de789ba1c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: bd80d0315f4f501b8f8108b99c144082c21e0d4c
+ms.sourcegitcommit: 5d82e5b808517e0e99fdfdd7e4a4422a5b8ebd5c
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355720"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "7623184"
 ---
 # <a name="relationships-between-entities"></a>Relații între entități
 

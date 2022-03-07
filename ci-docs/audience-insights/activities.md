@@ -2,31 +2,23 @@
 title: Activități ale clienților
 description: Definiți activitățile clienților și vizualizați-le într-o cronologie pe profilurile clienților.
 ms.date: 11/01/2021
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.reviewer: mhart
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
 manager: shellyha
-searchScope:
-- ci-entities
-- ci-customer-card
-- ci-relationships
-- ci-activities
-- ci-activities-wizard
-- ci-measures
-- ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: a2f1e8ecf49664a4bb2dc271131d437e50cfdd24
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: MT
+ms.openlocfilehash: c99ec2e7d5e4bf32a509bbe4c0c53999129b2305
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359849"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732475"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
-Combinați activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights pentru a crea o cronologie care listează activitățile cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu soluția [Program de completare card client](customer-card-add-in.md) sau într-un tablou de bord Power BI.
+Combină activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights pentru a crea o cronologie care listează activitățile în mod cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul de client](customer-card-add-in.md) soluție sau într-un tablou de bord Power BI.
 
 ## <a name="define-an-activity"></a>Definiți o activitate
 
@@ -69,7 +61,7 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi i
    - **Câmpuri opționale**
       - **Detalii suplimentare**: Câmp cu informații relevante pentru această activitate.
       - **Pictogramă**: Pictogramă care reprezintă cel mai bine acest tip de activitate.
-      - **Adresa web**: Câmp care conține o adresă URL cu informații despre această activitate. De exemplu, sistemul tranzacțional care furnizează această activitate. Această adresă URL poate fi orice câmp din sursă de date sau poate fi construită ca un câmp nou folosind un Power Query transformare. Datele URL vor fi stocate în entitatea *Activitate unificată*, care poate fi consumată descendent folosind [API-uri](apis.md).
+      - **Adresa web**: Câmp care conține o adresă URL cu informații despre această activitate. De exemplu, sistemul tranzacțional care furnizează această activitate. Această adresă URL poate fi orice câmp din sursa de date sau poate fi construită ca un câmp nou folosind o transformare Power Query. Datele URL vor fi stocate în entitatea *Activitate unificată*, care poate fi consumată descendent folosind [API-uri](apis.md).
 
    - **Afișați în cronologie**
       - Alegeți dacă doriți să arătați această activitate în vizualizarea cronologiei pe profilele clienților dvs. Selectați **Da** pentru a arăta activitatea în cronologie sau **Nu** să-l ascundă.

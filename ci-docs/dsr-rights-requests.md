@@ -1,19 +1,20 @@
 ---
 title: Solicitări de drepturi privind datele subiecților sub RGPD | Microsoft Docs
-description: Răspundeți la solicitările persoanei vizate pentru capabilitatea de detalii despre public din Dynamics 365 Customer Insights.
+description: Răspundeți la solicitările subiectului de date pentru capacitatea Dynamics 365 Customer Insights de informații despre public.
 ms.date: 08/11/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: e095eb4f8e194f314d7d6baf6fa6a7a319319d2a
-ms.sourcegitcommit: 1946d7af0bd2ca216885bec3c5c95009996d9a28
-ms.translationtype: MT
+ms.openlocfilehash: c116f7ce208c0288851a4b2230e27784ba3a5337
+ms.sourcegitcommit: 834651b933b1e50e7557d44f926a3fb757c1f83a
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8350284"
+ms.lasthandoff: 11/02/2021
+ms.locfileid: "7732695"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -23,7 +24,7 @@ Ne-am angajat să ne ajutăm clienții să își îndeplinească cerințele RGPD
 
 ## <a name="audience-insights"></a>Detalii despre public
 
-### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Răspundeți la solicitările RGPD ale persoanei vizate pentru capabilitatea de detalii despre public din Dynamics 365 Customer Insights
+### <a name="responding-to-gdpr-data-subject-delete-requests-for-dynamics-365-customer-insights-audience-insights-capability"></a>Răspunsul la solicitările de ștergere a subiectului de date din GDPR pentru capacitatea Dynamics 365 Customer Insights de informații despre public
 
 „Dreptul la eliminare” prin înlăturarea datelor cu caracter personal din datele clienților unei organizații reprezintă o protecție-cheie în Regulamentul general privind protecția datelor (RGPD). Îndepărtarea datelor personale include eliminarea tuturor datelor personale și a jurnalelor generate de sistem, cu excepția informațiilor din jurnalul de audit.
 
@@ -38,7 +39,7 @@ Detaliile despre public oferă următoarele experiențe în cadrul produsului pe
 
 Un administrator al Customer Insights poate urma acești pași pentru a elimina datele despre clienți care au fost șterse în sursa de date:
 
-1. Conectați-vă la Dynamics 365 Customer Insights.
+1. conectați-vă la Dynamics 365 Customer Insights.
 2. În Detalii despre audiență, accesați **Date** > **Surse de date**
 3. Pentru fiecare sursă de date din listă care conține datele șterse ale clienților:
    1. Selectați (...) și apoi selectați **Reîmprospătare**.
@@ -51,7 +52,7 @@ Un administrator al Customer Insights poate urma acești pași pentru a elimina 
 
 Un administrator al Customer Insights poate urma acești pași pentru ștergerea datelor de utilizator Customer Insights:
 
-1. Conectați-vă la Dynamics 365 Customer Insights.
+1. conectați-vă la Dynamics 365 Customer Insights.
 2. În detalii despre public, accesați **Admin** > **Permisiuni**.
 3. Bifați caseta de selectare pentru utilizatorul pe care doriți să-l eliminați.
 4. Selectați **Eliminare**.
@@ -85,71 +86,71 @@ Capacitatea de gestionare a consimțământului nu colectează în mod direct da
 Pentru a elimina datele privind consimțământul despre anumiți utilizatori, eliminați-le din sursele de date ingerate pentru capacitatea de gestionare a consimțământului. După reîmprospătarea sursă de date, datele eliminate vor fi șterse și din Centrul de consimțământ. Aplicațiile care utilizează entitatea de consimțământ vor șterge și datele care au fost eliminate de pe sursă după a [reîmprospăta](audience-insights/system.md#refresh-processes). Vă recomandăm să reîmprospătați sursele de date rapid după ce răspundeți la o solicitare a persoanei vizate pentru a elimina datele utilizatorului din toate celelalte procese și aplicații.
 
 
-<!-- ## Engagement insights (preview)
+## <a name="engagement-insights-preview"></a>Detalii despre angajamente (versiune preliminară)
 
-### Deleting and exporting event data containing end user identifiable information
+### <a name="deleting-and-exporting-event-data-containing-end-user-identifiable-information"></a>Ștergerea și exportarea datelor despre evenimente care conțin informații de identificare ale utilizatorului final
 
-The following sections describe how to delete and export event data that might contain personal data.
+Următoarele secțiuni descriu cum să ștergeți și să exportați date despre evenimente care ar putea conține date cu caracter personal.
 
-To delete or export data:
+Pentru a șterge sau exporta date:
 
-1. Tag event properties that contain data with personal information.
-2. Delete or export data associated with specific values (for example: a specified user ID).
+1. Etichetați proprietățile evenimentului care conțin date cu informații personale.
+2. Ștergeți sau exportați datele asociate cu anumite valori (de exemplu: un ID de utilizator specificat).
 
-#### Tag and update event properties
+#### <a name="tag-and-update-event-properties"></a>Etichetați și actualizați proprietățile evenimentului
 
-Personal data is tagged on an event property level. First, tag the properties being considered for deletion or export.
+Datele personale sunt etichetate la nivel de proprietate a evenimentului. Mai întâi, etichetați proprietățile luate în considerare pentru ștergere sau export.
 
-To tag an event property as containing personal information, follow these steps:
+Pentru a eticheta o proprietate a evenimentului ca având informații personale, urmați acești pași:
 
-1. Open the workspace containing the event.
+1. Deschideți spațiul de lucru care conține evenimentul.
 
-1. Go to **Data** > **Events** to see the list of events in the selected workspace.
+1. Accesați **Date** > **Evenimente** pentru a vedea lista evenimentelor din spațiul de lucru selectat.
   
-1. Select the event you want to tag.
+1. Selectați evenimentul pe care doriți să îl etichetați.
 
-1. Select **Edit properties** to open the pane listing all properties of the selected event.
+1. Selectați **Editați proprietățile** pentru a deschide panoul listând toate proprietățile evenimentului selectat.
      
-1. Select **...** and then choose **Edit** to reach the **Update property** dialog.
+1. Selectați **...** și apoi alegeți **Editați** pentru a ajunge la caseta de dialog **Actualizați proprietatea**.
 
-   ![Edit event.](engagement-insights/media/edit-event.png "Edit event")
+   ![Editați evenimentul.](engagement-insights/media/edit-event.png "Editați evenimentul")
 
-1. In the **Update Property** window, choose **...** in the upper right corner, and then choose the **Contains EUII** box. Choose **Update** to save your changes.
+1. În fereastra **Actualizați proprietatea**, alegeți **...** în colțul din dreapta sus, apoi alegeți caseta **Conține EUII**. Alegeți **Actualizare** pentru a vă salva modificările.
 
-   ![Save your changes.](engagement-insights/media/update-property.png "Save your changes")
+   ![Salvați modificările.](engagement-insights/media/update-property.png "Salvați modificările")
 
    > [!NOTE]
-   > Every time the event schema changes or you create a new event, it's recommended that you evaluate the associated event properties and tag or untag them as containing personal data, if necessary.
+   > De fiecare dată când schema evenimentului se modifică sau creați un eveniment nou, este recomandat să evaluați proprietățile asociate evenimentului și să le etichetați sau să le etichetați ca conținând date personale, dacă este necesar.
 
-#### Delete or export tagged event data
+#### <a name="delete-or-export-tagged-event-data"></a>Ștergeți sau exportați datele de eveniment etichetate
 
-If all event properties have been tagged appropriately as described in the previous step, an environment admin can issue a deletion request against the tagged event data.
+Dacă toate proprietățile evenimentului au fost etichetate în mod corespunzător, așa cum este descris în pasul anterior, un administrator de mediu poate emite o cerere de ștergere a datelor evenimentului etichetat.
 
-To manage EUII deletion or export requests
+Pentru a gestiona ștergerea EUII sau solicitările de export
 
-1. Go to **Admin** > **Environment** > **Settings**.
+1. Accesați **Administrator** > **Mediu** > **Setări**.
 
-1. In the **Manage end user identifiable information (EUII)** section, select **Manage EUII**.
+1. În secțiunea **Gestionați informațiile de identificare ale utilizatorului final (EUII)**, selectați **Gestionați EUII**.
 
-##### Deletion
+##### <a name="deletion"></a>Ștergere
 
-For deletion, you can enter a list of comma-separated user IDs in the **Delete end user identifiable information (EUII)** section. These IDs will then be compared with all tagged event properties of all projects in the current environment via exact string matching. 
+Pentru ștergere, puteți introduce o listă de ID-uri de utilizator separate prin virgulă în secțiunea **Ștergeți informațiile de identificare ale utilizatorului final (EUII)**. Aceste ID-uri vor fi apoi comparate cu toate proprietățile de evenimente etichetate ale tuturor proiectelor din mediul curent prin potrivirea exactă a șirurilor. 
 
-If a property value matches one of the provided IDs, the associated event will be permanently deleted. Due to the irreversibility of this action, you must confirm the deletion after selecting **Delete**.
+Dacă o valoare a proprietății se potrivește cu unul dintre ID-urile furnizate, evenimentul asociat va fi șters definitiv. Datorită ireversibilității acestei acțiuni, trebuie să confirmați ștergerea după selectarea **Șterge**.
 
-##### Export
+##### <a name="export"></a>Export
 
-The export process is identical to the deletion process when it comes to defining event property values in the **Export end user identifiable information (EUII)** section. Additionally, you'll need to provide an **Azure blob storage URL** to specify the export destination. The Azure Blob URL must include a [Shared Access Signature (SAS)](/azure/storage/common/storage-sas-overview).
+Procesul de export este identic cu procesul de ștergere atunci când vine vorba de definirea valorilor proprietății evenimentului în secțiunea **Exportați informații de identificare ale utilizatorului final (EUII)**. În plus, va trebui să furnizați un **URL de stocare blob Azure** pentru a specifica destinația de export. Adresa URL Blob Azure trebuie să includă o [Semnătură de acces partajată (SAS)](/azure/storage/common/storage-sas-overview).
 
-After selecting **Export**, all events of the current team that contain matching tagged properties will be exported in CSV format to the export destination.
+După selectarea **Export**, toate evenimentele echipei actuale care conțin proprietăți etichetate potrivite vor fi exportate în format CSV la destinația de export.
 
-### Good practices
+### <a name="good-practices"></a>Bune practici
 
-* Try to avoid sending any events that contain personal data.
-* If you need to send events containing EUII data, limit the number of events and event properties that contain EUII data. Ideally, limit yourself to one such event.
-* Make sure that as few people as possible have access to the sent personal data.
-* For events containing personal data, make sure that you set one property to emit a unique identifier that can easily be linked to a specific user (for example, a user ID). This makes it easier to segregate data and to export or delete the right data.
-* Only tag one property per event as containing personal data. Ideally one that only contains a unique identifier.
-* Do not tag properties containing verbose values (for example, an entire request body). Engagement insights capability uses exact string matching when deciding which events to delete or export. -->
+* Încercați să evitați trimiterea evenimentelor care conțin date personale.
+* Dacă trebuie să trimiteți evenimente care conțin date EUII, limitați numărul de evenimente și proprietăți de eveniment care conțin date EUII. În mod ideal, limitați-vă la un astfel de eveniment.
+* Asigurați-vă că cât mai puține persoane au acces la datele personale trimise.
+* Pentru evenimentele care conțin date personale, asigurați-vă că setați o proprietate pentru a emite un identificator unic care poate fi ușor legat de un anumit utilizator (de exemplu, un ID de utilizator). Acest lucru facilitează separarea datelor și exportul sau ștergerea datelor corecte.
+* Etichetați o singură proprietate pentru fiecare eveniment ca conținând date personale. În mod ideal unul care conține doar un identificator unic.
+* Nu etichetați proprietăți care conțin valori detaliate (de exemplu, un întreg corp de solicitare). Funcția de statistici de implicare folosește potrivirea exactă a șirurilor atunci când decide ce evenimente trebuie șterse sau exportate.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

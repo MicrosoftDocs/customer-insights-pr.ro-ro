@@ -5,19 +5,17 @@ ms.reviewer: mhart
 ms.author: mhart
 author: m-hartmann
 ms.date: 08/31/2021
+ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-searchScope:
-- ci-home
-- customerInsights
-ms.openlocfilehash: 2776b2292560f9ea61a06d2b1b7bc7811d35c860
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: aaaf1848df175469d8af07754ac153b777781ffb
+ms.sourcegitcommit: 971716c761871cee390519cacef617dac21ecd60
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353742"
+ms.lasthandoff: 09/01/2021
+ms.locfileid: "7466592"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-audience-insights-capability"></a>Începeți cu capacitatea de analiză a publicului Dynamics 365 Customer Insights
 
@@ -25,7 +23,7 @@ Detalii despre public, vă pot ajuta să construiți o înțelegere mai profund�
 
 ## <a name="step-1-create-an-environment"></a>Pasul 1: Crearea unui mediu
 
-Pentru început, trebuie mai întâi să creați un mediu în care să lucrați. Dacă organizația dvs. a achiziționat deja o licență, consultați [Creați un mediu](create-environment.md). Pentru a începe o încercare pentru informații despre public, consultați [Configurați un mediu de încercare](../trial-signup.md). 
+Pentru început, trebuie mai întâi să creați un mediu în care să lucrați. Dacă organizația dvs. a achiziționat deja o licență, consultați [Începeți cu un abonament plătit](get-started-paid.md). Pentru a începe o încercare pentru informații despre public, consultați [Configurați un mediu de încercare](get-started-trial.md). 
 
 ## <a name="step-2-explore-audience-insights"></a>Pasul 2: Explorați detalii despre public
 
@@ -39,7 +37,7 @@ Prima dată când vă conectați la statistici privind publicul, puteți configu
 
 Profilurile unificate reprezintă fundamentul pentru a obține informații și a lua măsuri cu privire la date. Aduceți date din diverse surse și rulați procesul de unificare a datelor pentru a combina profiluri unificate. Specificați relațiile dintre entitățile ingerate folosesc caracteristici de îmbogățire pentru a adăuga informații la profiluri. 
 
-1. Ingerează date prin crearea de surse de date din mai multe opțiuni. Alege intre [Power Query conectori](connect-power-query.md), A [Dosarul Common Data Model](connect-common-data-model.md), sau [Microsoft Dataverse](/dynamics365/customer-insights/audience-insights/connect-dataverse-managed-lake). 
+1. Ingerează date prin crearea de surse de date din mai multe opțiuni. Alegeți între [Conectori Power Query](connect-power-query.md), un [dosar Common Data Model](connect-common-data-model.md), sau [Microsoft Dataverse](connect-common-data-service-lake.md). 
 
 1. Rulați [procesul de unificare a datelor](data-unification.md) trecând prin fazele [mapare](map-entities.md), [potrivire](match-entities.md), și [combinare](merge-entities.md).
 

@@ -1,19 +1,20 @@
 ---
 title: Conector Power Apps
 description: Conectarea cu Power Apps și Power Automate.
-ms.date: 10/01/2021
+ms.date: 01/19/2021
 ms.reviewer: mhart
+ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: MT
+ms.openlocfilehash: 2ab5a9059991611a2959a19cc688d232ec782e1e
+ms.sourcegitcommit: dab2cbf818fafc9436e685376df94c5e44e4b144
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229047"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "6554128"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector Microsoft Power Apps (previzualizare)
 
@@ -29,47 +30,48 @@ Consultați documentația Power Apps pentru a învăța cum să [adăugați o co
 
 După adăugarea Customer Insights ca o conexiune de date, puteți alege următoarele entități în Power Apps:
 
-- **Client**: pentru a utiliza date din [profilul clientului unificat](customer-profiles.md).
-- **UnifiedActivity**: pentru a afișa [cronologia activității](activities.md) în aplicație.
-- **ContactProfile**: pentru a afișa contactele unui client. Această entitate este disponibilă numai în medii de detalii despre public pentru conturi de business.
+- Client: să utilizeze date din [profilul clientului unificat](customer-profiles.md).
+- UnifiedActivity: pentru a afișa [cronologia de activitate](activities.md) pe aplicație.
 
 ## <a name="limitations"></a>Limitări
 
 ### <a name="retrievable-entities"></a>Entități recuperabile
 
-Puteți prelua numai entitățile **Client**, **UnifiedActivity**, **Segmente**, și **ContactProfile** prin intermediul conectorului Power Apps. ContactProfile este disponibilă numai în instanța de detalii despre public pentru conturi de business. Alte entități sunt afișate deoarece conectorul de bază le acceptă prin declanșatoare în Power Automate.
+Puteți regăsi numai entitățile **Client**, **UnifiedActivity** și **Segmente** i prin intermediul conectorului Power Apps. Alte entități sunt afișate deoarece conectorul de bază le acceptă prin declanșatoare în Power Automate.  
 
 ### <a name="delegation"></a>Delegare
 
-Delegarea funcționează pentru entitatea **Client** și entitatea **UnifiedActivity**. 
+Delegarea funcționează pentru entitatea Client și entitatea UnifiedActivity. 
 
 - Delegare pentru entitatea **Client**: pentru a utiliza delegarea pentru această entitate, câmpurile trebuie să fie indexate în [Index de căutare și filtrare](search-filter-index.md).  
-- Delegația pentru **UnifiedActivity**: Delegația pentru această entitate funcționează numai pentru câmpuri **ActivityId** și **CustomerId**.  
-- Delegația pentru **ContactProfile**: Delegația pentru această entitate funcționează numai pentru câmpuri **ContactId** și **CustomerId**. ContactProfile este disponibilă numai în medii de detalii despre public pentru conturi de business.
 
-Pentru mai multe informații despre delegare, accesați [funcții Power Apps și operații delegabile](/powerapps/maker/canvas-apps/delegation-overview). 
+- Delegația pentru **UnifiedActivity**: Delegația pentru această entitate funcționează numai pentru câmpuri **ActivityId** și **CustomerId**.  
+
+- Pentru mai multe informații despre delegare, consultați [Funcții și operațiuni Power Apps delegabile](/connectors/commondataservice/#power-apps-delegable-functions-and-operations-for-the-cds-for-apps). 
 
 ## <a name="example-gallery-control"></a>Exemplu de control al galeriei
 
-Puteți adăuga profiluri de clienți la un [control de galerie](/powerapps/maker/canvas-apps/add-gallery).
+De exemplu, adăugați profiluri de clienți la un [control al galeriei](/powerapps/maker/canvas-apps/add-gallery).
 
-1. Adăugați un control **galerie** unei aplicații pe care o construiți.
+1. Adăugați un control **Galerie** unei aplicații pe care o construiți.
+
+> [!div class="mx-imgBorder"]
+> ![Adăugați un element galerie.](media/connector-powerapps9.png "Adăugați un element galerie")
+
+1. Selectați **Client** ca sursă de date pentru elemente.
 
     > [!div class="mx-imgBorder"]
-    > ![Adăugați un element galerie.](media/connector-powerapps9.png "Adăugați un element galerie.")
+    > ![Selectați o sursă de date.](media/choose-datasource-powerapps.png "Selectați o sursă de date")
 
-2. Selectați **Client** ca sursă de date pentru elemente.
+1. Puteți schimba panoul de date din dreapta pentru a selecta ce câmp pentru entitatea Client să se afișeze în galerie.
 
-    > [!div class="mx-imgBorder"]
-    > ![Selectați o sursă de date.](media/choose-datasource-powerapps.png "Selectați o sursă de date.")
+1. Dacă doriți să afișați orice câmp de la clientul selectat în galerie, completați proprietatea Text a unei etichete: **{Name_of_the_gallery}.Selectate.{property_name}**
 
-3. Puteți schimba panoul de date din dreapta pentru a selecta ce câmp pentru entitatea Client să se afișeze în galerie.
+    Exemplu: Gallery1.Selected.address1_city
 
-4. Dacă doriți să afișați orice câmp de la clientul selectat în galerie, completați proprietatea **Text** a unei etichete utilizând **{Name_of_the_gallery}.Selectat.{property_name}**  
-    - De exemplu: _Gallery1.Selected.address1_city_
+1. Pentru a afișa cronologia unificată pentru un client, adăugați un element de galerie și adăugați proprietatea Elemente: **Filter('UnifiedActivity', CustomerId = {Customer_Id})**
 
-5. Pentru a afișa cronologia unificată pentru un client, adăugați un element de galerie și adăugați proprietatea **Elemente** utilizând **Filter('UnifiedActivity', CustomerId = {Customer_Id})**  
-    - De exemplu: _Filter('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)_
+    Exemplu: Filtru ('UnifiedActivity', CustomerId = Gallery1.Selected.CustomerId)
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

@@ -3,20 +3,24 @@ title: Predicția valorii pe viață a clientului (CLV)
 description: Prevedeți potențialul de venituri pentru clienții activi în viitor.
 ms.date: 02/05/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: m-hartmann
 ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: 740d6a5a749e156414b0e80193334051b7f2632fe4d1f4291d74b99250f35bc2
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 07790604b06f21095a9220a6f57727cac80789c5
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035384"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355804"
 ---
-# <a name="customer-lifetime-value-clv-prediction-preview"></a>Valoare ciclu de viață client (versiune preliminară) (CLV)
+# <a name="customer-lifetime-value-clv-prediction"></a>Predicția valorii pe viață a clientului (CLV)
 
 Preziceți valoarea potențială (veniturile) pe care clienții activi individuali o vor aduce în afacerea dvs. într-o perioadă de timp viitoare definită. Această funcție vă poate ajuta să atingeți diferite obiective: 
 - Identificați clienții cu valoare ridicată și procesați această perspectivă
@@ -65,7 +69,7 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
     - Completitatea datelor: mai puțin de 20% lipsesc valorile din câmpurile obligatorii din datele de intrare   
 
 > [!NOTE]
-> - Modelul necesită istoricul tranzacțiilor clienților dvs. În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități tranzațcii de cumpărare, puteți să le uniți-le în Power Query înainte de ingestia de date.
+> - Modelul necesită istoricul tranzacțiilor clienților dvs. În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități de cumpărare/tranzacție, le puteți uni Power Query înainte de ingerarea datelor.
 > - Cu toate acestea, pentru date suplimentare despre activitatea clienților (opțional), puteți adăuga oricâte entități de activitate ale clienților doriți, pentru a fi considerate de model.
 
 ## <a name="create-a-customer-lifetime-value-prediction"></a>Creați o predicție a valorii duratei de viață a clientului
@@ -74,7 +78,7 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
 
 1. Selectați dala **Valoarea duratei de viață a clientului** și selectați **Utilizați modelul**. 
 
-1. În panoul **Valoarea duratei de viață a clientului (previzualizare)**, selectați **Începeți**.
+1. În **Valoarea de viață a clientului** panou, selectați **Incepe**.
 
 1. **Denumiți acest model** și **Numele entității de ieșire** pentru a le distinge de alte modele sau entități.
 

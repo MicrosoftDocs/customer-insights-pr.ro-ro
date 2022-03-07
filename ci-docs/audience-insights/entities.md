@@ -3,24 +3,26 @@ title: Entități și seturi de date
 description: Vizualizați datele pe pagina Entități.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 00c5ee50fb9f0906622c91699852ffba0acb5c15
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-entities
+- customerInsight
+ms.openlocfilehash: 1e1abdf49a3c1fe6f9fdd2cf5353a7723454f47b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900442"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355335"
 ---
 # <a name="entities-in-audience-insights"></a>Entități în Detalii despre audiență
 
 După [configurarea surselor de date](data-sources.md), accesați pagina **Entități** pentru a evalua calitatea datelor ingerate. Entitățile sunt considerate seturi de date. Capacități multiple ale Dynamics 365 Customer Insights sunt construite în jurul acestor entități. Revizuirea acestora îndeaproape vă poate ajuta să validați rezultatele acestor funcții.
 
-The **Entități** pagina listează entități și include aceste coloane:
+The **Entități** pagina listează entitățile și include aceste coloane:
 
 - **Nume** : Numele entității de date. Dacă vedeți un simbol de avertizare lângă un nume de entitate, înseamnă că datele pentru acea entitate nu s-au încărcat cu succes.
 - **Sursă** : Tipul de sursă de date care a ingerat entitatea.
@@ -41,7 +43,7 @@ The **Entități** pagina listează entități și include aceste coloane:
 > ![Tabelul câmpurilor.](media/data-manager-entities-fields.PNG "Tabelul câmpurilor")
 
 > [!NOTE]
-> Această pagină afișează doar o mostră de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați pagina **Surse de date**, selectați o entitate, selectați **Editați**, apoi vizualizați datele acestei entități cu editorul Power Query, așa cum este explicat în [Surse de date](data-sources.md).
+> Această pagină arată doar o mostră de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați **Surse de date** pagina, selectați o entitate, selectați **Editați | ×**, apoi vizualizați datele acestei entități cu Power Query editor așa cum este explicat în [Surse de date](data-sources.md).
 
 Pentru a afla mai multe despre datele ingerate în entitate, coloana **Rezumat** vă oferă câteva caracteristici importante ale datelor, cum ar fi valorile Null, valori lipsă, valori unice, numărări și distribuții, după cum se aplică datelor dumneavoastră. Selectați pictograma diagramă pentru a vedea rezumatul datelor.
 
@@ -71,7 +73,9 @@ Câmpurile dintr-o sursă de date ingerate pot conține date deteriorate. Înreg
 
 De exemplu, o coloană „zi de naștere” are tipul de date setat ca „dată”. Înregistrarea unui client are ziua de naștere înregistrată ca „01/01/19777”. Sistemul va semnaliza această înregistrare ca fiind deteriorată. Cineva poate schimba acum ziua de naștere din sistemul sursă în „1977”. După o reîmprospătare automată a surselor de date, câmpul are acum un format valid și înregistrarea va fi eliminată din entitatea deteriorată. 
 
-Accesați **Date** > **Entități** și căutați entitățile deteriorate în secțiunea **Sistem**. Schema de denumire a entităților deteriorate: „DataSourceName_EntityName_corrupt”.
+Accesați **Date** > **Entități** și căutați entitățile deteriorate în secțiunea **Sistem**. Schema de denumire a entităților deteriorate: „DataSourceName_EntityName_corrupt”. Selectați o entitate coruptă pentru a identifica toate câmpurile corupte și motivul la nivel de înregistrare individuală.
+> [!div class="mx-imgBorder"]
+> ![Motivul corupției.](media/corruption-reason.png "Motivul corupției")
 
 Customer Insights procesează încă înregistrări deteriorate. Cu toate acestea, acestea pot cauza probleme atunci când lucrați cu datele unificate.
 

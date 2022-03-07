@@ -3,18 +3,17 @@ title: Exportați datele Customer Insights către Anunțuri LinkedIn
 description: Aflați cum să configurați conexiunea și să exportați la Anunțuri LinkedIn.
 ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 867a6541734746f75a35faaa8d3861e0479d6114
-ms.sourcegitcommit: 9558ff772ee6c944fcb8db4bfc8cda13b38a1bff
-ms.translationtype: HT
+ms.openlocfilehash: 7a6bb466652b8703a4784329a5e675965f557e82
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/29/2021
-ms.locfileid: "7866903"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231118"
 ---
 # <a name="export-segments-to-linkedin-ads-preview"></a>Exportați segmente în Anunțuri LinkedIn (previzualizare)
 
@@ -22,7 +21,7 @@ Exportați segmente de profiluri de clienți unificate în Anunțuri LinkedIn pe
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
--   Ai un [cont LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) și acreditările de administrator corespunzătoare.
+-   Aveți un [Cont LinkedIn Campaign Manager](https://business.linkedin.com/marketing-solutions/ads) și acreditările de administrator corespunzătoare.
 -   Aveți [segmente configurate](segments.md) în Detalii despre audiență.
 -   Profilurile de clienți din segmentele exportate conțin un câmp cu o adresă de e-mail.
 
@@ -43,13 +42,13 @@ Exportați segmente de profiluri de clienți unificate în Anunțuri LinkedIn pe
 
 1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită este Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Furnizați-vă [LinkedIn Campaign Manager ID contului](https://www.linkedin.com/help/lms/answer/a424270).
+1. Furnizați-vă [ID-ul de cont LinkedIn Campaign Manager](https://www.linkedin.com/help/lms/answer/a424270).
 
 1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
 
 1. Selectați **Conectați** pentru a inițializa conexiunea la Monitor de campanie.
 
-1. Selectați **Autentificați-vă cu LinkedIn** și furnizați acreditările dvs. de administrator pentru LinkedIn Campaign Manager.
+1. Selectați **Autentificare cu LinkedIn** și furnizați acreditările de administrator pentru LinkedIn Campaign Manager.
 
 1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
 
@@ -69,7 +68,7 @@ Puteți configura un export dacă aveți acces la o conexiune de acest tip. Pent
 
 1. În secțiunea **Potrivirea datelor**, pentru direcționarea prin contact, selectați cel puțin un câmp care reprezintă adresa de e-mail a unui client, Apple Ad ID, Google Ad ID, Google User ID sau nume și prenume. Dacă alegeți direcționarea în funcție de companie, selectați cel puțin un câmp care să reprezinte numele companiei, domeniul de e-mail, adresa URL a paginii LinkedIn, simbolul stocului sau site-ul web. Câmpuri suplimentare pot fi selectate pentru a defini în continuare exportul. 
 
-1. Selectați segmentele pe care doriți să le exportați. Segmentele de public potrivite din LinkedIn Campaign Manager vor fi create automat cu numele segmentelor pe care le-ați selectat să le exportați. Fiecare segment va avea ca rezultat un public separat Matched audience. 
+1. Selectați segmentele pe care doriți să le exportați. Publicul potrivit Matched audiences din LinkedIn Campaign Manager va fi creat automat cu numele segmentelor pe care le-ați selectat pentru export. Fiecare segment va avea ca rezultat un public separat Matched audience. 
 
 1. Selectați **Salvare**.
 
@@ -80,6 +79,6 @@ Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-t
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 
-Când activați Dynamics 365 Customer Insights să transmită date către LinkedIn Ads, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi Datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Anunțuri LinkedIn respectă orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Când activați Dynamics 365 Customer Insights pentru a transmite date către Anunțuri LinkedIn, permiteți transferul de date în afara limitelor de conformitate cu Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi date cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Anunțuri LinkedIn respectă orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 
-Administratorul dvs. Dynamics 365 Customer Insights poate elimina oricând această destinație de export pentru a opri utilizarea acestei funcționalități.
+Administratorul Dynamics 365 Customer Insights poate să elimine această destinație de export oricând, pentru a întrerupe utilizarea acestei funcționalități.

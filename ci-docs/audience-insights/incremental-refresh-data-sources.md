@@ -1,22 +1,24 @@
 ---
-title: Reîmprospătare incrementală pentru sursele de date bazate pe Power Query
-description: Reîmprospătați date noi și actualizate pentru surse mari de date bazate pe Power Query.
+title: Reîmprospătare incrementală pentru Power Query surse de date bazate pe
+description: Actualizează datele noi și actualizate pentru surse mari de date pe baza Power Query.
 ms.date: 12/06/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
-ms.openlocfilehash: f614d701aeb06720a60b14549a7fe666f8fe0617
-ms.sourcegitcommit: 11b343f6622665251ab84ae39ebcd91fa1c928ca
-ms.translationtype: HT
+searchScope:
+- ci-system-schedule
+- customerInsights
+ms.openlocfilehash: 62632efda3c0c7e53fcdd8864b053ba93e2918bc
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "7900300"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353720"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Reîmprospătare incrementală pentru sursele de date bazate pe Power Query
+# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Reîmprospătare incrementală pentru sursele de date pe baza Power Query
 
 Acest articol discută cum să configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query.
 
@@ -28,9 +30,9 @@ Reîmprospătarea incrementală pentru sursele de date oferă următoarele avant
 
 ## <a name="configure-incremental-refresh"></a>Configurați reîmprospătarea incrementală
 
-Statisticile despre public permit reîmprospătarea incrementală pentru sursele de date importate prin Power Query care acceptă ingestia incrementală. De exemplu, bazele de date SQL Azure cu câmpuri de dată și oră, care indică momentul în care înregistrările de date au fost actualizate ultima dată.
+Informațiile privind publicul permit reîmprospătarea incrementală pentru sursele de date importate prin intermediul Power Query care sprijină ingestia incrementală. De exemplu, bazele de date SQL Azure cu câmpuri de dată și oră, care indică momentul în care înregistrările de date au fost actualizate ultima dată.
 
-1. [Creați o nouă sursă de date bazată pe Power Query](connect-power-query.md).
+1. [Creați un nou sursă de date bazat pe Power Query](connect-power-query.md).
 
 1. Furnizeaza un **Nume** pentru sursă de date.
 

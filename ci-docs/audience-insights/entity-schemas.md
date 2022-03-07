@@ -1,24 +1,23 @@
 ---
 title: Scheme de entități Customer Insights din Common Data Model
 description: Lucrul cu entități din Common Data Model.
-ms.date: 04/17/2020
+ms.date: 08/13/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e21f8a9422357fbc5c9425f91f3ba241c9dec9d8
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+ms.openlocfilehash: f0af2a6d8a90ff01ea9d4eeb29f34113261fd0d4
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692320"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231054"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+
 
 [Common Data Model](/common-data-model/) este o specificație declarativă și o definiție a entităților standard care reprezintă concepte și activități utilizate în mod obișnuit în aplicațiile de afaceri și de productivitate. Acest model este extins și la date observaționale și analitice. Common Data Model oferă entități de afaceri bine definite, modulare și extensibile - cum ar fi Cont, unitate de afaceri, caz, persoană de contact, client potențial, oportunitate și produs - precum și interacțiuni cu furnizorii, lucrătorii și clienții - cum ar fi activități și acorduri privind nivelul serviciului. Oricine poate construi și extinde definițiile Common Data Model pentru a capta idei suplimentare specifice afacerii.
 
@@ -42,7 +41,7 @@ Pentru informații suplimentare, consultați documentația despre [Scheme de ent
 
 ## <a name="view-entities-using-the-common-data-model-entity-navigator"></a>Vizualizați entitățile care utilizează Navigator entitate Common Data Model
 
-Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați **Încărcare de la GitHub!** buton și navigați la **foundationCommon** > **crmCommon** > **soluții** > **customerInsights** unde veți găsi lista entităților Customer Insights și a definițiilor acestora.
+Puteți vizualiza entități în [Navigator de entități Common Data Model Entity](https://microsoft.github.io/CDM/). Selectați o entitate din secțiunea Aplicație Insights pentru a obține lista entităților Customer Insights și definițiile acestora.
 > [!div class="mx-imgBorder"]
 > ![Navigator entitate CDM care arată entitatea CustomerActivity.](media/CDM-entity-navigator.png "Navigator entitate CDM care arată entitatea CustomerActivity")
 

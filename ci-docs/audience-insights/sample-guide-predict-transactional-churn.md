@@ -3,26 +3,25 @@ title: Ghid eșantion de predicție a retragerii tranzacționale
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a retragerii tranzacționale.
 ms.date: 11/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: diegogranados117
 ms.author: digranad
 manager: shellyha
-ms.openlocfilehash: 19befa17524aba4543f0d8a5f5f7d6f5a88b2322f1264b88fa0b31641610592a
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 93841358d110bd16c7b7f8beb079bed704b22260
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029460"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354616"
 ---
-# <a name="transactional-churn-prediction-preview-sample-guide"></a>Ghid eșantion de predicție a retragerii tranzacționale (previzualizare)
+# <a name="transactional-churn-prediction-sample-guide"></a>Ghid eșantion de predicție a retragerii tranzacționale
 
 Acest ghid vă va explica un exemplu complet de predicție a retragerii tranzacționale în Customer Insights folosind datele furnizate mai jos. Toate datele utilizate în acest ghid nu sunt date reale ale clienților și fac parte din setul de date Contoso găsit în mediul *Demo* în cadrul abonamentului dvs. Customer Insights.
 
 ## <a name="scenario"></a>Scenariu
 
-Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vând prin intermediul site-ului lor de cafea Contoso. Scopul lor este să știe care dintre clienții care le cumpără de obicei produsele nu vor mai fi clienți activi în următoarele 60 de zile. Știind care dintre clienții lor este **susceptibil să se retragă**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe păstrarea lor.
+Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vinde prin intermediul site-ului web Contoso Coffee. Scopul lor este să știe care dintre clienții care le cumpără de obicei produsele nu vor mai fi clienți activi în următoarele 60 de zile. Știind care dintre clienții lor este **susceptibil să se retragă**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe păstrarea lor.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -31,7 +30,7 @@ Contoso este o companie care produce cafea și aparate de cafea de înaltă cali
 
 ## <a name="task-1---ingest-data"></a>Sarcina 1 - Ingerare date
 
-Examinați articolele [despre ingestia de date](data-sources.md) și în mod specific [importul surselor de date utilizând conectori Power Query](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general. 
+Examinați articolele [despre ingerarea de date](data-sources.md) și [importul surselor de date folosind Power Query conectori](connect-power-query.md) specific. Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general. 
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerarea datelor clienților de pe platforma de comerț electronic
 
@@ -149,7 +148,7 @@ După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinar
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Sarcina 3 - Configurați predicția de retragere tranzacțională
 
-Odată stabilite profilurile de clienți unificate, putem rula acum predicția de retragere a abonamentelor. Pentru pași detaliați, consultați articolul [Predicția retragerii abonamentelor (previzualizare)](predict-subscription-churn.md). 
+Odată stabilite profilurile de clienți unificate, putem rula acum predicția de retragere a abonamentelor. Pentru pași detaliați, consultați [Abonament churn predicție](predict-subscription-churn.md) articol. 
 
 1. Mergeți la **Informații** > **Descoperiți** și selectați pentru a utiliza **Modelul de retragere a clienților**.
 

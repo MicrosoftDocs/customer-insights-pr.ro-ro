@@ -4,26 +4,25 @@ description: Aflați mai multe despre regiunile și geografiile în care este im
 author: mkisel11
 ms.reviewer: mhart
 ms.author: mkisel
-ms.date: 09/01/2021
-ms.service: customer-insights
+ms.date: 09/28/2021
 ms.topic: article
 ms.manager: shellyha
-ms.openlocfilehash: c89637cbbe6626f95bcadb1f69831a1647f448a4
-ms.sourcegitcommit: 5704002484cdf85ebbcf4e7e4fd12470fd8e259f
-ms.translationtype: HT
+ms.openlocfilehash: 08435e651c3706257b8c0548e6e9bbf98f39dce9
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/08/2021
-ms.locfileid: "7483312"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228121"
 ---
 # <a name="regional-availability-for-dynamics-365-customer-insights"></a>Disponibilitate regională pentru Dynamics 365 Customer Insights
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Detalii de implicare, o capacitate de Dynamics 365 Customer Insights, introduce treptat mai multe regiuni în care clienții pot alege să-și stocheze datele. Administratorii pot selecta o regiune atunci când [creați un mediu nou](manage-environments-workspaces.md#create-an-environment). 
+Detalii de implicare, o capacitate de Dynamics 365 Customer Insights, introduce treptat mai multe regiuni în care clienții pot alege să-și stocheze datele. Administratorii pot selecta o regiune atunci când [creați un mediu nou](create-new-environment.md). 
 
 Când setați statistici de implicare pentru prima dată, puteți alege regiunea în timp ce trece prin [experiența în primă fază ghidată](quickstart.md). Mai târziu, fiecare mediu nou vă permite să alegeți regiunea în care vor fi stocate datele.
 
-În prezent există două geografii: SUA și Europa. Utilizatorii pot alege între regiunea Vestului SUA și regiunea Europei de Nord.
+În prezent, acceptăm zonele din SUA și Europa. Utilizatorii pot alege între aceste regiuni: Vestul SUA, SUA de Est, Europa de Nord și Europa de Vest.
 
 O organizație poate întreține medii în diferite regiuni. De exemplu, Mediul A stochează date în Vestul SUA și Mediul B în Europa de Nord.
 

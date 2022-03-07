@@ -2,18 +2,17 @@
 title: Utilizați dimensiunile demografice pentru divizarea datelor comportamentale (dimensiuni organizate)
 description: Utilizați dimensiuni unificate de profil pentru a permite statisticilor publicului proprietățile profilului clientului.
 ms.date: 07/27/2021
-ms.service: customer-insights
 ms.topic: conceptual
 author: mkisel
 ms.author: mkisel
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 50bb800c9e097d03cc6f26f79819c741ab5e8baf
-ms.sourcegitcommit: 1c396394470df8e68c2fafe3106567536ff87194
-ms.translationtype: HT
+ms.openlocfilehash: 95395e09bc0ba5ba93138957c62105f31c709e91
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/30/2021
-ms.locfileid: "7461118"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8233062"
 ---
 # <a name="use-demographic-dimensions-for-splitting-behavioral-data"></a>Utilizați dimensiunile demografice pentru divizarea datelor comportamentale
 
@@ -29,7 +28,7 @@ Utilizând dimensiuni demografice ale profilului unificat, utilizatorii de stati
 - Un mediu de informare despre implicare în care aveți detalii despre profilul de client, legate de mediul de informații despre public, în care sunt create profilurile clienților. Mai multe informații: [Creați o legătură între detaliile despre public și detalii despre angajament](integrate-audience-insights-engagement-insights.md)
 
 > [!NOTE]
-> După ce creați o legătură între mediile de public și perspectivele de angajament, este posibil să doriți doar date specifice proprietăților profilului clientului, care pot fi utile ca dimensiuni în detaliile de angajament. Pentru mai multe informații, accesați [Activați atributele și segmentele profilurilor unificate pentru statisticile publicului](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).<!--note from editor: Suggested. -->
+> După ce creați o legătură între mediile de public și perspectivele de angajament, este posibil să doriți doar date specifice proprietăților profilului clientului, care pot fi utile ca dimensiuni în detaliile de angajament. Pentru mai multe informații, accesați [Activați atributele și segmentele profilurilor unificate pentru statisticile publicului](integrate-audience-insights-engagement-insights.md#enable-audience-insights-unified-profiles-attributes-and-segments).
 
 ## <a name="create-a-new-custom-report"></a>Crea un nou raport particularizat
 

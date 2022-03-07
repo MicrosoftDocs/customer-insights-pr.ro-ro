@@ -1,22 +1,21 @@
 ---
-title: Predicție retragere abonament
+title: Abonament churn predicție (conține videoclip)
 description: Prognozați dacă un client prezintă riscul de a nu mai utiliza produsele sau serviciile cu abonament ale companiei dvs.
 ms.date: 08/19/2020
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: f9397729d2f79d079b4dea2ee92d0823b6d987e4
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: HT
+ms.openlocfilehash: b61e87ad833dd7a8e51c6619945a9e216d85f221
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799743"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354709"
 ---
-# <a name="subscription-churn-prediction-preview"></a>Predicție renunțare la abonament (previzualizare)
+# <a name="subscription-churn-prediction"></a>Predicție retragere abonament
 
 Predicția renunțării la abonament ajută la predicția existenței riscului ca un client să nu mai utilizeze produsele sau serviciile cu abonament ale companiei dvs. Puteți crea o nouă predicție de renunțare la abonament din pagina **Informații** > **Predicții**. Selectați **Predicțiile mele** pentru a vedea alte predicții pe care le-ați creat.
 
@@ -63,7 +62,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 ## <a name="create-a-subscription-churn-prediction"></a>Creați o predicție de renunțare la abonament
 
 1. În Detalii despre public, accesați **Informații** > **Predicții**.
-1. Selectați dala **Model de predicție de abonament (previzualizare)** și selectați **Utilizați acest model**.
+1. Selectează **Model churn abonament** țiglă și selectați **Utilizați acest model**.
    > [!div class="mx-imgBorder"]
    > ![Dală de model de predicție de reducere abonament cu buton Utilizați acest model.](media/subscription-churn-usethismodel.PNG "Dală de model de predicție de reducere abonament cu buton Utilizați acest model")
 
@@ -77,7 +76,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. Introduceți numărul de **Zile de la încheierea abonamentului** la care compania dvs. consideră că un client s-a retras. În această perioadă companiile se concentrează pe activități precum ofertele sau alte eforturi de marketing care încearcă să prevină pierderea clientului.
 1. Introduceți numărul de **Zile pentru a investiga viitorul pentru a prezice problemele** pentru a seta o fereastră pentru care să prezică problemele. De exemplu, pentru a prezice riscul problemelor pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de păstrare a marketingului. Predicția riscului de retragere pentru perioade mai lungi sau mai scurte de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, în funcție de cerințele dvs. comerciale specifice. Selectați **Următorul** pentru a continua
    >[!TIP]
-   > Puteți selecta **Salvare și închidere** pentru a salva oricând predicția ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
+   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
 ### <a name="add-required-data"></a>Adăugați datele necesare
 

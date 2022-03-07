@@ -3,18 +3,17 @@ title: Ghid eșantion de predicție pentru Valoarea ciclului de viață a client
 description: Utilizați acest exemplu de ghid pentru a încerca modelul de predicție pentru Valoarea ciclului de viață a clientului.
 ms.date: 05/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 19c1fbadb79ba22c0dc11aa7c3b5b2415add70a7
-ms.sourcegitcommit: 0b754d194d765afef70d1008db7b347dd1f0ee40
-ms.translationtype: HT
+ms.openlocfilehash: c130e5f699f7eb921b69a20bc6d4ba9eab5b2779
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6306364"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354846"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului (CLV)
 
@@ -22,7 +21,7 @@ Acest ghid vă va explica un exemplu de la un capăt la altul al predicției val
 
 ## <a name="scenario"></a>Scenariu
 
-Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate. Ei vând produsele prin intermediul site-ului lor de cafea Contoso. Compania dorește să înțeleagă valoarea (veniturile) pe care clienții lor o pot genera în următoarele 12 luni. Cunoașterea valorii așteptate a clienților lor în următoarele 12 luni îi va ajuta să-și direcționeze eforturile de marketing către clienții cu valoare ridicată.
+Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate. Ei vând produsele prin intermediul site-ului lor Contoso Coffee. Compania dorește să înțeleagă valoarea (veniturile) pe care clienții lor o pot genera în următoarele 12 luni. Cunoașterea valorii așteptate a clienților lor în următoarele 12 luni îi va ajuta să-și direcționeze eforturile de marketing către clienții cu valoare ridicată.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -31,7 +30,7 @@ Contoso este o companie care produce cafea și aparate de cafea de înaltă cali
 
 ## <a name="task-1---ingest-data"></a>Sarcina 1 - Ingerare date
 
-Examinați articolele [despre ingestia de date](data-sources.md) și [importul surselor de date utilizând conectori Power Query](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
+Examinați articolele [despre ingerarea de date](data-sources.md) și [importul surselor de date folosind Power Query conectori](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerarea datelor clienților de pe platforma de comerț electronic
 
@@ -164,7 +163,7 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Sarcina 3 - Configurați predicția pentru Valoarea ciclului de viață a clientului
 
-Cu profilurile de clienți unificate, putem acum să rulăm predicția pentru Valoarea ciclului de viață a clientului. Pentru pași detaliați, consultați [Valoarea predicției pentru Valoarea ciclului de viață a clientului (previzualizare)](predict-customer-lifetime-value.md).
+Cu profilurile de clienți unificate, putem acum să rulăm predicția pentru Valoarea ciclului de viață a clientului. Pentru pași detaliați, vezi [Valoarea de viață a clientului predicție](predict-customer-lifetime-value.md).
 
 1. Accesați **Inteligența**  > **Predicții** și selectați **Modelul pentru Valoarea ciclului de viață al clientului**.
 

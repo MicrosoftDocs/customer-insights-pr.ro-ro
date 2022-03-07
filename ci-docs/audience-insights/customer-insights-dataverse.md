@@ -1,20 +1,22 @@
 ---
 title: Date Customer Insights în Microsoft Dataverse
 description: Utilizați entitățile Customer Insights ca tabele în Microsoft Dataverse.
-ms.date: 10/14/2021
+ms.date: 11/25/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 9855ff6908001dd18bc19a286fc56620d0a127e5
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645233"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355444"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
@@ -45,6 +47,7 @@ Unele entități de ieșire din detaliile despre public sunt disponibile ca tabe
 - [CustomerMeasure](#customermeasure)
 - [Îmbogățire](#enrichment)
 - [Predicția](#prediction)
+- [Segmentul de membru](#segment-membership)
 
 
 ### <a name="customerprofile"></a>Profil client
@@ -121,3 +124,16 @@ Acest tabel conține rezultatul predicțiilor modelelor.
 | Valori               | Șir JSON | Lista atributelor produse de model |
 | msdynci_predictionid | GUID        | GUID determinist generat de msdynci_identifier | 
 | msdynci_identifier   | Șir      |  `Model|ModelProvider|CustomerId`                      |
+
+### <a name="segment-membership"></a>Segmentul de membru
+
+Acest tabel conține informații despre apartenența la segmente ale profilurilor clienților.
+
+| Column        | Tipul | Descriere                        |
+|--------------------|--------------|-----------------------------|
+| CustomerId        | Șir       | ID de profil client        |
+| SegmentProvider      | Șir       | Aplicație care publică segmentele. Implicit: statistici despre public         |
+| SegmentMembershipType | Șir       | Tipul de client acest segment înregistrează apartenența. Acceptă mai multe tipuri, cum ar fi Client, Contact sau Cont. Implicit: Client  |
+| Segmente       | Șir JSON  | Lista segmentelor unice la care este membru profilul clientului      |
+| msdynci_identifier  | Șir   | Identificatorul unic al înregistrării de membru al segmentului. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| msdynci_segmentmembershipid | GUID      | GUID determinist generat din`msdynci_identifier`          |

@@ -4,23 +4,22 @@ description: Cum se pot exporta evenimente rafinate și evenimente de bază.
 ms.reviewer: mhart
 ms.author: jusali
 author: jusali
-ms.date: 04/30/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: faa0c3afb08d1c0282b2164ed914637ce9aad88117af37ba44fdb81e7610e574
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: d062e2982c1041454b083630404f2b68f0da9669
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7032400"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8232903"
 ---
 # <a name="export-events"></a>Exportați evenimente
 
 [!INCLUDE [cc-beta-prerelease-disclaimer](includes/cc-beta-prerelease-disclaimer.md)]
 
-Un eveniment reprezintă comportamentul utilizatorului. Înregistrează atunci când un utilizator vizualizează o pagină (vizualizare eveniment) sau interacționează cu conținutul (eveniment de acțiune). Când puteți decide ce proprietăți ale datelor pe care doriți să le afișați într-un raport, această vizualizare virtuală a datelor se numește un *eveniment rafinat*. 
+Un eveniment reprezintă comportamentul utilizatorului. Înregistrează atunci când un utilizator vizualizează o pagină (vizualizare eveniment) sau interacționează cu conținutul (eveniment de acțiune). Când puteți decide ce proprietăți ale datelor pe care doriți să le afișați într-un raport, această vizualizare virtuală a datelor se numește un *eveniment rafinat*. Pentru mai multe informații, consultați [Creați și modificați evenimente](refined-events.md).
 
 - Puteți exporta evenimente și evenimente rafinate într-un spațiu de stocare extern. 
 - Exporturile sunt un flux de date înainte. Nu puteți recompleta fluxul. 
@@ -45,26 +44,28 @@ Un eveniment reprezintă comportamentul utilizatorului. Înregistrează atunci c
 
 ## <a name="export-events"></a>Export evenimente
 
-Există două moduri de a exporta evenimente. 
+Există două moduri de a aduce caseta de dialog **Exportați evenimente**: 
 - Accesați **Date** > **Exporturi** și selectați **Export nou**.
 - Accesați **Date** > **Evenimente**, selectați **Mai mult [...]** lângă evenimentul pe care doriți să-l exportați și selectați **Export** din meniul derulant. 
 
+:::image type="content" source="media/new-export.png" alt-text="Creați un nou export.":::
+
 Sunteți ghidat prin pașii pentru a crea un export:
 
-1. Furnizați un **Nume de export**.
+1. Furnizați un **Exportați numele**, apoi selectați **Următorul**.
 
 1. În lista verticală **Selectarea evenimentelor**, alegeți evenimentele de bază și evenimentele rafinate pe care să le includeți în export. 
 
-1. Sub **Structura fișierului**, selectați cadența pentru a crea fișiere noi în memoria de destinație. Evenimentele sunt exportate continuu pe măsură ce sosesc.
+1. În secțiunea **Structura fișierului**, selectați cadența (orar sau zilnic) pentru a crea fișiere noi în spațiul de destinație, apoi selectați **Următorul**. Evenimentele sunt exportate continuu pe măsură ce sosesc.
 
-1. Selectați formatul pentru exportul dvs. Puteți alege între format **Common Data Model**, **CSV** și **JSON**. Pentru a utiliza exportul cu alte aplicații Dynamics 365, vă recomandăm să utilizați formatul Common Data Model.
+1. În caseta de dialog **Alegeți formatul**, selectați formatul pentru export. Alegeți între **Common Data Model**, **CSV**, și formate **JSON**. Pentru a utiliza exportul cu alte aplicații Dynamics 365, vă recomandăm formatul **Common Data Model**.
 
-1. La pasul **Alegeți destinația**, specificați locație Azure Data Lake Storage Gen 2.
+1. În caseta de dialog **Alegeți destinația**, specificați locația Azure Data Lake Storage Gen 2.
     1. **Numele contului ADLS Gen 2** este numele contului de stocare în care doriți să salvați exportul. 
     1. **Calea folderului** definește unde trebuie stocat exportul în sistemul de fișiere și structura directorului contului de stocare.
     1. **Cheie partajată** este disponibil de pe portalul Azure pentru contul de stocare.
 
-1. Revizuiți și confirmați selecțiile.
+1. Examinați și confirmați selecțiile pentru a finaliza.
 
 ## <a name="view-and-manage-exports"></a>Vizualizați și gestionați exporturi
 

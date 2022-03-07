@@ -1,21 +1,25 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 09/30/2021
+ms.date: 02/18/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: bc0128c222c032e8cfe35e6f3baa0ea722bce7cb
-ms.sourcegitcommit: 31985755c7c973fb1eb540c52fd1451731d2bed2
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-details
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "7673014"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372734"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -37,14 +41,18 @@ Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptat
 - [Date demografice](enrichment-experian.md) furnizate de Experian
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+- [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
+- [Identitate](enrichment-liveramp.md) oferit de LiveRamp AbiliTec
 
 # <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
 - [Datele companiei](enrichment-leadspace.md) furnizate de Leadspace
 - [Adrese îmbunătățite](enrichment-enhanced-addresses.md) furnizate de Microsoft 
+- [Date îmbunătățite ale companiei](enrichment-enhanced-company-data.md) furnizate de Microsoft
 - [Date despre locație](enrichment-here.md) furnizate de HERE Technologies 
 - [Date particularizate](enrichment-SFTP-custom-import.md) prin Protocol de transfer securizat al fișierelor (SFTP) 
 - [Azure Maps](enrichment-azure-maps.md) furnizat de Microsoft
+- [Date despre implicarea contului](enrichment-office.md) furnizate de Microsoft
 
 ---
 
@@ -73,6 +81,10 @@ Rulați sau dezactivați mai multe îmbogățiri simultan selectându-le în lis
 ## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
 
 Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. De exemplu, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe pagina **Îmbogățire**.
+
+## <a name="enrich-data-sources-before-unification"></a>Îmbogățiți sursele de date înainte de unificare
+
+Vă puteți îmbogăți datele clienților înainte de unificarea datelor pentru a ajuta la creșterea calității potrivirii datelor. Pentru mai multe informații, vezi [sursă de date îmbogățire](data-sources-enrichment.md).
 
 ## <a name="see-the-progress-of-the-enrichment-process"></a>Vedeți progresul procesului de îmbogățire
 

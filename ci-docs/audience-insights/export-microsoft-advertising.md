@@ -1,20 +1,19 @@
 ---
 title: Exportați datele Customer Insights în Microsoft Advertising
 description: Aflați cum să configurați conexiunea și exportul la Microsoft Advertising.
-ms.date: 05/12/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c2ac92de2718cf7f0622b407bf198a7a7e50a37b
-ms.sourcegitcommit: 831765a55775d358447cb7ffa56f2c3b85459084
-ms.translationtype: HT
+ms.openlocfilehash: 8f009ed0258ded424340061e5320dd7df68c199f
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6124537"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226906"
 ---
 # <a name="export-segments-to-microsoft-advertising-preview"></a>Exportați segmente în Microsoft Advertising (previzualizare)
 
@@ -29,9 +28,9 @@ Exportați segmentele Customer Insights în Microsoft Advertising pentru a crea 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 500 milioane de profiluri per export către Microsoft Advertising.
+- Puteți exporta până la 500.000 de profiluri de clienți per export către Microsoft Advertising.
 - Exportul către Microsoft Advertising constantă este limitat la segmente.
-- Exportul de până la 500 milioane de profiluri pe Microsoft Advertising poate dura până la 10 minute. 
+- Exportul până la 500.000 de profiluri de clienți în Microsoft Advertising poate dura până la 10 minute. 
 
 
 ## <a name="set-up-the-connection-to-microsoft-advertising"></a>Configurați conexiunea la Microsoft Advertising
@@ -68,7 +67,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **ID client Microsoft Advertising și ID cont**. Puteți găsi ID-ul de client (`cid`) și ID-ul contului (`aid`) în parametrii adresei URL când sunteți conectat la Microsoft Advertising.
 
-1. În secțiunea **Potrivirea datelor**, în **E-mail**, selectați câmpul din profilul dvs. de client unificat cu adresa de e-mail a unui client. Este necesar să exportați segmente către Match Advertising.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul cu adresa de e-mail a unui client. Este necesar să exportați segmente către Match Advertising.
 
 1. Selectați **Salvare**.
 

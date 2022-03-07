@@ -3,26 +3,29 @@ title: Eșantion de ghid de predicție pentru recomandarea produsului
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a recomandării de produs.
 ms.date: 02/10/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: diegogranados117
-ms.author: digranad
+author: m-hartmann
+ms.author: wameng
 manager: shellyha
-ms.openlocfilehash: b136084316da5ae17a8428236381f69e5c21f9ea
-ms.sourcegitcommit: 7b6189e47ed1f87e7ce35d40e4cf7a6730f31ef2
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-create-prediction
+- customerInsights
+ms.openlocfilehash: 8ba54cfd466049c8df99c15f34626ab1914234f1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2021
-ms.locfileid: "6129914"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354662"
 ---
-# <a name="product-recommendation-prediction-preview-sample-guide"></a>Eșantion de ghid pentru recomandarea produsului predicție (previzualizare)
+# <a name="product-recommendation-prediction-sample-guide"></a>Eșantion de ghid de predicție pentru recomandarea produsului
 
 Vă vom explica un exemplu complet de predicție a recomandării de produs folosind datele eșantion furnizate mai jos.
 
 ## <a name="scenario"></a>Scenariu
 
-Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vând prin intermediul site-ului lor de cafea Contoso. Scopul lor este să înțeleagă ce produse ar trebui să recomande clienților lor recurenti. Știind ce sunt mai mulți clienți **probabil să cumpere**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe anumite elemente.
+Contoso este o companie care produce cafea și aparate de cafea de înaltă calitate, pe care le vinde prin intermediul site-ului web Contoso Coffee. Scopul lor este să înțeleagă ce produse ar trebui să recomande clienților lor recurenti. Știind ce sunt mai mulți clienți **probabil să cumpere**, îi poate ajuta să economisească eforturile de marketing concentrându-se pe anumite elemente.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -31,7 +34,7 @@ Contoso este o companie care produce cafea și aparate de cafea de înaltă cali
 
 ## <a name="task-1---ingest-data"></a>Sarcina 1 - Ingerare date
 
-Examinați articolele [despre ingestia de date](data-sources.md) și în mod specific [importul surselor de date utilizând conectori Power Query](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
+Examinați articolele [despre ingerarea de date](data-sources.md) și [importul surselor de date folosind Power Query conectori](connect-power-query.md) specific. Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerarea datelor clienților de pe platforma de comerț electronic
 
@@ -105,9 +108,9 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 1. Accesați fila **Potrivire** și selectați **Setare ordine**.
 
-2. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și includeți toate înregistrările.
+2. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
 
-3. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și includeți toate înregistrările.
+3. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
 
    ![Potriviți unificarea de comerț electronic și loialitate.](media/unify-match-order.png)
 
@@ -115,16 +118,16 @@ După ingerarea datelor, începem acum procesul de unificare a datelor pentru a 
 
 5. Adăugați prima condiție folosind FullName.
 
-   - Pentru eCommerceContacts selectați **FullName** din meniul derulant.
-   - Pentru loyCustomers selectați **FullName** din meniul derulant.
+   - Pentru eCommerceContacts selectați **FullName** în meniul derulant.
+   - Pentru loyCustomers selectați **FullName** în lista derulantă.
    - Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 
 6. Introduceți numele **FullName, Email** pentru noua regulă.
 
    - Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   - Pentru entitatea eCommerceContacts, alegeți **E-mail** din meniul derulant.
-   - Pentru entitatea loyCustomers, alegeți **E-mail** din meniul derulant.
+   - Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
+   - Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă.
    - Lăsați Normalizarea necompletată.
    - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
 

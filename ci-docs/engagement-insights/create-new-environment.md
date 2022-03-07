@@ -5,16 +5,15 @@ author: jusali
 ms.reviewer: mhart
 ms.author: jusali
 ms.date: 10/04/2021
-ms.service: customer-insights
 ms.subservice: engagement-insights
 ms.topic: how-to
 ms.manager: shellyha
-ms.openlocfilehash: 5e301b4ff0a7586fb143b154b773791b3bd645b7
-ms.sourcegitcommit: 37182127b93b90846cc91fbeb26dd7a18cf5610a
-ms.translationtype: HT
+ms.openlocfilehash: 1f82ff588c2ffbe82c3ee7df2498ac2cca2bad31
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/18/2021
-ms.locfileid: "7648132"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225462"
 ---
 # <a name="create-a-new-environment"></a>Creați un mediu nou 
 
@@ -40,13 +39,13 @@ Un mediu este un spațiu în care vă gestionați spațiile de lucru și conexiu
 
 1. Alegeți **Regiune** și selectați **Următorul**. 
 
-1. Tastați un **Nume de spațiu de lucru**, care vă permite să colectați date pentru anumite site-uri web sau aplicații. Pentru informații suplimentare, consultați [Creați un spațiu de lucru](create-workspace.md).
+1. Tastați a **Numele spațiului de lucru**, care vă permite să colectați date pentru anumite site-uri web sau aplicații. Pentru informații suplimentare, consultați [Creați un spațiu de lucru](create-workspace.md).
 
-1. Alegeți **Tip de spațiu de lucru** (Web sau Mobil) pe care doriți să îl creați. 
+1. Alege **Tipul spațiului de lucru** (web sau mobil) pe care doriți să le creați. 
 
 1. Selectați **Arată setări avansate** pentru a activa sau dezactiva aceste setări opționale:
 
-   - Comutați **Necunoscut la cunoscut** la „activat” pentru a asocia evenimentele web cu utilizatorii care s-au autentificat anterior. Pentru mai multe informații, consultați [Recunoașteți evenimentele web de la vizitatori autentificați anterior](unknown-to-known.md)
+   - Comutați **Necunoscut la cunoscut** la „activat” pentru a asocia evenimentele web cu utilizatorii care s-au autentificat anterior. Pentru mai multe informații, vezi [Recunoașteți evenimentele web de la vizitatorii autentificați anterior](unknown-to-known.md).
    - Comutați **Filtrați robotul de trafic** la „activat” pentru a elimina traficul web de roboți pentru acest spațiu de lucru. 
 
 1. Selectați **Terminat** după ce ați terminat. 

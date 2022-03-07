@@ -3,18 +3,17 @@ title: Îmbogățiți profilurile clienților cu date de la Microsoft Office 365
 description: Utilizați date proprietare de la Microsoft Office pentru a vă îmbogăți profilurile clienților cu date de implicare.
 ms.date: 12/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a30e09b5ed491c8d36019b5f0d35e0a2f7a0199c
-ms.sourcegitcommit: 48d799535fad84e8b63c80aef48b5c5e87628f58
+ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/03/2021
-ms.locfileid: "7889782"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8228489"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Îmbogățiți profilurile clienților cu date de implicare (previzualizare)
 
@@ -54,11 +53,11 @@ Pentru a configura îmbogățirea, trebuie îndeplinite următoarele cerințe pr
 
 ## <a name="office-365-tenant-administrator-consent"></a>Office 365 acordul administratorului locatarului
 
-Consimțământul unui Office 365 administratorul locatarului este necesar pentru a activa îmbogățirea. Se trimite un e-mail către Office 365 administratorilor locatarii atunci când îmbogățirea este salvată, ceea ce le cere să examineze și să își dea acordul pentru a permite aplicațiilor Dynamics 365 să utilizeze întreprinderile dvs.Office 365 date de furnizat **Perspective pentru organizație**. The Office 365 administratorul chiriașului poate, de asemenea, să își dea consimțământul direct în lor Office 365 consola de administrare, prin selectare **Perspective pentru organizație**.
+Consimțământul unui Office 365 administratorul locatarului este necesar pentru a activa îmbogățirea. Se trimite un e-mail către Office 365 administratorilor locatarii atunci când îmbogățirea este salvată, ceea ce le cere să revizuiască și să își dea acordul pentru a permite aplicațiilor Dynamics 365 să utilizeze întreprinderile dvs.Office 365 date de furnizat **Perspective pentru organizație**. The Office 365 administratorul chiriașului poate, de asemenea, să își dea consimțământul direct în lor Office 365 consola de administrare, prin selectare **Perspective pentru organizație**.
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Rularea îmbogățirii pentru prima dată
 
-Când îmbogățirea este începută pentru prima dată, după Office 365 administratorul locatarului și-a dat consimțământul, descărcarea datelor de la Office 365 începe. Acest proces durează ceva timp. Prima rundă de îmbogățire va fi programată să aibă loc cu o întârziere de șase ore. Puteți vedea numărul de zile pe care datele le acoperă pe pagina de prezentare generală a implicării contului după terminarea îmbogățirii. Cu un volum mare de date, rulați din nou îmbogățirea după câteva zile. Se asigură că datele sunt complete pentru întreaga fereastră de timp, care este de un an.
+Când îmbogățirea este începută pentru prima dată, după Office 365 administratorul locatarului și-a dat consimțământul, descărcarea datelor de la Office 365 începe. Acest proces durează ceva timp. Prima rundă de îmbogățire va fi programată să aibă loc cu o întârziere de șase ore. Puteți vedea numărul de zile pe care le acoperă datele pe pagina de prezentare generală a implicării contului după ce se termină îmbogățirea. Cu un volum mare de date, rulați din nou îmbogățirea după câteva zile. Se asigură că datele sunt complete pentru întreaga fereastră de timp, care este de un an.
 
 Pentru a începe procesul, selectați **Alerga** pe pagina de configurare a implicării contului. În plus, puteți lăsa sistemul să ruleze automat îmbogățirea ca parte a unui [reîmprospătare programată](system.md#schedule-tab). În mod implicit, îmbogățirea rulează o dată pe săptămână.
 
@@ -104,7 +103,7 @@ Examinați datele îmbogățite selectând **Vezi mai mult** în secțiunea de p
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 
-Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul de client, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
+Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul clientului, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
 
 :::image type="content" source="media/enrichment-office-customer-card.png" alt-text="Card de client cu date îmbogățite.":::
 

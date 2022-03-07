@@ -1,24 +1,28 @@
 ---
 title: Completați datele parțiale folosind predicții
 description: Utilizați predicții pentru a completa datele incomplete ale clienților.
-ms.date: 05/05/2020
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7ca42334420a27a8739d7c28bb72606c3ed91f3c
-ms.sourcegitcommit: 53b133a716c73cb71e8bcbedc6273cec70ceba6c
-ms.translationtype: HT
+searchScope:
+- ci-predictions
+- ci-custom-models
+- customerInsights
+ms.openlocfilehash: 9634523f61e27a0ed183186a788ab0cef3c0491b
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/15/2021
-ms.locfileid: "7645049"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354018"
 ---
-# <a name="complete-your-partial-data-with-predictions"></a>Finalizați-vă datele parțiale cu predicții
+# <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completați datele parțiale cu predicții (învechit)
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
+> [!IMPORTANT]
+> Această caracteristică va fi **depreciat** ca din **5 noiembrie 2021**. Implementările actuale vor continua să funcționeze până când caracteristica este eliminată, dar nu veți putea crea noi integrări folosind instrucțiunile de mai jos.
 
 Predicțiile vă permit să creați cu ușurință valori previzionate care vă pot îmbunătăți înțelegerea despre un client. Pe pagina **Informații** > **Predicții**, puteți selecta **Predicțiile mele** pentru a vedea predicțiile pe care le-ați configurat în alte părți ale detaliilor privind publicul și vă permit să le personalizați în continuare.
 
@@ -60,6 +64,8 @@ Pentru informații suplimentare, consultați [Creați un mediu nou](create-envir
    > ![Exemplu care arată valorile câmpului mapat la categorii.](media/intelligence-categorymapping.png "Exemplu care arată valorile câmpului mapat la categorii")
 
 8. Selectați **Terminat** iar predicția va fi procesată. Procesarea va dura ceva timp, în funcție de dimensiunea și complexitatea datelor. Rezultatele vor fi disponibile într-o nouă entitate pe baza **Nume entitate de ieșire** din predicția pe care ai creat-o.
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="create-a-prediction-while-creating-a-segment"></a>Creați o predicție în timp ce creați un segment
 
@@ -110,7 +116,7 @@ Ca parte a acestui flux,veți alege un atribut specific pentru a vă defini segm
 
 ## <a name="edit-a-prediction"></a>Editați o predicție
 
-După ce ați creat o predicție, puteți particulariza modelul în AI Builder pentru a mări eficacitatea modelului dvs.  
+După ce ați creat un predicție, puteți personaliza modelul în AI Builder pentru a crește eficiența modelului dvs.  
 
 1. În Detalii despre public, accesați **Informații** > **Predicții** > **Predicțiile mele**.
 
@@ -118,14 +124,14 @@ După ce ați creat o predicție, puteți particulariza modelul în AI Builder p
 
 3. Selectați cele trei puncte de suspensie din coloana **Acțiuni** și alegeți **Vizualizare**.
 
-4. Selectați **Particularizare în AI Builder**.
+4. Selectați **Personalizați în AI Builder**.
 
 5. Actualizați-vă modelul în AI Builder. [Aflați mai multe despre gestionarea modelelor din AI builder](/ai-builder/manage-model#retrain-and-republish-existing-models).
 
 Următoarea execuție a predicției dvs. va utiliza modelul actualizat pe care l-ați creat.
 
 > [!NOTE]
-> Noile modele create în AI Builder nu vor fi afișate în detaliile despre public decât dacă modelul a fost creat din experiențele enumerate mai sus.
+> Modele noi create în AI Builder nu va fi afișat în statisticile privind publicul decât dacă modelul a fost creat din experiențele enumerate mai sus.
 
 ## <a name="remove-a-prediction"></a>Eliminați o predicție
 

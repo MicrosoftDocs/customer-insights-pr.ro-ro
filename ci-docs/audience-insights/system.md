@@ -1,22 +1,30 @@
 ---
 title: Configurarea sistemului în Detalii despre public
 description: Aflați despre setările sistemului în capabilitatea de detalii privind publicul Dynamics 365 Customer Insights.
-ms.date: 10/15/2021
-ms.service: customer-insights
+ms.date: 11/01/2021
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 3ce767939b8fedf676dc569ede47104ecfe930dd
-ms.sourcegitcommit: cd9f9a9d3da71c5420ef5c4c6ead91bc820d17a9
-ms.translationtype: HT
+searchScope:
+- ci-system-status
+- ci-system-schedule
+- ci-system-about
+- ci-system-general
+- ci-system-api-usage
+- customerInsights
+ms.openlocfilehash: 2c52f7b8a7d41ae4a985745c7b79bbc62f59bb5a
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/19/2021
-ms.locfileid: "7651855"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354248"
 ---
 # <a name="system-configuration"></a>Configurări sistem
+
+Pentru a accesa configurațiile de sistem în informații despre public, din bara de navigare din stânga selectați **Admin** > **Sistem** pentru a vizualiza o listă de sarcini și procese de sistem.
 
 Pagina **Sistem** include următoarele file:
 - [Status](#status-tab)
@@ -30,43 +38,63 @@ Pagina **Sistem** include următoarele file:
 
 ## <a name="status-tab"></a>Fila Stare
 
-**Fila Stare** vă permite să urmăriți progresul ingerării datelor, exporturilor de date și alte câteva procese importante ale produselor. Consultați informațiile din această filă pentru a vă asigura că procesele active sunt complete.
+The **Fila Stare** vă permite să urmăriți progresul sarcinilor, asimilarea datelor, exporturile de date și alte câteva procese importante ale produsului. Examinați informațiile din această filă pentru a vă asigura că sarcinile și procesele dvs. active sunt complete.
 
-Această filă include tabele cu informații de stare și procesare pentru diferite procese. Fiecare tabel urmărește **Numele** activității și entitatea corespunzătoare, **Starea** celei mai recente rulări și când a fost **Ultima actualizare**.
+Această filă include tabele cu informații de stare și procesare pentru diferite procese. Fiecare tabel urmărește **Numele** activității și entitatea corespunzătoare, **Starea** celei mai recente rulări și când a fost **Ultima actualizare**. Puteți vizualiza detaliile ultimelor rulări selectând sarcina sau numele procesului. 
 
-Vizualizați detaliile ultimelor câteva rulări ale activității selectând numele acesteia.
+Selectați starea de lângă sarcină sau proces din **stare** coloana pentru a deschide **Detalii despre progres** panou.
 
-### <a name="status-types"></a>Tipuri de stări
+   :::image type="content" source="media/system-progress-details.png" alt-text="Panoul cu detalii despre progresul sistemului":::
 
-Sunt șase tipuri de stări pentru sarcini. Următoarele tipuri de stare apar și pe paginile *Potrivire*, *Îmbinare*, *Surse de date*, *Segmente*, *Măsuri*, *Îmbogățire*, *Activități* și *Predicții*:
+### <a name="status-definitions"></a>Definiții de stare
 
-- **Se procesează:** Sarcina este în desfășurare. Starea se poate schimba în Reușită sau Eșec.
-- **Reușită:** Sarcină finalizată cu succes.
-- **Omis:** Sarcina a fost omisă. Unul sau mai multe dintre procesele din aval de care depinde această sarcină eșuează sau sunt omise.
-- **Eșec:** Procesarea sarcinii a eșuat.
-- **Anulat:** Procesarea a fost anulată de către utilizator înainte de finalizarea acesteia.
-- **În așteptare:** Procesarea este pusă în așteptare și va începe odată ce toate sarcinile din amonte sunt finalizate. Pentru mai multe informații, consultați [politici reîmprospătare](#refresh-policies).
+Sistemul utilizează următoarele stări pentru sarcini și procese:
 
-### <a name="refresh-policies"></a>Politici de reîmprospătare
+|Status  |Definiție  |
+|---------|---------|
+|Anulat |Procesarea a fost anulată de utilizator înainte de a se termina.   |
+|Nereușite   |Ingerarea de date s-a efectuat cu erori.         |
+|Eşec  |Procesarea a eșuat.  |
+|Neînceput   |Sursa de date nu are încă date ingerate sau este încă în modul schiță.         |
+|Se prelucrează  |Sarcina sau procesul este în desfășurare.  |
+|Se reîmprospătează    |Ingestia datelor este în curs. Aveți posibilitatea de a revoca această operațiune selectând **Oprire reîmprospătare** în coloana **Acțiuni**. Oprirea reîmprospătării unei surse de date o va readuce la ultima stare de reîmprospătare.       |
+|Ignorate  |Sarcina sau procesul a fost omis. Unul sau mai multe dintre procesele din aval de care depinde această sarcină eșuează sau sunt omise.|
+|Reușit  |Sarcină sau proces finalizat cu succes. Pentru sursele de date, indică faptul că datele au fost ingerate cu succes dacă este menționată o oră în **Odihnit** coloană.|
+|Plasată în coadă | Procesarea este pusă în coadă și va începe odată ce toate sarcinile și procesele din amonte sunt finalizate. Pentru mai multe informații, vezi [Procesele de reîmprospătare](#refresh-processes).|
 
-Această listă prezintă politicile de reîmprospătare pentru fiecare dintre principalele procese:
+### <a name="refresh-processes"></a>Procesele de reîmprospătare
 
-- **Surse de date:** Se execută conform cu [planificarea configurată](#schedule-tab). Nu depinde de niciun alt proces. Potrivirea depinde de finalizarea cu succes a acestui proces.
-- **Potrivirea:** Se execută conform cu [planificarea configurată](#schedule-tab). Depinde de procesarea surselor de date utilizate în definiția potrivirii. Îmbinarea depinde de finalizarea cu succes a acestui proces.
-- **Îmbinarea**: Se execută conform cu [planificarea configurată](#schedule-tab). Depinde de finalizarea procesului de potrivire. Segmentele, măsurile, îmbogățirea, căutarea, activitățile, predicțiile și pregătirea datelor depind de finalizarea cu succes a acestui proces.
-- **Segmente**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de Îmbinare. Detaliile depind de procesarea acestuia.
-- **Măsuri**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de Îmbinare.
-- **Activități**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de Îmbinare.
-- **Îmbogățire**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de Îmbinare.
-- **Căutarea**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de Îmbinare.
-- **Pregătire date:**: Se execută conform cu [planificarea configurată](#schedule-tab). Depinde de Îmbinare.
-- **Detalii**: Se execută manual (reîmprospătare unică) și în funcție de [planificarea configurată](#schedule-tab). Depinde de segmente.
+Reîmprospătarea sarcinilor și proceselor se execută în conformitate cu [programul configurat](#schedule-tab). 
 
-Selectați starea unei activități pentru a vedea detalii despre evoluția întregii lucrări în care a avut loc. Politicile de actualizare de mai sus vă pot ajuta să înțelegeți ce puteți face pentru a aborda o sarcină **Omisă** sau **În coadă**.
+|Proces  |Descriere  |
+|---------|---------|
+|Activitate  |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare. Detaliile depind de procesarea acestuia.|
+|Legare analiză |Funcționează manual (reîmprospătare o singură dată). Depinde de segmente.  |
+|Pregătire analiză |Funcționează manual (reîmprospătare o singură dată). Depinde de segmente.  |
+|Pregătire date   |Depinde de fuziune.   |
+|Surse de date   |Nu depinde de niciun alt proces. Potrivirea depinde de finalizarea cu succes a acestui proces.  |
+|Îmbogățiri   |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare. |
+|Destinații de export |Funcționează manual (reîmprospătare o singură dată). Depinde de segmente.  |
+|Detalii |Funcționează manual (reîmprospătare o singură dată). Depinde de segmente.  |
+|Intelligence   |Depinde de fuziune.   |
+|Corespondență |Depinde de procesarea surselor de date utilizate în definiția potrivirii.      |
+|Măsuri  |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare.  |
+|Îmbinare   |Depinde de finalizarea procesului de potrivire. Segmentele, măsurile, îmbogățirea, căutarea, activitățile, predicțiile și pregătirea datelor depind de finalizarea cu succes a acestui proces.   |
+|Profiluri   |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare. |
+|Căutarea   |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare. |
+|Segmente  |Funcționează manual (reîmprospătare o singură dată). Depinde de procesul de îmbinare. Detaliile depind de procesarea acestuia.|
+|Sistem   |Depinde de finalizarea procesului de potrivire. Segmentele, măsurile, îmbogățirea, căutarea, activitățile, predicțiile și pregătirea datelor depind de finalizarea cu succes a acestui proces.   |
+|User  |Funcționează manual (reîmprospătare o singură dată). Depinde de entitati.  |
+
+Selectați starea unui proces pentru a vedea detaliile despre progresul întregului job în care a fost. Procesele de reîmprospătare de mai sus vă pot ajuta să înțelegeți ce puteți face pentru a aborda a **Sărit** sau **În așteptare** sarcină sau proces.
 
 ## <a name="schedule-tab"></a>Fila planificare
 
 Folosiți fila **Planificare** pentru a planifica reîmprospătarea automată a tuturor [surselor de date ingerate](data-sources.md). Actualizările automate vă ajută să vă asigurați că actualizările din sursele de date sunt reflectate în profilurile dvs. de clienți unificate.
+
+> [!NOTE]
+> Sursele de date gestionate de dvs. se reîmprospătează în propriile lor programe. Pentru a programa reîmprospătarea surselor de date gestionate de dvs., configurați setările de reîmprospătare pentru respectivul sursă de date din **Surse de date** pagină.
+> :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Setări de reîmprospătare a fluxului de date.":::
 
 1. În detaliile despre public, accesați **Administrator** > **Sistem** și selectați fila **Planificare**.
 
@@ -86,7 +114,7 @@ Fila **Despre** conține **Numele afișat** al organizației dvs., **ID de mediu
 
 Puteți schimba limba și formatul de țară/regiune pe fila **General**.
 
-Customer Insights [acceptă o serie de limbi](/dynamics365/get-started/availability). Aplicația vă folosește preferințele de limbă pentru a afișa elemente precum meniul, textul de etichete și mesajele de sistem în limba dvs. preferată.
+Informații despre clienți [acceptă multe limbi](/dynamics365/get-started/availability). Aplicația vă folosește preferințele de limbă pentru a afișa elemente precum meniul, textul de etichete și mesajele de sistem în limba dvs. preferată.
 
 Datele și informațiile importate și pe care le-ați introdus manual nu sunt traduse.
 
@@ -109,7 +137,7 @@ Găsiți detalii despre utilizarea API-ului în timp real și vedeți ce evenime
 
 -  **Operațiuni** - un tabel cu rânduri pentru fiecare operațiune API disponibilă și detalii despre utilizarea operațiunilor. Puteți selecta un nume de operație pentru a accesa [referința API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operațiuni care utilizează [ingestie de date în timp real](real-time-data-ingestion.md) conțin un buton cu un simbol binocular pentru a vizualiza utilizarea API-ului în timp real. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.   
+   Operațiuni care folosesc [asimilarea datelor în timp real](real-time-data-ingestion.md) conține un buton cu un simbol binocular pentru a vizualiza în timp real utilizarea API-ului. Selectați butonul pentru a deschide un panou lateral care conține detalii de utilizare pentru utilizarea API-ului în timp real în mediul curent.   
    Utilizați caseta **Grupare după** din panoul **Utilizare API în timp real** pentru a alege cum să vă prezentați cel mai bine interacțiunile în timp real. Puteți grupa datele după metoda API, numele calificat de entitate (entitatea ingerată), creat de (sursa evenimentului), rezultat (succes sau eșec) sau coduri de eroare. Datele sunt disponibile ca un grafic istoric și ca un tabel.
 
 ## <a name="security-tab"></a>Fila Securitate

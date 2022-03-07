@@ -1,24 +1,25 @@
 ---
-title: Exportați datele Customer Insights către gazde SFTP
+title: Exportați date despre Customer Insights către gazde SFTP (conține videoclip)
 description: Aflați cum să configurați conexiunea și să exportați către o locație SFTP.
 ms.date: 03/03/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: b19ca6b8085846785682046f83d0ed4758269e5b98303692c703d995407ca7dd
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 7b09da093d6332c5081da1beadc1df59f63c31d2
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7035476"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231169"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportați segmente și alte date către SFTP (previzualizare)
 
 Utilizați datele clienților dvs. în aplicații terțe, exportându-le într-o locație Protocol de transfer securizat al fișierelor (SFTP).
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO94X]
 
 ## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
 
@@ -26,6 +27,7 @@ Utilizați datele clienților dvs. în aplicații terțe, exportându-le într-o
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Destinațiile SFTP din spatele firewall-urilor nu sunt acceptate momentan. 
 - Runtime-ul unui export depinde de performanța sistemului dvs. Vă recomandăm două nuclee CPU și 1 Gb de memorie ca configurație minimă a serverului dvs. 
 - Entitățile exportatoare cu până la 100 de milioane de profiluri de clienți pot dura 90 de minute când se utilizează configurația minimă recomandată a două nuclee CPU și 1 Gb de memorie. 
 

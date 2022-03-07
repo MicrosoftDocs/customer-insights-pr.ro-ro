@@ -1,37 +1,44 @@
 ---
 title: Îmbogățiți profilurile clienților cu date de la Microsoft
-description: Folosiți date cu caracter proprietar de la Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă și de interes.
-ms.date: 06/14/2021
+description: Utilizați datele proprietare de la Microsoft pentru a vă îmbogăți datele clienților cu afinități și partajarea vocii.
+ms.date: 03/02/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-MS
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 1b11c325649b91ebb47cde924227eacedae64b7a
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
-ms.translationtype: HT
+searchScope:
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 12704ec46832e9463e6115db6c4df64e72bf4f97
+ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305171"
+ms.lasthandoff: 03/02/2022
+ms.locfileid: "8372704"
 ---
-# <a name="enrich-customer-profiles-with-brand-and-interest-affinities-preview"></a>Îmbogățiți profilurile clienților cu afinități de brand și interes (previzualizare)
+# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Îmbogățiți profilurile clienților cu afinități și cota de voce (previzualizare)
 
-Folosiți datele cu caracter proprietar ale Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă și de interes. Aceste afinități se bazează pe date de la persoane dntr-o categorie demografică similară cu cea a clienților dvs. Aceste informații vă ajută să vă înțelegeți și să vă segmentați mai bine clienții în funcție de afinitățile lor către anumite mărci și interese.
+Utilizați datele proprietare Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă, afinități de interese și cota de voce (SoV). Aceste afinități și SoV se bazează pe date de la persoane cu date demografice similare cu clienții dvs. Aceste informații vă ajută să înțelegeți și să segmentați mai bine clienții în funcție de afinitățile lor sau de SoV pentru mărci și interese specifice.
 
 În detalii despre audiență, accesați **Date** > **Îmbogățire** pentru a [configura și vizualiza îmbogățiri](enrichment-hub.md).
 
-Pentru a configura îmbogățirea afinităților de marcă, accesați fila **Descoperire** și selectați **Îmbogățiți-mi datele** pe dala **Mărci**.
+Pentru a configura afinitățile de brand și îmbogățirea SoV, accesați **Descoperi** filă și selectați **Îmbogățiți-mi datele** pe **Mărci** ţiglă.
 
-Pentru a configura îmbogățirea afinităților de interes, accesați fila **Descoperire** și selectați **Îmbogățiți-mi datele** pe dala **Interese**.
+Pentru a configura afinitățile de interes și îmbogățirea SoV, accesați **Descoperi** filă și selectați **Îmbogățiți-mi datele** pe **Interese** ţiglă.
 
    > [!div class="mx-imgBorder"]
-   > ![Dale de branduri și dobânzi](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
+   > ![Dale de branduri și interese.](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
 
-## <a name="how-we-determine-affinities"></a>Cum determinăm afinitățile
+## <a name="how-we-determine-affinities-and-sov"></a>Cum determinăm afinitățile și SoV
 
-Folosim datele de căutare online ale Microsoft pentru a găsi afinități pentru mărci și interese în diferite segmente demografice (definite în funcție de vârstă, sex sau locație). Volumul de căutare online pentru o marcă sau interes determină cât de multă afinitate are un segment demografic, comparativ cu alte segmente, față de acea marcă sau interes.
+Folosim datele de căutare online ale Microsoft pentru a găsi afinități și SoV pentru mărci și interese în diferite segmente demografice (definite de vârstă, sex sau locație). Volumul de căutare online pentru o marcă sau interes formează baza pentru determinarea afinității sau SoV. Cu toate acestea, fiecare oferă o perspectivă diferită pentru a vă înțelege clienții.
+
+- Afinitatea este o comparație între segmente demografice. Puteți utiliza aceste informații pentru a identifica segmentele demografice care au cea mai mare afinitate pentru o anumită marcă sau interes, în comparație cu alte segmente.
+
+- Cota de voce este o comparație între mărcile sau interesele selectate. Puteți utiliza aceste informații pentru a identifica ce marcă sau interes are cea mai mare cotă de voce pentru un anumit segment demografic, în comparație cu alte mărci sau interese pe care le-ați selectat.
 
 ## <a name="affinity-level-and-score"></a>Nivelul și scorul de afinitate
 
@@ -48,6 +55,10 @@ Pe fiecare profil de client îmbogățit, oferim două valori conexe - nivelul d
 |Redusă     | 1-34        |
 
 În funcție de granularitatea pe care doriți să o măsurați afinitatea, puteți utiliza fie nivelul de afinitate, fie punctajul. Scorul de afinitate vă oferă un control mai precis.
+
+## <a name="share-of-voice-sov"></a>Cota de voce (SoV)
+
+Calculăm SoV pe o scară de 100 de puncte. SoV total pentru toate mărcile sau interesele pentru fiecare profil de client îmbogățit se ridică la 100. Spre deosebire de afinități, SoV este relativ la mărcile și interesele pe care le selectați. De exemplu, valorile SoV pentru „Microsoft” pot fi diferite dacă mărcile selectate sunt („Microsoft”, „GitHub”) față de („Microsoft”, „LinkedIn”).
 
 ## <a name="supported-countriesregions"></a>Țări / regiuni acceptate
 
@@ -82,7 +93,7 @@ Examinați preferințele implicite de îmbogățire și actualizați-le după cu
 
 ### <a name="select-entity-to-enrich"></a>Selectați entitatea de îmbogățit
 
-Selectați **Entitate îmbogățită** și alegeți setul de date pe care doriți să îl îmbogățiți cu datele companiei de la Microsoft. Puteți selecta entitatea Client pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+Selectați **Entitate îmbogățită** și alegeți setul de date pe care doriți să îl îmbogățiți cu date de la Microsoft. Puteți selecta entitatea Client pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
 
 ### <a name="map-your-fields"></a>Mapați câmpurile
 
@@ -116,8 +127,7 @@ Rulați îmbogățirea după configurarea mărcilor, a intereselor și a mapări
 
 În funcție de dimensiunea datelor clientului dvs., este posibil să dureze câteva minute pentru a finaliza o îmbogățire.
 
-> [!TIP]
-> Sunt [șase tipuri de stări](system.md#status-types) pentru sarcini/procese. În plus, majoritatea proceselor [depind de alte procese din aval](system.md#refresh-policies). Puteți selecta starea unui proces pentru a vedea detalii despre evoluția întregii lucrări. După selectare **Vezi detalii** pentru una dintre activitățile operațiunii, veți găsi informații suplimentare: timpul de procesare, ultima dată de procesare și toate erorile și avertismentele asociate activității.
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
@@ -125,17 +135,17 @@ După executarea procesului de îmbogățire, accesați **Îmbogățirile mele**
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Previzualizarea rezultatelor după executarea procesului de îmbogățire":::
 
-Verificați datele îmbogățite selectând **Vizualizați date îmbogățite** în grafic. Datele îmbogățite pentru mărci se includ în entitatea **BrandAffinityFromMicrosoft**. Datele pentru interese sunt în entitatea **InterestAffinityFromMicrosoft**. De asemenea, veți găsi aceste entități listate în grupul **Îmbogățire** în **Date** > **Entități**.
+Veți găsi o diagramă cu numărul de profiluri de clienți îmbogățite de-a lungul timpului și previzualizări ale entităților îmbogățite. Examinați datele îmbogățite selectând **Vezi mai mult** în **Nivel de afinitate** sau **Cota de voce** grafice. Datele îmbogățite pentru mărci merg la **BrandAffinityFromMicrosoft** și **BrandShareOfVoiceFromMicrosoft** entitati. Datele pentru interese se află în **InterestAffinityFromMicrosoft** și **InterestShareOfVoiceFromMicrosoft** entitati. De asemenea, veți găsi aceste entități listate în grupul **Îmbogățire** în **Date** > **Entități**.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 
-Afinitățile de marcă și interes pot fi, de asemenea, vizualizate pe carduri individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul de client, veți găsi diagrame pentru mărcile sau interesele pentru care persoanele din profilul demografic al clientului au afinitate.
+Marca și interesul SoV pot fi vizualizate și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul clientului, veți găsi diagrame pentru marca sau interesul SoV pe baza persoanelor din profilul demografic al clientului respectiv.
 
-:::image type="content" source="media/enrichment-customer-card.png" alt-text="Card de client cu date îmbogățite":::
+:::image type="content" source="media/enrichment-customer-card.png" alt-text="Card de client cu date îmbogățite.":::
 
-## <a name="next-steps"></a>Următorii pași
+## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [Segmente](segments.md) și [Măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

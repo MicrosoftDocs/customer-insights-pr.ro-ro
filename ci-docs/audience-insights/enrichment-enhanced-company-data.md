@@ -1,24 +1,23 @@
 ---
 title: Îmbunătățirea datelor companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
-ms.date: 11/15/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: d11700c87f31cedc40d32b201251d8a9e2e2c312
-ms.sourcegitcommit: dfc4843cc78857f1e3ca49d7b938e3ba77969169
+ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/15/2021
-ms.locfileid: "7813933"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229418"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
-Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei dvs. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
+Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
 
 ## <a name="how-we-enhance-company-data"></a>Cum îmbunătățim datele companiei
 
@@ -50,7 +49,7 @@ Microsft
 Există câteva limitări cu datele îmbunătățite. Elementele din lista de mai jos nu sunt acceptate de model.
 
 1.  Confirmați identitatea companiei. Nu verificăm dacă intrarea este o organizație existentă sau dacă o companie folosește rezultatul ca nume standard.
-2.  Acoperiți cuprinzător companiile la nivel global. Datele companiei compilate de Microsoft au acoperire globală, dar oferă cea mai mare acoperire în Australia, Canada, Regatul Unit și Statele Unite.
+2.  Acoperiți cuprinzător companii la nivel global. Datele companiei compilate de Microsoft au acoperire globală, dar oferă cea mai mare acoperire în Australia, Canada, Regatul Unit și Statele Unite.
 3.  Standardizați adresele companiei la nivel global. În prezent, acceptăm standardizarea adreselor în aceste țări sau regiuni: Australia, Canada, Franța, Germania, Italia, Japonia, Regatul Unit și Statele Unite.
 4.  Garantați acuratețea sau prospețimea datelor. Deoarece informațiile comerciale se schimbă adesea, nu putem garanta că datele îmbunătățite ale companiei furnizate sunt întotdeauna exacte sau actualizate.
 
@@ -82,7 +81,17 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
+
+### <a name="overview-card"></a>Card de prezentare generală
+
+Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
+
+* **Companiile procesate și schimbate** : Numărul de profiluri de companie clienți care au fost îmbogățite cu succes.
+
+* **Companii procesate și neschimbate** : numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+
+* **Companiile nu sunt procesate și neschimbate** : Numărul de profiluri de companie client care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

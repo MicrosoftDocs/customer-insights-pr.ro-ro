@@ -1,20 +1,19 @@
 ---
 title: Exportați datele Customer Insights către Klaviyo
 description: Aflați cum să configurați conexiunea și să exportați către Klaviyo.
-ms.date: 08/13/2021
+ms.date: 10/08/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 7c1297fd5381c00c07d6501186c51fe4798773d1
-ms.sourcegitcommit: 205f931ec671a0ab1850f2c1c94df3307ffb62c9
-ms.translationtype: HT
+ms.openlocfilehash: 027aee70d9fdab0a92d7fd99209a6ac2ca3cc361
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "7385803"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225483"
 ---
 # <a name="export-segment-lists-to-klaviyo-preview"></a>Exportați listele de segmente în Klaviyo (previzualizare)
 
@@ -28,10 +27,10 @@ Exportați segmente de profiluri unificate ale clienților în Klaviyo și folos
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți exporta până la 100.000 de profiluri pe export către Klaviyo.
+- Puteți exporta până la 100.000 de profiluri de clienți per export către Klaviyo.
 - Exportul către Klaviyo este limitat la segmente.
-- Exportul a până la 1 milion de profiluri în Klaviyo poate dura până la 20 minute. 
-- Numărul de profiluri pe care le puteți exporta în Klaviyo depinde și este limitat de contractul dvs. cu Klaviyo.
+- Exportul până la 1 milion de profiluri de clienți în Klaviyo poate dura până la 20 minute. 
+- Numărul de profiluri de clienți pe care le puteți exporta în Klaviyo depinde și este limitat de contractul dvs. cu Klaviyo.
 
 ## <a name="set-up-connection-to-klaviyo"></a>Configurați conexiunea la Klaviyo
 
@@ -67,7 +66,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți [**ID listă Klaviyo**](https://help.klaviyo.com/hc/articles/115005078647-How-to-Find-a-List-ID).     
 
-3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul din profilul dvs. de client unificat care reprezintă adresa de e-mail a unui client. Este nevoie să exportați segmente la Klaviyo.
+3. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este nevoie să exportați segmente la Klaviyo.
 
 1. Selectați **Salvare**.
 

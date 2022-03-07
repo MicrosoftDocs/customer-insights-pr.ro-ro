@@ -1,30 +1,35 @@
 ---
 title: Conectarea la tabele în Microsoft Dataverse
 description: Importați date dintr-un Microsoft Dataverse Data Lake gestionat.
-ms.date: 07/23/2021
-ms.service: customer-insights
+ms.date: 12/06/2021
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
 ms.author: adkuppa
 manager: shellyha
 ms.reviewer: mhart
-ms.openlocfilehash: f92d64723e6a4d2fcebdbb3758519d4bfd4aeaf4
-ms.sourcegitcommit: 8cc70f30baaae13dfb9c4c201a79691f311634f5
-ms.translationtype: HT
+searchScope:
+- ci-dataverse
+- customerInsights
+ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/30/2021
-ms.locfileid: "6692589"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354157"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conectați-vă la date într-un data lake gestionat Microsoft Dataverse
 
-[!INCLUDE [cc-data-platform-banner](../includes/cc-data-platform-banner.md)]
 
-Acest articol oferă informații despre cum utilizatorii Dataverse se pot conecta rapid la entitățile lor analitice într-un lake Dataverse gestionat. Trebuie să fiți administrator pe organizația Dataverse pentru a continua și vedea lista entităților disponibile în datele Lake gestionate.
+
+Acest articol oferă informații despre cum Dataverse utilizatorii se pot conecta rapid la entități analitice într-un Microsoft Dataverse lac administrat. 
+
+> [!NOTE]
+> Trebuie să fii administrator pe Dataverse organizație să continue și să vizualizeze lista entităților disponibile în lacul administrat.
 
 ## <a name="important-considerations"></a>Considerații importante
 
-Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocate într-o locație diferită de locul în care sunt datele prelucrate sau stocate Dynamics 365 Customer Insights. Prin importul sau conectarea la datele stocate în servicii online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights. [Aflați mai multe la Centrul de autorizare Microsoft.](https://www.microsoft.com/trust-center)
+Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocate într-o locație diferită de locul în care sunt datele prelucrate sau stocate Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Conectați-vă la un lake gestionat de Dataverse
 
@@ -32,12 +37,9 @@ Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocat
 
 2. Selectați **Adăugați sursa de date**.
 
-3. Selectați **Conectare la lake Microsoft Dataverse gestionat** și selectați **Următorul**.
+3. Selectați **Microsoft Dataverse** și selectați **Următorul**.
 
-4. Introduceți un **Nume** pentru sursa de date și selectați **Următorul**. Numire recomandări: 
-   - Începeți cu o literă.
-   - Folosiți numai litere și cifre. Nu sunt permise caracterele speciale și spațiile.
-   - Folosiți între 3 și 64 de caractere.
+4. Introduceți un **Nume** pentru sursa de date și selectați **Următorul**. 
 
 5. Furnizați **Adresa serverului** pentru organizația Dataverse și selectați **Conectare**.
 

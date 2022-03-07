@@ -3,18 +3,20 @@ title: Audit Dynamics 365 Customer Insights cu Azure Monitor
 description: Aflați cum să trimiteți jurnalele către Microsoft Azure Monitorizați.
 ms.date: 12/14/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: article
 author: brndkfr
 ms.author: bkief
 manager: shellyha
-ms.openlocfilehash: d962c359d70a068fcf939b61e340f86de088b419
-ms.sourcegitcommit: 0c3c473e0220de9ee3c1f1ee1825de0b3b3663c3
+searchScope:
+- ci-system-diagnostic
+- customerInsights
+ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 12/14/2021
-ms.locfileid: "7920874"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354423"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
 
@@ -100,7 +102,7 @@ Principalul serviciului Customer Insights primește **Colaborator cont de stocar
 
 ### <a name="event-hub"></a>Hub de evenimente
 
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Hub-uri de evenimente sub spațiul de nume selectat:
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
 
 - `insight-logs-audit` conținând **evenimente de audit**
 - `insight-logs-operational` conținând **evenimente operaționale**

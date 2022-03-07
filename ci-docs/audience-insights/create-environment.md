@@ -1,21 +1,23 @@
 ---
 title: Creați medii în Customer Insights
 description: Pași pentru crearea de medii cu un abonament licențiat pentru Dynamics 365 Customer Insights.
-ms.date: 12/06/2021
+ms.date: 02/24/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: MichelleDevaney
 ms.author: midevane
 manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: d29992c88bd54fcfcf5e6429a89a34b6f73148c8
-ms.sourcegitcommit: b7189b8621e66ee738e4164d4b3ce2af0def3f51
-ms.translationtype: HT
+searchScope:
+- ci-home
+- customerInsights
+ms.openlocfilehash: c37afd5649f8cf40d5379f3d39d0cbd96cde3bd3
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/03/2022
-ms.locfileid: "8088128"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354110"
 ---
 # <a name="create-an-environment-in-audience-insights"></a>Creați un mediu în detalii despre public
 
@@ -76,12 +78,14 @@ Dacă creați mai multe medii ale Customer Insights și alegeți să salvați en
    
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse.
 
-Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs. Selectați **Activați partajarea datelor** pentru a partaja datele de ieșire Customer Insights cu un  data lake gestionat de Dataverse.
+Furnizați-vă pe al dvs Microsoft Dataverse mediu pentru a partaja date (profiluri și perspective) cu aplicațiile de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicațiile bazate pe model în Power Apps. Lăsați acest câmp necompletat dacă nu aveți al dvs Dataverse mediu și vă vom furniza unul.
+
+Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din sursele de date local folosind Power Platform fluxuri de date și gateway-uri](data-sources.md#add-data-from-on-premises-data-sources). De asemenea, puteți utiliza [modele out-of-box predicție](predictions-overview.md?tabs=b2c#out-of-box-models) prin conectarea la a Dataverse mediu inconjurator.
 
 > [!IMPORTANT]
 > Informații despre clienți și Dataverse trebuie să fie în aceeași regiune pentru a permite partajarea datelor.
 
-:::image type="content" source="media/dataverse-data-sharing.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor cu Microsoft Dataverse.":::
+:::image type="content" source="media/dataverse-provisioning.png" alt-text="partajarea datelor cu Microsoft Dataverse activat automat pentru instanțe noi.":::
 
 > [!NOTE]
 > Customer Insights nu acceptă următoarele scenarii de partajare:

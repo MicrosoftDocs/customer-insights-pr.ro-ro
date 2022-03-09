@@ -1,27 +1,30 @@
 ---
 title: Căutați și filtrați profiluri de client
 description: Găsiți rapid informații despre profilurile de clienți unificate și filtrați pentru atributele specificate.
-ms.date: 01/19/2021
+ms.date: 11/01/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: NimrodMagen
 ms.author: nimagen
 manager: shellyha
-ms.openlocfilehash: e53d87c4f633cba09fecbc1c219f0ac2ec6bb5598a7902cbcf7398d26d6d7c6b
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+searchScope:
+- ci-search-filter
+- customerInsights
+ms.openlocfilehash: 4445f44b87a5947c3dfcf43ddb49dca9f25b69aa
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7029414"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8354524"
 ---
 # <a name="customer-profiles-search--filter-index"></a>Profilurile clienților: indexul de căutare și filtrare
 
 Rezultatul unificării datelor clientului dvs. este o entitate de profil pentru clienți care oferă o vizualizare unificată în baza dvs. totală de clienți. Pentru [găsirea rapidă a informațiilor despre un anumit client sau grup de clienți](customer-profiles.md), puteți configura capabilitățile **Căutare** și **Filtru** pe pagina **Clienți**. Citiți mai departe pentru a afla cum pot edita administratorii atributele de pe pagina **Index de căutare și filtrare**, care sunt disponibile utilizatorilor pentru căutare și filtrare.
 
-> [!div class="mx-imgBorder"]
-> ![Filtru de căutare.](media/search-filter.png "Filtru de căutare")
+   :::image type="content" source="media/search-filter.png" alt-text="Filtru de căutare":::
+
+[!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 
 ## <a name="add-fields-and-specify-attributes"></a>Adăugați câmpuri și specificați atributele
 
@@ -56,7 +59,7 @@ Meniul **Filtru** din pagina **Clienți** poate include un număr diferit de niv
 
 2. Selectați **Salvare** pentru a vă aplica modificările.
 
-3. Selectați **Executare** odată ce sunteți gata să vă aplicați setările.
+3. Selectați **Executare** odată ce sunteți gata să vă aplicați setările. După procesarea modificărilor, le găsiți în [carduri client pe pagina Client](customer-profiles.md). 
 
 ## <a name="next-steps"></a>Pașii următori
 

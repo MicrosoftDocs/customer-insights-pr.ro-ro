@@ -3,18 +3,17 @@ title: Îmbogățiți profilurile clienților cu date despre locație din Azure 
 description: Informații generale despre îmbogățire de primă parte Azure Maps.
 ms.date: 08/31/2021
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 63f241c27ec86f357c83a301d6797f9ff87c2241
-ms.sourcegitcommit: 2acda3c5adf40bc3f5bbb4b2b4b6c22f84371da7
+ms.openlocfilehash: cb1c0778a398ef6d338ce6cf9e199eae0c344a5c
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/01/2021
-ms.locfileid: "7466777"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8226464"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Îmbogățirea profilurilor clienților cu Azure Maps (previzualizare)
 
@@ -86,7 +85,7 @@ Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md), [măsuri](measures.md) și chiar [exportați datele](export-destinations.md) pentru a oferi experiențe personalizate clienților.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

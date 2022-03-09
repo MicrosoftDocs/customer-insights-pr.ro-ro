@@ -4,18 +4,17 @@ description: O prezentare generală a resurselor de ajutor pentru a începe rapi
 ms.reviewer: mhart
 ms.author: jefhar
 author: mochimochi016
-ms.date: 08/31/2021
-ms.service: customer-insights
+ms.date: 10/01/2021
 ms.subservice: engagement-insights
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
-ms.openlocfilehash: 644b125f5d140627d357630ded88dd6838d6edb7
-ms.sourcegitcommit: fecdee73e26816c42d39d160d4d5cfb6c8a91596
-ms.translationtype: HT
+ms.openlocfilehash: c435810e712bbbf69f8f1cfb582fc0a971566de6
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "7494609"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8225613"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights-engagement-insights-capability-public-preview"></a>Începeți cu capacitate Detalii despre angajamente Dynamics 365 Customer Insights (versiune preliminară publică)
 
@@ -39,33 +38,47 @@ Prima dată când accesați statistici privind publicul, puteți configura setă
 
 1. Selectați regiunea și bifați caseta dacă doriți să vă înscrieți pentru a primi actualizări și oferte prin e-mail.
 
-1. Examinați **statistici despre angajament (previzualizare) Condiții de utilizare** și **Declarație de confidențialitate**, apoi selectați **Explorează demonstrația** pentru a accepta aceste setări.
+1. Revizuiți detaliile de angajament (versiune preliminară) **Termeni și condiții** și **Declarație de confidențialitate** și apoi selectați **Explorați demonstrația** pentru a accepta aceste setări.
 
 1. Explorați produsul folosind un set de date eșantion.
 
-##  <a name="step-3-set-up-a-workspace-and-add-code-to-your-website"></a>Pasul 3: Configurați un spațiu de lucru și adăugați cod pe site-ul dvs. web
+##  <a name="step-3-set-up-a-workspace-and-create-reports"></a>Pasul 3: configurați un spațiu de lucru și creați rapoarte
 
 Un spațiu de lucru este locul în care puteți vizualiza activitatea utilizatorului în timp real și puteți stoca și gestiona rapoarte. Adăugați cod pe site-ul dvs. web pentru a începe colectarea de *evenimente*, datele despre activitate care vin de la utilizatori.
 
 1. [Creați un spațiu de lucru](create-workspace.md) și adăugați membri.
 
-1. [Adăugați cod pe site-ul dvs. web](instrument-website.md) sau [aplicație mobilă](developer-resources.md#capture-events-from-mobile-apps) pentru a vedea activitatea utilizatorului care ajunge în spațiul dvs. de lucru.
+1. Adăugați codul la [site-ul dvs. web](instrument-website.md) sau [aplicație mobilă](developer-resources.md#capture-events-from-mobile-apps) pentru a vedea activitatea utilizatorului care ajunge în spațiul dvs. de lucru.
 
 1. Vizualizați un [raport în timp real](view-reports.md) care arată utilizatorii activi după browser, dispozitiv, sistem de operare, locație și limbă. De asemenea, puteți crea [rapoarte particularizate](custom-reports.md) pentru a vă crea propriile vizualizări.
+
+1. Creați [dimensiuni](dimensions.md) pentru a sorta vizitatorii după utilizatorii noi și recenți, [măsurători](metrics.md) pentru a ajuta la înțelegerea mai bună a comportamentului utilizatorilor și [segmente](segments.md) pentru a identifica subseturi de vizitatori pe baza caracteristicilor sau interacțiunilor site-ului web.
     
 ## <a name="step-4-export-data-to-other-channels"></a>Pasul 4: Exportați date pe alte canale
 
-Puteți crea *evenimente rafinate* (o vizualizare virtuală) a datelor dvs. de analiză web. Apoi filtrați și exportați datele la Azure Data Lake Storage. Puteți ingera datele exportate ca sursă de date. Pentru mai multe informații, consultați [Creați o legătură între detaliile despre public și detalii despre angajament](integrate-audience-insights-engagement-insights.md).
+Puteți crea *evenimente rafinate* (o vizualizare virtuală) a datelor dvs. de analiză web. Apoi filtrați și exportați datele la Azure Data Lake Storage. Puteți ingera datele exportate ca sursă de date.
 
 1. [Creați evenimente rafinate](refined-events.md) pentru export.
 
-1. [Exportați datele](export-events.md) la Data Lake Storage.
+1. [Exportați datele](export-events.md) la Azure Data Lake Storage.
 
 1. [Creați o legătură între statistici despre public și statistici despre implicare](integrate-audience-insights-engagement-insights.md) pentru a partaja date între cele două capabilități.
 
+1. [Recunoașteți evenimentele web de la utilizatori autentificați anterior](unknown-to-known.md) cu caracteristica **necunoscut la cunoscut**.
+
 1. Aflați cum să [ștergeți și să exportați date despre evenimente care conțin informații personale](delete-export-personal-data.md).
+
+## <a name="step-5-create-and-manage-funnel-reports"></a>Pasul 5: creați și gestionați rapoarte de canalizare
+
+Un raport pâlnie colectează informații despre pașii care apar în timpul unui călătoria clientului prin site-ul dvs. web sau aplicația mobilă. Pe lângă crearea de rapoarte de profil și rapoarte personalizate, puteți crea un raport de canal pentru a identifica căile pe care le parcurg clienții dvs. înainte de a face o achiziție. 
+
+1. [Creați un raport pâlnie](funnel-reports.md) pentru a informa deciziile și să identifice domeniile de optimizare și îmbunătățiri ale proceselor.
+
+1. Creați rapoarte de pâlnie pe mai multe canale, după ce ați instrumentat aplicația mobilă cu ajutorul detaliilor de angajament [Android SDK](get-started-android.md) sau [SDK iOS](get-started-ios.md).
+
+1. Utilizați [detalii despre pâlnie](funnel-reports.md#funnel-insights) pentru a obține detalii mai amănunțite despre comportamentul clientului cu privire la pașii din raportul de pâlnie.
  
-## <a name="step-5-stay-connected"></a>Pasul 5: Să păstrăm legătura
+## <a name="step-6-stay-connected"></a>Pasul 6: Să păstrăm legătura
 
 Apreciem participarea dvs. activă și luăm în considerare toate feedback-urile relevante în dezvoltarea viitoarelor versiuni. Distribuiți feedback-ul dvs. și raportați problemele pe unul dintre aceste canale:
 - [Comunitate](https://go.microsoft.com/fwlink/?linkid=2141648)

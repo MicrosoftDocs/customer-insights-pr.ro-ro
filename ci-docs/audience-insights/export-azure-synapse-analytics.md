@@ -1,22 +1,21 @@
 ---
 title: Exportați datele Customer Insights către Azure Synapse Analytics
-description: Aflați cum să configurați conexiunea și să exportați la Azure Synapse Analytics.
-ms.date: 04/12/2021
+description: Aflați cum să configurați conexiunea la Azure Synapse Analytics.
+ms.date: 01/05/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f206043298bdbf8a84b0ef37b47a43290653beba7d3d0e8b807ec74513614aa8
-ms.sourcegitcommit: aa0cfbf6240a9f560e3131bdec63e051a8786dd4
-ms.translationtype: HT
+ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2021
-ms.locfileid: "7031948"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8231327"
 ---
-# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele la Azure Synapse Analytics (versiune preliminară)
+# <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele în Azure Synapse Analytics (Previzualizare)
 
 Azure Synapse este un serviciu de analize ce accelerează timpul de detaliere a depozitelor de date și a sistemelor de date mari. Puteți ingera și utiliza datele Customer Insights în [Azure Synapse](/azure/synapse-analytics/overview-what-is).
 
@@ -49,9 +48,11 @@ Următoarele condiții preliminare trebuie îndeplinite pentru a configura conex
 
 ### <a name="configure-a-connection"></a>Configurați o conexiune
 
+Pentru a crea o conexiune, este nevoie de principalul serviciu și contul de utilizator din Customer Insights **Cititor** permisiuni pe *grup de resurse* unde se află spațiul de lucru Synapse Analytics. În plus, principalul serviciu și utilizatorul din spațiul de lucru Synapse Analytics au nevoie **Administrator Synapse** permisiuni. 
+
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugare conexiune** și alegeți **Azure Synapse Analytics** sau selectați **Configurare** pe dala **Azure Synapse Analytics** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **Azure Synapse Analytics** sau selectați **Înființat** pe **Azure Synapse Analytics** tigla pentru a configura conexiunea.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul Nume afișat. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
@@ -63,17 +64,17 @@ Următoarele condiții preliminare trebuie îndeplinite pentru a configura conex
 
 ### <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [permisiunile necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru a configura exportul cu o conexiune partajată, aveți nevoie de cel puțin **Colaborator** permisiunile din Customer Insights. Pentru mai multe informații, consultați [permisiunile necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
 
 1. Faceți salt la **Date** > **Exporturi**.
 
 1. Pentru a crea un nou export, selectați **Adăugare export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea **Azure Synapse Analytics**. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile [conexiuni](connections.md) de acest tip.
+1. În **Conexiune pentru export** câmp, alegeți o conexiune din **Azure Synapse Analytics** secțiune. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile [conexiuni](connections.md) de acest tip.
 
 1. Dați un **Nume afișat** pentru exportul dvs. și un **Nume al bazei de date**.
 
-1. Selectați ce entități doriți să exportați la Azure Synapse Analytics.
+1. Selectați la ce entități doriți să exportați Azure Synapse Analytics.
    > [!NOTE]
    > Surse de date bazate pe un [Dosar Common Data Model](connect-common-data-model.md) nu sunt acceptate.
 
@@ -82,6 +83,8 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 Salvarea unui export nu se execută imediat.
 
 Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand).
+
+Pentru a interoga datele care au fost exportate în Synapse Analytics, aveți nevoie **Cititor de date Blob de stocare** acces la stocarea de destinație pe spațiul de lucru al exporturilor. 
 
 ### <a name="update-an-export"></a>Actualizați un export
 

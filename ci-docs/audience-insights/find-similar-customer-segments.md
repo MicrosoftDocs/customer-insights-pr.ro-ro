@@ -1,20 +1,23 @@
 ---
-title: Găsiți clienți similari cu AI
+title: Găsiți clienți similari cu AI (conține videoclip)
 description: Găsiți segmente de clienți similare cu inteligență artificială.
 ms.date: 06/25/2020
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7c447609bd54de0780dd14aae9f05c7c24b8cce5
-ms.sourcegitcommit: fb9f118b4e16b5aabb3e503463efca21718f5d72
-ms.translationtype: HT
+searchScope:
+- ci-segment-builder
+- ci-segment-insights
+- customerInsights
+ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 11/12/2021
-ms.locfileid: "7799697"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8355260"
 ---
 # <a name="similar-customers-preview"></a>Clienți similari (previzualizare)
 
@@ -23,7 +26,7 @@ Această caracteristică vă permite să găsiți clienți similari în baza de 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Găsiți clienți similari* utilizează mijloace automate pentru a evalua datele și a face predicții pe baza acestor date și, prin urmare, are capacitatea de a fi utilizat ca metodă de profilare, deoarece acest termen este definit prin Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil să vă asigurați că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv previziunile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date personale, date biometrice, protecția datelor și confidențialitatea comunicațiilor.
+> *Găsiți clienți similari* utilizează mijloace automate pentru a evalua datele și a face predicții pe baza acestor date și, prin urmare, are capacitatea de a fi utilizat ca metodă de profilare, deoarece acest termen este definit prin Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv predicțiile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.
 
 ## <a name="finding-similar-customers"></a>Găsirea unor clienți similari
 

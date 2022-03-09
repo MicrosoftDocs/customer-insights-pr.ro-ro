@@ -5,16 +5,15 @@ author: m-hartmann
 ms.author: mhart
 ms.date: 02/10/2022
 ms.topic: get-started
-ms.service: customer-insights
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: f63ed39ba8c710d0c0149e0944efaafe27e7b9bb
-ms.sourcegitcommit: 5dd32dc2b18027cf2aa954356dded4bc6aab9801
-ms.translationtype: HT
+ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
+ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/12/2022
-ms.locfileid: "8115983"
+ms.lasthandoff: 02/16/2022
+ms.locfileid: "8229510"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 
@@ -43,7 +42,7 @@ Când vă înscrieți pentru versiunea de încercare, veți primi un e-mail cu d
 
 ### <a name="how-do-i-add-more-users-to-a-trial"></a>Cum adaug mai mulți utilizatori la o versiune de încercare?
 
-Pentru a adăuga utilizatori, accesați [Microsoft 365 centru de administrare](https://admin.microsoft.com) folosind contul de administrator de încercare. Urmați [instrucțiunile centrului de administrare](/microsoft-365/admin/add-users/add-users) pentru a adăuga utilizatori până la limita licenței versiunii de încercare. Dacă utilizatorul pe care îl adăugați are deja un Microsoft 365 cont, atribuiți-le un rol de securitate corespunzător în organizația de încercare. Pentru mai multe informații, vezi [Atribuiți un rol de securitate unui utilizator](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
+Pentru a adăuga utilizatori, accesați [Centrul de administrare Microsoft 365](https://admin.microsoft.com)utilizând contul de administrator pentru versiunea de încercare. Urmați [instrucțiunile centrului de administrare](/microsoft-365/admin/add-users/add-users) pentru a adăuga utilizatori până la limita licenței versiunii de încercare. Dacă utilizatorul pe care îl adăugați are deja un Microsoft 365 cont, atribuiți-le un rol de securitate corespunzător în organizația de încercare. Pentru mai multe informații, vezi [Atribuiți un rol de securitate unui utilizator](/power-platform/admin/create-users-assign-online-security-roles#assign-a-security-role-to-a-user).
 
 ### <a name="how-many-users-can-i-add-to-my-trial-environment"></a>Câți utilizatori pot adăuga în mediul meu de încercare?
 

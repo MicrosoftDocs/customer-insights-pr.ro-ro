@@ -1,20 +1,25 @@
 ---
-title: Îmbogățirea îmbunătățirii adreselor
+title: Îmbogățirea adresei (conține videoclip)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
-ms.date: 04/21/2021
+ms.date: 01/19/2022
 ms.reviewer: mhart
-ms.service: customer-insights
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e0ca731f944da9a7eaae7c2dc2d7568b6386089f
-ms.sourcegitcommit: d84d664e67f263bfeb741154d309088c5101b9c3
+searchScope:
+- ci-data-sources-enrichment
+- ci-data-sources-enrichment-details
+- ci-enrichments
+- ci-enrichment-wizard
+- customerInsights
+ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
+ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/24/2021
-ms.locfileid: "6305447"
+ms.lasthandoff: 02/25/2022
+ms.locfileid: "8353651"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
@@ -23,6 +28,8 @@ Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utiliza
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 
 Modelul nostru trece printr-un proces în doi pași pentru a îmbunătăți o adresă. În primul rând, analizează adresa pentru a identifica componentele sale și le plasează într-un format structurat. Apoi, folosim AI pentru a corecta, completa și standardiza valorile din adresă.
+
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWNewo]
 
 ### <a name="example"></a>Exemplu
 
@@ -58,6 +65,10 @@ Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunăt�
 
 - Australia
 - Canada
+- Franța
+- Germania
+- Italia
+- Japonia
 - Regatul Unit
 - Statele Unite ale Americii
 
@@ -94,10 +105,20 @@ Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de co
 
 După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
+
+### <a name="overview-card"></a>Card de prezentare generală
+
+Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
+
+* **Adresele procesate și schimbate** : Numărul de profiluri de clienți cu adrese care au fost îmbogățite cu succes.
+
+* **Adresele procesate și neschimbate** : numărul de profiluri de clienți cu adrese care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+
+* **Adresele nu au fost procesate și nu au fost modificate** : numărul de profiluri cu adrese care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 
-Creați în plus față de datele îmbogățite ale clienților. Creați [segmente](segments.md) și [măsuri](measures.md), și chiar [exportați datele](export-destinations.md) pentru a oferi clienților dvs. experiențe particularizate.
+[!INCLUDE [next-steps-enrichment](../includes/next-steps-enrichment.md)]
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

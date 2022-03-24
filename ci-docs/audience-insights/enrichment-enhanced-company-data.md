@@ -8,16 +8,18 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 7a576621c71b925bd1563827aca10cad4ef9b4eb
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: e9cf93f28ba6918c72039670e42d26c8aaa7f922
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229418"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376369"
 ---
 # <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
 
-Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
+Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei dvs. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
+
+Poti de asemenea [îmbunătățirea datelor companiei despre sursele de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
 
 ## <a name="how-we-enhance-company-data"></a>Cum îmbunătățim datele companiei
 
@@ -49,7 +51,7 @@ Microsft
 Există câteva limitări cu datele îmbunătățite. Elementele din lista de mai jos nu sunt acceptate de model.
 
 1.  Confirmați identitatea companiei. Nu verificăm dacă intrarea este o organizație existentă sau dacă o companie folosește rezultatul ca nume standard.
-2.  Acoperiți cuprinzător companii la nivel global. Datele companiei compilate de Microsoft au acoperire globală, dar oferă cea mai mare acoperire în Australia, Canada, Regatul Unit și Statele Unite.
+2.  Acoperiți cuprinzător companiile la nivel global. Datele companiei compilate de Microsoft au acoperire globală, dar oferă cea mai mare acoperire în Australia, Canada, Regatul Unit și Statele Unite.
 3.  Standardizați adresele companiei la nivel global. În prezent, acceptăm standardizarea adreselor în aceste țări sau regiuni: Australia, Canada, Franța, Germania, Italia, Japonia, Regatul Unit și Statele Unite.
 4.  Garantați acuratețea sau prospețimea datelor. Deoarece informațiile comerciale se schimbă adesea, nu putem garanta că datele îmbunătățite ale companiei furnizate sunt întotdeauna exacte sau actualizate.
 
@@ -63,7 +65,7 @@ Există câteva limitări cu datele îmbunătățite. Elementele din lista de ma
 
 1. Selectați **Set de date client** și alegeți entitatea care conține adresele pe care doriți să le îmbogățiți. Puteți selecta entitatea *Client* pentru a îmbogăți adrese în toate profilurile dvs. de clienți sau selectați o entitate de segment pentru a îmbogăți adresele numai în profilurile de clienți din acel segment.
 
-1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui să fie utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
+1. Selectați ce tip de câmpuri din profilurile companiei dvs. ar trebui utilizate pentru potrivirea cu datele companiei compilate de Microsoft. Această selecție va afecta câmpurile de mapare la care aveți acces în pasul următor.
 
 1.  Hartați câmpurile companiei de la entitatea dvs. unificată client. Cu cât mapați mai mulți identificatori cheie și câmpuri, cu atât este mai probabilă o rată de potrivire mai mare.
 
@@ -91,7 +93,7 @@ Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățiri
 
 * **Companii procesate și neschimbate** : numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
 
-* **Companiile nu sunt procesate și neschimbate** : Numărul de profiluri de companie client care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+* **Companiile neprocesate și neschimbate** : Numărul de profiluri de companie client care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

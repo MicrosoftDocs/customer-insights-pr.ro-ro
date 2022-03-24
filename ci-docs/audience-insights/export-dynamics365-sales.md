@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: cf680c21c55c71d99728be79fe68111dc89a79ec
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 4c1b5eaa3568b5c73013024d2da7e65276142f72
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355032"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455877"
 ---
 # <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizarea segmentelor în Dynamics 365 Sales (previzualizare)
 
@@ -31,7 +31,7 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 
 ## <a name="prerequisite-for-connection"></a>Cerință preliminară pentru conexiune
 
-1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Sales folosind Microsoft Dataverse](connect-power-query.md).
+1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să ingerați contacte de la [Dynamics 365 Sales folosind Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
    > Exportul de segmente din perspectivele publicului către Sales nu va crea noi înregistrări de contact în instanțele de Sales. Înregistrările de contact din Sales trebuie să fie ingerate în statistici ale publicului și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.

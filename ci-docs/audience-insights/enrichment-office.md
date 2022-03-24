@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 938a9de83fd8f5ff0c9ae815d626cdfa35228aba
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 47239bd7f0c89742cf9c673bb2ebe4c41d853233
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228489"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376845"
 ---
 # <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Îmbogățiți profilurile clienților cu date de implicare (previzualizare)
 
@@ -28,7 +28,7 @@ Pentru a configura îmbogățirea, trebuie îndeplinite următoarele cerințe pr
 - Ai un activ Office 365 licență cloud.
 - Tu ai [profiluri unificate ale clienților](customer-profiles.md) bazat pe [conturi de afaceri](work-with-business-accounts.md).
 - Mediul dumneavoastră Customer Insights trebuie să aibă un [Microsoft Dataverse organizatie atasata](create-environment.md#step-3-connect-to-microsoft-dataverse).
-- Tu ai [administrator](permissions.md#administrator) permisiuni.
+- Tu ai [administrator](permissions.md#admin) permisiuni.
 - Aveți sau puteți obține consimțământul dvs Office 365 administratorul locatarului de utilizat Office 365 date de furnizat **Perspective pentru organizație** în cadrul aplicațiilor Dynamics 365.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
@@ -39,7 +39,7 @@ Pentru a configura îmbogățirea, trebuie îndeplinite următoarele cerințe pr
 
    :::image type="content" source="media/enrichment-office-tile.png" alt-text="Dală de implicare a contului.":::
    
-1. Selectați **Următorul** în **Prezentare generală** pas și introduceți adrese de e-mail de la organizația dvs. pentru care datele Office vor fi agregate. Numai datele de la adresele de e-mail enumerate sunt procesate pentru comunicare relevantă. O bună practică este să utilizați grupuri de e-mail, de exemplu, *Echipa de vânzări din SUA*, care sunt ușor de gestionat în Office 365. Numărul de adrese de e-mail din grupuri sunt rezolvate și afișate. Numărul total de adrese de e-mail trebuie să fie de cel puțin 2 și nu poate depăși 2.500.
+1. Selectați **Următorul** în **Prezentare generală** pas și introduceți adrese de e-mail de la organizația dvs. pentru care datele Office vor fi agregate. Numai datele de la adresele de e-mail enumerate sunt procesate pentru comunicare relevantă. O bună practică este utilizarea grupurilor de e-mail, de exemplu, *Echipa de vânzări din SUA*, care sunt ușor de gestionat în Office 365. Numărul de adrese de e-mail din grupuri sunt rezolvate și afișate. Numărul total de adrese de e-mail trebuie să fie de cel puțin 2 și nu poate depăși 2.500.
 
    :::image type="content" source="media/enrichment-office-email-addresses.png" alt-text="Adresele de e-mail pentru implicarea contului.":::
 
@@ -57,7 +57,7 @@ Consimțământul unui Office 365 administratorul locatarului este necesar pentr
 
 ## <a name="running-the-enrichment-for-the-first-time"></a>Rularea îmbogățirii pentru prima dată
 
-Când îmbogățirea este începută pentru prima dată, după Office 365 administratorul locatarului și-a dat consimțământul, descărcarea datelor de la Office 365 începe. Acest proces durează ceva timp. Prima rundă de îmbogățire va fi programată să aibă loc cu o întârziere de șase ore. Puteți vedea numărul de zile pe care le acoperă datele pe pagina de prezentare generală a implicării contului după ce se termină îmbogățirea. Cu un volum mare de date, rulați din nou îmbogățirea după câteva zile. Se asigură că datele sunt complete pentru întreaga fereastră de timp, care este de un an.
+Când îmbogățirea este începută pentru prima dată, după Office 365 administratorul locatarului și-a dat consimțământul, descărcarea datelor de la Office 365 începe. Acest proces durează ceva timp. Prima rundă de îmbogățire va fi programată să aibă loc cu o întârziere de șase ore. Puteți vedea numărul de zile pe care datele le acoperă pe pagina de prezentare generală a implicării contului după terminarea îmbogățirii. Cu un volum mare de date, rulați din nou îmbogățirea după câteva zile. Se asigură că datele sunt complete pentru întreaga fereastră de timp, care este de un an.
 
 Pentru a începe procesul, selectați **Alerga** pe pagina de configurare a implicării contului. În plus, puteți lăsa sistemul să ruleze automat îmbogățirea ca parte a unui [reîmprospătare programată](system.md#schedule-tab). În mod implicit, îmbogățirea rulează o dată pe săptămână.
 
@@ -103,7 +103,7 @@ Examinați datele îmbogățite selectând **Vezi mai mult** în secțiunea de p
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 
-Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul clientului, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
+Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul de client, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
 
 :::image type="content" source="media/enrichment-office-customer-card.png" alt-text="Card de client cu date îmbogățite.":::
 

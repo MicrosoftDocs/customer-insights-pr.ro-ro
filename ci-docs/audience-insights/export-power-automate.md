@@ -8,16 +8,20 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: dc9bbe22b7f10cf92f06cae18fbece9808b87dce
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: dd90ef4576246b49d4a9c74005196ee9813a6744
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8226729"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455926"
 ---
 # <a name="power-automate-connector-preview"></a>Conector Power Automate (previzualizare)
 
 Declanșați evenimente specifice care să aibă loc automat atunci când datele se modifică și gestionați fluxurile mai complexe direct în [Power Automate](https://flow.microsoft.com/).
+
+## <a name="known-limitations"></a>Limitări cunoscute
+
+- Puteți efectua maximum 100 de apeluri pe 60 de secunde. Puteți apela punctul final API de mai multe ori utilizând parametrul $skip. [Aflați mai multe despre parametrul $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ## <a name="power-automate-triggers"></a>declanșatoare Power Automate
 

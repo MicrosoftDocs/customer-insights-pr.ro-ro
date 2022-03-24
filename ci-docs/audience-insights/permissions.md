@@ -1,7 +1,7 @@
 ---
 title: Gestionare permisiuni utilizator
 description: Aflați mai multe despre permisiuni și roluri de utilizator.
-ms.date: 03/25/2021
+ms.date: 02/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,12 +12,12 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: a3d21d55d86950953611967bb66712312eb42b4b
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 85e1f4f93ac0e99ce6634dfc8fceab0c9a14885e
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355952"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376753"
 ---
 # <a name="user-permissions"></a>Permisiuni utilizator
 
@@ -48,7 +48,7 @@ Există trei tipuri de roluri:
 - Gestionați configurația și îmbogățiți profilurile clienților din pagina **Îmbogățire** (numai pentru îmbogățirea primară).
 - Gestionați și creați exporturi pe baza conexiunilor partajate cu colaboratorii. [Aflați mai multe despre modul în care administratorii permit colaboratorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-## <a name="administrator"></a>Administrator
+## <a name="admin"></a>Administrator
 
 - Toate permisiunile disponibile pentru Colaborator.
 - Modificați setările pe pagina **Sistem**, inclusiv limbajul de lucru și programele de actualizare pentru procesele sistemului.
@@ -60,6 +60,12 @@ Există trei tipuri de roluri:
 - Instalați și utilizați **Program de completare card client**.
 - Adăugați și utilizați **conectorul Power Apps**.
 - Activați utilizarea [API-urilor Customer Insights](apis.md).
+- [Atribuiți proprietatea asupra mediului](manage-environments.md#change-the-owner-of-an-environment) unui alt administrator.
+
+## <a name="admin-owner"></a>Administrator (proprietar)
+
+- Toate permisiunile disponibile pentru administrator.
+- [Resetați și ștergeți](manage-environments.md#reset-an-existing-environment) mediul.
 
 ## <a name="assign-roles-and-permissions"></a>Alocați roluri și permisiuni
 

@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 3c0dd9c417e569ed37d8122c637072893732418a
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: ab4ab0dba1bd91b1893cd4b16b8d51381d5b6ef8
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372642"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376937"
 ---
 # <a name="match-entities"></a>Potrivire entități
 
@@ -181,9 +181,11 @@ O entitate de ieșire de deduplicare conține următoarele informații:
 - Câmpuri utilizate pentru definirea regulilor de deduplicare.
 - Câmpurile Regulă și Scor pentru a indica care dintre regulile de deduplicare s-au aplicat și scorul returnat de algoritmul de potrivire.
  
-## <a name="include-enriched-entities-preview"></a>Includeți entități îmbogățite (previzualizare)
+## <a name="include-enriched-entities-preview"></a>Includeți entități îmbogățite (Previzualizare)
 
 Dacă ați îmbogățit entități la nivelul sursă de date, selectați-le înainte de a rula procesul de potrivire. Entitățile îmbogățite vă pot îmbunătăți rezultatele unificării. Pentru mai multe informații, vezi [Îmbogățirea surselor de date](data-sources-enrichment.md). 
+
+Entitatea îmbogățită conține câmpurile sursă de date originale și câmpurile îmbogățite. Deci, dacă alegeți să lucrați cu entitatea îmbogățită, configurația existentă nu este afectată. Cu toate acestea, ar putea fi necesar să actualizați regulile de potrivire pentru a utiliza în schimb câmpurile îmbogățite.
 
 1. Mergi la **Date** > **Unifica** > **Meci** și selectați **Utilizați entități îmbogățite** În partea de sus a paginii.
 

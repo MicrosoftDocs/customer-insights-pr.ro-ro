@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 2e0801c2b6af591e48a7df485a8523903c07617c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354423"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376431"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
 
 Dynamics 365 Customer Insights oferă o integrare directă cu Azure Monitor. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), sau transmiteți-le în flux [Huburi de evenimente Azure](https://azure.microsoft.com/services/event-hubs/).
 
@@ -37,7 +37,7 @@ Customer Insights trimite următoarele jurnale de evenimente:
 Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite următoarele cerințe preliminare:
 
 - Ai un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Tu ai [Administrator](permissions.md#administrator) permisiunile din Customer Insights.
+- Tu ai [Administrator](permissions.md#admin) permisiunile din Customer Insights.
 - Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa de destinație pe Azure. Resursa poate fi un cont Azure Storage, un Azure Event Hub sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics îndeplinite.
 - Ai cel puțin **Cititor** rol pe grupul de resurse din care face parte resursa.
@@ -102,7 +102,7 @@ Principalul serviciului Customer Insights primește **Colaborator cont de stocar
 
 ### <a name="event-hub"></a>Hub de evenimente
 
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Hub-uri de evenimente sub spațiul de nume selectat:
 
 - `insight-logs-audit` conținând **evenimente de audit**
 - `insight-logs-operational` conținând **evenimente operaționale**
@@ -132,7 +132,7 @@ Evenimentele API și evenimentele fluxului de lucru au o structură comună și 
 | `resultSignature` | Șir    | Opțional          | Starea rezultatului evenimentului. Dacă operația corespunde unui apel REST API, acesta este codul de stare HTTP.        | `200`             |
 | `durationMs`      | Long      | Opțional          | Durata operațiunii în milisecunde.     | `133`     |
 | `callerIpAddress` | Șir    | Opțional          | Adresa IP a apelantului, dacă operațiunea corespunde unui apel API care provine de la o adresă IP disponibilă public.                                                 | `144.318.99.233`         |
-| `identity`        | Șir    | Opțional          | Obiect JSON care descrie identitatea utilizatorului sau a aplicației care a efectuat operația.       | Vedea [Identitate](#identity-schema) secțiune.     |  |
+| `identity`        | Șir    | Opțional          | Obiect JSON care descrie identitatea utilizatorului sau a aplicației care a efectuat operația.       | Vedea [Identitate](#identity-schema) secțiune.     |  
 | `properties`      | Șir    | Opțional          | Obiect JSON cu mai multe proprietăți pentru categoria particulară de evenimente.      | Vedea [Proprietăți](#api-properties-schema) secțiune.    |
 | `level`           | Șir    | Obligatoriu          | Nivelul de severitate al evenimentului.    | `Informational`,`Warning`,`Error`, sau `Critical`.           |
 | `uri`             | Șir    | Opțional          | URI de solicitare absolută.    |               |
@@ -161,7 +161,7 @@ The`identity` Obiectul JSON are următoarea structură
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Rol atribuit utilizatorului sau aplicației. Pentru mai multe informații, vezi [permisiunile utilizatorului](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Roluri necesare pentru a efectua operația. `Admin` rolului i se permite să facă toate operațiunile.                                                    |
-| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și de Azure Active Directory configurație. |
+| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și Azure Active Directory configurație. |
 
 #### <a name="api-properties-schema"></a>Schema proprietăților API
 
@@ -230,7 +230,7 @@ Evenimentele fluxului de lucru au următoarele proprietăți.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Mereu`WorkflowEvent`, marcând evenimentul ca eveniment de flux de lucru.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Da      | Da  | Identificatorul rulării fluxului de lucru. Toate evenimentele fluxului de lucru și sarcinilor din cadrul execuției fluxului de lucru au același lucru `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identificatorul operațiunii, vezi [Tipuri de operație].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Da      | Da  | Identificatorul operației, vezi[ Tipuri de operații].(#operation-types)                                                                                                                                                                                       |
 | `properties.tasksCount`                      | Da      | No   | Numai fluxul de lucru. Numărul de sarcini declanșate de fluxul de lucru.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Opțional. Numai evenimente de flux de lucru. The Azure Active Directory [objectId al utilizatorului](/azure/marketplace/find-tenant-object-id#find-user-object-id) cine a declanșat fluxul de lucru, vezi și `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` sau`incremental` reîmprospăta.                                                                                                                                                                                                                            |
@@ -239,7 +239,7 @@ Evenimentele fluxului de lucru au următoarele proprietăți.
 | `properties.startTimestamp`                  | Da      | Da  | Marca temporală UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.endTimestamp`                    | Da      | Da  | Marca temporală UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
 | `properties.submittedTimestamp`              | Da      | Da  | Marca temporală UTC`yyyy-MM-ddThh:mm:ss.SSSSSZ`                                                                                                                                                                                                                  |
-| `properties.instanceId`                      | Da      | Da  | Informații despre clienți`instanceId`                                                                                                                                                                                                                              |  |
+| `properties.instanceId`                      | Da      | Da  | Informații despre clienți`instanceId`                                                                                                                                                                                                                              |  
 | `properties.identifier`                      | No       | Da  | - Pentru OperationType =`Export`, identificatorul este ghidul configurației de export. <br> - Pentru OperationType =`Enrichment`, este ghidul îmbogățirii <br> - Pentru OperationType`Measures` și`Segmentation`, identificatorul este numele entității. |
 | `properties.friendlyName`                    | No       | Da  | Numele ușor de utilizat al exportului sau al entității care este procesată.                                                                                                                                                                                           |
 | `properties.error`                           | No       | Da  | Opțional. Mesaj de eroare cu mai multe detalii.                                                                                                                                                                                                                  |

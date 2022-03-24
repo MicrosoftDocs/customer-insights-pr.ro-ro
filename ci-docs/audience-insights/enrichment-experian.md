@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: ad1023135516ca9c49818d19aa84df68d16b2e3c
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: efa26fa82a950063e074a4ab930ed95383c55334
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229979"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376707"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Îmbogățiți profilurile clienților cu date demografice din Experian (previzualizare)
 
@@ -25,7 +25,7 @@ Pentru a configura Experian, trebuie îndeplinite următoarele condiții prealab
 
 - Trebuie să aveți un abonament activ la Experian. Pentru a obține un abonament, [contactați Experian](https://www.experian.com/marketing-services/contact) direct. [Aflați mai multe desore Experian Data Enrichment](https://www.experian.com/marketing-services/microsoft?cmpid=ems_web_mci_cdppage).
 
-- O conexiune Experian a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#administrator). De asemenea, aveți nevoie de ID-ul de utilizator, ID-ul de parte și numărul de model pentru contul dvs. de transport securizat (ST) activat SSH care a fost Experian creat pentru dvs.
+- O conexiune Experian a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#admin). De asemenea, aveți nevoie de ID-ul de utilizator, ID-ul de parte și numărul de model pentru contul dvs. de transport securizat (ST) activat SSH care a fost Experian creat pentru dvs.
 
 ## <a name="supported-countriesregions"></a>Țări / regiuni acceptate
 

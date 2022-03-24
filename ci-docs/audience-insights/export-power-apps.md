@@ -8,12 +8,12 @@ ms.topic: how-to
 author: Nils-2m
 ms.author: nikeller
 manager: shellyha
-ms.openlocfilehash: ae2a3b7c05e9ed860da31853c47af2aec8634e7a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 18cc32a169e79794d2d3203d462620ab41efaafe
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229047"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455967"
 ---
 # <a name="microsoft-power-apps-connector-preview"></a>Conector Microsoft Power Apps (previzualizare)
 
@@ -38,6 +38,8 @@ După adăugarea Customer Insights ca o conexiune de date, puteți alege următo
 ### <a name="retrievable-entities"></a>Entități recuperabile
 
 Puteți prelua numai entitățile **Client**, **UnifiedActivity**, **Segmente**, și **ContactProfile** prin intermediul conectorului Power Apps. ContactProfile este disponibilă numai în instanța de detalii despre public pentru conturi de business. Alte entități sunt afișate deoarece conectorul de bază le acceptă prin declanșatoare în Power Automate.
+
+Puteți efectua maximum 100 de apeluri pe 60 de secunde. Puteți apela punctul final API de mai multe ori utilizând parametrul $skip. [Aflați mai multe despre parametrul $skip](/connectors/customerinsights/#get-items-from-an-entity).
 
 ### <a name="delegation"></a>Delegare
 

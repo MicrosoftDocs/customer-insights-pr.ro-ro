@@ -1,7 +1,7 @@
 ---
 title: Crearea și gestionarea mediilor
 description: Aflați cum să vă înscrieți pentru serviciu și cum să gestionați mediile.
-ms.date: 12/06/2021
+ms.date: 02/09/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: d9e0ee726dbbfcf330022c4d95747551d3114e7e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 4f4e5a8415f6c2128b0480edf67f317124eeeba9
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354294"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376891"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
-
-
 
 ## <a name="switch-environments"></a>Comutați medii
 
@@ -98,9 +96,29 @@ După reîmprospătarea surselor de date, accesați **Date** > **Unificare**. Ai
 
 Când unificarea datelor este completă, accesați **Măsuri** și **Segmente** pentru a le reîmprospăta și pe acestea.
 
+## <a name="change-the-owner-of-an-environment"></a>Schimbați proprietarul unui mediu
+
+În timp ce mai mulți utilizatori pot avea permisiuni de administrator în Customer Insights, doar un utilizator este proprietarul unui mediu. În mod implicit, administratorul este cel care creează un mediu inițial. În calitate de administrator al unui mediu, puteți atribui dreptul de proprietate unui alt utilizator cu permisiuni de administrator.
+
+1. Selectați selectorul **Mediu** în antetul aplicației.
+
+1. Selectați pictograma **Editare**.
+
+1. În **Editați mediul** caseta, du-te la **Informatii de baza** Etapa.
+
+1. În **Schimbați proprietarul mediului** câmp, alegeți noul proprietar al mediului.  
+
+1. Selectați **Revedeți și terminați**, apoi **Actualizați** pentru a aplica modificările. 
+
+## <a name="claim-ownership-of-an-environment"></a>Revendicați dreptul de proprietate asupra unui mediu
+
+Dacă proprietarul unui mediu părăsește organizația sau contul de utilizator este șters, mediul nu va avea niciun proprietar. Un utilizator cu permisiuni de administrator poate revendica dreptul de proprietate și poate deveni noul proprietar. Ei pot continua să dețină mediul sau [schimba proprietatea la alt administrator](#change-the-owner-of-an-environment). 
+
+Pentru a revendica proprietatea, selectați **Preia proprietatea** butonul care apare în partea de sus a fiecărei pagini din Customer Insights când proprietarul inițial a părăsit organizația.
+
 ## <a name="reset-an-existing-environment"></a>Resetați un mediu existent
 
-Ca administrator, puteți reseta un mediu la o stare goală dacă doriți să ștergeți toate configurațiile și să eliminați datele ingerate.
+În calitate de proprietar al unui mediu, puteți reseta un mediu la o stare goală dacă doriți să ștergeți toate configurațiile și să eliminați datele ingerate.
 
 1.  Selectați selectorul **Mediu** în antetul aplicației. 
 
@@ -112,7 +130,7 @@ Ca administrator, puteți reseta un mediu la o stare goală dacă doriți să ș
 
 ## <a name="delete-an-existing-environment"></a>Ștergerea unui mediu existent
 
-În calitate de administrator, puteți șterge un mediu pe care îl administrați.
+În calitate de proprietar al unui mediu, puteți șterge un mediu pe care îl administrați.
 
 1.  Selectați selectorul **Mediu** în antetul aplicației.
 

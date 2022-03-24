@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 1b46e8913c6d288b93cdf32e195b5e9387916e70
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 1cbbad9bfe559bcb15b23894fc7475507aae8add
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8230397"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376385"
 ---
 # <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Îmbogățirea profilurilor clienților cu HERE Technologies (previzualizare)
 
@@ -25,7 +25,7 @@ Pentru a configura îmbogățirile HERE Technologies, trebuie îndeplinite urmă
 
 - Aveți un abonament activ HERE Technologies. Pentru a obține un abonament, puteți să vă [înscrieți aici](https://developer.here.com/sign-up?utm_medium=referral&utm_source=Microsoft-Dynamics-CI&create=Freemium-Basic) sau [contactați HERE Technologies](https://developer.here.com/help?utm_medium=referral&utm_source=Microsoft-Dynamics-CI#how-can-we-help-you) direct. [Aflați mai multe despre îmbogățirea locației HERE Technologies.](https://developer.here.com/location-enrichment?cid=Dev-MicrosoftDynamics-DB-0-Dev-&utm_source=MicrosoftDynamics&utm_medium=referral&utm_campaign=Online_Dev_ReferralMicrosoft)
 
-- O [conexiune](connections.md) HERE este disponibilă *sau* aveți permisiuni de [administrator](permissions.md#administrator) și cheia API HERE Technologies.
+- O [conexiune](connections.md) HERE este disponibilă *sau* aveți permisiuni de [administrator](permissions.md#admin) și cheia API HERE Technologies.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: d3254bf13b843fe8e1b6e6db49dd6ee1dc22290c
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 0bd2bfa7402ed19cb92ff1f35208b150cfec48c3
+ms.sourcegitcommit: d168a738a08adb8b4b2e410bdaa3716d7b63cc9b
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353926"
+ms.lasthandoff: 03/17/2022
+ms.locfileid: "8455847"
 ---
 # <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizarea segmentelor în Dynamics 365 Marketing (previzualizare)
 
@@ -28,7 +28,7 @@ Dacă utilizați noile capabilități ale Dynamics 365 Marketing pentru orchestr
 
 ## <a name="prerequisite-for-a-connection"></a>Cerință preliminară pentru o conexiune
 
-- Înregistrările de contact trebuie să fie prezente în Dynamics 365 Marketing înainte de a putea exporta un segment din Customer Insights în Marketing. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Marketing folosind Microsoft Dataverse](connect-power-query.md).
+- Înregistrările de contact trebuie să fie prezente în Dynamics 365 Marketing înainte de a putea exporta un segment din Customer Insights în Marketing. Citiți mai multe despre cum să efectuați ingestia persoanelor de contact în [Dynamics 365 Marketing folosind Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
   > [!NOTE]
   > Exportul de segmente din perspectivele publicului către Marketing nu va crea noi înregistrări de contact în instanțele de Marketing. Înregistrările de contact din Marketing trebuie să fie ingerate în statistici ale publicului și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 5b22c1464b3f089551f485f98d6d93840ff77136
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 418575f724090628da8bd01e2569a4cb9e646337
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355906"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376523"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Aduceți-vă propriul seif de chei Azure (versiune preliminară)
 
@@ -31,7 +31,7 @@ Pentru a configura seiful cheii în statistici privind publicul, trebuie îndepl
 
 - Aveți un abonament activ Azure.
 
-- Aveți un rol [Administrator](permissions.md#administrator) în Detalii despre public. Aflați mai multe despre [permisiunile utilizatorilor în statistici privind publicul](permissions.md#assign-roles-and-permissions).
+- Aveți un rol [Administrator](permissions.md#admin) în Detalii despre public. Aflați mai multe despre [permisiunile utilizatorilor în statistici privind publicul](permissions.md#assign-roles-and-permissions).
 
 - Aveți roluri [Colaborator](/azure/role-based-access-control/built-in-roles#contributor) și [Administrator de acces utilizator](/azure/role-based-access-control/built-in-roles#user-access-administrator) pe seiful de chei sau grupul de resurse căruia îi aparține seiful de chei. Pentru mai multe informații, accesați [Adăugați sau eliminați atribuțiile de rol Azure utilizând portalul Azure](/azure/role-based-access-control/role-assignments-portal). Dacă nu aveți rolul de administrator al accesului utilizatorului pe seiful cheii, trebuie să configurați permisiunile de control al accesului bazate pe roluri pentru principalul serviciului Azure pentru Dynamics 365 Customer Insights separat. Urmați pașii pentru a [utiliza un director de serviciu Azure](connect-service-principal.md) pentru seiful de chei care ar trebui să fie legat.
 

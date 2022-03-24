@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: e4b9a65eb50f75e0243fabfc10b501cf7acf4490
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 042558af801a1d1fc365939d9aa42c09b98b2679
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229653"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376615"
 ---
 # <a name="enrich-customer-profiles-with-custom-data-preview"></a>Îmbogățiți profilurile clienților cu date particularizate (previzualizare)
 
@@ -25,7 +25,7 @@ Pentru a configura importul particularizat SFTP, trebuie îndeplinite următoare
 
 - Aveți numele fișierului și locația (calea) fișierului de importat pe gazda SFTP.
 - Există un fișier *model.json* care specifică [schema Common Data Model](/common-data-model/) pentru ca datele să fie importate. Acest fișier trebuie să fie în același director cu fișierul de importat.
-- O conexiune SFTP a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#administrator). Veți avea nevoie de acreditările utilizatorului, adresa URL și numărul de port pentru locația SFTP de unde doriți să importați date.
+- O conexiune SFTP a fost deja configurată de un administrator *sau* aveți permisiuni de [administrator](permissions.md#admin). Veți avea nevoie de acreditările utilizatorului, adresa URL și numărul de port pentru locația SFTP de unde doriți să importați date.
 
 
 ## <a name="configure-the-import"></a>Configurați importul

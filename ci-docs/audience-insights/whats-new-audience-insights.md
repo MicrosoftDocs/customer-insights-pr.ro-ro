@@ -8,16 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: midevane
 manager: shellyha
-ms.openlocfilehash: 667a984f1a2287456f4e6324eafe628fba957bf5
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 9195770255bd798636b9532d6e1ca928345b3708
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232719"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376477"
 ---
 # <a name="whats-new-in-the-audience-insights-capability-of-dynamics-365-customer-insights"></a>Noutățile din capacitatea de detalii despre public din Dynamics 365 Customer Insights
-
-
 
 Suntem încântați să anunțăm cele mai noi actualizări! Acest articol rezumă caracteristicile de previzualizare publică, caracteristicile de previzualizare, îmbunătățirile generale de disponibilitate și actualizări ale caracteristicilor. Pentru a vedea planurile de caracteristici pe termen lung, consultați [planurile de lansare Dynamics 365 și Power Platform](/dynamics365/release-plans/).
 
@@ -26,6 +24,62 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+
+## <a name="february-2022-updates"></a>Actualizări februarie 2022
+
+Actualizările din februarie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="general-availability-for-prediction-models"></a>Disponibilitate generală pentru modelele predicție
+
+Modele ieșite din cutie predicție, inclusiv **pierderea abonamentului**, **tranzacțional**, și **valoarea de viață a clientului (CLV)** devin disponibile în general ca parte a Customer Insights. 
+
+Pentru mai multe informații, vezi [Prezentare generală a predicțiilor](predictions-overview.md).
+
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nou sursă de date: Integrare cu Azure Synapse Analytics (Previzualizare)
+
+Azure Synapse Analytics este un serviciu de analiză pentru întreprinderi care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
+
+Dacă organizația dvs. folosește deja capabilități de analiză avansate ale Azure Synapse Analytics și stochează rezultatul în bazele de date din Data Lake, puteți asimila cu ușurință acele date în Customer Insights. Pentru mai multe informații, vezi [Conectați un Azure Synapse sursă de date (Previzualizare)](connect-synapse.md).
+
+### <a name="liveramp-enrichment-preview"></a>Îmbogățirea LiveRamp (Previzualizare)
+
+LiveRamp oferă rezoluție deterministă a identității offline și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților dvs. la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților dvs.
+
+Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (Previzualizare)](enrichment-liveramp.md).
+
+### <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (Previzualizare)
+
+Utilizați date din surse precum Microsoft și alți parteneri pentru a vă îmbogăți datele clienților înainte de unificarea datelor. Îmbogățirile sursă de date ajută la obținerea unei completități și a unei calități mai mari a datelor, care pot ajuta la obținerea unor rezultate mai bune odată ce vă unificați datele.
+
+Pentru mai multe informații, vezi [Îmbogățirea surselor de date (Previzualizare)](data-sources-enrichment.md).
+
+### <a name="change-owner-of-environment"></a>Schimbați proprietarul mediului
+
+În timp ce mai mulți utilizatori pot avea permisiuni de administrator în Customer Insights, doar un utilizator este proprietarul unui mediu. O experiență îmbunătățită vă permite să schimbați proprietarii unui mediu și să revendicați dreptul de proprietate dacă un fost proprietar a părăsit organizația. 
+
+Pentru mai multe informații, vezi [Schimbați proprietarul unui mediu](manage-environments.md#change-the-owner-of-an-environment).
+
+### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Procesul de pregătire a datelor listează motivele corupției pentru înregistrările corupte
+
+Procesul de pregătire a datelor arată acum motivul corupției pentru toate câmpurile cu date corupte la nivel de înregistrare individuală pentru o identificare ușoară. 
+
+Pentru mai multe informații, vezi [Surse de date corupte](entities.md#corrupted-data-sources).
+
+### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Sfârșitul previzualizării pentru funcțiile de raportare din capacitatea de statistici privind implicarea
+
+The Dynamics 365 Customer Insights Previzualizarea capacității de statistici privind implicarea s-a încheiat pe 15 februarie 2022.  
+Această modificare înseamnă că experiența de încercare a Customer Insights nu mai include capacitatea de a crea canale sau alte funcționalități de raportare.
+
+Vă invităm să explorați și să evaluați multe alte caracteristici ale [Informații despre clienți](https://dynamics.microsoft.com/ai/customer-insights/), platforma Microsoft de date pentru clienți (CDP).    
+ 
+Pentru o perioadă de tranziție, participanții existenți de previzualizare au în continuare acces la unele capabilități și funcționalități de previzualizare:
+
+- Obțineți codul pentru a instrumenta un site web sau o aplicație mobilă 
+- Vedeți evenimentele și proprietățile evenimentului 
+- Îmbunătățiți profilurile unificate cu evenimente ingerate și rafinate pentru a beneficia de întreaga valoare a datelor clienților lor
+  
+În perioada de tranziție, evenimentele capturate sunt încă transmise în flux către lacul de date conectat. Odată ce această funcționalitate este dezactivată, partajarea datelor între statisticile de implicare și statisticile privind publicul se va opri și niciun eveniment nou nu este trimis la stocarea conectată.
+Vă rugăm să contactați direct echipa de cont Microsoft dacă aveți întrebări despre sfârșitul previzualizării capacității. Echipa de cont vă va ține la curent cu lansările viitoare. 
 
 ## <a name="january-2022-updates"></a>Actualizări din ianuarie 2022
 
@@ -46,7 +100,7 @@ Actualizările din decembrie 2021 includ noi funcții, îmbunătățiri de perfo
 
 Customer Insights oferă o integrare directă cu Azure Monitor. Această caracteristică include evenimente de audit și evenimente operaționale. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către Azure Storage, Azure Log Analytics sau să le transmiteți în flux către Azure Event Hubs.
 
-Pentru mai multe informații, vezi [Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)](diagnostics.md).
+Pentru mai multe informații, vezi [Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)](diagnostics.md).
 
 ### <a name="enrich-customer-profiles-with-engagement-data"></a>Îmbogățiți profilurile clienților cu date de implicare
 
@@ -74,7 +128,7 @@ Pentru mai multe informații, vezi [Adăugați excepții la o regulă](match-ent
 
 #### <a name="provide-additional-conflict-resolution-policies-and-enable-grouping-of-attributes"></a>Furnizați politici suplimentare de rezolvare a conflictelor și permiteți gruparea atributelor
 
-Această caracteristică vă permite să tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresă1, Adresă2, Oraș, Stat și Cod. Probabil că nu dorim să îmbinăm Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
+Această caracteristică vă permite să tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresa1, Adresa2, Orașul, Statul și Zip. Probabil că nu dorim să îmbinăm Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
 
 Acum puteți combina un grup de câmpuri înrudite și să aplicați grupului o singură politică de îmbinare. 
 

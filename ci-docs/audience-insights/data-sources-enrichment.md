@@ -8,16 +8,16 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: eebaaf18795e80dd1ba16a15a23844d685c94c6e
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
-ms.translationtype: HT
+ms.openlocfilehash: 56f6a8ad20224922f9968f0ad3b6a0e0a400214b
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8373071"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376594"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (previzualizare)
 
-Utilizați date din surse precum Microsoft și alți parteneri pentru a vă îmbogăți datele clienților înainte de unificarea datelor. Îmbogățirile sursă de date ajută la obținerea unei complete și a unei calități mai mari a datelor, care pot ajuta la obținerea unor rezultate mai bune odată ce vă unificați datele. De exemplu, utilizarea unui format normalizat și standardizat pentru adrese crește calitatea rezultatelor potrivirii. Pentru o listă de îmbogățiri acceptate, consultați [opțiuni de îmbogățire sursă de date acceptate](#supported-data-source-enrichments).
+Utilizați date din surse precum Microsoft și alți parteneri pentru a vă îmbogăți datele clienților înainte de unificarea datelor. Îmbogățirile sursă de date ajută la obținerea unei completități și a unei calități mai mari a datelor, care pot ajuta la obținerea unor rezultate mai bune odată ce vă unificați datele. De exemplu, utilizarea unui format normalizat și standardizat pentru adrese crește calitatea rezultatelor potrivirii. Pentru o listă de îmbogățiri acceptate, consultați [opțiuni de îmbogățire sursă de date acceptate](#supported-data-source-enrichments).
 
 ## <a name="enrich-a-data-source"></a>Îmbogățiți un sursă de date
 
@@ -40,7 +40,7 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 Următoarele îmbogățiri sunt disponibile în prezent pentru sursele de date. Consultați pașii detaliați pentru îmbogățire pentru a afla cum să o configurați.
 
 - [Adrese optimizate](enrichment-enhanced-addresses.md)
-- [Date de identitate de la LiveRamp](enrichment-liveramp.md)
+- [Date optimizate despre firmă](enrichment-enhanced-company-data.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestionați îmbogățirile existente sursă de date
 

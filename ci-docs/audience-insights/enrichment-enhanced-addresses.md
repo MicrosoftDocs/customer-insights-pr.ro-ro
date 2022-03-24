@@ -14,16 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 067757019078d3a46b224ba259d2d097dfbbe381
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 2ab550e83a4969c1f547e66bcbf6ddb96d7789df
+ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8353651"
+ms.lasthandoff: 03/03/2022
+ms.locfileid: "8376337"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
 Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utilizați modelele Microsoft pentru a vă normaliza și îmbogăți adresele în [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/address) pentru o mai bună acuratețe și informații.
+
+Poti de asemenea [îmbogăți adresele pe surse de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
 
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 

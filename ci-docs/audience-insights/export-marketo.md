@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec286bb6a90fb4d18e89caf9166aa659b29d668e
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: d56ed779c342bb0855ee84d949f8d3ca604b92c1
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8232006"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487530"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportați segmente către Marketo (previzualizare)
 
@@ -63,7 +63,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Introduceți **[ID-ul listă Marketo](https://docs.marketo.com/display/public/DOCS/Understanding+Static+Lists)**. ID-ul listei este o valoare pur numerică. De exemplu, dacă ID-ul listei Marketo este ST12345A7, eliminați caracterul înainte și după cifre și introduceți `12345`. 
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. 
+1. În **Potrivirea datelor** secțiunea, selectați cel puțin un câmp care reprezintă adresa de e-mail a unui client sau ID-ul Marketo al unui client. 
 
 1. Opțional, puteți exporta **Prenume**, **Nume de familie**, **Oraș**, **Stat** și **Țară/Regiune** pentru a crea e-mailuri mai personalizate. Selectați **Adăugare atribut** pentru a mapa aceste câmpuri.
 

@@ -14,18 +14,20 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 3a17716508a14020c56640c7d68f300a9d721af4
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 074d84eff65d52b083fff6c161282d4fafa1af85
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354896"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523747"
 ---
 # <a name="customer-profiles"></a>Profiluri de client
 
 Pagina **Clienți** afișează o vizualizare combinată a profilurilor dvs. unificate de clienți. Profilurile clienților sunt disponibile odată ce [ați creat entitatea Client unificat](data-unification.md). Pagina vă permite să căutați clienți și să definiți indexul pentru căutarea respectivă.
 
-Clienții pot fi persoane fizice sau organizații. Fiecare profil de client este reprezentat de o dală. Utilizați comenzile de paginare pentru a obține mai multe înregistrări. Cardul afișează câmpurile din entitatea *Client* definită în **Index de căutare și filtrare**. Selectați o dală pentru a vedea datele pentru clientul selectat într-o pagină dedicată numită [Pagina cu detalii despre client](customer-profiles.md#customer-details-page).
+Clienții pot fi persoane fizice sau organizații. Fiecare profil de client este reprezentat de o dală. Utilizați comenzile de paginare pentru a obține mai multe înregistrări. Cardul afișează câmpurile din entitatea *Client* definită în **Index de căutare și filtrare**. Ordinea câmpurilor din fiecare card este aleasă de sistem.
+
+Selectați o dală pentru a vedea datele pentru clientul selectat într-o pagină dedicată numită [Pagina cu detalii despre client](customer-profiles.md#customer-details-page).
 
 > [!div class="mx-imgBorder"] 
 > ![Pagina clienților care prezintă dale de rezultate](media/customers-page-result-tiles-B2C.png "Pagina clienților care prezintă dale de rezultate")

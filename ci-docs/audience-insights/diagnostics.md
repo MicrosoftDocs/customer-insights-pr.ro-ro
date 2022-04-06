@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: d84ae8301bdf384c2484cdb1e7dd8eb75d406769
-ms.sourcegitcommit: 50d32a4cab01421a5c3689af789e20857ab009c4
+ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
+ms.sourcegitcommit: 5bd07f3a1288f003704acd576741cf6aedc1ac33
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/03/2022
-ms.locfileid: "8376431"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "8523684"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
 
 Dynamics 365 Customer Insights oferă o integrare directă cu Azure Monitor. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), sau transmiteți-le în flux [Huburi de evenimente Azure](https://azure.microsoft.com/services/event-hubs/).
 
@@ -38,7 +38,7 @@ Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite ur
 
 - Ai un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Tu ai [Administrator](permissions.md#admin) permisiunile din Customer Insights.
-- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa de destinație pe Azure. Resursa poate fi un cont Azure Storage, un Azure Event Hub sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal).
+- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa destinație pe Azure. Resursa poate fi un cont Azure Storage, un Azure Event Hub sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal).
 - [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics îndeplinite.
 - Ai cel puțin **Cititor** rol pe grupul de resurse din care face parte resursa.
 
@@ -102,7 +102,7 @@ Principalul serviciului Customer Insights primește **Colaborator cont de stocar
 
 ### <a name="event-hub"></a>Hub de evenimente
 
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Hub-uri de evenimente sub spațiul de nume selectat:
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
 
 - `insight-logs-audit` conținând **evenimente de audit**
 - `insight-logs-operational` conținând **evenimente operaționale**
@@ -161,7 +161,7 @@ The`identity` Obiectul JSON are următoarea structură
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Rol atribuit utilizatorului sau aplicației. Pentru mai multe informații, vezi [permisiunile utilizatorului](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Roluri necesare pentru a efectua operația. `Admin` rolului i se permite să facă toate operațiunile.                                                    |
-| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și Azure Active Directory configurație. |
+| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și de Azure Active Directory configurație. |
 
 #### <a name="api-properties-schema"></a>Schema proprietăților API
 
@@ -230,7 +230,7 @@ Evenimentele fluxului de lucru au următoarele proprietăți.
 | ------------------------------- | -------- | ---- | ----------- |
 | `properties.eventType`                       | Da      | Da  | Mereu`WorkflowEvent`, marcând evenimentul ca eveniment de flux de lucru.                                                                                                                                                                                                |
 | `properties.workflowJobId`                   | Da      | Da  | Identificatorul rulării fluxului de lucru. Toate evenimentele fluxului de lucru și sarcinilor din cadrul execuției fluxului de lucru au același lucru `workflowJobId`.                                                                                                                                   |
-| `properties.operationType`                   | Da      | Da  | Identificatorul operației, vezi[ Tipuri de operații].(#operation-types)                                                                                                                                                                                       |
+| `properties.operationType`                   | Da      | Da  | Identificatorul operației, vezi [Tipuri de operații](#operation-types).                                                                                                                                                                               |
 | `properties.tasksCount`                      | Da      | No   | Numai fluxul de lucru. Numărul de sarcini declanșate de fluxul de lucru.                                                                                                                                                                                                       |
 | `properties.submittedBy`                     | Da      | No   | Opțional. Numai evenimente de flux de lucru. The Azure Active Directory [objectId al utilizatorului](/azure/marketplace/find-tenant-object-id#find-user-object-id) cine a declanșat fluxul de lucru, vezi și `properties.workflowSubmissionKind`.                                   |
 | `properties.workflowType`                    | Da      | No   | `full` sau`incremental` reîmprospăta.                                                                                                                                                                                                                            |

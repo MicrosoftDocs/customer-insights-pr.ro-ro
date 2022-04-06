@@ -1,7 +1,7 @@
 ---
 title: Conectarea la tabele în Microsoft Dataverse
 description: Importați date dintr-un Microsoft Dataverse Data Lake gestionat.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,16 +11,14 @@ ms.reviewer: mhart
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: 8e11b60295fa5c187b1ac4877fb347e2d9bb41a1
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 81412ea8259e690eb839676d82ab31847854a97e
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354157"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464113"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conectați-vă la date într-un data lake gestionat Microsoft Dataverse
-
-
 
 Acest articol oferă informații despre cum Dataverse utilizatorii se pot conecta rapid la entități analitice într-un Microsoft Dataverse lac administrat. 
 
@@ -29,7 +27,8 @@ Acest articol oferă informații despre cum Dataverse utilizatorii se pot conect
 
 ## <a name="important-considerations"></a>Considerații importante
 
-Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocate într-o locație diferită de locul în care sunt datele prelucrate sau stocate Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
+1. Date stocate în servicii online cum ar fi Azure Data Lake Storage pot fi stocate într-o locație diferită de locul în care sunt datele prelucrate sau stocate Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
+2. Numai Dataverse entitati cu [urmărirea modificărilor](/power-platform/admin/enable-change-tracking-control-data-synchronization) activate sunt vizibile. Aceste entități pot fi exportate în Dataverse -lacul de date gestionat și utilizat în Customer Insights. Înafara cutiei Dataverse tabelele au urmărirea modificărilor activată în mod implicit. Trebuie să activați urmărirea modificărilor pentru tabelele personalizate. Pentru a verifica dacă a Dataverse tabelul este activat pentru urmărirea modificărilor, accesați [Power Apps](https://make.powerapps.com) > **Date** > **Mese**. Găsiți tabelul care vă interesează și selectați-l. Mergi la **Setări** > **Opțiuni avansate** și revizuiți **Urmareste schimbarile** setare.
 
 ## <a name="connect-to-a-dataverse-managed-lake"></a>Conectați-vă la un lake gestionat de Dataverse
 

@@ -1,7 +1,7 @@
 ---
 title: Utilizați sursele de date pentru ingerarea datelor
 description: Aflați cum să importați date din diverse surse.
-ms.date: 12/06/2021
+ms.date: 03/18/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: adkuppa
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: e7bcf82c4fe3625ef791ec2b0a7651be0356a006
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
+ms.openlocfilehash: 9cf97c3e30d7501ba1f188a0e25a1a103299aa7f
+ms.sourcegitcommit: a8e99cf8b23ccc00d76c1dee22afd808a160a5c8
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8354064"
+ms.lasthandoff: 03/22/2022
+ms.locfileid: "8464089"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -27,7 +27,7 @@ Capacitatea Detalii despre audiență din Dynamics 365 Customer Insights se cone
 
 ## <a name="add-a-data-source"></a>Adăugați o sursă de date
 
-Consultați articolele detaliate pentru cum să adăugați un sursă de date, în funcție de opțiunea pe care o alegeți.
+Consultați articolele detaliate pentru a afla cum să adăugați un sursă de date, în funcție de opțiunea pe care o alegeți.
 
 Puteți adăuga următoarele surse de date:
 
@@ -41,13 +41,24 @@ Puteți adăuga următoarele surse de date:
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
 
-Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Puteți activa fluxurile de date în Customer Insights prin [oferind Microsoft Dataverse URL de mediu](create-environment.md) la configurarea mediului.
+Ingerarea datelor din sursele de date locale în detalii despre public este acceptată pe baza de fluxuri de date Microsoft Power Platform. Puteți activa fluxurile de date în Customer Insights prin [oferind Microsoft Dataverse URL a mediului](create-environment.md) la configurarea mediului.
 
 Surse de date care sunt create după asocierea a Dataverse mediu cu utilizarea Customer Insights [Power Platform fluxuri de date](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Puteți elimina și recrea surse de date care existau înainte de a Dataverse mediu a fost asociat [folosind local gateway-uri de date](/data-integration/gateway/service-gateway-app).
 
 Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi vizibile și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
+> [!IMPORTANT]
+> Asigurați-vă că gateway-urile sunt actualizate la cea mai recentă versiune. Puteți instala o actualizare și reconfigura un gateway dintr-un prompt afișat pe ecranul gateway direct sau [descărcați cea mai recentă versiune](https://powerapps.microsoft.com/downloads/). Dacă nu utilizați cea mai recentă versiune de gateway, reîmprospătarea fluxului de date eșuează cu mesaje de eroare precum **Cuvântul cheie nu este acceptat: proprietăți de configurare. Nume parametru: cuvânt cheie**.
+
 ## <a name="review-ingested-data"></a>Examinați datele ingerate
+Dacă mediul dumneavoastră conține Power Platform fluxurile de date, **Surse de date** pagina conține trei secțiuni: 
+- **Impartit** : Surse de date care pot fi gestionate de toți administratorii Customer Insights. Power BI fluxuri de date, propriul cont de stocare și atașarea la a Dataverse -lacul de date gestionat sunt exemple de surse de date partajate.
+- **Gestionat de mine** :Power Platform fluxuri de date create și pot fi gestionate numai de dvs. Alți administratori Customer Insights pot vedea numai aceste fluxuri de date, dar nu le pot edita, reîmprospăta sau șterge.
+- **Gestionat de alții** :Power Platform fluxuri de date create de alți administratori. Puteți doar să le vizualizați. Acesta listează proprietarul fluxului de date pe care să îl contactați pentru orice asistență.
+> [!NOTE]
+> Toate entitățile pot fi vizualizate și utilizate de alți utilizatori. Contextualitatea utilizatorului se aplică numai surselor de date și nu entităților care rezultă din aceste fluxuri de date.
+
+Daca nu Power Platform sunt utilizate fluxuri de date, nu veți vedea niciun grup sau secțiune. The **Surse de date** pagina conține doar o listă a tuturor surselor de date.
 
 Veți vedea numele fiecărei surse de date ingerate, starea acesteia și ultima dată când datele au fost actualizate pentru sursa respectivă. Puteți sorta lista surselor de date după fiecare coloană.
 

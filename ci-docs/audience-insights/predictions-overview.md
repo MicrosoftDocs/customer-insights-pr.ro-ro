@@ -1,19 +1,19 @@
 ---
 title: Prezentare generală despre scenariile de predicție acceptate
 description: Predicție scenarii și opțiuni acoperite de aplicația Dynamics 365 Customer Insights.
-ms.date: 12/21/2021
+ms.date: 03/24/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: c692785c7d81ab660ba2e07411e986c67c1a5d0a
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
+ms.sourcegitcommit: a5e4503cf9ce0cea562bab9389748d8ca1451f9d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8228259"
+ms.lasthandoff: 03/25/2022
+ms.locfileid: "8487550"
 ---
 # <a name="predictions-overview"></a>Prezentare generală a predicțiilor
 
@@ -36,6 +36,11 @@ Cel mai simplu mod de a începe cu prezicerea datelor sunt modelele predefinite,
 - [Modificare tranzacțională](predict-transactional-churn.md) : Prezice dacă un client nu va mai cumpăra produsele sau serviciile dvs. într-un anumit interval de timp.
 
 ---
+
+> [!TIP]
+> Vă recomandăm să reîmprospătați în mod regulat modelele gata de fabricație cu date actualizate, pentru a vă asigura că acestea vă informează cu exactitate cazul de utilizare în afaceri. Datele sunt reîmprospătate ad-hoc atunci când sistemul ingerează surse de date noi sau actualizate. Cu toate acestea, modelele vor recore doar în acest caz și vor continua să utilizeze datele de antrenament existente.
+> 
+> Puteți configura un **Actualizați programul** prin setarea programului de reinstruire a modelului în experiența de configurare. Modelul se va reinstrui și va recalifica în acest program, pe care îl puteți schimba oricând.
 
 
 ## <a name="azure-machine-learning-integration"></a>Integrare pentru învățarea programată Azure

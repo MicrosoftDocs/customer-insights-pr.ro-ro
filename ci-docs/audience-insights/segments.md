@@ -1,7 +1,7 @@
 ---
 title: Segmente din statisticile publicului
 description: Prezentare generală a segmentelor și modul de creare și gestionare a acestora.
-ms.date: 11/01/2021
+ms.date: 03/30/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c58f79c2beda1083d19bd36d94549ff1a46b096e
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: MT
+ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
+ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355998"
+ms.lasthandoff: 03/30/2022
+ms.locfileid: "8508581"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
@@ -68,7 +68,9 @@ Următoarea acțiune este disponibilă când selectați un segment:
 
 ## <a name="refresh-segments"></a>Se reîmprospătează segmentele
 
-Puteți reîmprospăta toate segmentele simultan, selectând **Reîmprospătați toate** pe pagina **Segmente** sau puteți reîmprospăta unul sau mai multe segmente atunci când le selectați și alegeți **Reîmprospătare** din opțiuni. În mod alternativ, puteți configura o actualizare recurentă în **Administrator** > **Sistem** > **Planificare**.
+Puteți reîmprospăta toate segmentele simultan, selectând **Reîmprospătați toate** pe pagina **Segmente** sau puteți reîmprospăta unul sau mai multe segmente atunci când le selectați și alegeți **Reîmprospătare** din opțiuni. În mod alternativ, puteți configura o actualizare recurentă în **Administrator** > **Sistem** > **Planificare**. Când este configurată o reîmprospătare recurentă, se aplică următoarele reguli:
+- Toate segmentele cu tipul **Dinamic** sau **Expansiune** va fi reîmprospătat automat la cadența setată. Când reîmprospătarea este completă **stare** indică dacă au existat probleme la reîmprospătarea segmentului. The **Ultima reîmprospătare** afișează un marcaj temporal al ultimei reîmprospătări reușite. Dacă apare o eroare, selectați eroarea pentru a vedea detalii despre ceea ce s-a întâmplat.
+- Segmente cu tipul **Static** *nu va* fi reîmprospătat automat. The **Ultima reîmprospătare** afișează un marcaj temporal al ultimei rulări sau reîmprospătare manuală a segmentelor statice.
 
 [!INCLUDE [progress-details-include](../includes/progress-details-pane.md)]
 

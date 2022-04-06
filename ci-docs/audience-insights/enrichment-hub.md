@@ -1,7 +1,7 @@
 ---
 title: Îmbogățire profiluri de clienți unificate
 description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
-ms.date: 02/18/2022
+ms.date: 03/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b44f5a4b74c63629811837b853b4e069dea63504
-ms.sourcegitcommit: bb1f9e96023490ab340c114f54200ab4dd48da78
+ms.openlocfilehash: 510a20306e793a5ba522a6ac0d9c7194f03472d2
+ms.sourcegitcommit: ae02ac950810242e2505d7d371b80210dc8a0777
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/02/2022
-ms.locfileid: "8372734"
+ms.lasthandoff: 03/29/2022
+ms.locfileid: "8491974"
 ---
 # <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
 
@@ -97,5 +97,19 @@ Pentru a vedea starea de îmbogățire
 1. În panoul **Detalii despre progres**, extindeți secțiunea **Îmbogățiri**. 
 1. Sub îmbogățirea pe care doriți să vedeți progresul, selectați **Vezi detalii**. 
 1. În panoul **Detalii despre activitate**, selectați **Arată detaliile** pentru a vedea procesele care sunt implicate în actualizarea îmbogățirii și a statutului lor. 
+
+## <a name="enrichment-results"></a>Rezultate de îmbogățire
+
+După o execuție de îmbogățire completă, puteți examina rezultatele îmbogățirii.
+
+1. Accesați **Date** > **Îmbogățire**. 
+1. Selectați îmbogățirea despre care doriți informații.
+
+Toate îmbogățirile arată informații de bază, cum ar fi numărul de profiluri îmbogățite, o previzualizare a entității de îmbogățire generată și numărul de profiluri îmbogățite în timp. Dacă este disponibil, **Număr de clienți îmbogățiți pe domeniu** oferă o detaliere a acoperirii fiecărui câmp îmbogățit.
+
+:::image type="content" source="media/enrichments-results.png" alt-text="Pagina cu rezultate îmbogățiri.":::
+
+Unele îmbogățiri prezintă și informații specifice tipului de îmbogățire. Consultați documentația pentru îmbogățirea relevantă pentru mai multe informații.
+
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

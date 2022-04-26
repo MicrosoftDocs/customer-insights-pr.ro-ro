@@ -1,26 +1,26 @@
 ---
 title: Creați măsuri noi cu generatorul de măsuri
 description: Construiți măsuri de la zero pentru a analiza valorile cheie despre afacerea dvs.
-ms.date: 02/28/2022
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
-author: m-hartmann
+author: v-wendysmith
 ms.author: wameng
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 5329aea240ba40ec8698b3ddeb67fb5f21c62bbd
-ms.sourcegitcommit: cf6a0ed44915908a44c70889a2dd199a9d0d4798
-ms.translationtype: HT
+ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/28/2022
-ms.locfileid: "8359959"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561548"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utilizați generatorul de măsuri pentru a crea măsuri de la zero
 
-Acest articol explică cum să creați un nou [măsura](measures.md) de la zero. Generatorul de măsură vă permite să definiți calcule folosind operatori matematici, funcții de agregare și filtre. Puteți construi o măsură cu atribute de la entități care sunt legate de unificat *Client* entitate. 
+Acest articol explică cum să creați un nou [măsura](measures.md) de la zero. Generatorul de măsură vă permite să definiți calcule folosind operatori matematici, funcții de agregare și filtre. Puteți construi o măsură cu atribute de la entități care sunt legate de unificat *Client* entitate.
 
 Crearea de măsuri în mediile B-to-C și B-to-B funcționează în același mod. Cu toate acestea, dacă sunteți în mediul B-to-B [folosește conturi cu ierarhii](relationships.md#set-up-account-hierarchies), puteți alege să agregați măsura în subconturi asociate.
 
@@ -40,11 +40,11 @@ Puteți crea măsuri la nivelul clienților individuali (atribut client, măsura
 
 1. Selectați **Nou** și alegeți **Construiți una proprie**.
 
-   :::image type="content" source="media/measure-b2c.png" alt-text="Ecran de configurare gol pentru o măsură B-to-C.":::
+   :::image type="content" source="media/measure-b2c.png" alt-text="Ecran de configurare gol pentru o măsură B-to-C." lightbox="media/measure-b2c.png":::
 
-1. Selectați **Editează nume** și furnizați un **Nume** pentru măsură. 
+1. Pentru a urmări performanța la nivel de afaceri, comutați **Tipul de măsură** la **Nivel de afaceri**. **Nivelul clientului** este selectat implicit. **Nivelul clientului** adaugă automat *Număr de înregistrare client* atribuie dimensiunilor în timp ce **Nivel de afaceri** îl îndepărtează automat.
 
-1. În zona de configurare, alegeți funcția de agregare din **Selectați funcția** meniu derulant. Funcțiile de agregare includ: 
+1. În zona de configurare, alegeți funcția de agregare din **Selectați funcția** meniu derulant. Funcțiile de agregare includ:
    - **Sum**
    - **Medie**
    - **Contor**
@@ -57,11 +57,11 @@ Puteți crea măsuri la nivelul clienților individuali (atribut client, măsura
    - **ArgMin** : găsește înregistrarea de date care oferă valoarea minimă dintr-o funcție țintă
 
 1. Selectați **Adăugați un atribut** pentru a selecta datele de care aveți nevoie pentru a crea această măsură.
-   
-   1. Selectați fila **Atribute**. 
-   1. Entitate de date: alegeți entitatea care include atributul pe care doriți să îl măsurați. 
+
+   1. Selectați fila **Atribute**.
+   1. Entitate de date: alegeți entitatea care include atributul pe care doriți să îl măsurați.
    1. Atribut de date: alegeți atributul pe care doriți să îl utilizați în funcția de agregare pentru a calcula măsura. Puteți selecta doar un singur atribut o dată.
-   1. De asemenea, puteți selecta un atribut de date dintr-o măsură existentă selectând fila **Măsuri**, sau puteți căuta o entitate sau un nume de măsură. 
+   1. De asemenea, puteți selecta un atribut de date dintr-o măsură existentă selectând fila **Măsuri**, sau puteți căuta o entitate sau un nume de măsură.
    1. Selectați **Adăuga** pentru a adăuga atributul selectat la măsură.
 
 1. Pentru a construi măsuri mai complexe, puteți adăuga mai multe atribute sau puteți utiliza operatori matematici în funcția de măsurare.
@@ -73,16 +73,18 @@ Puteți crea măsuri la nivelul clienților individuali (atribut client, măsura
    1. Selectați **Aplicare** pentru a adăuga filtrele la măsură.
 
 1. Selectați **Dimensiune** pentru a alege mai multe câmpuri care sunt adăugate ca coloane la entitatea de ieșire a măsurătorilor.
- 
-   1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex. În mod implicit, dimensiunea *CustomerID* este selectată pentru a crea *măsuri la nivel de client*. Puteți elimina dimensiunea implicită dacă doriți să creați *măsuri la nivel de afaceri*.
+
+   1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex.
+   > [!TIP]
+   > Dacă ați selectat **Nivelul clientului** dupa cum **Tipul de măsură** cel *Număr de înregistrare client* atributul este deja adăugat. Dacă eliminați atributul, **Tipul de măsură** comută la **Nivel de afaceri**.
    1. Selectați **Gata** pentru a adăuga dimensiunile la măsură.
 
 1. Dacă există date în datele dvs. pe care trebuie să le înlocuiți cu un număr întreg, selectați **Reguli**. Configurați regula și asigurați-vă că alegeți numai numere întregi ca înlocuitoare. De exemplu, înlocuiți *nul* cu *0*.
 
-1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată. 
-   
+1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată.
+
    1. Selectați **Calea relației** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura. Dacă există doar o singură cale către entitatea *Client*, acest control nu se va afișa.
-   1. Selectați **Terminat** pentru a aplica selecția dvs. 
+   1. Selectați **Terminat** pentru a aplica selecția dvs.
 
 1. Pentru a adăuga mai multe calcule pentru măsură, selectați **Calcul nou**. Puteți utiliza entități pe aceeași cale de entitate numai pentru noi calcule. Mai multe calcule vor fi afișate drept coloane dnoi în entitatea de ieșire de măsurare.
 
@@ -90,14 +92,17 @@ Puteți crea măsuri la nivelul clienților individuali (atribut client, măsura
 
 1. În zona **Previzualizare**, veți vedea schema de date a entității de ieșire a măsurii, inclusiv filtre și dimensiuni. Previzualizarea reacționează dinamic la schimbările din configurație.
 
+1. Selectați **Editează detaliile** lângă Măsura fără titlu. Furnizați un nume pentru măsura. Opțional, adăugați [Etichete](work-with-tags-columns.md#manage-tags) la masura.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="caseta de dialog Editare detalii.":::
+
 1. Selectați **Rulare** pentru a calcula rezultatele pentru măsura configurată. Selectați **Salvați și închideți** dacă doriți să păstrați configurația curentă și să executați măsura mai târziu.
 
 1. Accesați **Măsuri** pentru a vedea măsurarea nou creată în listă.
 
 # <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
-
-Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la nivelul tuturor conturilor (măsură business). 
+Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la nivelul tuturor conturilor (măsură business).
 
 - Măsurarea clientului: generează rezultate ca entitate proprie. Măsurile clienților nu apar în cardul de profil al clientului.
 
@@ -109,9 +114,7 @@ Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la 
 
    :::image type="content" source="media/measure-b2b.png" alt-text="Ecran de configurare gol pentru o măsură B-to-B.":::
 
-1. Selectați **Editează nume** și furnizați un **Nume** pentru măsură. 
-
-1. În zona de configurare, alegeți funcția de agregare din **Selectați funcția** meniu derulant. Funcțiile de agregare includ: 
+1. În zona de configurare, alegeți funcția de agregare din **Selectați funcția** meniu derulant. Funcțiile de agregare includ:
    - **Sum**
    - **Medie**
    - **Contor**
@@ -122,11 +125,11 @@ Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la 
    - **Ultimul**: ia ultima valoare care a fost adăugată la înregistrarea de date
 
 1. Selectați **Adăugați un atribut** pentru a selecta datele de care aveți nevoie pentru a crea această măsură.
-   
-   1. Selectați fila **Atribute**. 
-   1. Entitate de date: alegeți entitatea care include atributul pe care doriți să îl măsurați. 
+
+   1. Selectați fila **Atribute**.
+   1. Entitate de date: alegeți entitatea care include atributul pe care doriți să îl măsurați.
    1. Atribut de date: alegeți atributul pe care doriți să îl utilizați în funcția de agregare pentru a calcula măsura. Puteți selecta doar un singur atribut o dată.
-   1. De asemenea, puteți selecta un atribut de date dintr-o măsură existentă selectând fila **Măsuri**, sau puteți căuta o entitate sau un nume de măsură. 
+   1. De asemenea, puteți selecta un atribut de date dintr-o măsură existentă selectând fila **Măsuri**, sau puteți căuta o entitate sau un nume de măsură.
    1. Selectați **Adăuga** pentru a adăuga atributul selectat la măsură.
 
 1. Pentru a construi măsuri mai complexe, puteți adăuga mai multe atribute sau puteți utiliza operatori matematici în funcția de măsurare.
@@ -138,8 +141,10 @@ Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la 
    1. Selectați **Aplicare** pentru a adăuga filtrele la măsură.
 
 1. Selectați **Dimensiune** pentru a alege mai multe câmpuri care sunt adăugate ca coloane la entitatea de ieșire a măsurătorilor.
- 
-   1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex. În mod implicit, dimensiunea *CustomerID* este selectată pentru a crea *măsuri la nivel de client*. Puteți elimina dimensiunea implicită dacă doriți să creați *măsuri la nivel de afaceri*.
+
+   1. Selectați **Editați dimensiunile** pentru a adăuga atribute de date pe care doriți să le grupați valorile măsurate. De exemplu, oraș sau sex.
+      > [!TIP]
+      > Dacă ați selectat **Nivelul clientului** dupa cum **Tipul de măsură** cel *Număr de înregistrare client* atributul este deja adăugat. Dacă eliminați atributul, **Tipul de măsură** comută la **Nivel de afaceri**.
    1. Selectați **Gata** pentru a adăuga dimensiunile la măsură.
 
 1. Dacă există date în datele dvs. pe care trebuie să le înlocuiți cu un număr întreg, selectați **Reguli**. Configurați regula și asigurați-vă că alegeți numai numere întregi ca înlocuitoare. De exemplu, înlocuiți *nul* cu *0*.
@@ -148,17 +153,19 @@ Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la 
    - Dacă este setat la **Dezactivat**, măsura este calculată pentru fiecare cont. Fiecare cont devine propriul rezultat.
    - Dacă este setat la **Pornit**, selectați **Editați** pentru a alege ierarhia contului în funcție de ierarhiile ingerate. Măsura va produce un singur rezultat, deoarece este agregată cu conturi secundare.
 
-1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată. 
-   
+1. Dacă există mai multe căi între entitatea de date pe care ați mapat-o și entitatea *Client* trebuie să alegeți una dintre [căile relației entității](relationships.md) identificate. Rezultatele măsurătorilor pot varia în funcție de calea selectată.
+
    1. Selectați **Calea relației** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura. Dacă există doar o singură cale către entitatea *Client*, acest control nu se va afișa.
-   1. Selectați **Terminat** pentru a aplica selecția dvs. 
+   1. Selectați **Terminat** pentru a aplica selecția dvs.
 
 1. Selectați **...** asupra calculului la **Duplicat**, **Redenumiți**, sau **Eliminați** un calcul dintr-o măsură.
 
 1. În zona **Previzualizare**, veți vedea schema de date a entității de ieșire a măsurii, inclusiv filtre și dimensiuni. Previzualizarea reacționează dinamic la schimbările din configurație.
 
+1. Selectați **Editează detaliile** lângă Măsura fără titlu. Furnizați un nume pentru măsura. Opțional, adăugați [Etichete](work-with-tags-columns.md#manage-tags) la masura.
+
+   :::image type="content" source="media/measures_edit_details.png" alt-text="caseta de dialog Editare detalii.":::
+
 1. Selectați **Rulare** pentru a calcula rezultatele pentru măsura configurată. Selectați **Salvați și închideți** dacă doriți să păstrați configurația curentă și să executați măsura mai târziu.
 
 1. Accesați **Măsuri** pentru a vedea măsurarea nou creată în listă.
-
----

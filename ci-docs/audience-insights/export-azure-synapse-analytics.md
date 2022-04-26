@@ -1,19 +1,19 @@
 ---
 title: Exportați datele Customer Insights către Azure Synapse Analytics
 description: Aflați cum să configurați conexiunea la Azure Synapse Analytics.
-ms.date: 01/05/2022
+ms.date: 04/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 289c8d545f057b3f70679b485cf4350545c0587b
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 8ace9fbee4fbd8822629a39d5902e176f8511cb5
+ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8231327"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "8560402"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele în Azure Synapse Analytics (Previzualizare)
 
@@ -28,31 +28,31 @@ Următoarele condiții preliminare trebuie îndeplinite pentru a configura conex
 
 ## <a name="prerequisites-in-customer-insights"></a>Cerințe preliminare în Customer Insights
 
-* Aveți un rol **Administrator** în Detalii despre public. Aflați mai multe despre [setarea permisiunilor utilizatorilor în Detalii privind publicul](permissions.md#assign-roles-and-permissions)
+* Ta Azure Active Directory Contul de utilizator (AD) are un **Administrator** rol în Customer Insights. Aflați mai multe despre [setarea permisiunilor utilizatorilor în Detalii privind publicul](permissions.md#assign-roles-and-permissions)
 
 În Azure: 
 
 - Un abonament Azure activ.
 
-- Dacă utilizați un nou cont Azure Data Lake Storage Gen2, *director principal de serviciu pentru detalii despre public* are nevoie de permisiune de **Contributor stocare data blob**. Aflați mai multe despre [conectarea la un cont Azure Data Lake Storage Gen2 cu contul principal de serviciu Azure pentru detalii despre public](connect-service-principal.md). Data Lake Storage Gen2 **trebuie să aibă** [spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace) activat.
+- Dacă utilizați un nou Azure Data Lake Storage Contul Gen2, the *principal de serviciu pentru Customer Insights* are nevoie **Colaborator de date Blob de stocare** permisiuni. Aflați mai multe despre [conectarea la un cont Azure Data Lake Storage Gen2 cu contul principal de serviciu Azure pentru detalii despre public](connect-service-principal.md). Data Lake Storage Gen2 **trebuie să aibă** [spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace) activat.
 
-- Pe grupul de resurse, unde se află spațiul de lucru Azure Synapse, *director principal de serviciu* și *utilizator pentru detalii despre public* trebuie să le fie atribuite cel puțin permisiuni **Cititor**. Pentru mai multe informații, consultați [Atribuirea de roluri Azure utilizând portalul Azure](/azure/role-based-access-control/role-assignments-portal).
+- Pe grupul de resurse unde Azure Synapse spațiul de lucru este situat, the *principalul serviciului* si *Azure AD utilizator cu permisiuni de administrator în Customer Insights* trebuie să fie atribuit cel puțin **Cititor** permisiuni. Pentru mai multe informații, consultați [Atribuirea de roluri Azure utilizând portalul Azure](/azure/role-based-access-control/role-assignments-portal).
 
-- Pentru *utilizator* este nevoie de permisiuni **Contribuitor stocare date blob** pentru contul Azure Data Lake Storage Gen2 unde sunt amplasate datele și conectate la spațiul de lucru Azure Synapse. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- The *Azure AD utilizator cu permisiuni de administrator în Customer Insights* are nevoie **Colaborator de date Blob de stocare** permisiuni pe Azure Data Lake Storage Contul Gen2 în care se află datele și sunt legate la Azure Synapse spațiu de lucru. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Pentru utilizator *[identitatea gestionată de spațiu de lucru Azure Synapse](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* este nevoie de permisiuni **Contribuitor stocare date blob** pentru contul Azure Data Lake Storage Gen2 unde sunt amplasate datele și conectate la spațiul de lucru Azure Synapse. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
-- Pentru spațiul de lucru Azure Synapse,*directorul principal de serviciu pentru detalii despre public* este nevoie să aibă atribuit rolul **Administrator Synapse**. Pentru mai multe informații, consultați [Cum să configurați controlul accesului pentru spațiul de lucru Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
+- Pe Azure Synapse spaţiul de lucru, *principal de serviciu pentru Customer Insights* are nevoie **Administrator Synapse** rolul atribuit. Pentru mai multe informații, consultați [Cum să configurați controlul accesului pentru spațiul de lucru Synapse](/azure/synapse-analytics/security/how-to-set-up-access-control).
 
 ## <a name="set-up-the-connection-and-export-to-azure-synapse"></a>Configurați conexiunea și exportul la Azure Synapse
 
 ### <a name="configure-a-connection"></a>Configurați o conexiune
 
-Pentru a crea o conexiune, este nevoie de principalul serviciu și contul de utilizator din Customer Insights **Cititor** permisiuni pe *grup de resurse* unde se află spațiul de lucru Synapse Analytics. În plus, principalul serviciu și utilizatorul din spațiul de lucru Synapse Analytics au nevoie **Administrator Synapse** permisiuni. 
+Pentru a crea o conexiune, este nevoie de principalul serviciu și contul de utilizator din Customer Insights **Cititor** permisiuni pe *grup de resurse* unde se află spațiul de lucru Synapse Analytics. În plus, principalul serviciului și utilizatorul din spațiul de lucru Synapse Analytics au nevoie **Administrator Synapse** permisiuni. 
 
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Azure Synapse Analytics** sau selectați **Înființat** pe **Azure Synapse Analytics** tigla pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **Azure Synapse Analytics** sau selectați **Înființat** pe **Azure Synapse Analytics** țiglă pentru a configura conexiunea.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul Nume afișat. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 

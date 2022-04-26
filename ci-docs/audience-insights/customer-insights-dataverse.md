@@ -1,7 +1,7 @@
 ---
 title: Date Customer Insights în Microsoft Dataverse
 description: Utilizați entitățile Customer Insights ca tabele în Microsoft Dataverse.
-ms.date: 11/25/2021
+ms.date: 04/05/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,31 +11,33 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 9f730f5856221592cddf34b714beeaca24c52130
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: bbbbf2a7f5edb81ee75f6e33988cd4721134b6e7
+ms.sourcegitcommit: 0363559a1af7ae16da2a96b09d6a4a8a53a8cbb8
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355444"
+ms.lasthandoff: 04/05/2022
+ms.locfileid: "8547641"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
-Customer Insights oferă opțiunea de a face entitățile de ieșire disponibile în [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro.md). Această integrare permite partajarea ușoară a datelor și dezvoltarea personalizată printr-o abordare cu cod redus/fără cod. Entitățile de ieșire vor fi disponibile ca tabele în Dataverse. Aceste tabele permit scenarii precum [fluxuri de lucru automatizate prin Power Automate](/power-automate/getting-started), [aplicații proiectate pe bază de model](/powerapps/maker/model-driven-apps/) și [aplicații proiectate pe pânză](/powerapps/maker/canvas-apps/) prin Power Apps. Puteți utiliza datele pentru orice altă aplicație care se bazează pe tabele Dataverse. Implementarea actuală acceptă în principal căutările în care datele de la entitățile de detaliile despre public disponibile pot fi preluate pentru un ID de client dat.
+Customer Insights oferă opțiunea de a face entitățile de ieșire disponibile în [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Această integrare permite partajarea ușoară a datelor și dezvoltarea personalizată printr-o abordare cu cod redus/fără cod. The [entități de ieșire](#output-entities) sunt disponibile ca tabele în a Dataverse mediu inconjurator. Puteți utiliza datele pentru orice altă aplicație bazată pe Dataverse Mese. Aceste tabele permit scenarii precum fluxuri de lucru automate Power Automate sau construirea de aplicații cu Power Apps. Implementarea actuală acceptă în principal căutări în care datele de la entitățile disponibile Customer Insights pot fi preluate pentru un anumit ID de client.
 
 ## <a name="attach-a-dataverse-environment-to-customer-insights"></a>Atașați un mediu Dataverse pentru Customer Insights
 
-**Organizații cu medii Dataverse existente**
+**Organizație existentă**
 
-Organizațiile care folosesc deja Dataverse pot să [folosească unul dintre cele mediile Dataverse existente](create-environment.md) atunci când un administrator stabilește informații despre audiență. Prin furnizarea adresei URL pentru mediul Dataverse, se atașează noului mediu de detalii despre public. Pentru a asigura cea mai bună performanță posibilă, Customer Insights și mediile Dataverse trebuie găzduite în aceeași regiune.
+Administratorii pot configura Customer Insights pentru [utilizați unul existent Dataverse mediu inconjurator](create-environment.md) atunci când creează un mediu Customer Insights. Prin furnizarea adresei URL pentru mediul Dataverse, se atașează noului mediu de detalii despre public. Informații despre clienți și Dataverse mediile trebuie să fie găzduite în aceeași regiune. 
+
+Dacă nu doriți să utilizați unul existent Dataverse mediu, sistemul creează un nou mediu pentru datele Customer Insights din chiriașul dvs. 
+
+> [!NOTE]
+> Dacă organizațiile dvs. utilizează deja Dataverse în entitatea lor găzduită, este important să ne amintim că [crearea mediului Dataverse este controlată de un administrator](/power-platform/admin/control-environment-creation). De exemplu, dacă ați configurat un nou mediu de informații privind publicul cu contul organizațional și administratorul a dezactivat crearea de medii de încercare Dataverse pentru toată lumea, cu excepția administratorilor, nu puteți crea un mediu de încercare nou.
+> 
+> Mediile de încercare Dataverse create în Customer Insights au 3 GB de spațiu de stocare, care nu va conta pentru capacitatea totală autorizată pentru entitatea găzduită. Abonamentele plătite primesc autorizare Dataverse de 15 GB pentru baza de date și 20 GB pentru stocarea fișierelor.
 
 **Nouă organizație**
 
-Dacă creați o nouă organizație atunci când configurați Customer Insights, veți primi automat un nou mediu Dataverse.
-
-> [!NOTE]
-> Dacă organizațiile dvs. utilizează deja Dataverse în entitatea lor găzduită, este important să ne amintim că [crearea mediului Dataverse este controlată de un administrator](/power-platform/admin/control-environment-creation.md). De exemplu, dacă ați configurat un nou mediu de informații privind publicul cu contul organizațional și administratorul a dezactivat crearea de medii de încercare Dataverse pentru toată lumea, cu excepția administratorilor, nu puteți crea un mediu de încercare nou.
-> 
-> Mediile de încercare Dataverse create în Customer Insights au 3 GB de spațiu de stocare, care nu va conta pentru capacitatea totală autorizată pentru entitatea găzduită. Abonamentele plătite primesc autorizare Dataverse de 15 GB pentru baza de date și 20 GB pentru stocarea fișierelor.
+Dacă creați o nouă organizație atunci când configurați Customer Insights, sistemul creează automat o nouă organizație Dataverse mediu din organizația dvs. pentru dvs.
 
 ## <a name="output-entities"></a>Entități de ieșire
 
@@ -129,11 +131,11 @@ Acest tabel conține rezultatul predicțiilor modelelor.
 
 Acest tabel conține informații despre apartenența la segmente ale profilurilor clienților.
 
-| Column        | Tipul | Descriere                        |
+| Column        | Tipul | Descriere                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | Șir       | ID de profil client        |
-| SegmentProvider      | Șir       | Aplicație care publică segmentele. Implicit: statistici despre public         |
-| SegmentMembershipType | Șir       | Tipul de client acest segment înregistrează apartenența. Acceptă mai multe tipuri, cum ar fi Client, Contact sau Cont. Implicit: Client  |
-| Segmente       | Șir JSON  | Lista segmentelor unice la care este membru profilul clientului      |
-| msdynci_identifier  | Șir   | Identificatorul unic al înregistrării de membru al segmentului. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| CustomerId        | Șir       | ID de profil client        |
+| SegmentProvider      | Șir       | Aplicație care publică segmentele. Implicit: statistici despre public         |
+| SegmentMembershipType | Șir       | Tipul de client acest segment înregistrează apartenența. Acceptă mai multe tipuri, cum ar fi Client, Contact sau Cont. Implicit: Client  |
+| Segmente       | Șir JSON  | Lista segmentelor unice la care este membru profilul clientului      |
+| msdynci_identifier  | Șir   | Identificatorul unic al înregistrării de membru al segmentului. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
 | msdynci_segmentmembershipid | GUID      | GUID determinist generat din`msdynci_identifier`          |

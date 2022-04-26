@@ -1,23 +1,23 @@
 ---
 title: Găsiți clienți similari cu AI (conține videoclip)
 description: Găsiți segmente de clienți similare cu inteligență artificială.
-ms.date: 06/25/2020
+ms.date: 03/25/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: 5626b980ad8802aae9657052e3ca51a70c49baf9
-ms.sourcegitcommit: 73cb021760516729e696c9a90731304d92e0e1ef
-ms.translationtype: HT
+ms.openlocfilehash: 851ea2c3388de603c1beef4a58e359aa989c9c46
+ms.sourcegitcommit: e129a1fa8b020b6bfb6efc3c53fa9d89e1614ad1
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/25/2022
-ms.locfileid: "8355260"
+ms.lasthandoff: 04/12/2022
+ms.locfileid: "8561585"
 ---
 # <a name="similar-customers-preview"></a>Clienți similari (previzualizare)
 
@@ -36,6 +36,8 @@ Această caracteristică vă permite să găsiți clienți similari în baza de 
 
 1. Examinați numele sugerat pentru noul segment și schimbați-l dacă este necesar.
 
+1. Opțional, adăugați [Etichete](work-with-tags-columns.md#manage-tags) la noul segment.
+
 1. Examinați câmpurile care definesc noul dvs. segment. Aceste câmpuri definesc baza pe care sistemul va încerca să găsească clienți similari cu segmentul dvs. sursă. În mod implicit, sistemul va selecta câmpurile recomandate.
   Câmpurile care pot reduce semnificativ performanța modelului sunt excluse automat:
   
@@ -44,9 +46,9 @@ Această caracteristică vă permite să găsiți clienți similari în baza de 
 
 1. Alegeți dacă doriți să includeți **Toți clienții** sau numai clienții dintr-un **Segment specific existent** în noul dvs. segment.
 
-1. Excludeți clienții din segmentul sursă selectând caseta de selectare **Excludeți pe toți din segmentul sursă**.
-
 1. În mod implicit, sistemul sugerează să includeți doar 20% din mărimea publicului țintă în rezultatul dvs. Editați acest prag în funcție de necesități. Creșterea pragului va reduce precizia.
+
+1. Includeți clienții în segmentul sursă selectând **Includeți membri din segmentul sursă în plus față de clienții cu atribute similare** Caseta de bifat.
 
 1. Selectați **Rulează** în partea de jos a paginii pentru a începe o sarcină de clasificare binară (o metodă a învățare programată) care analizează setul de date.
 
@@ -67,7 +69,7 @@ Puteți [lucra cu rezultatul unui segment similar](segments.md) așa cum faceți
 
 Pentru a reîmprospăta un segment similar, selectați-l pe pagina **Segmente** și selectați **Reîmprospătare** în bara de acțiune.
 
-Editarea unui segment similar va reprocesa datele dumneavoastră. Segmentul creat anterior este actualizat cu datele reîmprospătate.    
+Editarea unui segment similar va reprocesa datele dumneavoastră. Segmentul creat anterior este actualizat cu datele reîmprospătate.
 Pentru a edita un segment similar, selectați-l pe pagina **Segmente** și selectați **Editare** în bara de acțiune. Aplicați modificările și selectați **Rulează** pentru a începe procesarea.
 
 ## <a name="delete-a-similar-segment"></a>Ștergeți un segment similar
@@ -84,6 +86,5 @@ Modelul învățare programată a clasificării binare atribuie un scor clienți
 - Scorurile de similaritate între 0,85 - 1 sunt clienții pe care sistemul îi clasifică drept *foarte similari*
 
 Clienții cu scoruri de similaritate sub 0,4 nu sunt incluși în rezultatul modelului. Sistemul nu îi consideră suficient de similari cu segmentul sursă.
-
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

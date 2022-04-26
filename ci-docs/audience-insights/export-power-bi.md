@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: dccc069a355725bae09c1fece9292b9aee374e6d
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
-ms.translationtype: HT
+ms.openlocfilehash: 06c5bed74b82f9ae2a764a2eb363348e0edab531
+ms.sourcegitcommit: 4b2ad63aa7a4d4f31b573870bccbc40befe5f8fd
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8225540"
+ms.lasthandoff: 04/07/2022
+ms.locfileid: "8552071"
 ---
 # <a name="connector-for-power-bi-preview"></a>Conector pentru Power BI (previzualizare)
 
@@ -72,6 +72,6 @@ După eliminarea relațiilor duplicate, încercați să configurați conectorul 
 
 Când încărcați entități care conțin câmpuri cu un format de dată, cum ar fi LL/ZZ/AAAA, puteți întâlni erori din cauza formatelor locale nepotrivite. Această nepotrivire se întâmplă atunci când fișierul Power BI Desktop este setat în alte setări regionale decât engleza (Statele Unite), deoarece câmpurile de date din statisticile publicului sunt salvate în format SUA.
 
-Fișierul Power BI Desktop are o singură setare regională, care se aplică la preluarea datelor. Obțineți aceste câmpuri de dată interpretate corect, setați localizarea fișierului .BPI la engleză (Statele Unite). [Aflați cum să schimbați setările locale ale unui fișier Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions.md#choose-the-locale-for-importing-data-into-power-bi-desktop).
+Fișierul Power BI Desktop are o singură setare regională, care se aplică la preluarea datelor. Obțineți aceste câmpuri de dată interpretate corect, setați localizarea fișierului .BPI la engleză (Statele Unite). [Aflați cum să schimbați setările locale ale unui fișier Power BI desktop](/power-bi/fundamentals/supported-languages-countries-regions#choose-the-language-or-locale-of-power-bi-desktop).
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]

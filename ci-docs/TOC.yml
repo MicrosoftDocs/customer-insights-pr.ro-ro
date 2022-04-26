@@ -44,6 +44,8 @@
           href: audience-insights/create-environment.md
         - name: Explorați detalii despre public
           href: audience-insights/home.md
+        - name: Lucrați cu etichete și coloane
+          href: audience-insights/work-with-tags-columns.md
         - name: Lucrul cu conturi de business
           href: audience-insights/work-with-business-accounts.md
     - name: Surse de date
@@ -314,7 +316,7 @@
           href: consent-management/system-settings.md
         - name: Gestionați utilizatorii și permisiunile
           href: consent-management/manage-users.md
-    - name: Utilizați datele consimțământului
+    - name: Utilizați datele de consimțământ
       items:
         - name: Creați predicții cu date de consimțământ
           href: consent-management/predictions-consent-data.md

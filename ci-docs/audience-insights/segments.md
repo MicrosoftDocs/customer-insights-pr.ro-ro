@@ -6,7 +6,7 @@ ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
 ms.author: jimsonc
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-customers-page
@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 340a7b7326f5b4a8cbde8683b8d41cb53dc557b0
-ms.sourcegitcommit: 0bd5f53e4e7e37359afd087ee16b779a6b3a9183
-ms.translationtype: HT
+ms.openlocfilehash: 68e71df3853470af47228c7365f25db3a71d15b0
+ms.sourcegitcommit: 9ef2cf99b847e7bd8f890f83d84b3a4045aaf8cc
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 03/30/2022
-ms.locfileid: "8508581"
+ms.lasthandoff: 04/01/2022
+ms.locfileid: "8529554"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
@@ -47,24 +47,30 @@ Sunt mai multe moduri de a crea un segment nou:
 
 ## <a name="manage-existing-segments"></a>Gestionarea segmentelor existente
 
-Mergeș la **Segmente** pagina, pentru a vizualiza toate segmentele salvate și a le gestiona.
+Du-te la **Segmente** pagina pentru a vedea toate segmentele salvate și a le gestiona.
 
 Fiecare segment este reprezentat de un rând care include informații suplimentare despre segment.
 
-:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment selectat cu listă verticală de opțiuni și opțiuni disponibile.":::
+:::image type="content" source="media/segments-selected-segment.png" alt-text="Segment selectat cu listă verticală de opțiuni și opțiuni disponibile." lightbox="media/segments-selected-segment.png":::
 
-Următoarea acțiune este disponibilă când selectați un segment:
+Următoarele acțiuni sunt disponibile atunci când selectați un segment:
 
 - **Vizualizați** detaliile segmentului, incluzând tendința numărului de membri o previzualizare a membrilor segmentului.
+- **Descarcați** lista membrilor ca fișier .CSV.
 - **Editați** segmentul pentru a-i schimba proprietățile.
 - **Creați duplicat** pentru un segment. Puteți alege să editați proprietățile imediat sau pur și simplu să salvați duplicatul.
 - **Reîmprospătați** segmentul pentru a include cele mai recente date.
-- **Activarea** sau **Dezactivarea** segmentului. Segmentele au două stări posibile - active sau inactive. Aceste stări sunt utile la editarea unui segment. Pentru segmentele inactive, definiția segmentului există, dar nu conține încă clienți. Când activați un segment, starea acestuia se schimbă din „inactiv” în „activ” și începe să caute clienți care se potrivesc cu definiția segmentului. În cazul în care o [reîmprospătare programată](system.md#schedule-tab) este configurată, segmentele inactive au **Starea** listată drept **Omis**, indicând că nici măcar nu a fost încercată o reîmprospătare. Când este activat un segment inactiv, acesta se va reîmprospăta și va fi inclus în reîmprospătările programate.
+- **Activarea** sau **Dezactivarea** segmentului. Pentru segmentele inactive, definiția segmentului există, dar nu conține încă clienți. Un segment activ caută clienți care se potrivesc cu definiția segmentului. În cazul în care o [reîmprospătare programată](system.md#schedule-tab) este configurată, segmentele inactive au **Starea** listată drept **Omis**, indicând că nici măcar nu a fost încercată o reîmprospătare. Când este activat un segment inactiv, acesta se va reîmprospăta și va fi inclus în reîmprospătările programate.
   Alternativ, puteți utiliza funcționalitatea **Planifică mai târziu** în lista derulantă **Activare/Dezactivare** pentru a specifica data și ora viitoare pentru activarea și dezactivarea unui anumit segment.
+- **[Găsiți clienți similari](find-similar-customer-segments.md)** din segment.
 - **Redenumire** segment.
+- **Etichetă** la [gestionați etichetele](work-with-tags-columns.md#manage-tags) pentru segment.
 - **Descarcați** lista membrilor ca fișier .CSV.
 - **Gestionați exporturile** pentru a vedea segmentul aferent exporturilor și a le gestiona. [Aflați mai multe despre exporturi.](export-destinations.md)
 - **Se șterge** segmentul.
+- **Coloane** la [personalizați coloanele](work-with-tags-columns.md#customize-columns) acel afișaj.
+- **Filtru** la [filtrează pe etichete](work-with-tags-columns.md#filter-on-tags).
+- **Căutați numele** pentru a căuta după numele segmentului.
 
 ## <a name="refresh-segments"></a>Se reîmprospătează segmentele
 

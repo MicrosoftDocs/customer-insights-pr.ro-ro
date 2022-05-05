@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 9badd8370358b9f5745ba6347e8db42e89c5f3d3
-ms.sourcegitcommit: e7cdf36a78a2b1dd2850183224d39c8dde46b26f
+ms.openlocfilehash: 4a269a223efa08f71db09eef2ec9a8f8a077f7a7
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 02/16/2022
-ms.locfileid: "8229510"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641823"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 
@@ -62,13 +62,13 @@ Puteți extinde procesul direct în aplicație. Puteți prelungi versiunea de î
 
 În general, vă recomandăm să începeți din nou cu propriile date atunci când faceți upgrade la versiunea plătită a Customer Insights. 
 
-Opțional, dacă utilizați statistici privind publicul, puteți copia datele dintr-un mediu de încercare dacă achiziționați Customer Insights. Trebuie să fiți administratorul testului Customer Insights și administratorul global al dvs Microsoft 365 chiriașului sau administratorul Dynamics 365 din organizația dvs. pentru a migra setările dintr-un mediu de probă într-un mediu cu plată. 
+Opțional, dacă utilizați numai Customer Insights, vă puteți copia datele dintr-un mediu de probă dacă achiziționați Customer Insights. Trebuie să fiți administratorul testului Customer Insights și administratorul global al dvs Microsoft 365 chiriașului sau administratorul Dynamics 365 din organizația dvs. pentru a migra setările dintr-un mediu de probă într-un mediu cu plată. 
 
-După ce v-ați conectat pentru prima dată la instanța dvs. plătită de Customer Insights, vi se cere să creați un mediu nou. În acest proces, puteți alege să copiați configurația dintr-un mediu existent și să migrați majoritatea setărilor. Dacă aveți permisiunile menționate mai sus, mediul de încercare se va afișa în această listă. Pentru mai multe informații, consultați [Copiați configurația mediului](audience-insights/manage-environments.md#copy-the-environment-configuration).
+După ce v-ați conectat pentru prima dată la instanța dvs. plătită de Customer Insights, vi se cere să creați un mediu nou. În acest proces, puteți alege să copiați configurația dintr-un mediu existent și să migrați majoritatea setărilor. Dacă aveți permisiunile menționate mai sus, mediul de încercare se va afișa în această listă. Pentru mai multe informații, consultați [Copiați configurația mediului](manage-environments.md#copy-the-environment-configuration).
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Care sunt limitele și ofertele versiunii de încercare?
 
-- Nu puteți utiliza propriul cont de stocare Azure Data Lake Storage pentru a stoca date de ieșire în timpul unei versiuni de încercare a statisticilor privind audiența. Cu toate acestea, puteți ingera date dintr-un cont de stocare Data Lake.
+- Nu vă puteți folosi propriul cont de stocare Azure Data Lake pentru a stoca date de ieșire în timpul unei versiuni de probă a Customer Insights. Cu toate acestea, puteți ingera date dintr-un cont de stocare Data Lake.
 - Puteți stoca până la 3 GB de date în mediul Dataverse mediu care se aprovizionează automat atunci când porniți o versiune de încercare Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Întrebări specifice pentru Customer Insights
@@ -81,7 +81,7 @@ După ce vă înscrieți pentru versiunea de încercare, veți ajunge în ecranu
 
 Majoritatea caracteristicilor capabilităților Customer Insights sunt disponibile în versiunea de încercare.
 
-Următoarele caracteristici sunt **nu e disponibil**: 
+Următoarele caracteristici sunt **nu este disponibil**: 
 - Nu puteți crea medii noi care utilizează propriul cont de stocare Azure Data Lake Storage.
 - Nu puteți șterge mediul de încercare. 
 

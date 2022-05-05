@@ -1,39 +1,41 @@
 ---
-title: Prezentare generală produs
+title: Dynamics 365 Customer Insights Prezentarea produsului
 author: m-hartmann
-description: Obțineți o prezentare generală pentru Dynamics 365 Customer Insights și capacitățile sale.
+description: Obțineți o privire de ansamblu pentru Dynamics 365 Customer Insights și principalele sale caracteristici.
 ms.author: mhart
-ms.date: 07/30/2021
+ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: ff3d23d00a565bf9e5693e7cd5db644ddfe4887e
-ms.sourcegitcommit: 9f6733b2f2c273748c1e7b77f871e9b4e5a8666e
+ms.openlocfilehash: 4d5b4ec61614877c26468ffe8d07f2448b43bac6
+ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "8560448"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "8641915"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Prezentare generală a produsului pentru Dynamics 365 Customer Insights
 
-[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) este o parte a platformei datelor despre clienți Microsoft (CDP) care ajută la livrarea experiențelor particularizate de clienți. Capacitățile platformei oferă informații despre cine sunt clienții dvs. și despre modul în care aceștia interacționează cu platforma dvs. Unificați datele clienților în surse multiple pentru a obține o singură vizualizare a clienților.
+[Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) este platforma Microsoft de date despre clienți (CDP) care ajută la furnizarea de experiențe personalizate pentru clienți. Aplicația oferă o viziune holistică a clienților cu timp de neegalat până la perspectivă. Obțineți cea mai cuprinzătoare vizualizare a clienților dvs. unificând datele clienților cu datele operaționale și IoT în timp real. Îmbogățiți profilurile clienților cu surse de date primare și terțe. 
 
-[Statistici ale publicului](audience-insights/overview.md) vă ajută să vă transformați afacerea într-o organizație centrată pe client. Profesioniștii în marketing, vânzări și servicii au cunoștințele de care au nevoie pentru a personaliza experiențele. Conectați date din surse tranzacționale, comportamentale și observaționale pentru a crea o vizualizare de 360 de grade a clienților. Vedeți rezultatele mai rapid cu un CDP conceput pentru a oferi informații pe baza cărora să se poată acționa. 
-
-[Perspective despre implicare](engagement-insights/overview.md) a fost o capacitate de previzualizare în Customer Insights care se concentrează pe colectarea de evenimente web și mobile pentru informații suplimentare. Previzualizarea s-a încheiat pe 15 februarie 2022.
+Customer Insights vă ajută să vă transformați afacerea într-o organizație centrată pe client, împuternicindu-vă profesioniștii în marketing, vânzări și servicii pentru a personaliza interacțiunile 1:1 la scară. Integrarea la cheie cu aplicațiile Microsoft și de la terțe părți pot fi folosite pentru a activa informații în timp real pentru a conduce acțiuni semnificative.
  
-## <a name="choose-a-capability"></a>Alegeți o capacitate
+Conectați datele din surse de date tranzacționale, comportamentale și demografice pentru a crea vizualizări la 360 de grade ale clienților. Obțineți informații ieșite din cutie cu modele AI preconstruite sau construiți, testați și implementați rapid modele AI/ML personalizate folosind soluții de analiză avansate la scară nelimitată.
 
-:::image type="content" source="engagement-insights/media/choose_focus.png" alt-text="Pagina cu informații despre clienți care vă permite să navigați la informații despre public sau informații despre implicare.":::
-
-Pentru a alege o capacitate
-
-1. În panoul de navigare, selectați **Toate aplicațiile** pentru a deschide fereastra **Alegeți concentrarea**.
-1. Selectați **Accesați acum** pentru a naviga la capacitatea dorită.
+Păstrați controlul deplin asupra datelor clienților dvs. pentru a asigura cel mai înalt nivel de guvernanță a datelor și conformitatea cu un CDP cu autoservire, de nivel enterprise, construit pe Microsoft Azure. Sprijină Regulamentul general privind protecția datelor (GDPR) și alte cerințe legislative și standarde din industrie prin instrumente încorporate de confidențialitate, securitate și guvernanță și de gestionare a consimțământului.
 
 ## <a name="pricing-and-licensing"></a>Prețuri și licențiere
+Customer Insights este licențiat pentru fiecare chiriaș și include atât capabilități business-to-consumer (B2C) cât și business-to-business (B2B). Puteți achiziționa capacitate suplimentară cu licențe suplimentare pentru a crește numărul de profiluri și conturi.
 
-Customer Insights este licențiat per entitate găzduită și include mai multe funcții. Puteți achiziționa capacitate suplimentară și licență pentru a crește cota implicită. 
 - [Prezentare generală a prețurilor](https://dynamics.microsoft.com/ai/customer-insights/pricing/)
 - Capacitate și drepturi: [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544)
+- [Site-ul web de licențiere în volum Microsoft](https://www.microsoft.com/licensing/how-to-buy/how-to-buy)
+
+## <a name="try-customer-insights-and-get-started"></a>Încercați Customer Insights și începeți
+
+Începe o [încercare gratuită de Customer Insights](https://signup.microsoft.com/create-account/signup?SKU=036c2481-aa8a-47cd-ab43-324f0c157c2d&ali=1&RU=https:%2F%2Fhome.ci.ai.dynamics.com%2Fstart%2Ftrial&products=036c2481-aa8a-47cd-ab43-324f0c157c2d) astăzi pentru a testa aplicația cu propriile date despre clienți. [Aflați cum puteți accesa și explora rapid multe dintre caracteristicile cheie ale aplicației](trial-signup.md). 
+
+Naviga [resurse de învățare prezentate](https://dynamics.microsoft.com/ai/customer-insights/resources/) inclusiv rapoarte analiștilor, seminarii web la cerere și povești ale clienților.
+
+Aflați cum puteți construi o înțelegere mai profundă a clienților dvs. cu ajutorul nostru [ghid de început](get-started.md).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -2,6 +2,8 @@
   href: index.yml
 - name: Prezentare generală produs
   href: overview.md
+- name: Caracteristici noi și actualizate
+  href: whats-new-customer-insights.md
 - name: Catalog de instruire
   items:
     - name: Începerea
@@ -10,7 +12,7 @@
       href: /learn/modules/ingest-data-customer-insights/
     - name: Creați un profil de client unificat
       href: /learn/modules/unified-customer-profile/
-    - name: Lucrați cu informații despre public
+    - name: Lucrați cu Customer Insights
       href: /learn/modules/working-with-customer-insights/
     - name: Îmbogățiți datele și faceți predicții
       href: /learn/modules/enrich-data/
@@ -26,266 +28,260 @@
       href: trial-FAQ.md
 - name: Accesați-vă mediul
   href: 'https://home.ci.ai.dynamics.com/'
-- name: Detalii despre public
+- name: Începerea
   items:
-    - name: Centrul de ajutor
-      href: audience-insights/index.yml
-    - name: Prezentare generală a capacității
-      href: audience-insights/overview.md
-    - name: Caracteristici noi și actualizate
-      href: audience-insights/whats-new-audience-insights.md
-    - name: Începerea
+    - name: Ghid de inițiere rapidă
+      href: get-started.md
+    - name: Începeți cu o licență plătită
+      href: paid-license.md
+    - name: Creați un mediu nou
+      href: create-environment.md
+    - name: Explorați statisticile clienților
+      href: home.md
+    - name: Lucrați cu etichete și coloane
+      href: work-with-tags-columns.md
+    - name: Lucrul cu conturi de business
+      href: work-with-business-accounts.md
+    - name: Integrați cu Dynamics 365 Marketing
+      href: marketing-get-started.md
+- name: Surse de date
+  items:
+    - name: Prezentare generală surse de date
+      href: data-sources.md
+    - name: Adăugați surse de date prin Power Query conectori
+      href: connect-power-query.md
+    - name: Adăugați un folder Common Data Model ca o sursă de date
+      href: connect-common-data-model.md
+    - name: Adăugați data lake gestionat de Dataverse
+      href: connect-dataverse-managed-lake.md
+    - name: Adăugarea Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Îmbogățirea surselor de date
+      href: data-sources-enrichment.md
+    - name: Reîmprospătare incrementală pentru surse de date
+      href: incremental-refresh-data-sources.md
+    - name: Ingestie date în timp real
+      href: real-time-data-ingestion.md
+- name: Unificarea datelor
+  items:
+    - name: Prezentare generală a unificării datelor
+      href: data-unification.md
+    - name: Entități de hartă și atribute
+      href: map-entities.md
+    - name: Potrivire entități
+      href: match-entities.md
+    - name: Îmbinare entități
+      href: merge-entities.md
+- name: Îmbogățire date
+  items:
+    - name: Îmbogățiși profilele clientului
+      href: enrichment-hub.md
+    - name: Mărci și interese
+      href: enrichment-microsoft.md
+    - name: Adrese optimizate
+      href: enrichment-enhanced-addresses.md
+    - name: Date optimizate despre firmă
+      href: enrichment-enhanced-company-data.md
+    - name: Îmbogățiți cu Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Îmbogățiți-vă cu Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Îmbogăți cu HERE Technologies
+      href: enrichment-here.md
+    - name: Îmbogățire cu Leadspace
+      href: enrichment-leadspace.md
+    - name: Îmbogățiți-vă cu LiveRamp
+      href: enrichment-liveramp.md
+    - name: Îmbogățiți cu Experian
+      href: enrichment-experian.md
+    - name: Îmbogățiți cu Office 365 date
+      href: enrichment-office.md
+    - name: Îmbogățiți cu importul particularizat SFTP
+      href: enrichment-SFTP-custom-import.md
+- name: Profiluri unificate
+  items:
+    - name: Evaluare profile de client unificat
+      href: customer-profiles.md
+    - name: Filtrare profile de client unificat
+      href: search-filter-index.md
+    - name: Definiți activitățile clienților
+      href: activities.md
+- name: Segmente
+  items:
+    - name: Prezentare generală a segmentelor
+      href: segments.md
+    - name: Creare segmente
+      href: segment-builder.md
+    - name: Segmente sugerate bazate pe măsuri
+      href: suggested-segments.md
+    - name: Segmente sugerate bazate pe activitate
+      href: suggested-segments-activity.md
+    - name: Obțineți informații despre segmente
+      href: segment-insights.md
+    - name: Găsiți clienți similari
+      href: find-similar-customer-segments.md
+- name: Măsuri
+  items:
+    - name: Prezentare generală a măsurilor
+      href: measures.md
+    - name: Creați o măsură nouă
+      href: measure-builder.md
+    - name: Utilizați un șablon de măsură
+      href: measure-templates.md
+- name: Predicții
+  items:
+    - name: Preziceți date cu ajutorul AI
       items:
-        - name: Ghid de inițiere rapidă
-          href: audience-insights/get-started.md
-        - name: Începeți cu o licență plătită
-          href: paid-license.md
-        - name: Creați un mediu nou
-          href: audience-insights/create-environment.md
-        - name: Explorați detalii despre public
-          href: audience-insights/home.md
-        - name: Lucrați cu etichete și coloane
-          href: audience-insights/work-with-tags-columns.md
-        - name: Lucrul cu conturi de business
-          href: audience-insights/work-with-business-accounts.md
-    - name: Surse de date
+        - name: Predicție prezentare generală a modelelor
+          href: predictions-overview.md
+        - name: Preziceți valoarea ciclului de viață a clientului (CLV)
+          href: predict-customer-lifetime-value.md
+        - name: Preziceți recomandări de produse
+          href: predict-product-recommendation.md
+        - name: Previzionați retragerea abonamentului
+          href: predict-subscription-churn.md
+        - name: Previzionați retragere din tranzacții
+          href: predict-transactional-churn.md
+        - name: Analizați sentimentul în feedbackul clienților
+          href: sentiment-analysis.md
+        - name: Utilizați modele personalizate de la Azure Machine Learning
+          href: custom-models.md
+        - name: Completați datele parțial lipsă
+          href: predictions.md
+    - name: Ghiduri cu exemple
       items:
-        - name: Prezentare generală surse de date
-          href: audience-insights/data-sources.md
-        - name: Adăugați surse de date prin Power Query conectori
-          href: audience-insights/connect-power-query.md
-        - name: Adăugați un folder Common Data Model ca o sursă de date
-          href: audience-insights/connect-common-data-model.md
-        - name: Adăugați data lake gestionat de Dataverse
-          href: audience-insights/connect-dataverse-managed-lake.md
-        - name: Adăugarea Azure Synapse Analytics
-          href: audience-insights/connect-synapse.md
-        - name: Îmbogățirea surselor de date
-          href: audience-insights/data-sources-enrichment.md
-        - name: Reîmprospătare incrementală pentru surse de date
-          href: audience-insights/incremental-refresh-data-sources.md
-        - name: Ingestie date în timp real
-          href: audience-insights/real-time-data-ingestion.md
-    - name: Unificarea datelor
+        - name: Exemplu de ghid pentru predicție CLV
+          href: sample-guide-predict-clv.md
+        - name: Ghid eșantion de predicție a retragerii abonamentelor
+          href: sample-guide-predict-subscription-churn.md
+        - name: Eșantion de ghid pentru previziuni de retrageri de tranzacție
+          href: sample-guide-predict-transactional-churn.md
+        - name: Exemplu de ghid pentru recomandarea produsului predicție
+          href: sample-guide-predict-product-recommendation.md
+        - name: Experimente cu Azure Machine learning
+          href: azure-machine-learning-experiments.md
+    - name: Gestionați predicțiile
+      href: manage-predictions.md
+    - name: Crearea segmentelor pe baza predicțiilor
+      href: prediction-based-segment.md
+- name: Opțiuni export
+  items:
+    - name: Exporturi
       items:
-        - name: Prezentare generală a unificării datelor
-          href: audience-insights/data-unification.md
-        - name: Entități de hartă și atribute
-          href: audience-insights/map-entities.md
-        - name: Potrivire entități
-          href: audience-insights/match-entities.md
-        - name: Îmbinare entități
-          href: audience-insights/merge-entities.md
-    - name: Îmbogățire date
+        - name: Prezentare generală a exporturilor
+          href: export-destinations.md
+        - name: Campanie activă
+          href: export-active-campaign.md
+        - name: AdRoll
+          href: export-adroll.md
+        - name: Autopilot
+          href: export-autopilot.md
+        - name: Azure Blob Storage
+          href: export-azure-blob-storage.md
+        - name: Azure Data Lake Storage Gen2
+          href: export-azure-data-lake-storage-gen2.md
+        - name: Azure Synapse Analytics
+          href: export-azure-synapse-analytics.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
+        - name: Braze
+          href: export-braze.md
+        - name: Monitor de campanie
+          href: export-campaign-monitor.md
+        - name: Persoană de contact constantă
+          href: export-constant-contact.md
+        - name: DotDigital
+          href: export-dotdigital.md
+        - name: Dynamics 365 Marketing
+          href: export-dynamics365-marketing.md
+        - name: Dynamics 365 Sales
+          href: export-dynamics365-sales.md
+        - name: Manager de reclame Facebook
+          href: export-facebook.md
+        - name: Google Ads
+          href: export-google-ads.md
+        - name: Iterabil
+          href: export-iterable.md
+        - name: Klaviyo
+          href: export-klaviyo.md
+        - name: Anunțuri LinkedIn
+          href: export-linkedin-ads.md
+        - name: LiveRamp
+          href: export-liveramp.md
+        - name: Mailchimp
+          href: export-mailchimp.md
+        - name: Marketo
+          href: export-marketo.md
+        - name: Microsoft Advertising
+          href: export-microsoft-advertising.md
+        - name: Omnisend
+          href: export-omnisend.md
+        - name: RollWorks
+          href: export-rollworks.md
+        - name: Salesforce Marketing Cloud
+          href: export-salesforce.md
+        - name: SendGrid
+          href: export-sendgrid.md
+        - name: SendInBlue
+          href: export-sendinblue.md
+        - name: Snapchat
+          href: export-snapchat.md
+        - name: SFTP
+          href: export-sftp.md
+    - name: Alte utilizări
       items:
-        - name: Îmbogățiși profilele clientului
-          href: audience-insights/enrichment-hub.md
-        - name: Mărci și interese
-          href: audience-insights/enrichment-microsoft.md
-        - name: Adrese optimizate
-          href: audience-insights/enrichment-enhanced-addresses.md
-        - name: Date optimizate despre firmă
-          href: audience-insights/enrichment-enhanced-company-data.md
-        - name: Îmbogățiți cu Azure Maps
-          href: audience-insights/enrichment-azure-maps.md
-        - name: Îmbogăți cu HERE Technologies
-          href: audience-insights/enrichment-here.md
-        - name: Îmbogățire cu Leadspace
-          href: audience-insights/enrichment-leadspace.md
-        - name: Îmbogățiți-vă cu LiveRamp
-          href: audience-insights/enrichment-liveramp.md
-        - name: Îmbogățiți cu Experian
-          href: audience-insights/enrichment-experian.md
-        - name: Îmbogățiți cu Office 365 date
-          href: audience-insights/enrichment-office.md
-        - name: Îmbogățiți cu importul particularizat SFTP
-          href: audience-insights/enrichment-SFTP-custom-import.md
-    - name: Profiluri unificate
-      items:
-        - name: Evaluare profile de client unificat
-          href: audience-insights/customer-profiles.md
-        - name: Filtrare profile de client unificat
-          href: audience-insights/search-filter-index.md
-        - name: Definiți activitățile clienților
-          href: audience-insights/activities.md
-    - name: Segmente
-      items:
-        - name: Prezentare generală a segmentelor
-          href: audience-insights/segments.md
-        - name: Creare segmente
-          href: audience-insights/segment-builder.md
-        - name: Segmente sugerate bazate pe măsuri
-          href: audience-insights/suggested-segments.md
-        - name: Segmente sugerate bazate pe activitate
-          href: audience-insights/suggested-segments-activity.md
-        - name: Obțineți informații despre segmente
-          href: audience-insights/segment-insights.md
-        - name: Găsiți clienți similari
-          href: audience-insights/find-similar-customer-segments.md
-    - name: Măsuri
-      items:
-        - name: Prezentare generală a măsurilor
-          href: audience-insights/measures.md
-        - name: Creați o măsură nouă
-          href: audience-insights/measure-builder.md
-        - name: Utilizați un șablon de măsură
-          href: audience-insights/measure-templates.md
-    - name: Predicții
-      items:
-        - name: Preziceți date cu ajutorul AI
-          items:
-            - name: Predicție prezentare generală a modelelor
-              href: audience-insights/predictions-overview.md
-            - name: Preziceți valoarea ciclului de viață a clientului (CLV)
-              href: audience-insights/predict-customer-lifetime-value.md
-            - name: Preziceți recomandări de produse
-              href: audience-insights/predict-product-recommendation.md
-            - name: Previzionați retragerea abonamentului
-              href: audience-insights/predict-subscription-churn.md
-            - name: Previzionați retragere din tranzacții
-              href: audience-insights/predict-transactional-churn.md
-            - name: Analizați sentimentul în feedbackul clienților
-              href: audience-insights/sentiment-analysis.md
-            - name: Utilizați modele personalizate de la Azure Machine Learning
-              href: audience-insights/custom-models.md
-            - name: Completați datele parțial lipsă
-              href: audience-insights/predictions.md
-        - name: Ghiduri cu exemple
-          items:
-            - name: Exemplu de ghid pentru predicție CLV
-              href: audience-insights/sample-guide-predict-clv.md
-            - name: Ghid eșantion de predicție a retragerii abonamentelor
-              href: audience-insights/sample-guide-predict-subscription-churn.md
-            - name: Eșantion de ghid pentru previziuni de retrageri de tranzacție
-              href: audience-insights/sample-guide-predict-transactional-churn.md
-            - name: Exemplu de ghid pentru recomandarea produsului predicție
-              href: audience-insights/sample-guide-predict-product-recommendation.md
-            - name: Experimente cu Azure Machine learning
-              href: audience-insights/azure-machine-learning-experiments.md
-        - name: Gestionați predicțiile
-          href: audience-insights/manage-predictions.md
-        - name: Crearea segmentelor pe baza predicțiilor
-          href: audience-insights/prediction-based-segment.md
-    - name: Opțiuni export
-      items:
-        - name: Exporturi
-          items:
-            - name: Prezentare generală a exporturilor
-              href: audience-insights/export-destinations.md
-            - name: Campanie activă
-              href: audience-insights/export-active-campaign.md
-            - name: AdRoll
-              href: audience-insights/export-adroll.md
-            - name: Autopilot
-              href: audience-insights/export-autopilot.md
-            - name: Azure Blob Storage
-              href: audience-insights/export-azure-blob-storage.md
-            - name: Azure Data Lake Storage Gen2
-              href: audience-insights/export-azure-data-lake-storage-gen2.md
-            - name: Azure Synapse Analytics
-              href: audience-insights/export-azure-synapse-analytics.md
-            - name: Adobe Campaign Standard
-              href: audience-insights/export-adobe-campaign-standard.md
-            - name: Adobe Experience Platform
-              href: audience-insights/export-adobe-experience-platform.md
-            - name: Braze
-              href: audience-insights/export-braze.md
-            - name: Monitor de campanie
-              href: audience-insights/export-campaign-monitor.md
-            - name: Persoană de contact constantă
-              href: audience-insights/export-constant-contact.md
-            - name: DotDigital
-              href: audience-insights/export-dotdigital.md
-            - name: Dynamics 365 Marketing
-              href: audience-insights/export-dynamics365-marketing.md
-            - name: Dynamics 365 Sales
-              href: audience-insights/export-dynamics365-sales.md
-            - name: Manager de reclame Facebook
-              href: audience-insights/export-facebook.md
-            - name: Google Ads
-              href: audience-insights/export-google-ads.md
-            - name: Iterabil
-              href: audience-insights/export-iterable.md
-            - name: Klaviyo
-              href: audience-insights/export-klaviyo.md
-            - name: Anunțuri LinkedIn
-              href: audience-insights/export-linkedin-ads.md
-            - name: LiveRamp
-              href: audience-insights/export-liveramp.md
-            - name: Mailchimp
-              href: audience-insights/export-mailchimp.md
-            - name: Marketo
-              href: audience-insights/export-marketo.md
-            - name: Microsoft Advertising
-              href: audience-insights/export-microsoft-advertising.md
-            - name: Omnisend
-              href: audience-insights/export-omnisend.md
-            - name: RollWorks
-              href: audience-insights/export-rollworks.md
-            - name: Salesforce Marketing Cloud
-              href: audience-insights/export-salesforce.md
-            - name: SendGrid
-              href: audience-insights/export-sendgrid.md
-            - name: SendInBlue
-              href: audience-insights/export-sendinblue.md
-            - name: Snapchat
-              href: audience-insights/export-snapchat.md
-            - name: SFTP
-              href: audience-insights/export-sftp.md
-        - name: Alte utilizări
-          items:
-            - name: Program de completare Card client pentru Dynamics 365
-              href: audience-insights/customer-card-add-in.md
-            - name: Microsoft Teams (robot)
-              href: audience-insights/export-teams-bot.md
-            - name: Power Apps
-              href: audience-insights/export-power-apps.md
-            - name: Power Automate
-              href: audience-insights/export-power-automate.md
-            - name: Power BI
-              href: audience-insights/export-power-bi.md
-    - name: Entităţi
-      items:
-        - name: Înțelegeți entități
-          href: audience-insights/entities.md
-        - name: Analizați schemele de entități din Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Date Customer Insights în Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Construiți relații și entități conectate
-          href: audience-insights/relationships.md
-        - name: Definiți mapări semantice
-          href: audience-insights/semantic-mappings.md
-    - name: Administrare
-      items:
-        - name: Configurați configurarea sistemului
-          href: audience-insights/system.md
-        - name: Atribuiți permisiuni de utilizator
-          href: audience-insights/permissions.md
-        - name: Prezentare generală a conexiunilor
-          href: audience-insights/connections.md
-        - name: Gestionați mai multe medii
-          href: audience-insights/manage-environments.md
-        - name: Aduceți-vă propria Key Vault
-          href: audience-insights/use-azure-key-vault.md
-        - name: Conectați-vă la un cont de stocare folosind Service Principal
-          href: audience-insights/connect-service-principal.md
-        - name: Exportați jurnalele de diagnosticare
-          href: audience-insights/diagnostics.md
-        - name: Limite de serviciu
-          href: service-limits.md
-        - name: Drepturi și solicitări DSR
-          href: dsr-rights-requests.md
-    - name: API-uri
-      items:
-        - name: Analizați schemele de entități din Common Data Model
-          href: audience-insights/entity-schemas.md
-        - name: Date Customer Insights în Dataverse
-          href: audience-insights/customer-insights-dataverse.md
-        - name: Lucrați cu API-uri
-          href: audience-insights/apis.md
-        - name: Referințe API
-          href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+        - name: Program de completare Card client pentru Dynamics 365
+          href: customer-card-add-in.md
+        - name: Microsoft Teams (robot)
+          href: export-teams-bot.md
+        - name: Power Apps
+          href: export-power-apps.md
+        - name: Power Automate
+          href: export-power-automate.md
+        - name: Power BI
+          href: export-power-bi.md
+- name: Entităţi
+  items:
+    - name: Înțelegeți entități
+      href: entities.md
+    - name: Analizați schemele de entități din Common Data Model
+      href: entity-schemas.md
+    - name: Date Customer Insights în Dataverse
+      href: customer-insights-dataverse.md
+    - name: Construiți relații și entități conectate
+      href: relationships.md
+    - name: Definiți mapări semantice
+      href: semantic-mappings.md
+- name: Administrare
+  items:
+    - name: Configurați configurarea sistemului
+      href: system.md
+    - name: Configurați setările de securitate
+      href: security-overview.md
+    - name: Atribuiți permisiuni de utilizator
+      href: permissions.md
+    - name: Prezentare generală a conexiunilor
+      href: connections.md
+    - name: Gestionați mai multe medii
+      href: manage-environments.md
+    - name: Aduceți-vă propria Key Vault
+      href: use-azure-key-vault.md
+    - name: Conectați-vă la un cont de stocare folosind Service Principal
+      href: connect-service-principal.md
+    - name: Exportați jurnalele de diagnosticare
+      href: diagnostics.md
+    - name: Limite de serviciu
+      href: service-limits.md
+    - name: Drepturi și solicitări DSR
+      href: dsr-rights-requests.md
+- name: API-uri
+  items:
+    - name: Lucrați cu API-uri
+      href: apis.md
+    - name: Referințe API
+      href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
 - name: Gestionarea consimțământului (previzualizare)
   items:
     - name: Centrul de ajutor
@@ -306,21 +302,19 @@
           href: consent-management/set-consent-rules.md
     - name: Gestionați datele consimțământului
       items:
-        - name: Activați regulile de consimțământ în statisticile privind publicul
-          href: audience-insights/activate-consent.md
-        - name: Gestionați regulile implicite de consimțământ în segmentele de statistici privind publicul
-          href: audience-insights/change-default-consent-rules.md
+        - name: Activați regulile de consimțământ în Customer Insights
+          href: activate-consent.md
+        - name: Gestionați regulile implicite de consimțământ în segmentele Customer Insights
+          href: change-default-consent-rules.md
     - name: Gestionați setările și utilizatorii
       items:
         - name: Configurați setările sistemului
           href: consent-management/system-settings.md
         - name: Gestionați utilizatorii și permisiunile
           href: consent-management/manage-users.md
-    - name: Utilizați datele de consimțământ
+    - name: Utilizați datele consimțământului
       items:
         - name: Creați predicții cu date de consimțământ
           href: consent-management/predictions-consent-data.md
-- name: Detalii despre angajamente (versiune preliminară)
-  href: engagement-insights/overview.md
 - name: Obțineți asistență
   href: /power-platform/admin/get-help-support

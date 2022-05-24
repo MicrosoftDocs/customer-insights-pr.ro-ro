@@ -13,16 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 2dfa6c643cbe9a8531a085d8ce01b0f64776476f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643091"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755651"
 ---
 # <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
-
-
 
 Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare a cardului pentru clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați câmpurile de profil ale clienților, informații și cronologia activității. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată.
 
@@ -31,10 +29,10 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
-- Pentru ca datele dvs. Dynamics 365 să fie mapate la profilurile clienților Customer Insights, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, trebuie să vă asigurați că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în pasul de hartă a procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes). 
+- Pentru ca datele dvs. Dynamics 365 să fie mapate la profilurile clienților Customer Insights, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, trebuie să vă asigurați că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în pasul de hartă a procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Toți utilizatorii Dynamics 365 ai suplimentului pentru cardul de client trebuie să fie [adăugat ca utilizatori](permissions.md) în Customer Insights pentru a vedea datele.
 - [Capacități de căutare și filtrare configurate](search-filter-index.md) în Customer Insights sunt necesare pentru ca căutarea datelor să funcționeze.
-- Fiecare control de supliment se bazează pe date specifice din Customer Insights. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurarea suplimentului vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
+- Fiecare control de supliment se bazează pe date specifice din Customer Insights. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurația add-in vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
   - **Măsurați controlul**: Necesită [măsuri configurate](measures.md) de tipul atributelor clientului.
   - **Controlul inteligenței** : Necesită date generate folosind [predicții sau modele personalizate](predictions-overview.md).
   - **Controlul detaliilor clientului**: Toate câmpurile din profil sunt disponibile în profilul de client unificat.
@@ -128,20 +126,20 @@ Programul de completare pentru Customer Card nu se actualizează automat. Pentru
 
 **Problemă:**
 
-Chiar și cu câmpuri de ID configurate corect, controalele nu pot găsi date pentru niciun client.  
+Chiar și cu câmpurile de ID configurate corect, controalele nu pot găsi date pentru niciun client.  
 
 **Rezolvare:**
 
-1. Asigurați-vă că ați configurat suplimentul pentru card conform instrucțiunilor: [Configurați suplimentul pentru cardul de client](#configure-the-customer-card-add-in) 
+1. Asigurați-vă că ați configurat suplimentul pentru card conform instrucțiunilor: [Configurați suplimentul pentru cardul de client](#configure-the-customer-card-add-in)
 
-1. Examinați configurația pentru absorbția datelor. Editați sursă de date pentru sistemul Dynamics 365 care conține GUID-ul ID-ului de contact. Dacă ID-ul contactului GUID este afișat cu caractere majuscule în Power Query editor, încercați următoarele: 
+1. Examinați configurația pentru absorbția datelor. Editați sursă de date pentru sistemul Dynamics 365 care conține ID-ul de contact GUID. Dacă ID-ul contactului GUID este afișat cu caractere majuscule în Power Query editor, încercați următorii pași:
     1. Editați sursă de date pentru a deschide sursă de date în Power Query Editor.
     1. Selectați coloana ID de contact.
     1. Selectați **Transforma** în bara de antet pentru a vedea acțiunile disponibile.
     1. Selectați **litere mici**. Validați dacă GUID-urile din tabel sunt acum litere mici.
     1. Salvați sursa de date.
-    1. Rulați procesele de asimilare, unificare și în aval de date pentru a propaga modificările la GUID. 
+    1. Rulați procesele de asimilare, unificare și în aval de date pentru a propaga modificările la GUID.
 
-După finalizarea reîmprospătării complete, comenzile Add-in pentru cardul client ar trebui să arate datele așteptate. 
+După ce sistemul a finalizat reîmprospătarea completă, comenzile Add-in pentru cardul de client ar trebui să arate datele așteptate.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

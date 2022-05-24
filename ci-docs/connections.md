@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: 10704e287960c1a9171031135ff8f78a45b6e965
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d85de28a12565e1a2e36278d0e8b74f6de286b20
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643334"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755324"
 ---
 # <a name="connections-preview-overview"></a>Prezentare generală a conexiunilor (previzualizare)
 
@@ -24,15 +24,15 @@ Conexiunile sunt cheia pentru a permite partajarea datelor către și de la Cust
 
 Salt la **Administrator** > **Conexiuni** pentru a crea și vizualiza conexiuni.
 
-Fila **Conexiuni** vă arată toate conexiunile active. Lista arată un rând pentru fiecare conexiune. 
+Fila **Conexiuni** vă arată toate conexiunile active. Lista arată un rând pentru fiecare conexiune.
 
 Obțineți o prezentare rapidă, o descriere și aflați ce puteți face cu fiecare opțiune de extensibilitate de pe fila **Descoperire**.
 
-### <a name="exports"></a>Exporturi
+## <a name="exports"></a>Exporturi
 
 Numai administratorii pot configura conexiuni noi, dar pot acorda acces contribuitorilor pentru a utiliza conexiunile existente. Administratorii controlează unde pot merge datele, contribuitorii definesc sarcina utilă și frecvența potrivită nevoilor lor. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](#allow-contributors-to-use-a-connection-for-exports).
 
-### <a name="enrichments"></a>Îmbogățiri
+## <a name="enrichments"></a>Îmbogățiri
 
 Numai administratorii pot configura conexiuni noi, dar conexiunile create sunt întotdeauna disponibile atât pentru administratori, cât și pentru contribuitori. Administratorii gestionează acreditările și își dau consimțământul transferurilor de date. Conexiunile pot fi apoi utilizate pentru îmbogățiri atât de administratori, cât și de contribuitori.
 
@@ -46,7 +46,7 @@ Pentru a adăuga conexiuni, trebuie să aveți [permisiuni de administrator](per
 
 1. Selectați **Adăugare conexiune** pentru a crea o nouă conexiune. Alegeți din meniul derulant ce tip de conexiune doriți să creați.
 
-1. În panoul **Configurarea conexiunii**, furnizați detaliile necesare. 
+1. În panoul **Configurarea conexiunii**, furnizați detaliile necesare.
    1. **Numele afișat** și tipul conexiunii descriu o conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta acestei conexiuni.
    1. Câmpurile exacte depind de serviciul la care vă conectați. Puteți afla detalii despre un anumit tip de conexiune din articolul despre serviciul țintă.
    1. Dacă [vă utilizați propria Key Vault](use-azure-key-vault.md) pentru a stoca secrete, activați **Utilizați Kay Vault** și alegeți secretul din listă.
@@ -59,7 +59,7 @@ Puteți selecta, de asemenea **Configurare** pe o dală de pe fila **Descoperire
 
 Când configurați sau editați o conexiune de export, alegeți căror utilizatori le este permis să utilizeze această conexiune specifică pentru a defini [exporturi](export-destinations.md). În mod implicit, o conexiune este disponibilă pentru utilizatorii cu rol de administrator. Puteți modifica această setare în **Alegeți cine poate utiliza această conexiune** și puteți permite utilizatorilor cu rol de contribuitor să utilizeze această conexiune.
 
-- Contribuitorii nu vor putea vizualiza sau edita conexiunea. Vor vedea numele afișat și tipul acestuia numai atunci când creați un export.
+- Contribuitorii nu vor putea vizualiza sau edita conexiunea. Ei vor vedea numai numele afișat și tipul acestuia atunci când creează un export.
 - Prin partajarea unei conexiuni, permiteți colaboratorilor să utilizeze o conexiune. Contribuitorii vor vedea conexiuni partajate atunci când configurează exporturile. Ei pot gestiona fiecare export care utilizează această conexiune specifică.
 - Puteți modifica această setare păstrând în același timp exporturile care au fost deja definite de contribuitori.
 
@@ -77,7 +77,7 @@ Când configurați sau editați o conexiune de export, alegeți căror utilizato
 
 ## <a name="remove-a-connection"></a>Eliminați o conexiune
 
-Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau exporturi, trebuie mai întâi să le detașați sau să le eliminați. Dialogul de eliminare vă va ghida către îmbogățirea sau exporturile relevante. 
+Dacă conexiunea pe care o eliminați este folosită de îmbogățiri sau exporturi, mai întâi trebuie să le detașați sau să le eliminați. Dialogul de eliminare vă va ghida către îmbogățirea sau exporturile relevante.
 
 Îmbogățirile și exporturile detașate devin inactive. Le reactivați adăugându-le o altă conexiune pe pagina [Îmbogățiri](enrichment-hub.md) sau [Exporturi](export-destinations.md).
 
@@ -91,7 +91,7 @@ Dacă conexiunea pe care o eliminați este utilizată de îmbogățiri sau expor
 
    1. Dacă există îmbogățiri sau exporturi care utilizează această conexiune, selectați butonul pentru a vedea ce folosește conexiunea.
       - **Exporturi:** Puteți alege să eliminați sau să deconectați exporturile pentru a putea elimina conexiunea. Pentru a deconecta un export, administratorii pot utiliza acțiunea **Deconectat**. Această acțiune este disponibilă pentru exporturile individuale și multiple selectate. Prin deconectare, păstrați configurația de export, dar nu va fi rulată până când nu i se adaugă o altă conexiune.
-      - **Îmbogățiri:** Puteți alege să eliminați sau să dezactivați îmbogățirile pentru a putea elimina conexiunea. 
+      - **Îmbogățiri:** Puteți alege să eliminați sau să dezactivați îmbogățirile pentru a putea elimina conexiunea.
    1. Odată ce conexiunea nu mai are dependențe, reveniți la **Administrator** > **Conexiuni** și încercați să eliminați din nou conexiunea.
 
 1. Pentru a confirma ștergerea selectați **Ștergere**.

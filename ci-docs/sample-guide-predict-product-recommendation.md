@@ -1,7 +1,7 @@
 ---
 title: Eșantion de ghid de predicție pentru recomandarea produsului
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a recomandării de produs.
-ms.date: 02/10/2021
+ms.date: 05/16/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 1115bab13bdca4a308a8d9eb5a1dc270801d16be
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: cc72cce15fa0c9e92dbf202c803e99514c9ce2b1
+ms.sourcegitcommit: 82f417cfb0a16600e9f552d7a21d598cc8f5a267
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643586"
+ms.lasthandoff: 05/16/2022
+ms.locfileid: "8762701"
 ---
 # <a name="product-recommendation-prediction-sample-guide"></a>Eșantion de ghid de predicție pentru recomandarea produsului
 
@@ -40,7 +40,7 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. Creați un sursă de date numită **eCommerce**, alegeți opțiunea de import și selectați conectorul **Text/CSV**.
 
-1. Introduceți adresa de URL pentru contactele de comerț electronic https://aka.ms/ciadclasscontacts.
+1. Introduceți adresa URL pentru persoanele de contact din comerțul electronic: [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
 
 1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
 
@@ -50,15 +50,15 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformați data nașterii în dată.":::
 
-5. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
+1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
 
-6. **Salvați** sursa de date.
+1. **Salvați** sursa de date.
 
 ### <a name="ingest-online-purchase-data"></a>Ingerați date de cumpărare online
 
 1. Adăugați un alt set de date la aceeași sursă de date **eCommerce**. Alegeți din nou conectorul **Text/CSV**.
 
-1. Introduceți adresa URL pentru datele de **Achiziții online** https://aka.ms/ciadclassonline.
+1. Introduceți adresa URL pentru **Achiziții online** date [https://aka.ms/ciadclassonline](https://aka.ms/ciadclassonline).
 
 1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
 
@@ -70,12 +70,11 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. **Salvați** sursa de date.
 
-
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerați datele clienților din schema de loialitate
 
 1. Creați o sursă de date numită **LoyaltyScheme**, alegeți opțiunea de import și selectați conectorul **Text/CSV**.
 
-1. Introduceți adresa de URL pentru contactele de comerț electronic https://aka.ms/ciadclasscustomerloyalty.
+1. Introduceți adresa URL pentru persoanele de contact de comerț electronic [https://aka.ms/ciadclasscustomerloyalty](https://aka.ms/ciadclasscustomerloyalty).
 
 1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
 
@@ -90,64 +89,11 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de unificare a datelor pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
-
-### <a name="map"></a>Hartă
-
-1. După ingerarea datelor, mapați contactele de la datele de comerț electronic și de loialitate la tipuri de date obișnuite. Mergeți la **Date** > **Unificare** > **Mapare**.
-
-2. Selectați entitățile care reprezintă profilul clientului - **eCommerceContacts** și **loyCustomers**.
-
-   ![unificați sursele de date privind comerțul electronic și loialitatea.](media/unify-ecommerce-loyalty.png)
-
-3. Selectați **ContactId** ca cheie primară pentru **eCommerceContacts** și **LoyaltyID** ca cheie primară pentru **loyCustomers**.
-
-   ![Unificați LoyaltyId ca cheie principală.](media/unify-loyaltyid.png)
-
-### <a name="match"></a>Corespondență
-
-1. Accesați fila **Potrivire** și selectați **Setare ordine**.
-
-2. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
-
-3. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
-
-   ![Potriviți unificarea de comerț electronic și loialitate.](media/unify-match-order.png)
-
-4. Selectați **Creare regulă nouă**
-
-5. Adăugați prima condiție folosind FullName.
-
-   - Pentru eCommerceContacts selectați **FullName** în meniul derulant.
-   - Pentru loyCustomers selectați **FullName** în lista derulantă.
-   - Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
-   - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-6. Introduceți numele **FullName, Email** pentru noua regulă.
-
-   - Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   - Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
-   - Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă.
-   - Lăsați Normalizarea necompletată.
-   - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-   ![Unificați regula de potrivire pentru nume și e-mail.](media/unify-match-rule.png)
-
-7. Selectați **Salvare** și **Rulare**.
-
-### <a name="merge"></a>Îmbinare
-
-1. Accesați fila **Îmbinare**.
-
-1. Pe **ContactId** pentru entitatea **loyCustomers**, schimbați numele afișat în **ContactIdLOYALTY** pentru a-l diferenția de celelalte ID-uri ingerate.
-
-   ![redenumiți contactid din ID-ul de loialitate.](media/unify-merge-contactid.png)
-
-1. Selectați **Salvați** și **Rulați** pentru a porni procesul de îmbinare.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-product-recommendation-prediction"></a>Sarcina 3 - Configurați recomandarea produsului predicție
 
-Odată stabilite profilurile de clienți unificate, putem rula acum predicția de retragere a abonamentelor.
+Cu profilurile de clienți unificate, acum putem rula recomandarea de produs predicție.
 
 1. Accesați **Informații** > **Predicție** alegeți **Recomandarea produsului**.
 
@@ -162,27 +108,36 @@ Odată stabilite profilurile de clienți unificate, putem rula acum predicția d
    - **Se așteaptă repetarea achizițiilor**: Selectați **Da** pentru a indica faptul că doriți să includeți produse în recomandarea pe care clienții dvs. au achiziționat-o anterior.
 
    - **Fereastră de privire retrospectivă:** Selectați cel puțin **365 de zile**. Această setare definește cât de departe va privi modelul înapoi spre activitatea clientului pentru a o utiliza drept intrare pentru recomandările sale.
-   
+
    :::image type="content" source="media/product-recommendation-model-preferences.png" alt-text="Preferințe de model pentru modelul de recomandare produs.":::
 
-1. Selectați **Date necesare** și selectați **Adăugare date** pentru istoricul achizițiilor.
+1. În **Adăugați datele necesare** pas, selectați **Adăugați date**.
 
-1. Adăugați entitatea **eCommercePurchases : eCommerce** și mapați câmpurile din eCommerce la câmpurile corespunzătoare cerute de model.
+1. În **Adăugați date** panoul, alegeți **SalesOrderLine** ca entitate din istoricul achizițiilor. În acest moment, probabil că nu este încă configurat. Deschideți linkul în panou pentru a crea activitatea cu următorii pași:
+   1. Introduceți un **Numele activității** și alegeți *eCommercePurchases:eCommerce* la fel de **Entitate de activitate**. The **Cheia principala** este *PurchaseId*.
+   1. Definiți și denumiți relația cu *eCommerceContacts: entitate de comerț electronic* și alegeți **ContactId** ca cheie străină.
+   1. Pentru unificarea activității, setați **Activitatea evenimentului** la fel de *Pretul total* și Timestamp la *CumpăratLa*. Puteți specifica mai multe câmpuri așa cum este descris în [Activități ale clienților](activities.md).
+   1. Pentru **Tip de activitate**, alege *SalesOrderLine*. Harta urmatoarele campuri de activitate:
+      - ID-ul liniei de comandă: PurchaseId
+      - ID comandă: PurchaseId
+      - Datele comenzii: PurchasedOn
+      - ID produs: ProductId
+      - Suma: TotalPrice
+   1. Examinați și finalizați activitatea înainte de a reveni la configurația modelului.
 
-1. Conectați entitatea **eCommercePurchases : eCommerce** cu **eCommerceContacts: eCommerce**.
+1. Înapoi în **Selectați activități** pas, alegeți activitatea nou creată în **Activități** secțiune. Selectați **Următorul** iar maparea atributelor este deja completată. Selectați **salva**.
 
-   ![Conectați entitățile eCommerce.](media/model-purchase-join.png)
+1. În acest exemplu de ghid, sărim peste **Adăugați informații despre produs** și **Filtre de produs** setat deoarece nu avem date despre informații despre produs.
 
-1. Selectați **Următorul** pentru a seta planificarea modelului.
+1. În **Actualizări de date** pas, setați programul modelului.
 
    Modelul trebuie să se antreneze în mod regulat pentru a învăța noi modele atunci când sunt ingerate date noi. Pentru acest exemplu, selectați **Lunar**.
 
-1. După examinarea tuturor detaliilor, selectați **Salvați și rulați**.
-
+1. După examinarea tuturor detaliilor, selectați **Salvați și rulați**. Va dura câteva minute pentru a rula modelul prima dată.
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Sarcina 4 - Examinați rezultatele modelului și explicațiile
 
-Lăsați modelul să finalizeze pregătirea și notarea datelor. Acum puteți revizui explicațiile modelului de recomandare a produsului. Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Lăsați modelul să finalizeze pregătirea și notarea datelor. Acum puteți revizui explicațiile modelului de recomandare a produsului. Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-purchased-products"></a>Activitatea 5 - Creați un segment de produse achiziționate
 
@@ -190,21 +145,19 @@ Rularea modelului de producție creează o nouă entitate pe care o puteți vede
 
 Puteți crea un segment nou pe baza entității create de model.
 
-1. Mergeți la **Segmente**. Selectați **Nou** și alegeți **Creați din** > **Informații**.
+1. Mergeți la **Segmente**. Selectați **Nou** și alegeți **Creați din Inteligență**.
 
    ![Crearea unui segment cu rezultatul modelului.](media/segment-intelligence.png)
 
 1. Selectați punctul final **OOBProductRecommendationModelPrediction** și definiți segmentul:
 
    - Câmp: ID produs
-   - Operator: valoare
    - Valoare: selectați primele trei ID-uri de produs
 
    :::image type="content" source="media/product-recommendation-quick-segment.png" alt-text="Creați un segment din rezultatele modelului.":::
 
-Acum aveți un segment actualizat dinamic, care identifică clienții care sunt mai dispuși să achiziționeze cele mai recomandate trei produse 
+Acum aveți un segment care este actualizat dinamic, care identifică clienții care ar putea fi interesați să achiziționeze cele mai recomandate trei produse.
 
 Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

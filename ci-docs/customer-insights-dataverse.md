@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 85995cbd7f797810bfb6ecdc8a24d56542f0b5a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1e629cd218b104b115f74f59a53a14e9d60fcc8a
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643081"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741380"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
@@ -31,7 +31,7 @@ Administratorii pot configura Customer Insights pentru [utilizați unul existent
 Dacă nu doriți să utilizați unul existent Dataverse mediu, sistemul creează un nou mediu pentru datele Customer Insights din chiriașul dvs. 
 
 > [!NOTE]
-> Dacă organizațiile dvs. utilizează deja Dataverse în chiriașul lor, este important să ne amintim că [Dataverse crearea mediului este controlată de un administrator](/power-platform/admin/control-environment-creation) . De exemplu, dacă configurați un nou mediu Customer Insights cu contul dvs. de organizație și administratorul a dezactivat crearea de Dataverse medii de încercare pentru toată lumea, cu excepția administratorilor, nu puteți crea un mediu de încercare nou.
+> Dacă organizațiile dvs. utilizează deja Dataverse în chiriașul lor, este important să ne amintim asta [Dataverse crearea mediului este controlată de un administrator](/power-platform/admin/control-environment-creation) . De exemplu, dacă configurați un nou mediu Customer Insights cu contul dvs. de organizație și administratorul a dezactivat crearea de Dataverse medii de încercare pentru toată lumea, cu excepția administratorilor, nu puteți crea un mediu de încercare nou.
 > 
 > Mediile de încercare Dataverse create în Customer Insights au 3 GB de spațiu de stocare, care nu va conta pentru capacitatea totală autorizată pentru entitatea găzduită. Abonamentele plătite primesc autorizare Dataverse de 15 GB pentru baza de date și 20 GB pentru stocarea fișierelor.
 
@@ -54,7 +54,7 @@ Unele entități de ieșire din Customer Insights sunt disponibile ca tabele în
 
 ### <a name="customerprofile"></a>Profil client
 
-Acest tabel conține profilul de client unificat de la Customer Insights. Schema pentru un profil de client unificat depinde de entitățile și atributele utilizate în procesul de îmbinare. O schemă de profil client conține de obicei un subset de atribute din [Definiția Common Data Model a CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Acest tabel conține profilul de client unificat de la Customer Insights. Schema pentru un profil de client unificat depinde de entitățile și atributele utilizate în procesul de unificare a datelor. O schemă de profil client conține de obicei un subset de atribute din [Definiția Common Data Model a CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
 
 ### <a name="alternatekey"></a>AlternateKey
 

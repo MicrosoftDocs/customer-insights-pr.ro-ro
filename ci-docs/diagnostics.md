@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 18fc072d129be6b4fc5470b1057f592dc2638216
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643032"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755277"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
 
@@ -27,8 +27,8 @@ Customer Insights trimite următoarele jurnale de evenimente:
 - **Evenimente de audit**
   - **APIEvent** - permite urmărirea modificărilor efectuate prin intermediul Dynamics 365 Customer Insights UI.
 - **Evenimente operaționale**
-  - **WorkflowEvent** - Fluxul de lucru permite configurarea [Surse de date](data-sources.md),[unifica](data-unification.md) și [îmbogăţi](enrichment-hub.md) și, în sfârșit [export](export-destinations.md) date în alte sisteme. Toți acești pași pot fi făcuți individual (de exemplu, declanșează un singur export) sau orchestrați (de exemplu, reîmprospătarea datelor din surse de date care declanșează procesul de unificare care va aduce îmbogățiri suplimentare și, odată terminat, exportul datelor într-un alt sistem). Pentru mai multe detalii vezi [WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - toate apelurile API către instanța clienților Dynamics 365 Customer Insights. Pentru mai multe detalii vezi [Schema APIEvent](#api-event-schema).
+  - **WorkflowEvent** - Fluxul de lucru vă permite să configurați [Surse de date](data-sources.md),[unifica](data-unification.md),[îmbogăţi](enrichment-hub.md), și, în sfârșit [export](export-destinations.md) date în alte sisteme. Toți acești pași pot fi făcuți individual (de exemplu, declanșați un singur export). De asemenea, poate rula orchestrat (de exemplu, reîmprospătarea datelor din surse de date care declanșează procesul de unificare, care va aduce îmbogățiri și, odată terminat, exporta datele într-un alt sistem). Pentru mai multe informații, consultați [WorkflowEvent Schema](#workflow-event-schema).
+  - **APIEvent** - toate apelurile API către instanța clienților Dynamics 365 Customer Insights. Pentru mai multe informații, consultați [Schema APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configurați setările de diagnosticare
 
@@ -55,7 +55,7 @@ Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite ur
 
 1. Alege **Chiriaş** a abonamentului Azure cu resursa de destinație și selectați **Autentificare**.
 
-1. Selectează **Tipul de resursă** (Cont de stocare, Hub de evenimente sau analize de jurnal).
+1. Selectează **Tipul de resursă** (Cont de stocare, centru de evenimente sau analize de jurnal).
 
 1. Selectează **Abonament** pentru resursa de destinație.
 
@@ -161,7 +161,7 @@ The`identity` Obiectul JSON are următoarea structură
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Rol atribuit utilizatorului sau aplicației. Pentru mai multe informații, vezi [permisiunile utilizatorului](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Roluri necesare pentru a efectua operația. `Admin` rolului i se permite să facă toate operațiunile.                                                    |
-| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și Azure Active Directory configurație. |
+| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și de Azure Active Directory configurație. |
 
 #### <a name="api-properties-schema"></a>Schema proprietăților API
 
@@ -182,7 +182,7 @@ The`identity` Obiectul JSON are următoarea structură
 
 ### <a name="workflow-event-schema"></a>Schema evenimentelor fluxului de lucru
 
-Fluxul de lucru conține mai mulți pași. [Ingerați surse de date](data-sources.md),[unifica](data-unification.md),[îmbogăţi](enrichment-hub.md), și [export](export-destinations.md) date. Toți acești pași pot rula individual sau orchestrați cu următoarele procese. 
+Fluxul de lucru conține mai mulți pași. [Ingerați surse de date](data-sources.md),[unifica](data-unification.md),[îmbogăţi](enrichment-hub.md), și [export](export-destinations.md) date. Toți acești pași pot rula individual sau orchestrați cu următoarele procese.
 
 #### <a name="operation-types"></a>Tipuri de operații
 
@@ -215,7 +215,7 @@ Fluxul de lucru conține mai mulți pași. [Ingerați surse de date](data-source
 | `time`          | Marcaj temporal | Obligatoriu          | Marca temporală a evenimentului (UTC).                                                                                                                                 | `2020-09-08T09:48:14.8050869Z`                                                                                                                                           |
 | `resourceId`    | Șir    | Obligatoriu          | ResourceId al instanței care a emis evenimentul.                                                                                                            | `/SUBSCRIPTIONS/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX/RESOURCEGROUPS/<RESOURCEGROUPNAME>/`<br>`PROVIDERS/MICROSOFT.D365CUSTOMERINSIGHTS/`<br>`INSTANCES/XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXX` |
 | `operationName` | Șir    | Obligatoriu          | Numele operațiunii reprezentate de acest eveniment. `{OperationType}.[WorkFlow|Task][Started|Completed]`. Vedea [Tipuri de operații](#operation-types) pentru trimitere. | `Segmentation.WorkflowStarted`,<br> `Segmentation.TaskStarted`, <br> `Segmentation.TaskCompleted`, <br> `Segmentation.WorkflowCompleted`                                 |
-| `category`      | Șir    | Obligatoriu          | Categoria de jurnal a evenimentului. Mereu`Operational` pentru evenimente Workflow                                                                                           | `Operational`                                                                                                                                                            | 
+| `category`      | Șir    | Obligatoriu          | Categoria de jurnal a evenimentului. Mereu`Operational` pentru evenimente Workflow                                                                                           | `Operational`                                                                                                                                                            |
 | `resultType`    | Șir    | Obligatoriu          | Starea evenimentului. `Running`,`Skipped`,`Successful`,`Failure`                                                                                            |                                                                                                                                                                          |
 | `durationMs`    | Long      | Opțional          | Durata operațiunii în milisecunde.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | Șir    | Opțional          | Obiect JSON cu mai multe proprietăți pentru categoria particulară de evenimente.                                                                                        | Vezi subsecțiunea [Proprietăți flux de lucru](#workflow-properties-schema)                                                                                                       |

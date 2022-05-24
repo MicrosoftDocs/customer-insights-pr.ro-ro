@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 42095f369c47553e5ddf5fada54e559202c943a9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643433"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757401"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportați lista segmentelor și alte date către Stocare de bloburi Azure (previzualizare)
 
@@ -44,7 +44,7 @@ Stocați datele Customer Insights într-o stocare de bloburi sau utilizați-le p
 Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
 
 > [!IMPORTANT]
-> Dacă ați activat setarea de ștergere soft pentru contul Azure Blob Storage, exporturile nu vor reuși. Dezactivați ștergerea soft pentru a exporta date în bloburi. Pentru mai multe informații, consultați [Activați ștergerea soft blob](/azure/storage/blobs/soft-delete-blob-enable.md)
+> Dacă ați activat setarea de ștergere soft pentru contul Azure Blob Storage, exporturile nu vor reuși. Dezactivați ștergerea soft pentru a exporta date în bloburi. Pentru mai multe informații, consultați [Activați ștergerea soft blob](/azure/storage/blobs/soft-delete-blob-enable)
 
 1. Faceți salt la **Date** > **Exporturi**.
 

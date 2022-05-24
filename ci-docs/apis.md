@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: ecc8bb3dbec1d4583c4bf2a58058145343945299
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643271"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755465"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -25,7 +25,7 @@ Dynamics 365 Customer Insights furnizează API-uri pentru a vă crea propriile a
 > [!IMPORTANT]
 > Detaliile acestor API-uri sunt listate în [Referința de API-uri Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Acestea includ informații suplimentare despre operațiuni, parametri și răspunsuri.
 
-Acest articol descrie cum să accesați API-urile Customer Insights, să creați o înregistrare a aplicației Azure și să începeți cu bibliotecile client disponibile.
+Acest articol descrie cum să accesați API-urile Customer Insights, să creați o înregistrare a aplicației Azure și să începeți cu bibliotecile client.
 
 ## <a name="get-started-trying-the-customer-insights-apis"></a>Începeți să încercați API-urile Customer Insights
 
@@ -83,7 +83,7 @@ Puteți utiliza ID-ul aplicației/clientului pentru această înregistrare a apl
 
 Pentru mai multe informații despre MSAL, consultați [Prezentare generală a bibliotecii de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview).
 
-Pentru mai multe informații despre înregistrarea aplicațiilor în Azure, consultați [Înregistrați o aplicație](/azure/active-directory/develop/quickstart-register-app.md#register-an-application).
+Pentru mai multe informații despre înregistrarea aplicațiilor în Azure, consultați [Înregistrați o aplicație](/graph/auth-register-app-v2).
 
 Pentru informații despre utilizarea API-urilor în bibliotecile noastre client, consultați [Biblioteci client Customer Insights](#customer-insights-client-libraries).
 
@@ -113,6 +113,10 @@ Pentru informații despre utilizarea API-urilor în bibliotecile noastre client,
 
 1. Căutați numele înregistrării aplicației dvs., selectați-l din rezultatele căutării și selectați **Salvare**.
 
+## <a name="sample-queries"></a>Exemple de interogări
+
+Am compilat o listă scurtă de exemple de interogări OData pentru a lucra cu API-urile: [Exemple de interogări OData](odata-examples.md).
+
 ## <a name="customer-insights-client-libraries"></a>Biblioteci client Customer Insights
 
 Această secțiune vă ajută să începeți să utilizați bibliotecile client disponibile pentru API-urile Customer Insights. Toate codurile sursă ale bibliotecii și exemplele de aplicații pot fi găsite pe [pagina GitHub Customer Insights](https://github.com/microsoft/Dynamics365-CustomerInsights-Client-Libraries). 
@@ -137,7 +141,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
 
 1. Folosiți [Biblioteca de autentificare Microsoft (MSAL)](/azure/active-directory/develop/msal-overview) pentru a obține un `AccessToken` folosind [înregistrarea aplicației Azure](#create-a-new-app-registration-in-the-azure-portal) existentă.
 
-1. După autentificarea și achiziția cu succes a unui token, construiți unul nou sau utilizați unul existent`HttpClient` cu suplimentar **DefaultRequestHeaders „Autorizare”** setat la **„Jeton de acces” purtător** și **Ocp-Apim-Subscription-Key** setat la [**cheie de abonament** din mediul dvs. Customer Insights](#get-started-trying-the-customer-insights-apis).   
+1. După autentificarea și achiziția cu succes a unui token, construiți unul nou sau utilizați unul existent`HttpClient` cu **DefaultRequestHeaders „Autorizare”** setat la **„Jeton de acces” purtător** și **Ocp-Apim-Subscription-Key** setat la [**cheie de abonament** din mediul dvs. Customer Insights](#get-started-trying-the-customer-insights-apis).   
  
    Resetați antetul **Autorizare** când este cazul. De exemplu, când tokenul a expirat.
 
@@ -147,7 +151,7 @@ Aflați cum să începeți să utilizați bibliotecile client C# de la NuGet.org
 
 1. Efectuați apeluri cu clientul pentru „metodele de extensie”,"—de exemplu, `GetAllInstancesAsync`. Dacă accesul la `Microsoft.Rest.HttpOperationResponse` subiacent este preferat, utilizați „metode de mesaj http”—de exemplu `GetAllInstancesWithHttpMessagesAsync`.
 
-1. Răspunsul va fi probabil de tip `object` deoarece metoda poate returna mai multe tipuri (de exemplu, `IList<InstanceInfo>` și `ApiErrorResult`). Pentru a verifica tipul de returnare, puteți folosi în siguranță funcția cast pentru obiectele din tipurile de răspuns specificate în [pagina de detalii API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pentru respectiva operațiune.    
+1. Răspunsul va fi probabil de tip `object` deoarece metoda poate returna mai multe tipuri (de exemplu, `IList<InstanceInfo>` și `ApiErrorResult`). Pentru a verifica tipul de returnare, utilizați obiectele din tipurile de răspuns specificate pe [Pagina de detalii API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights) pentru acea operațiune.    
    
    Dacă sunt necesare mai multe informații la cerere, utilizați **metode mesaj http** pentru a accesa obiectul de răspuns brut.
 

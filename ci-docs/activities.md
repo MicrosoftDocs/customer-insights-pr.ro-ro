@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsight
-ms.openlocfilehash: 29b5d3f5848d36abd8e941136a6330dbb7730016
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6c0a1bc5d9a42806b458142804199c733ff530ec
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643280"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755513"
 ---
 # <a name="customer-activities"></a>Activități ale clienților
 
-Combinați activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights pentru a crea o cronologie care listează activitățile cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu soluția [Program de completare card client](customer-card-add-in.md) sau într-un tablou de bord Power BI.
+Combinați activitățile clienților din [diverse surse de date](data-sources.md) în Dynamics 365 Customer Insights. Creați o cronologie care enumeră activitățile în mod cronologic. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul de client](customer-card-add-in.md) soluţie.
 
 ## <a name="define-an-activity"></a>Definiți o activitate
 
@@ -78,7 +78,7 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Date** pentru a fi i
 
 1. Selectați **Următorul** pentru a trece la următorul pas. Puteți selecta **Finalizați și examinați** pentru a salva activitatea acum cu tipul de activitate setat la **Altele**. 
 
-1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, tipuri de activități *Feedback*, *Loialitate*, *SalesOrder*, *SalesOrderLine* și *Abonament* pot fi mapate semantic după acceptarea mapării câmpurilor. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
+1. La pasul **Tipul activității**, alegeți tipul de activitate și selectați opțional dacă doriți să mapați semantic unele dintre tipurile de activitate pentru a fi utilizate în alte zone ale Customer Insights. În prezent, *Părere*, *·*, *de vânzări*, *·*, și *Abonament* tipurile de activitate acceptă semantica după ce sunt de acord să mapați câmpurile. Dacă un tip de activitate nu este relevant pentru noua activitate, puteți alege *Altele* sau *Creare nou* pentru un tip de activitate personalizat.
 
 1. Selectați **Următorul** pentru a trece la următorul pas. 
 
@@ -110,7 +110,7 @@ După ce ați configurat activitățile clienților, selectați **Afișați în 
 
 Pentru a deschide cronologia pentru un client, accesați **Clienți** și alegeți profilul de client pe care doriți să îl vizualizați.
 
-Dacă un client a participat la o activitate pe care ați configurat-o, o veți găsi în secțiunea **Cronologia activității**.
+Dacă un client a participat la o activitate configurată, o veți găsi în **Cronologia activității** secțiune.
 
 :::image type="content" source="media/Activity_Timeline1.PNG" alt-text="Vizualizați activitățile configurate în Profilurile clienților.":::
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: cca91f2bbe2fc64554199082a79c1b388a01ab52
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643606"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740734"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completați datele parțiale cu predicții (învechit)
 
@@ -37,7 +37,7 @@ Predicțiile vă permit să creați cu ușurință valori previzionate care vă 
 
 1. Organizația dvs. are o instanță [instalată în Microsoft Dataverse](/ai-builder/build-model#prerequisites) și se află în aceeași organizație ca Customer Insights.
 
-2. Mediul dvs. de detalii despre public este atașat instanța dvs. Dataverse.
+2. Mediul dvs. Customer Insights este atașat la instanța dvs. Dataverse.
 
 Pentru informații suplimentare, consultați [Creați un mediu nou](create-environment.md).
 

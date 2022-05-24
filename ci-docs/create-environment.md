@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 0efda9d2997bcfd069b6d2445b69d159d7d3e59b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: c64ac94a7e0e743d3c13e32e394cc5d409420622
+ms.sourcegitcommit: c00441bc60b978e25f930b06c9d97b46fe462538
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643100"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "8712917"
 ---
 # <a name="create-an-environment-in-customer-insights"></a>Creați un mediu în Customer Insights
 
@@ -63,8 +63,7 @@ Veți avea două opțiuni: **Stocare Customer Insights** (un Azure Data Lake adm
 Prin salvarea datelor în Azure Data Lake Storage, sunteți de acord că datele vor fi transferate și stocate în locația geografică corespunzătoare pentru acel cont de stocare Azure. Această locație poate diferi de locul în care sunt stocate datele în Dynamics 365 Customer Insights. Aflați mai multe la [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 > [!NOTE]
-> Customer Insights acceptă în prezent următoarele:
-> - Entități ingerate din fluxurile de date Power BI care sunt stocate într-un Data Lake gestionat de Microsoft Dataverse.  
+> Customer Insights acceptă în prezent următoarele:  
 > - Conturi Azure Data Lake Storage din aceeași regiune Azure pe care ați selectat-o la crearea mediului.
 > - Azure Data Lake Storage conturi care sunt Gen2 și au *spațiu de nume ierarhic* activat. Conturile de stocare Azure Data Lake Gen1 nu sunt acceptate.
 
@@ -78,9 +77,9 @@ Dacă creați mai multe medii ale Customer Insights și alegeți să salvați en
    
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse.
 
-Furnizați-vă pe al dvs Microsoft Dataverse mediu pentru a partaja date (profiluri și perspective) cu aplicațiile de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicațiile bazate pe model în Power Apps. Lăsați acest câmp necompletat dacă nu aveți al dvs Dataverse mediu și vă vom furniza unul.
+Furnizați-vă pe al dvs Microsoft Dataverse mediu pentru a partaja date (profiluri și perspective) cu aplicațiile de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicații bazate pe model în Power Apps. Lăsați acest câmp necompletat dacă nu aveți al dvs Dataverse mediu și vă vom furniza unul.
 
-Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din sursele de date local folosind Power Platform fluxuri de date și gateway-uri](data-sources.md#add-data-from-on-premises-data-sources). De asemenea, puteți utiliza [modele out-of-box predicție](predictions-overview.md?tabs=b2c#out-of-box-models) prin conectarea la a Dataverse mediu inconjurator.
+Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din sursele de date local folosind Power Platform fluxuri de date și gateway-uri](data-sources.md#add-data-from-on-premises-data-sources).
 
 > [!IMPORTANT]
 > 1. Informații despre clienți și Dataverse trebuie să fie în aceeași regiune pentru a permite partajarea datelor.

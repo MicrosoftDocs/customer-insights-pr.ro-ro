@@ -1,19 +1,19 @@
 ---
 title: Ghid eșantion de predicție a retragerii tranzacționale
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a retragerii tranzacționale.
-ms.date: 11/19/2020
+ms.date: 05/11/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 05c221c634b8e0f582a6c6d3f4d90e971aa9707e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 3edbf2a471313379c28db874d7f19c3265a23299
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643746"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741334"
 ---
 # <a name="transactional-churn-prediction-sample-guide"></a>Ghid eșantion de predicție a retragerii tranzacționale
 
@@ -86,69 +86,13 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. Salvați sursa de date.
 
-
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinare** pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
-
-### <a name="map"></a>Hartă
-
-1. După ingerarea datelor, mapați contactele de la datele de comerț electronic și de loialitate la tipuri de date obișnuite. Mergeți la **Date** > **Unificare** > **Mapare**.
-
-1. Selectați entitățile care reprezintă profilul clientului - **eCommerceContacts** și **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificați sursele de date privind comerțul electronic și loialitatea.":::
-
-1. Selectați **ContactId** ca cheie primară pentru **eCommerceContacts** și **LoyaltyID** ca cheie primară pentru **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unificați LoyaltyId ca cheie principală.":::
-
-### <a name="match"></a>Corespondență
-
-1. Accesați fila **Potrivire** și selectați **Setare ordine**.
-
-1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
-
-1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Potriviți unificarea de comerț electronic și loialitate.":::
-
-1. Selectați **Creare regulă nouă**
-
-1. Adăugați prima condiție folosind FullName.
-
-   * Pentru eCommerceContacts selectați **FullName** în meniul derulant.
-   * Pentru loyCustomers selectați **FullName** în lista derulantă.
-   * Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
-   * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-1. Introduceți numele **FullName, Email** pentru noua regulă.
-
-   * Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   * Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
-   * Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă. 
-   * Lăsați Normalizarea necompletată. 
-   * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unificați regula de potrivire pentru nume și e-mail.":::
-
-7. Selectați **Salvare** și **Rulare**.
-
-### <a name="merge"></a>Îmbinare
-
-1. Accesați fila **Îmbinare**.
-
-1. Pe **ContactId** pentru entitatea **loyCustomers**, schimbați numele afișat în **ContactIdLOYALTY** pentru a-l diferenția de celelalte ID-uri ingerate.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="redenumiți contactid din ID-ul de loialitate.":::
-
-1. Selectați **Salvați** și **Rulați** pentru a porni procesul de îmbinare.
-
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-transaction-churn-prediction"></a>Sarcina 3 - Configurați predicția de retragere tranzacțională
 
-Odată stabilite profilurile de clienți unificate, putem rula acum predicția de retragere a abonamentelor. Pentru pași detaliați, consultați [Abonament churn predicție](predict-subscription-churn.md) articol. 
+Cu profilurile unificate ale clienților, acum putem rula tranzacțiile predicție. Pentru pași detaliați, consultați [Schimbarea tranzacției predicție](predict-transactional-churn.md) articol. 
 
 1. Mergeți la **Informații** > **Descoperiți** și selectați pentru a utiliza **Modelul de retragere a clienților**.
 
@@ -180,7 +124,7 @@ Odată stabilite profilurile de clienți unificate, putem rula acum predicția d
 
 ## <a name="task-4---review-model-results-and-explanations"></a>Sarcina 4 - Examinați rezultatele modelului și explicațiile
 
-Lăsați modelul să finalizeze pregătirea și notarea datelor. Acum puteți revizui explicațiile modelului de retragere a abonamentelor. Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-subscription-churn.md#review-a-prediction-status-and-results).
+Lăsați modelul să finalizeze pregătirea și notarea datelor. Acum puteți revizui explicațiile modelului de abandon. Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-transactional-churn.md#review-a-prediction-status-and-results).
 
 ## <a name="task-5---create-a-segment-of-high-churn-risk-customers"></a>Sarcina 5 - Creați un segment de clienți cu risc de retragere ridicat
 
@@ -192,14 +136,12 @@ Puteți crea un segment nou pe baza entității create de model.
 
    :::image type="content" source="media/segment-intelligence.PNG" alt-text="Crearea unui segment cu rezultatul modelului.":::
 
-1. Selectați punctul final **OOBSubscriptionChurnPrediction** și definiți segmentul: 
+1. Selectează **OOBeCommerceChurnPrediction** punctul final și definiți segmentul: 
    - Câmp: ChurnScore
    - Operator: mai mare decât
    - Valoare: 0,6
-   
-   :::image type="content" source="media/segment-setup-subs.PNG" alt-text="Configurați un segment de retragere a abonamentului.":::
 
-Acum aveți un segment actualizat dinamic, care identifică clienții cu risc ridicat de retragere pentru această activitate de abonamente.
+Acum aveți un segment care este actualizat dinamic, care identifică clienții cu risc ridicat de pierdere.
 
 Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
 

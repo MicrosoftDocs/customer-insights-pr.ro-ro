@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: e155f75ffbc2c1bb228bece1b3e34846df794543
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
+ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643370"
+ms.lasthandoff: 05/15/2022
+ms.locfileid: "8757447"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
 
@@ -23,7 +23,7 @@ ms.locfileid: "8643370"
 
 Acest model de date partajat permite aplicațiilor și integratorilor de date să colaboreze mai ușor prin furnizarea unei definiții unificate a datelor. Common Data Model include un sistem bogat de metadate cu entități standard, relații, ierarhii, trăsături și multe altele. Provine din aplicațiile Dynamics 365, cu sursă deschisă la GitHub, cu peste 260 de entități standard. Un sistem mare de parteneri interni și externi contribuie cu concepte specifice industriei la Common Data Model.
 
-Mai multe sisteme și platforme implementează astăzi Common Data Model, inclusiv fluxuri de date Power BI și Servicii de date Azure. Este deja acceptat în Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, și viitoarele servicii de date Azure, care acumulează direct valoare pentru [Inițiativa Open Data](https://www.microsoft.com/open-data-initiative).
+Mai multe sisteme și platforme implementează astăzi Common Data Model, inclusiv fluxuri de date Power BI și Servicii de date Azure. Este deja acceptat în Microsoft Dataverse, Dynamics 365, Power Apps, Power BI, și viitoarele servicii de date Azure, care acumulează direct valoare pentru [Inițiativa Open Data](https://dynamics.microsoft.com/en-us/open-data-initiative/).
 
 ## <a name="customer-insights-entity-schemas"></a>Scheme de entitate Customer Insights
 

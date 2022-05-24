@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-about
 - customerInsights
-ms.openlocfilehash: fcdb7f073ff73322ff69d0a8684391819a809d00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
-ms.translationtype: MT
+ms.openlocfilehash: 599cbaf4e19c3a7331e92bfc54c701fefe6c69b3
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643615"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741056"
 ---
 # <a name="manage-environments"></a>Gestionați mediile
 
@@ -44,7 +44,7 @@ Pentru informații suplimentare despre setările de mediu, consultați [Creați 
    
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse. 
 
-Furnizați-vă pe al dvs Microsoft Dataverse mediu pentru a partaja date (profiluri și perspective) cu aplicațiile de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicațiile bazate pe model în Power Apps.
+Furnizați-vă pe al dvs Microsoft Dataverse mediu pentru a partaja date (profiluri și perspective) cu aplicațiile de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicații bazate pe model în Power Apps.
 
 Pentru a utiliza [modele predicție predefinite](predictions-overview.md#out-of-box-models), configurați partajarea datelor cu Dataverse. Sau puteți activa ingestia de date din sursele de date local, furnizând URL de mediu Microsoft Dataverse administrat de organizația dvs.
 
@@ -81,7 +81,7 @@ Pentru a executa scripturile PowerShell, trebuie să aveți următoarele trei mo
     1. `CreateSecurityGroups.ps1`
        - Ai nevoie *administratorul chiriașului* permisiuni pentru a rula acest script PowerShell. 
        - Acest script PowerShell creează două grupuri de securitate în abonamentul Azure. Unul pentru grupul Reader și altul pentru grupul Contributor și va face Microsoft Dataverse serviciu ca proprietar pentru ambele grupuri de securitate.
-       - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+       - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține Azure Data Lake Storage. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
        - Salvați ambele valori ale ID-urilor grupului de securitate generate de acest script, deoarece le vom folosi în`ByolSetup.ps1` scenariu.
        
         > [!NOTE]
@@ -90,7 +90,7 @@ Pentru a executa scripturile PowerShell, trebuie să aveți următoarele trei mo
     2. `ByolSetup.ps1`
         - Ai nevoie *Proprietar de date Blob de stocare* permisiuni la nivelul contului de stocare/container pentru a rula acest script sau acest script va crea unul pentru dvs. Atribuirea rolului dvs. poate fi eliminată manual după rularea cu succes a scriptului.
         - Acest script PowerShell adaugă controlul de acces bazat pe tole (RBAC) necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe De asemenea, actualizează Lista de control al accesului (ACL) din containerul CustomerInsights pentru grupurile de securitate create cu`CreateSecurityGroups.ps1` scenariu. Grupul de colaboratori va avea *rwx* permisiunea și grupul de cititori va avea *rx* numai permisiunea.
-        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
         - Copiați șirul de ieșire după rularea cu succes a scriptului. Șirul de ieșire arată astfel:`https: //DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
         
 2. Introduceți șirul de ieșire copiat de sus în **Identificator de permisiuni** câmpul pasului de configurare a mediului pentru Microsoft Dataverse.
@@ -127,7 +127,7 @@ Veți vedea o listă cu toate mediile disponibile în organizația dvs. de unde 
 Sunt copiate următoarele setări de configurare:
 
 - Surse de date ingerate/importate
-- Configurarea unificării datelor (mapare, potrivire, îmbinare)
+- Configurarea unificării datelor
 - Segmente
 - Măsuri
 - Relaţii

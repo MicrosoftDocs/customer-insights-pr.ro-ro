@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 6a1c3791076a7dda4531664ca88632f7f1b914e3
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 6d43dc2ca82c034fbd396d92637e7aea8179df77
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643012"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755369"
 ---
 # <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Îmbogățirea profilurilor clienților cu Azure Maps (previzualizare)
 
@@ -51,7 +51,7 @@ Pentru a configura îmbogățirea datelor Azure Maps, trebuie îndeplinite urmă
 
 1. Selectați **Următorul** pentru a completa maparea câmpului.
 
-1. Evaluați dacă doriți să modificați **Setări avansate**. Acestea sunt furnizate pentru a oferi flexibilitate maximă pentru gestionarea cazurilor de utilizare avansate, dar valorile implicite vor fi adecvate în majoritatea cazurilor:
+1. Evaluați dacă doriți să modificați **Setări avansate**. Aceste setări sunt furnizate pentru a oferi flexibilitate maximă în gestionarea cazurilor de utilizare avansate, dar valorile implicite vor fi adecvate în majoritatea cazurilor:
    - **Tipul adreselor**: Comportamentul implicit este acela că îmbogățirea va returna cea mai bună potrivire a adresei chiar dacă este incompletă. Pentru a obține numai adrese complete&mdash;de exemplu, adrese care includ numărul casei&mdash;debifați toate casetele de selectare, cu excepția **Adrese punct**. 
    - **Limba**: În mod implicit, adresele sunt returnate în limba pentru regiunea căreia sa stabilit că aparține adresei. Pentru a aplica o limbă de adresă standardizată, selectați limba din meniul derulant. De exemplu, selectând **Engleză** va returna **Copenhagen, Denmark** în loc de **København, Danmark**.
 
@@ -61,7 +61,7 @@ Pentru a configura îmbogățirea datelor Azure Maps, trebuie îndeplinite urmă
 
 ## <a name="configure-the-connection-for-azure-maps"></a>Configurați conexiunea pentru Azure Maps
 
-Trebuie să fiți administrator în Customer Insights pentru a configura conexiunile. Selectați **Adăugați conexiune** când configurați o îmbogățire sau accesați **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Azure Maps.
+Trebuie să fii administrator în Customer Insights pentru a configura conexiunile. Selectați **Adăugați conexiune** când configurați o îmbogățire sau accesați **Administrator** > **Conexiuni** și selectați **Configurare** pe dala Azure Maps.
 
 1. În caseta **Numele afișat**, introduceți un nume pentru conexiune.
 

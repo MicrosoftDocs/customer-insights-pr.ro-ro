@@ -3,22 +3,22 @@ title: Gestionați regulile implicite de consimțământ pe segmente
 description: Cu capacitatea de gestionare a consimțământului, puteți dezactiva sau modifica regulile implicite de consimțământ dacă sunt activate suprascrierile.
 ms.date: 12/01/2021
 ms.topic: how-to
-author: smithy7
-ms.author: smithc
+author: anubhav-t
+ms.author: antando
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 43f03ea97765e112a8ea2a7da97cc548c8c84dfc
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 764eeca9d99c95a34d9bd4c11d79f8b8e90701e2
+ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643208"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "8755231"
 ---
 # <a name="disable-or-change-default-consent-rules"></a>Dezactivați sau modificați regulile implicite de consimțământ
 
 Dacă organizațiile dvs. utilizează [capacitatea de gestionare a consimțământului](consent-management/overview.md) cu Dynamics 365 Customer Insights,[administratorii pot aplica regulile de consimțământ](activate-consent.md) pentru segmente. 
 
-Cu regulile de consimțământ impuse în zona de segment, fiecare segment informează despre starea verificării consimțământului și regulile. Dacă sunt permise suprascrieri, regulile implicite de consimțământ sunt dezactivate pentru anumite segmente. Fiecare creator al unui segment poate adăuga mai multe reguli de consimțământ pe lângă regulile implicite la un segment. 
+Cu regulile de consimțământ impuse în zona de segment, fiecare segment informează despre starea verificării consimțământului și regulile. Dacă sunt permise înlocuiri, regulile implicite de consimțământ sunt dezactivate pentru anumite segmente. Fiecare creator al unui segment poate adăuga mai multe reguli de consimțământ pe lângă regulile implicite la un segment. 
 
 ## <a name="for-administrators"></a>Pentru administratori
 

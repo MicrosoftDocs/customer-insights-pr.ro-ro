@@ -1,19 +1,19 @@
 ---
 title: Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului
 description: Utilizați acest exemplu de ghid pentru a încerca modelul de predicție pentru Valoarea ciclului de viață a clientului.
-ms.date: 05/25/2021
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 9f8d1d0f0757d8003ad3859fab75362f3988cd00
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 351946c734f5a1054eb3769b2d9cced3bed48e15
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643595"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740826"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului (CLV)
 
@@ -102,64 +102,7 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de unificare a datelor pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
-
-### <a name="map"></a>Hartă
-
-1. După ingerarea datelor, mapați contactele de la datele de comerț electronic și de loialitate la tipuri de date obișnuite. Mergeți la **Date** > **Unificare** > **Mapare**.
-
-1. Selectați entitățile care reprezintă profilul clientului - **eCommerceContacts** și **loyCustomers**. Apoi selectați **Se aplică**.
-
-   ![unificați sursele de date privind comerțul electronic și loialitatea.](media/unify-ecommerce-loyalty.png)
-
-1. Selectați **ContactId** ca cheie primară pentru **eCommerceContacts** și **LoyaltyID** ca cheie primară pentru **loyCustomers**.
-
-   ![Unificați LoyaltyId ca cheie principală.](media/unify-loyaltyid.png)
-
-1. Selectați **Salvare**.
-
-### <a name="match"></a>Corespondență
-
-1. Accesați fila **Potrivire** și selectați **Setare ordine**.
-
-1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
-
-1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
-
-   ![Potriviți unificarea de comerț electronic și loialitate.](media/unify-match-order.png)
-
-1. Selectați **Adăugați regulă**
-
-1. Adăugați prima condiție folosind FullName.
-
-   - Pentru eCommerceContacts selectați **FullName** în meniul derulant.
-   - Pentru loyCustomers selectați **FullName** în lista derulantă.
-   - Selectați lista derulantă **Normalizare** și alegeți **Tip (Telefon, Nume, Adresă, ...)**.
-   - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-1. Introduceți numele **FullName, Email** pentru noua regulă.
-
-   - Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   - Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
-   - Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă.
-   - Lăsați Normalizarea necompletată.
-   - Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-   ![Unificați regula de potrivire pentru nume și e-mail.](media/unify-match-rule.png)
-
-1. Selectați **Terminat**.
-
-1. Selectați **Salvare** și **Rulare**.
-
-### <a name="merge"></a>Îmbinare
-
-1. Accesați fila **Îmbinare**.
-
-1. Pe **ContactId** pentru entitatea **loyCustomers**, schimbați numele afișat în **ContactIdLOYALTY** pentru a-l diferenția de celelalte ID-uri ingerate.
-
-   ![redenumiți contactid din ID-ul de loialitate.](media/unify-merge-contactid.png)
-
-1. Selectați **Salvați** și **Executați procese de îmbinare și din aval**.
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Sarcina 3 - Configurați predicția pentru Valoarea ciclului de viață a clientului
 

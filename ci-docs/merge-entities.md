@@ -1,188 +1,168 @@
 ---
-title: Îmbinați entitățile în unificarea datelor
+title: Unificați câmpurile client sau cont
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
-ms.date: 01/28/2022
+recommendations: false
+ms.date: 05/04/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
-- ci-match
 - ci-merge
+- ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 978a7c9bc440398fa39e9fa1d366d74e5c7aaea0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643855"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8740872"
 ---
-# <a name="merge-entities"></a>Îmbinare entități
+# <a name="unify-customer-fields"></a>Unificați câmpurile clienților
 
-Faza de îmbinare este ultima fază din procesul de unificare a datelor. Scopul său este reconcilierea datelor conflictuale. Exemple de date conflictuale ar putea include un nume de client care se găsește în două seturi de date, dar care apare puțin diferit în fiecare („Grant Marshall” față de „Grant Marshal”) sau un număr de telefon care diferă în format (617-803-091X versus 617803091X ). Fuzionarea acelor puncte de date conflictuale se face pe baza atributelor.
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-:::image type="content" source="media/merge-fields-page.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
+În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri separate de e-mail sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
 
-După completarea [fazei de potrivire](match-entities.md), începeți faza de îmbinare selectând dala **Îmbinare** pe pagina **Unificare**.
+:::image type="content" source="media/m3_unify.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
 
-## <a name="review-system-recommendations"></a>Revizuiți recomandările sistemului
+## <a name="review-and-update-the-customer-fields"></a>Examinați și actualizați câmpurile pentru clienți
 
-În secțiunea **Date** > **Unificare** > **Îmbinare**, alegeți și excludeți atributele de îmbinat cu entitatea de profil de client unificat. Profilul de client unificat este rezultat al procesului de unificare a datelor. Unele atribute sunt combinate automat de sistem.
+1. Examinați lista câmpurilor care vor fi unificate sub **Câmpurile clientului** fila tabelului. Faceți orice modificări, dacă este cazul.
 
-Pentru a vedea atributele ce sunt incluse într-unul dintre atributele dvs. îmbinate automat, selectați acel atribut îmbinat în fila de tabel **Câmpurile clienților**. Atributele care compun atributul îmbinat apar în două rânduri noi sub atributul îmbinat.
+   1. Pentru orice câmpuri combinate, puteți:
+      - [Editare](#edit-a-merged-field)
+      - [Redenumire](#rename-fields)
+      - [Separare](#separate-merged-fields)
+      - [Excludere](#exclude-fields)
+      - [Deplasați-vă în sus sau în jos](#change-the-order-of-fields)
 
-## <a name="separate-rename-exclude-and-edit-merged-fields"></a>Separarea, redenumirea, excluderea și editarea câmpurilor îmbinate
+   1. Pentru orice câmp, puteți:
+      - [Combinare câmpuri](#combine-fields-manually)
+      - [Combinați un grup de câmpuri](#combine-a-group-of-fields)
+      - [Redenumire](#rename-fields)
+      - [Excludere](#exclude-fields)
+      - [Deplasați-vă în sus sau în jos](#change-the-order-of-fields)
 
-Puteți să modificați modul în care sistemul procesează atributele îmbinate pentru a genera profilul de client unificat. Selectați **Afișați mai multe** și alegeți ce vreți să schimbați.
+1. Opțional, [generați configurația ID-ului clientului](#configure-customer-id-generation).
 
-:::image type="content" source="media/manage-merged-attributes.png" alt-text="Opțiuni din meniul derulant Afișați mai multe pentru a gestiona atributele combinate.":::
+1. Opțional, [grupați profilurile în gospodării sau grupuri](#group-profiles-into-households-or-clusters).
 
-Pentru mai multe informații vedeți secțiunile următoare.
+> [!div class="nextstepaction"]
+> [Pasul următor: revizuiți unificarea](review-unification.md)
 
-## <a name="separate-merged-fields"></a>Câmpuri îmbinate separate
+### <a name="edit-a-merged-field"></a>Editați un câmp îmbinat
 
-Pentru a separa câmpurile îmbinate, găsiți atributul în tabel. Câmpurile separate sunt afișate drept puncte de date individuale în profilul de client unificat. 
+1. Selectați un câmp îmbinat și alegeți **Editați | ×**. Se afișează panoul Combinați câmpuri.
 
-1. Selectați câmpul îmbinat.
-  
-1. Selectați **Afișați mai multe** și alegeți **Câmpuri separate**.
- 
-1. Confirmați separarea.
-
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
-
-## <a name="rename-merged-fields"></a>Redenumiți câmpurile îmbinate
-
-Schimbați numele afișat al atributelor combinate. Nu puteți modifica numele entității de ieșire.
-
-1. Selectați câmpul îmbinat.
-  
-1. Selectați **Afișați mai multe** și alegeți **Redenumire**.
-
-1. Confirmați numele afișat modificat. 
-
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
-
-## <a name="exclude-merged-fields"></a>Câmpuri îmbinate excluse
-
-Excludeți un atribut din profilul de client unificat. Dacă câmpul e utilizat în alte procese, de exemplu într-un segment, eliminați-l din aceste procese înainte de a-l exclude din profilul clientului. 
-
-1. Selectați un câmp îmbinat.
-  
-1. Selectați **Afișați mai multe** și alegeți **Excludere**.
-
-1. Confirmați excluderea.
-
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
-
-Pe pagina **Îmbinare**, selectați **Câmpuri excluse** pentru a vedea lista tuturor câmpurilor excluse. Acest panou vă permite să adăugați câmpuri excluse înapoi.
-
-## <a name="edit-a-merged-field"></a>Editați un câmp îmbinat
-
-1.  Selectați un câmp îmbinat.
-
-1.  Selectați **Afișați mai multe** și alegeți **Editare**.
-
-1.  Specificați cum să combinați sau să combinați câmpurile dintr-una dintre cele trei opțiuni:
+1. Specificați cum să combinați sau să combinați câmpurile dintr-una dintre cele trei opțiuni:
     - **Importanţă**: Identifică valoarea câștigătorului pe baza rangului de importanță specificat pentru câmpurile participante. Este opțiunea implicită de combinare. Selectați **Mutați în sus/în jos** pentru a stabili clasamentul importanței.
-    :::image type="content" source="media/importance-merge-option.png" alt-text="Opțiunea de importanță din dialogul câmpurilor de îmbinare."::: 
+
+      :::image type="content" source="media/importance-merge-option.png" alt-text="Opțiunea de importanță din dialogul câmpurilor de îmbinare.":::
+
     - **Cel mai recent**: Identifică valoarea câștigătorului pe baza celui mai recent. Necesită o dată sau un câmp numeric pentru fiecare entitate participantă în domeniul câmpurilor de îmbinare pentru a defini actualitatea.
-    :::image type="content" source="media/recency-merge-option.png" alt-text="Opțiunea de noutate din dialogul câmpurilor de îmbinare.":::
+
+      :::image type="content" source="media/recency-merge-option.png" alt-text="Opțiunea de noutate din dialogul câmpurilor de îmbinare.":::
+
     - **Cel mai puțin recent**: Identifică valoarea câștigătorului pe baza celui mai puțin recent. Necesită o dată sau un câmp numeric pentru fiecare entitate participantă în domeniul câmpurilor de îmbinare pentru a defini actualitatea.
 
-1.  Puteți adăuga mai multe câmpuri pentru a participa la procesul de îmbinare.
+1. Puteți adăuga mai multe câmpuri pentru a participa la procesul de îmbinare.
 
-1.  Puteți redenumi câmpul combinat.
+1. Puteți redenumi câmpul combinat.
 
 1. Selectați **Finalizat** pentru a vă aplica modificările.
 
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
+### <a name="rename-fields"></a>Redenumiți câmpurile
 
-## <a name="combine-fields-manually"></a>Combinați câmpurile manual
+Schimbați numele afișat al câmpurilor îmbinate sau separate. Nu puteți modifica numele entității de ieșire.
 
-Specificați manual un atribut îmbinat.
+1. Selectați câmpul și alegeți **Redenumiți**.
 
-1. Pe **Combina** pagina, selectați **Combina**.
+1. Introduceți noul nume afișat.
 
-1. Alege **Câmpuri** opțiune.
+1. Selectați **Terminat**.
+
+### <a name="separate-merged-fields"></a>Câmpuri îmbinate separate
+
+Pentru a separa câmpurile îmbinate, găsiți atributul în tabel. Câmpurile separate sunt afișate drept puncte de date individuale în profilul de client unificat.
+
+1. Selectați câmpul îmbinat și alegeți **Câmpuri separate**.
+
+1. Confirmați separarea.
+
+### <a name="exclude-fields"></a>Excludeți câmpuri
+
+Excludeți un câmp îmbinat sau separat din profilul de client unificat. Dacă câmpul e utilizat în alte procese, de exemplu într-un segment, eliminați-l din aceste procese înainte de a-l exclude din profilul clientului.
+
+1. Selectați un câmp și alegeți **Exclude**.
+
+1. Confirmați excluderea.
+
+Pentru a vedea lista tuturor câmpurilor excluse, selectați **Câmpuri excluse**. Dacă este necesar, puteți citi câmpul exclus.
+
+### <a name="change-the-order-of-fields"></a>Modificarea ordinii câmpurilor
+
+Unele entități conțin mai multe detalii decât altele. Dacă o entitate include cele mai recente date despre un câmp, le puteți oferi prioritate față de alte entități atunci când îmbinați valorile.
+
+1. Selectați câmpul.
+  
+1. Alege **Deplasați-vă în sus/jos** pentru a seta ordinea sau trageți și plasați-le în poziția dorită.
+
+### <a name="combine-fields-manually"></a>Combinați câmpurile manual
+
+Combinați câmpuri separate pentru a crea un atribut îmbinat.
+
+1. Selectați **Combina** > **Câmpuri**. Se afișează panoul Combinați câmpuri.
 
 1. Specificați politica câștigătorului de îmbinare în lista derulantă **Combinați câmpurile după**.
 
-1. Alegeți un câmp de adăugat. Selectați **Adăugați câmpuri** pentru combinarea mai multor câmpuri.
+1. Selectați **Adăugați câmp** pentru a combina mai multe domenii.
 
 1. Furnizați un **Nume** și un **Nume al câmpului de ieșire**.
 
 1. Selectați **Finalizat** pentru a aplica modificările.
 
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările. 
+### <a name="combine-a-group-of-fields"></a>Combinați un grup de câmpuri
 
-## <a name="combine-a-group-of-fields"></a>Combinați un grup de câmpuri
+Tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresa1, Adresa2, Orașul, Statul și Codul poștal, nu dorim să îmbinăm Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete.
 
-Tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistrările noastre conțin câmpurile Adresa1, Adresa2, Orașul, Statul și Zip. Probabil că nu dorim să îmbinăm Adresa2 a unei alte înregistrări, crezând că ne-ar face datele mai complete
-
-1. Pe **Combina** pagina, selectați **Combina**.
-
-1. Alege **Grup de câmpuri** opțiune.
+1. Selectați **Combina** > **Grup de câmpuri**.
 
 1. Specificați politica câștigătorilor de îmbinare în **Clasează grupurile după** scapă jos.
 
-1. Selectați **Adăuga** și alegeți dacă doriți să adăugați mai multe câmpuri sau grupuri suplimentare la câmpuri.
+1. Selectați **Adăuga** și alegeți dacă doriți să adăugați mai multe câmpuri sau grupuri la câmpuri.
 
 1. Furnizeaza un **Nume** si un **Nume de ieșire** pentru fiecare câmp combinat.
 
-1. Furnizeaza un **Nume** pentru grupul de câmpuri. 
+1. Furnizeaza un **Nume** pentru grupul de câmpuri.
 
 1. Selectați **Finalizat** pentru a aplica modificările.
 
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
+## <a name="configure-customer-id-generation"></a>Configurați generarea ID-ului clientului
 
-## <a name="change-the-order-of-fields"></a>Modificarea ordinii câmpurilor
+Definiți cum să generați valorile ID-ului clientului, identificatorii unici ai profilului clientului. Pasul de unificare a câmpurilor din procesul de unificare a datelor generează identificatorul unic al profilului clientului. Identificatorul este *Număr de înregistrare client* în *Client* entitate care rezultă din procesul de unificare a datelor.
 
-Unele entități conțin mai multe detalii decât altele. Dacă o entitate include cele mai recente date despre un câmp, le puteți oferi prioritate față de alte entități atunci când îmbinați valorile.
-
-1. Selectați câmpul îmbinat.
-  
-1. Selectați **Afișați mai multe** și alegeți **Editare**.
-
-1. În panoul **Combinați câmpurile**, selectați **Mutați în sus / în jos** pentru a seta ordinea sau glisați și fixați-le în poziția dorită.
-
-1. Confirmați modificarea.
-
-1. Selectați **Salvare** și **Rulare** pentru a procesa modificările.
-
-## <a name="configure-customer-id-generation"></a>Configurați generarea ID-ului de client 
-
-După configurarea câmpurilor de fuzionare, puteți defini cum să generați valori CustomerId, identificatorii unici ai profilului clientului. Pasul de îmbinare în procesul de unificare a datelor generează identificatorul unic al profilului clientului. Identificatorul este CustomerId din entitatea *Client* care rezultă din procesul de unificare a datelor. 
-
-CustomerId-ul din entitatea Client se bazează pe un hash cu prima valoare a cheilor primare non-câștigătoare nule. Aceste chei provin de la entitățile utilizate în faza de potrivire și fuzionare și sunt influențate de ordinea de potrivire. Deci, CustomerID generat se poate modifica atunci când o valoare a cheii primare se modifică în entitatea primară a comenzii de potrivire. Deci, valoarea cheii principale ar putea să nu reprezinte întotdeauna același client.
+The *Număr de înregistrare client*  se bazează pe un hash al primei valori a cheilor primare ale câștigătoarei non-nule. Aceste chei provin de la entitățile utilizate în unificarea datelor și sunt influențate de ordinea potrivirii.Deci, ID-ul de client generat se poate schimba atunci când o valoare a cheii primare se modifică în entitatea principală a comenzii de potrivire. Este posibil ca valoarea cheii primare să nu reprezinte întotdeauna același client.
 
 Configurarea unui ID stabil de client vă permite să evitați acel comportament.
 
-**Configurați un ID unic al clientului**
+1. Selectați fila **Chei**.
 
-1. Accesați **Unificare** > **Îmbinare**.
-
-1. Selectați fila **Chei**. 
-
-1. Plasați cursorul pe rândul **CustomerId** și selectați opțiunea **Configurați**.
+1. Plasați cursorul pe **Număr de înregistrare client** rând și selectați **Configurați**.
    :::image type="content" source="media/customize-stable-id.png" alt-text="Control pentru a personaliza generarea ID-ului.":::
 
 1. Selectați până la cinci câmpuri care vor cuprinde un ID de client unic și care sunt mai stabile. Înregistrările care nu se potrivesc configurației dvs. utilizează în schimb un ID configurat de sistem.  
 
-1. Selectați **Terminat** și rulați procesul de îmbinare pentru a aplica modificările.
+1. Selectați **Terminat**.
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Profiluri de grup în gospodării sau clustere
 
-Ca parte a procesului de configurare a generării profilului clientului, puteți defini reguli pentru a grupa profilurile aferente într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
+Puteți defini reguli pentru gruparea profilurilor asociate într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
 
-**Definiți o gospodărie sau un grup**
-
-1. Accesați **Unificare** > **Îmbinare**.
-
-1. Pe fila **Îmbinare**, selectați **Avansat** > **Creați cluster**.
+1. Selectați **Avansat** > **Creați cluster**.
 
    :::image type="content" source="media/create-cluster.png" alt-text="Control pentru a crea un nou cluster.":::
 
@@ -194,31 +174,9 @@ Ca parte a procesului de configurare a generării profilului clientului, puteți
 
 1. Specificați regulile și condițiile pentru a defini clusterul.
 
-1. Selectați **Rulare** pentru a rula procesul de îmbinare și a crea clusterul.
+1. Selectați **Terminat**. Clusterul este creat când procesul de unificare este încheiat. Identificatorii clusterului sunt adăugați ca câmpuri noi la *Client* entitate.
 
-După rularea procesului de îmbinare, identificatorii de cluster sunt adăugați ca câmpuri noi în entitatea *Client*.
-
-## <a name="run-your-merge"></a>Executați-vă unificarea
-
-Indiferent dacă fuzionați manual atributele sau lăsați sistemul să le îmbine, puteți rula întotdeauna fuziunea. Selectați **Executare** pe pagina **Îmbinare** pentru a porni procesul.
-
-> [!div class="mx-imgBorder"]
-> ![Îmbinare date Salvați și rulați.](media/configure-data-merge-save-run.png "Îmbinare date Salvați și rulați")
-
-Alege **Rulați numai îmbinarea** dacă doriți doar să vedeți rezultatul reflectat în entitatea client unificată. Procesele din aval vor fi reîmprospătate ca [definite în programul de reîmprospătare](system.md#schedule-tab).
-
-Alegeți **Rulați procesele de îmbinare și flux spre aval** pentru a reîmprospăta sistemul cu modificările dvs. Toate procesele, inclusiv îmbogățirea, segmentele și măsurile vor fi reluate automat. După ce toate procesele din aval s-au finalizat, profilurile clienților reflectă orice modificare făcută.
-
-Pentru a face mai multe modificări și a relua pasul, puteți anula o îmbinare în curs. Selectați **Se reîmprospătează ...** și selectați **Anulare operațiune** în panoul lateral care apare.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
-
-:::image type="content" source="media/process-detail-path.png" alt-text="Cale de drill-down pentru a ajunge la procesarea detaliilor din legătura de stare a activității.":::
-
-## <a name="next-step"></a>Următorul pas
-
-Configurați [Activități](activities.md), [Îmbogățire](enrichment-hub.md), sau [Relații](relationships.md) pentru a obține mai multe informații despre clienți.
-
-Dacă ați configurat deja activități, îmbogățire sau segmente, acestea vor fi procesate automat pentru a utiliza cele mai recente date despre clienți.
+> [!div class="nextstepaction"]
+> [Pasul următor: revizuiți unificarea](review-unification.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

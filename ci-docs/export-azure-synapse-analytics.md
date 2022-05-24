@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: e77227e1e353c02cfb13e26a8ecbe0768ba6c0fa
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 772fe0978362ccd829077a8133e2a3e74043f3f8
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643163"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741518"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele în Azure Synapse Analytics (Previzualizare)
 
@@ -34,7 +34,7 @@ Următoarele condiții preliminare trebuie îndeplinite pentru a configura conex
 
 - Un abonament Azure activ.
 
-- Dacă utilizați un nou Azure Data Lake Storage Contul Gen2, the *principal de serviciu pentru Customer Insights* are nevoie **Colaborator de date Blob de stocare** permisiuni. Aflați mai multe despre [conectarea la un cont Azure Data Lake Storage Gen2 cu contul principal de serviciu Azure pentru detalii despre public](connect-service-principal.md). Data Lake Storage Gen2 **trebuie să aibă** [spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace) activat.
+- Dacă utilizați un nou Azure Data Lake Storage Contul Gen2, the *principal de serviciu pentru Customer Insights* are nevoie **Colaborator de date Blob de stocare** permisiuni. Aflați mai multe pe [conectarea la o Azure Data Lake Storage Cont Gen2 cu principalul serviciului Azure pentru Customer Insights](connect-service-principal.md). Data Lake Storage Gen2 **trebuie să aibă** [spațiul de nume ierarhic](/azure/storage/blobs/data-lake-storage-namespace) activat.
 
 - Pe grupul de resurse unde Azure Synapse spațiul de lucru este situat, the *principalul serviciului* si *Azure AD utilizator cu permisiuni de administrator în Customer Insights* trebuie să fie atribuit cel puțin **Cititor** permisiuni. Pentru mai multe informații, consultați [Atribuirea de roluri Azure utilizând portalul Azure](/azure/role-based-access-control/role-assignments-portal).
 
@@ -48,7 +48,7 @@ Următoarele condiții preliminare trebuie îndeplinite pentru a configura conex
 
 ### <a name="configure-a-connection"></a>Configurați o conexiune
 
-Pentru a crea o conexiune, este nevoie de principalul serviciu și contul de utilizator din Customer Insights **Cititor** permisiuni pe *grup de resurse* unde se află spațiul de lucru Synapse Analytics. În plus, principalul serviciului și utilizatorul din spațiul de lucru Synapse Analytics au nevoie **Administrator Synapse** permisiuni. 
+Pentru a crea o conexiune, este nevoie de principalul serviciu și contul de utilizator din Customer Insights **Cititor** permisiuni pe *grup de resurse* unde se află spațiul de lucru Synapse Analytics. În plus, principalul serviciu și utilizatorul din spațiul de lucru Synapse Analytics au nevoie **Administrator Synapse** permisiuni. 
 
 1. Salt la **Administrator** > **Conexiuni**.
 

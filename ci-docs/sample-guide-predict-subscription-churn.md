@@ -1,8 +1,8 @@
 ---
 title: Ghid eșantion de predicție a retragerii abonamentelor
 description: Utilizați acest exemplu de ghid pentru a încerca modelul preinstalat de predicție a retragerii abonamentelor.
-ms.date: 11/19/2020
-ms.reviewer: mhart
+ms.date: 03/31/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: m-hartmann
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-create-prediction
 - customerInsights
-ms.openlocfilehash: 2aea6c62421b308705899e4f8af64f64bfcb2d3d
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 5a8eeafecacef3d0bb4a798b698cf490423ca98d
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643575"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741426"
 ---
 # <a name="subscription-churn-prediction-sample-guide"></a>Ghid eșantion de predicție a retragerii abonamentelor
 
@@ -112,61 +112,7 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
-După ingerarea datelor, începem acum procesul de **Mapare, potrivire, îmbinare** pentru a crea un profil de client unificat. Pentru informații suplimentare, consultați [Unificare date](data-unification.md).
-
-### <a name="map"></a>Hartă
-
-1. După ingerarea datelor, mapați contactele de la datele de comerț electronic și de loialitate la tipuri de date obișnuite. Mergeți la **Date** > **Unificare** > **Mapare**.
-
-1. Selectați entitățile care reprezintă profilul clientului - **eCommerceContacts** și **loyCustomers**. 
-
-   :::image type="content" source="media/unify-ecommerce-loyalty.PNG" alt-text="unificați sursele de date privind comerțul electronic și loialitatea.":::
-
-1. Selectați **ContactId** ca cheie primară pentru **eCommerceContacts** și **LoyaltyID** ca cheie primară pentru **loyCustomers**.
-
-   :::image type="content" source="media/unify-loyaltyid.PNG" alt-text="Unificați LoyaltyId ca cheie principală.":::
-
-### <a name="match"></a>Corespondență
-
-1. Accesați fila **Potrivire** și selectați **Setare ordine**.
-
-1. În lista derulantă **Primar**, alegeți **eCommerceContacts: eCommerce** ca sursă principală și include toate înregistrările.
-
-1. În lista derulantă **Entitate 2**, alegeți **loyCustomers: LoyaltyScheme** și include toate înregistrările.
-
-   :::image type="content" source="media/unify-match-order.PNG" alt-text="Potriviți unificarea de comerț electronic și loialitate.":::
-
-1. Selectați **Creare regulă nouă**
-
-1. Adăugați prima condiție folosind FullName.
-
-   * Pentru eCommerceContacts selectați **FullName** în meniul derulant.
-   * Pentru loyCustomers selectați **FullName** în lista derulantă.
-   * Selectați lista derulantă **Normalizare** și alegeți **Tip (telefon, nume, adresă, ...)**.
-   * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-1. Introduceți numele **FullName, Email** pentru noua regulă.
-
-   * Adăugați o a doua condiție pentru adresa de e-mail selectând **Adăugați o condiție**
-   * Pentru entitatea eCommerceContacts, alegeți **E-mail** în meniul derulant.
-   * Pentru entitatea loyCustomers, alegeți **E-mail** în lista derulantă. 
-   * Lăsați Normalizarea necompletată. 
-   * Setați **Nivel de precizie**: **De bază** și **Valoare**: **Mare**.
-
-   :::image type="content" source="media/unify-match-rule.PNG" alt-text="Unificați regula de potrivire pentru nume și e-mail.":::
-
-7. Selectați **Salvare** și **Rulare**.
-
-### <a name="merge"></a>Îmbinare
-
-1. Accesați fila **Îmbinare**.
-
-1. Pe **ContactId** pentru entitatea **loyCustomers**, schimbați numele afișat în **ContactIdLOYALTY** pentru a-l diferenția de celelalte ID-uri ingerate.
-
-   :::image type="content" source="media/unify-merge-contactid.PNG" alt-text="redenumiți contactid din ID-ul de loialitate.":::
-
-1. Selectați **Salvați** și **Rulați** pentru a porni procesul de îmbinare.
-
+[!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
 ## <a name="task-3---configure-the-subscription-churn-prediction"></a>Sarcina 3 - Configurați predicția de retragere a abonamentelor
 

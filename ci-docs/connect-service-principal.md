@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 1dd99edc327bd41b0442b390f2e4f8664269f553
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643352"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739177"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
 
@@ -40,7 +40,7 @@ Instrumentele automate care utilizează serviciile Azure ar trebui să aibă în
 
 3. Sub **Gestionare**, selectați **aplicații Enterprise**.
 
-4. Căutați ID-ul aplicației Microsoft`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` cu denumirea `Dynamics 365 AI for Customer Insights`.
+4. Adăugați un filtru pentru **ID aplicație începe cu**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` sau caută numele `Dynamics 365 AI for Customer Insights`.
 
 5. Dacă găsiți o înregistrare potrivită, înseamnă că directorul serviciului există deja. 
    
@@ -109,7 +109,7 @@ Puteți atașa un cont Data Lake Storage în Customer Insights la [stocarea date
 
 1. În panoul din stânga, accesați **Setări** > **Proprietăți**.
 
-1. Examinați **Abonament**, **de resurse**, si **Nume** a contului de stocare pentru a vă asigura că selectați valorile corecte în Customer Insights.
+1. Examinați **Abonament**, **de resurse**, si **Nume** a contului de stocare pentru a vă asigura că selectați valorile potrivite în Customer Insights.
 
 1. În Customer Insights, alegeți valorile pentru câmpurile corespunzătoare atunci când atașați contul de stocare.
 

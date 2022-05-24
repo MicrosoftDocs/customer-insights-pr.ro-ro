@@ -66,12 +66,18 @@
   items:
     - name: Prezentare generală a unificării datelor
       href: data-unification.md
-    - name: Entități de hartă și atribute
+    - name: Selectați câmpurile sursă
       href: map-entities.md
-    - name: Potrivire entități
+    - name: Eliminați înregistrările duplicate
+      href: remove-duplicates.md
+    - name: Condiții de meci
       href: match-entities.md
-    - name: Îmbinare entități
+    - name: Unificați câmpurile clienților
       href: merge-entities.md
+    - name: Examinați unificarea datelor
+      href: review-unification.md
+    - name: Actualizați setările de unificare
+      href: data-unification-update.md
 - name: Îmbogățire date
   items:
     - name: Îmbogățiși profilele clientului
@@ -142,7 +148,7 @@
           href: predict-subscription-churn.md
         - name: Previzionați retragere din tranzacții
           href: predict-transactional-churn.md
-        - name: Analizați sentimentul în feedbackul clienților
+        - name: Analizați sentimentul în feedback-ul clienților
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md
@@ -282,6 +288,8 @@
       href: apis.md
     - name: Referințe API
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
+    - name: Exemple de interogări OData
+      href: odata-examples.md
 - name: Gestionarea consimțământului (previzualizare)
   items:
     - name: Centrul de ajutor

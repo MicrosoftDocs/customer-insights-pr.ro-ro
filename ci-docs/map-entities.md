@@ -1,110 +1,83 @@
 ---
-title: Mapați entitățile și atributele pentru unificarea datelor
-description: Selectați entități, atribute, chei primare și tipuri semantice pentru a asocia datele la profilul de client unificat.
-ms.date: 10/18/2020
+title: Selectați câmpurile sursă pentru unificarea datelor
+description: Primul pas în procesul de unificare este selectarea de entități, atribute, chei primare și tipuri semantice pentru a mapa datele la profilul unificat al clientului.
+recommendations: false
+ms.date: 04/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
-author: adkuppa
-ms.author: adkuppa
-ms.reviewer: mhart
+author: v-wendysmith
+ms.author: mukeshpo
+ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: bebc600e91db471c3cd50eccb5e42be309ff09c9
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643172"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741010"
 ---
-# <a name="map-entities-and-attributes"></a>Entități de hartă și atribute
+# <a name="select-source-fields-for-data-unification"></a>Selectați câmpurile sursă pentru unificarea datelor
 
-**Hartă** este prima etapă a procesului de unificare a datelor. Maparea constă din trei faze:
+[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-- *Selectare entitate*: Identificați entitățile combinabile care duc la un set de date cu informații mai complete despre clienții dvs.
-- *Selectarea atributelor*: Pentru fiecare entitate, identificați coloanele pe care doriți să le combinați și să le reconciliați în fazele de *Potrivire* și *Combinare*. Aceste coloane sunt numite *Atribute*.
-- *Selectarea cheii primare și a tipului semantic*: Pentru fiecare entitate, identificați un atribut pe care doriți să îl definiți ca cheie primară pentru acea entitate și, pentru fiecare atribut, identificați un tip semantic care descrie cel mai bine acel atribut.
+Primul pas în unificare este selectarea entităților și câmpurilor din seturile de date pe care doriți să le unificați. Selectați entitățile care conțin detalii legate de client, cum ar fi numele, adresa, numărul de telefon și e-mailul. Puteți selecta una sau mai multe entități.
 
-Pentru mai multe informații despre fluxul general de unificare a datelor, consultați [Unificare](data-unification.md).
+## <a name="select-entities-and-fields"></a>Selectați entități și câmpuri
 
-## <a name="select-the-first-entities"></a>Selectați primele entități
+1. Mergi la **Date** > **Unifica**.
 
-1. Mergeți la **Date** > **Unificare** > **Mapare**.
+   :::image type="content" source="media/m3_unify_land.png" alt-text="Captură de ecran a paginii de destinație unificate pentru experiența de prima rulare cu Începeți evidențiat.":::
 
-2. Începeți faza de mapare selectând **Selectați entități**.
+1. Selectați **Începeți**.
 
-3. Selectați entitățile și atributele pe care doriți să le utilizați în fazele *potrivire* și *îmbinare*. Puteți selecta atributele necesare individual dintr-o entitate sau puteți include toate atributele dintr-o entitate selectând caseta de selectare **Includeți toate câmpurile** de la nivelul entității. Vă recomandăm să selectați cel puțin două entități pentru a beneficia de procesul de unificare a datelor.
+1. Pe **Câmpurile sursă** pagina, selectați **Selectați entitățile și câmpurile**. The **Selectați entitățile și câmpurile** afișează panoul.
 
-   > [!div class="mx-imgBorder"]
-   > ![Adăugați exemple de entități.](media/data-manager-configure-map-add-entities-example.png "Adăugați exemple de entități")
+1. Selectați cel puțin o entitate.
 
-   În acest exemplu, adăugăm entitățile **eCommerceContacts** și **loyCustomers**. Alegând aceste entități, puteți obține informații despre care dintre clienții de afaceri online sunt membri ai programului de loialitate.
-   
-   Puteți căuta cuvinte cheie în toate atributele și entitățile pentru a selecta atributele necesare pe care doriți să le mapați.
-   
-     > [!div class="mx-imgBorder"]
-   > ![Exemplu de câmpuri de căutare.](media/data-manager-configure-map-search-fields-example.png "Exemplu de câmpuri de căutare")
+1. Pentru fiecare entitate selectată, identificați câmpurile pe care doriți să le utilizați pentru a potrivi înregistrările clienților și câmpurile de inclus în profilul unificat. Aceste câmpuri sunt numite *Atribute*. Puteți selecta atributele necesare în mod individual dintr-o entitate sau puteți include toate atributele dintr-o entitate bifând caseta de selectare la nivel de entitate. Puteți căuta cuvinte cheie în toate atributele și entitățile pentru a selecta atributele necesare pe care doriți să le mapați.
 
-4. Selectați **Aplicare** pentru a vă confirma selecțiile.
+   :::image type="content" source="media/m3_select_entities.png" alt-text="Captură de ecran a entităților și atributelor selectate.":::
+
+   În acest exemplu, adăugăm **Contacte** și **Loialitatea clienților** entitati. Alegând aceste entități, puteți obține informații despre care dintre clienții de afaceri online sunt membri ai programului de loialitate.
+
+1. Selectați **Aplicare** pentru a vă confirma selecțiile. Se afișează entitățile și atributele selectate.
 
 ## <a name="select-primary-key-and-semantic-type-for-attributes"></a>Selectați cheia primară și tipul semantic pentru atribute
 
-După selectarea entităților dvs., pagina **Hartă** listează entitățile selectate pentru examinare. Definiți cheia primară pentru o entitate și identificați tipul semantic pentru un atribut din entitate.
+   :::image type="content" source="media/m3_select_primary.png" alt-text="Captură de ecran a entităților selectate cu cheia primară nu este selectată." lightbox="media/m3_select_primary.png":::
 
-- **Cheia primară**: Selectați un atribut ca cheie primară pentru fiecare entitate. Pentru ca un atribut să fie o cheie primară validă, nu ar trebui să includă valori duplicate, valori lipsă sau valori nule. Atributele tipului de date șir, întreg și GUID sunt acceptate ca chei primare și vor fi afișate într-un câmp din care puteți selecta.
+Pentru fiecare entitate, efectuați următorii pași.
 
-- **Tip de atribut semantic**: Categorii de atribute, cum ar fi adresa de e-mail sau numele. Pentru a utiliza modele de inteligență artificială pentru predicție inteligentă de semantică, economie de timp și îmbunătățirea preciziei, setați **Mapare inteligentă** la **PORNITĂ**. Maparea inteligentă evidențiază recomandările semantice bazate pe inteligență artificială în câmpul **Tip**. Dacă o setați la **OPRIT**, veți vedea recomandările noastre regulate de mapare. Puteți selecta orice tip semantic din lista de opțiuni disponibile și puteți înlocui selecția sugerată.
+1. Alege **Cheia principala**. Cheia primară este un atribut unic pentru entitate. Pentru ca un atribut să fie o cheie primară validă, nu ar trebui să includă valori duplicate, valori lipsă sau valori nule. Atributele tipului de date șir, întreg și GUID sunt acceptate ca chei primare.
 
-> [!div class="mx-imgBorder"]
-> ![Tipul de atribut și predicție semantică.](media/data-manager-configure-map-add-attributes-semantic-prediction.png "Tipul de atribut și predicție semantică")
+1. Pentru a utiliza modele AI pentru predicție inteligent de semantică, economisiți timp și îmbunătățiți acuratețea, asigurați-vă că **Cartografiere inteligentă** este pornit. Maparea inteligentă evidențiază recomandările semantice bazate pe inteligență artificială în câmpul **Tip**. Puteți suprascrie selecția sugerată alegând orice tip semantic din lista de opțiuni disponibile.
 
-Adăugarea unui tip semantic particularizat este de asemenea posibilă. Selectați câmpul tip pentru un atribut și introduceți numele dvs. de tip semantic particularizat. Astfel, puteți modifica tipurile de atribute care au fost identificate automat de sistem.
+1. Pentru fiecare atribut, alegeți o semantică **Tip** care descrie cel mai bine acel atribut, cum ar fi numele, orașul sau adresa de e-mail.
 
-Toate atributele pentru care un tip semantic este identificat automat sunt grupate în secțiunea **Examinați câmpurile mapate**. Examinați aceste atribute și tipurile lor semantice, deoarece acestea vor fi utilizate pentru a combina entitățile dvs. în etapa de îmbinare a unificării datelor.
+   > [!NOTE]
+   > Un câmp ar trebui să fie mapat la tipul semantic *Persoană.Nume complet* pentru a completa numele clientului în cardul de client. În caz contrar, cărțile client vor apărea fără nume.
 
-Atributele care nu sunt mapate automat la un tip semantic sunt grupate în secțiunea **Definiți datele în câmpurile nemapate**. Selectați câmpul de tip semantic pentru atributele nemapate sau introduceți numele tipului de atribut personalizat.
+   1. Pentru a modifica un tip de atribut identificat de sistem, selectați un alt tip. Dacă tipul nu există, creați un tip semantic personalizat selectând **Tip** câmp pentru atribut și introduceți numele tipului semantic personalizat.
 
-> [!div class="mx-imgBorder"]
-> ![Cheie primară și tip de atribut.](media/data-manager-configure-map-add-attributes.png "Cheie primară și tip de atribut")
+   1. Pentru a adăuga un atribut care conține o adresă URL la imaginile de profil sau siglele disponibile public, selectați entitatea și câmpul care conține adresa URL. În **Tip** câmp, introduceți următoarele:
+      - Pentru o persoană: Person.ProfileImage
+      - Pentru o organizație: Organization.LogoImage
 
-> [!NOTE]
-> Un câmp ar trebui să fie mapat la tipul semantic Person.FullName pentru a completa numele clientului pe cardul clientului. În caz contrar, cărțile client vor apărea fără nume. 
+   1. Pentru un atribut de nume de cont, introduceți „Organization.Name” în **Tip** camp.
 
-## <a name="add-and-remove-attributes-and-entities"></a>Adăugați și eliminați atribute și entități
+1. Examinați atributele în care un tip semantic este identificat automat. Aceste atribute sunt enumerate sub **Examinați câmpurile mapate**. Numai atributele cu același tip pot fi combinate în **Câmpuri unificate pentru clienți** Etapa. Tipurile semantice sunt folosite pentru a sugera automat perspective. Asigurați-vă că tipurile pe care le-ați ales sunt consecvente în toate entitățile selectate.
 
-1. Pe **Unificare** > **Mapare**, selectați **Editați câmpurile**.
+1. Pentru atributele care nu sunt mapate automat la un tip semantic, selectați un câmp de tip semantic, introduceți numele tipului de atribut personalizat sau lăsați-le nemapate. Aceste atribute sunt enumerate sub **Definiți datele în câmpurile nemapate**.
 
-2. În panoul **Editați câmpurile**, adăugați sau eliminați atribute și entități. Folosiți căutarea sau derulați pentru a găsi și selecta atributele și entitățile de interes. Nu puteți elimina un atribut sau o entitate dacă au fost deja potrivite.
+1. După parcurgerea pașilor pentru fiecare entitate, selectați **Salvați câmpurile sursă**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Adăugare sau eliminare atribute.](media/configure-data-map-edit.png "Adăugare sau eliminare atribute")
+1. Selectați **Următorul**.
 
-3. Selectați **Se aplică**.
-
-## <a name="add-images-to-profiles"></a>Adăugați imagini la profiluri
-
-Dacă o entitate conține URL-uri pentru imagini de profil sau logo-uri disponibile public, le puteți adăuga la profilul de client unificat.
-
-Selectați entitatea și găsiți câmpul care conține adresa URL a imaginii de profil. În câmpul de intrare **Tip**, introduceți manual valoarea următoare: 
-- Pentru o persoană: Person.ProfileImage
-- Pentru o organizație: Organization.LogoImage
-
-Continuați cu pașii de unificare și asigurați-vă că atributul care conține adresa URL a imaginii este, de asemenea, adăugat în pasul [Îmbinare](merge-entities.md).
-
-## <a name="set-attributes-for-organizations"></a>Setați atribute pentru organizații
-
-Pentru organizații (previzualizare), tipul de atribut ar trebui să fie asociat cu „Organization.Name”
-> [!div class="mx-imgBorder"]
-> ![Cheie primară și tip de atribut B-la-B.](media/configure-data-map-edit-b2b.png "Cheie primară și tip de atribut B-la-B")
-
-## <a name="next-step"></a>Pasul următor
-
-Ca parte a procesului de unificare a datelor, accesați pagina **Potrivire**. Vizita [**Potrivire**](match-entities.md) pentru a vă informa cu privire la această fază.
-
-> [!TIP]
-> Consultați videoclipul următor: [Introducere: Crearea unui profil de client unificat](https://youtu.be/oBfGEhucAxs).
-
+> [!div class="nextstepaction"]
+> [Pasul următor: Eliminați duplicatele](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

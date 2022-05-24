@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: bcc50c6fa8f8e2a66ef6164bfa9022e068c0e374
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
+ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643061"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8739223"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -27,7 +27,7 @@ Dynamics 365 Customer Insights se conectează la date dintr-un set larg de surse
 
 ## <a name="add-a-data-source"></a>Adăugați o sursă de date
 
-Consultați articolele detaliate pentru cum să adăugați un sursă de date, în funcție de opțiunea pe care o alegeți.
+Consultați articolele detaliate pentru a afla cum să adăugați un sursă de date, în funcție de opțiunea pe care o alegeți.
 
 Puteți adăuga următoarele surse de date:
 
@@ -35,9 +35,6 @@ Puteți adăuga următoarele surse de date:
 - [Dintr-un folder Common Data Model](connect-common-data-model.md)
 - [Din propriul Microsoft Dataverse lake](connect-dataverse-managed-lake.md)
 - [De la un Azure Synapse Analytics Bază de date](connect-synapse.md)
-
-> [!NOTE]
-> Dacă utilizați versiunea de încercare, secțiunea metode de import include a **Biblioteca de date Customer Insights** opțiune. Alegeți această opțiune pentru a selecta un set de date eșantion disponibil pentru diverse industrii. Pentru mai multe informații, vezi [Dynamics 365 Customer Insights proces](trial-signup.md).
 
 ## <a name="add-data-from-on-premises-data-sources"></a>Adăugați date din sursele de date locale
 

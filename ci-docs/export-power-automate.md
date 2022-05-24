@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 409792bc3f12fca451ef038e3300758bdf9ecf3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d22c4c785695b23a257a89f1ffa519fdc18b443e
+ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643695"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "8741194"
 ---
 # <a name="power-automate-connector-preview"></a>Conector Power Automate (previzualizare)
 
@@ -25,14 +25,14 @@ Declanșați evenimente specifice care să aibă loc automat atunci când datele
 
 ## <a name="power-automate-triggers"></a>declanșatoare Power Automate
 
-Utilizați declanșatoarele pentru a crea fluxuri cloud și pentru a automatiza sarcini repetitive, cum ar fi notificări sau acțiuni mai avansate. 
+Utilizați declanșatoarele pentru a crea fluxuri cloud și pentru a automatiza sarcini repetitive, cum ar fi notificări sau acțiuni mai avansate.
 
-- Se declanșează atunci când o reîmprospătare pentru o sursă de date eșuează. 
+- Se declanșează atunci când o reîmprospătare pentru o sursă de date eșuează.
 - Se declanșează atunci când o reîmprospătare pentru o sursă de date reușește.
 - Se declanșează atunci când un prag este trecut pe un segment. Declanșatorul se limitează la trecerea peste prag.
 - Se declanșează atunci când un prag este trecut pe o măsură de business. Numai măsurile de business fără o dimensiune sunt acceptate. Declanșatorul se limitează la trecerea peste prag.
 - Declanșați când se finalizează o reîmprospătare completă (surse de date, segmente, măsuri, ...).
-- Se declanșează când este finalizată o reîmprospătare a procesului de unificare (hartă, potrivire, îmbinare).
+- Se declanșează când este finalizată o reîmprospătare a procesului de unificare.
 
 [Configurați declanșatoarele în Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 

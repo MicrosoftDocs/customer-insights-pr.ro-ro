@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 1fe8d6e8098831ecc8ff28e571340c56a654de6d
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: 355d52eabde90e0764817cf479821264ebb2e5eb
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739223"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800481"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -76,7 +76,7 @@ Pentru a actualiza o sursă de date la cerere, urmați acești pași:
 
 1. Accesați **Date** > **Surse de date**.
 
-2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o reîmprospătați și selectați **Reîmprospătare** din lista derulantă.
+2. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl reîmprospătați și să îl selectați **Reîmprospăta** din lista derulantă.
 
 3. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
 
@@ -86,7 +86,7 @@ Pentru a actualiza o sursă de date la cerere, urmați acești pași:
 
 1. Accesați **Date** > **Surse de date**.
 
-2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o eliminați și selectați **Ștergți** din meniul derulant.
+2. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl eliminați și să îl selectați **Șterge** din meniul drop-down.
 
 3. Confirmați ștergerea.
 

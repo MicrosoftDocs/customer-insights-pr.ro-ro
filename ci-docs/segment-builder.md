@@ -13,12 +13,12 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: c8e9e4976ade36c1c3c4f688a667b329bfde6e3e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: e1a9cd0e3c0347285026d937ca7d951a602e7160
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643555"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800111"
 ---
 # <a name="create-segments"></a>Creare segmente
 
@@ -134,8 +134,9 @@ Când creați un segment, puteți salva o schiță. În etapa de schiță, un se
 > - Generatorul de segmente nu va sugera valori valide de la entități atunci când setează operatorii pentru condiții. Puteți accesa **Date** > **Entități** și descărcați datele entității pentru a vedea ce valori sunt disponibile.
 > - Condițiile bazate pe date vă permit să comutați între datele fixe și un interval de date flotant.
 > - Dacă aveți mai multe reguli pentru segmentul dvs., regula pe care o modificați are o linie albastră verticală lângă ea.
-> - Puteți muta reguli și condiții în alte locuri din definiția segmentului. Selectați [...] lângă o regulă sau condiție și alegeți cum și unde să o mutați.
+> - Puteți muta reguli și condiții în alte locuri din definiția segmentului. Selectați elipsa verticală (&vellip;) lângă o regulă sau o condiție și alegeți cum și unde să o mutați.
 > - Controalele **Anulare** și **Refacere** din bara de comenzi vă permit să reveniți la modificări.
+> - După crearea unui segment, unele segmente vă permit [urmăriți utilizarea segmentului](segments.md#track-usage-of-a-segment).
 
 ## <a name="quick-segments"></a>Segmente rapide
 

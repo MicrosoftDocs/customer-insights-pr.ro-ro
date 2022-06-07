@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 50258365c3134c588aa79ec72c66d0de329e0ff1
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4db97ec02eb96662d30a8536ea42372f81f318d2
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643361"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800194"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la a Power Query sursă de date
 
@@ -43,7 +43,7 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 
 1. Selectați **Transformați datele**. În acest pas, veți adăuga entități la sursă de date. Entitățile sunt seturi de date. Dacă aveți o bază de date care include mai multe seturi de date, fiecare set de date este propria entitate.
 
-1. The **Power Query - Editați interogările** dialog vă permite să revizuiți și să rafinați datele. Entitățile identificate de sisteme în sursa de date selectată apar în panoul din stânga.
+1. The **Power Query - Editați interogări** dialog vă permite să revizuiți și să rafinați datele. Entitățile identificate de sisteme în sursa de date selectată apar în panoul din stânga.
 
    > [!div class="mx-imgBorder"]
    > ![Editați interogările de dialog.](media/data-manager-configure-edit-queries.png "Editați interogările de dialog")
@@ -57,7 +57,7 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 
 1. Pentru a adăuga entități suplimentare la sursă de date în fișierul **Editați interogările** dialog, accesați **Acasă** și selectați **Obțineți date**.
 
-1. Selectați **salva** în partea de jos a Power Query fereastra pentru a salva transformările. După salvare, veți găsi sursa de date la **Date** > **Surse de date**.
+1. Selectați **Salvați** în partea de jos a Power Query fereastra pentru a salva transformările. După salvare, veți găsi sursa de date la **Date** > **Surse de date**.
 
 1. Pe pagina **Surse de date**, veți observa că noua sursă de date este în stare **Se reîmprospătează**.
 
@@ -76,16 +76,16 @@ Conectori cu o bifă în **Informații despre clienți (fluxuri de date)** coloa
 
 1. Accesați **Date** > **Surse de date**.
 
-2. Selectați elipsa verticală de lângă sursă de date pe care doriți să o modificați și selectați **Editaț** din meniul derulant.
+2. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să-l modificați și selectați **Editați | ×** din meniul drop-down.
 
    > [!div class="mx-imgBorder"]
    > ![Opțiunea editare.](media/edit-option-data-sources.png "Opțiunea editare")
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
    
-3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
+3. Aplicați modificările și transformările dvs. în **Power Query - Editați interogări** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
 
-4. Selectați **salva** în Power Query după finalizarea modificărilor pentru a salva modificările.
+4. Selectați **Salvați** în Power Query după finalizarea modificărilor pentru a salva modificările.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

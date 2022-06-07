@@ -6,24 +6,23 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 45c59465771e4ad25ed36d5da1568e67b94cf994
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653822"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833323"
 ---
 # <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Lucrați cu profiluri de clienți unificate în Dynamics 365 Marketing
 
-[Dynamics 365 Marketing](/dynamics365/marketing/overview) crește experiențele clienților, permițându-vă să orchestrați călătorii personalizate în toate punctele de contact pentru a consolida relațiile și a câștiga loialitate. Aplicația Dynamics 365 Marketing funcționează perfect cu Dynamics 365 Sales,Dynamics 365 Customer Insights,Microsoft Teams, și alte produse și vă permite să luați decizii mai rapide și mai bune folosind puterea datelor și a inteligenței artificiale.
+[Dynamics 365 Marketing](/dynamics365/marketing/overview) crește experiențele clienților, permițându-vă să orchestrați călătorii personalizate în toate punctele de contact pentru a consolida relațiile și a câștiga loialitate. Aplicația Dynamics 365 Marketing funcționează perfect cu Dynamics 365 Sales,Dynamics 365 Customer Insights,Microsoft Teams și alte produse și vă permite să luați decizii mai rapide și mai bune folosind puterea datelor și a inteligenței artificiale.
 
 Conectând datele Customer Insights cu Marketingul, puteți:
 
 - Vizați profiluri și segmente de clienți unificate. Acest lucru vă permite să implicați fiecare client, indiferent de locația datelor clientului.
 - Bazați conținut dinamic (cum ar fi jetoane personalizate) în e-mailuri, SMS și notificări push cu privire la măsuri precum statutul de loialitate, data de reînnoire a abonamentului, cont principal sau orice altă măsură pe care ați capturat-o în profilul unificat Customer Insights.
-- Încărcați date din Marketing în Customer Insights și combinați-le cu datele clienților din alte surse.
+- Încărcați date din Marketing în Customer Insights și combinați-le cu date despre clienți din alte surse.
 - Aplicați instrumente de curățare, îmbogățire și potrivire neclară a datelor Customer Insights.
-
 
 ## <a name="use-rich-customer-profiles-in-real-time-marketing"></a>Utilizați profiluri bogate de clienți în marketing în timp real
 
@@ -41,4 +40,4 @@ Află mai multe: [Utilizați segmente din Dynamics 365 Customer Insights cu Dyna
 
 Nu sunteți limitat la stocarea în cloud dacă doriți să utilizați datele Customer Insights cu Marketing. Dacă îl ai deja pe al tău Azure Data Lake Storage configurat, vă puteți conecta cu Customer Insights, apoi partajați datele cu aplicația de marketing exact așa cum ați face cu o configurație bazată pe cloud.
 
-Află mai multe: [Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)
+Află mai multe: [Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview)

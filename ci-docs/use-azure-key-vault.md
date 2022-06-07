@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 9eb06a1190fe4e8012ecd3d6742b8b3f5f4d6349
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
+ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653492"
+ms.lasthandoff: 05/17/2022
+ms.locfileid: "8763594"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Aduceți-vă propriul seif de chei Azure (versiune preliminară)
 
@@ -89,9 +89,9 @@ Următoarele permisiuni sunt acordate pentru Customer Insights pe un seif de che
 
 | Tipul        | Permisiuni          |
 | ----------- | -------------------- |
-| Tastă         | [Obțineți Chei](/rest/api/keyvault/get-keys), [Obțineți Cheia](/rest/api/keyvault/get-key)                                 |
-| Secretă      | [Obțineți Secrete](/rest/api/keyvault/get-secrets), [Obțineți Secret](/rest/api/keyvault/get-secret)                     |
-| Certificat | [Obțineți certificate](/rest/api/keyvault/get-certificates), [Obțineți certificat](/rest/api/keyvault/get-certificate) |
+| Tastă         | [Obțineți Chei](/rest/api/keyvault/keys/get-keys/get-keys), [Obțineți Cheia](/rest/api/keyvault/keys/get-key/get-key)                                 |
+| Secretă      | [Obțineți Secrete](/rest/api/keyvault/secrets/get-secrets/get-secrets), [Obțineți Secret](/rest/api/keyvault/secrets/get-secret/get-secret)                     |
+| Certificat | [Obțineți certificate](/rest/api/keyvault/certificates/get-certificates/get-certificates), [Obțineți certificat](/rest/api/keyvault/certificates/get-certificate/get-certificate) |
 
 Valorile precedente sunt minime pentru listare și citire în timpul execuției.
 
@@ -101,7 +101,7 @@ Rolurile Key Vault Reader și Key Vault Secrets User vor fi adăugate pentru Cus
 
 ## <a name="recommendations"></a>Recomandări
 
-- Utilizați un seif de chei separat sau dedicat, care conține numai secretele necesare pentru Customer Insights. Citiți mai multe despre de ce [se recomandă seifuri de chei separate](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
+- Utilizați un seif de chei separat sau dedicat care conține numai secretele necesare pentru Customer Insights. Citiți mai multe despre de ce [se recomandă seifuri de chei separate](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
 
 - Urmați [cele mai bune practici pentru utilizarea Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) pentru controlul opțiunilor de acces, backup, audit și recuperare.
 

@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu
 description: Utilizați un principal de serviciu Azure pentru a vă conecta la propriul data lake.
-ms.date: 04/26/2022
+ms.date: 05/31/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,22 +11,23 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 776eee79c25edbd40ed119510a314f5126933c3e
-ms.sourcegitcommit: a50c5e70d2baf4db41a349162fd1b1f84c3e03b6
+ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8739177"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833412"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
 
-Acest articol discută cum să vă conectați Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de chei de cont de stocare. 
+Acest articol discută cum să vă conectați Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de chei de cont de stocare.
 
 Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Puteți utiliza principalele de servicii în siguranță [adăugați sau editați un dosar Common Data Model ca sursă de date](connect-common-data-model.md) sau [creați sau actualizați un mediu](create-environment.md).
 
 > [!IMPORTANT]
+>
 > - Contul Data Lake Storage care va folosi principalul serviciu trebuie să fie Gen2 și să aibă [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Conturile de stocare Azure Data Lake Gen1 nu sunt acceptate.
-> - Aveți nevoie de permisiuni de administrator pentru abonamentul Azure pentru a crea un principal de serviciu.
+> - Aveți nevoie de permisiuni de administrator pentru entitate găzduită Azure pentru a crea un principal de serviciu.
 
 ## <a name="create-an-azure-service-principal-for-customer-insights"></a>Creați un director de serviciu Azure pentru Customer Insights
 
@@ -38,29 +39,15 @@ Instrumentele automate care utilizează serviciile Azure ar trebui să aibă în
 
 2. Din **Servicii Azure**, selectați **Azure Active Directory**.
 
-3. Sub **Gestionare**, selectați **aplicații Enterprise**.
+3. Sub **Administra**, Selectați **Aplicația Microsoft**.
 
 4. Adăugați un filtru pentru **ID aplicație începe cu**`0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff` sau caută numele `Dynamics 365 AI for Customer Insights`.
 
-5. Dacă găsiți o înregistrare potrivită, înseamnă că directorul serviciului există deja. 
-   
+5. Dacă găsiți o înregistrare potrivită, înseamnă că directorul serviciului există deja.
+
    :::image type="content" source="media/ADLS-SP-AlreadyProvisioned.png" alt-text="Captură de ecran care arată un director de serviciu existent.":::
-   
-6. Dacă nu se returnează rezultate, creați o nouă entitate principală de serviciu.
 
-### <a name="create-a-new-service-principal"></a>Creare pentru o nouă entitate principală de serviciu
-
-1. Instalați cea mai nouă versiune a Azure Active Directory PowerShell for Graph. Pentru mai multe informații, accesați [Instalare Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
-
-   1. Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.
-   
-   1. În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
-
-2. Creați directorul de servicii pentru Customer Insights cu modul Azure AD PowerShell.
-
-   1. În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. A inlocui *[ID-ul dvs. director]* cu ID-ul directorului real al abonamentului Azure în care doriți să creați principalul serviciu. Parametrul numelui mediului, `AzureEnvironmentName`, este opțional.
-  
-   1. Introduceți `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Această comandă creează principalul serviciu pentru Customer Insights pentru abonamentul Azure selectat. 
+6. Dacă nu se returnează niciun rezultat, puteți [creați un nou principal de serviciu](#create-a-new-service-principal). În majoritatea cazurilor, acesta există deja și trebuie doar să acordați permisiuni principalului serviciu pentru a accesa contul de stocare.
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Acordați permisiuni entității principale de serviciu pentru a accesa contul de stocare
 
@@ -77,9 +64,9 @@ Accesați portalul Azure pentru a acorda permisiuni principalului serviciu pentr
 1. Pe panoul **Adăugați atribuirea de roluri**, setați următoarele proprietăți:
    - Rol: **Contribuitor de date blob de stocare**
    - Atribuiți accesul la: **utilizator, grup sau entitate principală de serviciu**
-   - Selectați membrii: **Dynamics 365 AI pentru Customer Insights** (cel [principalul serviciului](#create-a-new-service-principal) ați creat mai devreme în această procedură)
+   - Selectați membri: **Dynamics 365 AI pentru Customer Insights** (cel [principalul serviciului](#create-a-new-service-principal) ați căutat mai devreme în această procedură)
 
-1.  Selectați **Revizuire + atribuire**.
+1. Selectați **Revizuire + atribuire**.
 
 Poate dura până la 15 minute pentru propagarea schimbărilor.
 
@@ -91,7 +78,7 @@ Puteți atașa un cont Data Lake Storage în Customer Insights la [stocarea date
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com), conectați-vă la abonament și deschideți contul de stocare.
 
-1. În panoul din stânga, accesați **Setări** > **Proprietăți**.
+1. În panoul din stânga, accesați **Setări** > **Puncte finale**.
 
 1. Copiați valoarea ID-ului resursei contului de stocare.
 
@@ -109,11 +96,24 @@ Puteți atașa un cont Data Lake Storage în Customer Insights la [stocarea date
 
 1. În panoul din stânga, accesați **Setări** > **Proprietăți**.
 
-1. Examinați **Abonament**, **de resurse**, si **Nume** a contului de stocare pentru a vă asigura că selectați valorile potrivite în Customer Insights.
+1. Examinați **Abonament**, **de resurse**, si **Nume** a contului de stocare pentru a vă asigura că selectați valorile corecte în Customer Insights.
 
 1. În Customer Insights, alegeți valorile pentru câmpurile corespunzătoare atunci când atașați contul de stocare.
 
 1. Continuați cu pașii rămași din Customer Insights pentru a atașa contul de stocare.
 
+### <a name="create-a-new-service-principal"></a>Creare pentru o nouă entitate principală de serviciu
+
+1. Instalați cea mai nouă versiune a Azure Active Directory PowerShell for Graph. Pentru mai multe informații, accesați [Instalare Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
+
+   1. Pe computer, apăsați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.
+
+   1. În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
+
+2. Creați directorul de servicii pentru Customer Insights cu modul Azure AD PowerShell.
+
+   1. În fereastra PowerShell, introduceți `Connect-AzureAD -TenantId "[your Directory ID]" -AzureEnvironmentName Azure`. A inlocui *[ID-ul dvs. director]* cu ID-ul directorului real al abonamentului Azure în care doriți să creați principalul serviciu. Parametrul numelui mediului, `AzureEnvironmentName`, este opțional.
+  
+   1. Introduceți `New-AzureADServicePrincipal -AppId "0bfc4568-a4ba-4c58-bd3e-5d3e76bd7fff" -DisplayName "Dynamics 365 AI for Customer Insights"`. Această comandă creează principalul serviciu pentru Customer Insights pentru abonamentul Azure selectat.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

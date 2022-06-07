@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: f392c5cc5ac88a971565f0ccaf309ce89ce12660
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643199"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800435"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
 
@@ -92,7 +92,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 ## <a name="edit-a-workflow"></a>Editați un flux de lucru
 
-1. Pe pagina **Modele particularizate**, selectați elipsele verticale din coloana **Acțiuni** de lângă un flux de lucru pe care l-ați creat anterior și selectați **Editare**.
+1. Pe **Modele personalizate** pagina, selectați elipsa verticală (&vellip;) în **Acțiuni** coloana de lângă un flux de lucru pe care l-ați creat și selectat anterior **Editați | ×**.
 
 1. Puteți actualiza numele recunoscut al fluxului de lucru în câmpul **Nume afișat**, dar nu puteți schimba serviciul web configurat sau canalul. Selectați **Următorul**.
 
@@ -108,7 +108,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 ## <a name="run-a-workflow"></a>Executarea unui flux de lucru
 
-1. Pe pagina **Modele particularizate**, selectați elipsele verticale din coloana **Acțiuni** de lângă un flux de lucru pe care l-ați creat anterior.
+1. Pe **Modele personalizate** pagina, selectați elipsa verticală (&vellip;) în **Acțiuni** coloană de lângă un flux de lucru pe care l-ați creat anterior.
 
 1. Selectare rând **Rulare**.
 
@@ -116,7 +116,7 @@ Fluxul dvs. de lucru rulează automat cu fiecare reîmprospătare planificată. 
 
 ## <a name="delete-a-workflow"></a>Ștergeți un flux de lucru
 
-1. Pe pagina **Modele particularizate**, selectați elipsele verticale din coloana **Acțiuni** de lângă un flux de lucru pe care l-ați creat anterior.
+1. Pe **Modele personalizate** pagina, selectați elipsa verticală (&vellip;) în **Acțiuni** coloană de lângă un flux de lucru pe care l-ați creat anterior.
 
 1. Selectați **Ștergere** și confirmați ștergerea.
 

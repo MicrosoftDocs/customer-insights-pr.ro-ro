@@ -12,12 +12,12 @@ searchScope:
 - ci-predictions
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: e2cace3547a0b584dbf26ae5eecf86f3b256649f
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 57ef46416db0a11cde9f9d7650a0b502a01bf0ab
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740734"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800665"
 ---
 # <a name="complete-your-partial-data-with-predictions-deprecated"></a>Completați datele parțiale cu predicții (învechit)
 
@@ -95,7 +95,7 @@ Ca parte a acestui flux,veți alege un atribut specific pentru a vă defini segm
 
 2. Selectați predicția pe care doriți să o revizuiți.
 
-3. Selectați cele trei puncte de suspensie din coloana **Acțiuni** și alegeți **Vizualizare**.
+3. Selectați elipsa verticală (&vellip;) în **Acțiuni** coloană și alegeți **Vedere**.
 
 4. Veți vedea o serie de puncte de date în vizualizarea predicției dvs.
    > [!div class="mx-imgBorder"]
@@ -122,7 +122,7 @@ După ce ați creat un predicție, puteți personaliza modelul în AI Builder pe
 
 2. Selectați predicția pe care doriți să o editați.
 
-3. Selectați cele trei puncte de suspensie din coloana **Acțiuni** și alegeți **Vizualizare**.
+3. Selectați elipsa verticală (&vellip;) în **Acțiuni** coloană și alegeți **Vedere**.
 
 4. Selectați **Personalizați în AI Builder**.
 
@@ -139,7 +139,7 @@ Următoarea execuție a predicției dvs. va utiliza modelul actualizat pe care l
 
 2. Selectați predicția pe care doriți să o ștergeți.
 
-3. Selectați cele trei puncte de suspensie din coloana **Acțiuni** și alegeți **Ștergere**.
+3. Selectați elipsa verticală (&vellip;) în **Acțiuni** coloană și alegeți **Șterge**.
 
 4. Confirmați ștergerea.
 
@@ -153,7 +153,7 @@ Dacă nu puteți completa procesul Dataverse atașat din cauza unei erori, pute�
 - Permisiunile pentru aplicații nu sunt acordate.
     1. Salt la [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com).
     1. Selectați **Medii**.
-    1. Selectați elipsele de lângă mediul în care doriți să adăugați permisiunea și selectați **Setări**.
+    1. Selectați elipsa verticală (&vellip;) lângă mediul la care doriți să adăugați permisiunea și să selectați **Setări**.
     1. Extindeți **Utilizatori + permisiuni** și selectați **Utilizatori**.
     1. Selectați **Nou** și selectați **Utilizator**.
     1. Selectați **Utilizator aplicație** dacă nu este deja selectat și introduceți următoarele informații:

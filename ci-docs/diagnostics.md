@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 03169f0218dfad55cf20ecaf1c1596c652e5f601
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
+ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755277"
+ms.lasthandoff: 05/26/2022
+ms.locfileid: "8807596"
 ---
 # <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
 
@@ -38,7 +38,7 @@ Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite ur
 
 - Ai un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Tu ai [Administrator](permissions.md#admin) permisiunile din Customer Insights.
-- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa de destinație pe Azure. Resursa poate fi un cont Azure Storage, un Azure Event Hub sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal).
+- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa de destinație pe Azure. Resursa poate fi o Azure Data Lake Storage cont, un hub de evenimente Azure sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal). Această permisiune este necesară în timpul configurării setărilor de diagnosticare în Customer Insights, poate fi modificată după configurarea cu succes.
 - [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics îndeplinite.
 - Ai cel puțin **Cititor** rol pe grupul de resurse din care face parte resursa.
 
@@ -102,7 +102,7 @@ Principalul serviciului Customer Insights primește **Colaborator cont de stocar
 
 ### <a name="event-hub"></a>Hub de evenimente
 
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Hub-uri de evenimente sub spațiul de nume selectat:
 
 - `insight-logs-audit` conținând **evenimente de audit**
 - `insight-logs-operational` conținând **evenimente operaționale**
@@ -161,7 +161,7 @@ The`identity` Obiectul JSON are următoarea structură
 | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `Authorization.UserRole`      | Rol atribuit utilizatorului sau aplicației. Pentru mai multe informații, vezi [permisiunile utilizatorului](permissions.md).                                     |
 | `Authorization.RequiredRoles` | Roluri necesare pentru a efectua operația. `Admin` rolului i se permite să facă toate operațiunile.                                                    |
-| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și de Azure Active Directory configurație. |
+| `Claims`                      | Revendicări ale utilizatorului sau al aplicației JSON web token (JWT). Proprietățile revendicării variază în funcție de organizație și Azure Active Directory configurație. |
 
 #### <a name="api-properties-schema"></a>Schema proprietăților API
 

@@ -1,19 +1,19 @@
 ---
 title: Sursă de date îmbogățire
 description: Îmbogățiți sursele de date înainte de a trece prin procesul de unificare a datelor.
-ms.date: 03/02/2022
+ms.date: 05/20/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: d1e14d2d4e718d71ccbd2afd259a350ad5c9e69a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 1225482c4bf432ed747537b2c9bec9ab0e692a51
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755701"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800296"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (previzualizare)
 
@@ -27,7 +27,7 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 
 1. Accesați **Date** > **Surse de date**.
 
-1. Selectați punctele de suspensie verticale de lângă sursă de date pe care doriți să o îmbogățiți și selectați **Îmbogăţi**.
+1. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl îmbogățiți și să îl selectați **Îmbogăţi**.
 
    :::image type="content" source="media/data_sources_enrich_discover.png" alt-text="Pagina de îmbogățire a surselor de date.":::
 
@@ -41,11 +41,12 @@ Următoarele îmbogățiri sunt disponibile în prezent pentru sursele de date. 
 
 - [Adrese optimizate](enrichment-enhanced-addresses.md)
 - [Date optimizate despre firmă](enrichment-enhanced-company-data.md)
+- [Date de identitate de la LiveRamp](enrichment-liveramp.md)
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestionați îmbogățirile existente sursă de date
 
 Accesați fila **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate.
 
-Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta punctele de suspensie (...) pe un element din listă pentru a vedea opțiunile. Dacă ați configurat mai multe îmbogățiri, puteți utiliza caseta de căutare pentru a o găsi rapid.
+Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta elipsa verticală (&vellip;) pe un element din listă pentru a vedea opțiunile. Dacă ați configurat mai multe îmbogățiri, puteți utiliza caseta de căutare pentru a o găsi rapid.
 
 Puteți vizualiza, edita, rula sau șterge o îmbogățire sursă de date. Pentru mai multe informații, vezi [Gestionați îmbogățirile existente](enrichment-hub.md).

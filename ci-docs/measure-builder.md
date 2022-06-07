@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-measure-builder
 - customerInsights
-ms.openlocfilehash: 6370df0287362a5512a837cdb588f5d20ef03d3b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d003d054145343cc2feeefeeee413810df43185a
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643766"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800341"
 ---
 # <a name="use-measure-builder-to-create-measures-from-scratch"></a>Utilizați generatorul de măsuri pentru a crea măsuri de la zero
 
@@ -88,7 +88,7 @@ Puteți crea măsuri la nivelul clienților individuali (atribut client, măsura
 
 1. Pentru a adăuga mai multe calcule pentru măsură, selectați **Calcul nou**. Puteți utiliza entități pe aceeași cale de entitate numai pentru noi calcule. Mai multe calcule vor fi afișate drept coloane dnoi în entitatea de ieșire de măsurare.
 
-1. Selectați **...** asupra calculului la **Duplicat**, **Redenumiți**, sau **Eliminați** un calcul dintr-o măsură.
+1. Selectați elipsa verticală (&vellip;) asupra calculului la **Duplicat**, **·**, sau **Elimina** un calcul dintr-o măsură.
 
 1. În zona **Previzualizare**, veți vedea schema de date a entității de ieșire a măsurii, inclusiv filtre și dimensiuni. Previzualizarea reacționează dinamic la schimbările din configurație.
 
@@ -158,7 +158,7 @@ Puteți crea măsuri la nivelul conturilor individuale (măsură client) sau la 
    1. Selectați **Calea relației** și alegeți calea entității care ar trebui utilizată pentru a vă identifica măsura. Dacă există doar o singură cale către entitatea *Client*, acest control nu se va afișa.
    1. Selectați **Terminat** pentru a aplica selecția dvs.
 
-1. Selectați **...** asupra calculului la **Duplicat**, **Redenumiți**, sau **Eliminați** un calcul dintr-o măsură.
+1. Selectați elipsa verticală (&vellip;) asupra calculului la **Duplicat**, **·**, sau **Elimina** un calcul dintr-o măsură.
 
 1. În zona **Previzualizare**, veți vedea schema de date a entității de ieșire a măsurii, inclusiv filtre și dimensiuni. Previzualizarea reacționează dinamic la schimbările din configurație.
 

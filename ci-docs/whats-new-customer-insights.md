@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 386198c838929a20e136288fffb1015707654d8d
-ms.sourcegitcommit: 9f256af5c4f7e99305bf09087f7ec05eebeae6a0
-ms.translationtype: MT
+ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
+ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "8700952"
+ms.lasthandoff: 06/01/2022
+ms.locfileid: "8833645"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Ce este nou în Dynamics 365 Customer Insights
 
@@ -58,6 +58,7 @@ LiveRamp oferă rezoluția identității și consolidarea datelor clienților. P
 Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (Previzualizare)](enrichment-liveramp.md).
 
 ### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizați segmente și măsuri cu etichete și filtre
+
 Dacă organizația dvs. menține o mulțime de segmente sau măsuri, găsirea celui potrivit poate fi uneori o provocare. Această nouă funcție vă permite să organizați liste folosind etichete și coloane. Vă ajută să găsiți date rapid și ușor și să personalizați vizualizările.
 
 Pentru mai multe informații, vezi [Lucrați cu etichete și coloane](work-with-tags-columns.md).
@@ -65,9 +66,9 @@ Pentru mai multe informații, vezi [Lucrați cu etichete și coloane](work-with-
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Activați partajarea datelor cu Dataverse atunci când utilizați propriul cont de stocare
 
 Dacă mediul dumneavoastră folosește Azure Data Lake Storage pentru a stoca date despre Customer Insights, cu care partajarea datelor Microsoft Dataverse necesită o configurație suplimentară.
-Anterior, puteai activa doar partajarea datelor cu Dataverse când datele dumneavoastră au fost stocate în lacul nostru de date gestionat. 
+Anterior, puteai activa doar partajarea datelor cu Dataverse când datele dumneavoastră au fost stocate în lacul nostru de date gestionat.
 
-Pentru mai multe informații, vezi [Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage (Previzualizare)](manage-environments.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Pentru mai multe informații, vezi [Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage (Previzualizare)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Noi destinații de export: Iterable și Braze
 
@@ -81,7 +82,6 @@ Schimbarea API-urilor în serviciile conectate duce la actualizări pentru ca co
 
 - Google Ads: noua versiune a conectorului de export Google Ads simplifică experiența de autentificare și acum vă permite să creați automat noi segmente de public Google Ads. 
 - Marketo: noua versiune a conectorului de export Marketo oferă suport pentru ID-ul Marketo, permițându-vă să evitați duplicarea datelor, să actualizați înregistrările existente și să creați noi înregistrări în Marketo. 
-
 
 ## <a name="february-2022-updates"></a>Actualizări februarie 2022
 
@@ -132,7 +132,7 @@ Această modificare înseamnă că experiența de încercare a Customer Insights
 
 Vă invităm să explorați și să evaluați multe alte caracteristici ale [Informații despre clienți](https://dynamics.microsoft.com/ai/customer-insights/), platforma Microsoft de date pentru clienți (CDP).    
  
-Pentru o perioadă de tranziție, participanții existenți la previzualizare încă au acces la unele capacități și funcționalități de previzualizare:
+Pentru o perioadă de tranziție, participanții existenți de previzualizare au în continuare acces la unele capabilități și funcționalități de previzualizare:
 
 - Obțineți codul pentru a instrumenta un site web sau o aplicație mobilă 
 - Vedeți evenimentele și proprietățile evenimentului 

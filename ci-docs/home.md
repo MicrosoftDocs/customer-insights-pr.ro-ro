@@ -11,26 +11,26 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: cdeb48df2172785ed8adad0f21943974ec39d14d
-ms.sourcegitcommit: 94de4dacdb8a7f4bc0f5914e7398622e70b81ff3
-ms.translationtype: HT
+ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
+ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/12/2022
-ms.locfileid: "8743428"
+ms.lasthandoff: 05/18/2022
+ms.locfileid: "8768365"
 ---
 # <a name="explore-customer-insights"></a>Explorați statisticile clienților
 
 Puteți accesa [Dynamics 365 Customer Insights](https://home.ci.ai.dynamics.com/) pe următorul URL: [https://home.ci.ai.dynamics.com/](https://home.ci.ai.dynamics.com/).
 
-The **Acasă** afișează pagina vă ghidează prin procesul de configurare pentru caracteristicile cheie și oferă o prezentare generală a segmentelor, măsurilor și datelor de îmbogățire.
+The **Acasă** pagina vă ghidează prin procesul de configurare pentru caracteristicile cheie și oferă o privire de ansamblu asupra segmentelor, măsurilor și datelor de îmbogățire.
 
 :::image type="content" source="media/home-page.png" alt-text="Captură de ecran a ecranului de pornire care prezintă exemple de statistici.":::
 
 ## <a name="left-side-pane"></a>Panoul din partea stângă
 
-Utilizați panoul din stânga pentru a naviga între diferite zone Customer Insights. 
+Utilizați panoul din stânga pentru a naviga între diferitele zone ale Customer Insights.
 
-Dacă lucrați cu conturi de afaceri și consumatori individuali, vă puteți selecta publicul principal pentru a vă concentra în consecință. 
+Dacă lucrați cu conturi de afaceri și consumatori individuali, vă puteți selecta publicul principal pentru a vă concentra în consecință.
 
 ## <a name="application-header"></a>Antetul aplicației
 
@@ -38,7 +38,7 @@ The **Mediu inconjurator** Picker arată mediul în care lucrați și vă permit
 
 Pictograma chipului zâmbitor este **Părere** Control. Selectați-l pentru a ne spune despre experiența dvs. cu Customer Insights. Ascultăm în mod activ feedback-ul dvs. și vă mulțumim anticipat pentru că ne-ați comunicat ce vă place și cum ne putem îmbunătăți.
 
-The **Setări** control, reprezentat de o pictogramă roată, vă permite să adune detaliile sesiunii pentru Customer Insights și să configurați setările globale pentru dvs.Microsoft 365 profil. 
+The **Setări** control, reprezentat de o pictogramă roată, vă permite să adune detaliile sesiunii pentru Customer Insights și să configurați setările globale pentru dvs.Microsoft 365 profil.
 
 **Ajutor** opțiunile, vizualizate cu o pictogramă semn de întrebare, oferă link-uri de ajutor contextual și alte resurse utile.
 
@@ -46,7 +46,7 @@ Poza ta de profil deschide **Manager Conturi** pentru tine Microsoft 365 profil.
 
 ## <a name="getting-started-with-customer-insights-section"></a>Noțiuni introductive cu secțiunea Customer Insights
 
-Această secțiune conține carduri care vă ajută să parcurgeți procesul de configurare a mediului Customer Insights. 
+Această secțiune conține carduri care vă ajută să parcurgeți procesul de configurare a mediului Customer Insights.
 
 1. The **Adăugați date** cardul vă ajută cu importarea datelor. Suport pentru Customer Insights [mai multe opțiuni pentru a introduce date despre clienții dvs](data-sources.md). Selectați **Adăugați surse de date** pentru a incepe.
 1. Odată ce importul inițial al datelor s-a încheiat cu succes, puteți utiliza **Unificați datele** card de armonizare a datelor și [creați profiluri unificate pentru clienți](data-unification.md) din surse disparate. 

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: a460ec87ec85f0614f944d352588d4ca899f8120
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
-ms.translationtype: HT
+ms.openlocfilehash: 9a04276f7326533cd389cba6554f468123463bac
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755465"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808521"
 ---
 # <a name="work-with-customer-insights-apis"></a>Lucrul cu API-urile Customer Insights
 
@@ -31,11 +31,11 @@ Acest articol descrie cum să accesați API-urile Customer Insights, să creați
 
 1. [Conectați-vă](https://home.ci.ai.dynamics.com) la Customer Insights. Dacă nu aveți încă un abonament, [înscrieți-vă pentru o versiune de încercare a Customer Insights](https://aka.ms/tryci).
 
-1. Pentru a activa API-urile din mediul dvs. Customer Insights, accesați **Administrator** > **Permisiuni**. Veți avea nevoie de permisiuni de administrator pentru asta.
+1. Pentru a activa API-urile în mediul dvs. Customer Insights, accesați **Admin** > **Securitate**. Veți avea nevoie de permisiuni de administrator pentru asta.
 
 1. Accesați fila **API-uri** și selectați butonul **Permite**.    
  
-   Activarea API-urilor creează o cheie de abonament primară și una secundară pentru instanța dvs. care este folosită în solicitările API. Puteți regenera cheile selectând **Regenerare cheie primară** sau **Regenerare cheie secundară** din **Administrator** > **Permisiuni** > **API-uri**.
+   Activarea API-urilor creează o cheie de abonament primară și una secundară pentru instanța dvs. care este folosită în solicitările API. Puteți regenera cheile selectând **Regenerați primar** sau **Regenerează secundar** pe **Admin** > **Securitate** > **API-uri**.
 
 <!--  :::image type="content" source="media/enable-apis.gif" alt-text="Enable Customer Insights APIs."::: -->
 
@@ -62,14 +62,12 @@ Acești pași vă ajută să începeți să utilizați API-urile Customer Insigh
 1. În stânga, selectați **Înregistrări aplicații**.
 
 1. Selectați **Înregistrare nouă**, furnizați un nume de aplicație și alegeți tipul de cont.
- 
+
    Opțional, adăugați o adresă URL de redirecționare. http://localhost este suficient pentru dezvoltarea unei aplicații pe computerul dvs. local.
 
 1. În noua înregistrare a aplicației, accesați **Permisiuni API**.
 
-<!--   :::image type="content" source="media/app-registration-1.gif" alt-text="How to set API permissions in App registration."::: -->
-
-1. Selectați **Adăugați o permisiune** și selectați **Customer Insights** în panoul lateral.
+1. Selectați **Adăugați o permisiune** și selectați **Dynamics 365 AI pentru Customer Insights** în panoul lateral.
 
 1. Pentru **Tipul permisiunii**, selectați **Permisiuni delegate** și apoi selectați permisiunea **user_impersonation**.
 
@@ -109,7 +107,7 @@ Pentru informații despre utilizarea API-urilor în bibliotecile noastre client,
 
 1. În concluzie, trebuie să adăugăm numele înregistrării aplicației ca utilizator în Customer Insights.  
    
-   Deschideți Customer Insights, accesați **Administrator** > **Permisiuni** și selectați **Adăugare utilizator**.
+   Deschideți Customer Insights, accesați **Admin** > **Securitate** și selectați **Adăugați utilizator**.
 
 1. Căutați numele înregistrării aplicației dvs., selectați-l din rezultatele căutării și selectați **Salvare**.
 

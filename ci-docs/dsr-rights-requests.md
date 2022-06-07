@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: 5b39452d7a4612242739e8000e57217954c71289
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
+ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8641531"
+ms.lasthandoff: 05/27/2022
+ms.locfileid: "8808576"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -41,7 +41,7 @@ Un administrator al Customer Insights poate urma acești pași pentru a elimina 
 1. Conectați-vă la Dynamics 365 Customer Insights.
 2. Mergi la **Date** > **Surse de date**
 3. Pentru fiecare sursă de date din listă care conține datele șterse ale clienților:
-   1. Selectați (...) și apoi selectați **Reîmprospătare**.
+   1. Selectați elipsa verticală (&vellip;) și apoi selectați **Reîmprospăta**.
    2. Verificați starea sursei de date din **Stare**. O bifă înseamnă că actualizarea a reușit. Un triunghi de avertizare înseamnă că a apărut o problemă. Dacă este afișat un triunghi de avertizare, contactați D365CI@microsoft.com.
 
 > [!div class="mx-imgBorder"]
@@ -52,7 +52,7 @@ Un administrator al Customer Insights poate urma acești pași pentru a elimina 
 Un administrator al Customer Insights poate urma acești pași pentru ștergerea datelor de utilizator Customer Insights:
 
 1. Conectați-vă la Dynamics 365 Customer Insights.
-2. Mergi la **Admin** > **Permisiuni**.
+2. Mergi la **Admin** > **Securitate** > **Permisiuni**.
 3. Bifați caseta de selectare pentru utilizatorul pe care doriți să-l eliminați.
 4. Selectați **Eliminare**.
 

@@ -6,7 +6,9 @@
   href: whats-new-customer-insights.md
 - name: Catalog de instruire
   items:
-    - name: Începerea
+    - name: Certificați ca specialist Microsoft în platforma de date pentru clienți
+      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+    - name: Porniți cu Customer Insights
       href: /learn/modules/get-started-customer-data-platform/
     - name: Ingerare date
       href: /learn/modules/ingest-data-customer-insights/
@@ -34,8 +36,6 @@
       href: get-started.md
     - name: Începeți cu o licență plătită
       href: paid-license.md
-    - name: Creați un mediu nou
-      href: create-environment.md
     - name: Explorați statisticile clienților
       href: home.md
     - name: Lucrați cu etichete și coloane
@@ -198,6 +198,8 @@
           href: export-campaign-monitor.md
         - name: Persoană de contact constantă
           href: export-constant-contact.md
+        - name: Criteo
+          href: export-criteo.md
         - name: DotDigital
           href: export-dotdigital.md
         - name: Dynamics 365 Marketing
@@ -254,12 +256,22 @@
       href: entities.md
     - name: Analizați schemele de entități din Common Data Model
       href: entity-schemas.md
-    - name: Date Customer Insights în Dataverse
-      href: customer-insights-dataverse.md
     - name: Construiți relații și entități conectate
       href: relationships.md
     - name: Definiți mapări semantice
       href: semantic-mappings.md
+- name: medii
+  items:
+    - name: Creați un mediu nou
+      href: create-environment.md
+    - name: Conectare la Microsoft Dataverse
+      href: customer-insights-dataverse.md
+    - name: Folosește-ți pe al tău Azure Data Lake Storage
+      href: own-data-lake-storage.md
+    - name: Gestionați setările mediului
+      href: manage-environments.md
+    - name: Conectați-vă la un cont de stocare folosind Service Principal
+      href: connect-service-principal.md
 - name: Administrare
   items:
     - name: Configurați configurarea sistemului
@@ -268,20 +280,12 @@
       href: security-overview.md
     - name: Atribuiți permisiuni de utilizator
       href: permissions.md
-    - name: Prezentare generală a conexiunilor
-      href: connections.md
-    - name: Gestionați mai multe medii
-      href: manage-environments.md
     - name: Aduceți-vă propria Key Vault
       href: use-azure-key-vault.md
-    - name: Conectați-vă la un cont de stocare folosind Service Principal
-      href: connect-service-principal.md
     - name: Exportați jurnalele de diagnosticare
       href: diagnostics.md
-    - name: Limite de serviciu
-      href: service-limits.md
-    - name: Drepturi și solicitări DSR
-      href: dsr-rights-requests.md
+    - name: Prezentare generală a conexiunilor
+      href: connections.md
 - name: API-uri
   items:
     - name: Lucrați cu API-uri
@@ -324,5 +328,9 @@
       items:
         - name: Creați predicții cu date de consimțământ
           href: consent-management/predictions-consent-data.md
+- name: Limite de serviciu
+  href: service-limits.md
+- name: Drepturi și solicitări DSR
+  href: dsr-rights-requests.md
 - name: Obțineți asistență
   href: /power-platform/admin/get-help-support

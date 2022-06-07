@@ -14,12 +14,12 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 04ae4ffd303a47add15044f313c96a23e5efcd76
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c0d23a74b5ca68162ee21307705b1f781a7eb97e
+ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643715"
+ms.lasthandoff: 05/24/2022
+ms.locfileid: "8800574"
 ---
 # <a name="work-with-tags-and-columns"></a>Lucrați cu etichete și coloane
 
@@ -37,7 +37,7 @@ Puteți vizualiza, adăuga și elimina etichete dintr-un articol. Adăugați eti
 
 1. Selectați articolul ale cărui etichete doriți să le gestionați.
 
-1. Selectați **Afișați mai multe (...)** și selectați **Etichetă**.
+1. Selectați elipsa verticală (&vellip;) și selectați **Etichetă**.
 
    :::image type="content" source="media/segments_list_tag.png" alt-text="Segment selectat cu listă verticală de opțiuni și opțiuni disponibile."lightbox="media/segments_list_tag.png":::
 

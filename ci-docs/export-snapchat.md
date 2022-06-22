@@ -1,19 +1,19 @@
 ---
 title: Exportați datele Customer Insights către Snapchat
 description: Aflați cum să configurați conexiunea și să exportați la Snapchat.
-ms.date: 10/08/2021
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 171b8bf0f4a034c78e872b671602ae7653271da7
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: d64b482c322af8632e29ec41d6e34c390c5e646c
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643626"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947291"
 ---
 # <a name="export-segments-to-snapchat-preview"></a>Exportați segmente în Snapchat (previzualizare)
 
@@ -21,7 +21,8 @@ Exportați segmente de profiluri de clienți unificate în Snapchat și folosiț
 
 ## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
 
--   Aveți un [Cont Snapchat Business](https://business.snapchat.com/), un [Cont Snapchat Ads](https://ads.snapchat.com/) și acreditările de administrator corespunzătoare.
+-   Aveți un [Cont Snapchat Business](https://business.snapchat.com/), un [Cont Snapchat Ads](https://ads.snapchat.com/) și acreditările de administrator corespunzătoare. Trebuie să fiți cel puțin membru al unui cont de organizație și administrator de date al unui anumit cont publicitar. 
+-   Ai cel puțin o audiență în Snapchat Audience Manager de tip SAM (Snap Audience Match). 
 -   Tu ai [segmente configurate](segments.md) în Customer Insights.
 -   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
@@ -60,7 +61,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Snapchat. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
 
-1. Introduceți [**ID-ul de audiență Snapchat**](https://businesshelp.snapchat.com/s/article/custom-audiences).
+1. Introduceți [**Segmentul Snapchat/ID de public**](https://businesshelp.snapchat.com/s/article/custom-audiences). ID-ul audienței poate fi găsit în adresa URL după selectarea audienței în Snapchat Audience Manager. 
 
 1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Este necesar să exportați segmente către Snapchat.
 

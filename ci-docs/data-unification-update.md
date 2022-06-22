@@ -1,7 +1,7 @@
 ---
 title: Actualizați setările de unificare
 description: Actualizați regulile duplicate, regulile de potrivire sau câmpurile unificate în setările de unificare.
-ms.date: 05/04/2022
+ms.date: 06/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: be399da9b98d8803d7d1a90f44a40e0d638a8d47
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755605"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844055"
 ---
 # <a name="update-the-unification-settings"></a>Actualizați setările de unificare
 
@@ -43,8 +43,9 @@ Pentru a revizui sau modifica orice setări de unificare odată ce un profil uni
 
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captură de ecran a paginii Data Unify cu opțiunile Unify evidențiate.":::
 
-   - Pentru a actualiza profilul unificat al clientului (cu sau fără dependențe), consultați [Rulați actualizări ale profilului clientului](#run-updates-to-the-unified-customer-profile).
-   - Pentru a evalua calitatea condițiilor de potrivire fără a actualiza profilul unificat, consultați [Rulați condiții de potrivire](#run-matching-conditions). The **Rulați numai condiții de potrivire** opțiunea nu se afișează pentru o singură entitate.
+   - [Rulați condiții de potrivire](#run-matching-conditions) pentru a evalua rapid calitatea condițiilor de potrivire (deduplicare și reguli de potrivire) fără a actualiza profilul unificat. The **Rulați numai condiții de potrivire** opțiunea nu se afișează pentru o singură entitate.
+   - [Unificați profilurile clienților](#run-updates-to-the-unified-customer-profile) pentru a rula condiții de potrivire și pentru a actualiza entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](system.md#schedule-tab).
+   - [Unificați profilurile și dependențele clienților](#run-updates-to-the-unified-customer-profile) pentru a rula condiții de potrivire și pentru a actualiza entitatea unificată a profilului clientului și toate dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Toate procesele sunt reluate automat.
 
 ## <a name="edit-source-fields"></a>Editați câmpurile sursă
 
@@ -105,7 +106,7 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 
 1. Pentru a vedea rezultatele tuturor regulilor și scorurile acestora, selectați **Vezi ultima rulare**. Se afișează rezultatele, inclusiv ID-urile de contact alternative. Puteți descărca rezultatele.
 
-1. Pentru a vedea rezultatele și scorurile unei anumite reguli, selectați regula și apoi **Previzualizare**. Se afișează rezultatele. Puteți descărca rezultatele.
+1. Pentru a vedea rezultatele și scorurile unei anumite reguli, selectați regula și apoi **previzualizare**. Se afișează rezultatele. Puteți descărca rezultatele.
 
 1. Pentru a vedea rezultatele unei anumite condiții pe o regulă, selectați regula și apoi **Editați | ×**. În panoul Editare, selectați **previzualizare** sub conditia. Puteți descărca rezultatele.
 
@@ -121,7 +122,7 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
    - **Duplicați o regulă** : Selectați regula și apoi **Duplicat** pentru a crea o regulă similară cu modificări.
    - **Ștergeți o regulă** : Selectați regula și apoi **Șterge**.
 
-1. Selectați **Următorul** pentru a face modificări câmpurilor unificate sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a modifica câmpurile unificate sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Gestionați câmpurile unificate
 
@@ -135,11 +136,13 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 
 ## <a name="run-matching-conditions"></a>Rulați condiții de potrivire
 
+Run matching conditions rulează numai deduplicarea și potrivirea regulilor și actualizează entitatile *Deduplicare_* și *ConflationMatchPair*.
+
 1. De la **Date** > **Unifica** pagina, selectați **Rulați numai condiții de potrivire**.
 
-   The **Înregistrări duplicate** și **Condiții de potrivire** faianta arată **În așteptare** sau **Înviorător**.
+   The **Înregistrări duplicate** și **Condiții de potrivire** faianta arată **În așteptare** sau **Înviorător** stare.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
 1. Când procesul de potrivire se încheie, selectați **Editați | ×** pe **Condiții de potrivire** ţiglă.
 
@@ -153,10 +156,12 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 
 1. De la **Date** > **Unifica** pagina, selectați:
 
-   - **Unificați profilurile clienților** : actualizează entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](system.md#schedule-tab).
+   - **Unificați profilurile clienților** : rulează condiții de potrivire și actualizează entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](system.md#schedule-tab).
 
-   - **Unificați profilurile și dependențele clienților** : Actualizează profilul unificat și toate dependențele. Toate procesele sunt reluate automat. După finalizarea tuturor proceselor din aval, profilul clientului reflectă datele actualizate.
+   - **Unificați profilurile și dependențele clienților** : rulează condițiile potrivite și actualizează profilul unificat și toate dependențele. Toate procesele sunt reluate automat. După finalizarea tuturor proceselor din aval, profilul clientului reflectă datele actualizate.
 
-   The **Înregistrări duplicate**, **de potrivire**, și **Câmpuri unificate pentru clienți** faianta arată **În așteptare** sau **Înviorător**.
+   The **Înregistrări duplicate**, **de potrivire**, și **Câmpuri unificate pentru clienți** faianta arată **În așteptare** sau **Înviorător** stare.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Rezultatele unei rulări de succes sunt afișate pe **Unifica** pagină care arată numărul de profiluri de clienți unificate.

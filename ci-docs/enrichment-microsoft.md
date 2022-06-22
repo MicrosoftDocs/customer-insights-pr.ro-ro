@@ -1,5 +1,5 @@
 ---
-title: Îmbogățiți profilurile clienților cu date de la Microsoft
+title: Îmbogățiți profilurile clienților cu date despre mărci și interese de la Microsoft
 description: Utilizați datele proprietare de la Microsoft pentru a vă îmbogăți datele clienților cu afinități și partajarea vocii.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,25 +12,16 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 5c016a394fdf485057a190d03bfed9ce5481f435
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643289"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953780"
 ---
 # <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Îmbogățiți profilurile clienților cu afinități și cota de voce (previzualizare)
 
 Utilizați datele proprietare Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă, afinități de interese și cota de voce (SoV). Aceste afinități și SoV se bazează pe date de la persoane cu date demografice similare cu clienții dvs. Aceste informații vă ajută să înțelegeți și să segmentați mai bine clienții în funcție de afinitățile lor sau de SoV pentru mărci și interese specifice.
-
-Mergi la **Date** > **Îmbogăţire** la [configurați și vizualizați îmbogățirile](enrichment-hub.md).
-
-Pentru a configura afinitățile de brand și îmbogățirea SoV, accesați **Descoperi** filă și selectați **Îmbogățiți-mi datele** pe **Mărci** ţiglă.
-
-Pentru a configura afinitățile de interes și îmbogățirea SoV, accesați **Descoperi** filă și selectați **Îmbogățiți-mi datele** pe **Interese** ţiglă.
-
-   > [!div class="mx-imgBorder"]
-   > ![Dale de branduri și interese.](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
 
 ## <a name="how-we-determine-affinities-and-sov"></a>Cum determinăm afinitățile și SoV
 
@@ -45,7 +36,6 @@ Folosim datele de căutare online ale Microsoft pentru a găsi afinități și S
 Pe fiecare profil de client îmbogățit, oferim două valori conexe - nivelul de afinitate și scorul de afinitate. Aceste valori vă ajută să determinați cât de puternică este afinitatea pentru segmentul demografic al profilului respectiv, pentru un brand sau interes, în comparație cu alte segmente demografice.
 
 *Nivelul de afinitate* este format din patru niveluri și *scor de afinitate* este calculat pe o scară de 100 de puncte care se mapează la nivelurile de afinitate.
-
 
 |Nivelul de afinitate |Scor de afinitate  |
 |---------|---------|
@@ -64,78 +54,65 @@ Calculăm SoV pe o scară de 100 de puncte. SoV total pentru toate mărcile sau 
 
 În prezent, acceptăm următoarele opțiuni de țară/regiune: Australia, Canada (engleză), Franța, Germania, Regatul Unit sau Statele Unite (engleză).
 
-Pentru a selecta o țară sau o regiune, deschideți **Îmbogățirea mărcilor** sau **Îmbogățirea dobânzii** și selectați **Schimbare** chiar lângă **Țară / Regiune**. În panoul **Setări de țară/regiune**, alegeți o opțiune și selectați **Aplicare**.
+## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
-### <a name="implications-related-to-country-selection"></a>Implicații legate de selecția țării
+1. Accesați **Date** > **Îmbogățire** și selectați fila **Descoperire**.
 
-- Când [alegeți propriile mărci](#define-your-brands-or-interests), sistemul oferă sugestii pe baza țării sau regiunii selectate.
+   - Pentru a configura afinitățile de marcă și îmbogățirea SoV, selectați **Îmbogățiți-mi datele** pe **Mărci** ţiglă.
 
-- Când [alegeți o industrie](#define-your-brands-or-interests), veți obține cele mai relevante mărci sau interese în funcție de țara sau regiunea selectată.
+   - Pentru a configura afinitățile de interes și îmbogățirea SoV, selectați **Îmbogățiți-mi datele** pe **Interese** ţiglă.
 
-- Când [îmbogățim profilurile](#refresh-enrichment), vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și dobânzile selectate, inclusiv profilurile care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date disponibile pentru mărcile și interesele selectate din SUA.
+   > [!div class="mx-imgBorder"]
+   > ![Dale de branduri și interese.](media/BrandsInterest-tile-Hub.png "Dale de branduri și dobânzi")
 
-## <a name="configure-enrichment"></a>Configurarea îmbogățirii
+1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-O experiență ghidată vă ajută prin configurarea îmbogățirilor. 
+1. Pentru a vă schimba țara sau regiunea, selectați **Schimbare** lângă **Țara/Regiune**. În **Setări de țară/regiune** panou, alegeți a [țara/regiunea acceptată](#supported-countriesregions) și selectați **aplica**.
 
-### <a name="define-your-brands-or-interests"></a>Definiți-vă brandurile sau interesele
+   > [!NOTE]
+   > Când alegeți propriile mărci, sistemul oferă sugestii pe baza țării sau regiunii selectate. Când alegeți o industrie, veți obține cele mai relevante mărci sau interese în funcție de țara sau regiunea selectată.
 
-Alegeți până la cinci mărci sau interese folosind una sau ambele opțiuni:
+1. Alegeți până la cinci mărci sau interese folosind una sau ambele opțiuni:
 
-- **Industrie**: Selectați-vă industria din lista derulantă, apoi alegeți dintre mărcile sau dobânzile de top pentru industria respectivă.
-- **Alegeți-vă una proprie**: Introduceți o marcă sau un interes relevant pentru organizația dvs. și apoi alegeți dintre sugestiile potrivite. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
+   - **Industrie**: Selectați-vă industria din lista derulantă, apoi alegeți dintre mărcile sau dobânzile de top pentru industria respectivă.
+   - **Alegeți-vă una proprie**: Introduceți o marcă sau un interes relevant pentru organizația dvs. și apoi alegeți dintre sugestiile potrivite. Dacă nu enumerăm o marcă sau un interes pe care îl căutați, trimiteți-ne feedback folosind legătura **Sugerați**.
 
-### <a name="review-enrichment-preferences"></a>Recenzie preferințe de îmbogățire
+1. Selectați **Următorul** și revizuiți preferințele implicite de îmbogățire și actualizați-le după cum este necesar.
 
-Examinați preferințele implicite de îmbogățire și actualizați-le după cum este necesar.
+   :::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captură de ecran a ferestrei preferințelor de îmbogățire.":::
 
-:::image type="content" source="media/affinity-enrichment-preferences.png" alt-text="Captură de ecran a ferestrei preferințelor de îmbogățire.":::
+1. Selectați **Următorul**.
 
-### <a name="select-entity-to-enrich"></a>Selectați entitatea de îmbogățit
+1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți cu date de la Microsoft. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
 
-Selectați **Entitate îmbogățită** și alegeți setul de date pe care doriți să îl îmbogățiți cu date de la Microsoft. Puteți selecta entitatea Client pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți din acel segment.
+1. Selectați **Următorul**.
 
-### <a name="map-your-fields"></a>Mapați câmpurile
+1. Hartați câmpurile de la entitatea client unificată la datele Microsoft.
 
-Hartați câmpurile de la entitatea dvs. client unificată pentru a defini segmentul demografic pe care doriți să îl utilizeze sistemul pentru îmbogățirea datelor despre clienți. Mapați Țară/Regiune și cel puțin Data nașterii sau atributele de gen. În plus, trebuie să mapați cel puțin unul dintre oraș (și stat/provincie) sau cod poștal. Selectați **Editați** pentru a defini maparea câmpurilor și selectați **Aplicare** când ați terminat. Selectați **Salvați** pentru a finaliza maparea câmpului.
+   > [!NOTE]
+   > Sunt necesare cel puțin atributele Data nașterii sau Gen. Sunt necesare țara/regiunea și cel puțin orașul (și statul/provinția) sau codul poștal. Vă recomandăm ca data nașterii să fie convertită în tipul DateTime în timpul ingerării datelor. Alternativ, poate fi un șir în formatul [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „aaaa-LL-zz” sau „aaaa-LL-zzTHTH: mm: ss”.
 
-Următoarele formate și valori sunt acceptate (valorile nu sunt sensibile la litere mari și mici):
+1. Selectați **Următorul** pentru a completa maparea câmpului.
 
-- **Data de naștere**: Recomandăm ca data nașterii să fie transformată în tip DateTime în timpul ingestiei de date. Alternativ, poate fi un șir în formatul [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) „aaaa-LL-zz” sau „aaaa-LL-zzTHTH: mm: ss”.
-- **Sex**: Bărbat, Femeie, Necunoscut.
-- **Cod poștal**: Coduri poștale din cinci cifre pentru Statele Unite, cod poștal standard peste tot.
-- **Oraș**: Numele orașului în engleză.
-- **Stat/Provincie**: Abreviere cu două litere pentru SUA și Canada. Abreviere de două sau trei litere pentru Australia. Nu se aplică Franței, Germaniei sau Regatului Unit.
-- **Țară/regiune**:
+1. Oferiți un nume pentru îmbogățire. The **Numele entității de ieșire** este selectat automat.
 
-  - SUA: Statele Unite ale Americii, Statele Unite, SUA, SUA, America
-  - CA: Canada, CA
-  - GB: Regatul Unit, UK, Marea Britanie, GB, Regatul Unit al Marii Britanii și Irlandei de Nord, Regatul Unit al Marii Britanii
-  - AU: Australia, UA, Commonwealth of Australia
-  - FR: Franța, FR, Republica Franceză
-  - DE: Germania, German, Deutschland, Allemagne, DE, Republica Federală Germania, Republica Germania
+   :::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revizuirea intereselor și denumirea paginii.":::
 
-## <a name="review-and-name-the-enrichment"></a>Examinați și denumiți îmbogățirea
+1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
 
-În cele din urmă, trebuie să examinați informațiile și să furnizați un nume pentru îmbogățire.
+1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-:::image type="content" source="media/enrichment-interests-summary.png" alt-text="Revizuirea intereselor și denumirea paginii.":::
-
-## <a name="refresh-enrichment"></a>Reîmprospătare îmbogățire
-
-Rulați îmbogățirea după configurarea mărcilor, a intereselor și a mapării câmpului pentru demografie. Pentru a începe procesul, selectați **Rulare** pe pagina de configurare a mărcii sau a intereselor. În plus, puteți lăsa sistemul să ruleze automat îmbogățirea ca parte a unei actualizări programate.
-
-În funcție de dimensiunea datelor clientului dvs., este posibil să dureze câteva minute pentru a finaliza o îmbogățire.
-
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+   Când îmbogățim profilurile, vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și dobânzile selectate, inclusiv profilurile care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date disponibile pentru mărcile și interesele selectate din SUA.
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
-După executarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a analiza numărul total de clienți îmbogățiți și o defalcare a mărcilor sau a intereselor în profilurile de clienți îmbogățite.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 :::image type="content" source="media/my-enrichments.png" alt-text="Previzualizarea rezultatelor după executarea procesului de îmbogățire":::
 
-Veți găsi o diagramă cu numărul de profiluri de clienți îmbogățite de-a lungul timpului și previzualizări ale entităților îmbogățite. Examinați datele îmbogățite selectând **Vezi mai mult** în **Nivel de afinitate** sau **Cota de voce** grafice. Datele îmbogățite pentru mărci merg la **BrandAffinityFromMicrosoft** și **BrandShareOfVoiceFromMicrosoft** entitati. Datele pentru interese se află în **InterestAffinityFromMicrosoft** și **InterestShareOfVoiceFromMicrosoft** entitati. De asemenea, veți găsi aceste entități listate în grupul **Îmbogățire** în **Date** > **Entități**.
+Rezultatele includ **Nivel de afinitate** sau **Cota de voce** grafice.
+
+Entitățile create din îmbogățiri sunt enumerate sub **Îmbogăţire** grup in **Date** > **Entități**. Datele îmbogățite pentru mărci merg la **BrandAffinityFromMicrosoft** și **BrandShareOfVoiceFromMicrosoft** entitati. Datele pentru interese sunt în **InterestAffinityFromMicrosoft** și **InterestShareOfVoiceFromMicrosoft** entitati.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 

@@ -1,19 +1,19 @@
 ---
-title: Caracteristici noi și viitoare
+title: Caracteristici noi și actualizate
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
-ms.date: 05/03/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: af79c8369dd608e8ce1c14c50bb9aef3a79b9029
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
-ms.translationtype: HT
+ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
+ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833645"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8843362"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Ce este nou în Dynamics 365 Customer Insights
 
@@ -24,6 +24,37 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
 
+## <a name="may-2022-updates"></a>Actualizări mai 2022
+
+Actualizările din mai 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="updated-data-unification-experience"></a>Experiență actualizată de unificare a datelor
+
+ Unificarea datelor vă permite să unificați sursele de date odată diferite într-un singur set de date principal care oferă o vizualizare unificată a datelor respective. Datele pot fi unificate pe o singură entitate sau pe mai multe entități. Tu primul [selectați entitățile și câmpurile sursă](map-entities.md),[eliminați înregistrările duplicate](remove-duplicates.md), specificați regulile pentru [condiţii de potrivire](match-entities.md) și definiți care [câmpuri de inclus în profilurile unificate ale clienților](merge-entities.md).
+
+Pentru mai multe informații, vezi [Prezentare generală a unificării datelor](data-unification.md).
+
+### <a name="refreshed-home-page-in-customer-insights"></a>Pagina de pornire reîmprospătată în Customer Insights
+
+**Acasă** vă ghidează prin procesul de configurare pentru caracteristicile cheie și oferă o privire de ansamblu asupra segmentelor, măsurilor și datelor de îmbogățire. Am reîmprospătat experiența pentru a oferi informații mai relevante dintr-o privire.
+
+Pentru mai multe informații, vezi [Explorați statisticile clienților](home.md).
+
+### <a name="track-usage-of-a-segment"></a>Urmăriți utilizarea unui segment
+
+Acuma poți [urmăriți utilizarea unui segment](segments.md#track-usage-of-a-segment) în aplicații, care se bazează pe Dataverse organizație care este conectată cu Customer Insights. Pentru [Segmente Customer Insights utilizate în călătoriile clienților din Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistemul vă informează despre utilizarea acelui segment.
+
+### <a name="export-to-criteo"></a>Exportați în Criteo
+
+Criteo este o platformă online care ajută utilizatorii să gestioneze publicitatea digitală. Acum puteți exporta segmente de profiluri unificate de clienți pentru a genera campanii, a oferi marketing prin e-mail și a utiliza anumite grupuri de clienți cu Criteo.
+
+Pentru mai multe informații, vezi [Exportați segmente în Criteo (previzualizare)](export-criteo.md).
+
+### <a name="refined-documentation-structure-for-environment-creation"></a>Structură rafinată a documentației pentru crearea mediului
+
+Am revizuit documentele de ajutor legate de crearea și gestionarea mediilor în Customer Insights. Articolele sunt acum grupate sub nodul Medii din cuprins. Articolele restructurate oferă mai multe îndrumări pentru diferitele modalități de a configura medii și au o structură mai clară. Dacă aveți feedback de împărtășit, anunțați-ne prin intermediul comenzilor către sfârșitul articolelor de ajutor.
+
+Pentru mai multe informații, vezi [Cum să: creați un mediu nou](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Actualizări aprilie 2022
 
@@ -33,7 +64,7 @@ Actualizările din aprilie 2022 includ noi funcții, îmbunătățiri de perform
 
 Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute precum numărul DUNS, dimensiunea companiei, locația, industria și multe altele.
 
-Pentru mai multe informații, vezi [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Pentru mai multe informații, vezi [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Previzualizare)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definiți tipul de măsură atunci când creați o măsură nouă
 
@@ -45,7 +76,7 @@ Pentru mai multe informații, vezi [Utilizați generatorul de măsuri pentru a c
 
 Am revizuit articolele din documentație și am eliminat mențiunile despre statisticile de implicare și capabilitățile de statistici ale publicului. În continuare, ne vom referi în mod constant la numele produsului Customer Insights atunci când vom scrie despre caracteristicile de bază ale aplicației. Această modificare duce, de asemenea, la o restructurare semnificativă a cuprinsului, a structurii URL și a căilor fișierelor din depozitul de documentație de bază. Toate marcajele sau linkurile existente continuă să funcționeze și să redirecționeze către adresele URL actualizate.
 
-Dacă doriți să ne spuneți cum percepeți acea schimbare sau să observați că ceva nu funcționează conform așteptărilor, spuneți-ne prin [trimiterea de feedback pentru această pagină](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Dacă doriți să ne anunțați cum percepeți acea schimbare sau observați că ceva nu funcționează conform așteptărilor, spuneți-ne prin [trimiterea de feedback pentru această pagină](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Actualizări martie 2022
 
@@ -95,7 +126,7 @@ Pentru mai multe informații, vezi [Prezentare generală a predicțiilor](predic
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nou sursă de date: Integrare cu Azure Synapse Analytics (Previzualizare)
 
-Azure Synapse Analytics este un serviciu de analiză pentru întreprinderi care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
+Azure Synapse Analytics este un serviciu de analiză a întreprinderii care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
 
 Organizații care folosesc deja Azure Synapse Analytics poate ingera acele date în Customer Insights. 
 
@@ -132,7 +163,7 @@ Această modificare înseamnă că experiența de încercare a Customer Insights
 
 Vă invităm să explorați și să evaluați multe alte caracteristici ale [Informații despre clienți](https://dynamics.microsoft.com/ai/customer-insights/), platforma Microsoft de date pentru clienți (CDP).    
  
-Pentru o perioadă de tranziție, participanții existenți de previzualizare au în continuare acces la unele capabilități și funcționalități de previzualizare:
+Pentru o perioadă de tranziție, participanții existenți la previzualizare încă au acces la unele capacități și funcționalități de previzualizare:
 
 - Obțineți codul pentru a instrumenta un site web sau o aplicație mobilă 
 - Vedeți evenimentele și proprietățile evenimentului 

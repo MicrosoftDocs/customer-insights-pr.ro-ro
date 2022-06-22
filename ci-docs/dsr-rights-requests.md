@@ -1,19 +1,19 @@
 ---
 title: Solicitări de drepturi privind datele subiecților sub RGPD | Microsoft Docs
 description: Răspundeți la solicitările subiectului de date pentru Dynamics 365 Customer Insights.
-ms.date: 08/11/2021
+ms.date: 05/23/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: af2583295627f98e980adbca4f216b9c34c3cad8
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808576"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947383"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -77,11 +77,5 @@ Un administrator de entitate găzduită poate urma acești pași pentru a export
 1. Trimiteți un e-mail la D365CI@microsoft.com specificând adresa de e-mail a utilizatorului în cerere. Echipa Customer Insights va trimite un e-mail la adresa de e-mail înregistrată a administratorului entității găzduite înregistrate, solicitând confirmarea exportului de date.
 2. Aprobați confirmarea de a exporta datele pentru utilizator solicitate.
 3. Primiți datele exportate prin intermediul adresei de e-mail de administrator de entitate găzduită.
-
-## <a name="consent-management-preview"></a>Gestionarea consimțământului (previzualizare)
-
-Capacitatea de gestionare a consimțământului nu colectează în mod direct datele utilizatorului. Importă și prelucrează doar datele de consimțământ furnizate de utilizatori în alte aplicații.
-
-Pentru a elimina datele privind consimțământul despre anumiți utilizatori, eliminați-le din sursele de date ingerate pentru capacitatea de gestionare a consimțământului. După reîmprospătarea sursă de date, datele eliminate vor fi șterse și din Centrul de consimțământ. Aplicațiile care utilizează entitatea de consimțământ vor șterge și datele care au fost eliminate de pe sursă după a [reîmprospăta](system.md#refresh-processes). Vă recomandăm să reîmprospătați sursele de date rapid după ce răspundeți la o solicitare a persoanei vizate pentru a elimina datele utilizatorului din toate celelalte procese și aplicații.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

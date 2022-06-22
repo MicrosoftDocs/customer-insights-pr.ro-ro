@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: c0db75afdde91bbd60fbece77eb2660a38b84860
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833783"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011902"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 
@@ -66,9 +66,9 @@ Opțional, dacă utilizați numai Customer Insights, vă puteți copia datele di
 
 După ce v-ați conectat pentru prima dată la instanța dvs. plătită de Customer Insights, vi se cere să creați un mediu nou. În acest proces, puteți alege să copiați configurația dintr-un mediu existent și să migrați majoritatea setărilor. Dacă aveți permisiunile menționate mai sus, mediul de încercare se va afișa în această listă. Pentru mai multe informații, consultați [Copiați configurația mediului](create-environment.md#copy-the-environment-configuration).
 
-### <a name="what-are-the-trial-limits-and-quotas"></a>Care sunt limitele și ofertele versiunii de încercare?
+### <a name="what-are-the-trial-limits-and-quotas"></a>Care sunt limitele și cotele pentru versiunea de încercare?
 
-- Nu vă puteți folosi propriul cont de stocare Azure Data Lake pentru a stoca date de ieșire în timpul unei versiuni de probă a Customer Insights. Cu toate acestea, puteți ingera date dintr-un cont de stocare Data Lake.
+- Nu le poți folosi pe ale tale Azure Data Lake Storage cont pentru a stoca datele de ieșire în timpul unei versiuni de probă a Customer Insights. Cu toate acestea, puteți ingera date dintr-un cont Data Lake Storage.
 - Puteți stoca până la 3 GB de date în mediul Dataverse mediu care se aprovizionează automat atunci când porniți o versiune de încercare Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Întrebări specifice pentru Customer Insights
@@ -83,7 +83,7 @@ Majoritatea caracteristicilor capabilităților Customer Insights sunt disponibi
 
 Următoarele caracteristici sunt **nu e disponibil**:
 
-- Nu puteți crea medii noi care utilizează propriul cont de stocare Azure Data Lake Storage.
+- Nu puteți crea medii noi care să le folosească pe ale dvs Azure Data Lake Storage cont.
 - Nu puteți șterge mediul de încercare.
 
 ### <a name="how-long-does-the-trial-last"></a>Cât timp durează versiunea de încercare?

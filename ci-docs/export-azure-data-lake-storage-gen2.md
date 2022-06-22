@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 8b14992f8312d333d8a12501e8a28496c8434779
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 22eee11666752459a1750d728c4e254ab0c59e58
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643253"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947245"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-data-lake-storage-gen2-preview"></a>Exportați lista de segmente și alte date în Azure Data Lake Storage Gen2 (versiune preliminară)
 
@@ -21,11 +21,9 @@ Stocați datele Customer Insights într-un cont Azure Data Lake Storage Gen2 sau
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-1. Pentru Azure Data Lake Storage Gen2 puteți alege între [Performanță standard și nivel de performanță Premium](/azure/storage/blobs/create-data-lake-storage-account) când creați un cont de stocare pentru depozitul dvs. de date. Dacă alegeți nivelul de performanță Premium, selectați bloburi bloc premium ca tip de cont. 
+1. Pentru Azure Data Lake Storage Gen2 puteți alege între [Performanță standard și nivel de performanță Premium](/azure/storage/blobs/create-data-lake-storage-account) când creați un cont de stocare pentru depozitul dvs. de date. Dacă alegeți nivelul de performanță Premium, selectați bloburi bloc premium ca tip de cont.
 
-
-## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurați conexiunea la Azure Data Lake Storage Gen2 
-
+## <a name="set-up-the-connection-to-azure-data-lake-storage-gen2"></a>Configurați conexiunea la Azure Data Lake Storage Gen2
 
 1. Salt la **Administrator** > **Conexiuni**.
 
@@ -39,7 +37,7 @@ Stocați datele Customer Insights într-un cont Azure Data Lake Storage Gen2 sau
     - Pentru a afla cum să creați un cont de stocare cu care să utilizați Azure Data Lake Storage Gen2, consultați [Creați un cont de stocare](/azure/storage/blobs/create-data-lake-storage-account). 
     - Pentru a afla mai multe despre numele contului de stocare Azure Data Lake Gen2 și cheia de cont, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ## <a name="configure-an-export"></a>Configurați un export
 
@@ -57,8 +55,12 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab).
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand).
 
-Datele exportate sunt stocate în recipientul de stocare Azure Data Lake Gen 2 pe care l-ați configurat. 
+Datele exportate sunt stocate în recipientul de stocare Azure Data Lake Gen 2 pe care l-ați configurat.
+
+> [!TIP]
+> Exportul de entități care conțin o cantitate mare de date poate duce la mai multe fișiere CSV în același folder pentru fiecare export. Împărțirea exporturilor are loc din motive de performanță pentru a minimiza timpul necesar pentru finalizarea unui export.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

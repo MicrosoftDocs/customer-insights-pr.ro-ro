@@ -48,14 +48,14 @@
   items:
     - name: Prezentare generală surse de date
       href: data-sources.md
+    - name: Conectarea la date în Azure Data Lake Storage
+      href: connect-common-data-model.md
+    - name: Conectarea la Azure Synapse Analytics
+      href: connect-synapse.md
+    - name: Conectați-vă la date într-un data lake gestionat Microsoft Dataverse
+      href: connect-dataverse-managed-lake.md
     - name: Adăugați surse de date prin Power Query conectori
       href: connect-power-query.md
-    - name: Adăugați un folder Common Data Model ca o sursă de date
-      href: connect-common-data-model.md
-    - name: Adăugați data lake gestionat de Dataverse
-      href: connect-dataverse-managed-lake.md
-    - name: Adăugarea Azure Synapse Analytics
-      href: connect-synapse.md
     - name: Îmbogățirea surselor de date
       href: data-sources-enrichment.md
     - name: Reîmprospătare incrementală pentru surse de date
@@ -82,27 +82,27 @@
   items:
     - name: Îmbogățiși profilele clientului
       href: enrichment-hub.md
+    - name: Conturi de la Office 365 date
+      href: enrichment-office.md
     - name: Mărci și interese
       href: enrichment-microsoft.md
+    - name: Date despre companie de la Dun & Bradstreet
+      href: enrichment-dnb.md
+    - name: Date despre firmă de la Leadspace
+      href: enrichment-leadspace.md
+    - name: Demografie cu Experian
+      href: enrichment-experian.md
     - name: Adrese optimizate
       href: enrichment-enhanced-addresses.md
     - name: Date optimizate despre firmă
       href: enrichment-enhanced-company-data.md
-    - name: Îmbogățiți cu Azure Maps
-      href: enrichment-azure-maps.md
-    - name: Îmbogățiți-vă cu Dun & Bradstreet
-      href: enrichment-dnb.md
-    - name: Îmbogăți cu HERE Technologies
-      href: enrichment-here.md
-    - name: Îmbogățire cu Leadspace
-      href: enrichment-leadspace.md
-    - name: Îmbogățiți-vă cu LiveRamp
+    - name: Identitate cu LiveRamp
       href: enrichment-liveramp.md
-    - name: Îmbogățiți cu Experian
-      href: enrichment-experian.md
-    - name: Îmbogățiți cu Office 365 date
-      href: enrichment-office.md
-    - name: Îmbogățiți cu importul particularizat SFTP
+    - name: Locație din Azure Maps
+      href: enrichment-azure-maps.md
+    - name: Locație de la HERE Technologies
+      href: enrichment-here.md
+    - name: Import personalizat SFTP
       href: enrichment-SFTP-custom-import.md
 - name: Profiluri unificate
   items:
@@ -112,6 +112,8 @@
       href: search-filter-index.md
     - name: Definiți activitățile clienților
       href: activities.md
+    - name: Gestionarea consimțământului pentru Customer Insights
+      href: consent-management.md
 - name: Segmente
   items:
     - name: Prezentare generală a segmentelor
@@ -294,40 +296,6 @@
       href: 'https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights'
     - name: Exemple de interogări OData
       href: odata-examples.md
-- name: Gestionarea consimțământului (previzualizare)
-  items:
-    - name: Centrul de ajutor
-      href: consent-management/index.yml
-    - name: Prezentare generală a capacității
-      href: consent-management/overview.md
-    - name: Începerea
-      items:
-        - name: Începerea
-          href: consent-management/get-started.md
-        - name: Concepte și terminologie
-          href: consent-management/glossary.md
-    - name: Import de date de consimțământ
-      items:
-        - name: Import de date de consimțământ
-          href: consent-management/import-consent-data.md
-        - name: Setați datele de consimțământ și aplicați preferințele de consimțământ
-          href: consent-management/set-consent-rules.md
-    - name: Gestionați datele consimțământului
-      items:
-        - name: Activați regulile de consimțământ în Customer Insights
-          href: activate-consent.md
-        - name: Gestionați regulile implicite de consimțământ în segmentele Customer Insights
-          href: change-default-consent-rules.md
-    - name: Gestionați setările și utilizatorii
-      items:
-        - name: Configurați setările sistemului
-          href: consent-management/system-settings.md
-        - name: Gestionați utilizatorii și permisiunile
-          href: consent-management/manage-users.md
-    - name: Utilizați datele consimțământului
-      items:
-        - name: Creați predicții cu date de consimțământ
-          href: consent-management/predictions-consent-data.md
 - name: Limite de serviciu
   href: service-limits.md
 - name: Drepturi și solicitări DSR

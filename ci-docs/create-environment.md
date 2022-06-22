@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 795eaa3598257f5188070f6ea02d04e4423b66eb
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833573"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011626"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cum să: creați un mediu nou
 
@@ -49,7 +49,7 @@ Ai nevoie [permisiuni de administrator](permissions.md) în Customer Insights pe
 Furnizați următoarele detalii:
 
 - **Nume**: Numele pentru acest mediu. Acest câmp este deja completat dacă ați copiat dintr-un mediu existent, dar îl puteți modifica.
-- **Alegeți-vă afacerea**: alegeți publicul principal pentru noul mediu. Puteți lucra cu consumatori individuali (B-la-C) sau cu [conturi de business](work-with-business-accounts.md) (B-la-B). Dacă organizația dvs. face afaceri în principal cu persoane fizice, cum ar fi un comerciant cu amănuntul sau o cafenea, alegeți consumatori individuali. În cazul în care publicul dvs. principal este alte companii, cum ar fi un producător de mașini sau o companie de hârtie, alegeți conturi de afaceri.
+- **Alegeți-vă afacerea**: alegeți publicul principal pentru noul mediu. Puteți lucra cu consumatori individuali (B-la-C) sau cu [conturi de business](work-with-business-accounts.md) (B-la-B). Dacă organizația dvs. face afaceri în principal cu persoane fizice, cum ar fi un comerciant cu amănuntul sau o cafenea, alegeți consumatori individuali. În cazul în care publicul dvs. principal sunt alte companii, cum ar fi un producător de mașini sau o companie de hârtie, alegeți conturi de afaceri.
 - **Tip**: Selectați dacă doriți să creați un mediu de tip producție sau sandbox. Mediile Sandbox nu permit reîmprospătarea datelor programate și sunt destinate pre-implementării și testării. Mediile Sandbox utilizează același public principal ca mediul de producție selectat în prezent.
 - **Regiune**: Regiunea în care este implementat și găzduit serviciul. La [folosește-ți pe al tău Azure Data Lake Storage cont](own-data-lake-storage.md) sau [conectați la un existent Microsoft Dataverse organizare](customer-insights-dataverse.md), mediul Customer Insights trebuie să fie în aceeași regiune.
 
@@ -67,6 +67,7 @@ Există două opțiuni dintre care poți alege:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Pasul 3: Conectați-vă la Microsoft Dataverse
 
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse. Partajați date cu Dataverse pentru a-l folosi cu aplicații de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicații bazate pe model în Power Apps.
+
 
 Lăsați acest câmp necompletat dacă nu aveți al dvs Dataverse mediu și vom crea unul pentru tine.
 
@@ -117,7 +118,7 @@ Sunt copiate următoarele setări de configurare:
 
 Când copiați configurația mediului, trebuie să parcurgeți câțiva pași suplimentari pentru a confirma acreditările:
 
-- Profiluri de client. Mai întâi, autentificați-vă și asimilați sursele de date și rulați unificarea datelor pentru a recrea profilurile clienților.
+- Profiluri de client. Mai întâi, autentificați și asimilați sursele de date și rulați unificarea datelor pentru a recrea profilurile clienților.
 - Acreditările sursă de date. Trebuie să furnizați acreditările pentru fiecare sursă de date pentru a autentifica și reîmprospăta sursele de date manual.
 - Surse de date din folderul Common Data Model și Dataverse. Trebuie să creați manual acele surse de date cu același nume ca în mediul sursă.
 - Secrete de conexiune care sunt folosite pentru exporturi și îmbogățiri. Trebuie să reautentificați conexiunile și apoi să reactivați îmbogățirile și exporturile.

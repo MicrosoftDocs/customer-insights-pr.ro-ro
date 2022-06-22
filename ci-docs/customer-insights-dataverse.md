@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 3848e143bc7cb2f345bc698a274b92148ef00669
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833691"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011562"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
 Customer Insights oferă opțiunea de a face disponibile entități de ieșire ca [Microsoft Dataverse](/powerapps/maker/data-platform/data-platform-intro). Această integrare permite partajarea ușoară a datelor și dezvoltarea personalizată printr-o abordare cu cod redus/fără cod. The [entități de ieșire](#output-entities) sunt disponibile ca tabele în a Dataverse mediu inconjurator. Puteți utiliza datele pentru orice altă aplicație bazată pe Dataverse Mese. Aceste tabele permit scenarii precum fluxuri de lucru automate Power Automate sau construirea de aplicații cu Power Apps.
 
-Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din sursele de date local folosind Power Platform fluxuri de date și gateway-uri](data-sources.md#add-data-from-on-premises-data-sources).
+Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din sursele de date local folosind Power Platform fluxuri de date și gateway-uri](connect-power-query.md#add-data-from-on-premises-data-sources).
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -57,7 +57,7 @@ Activarea partajării datelor cu Microsoft Dataverse când mediul tău [foloseș
 Există două limitări la utilizare Dataverse cu a ta Azure Data Lake Storage cont:
 
 - Există o mapare unu-la-unu între a Dataverse organizaţie şi an Azure Data Lake Storage cont. Odata Dataverse organizația este conectată la un cont de stocare, nu se poate conecta la un alt cont de stocare. Această limitare împiedică ca a Dataverse nu populează mai multe conturi de stocare.
-- Partajarea datelor nu va funcționa dacă este necesară o configurare Azure Private Link pentru a vă accesa contul de stocare Azure Data Lake, deoarece se află în spatele unui firewall. Dataverse momentan nu acceptă conexiunea la punctele finale private prin Private Link.
+- Partajarea datelor nu va funcționa dacă este necesară o configurare Azure Private Link pentru a vă accesa Azure Data Lake Storage cont pentru că se află în spatele unui firewall. Dataverse momentan nu acceptă conexiunea la punctele finale private prin Private Link.
 
 ### <a name="set-up-powershell"></a>Configurați PowerShell
 
@@ -76,7 +76,7 @@ Pentru a executa scripturile PowerShell, mai întâi trebuie să configurați Po
     1. `CreateSecurityGroups.ps1`
        - Ai nevoie *administratorul chiriașului* permisiuni pentru a rula acest script PowerShell.
        - Acest script PowerShell creează două grupuri de securitate în abonamentul Azure. Unul pentru grupul Reader și altul pentru grupul Contributor și va face Microsoft Dataverse serviciu ca proprietar pentru ambele grupuri de securitate.
-       - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+       - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține Azure Data Lake Storage. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
        - Salvați ambele valori ale ID-urilor grupului de securitate generate de acest script, deoarece le vom folosi în`ByolSetup.ps1` scenariu.
 
         > [!NOTE]
@@ -85,7 +85,7 @@ Pentru a executa scripturile PowerShell, mai întâi trebuie să configurați Po
     2. `ByolSetup.ps1`
         - Ai nevoie *Proprietar de date Blob de stocare* permisiuni la nivelul contului de stocare/container pentru a rula acest script sau acest script va crea unul pentru dvs. Atribuirea rolului dvs. poate fi eliminată manual după rularea cu succes a scriptului.
         - Acest script PowerShell adaugă controlul de acces bazat pe tole (RBAC) necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe De asemenea, actualizează Lista de control al accesului (ACL) din containerul CustomerInsights pentru grupurile de securitate create cu`CreateSecurityGroups.ps1` scenariu. Grupul de colaboratori va avea *rwx* permisiunea și grupul de cititori va avea *rx* numai permisiunea.
-        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
         - Copiați șirul de ieșire după rularea cu succes a scriptului. Șirul de ieșire arată astfel:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
 2. Introduceți șirul de ieșire copiat de sus în **Identificator de permisiuni** câmpul pasului de configurare a mediului pentru Microsoft Dataverse.

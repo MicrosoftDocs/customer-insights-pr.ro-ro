@@ -1,19 +1,19 @@
 ---
 title: Exportați datele Customer Insights într-un spațiu de stocare de bloburi Azure
 description: Aflați cum să configurați conexiunea și să exportați într-un spațiu de stocare de bloburi.
-ms.date: 10/06/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
-author: pkieffer
-ms.author: philk
+author: stefanie-msft
+ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: 3d573a6c83b7f0b0c33e656eb383e20a96856b0b
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 623926bf520b19ee4156b7a05e953241cd819e9e
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757401"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947153"
 ---
 # <a name="export-segment-list-and-other-data-to-azure-blob-storage-preview"></a>Exportați lista segmentelor și alte date către Stocare de bloburi Azure (previzualizare)
 
@@ -58,16 +58,19 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab).     
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab).
 
-Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand).
 
 Datele exportate sunt stocate în recipientul de stocare bloburi pe care l-ați configurat. Următoarele căi de foldere sunt create automat în containerul dvs.:
 
 - Pentru entitățile sursă și entitățile generate de sistem:   
   `%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv`  
   - Exemplu: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/HighValueSegment/2020/08/24/1433/HighValueSegment_1.csv`
- 
+  
+  > [!TIP]
+  > Exportul de entități care conțin o cantitate mare de date poate duce la mai multe fișiere CSV în același folder pentru fiecare export. Împărțirea exporturilor are loc din motive de performanță pentru a minimiza timpul necesar pentru finalizarea unui export.
+
 - Model.json pentru entitățile exportate va fi la nivelul %ExportDestinationName%.  
   - Exemplu: `Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/model.json`
 

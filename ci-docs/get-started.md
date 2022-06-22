@@ -12,12 +12,12 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 68c26eb0ad0da787a9f594b4aebe679588b0d6bf
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 1c925110f40319df77940d1c32f24a99504d6ec6
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833590"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011994"
 ---
 # <a name="get-started-with-dynamics-365-customer-insights"></a>Introducere în Dynamics 365 Customer Insights
 
@@ -39,7 +39,7 @@ Prima dată când vă conectați la Customer Insights, configurați setările ș
 
 Profilurile unificate reprezintă fundamentul pentru a obține informații și a lua măsuri cu privire la date. Aduceți date din diverse surse și rulați procesul de unificare a datelor pentru a combina profiluri unificate. Specificați relațiile dintre entitățile ingerate și utilizați funcțiile de îmbogățire pentru a adăuga informații la profiluri.
 
-1. Ingerează date prin crearea de surse de date din mai multe opțiuni. Alege intre [Power Query conectori](connect-power-query.md), A [Dosarul Common Data Model](connect-common-data-model.md), sau [Microsoft Dataverse](connect-dataverse-managed-lake.md).
+1. Ingerează date prin crearea de surse de date din mai multe opțiuni. Alege intre [Azure Data Lake Storage, inclusiv modelul comun de date](connect-common-data-model.md),[Azure Synapse Analytics](connect-synapse.md),[Microsoft Dataverse](connect-dataverse-managed-lake.md), sau [Power Query conectori](connect-power-query.md).
 
 1. Rulați [procesul de unificare a datelor](data-unification.md) prin identificarea [câmpurile sursă](map-entities.md), îndepărtând [duplicate](remove-duplicates.md),[condiţii de potrivire](match-entities.md), și [unificarea câmpurilor](merge-entities.md).
 

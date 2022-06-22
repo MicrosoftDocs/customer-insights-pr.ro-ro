@@ -11,16 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: b18d1f42b9510ebf23f0666322819865d132173b
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 36ad957f59b23df6ee83d9d90898ef03ddfd320a
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833412"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011856"
 ---
 # <a name="connect-to-an-azure-data-lake-storage-account-by-using-an-azure-service-principal"></a>Conectați-vă la un cont Azure Data Lake Storage folosind un director de serviciu Azure
 
-Acest articol discută cum să vă conectați Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de chei de cont de stocare.
+Acest articol discută cum să vă conectați Dynamics 365 Customer Insights cu un Azure Data Lake Storage cont utilizând un principal de serviciu Azure în loc de cheile contului de stocare.
 
 Instrumentele automate care utilizează serviciile Azure ar trebui să aibă întotdeauna permisiuni restricționate. În loc ca aplicațiile să se conecteze ca utilizator complet privilegiat, Azure oferă entități principale de serviciu. Puteți utiliza principalele de servicii în siguranță [adăugați sau editați un dosar Common Data Model ca sursă de date](connect-common-data-model.md) sau [creați sau actualizați un mediu](create-environment.md).
 
@@ -51,7 +51,13 @@ Instrumentele automate care utilizează serviciile Azure ar trebui să aibă în
 
 ## <a name="grant-permissions-to-the-service-principal-to-access-the-storage-account"></a>Acordați permisiuni entității principale de serviciu pentru a accesa contul de stocare
 
-Accesați portalul Azure pentru a acorda permisiuni principalului serviciu pentru contul de stocare pe care doriți să îl utilizați în Customer Insights.
+Accesați portalul Azure pentru a acorda permisiuni principalului serviciu pentru contul de stocare pe care doriți să îl utilizați în Customer Insights. Unul dintre următoarele roluri trebuie să fie atribuit contului de stocare sau containerului:
+
+|Acreditare|Cerințe|
+|----------|------------|
+|Utilizator conectat în prezent|**Rol** : Storage Blob Data Reader, Storage Blob Contributor sau Storage Blob Owner.<br>**Nivel** : Permisiunile pot fi acordate pentru contul de stocare sau container.</br>|
+|Principalul serviciului Customer Insights -<br>Folosind Azure Data Lake Storage ca un sursă de date</br>|Opțiunea 1<ul><li>**Rol** : Storage Blob Data Reader, Storage Blob Data Contributor sau Storage Blob Data Owner.</li><li>**Nivel** : Permisiunile ar trebui acordate pentru contul de stocare.</li></ul>Opțiunea 2 *(fără a partaja accesul principal al serviciului la contul de stocare)*<ul><li>**Rolul 1** : Storage Blob Data Reader, Storage Blob Data Contributor sau Storage Blob Data Owner.</li><li>**Nivel** : Permisiunile trebuie acordate pe container.</li><li>**Rolul 2** : Stocare Blob Data Delegator.</li><li>**Nivel** : Permisiunile ar trebui acordate pentru contul de stocare.</li></ul>|
+|Principalul serviciului Customer Insights - <br>Folosind Azure Data Lake Storage ca ieșire sau destinație</br>|Opțiunea 1<ul><li>**Rol** : Colaborator de date stocare blob sau proprietar stocare blob.</li><li>**Nivel** : Permisiunile ar trebui acordate pentru contul de stocare.</li></ul>Opțiunea 2 *(fără a partaja accesul principal al serviciului la contul de stocare)*<ul><li>**Rol** : Colaborator de date stocare blob sau proprietar stocare blob.</li><li>**Nivel** : Permisiunile trebuie acordate pe container.</li><li>**Rolul 2** : Storage Blob Delegator.</li><li>**Nivel** : Permisiunile ar trebui acordate pentru contul de stocare.</li></ul>|
 
 1. Accesați [portalul de administrare Azure](https://portal.azure.com) și conectați-vă la organizația dvs.
 
@@ -62,9 +68,9 @@ Accesați portalul Azure pentru a acorda permisiuni principalului serviciu pentr
    :::image type="content" source="media/ADLS-SP-AddRoleAssignment.png" alt-text="Captură de ecran care arată portalul Azure în timp ce se adaugă o atribuire de roluri.":::
 
 1. Pe panoul **Adăugați atribuirea de roluri**, setați următoarele proprietăți:
-   - Rol: **Contribuitor de date blob de stocare**
+   - Rol: Cititor de date de stocare blob, contributor de stocare blob sau proprietar de stocare blob pe baza acreditărilor enumerate mai sus.
    - Atribuiți accesul la: **utilizator, grup sau entitate principală de serviciu**
-   - Selectați membri: **Dynamics 365 AI pentru Customer Insights** (cel [principalul serviciului](#create-a-new-service-principal) ați căutat mai devreme în această procedură)
+   - Selectați membrii: **Dynamics 365 AI pentru Customer Insights** (cel [principalul serviciului](#create-a-new-service-principal) ați căutat mai devreme în această procedură)
 
 1. Selectați **Revizuire + atribuire**.
 

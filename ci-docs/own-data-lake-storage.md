@@ -3,17 +3,17 @@ title: Folosește-ți pe al tău Azure Data Lake Storage cont Gen2
 author: mukeshpo
 description: Aflați despre cerințele pentru a vă folosi propriul dvs Azure Data Lake Storage cont pentru a stoca datele Customer Insights.
 ms.author: mukeshpo
-ms.date: 05/30/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 9fcd7645e34bf310ac3a1b98a0dd9a60598b19dc
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833952"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9011948"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Folosește-ți pe al tău Azure Data Lake Storage cont Gen2
 
@@ -37,6 +37,7 @@ Când creați un mediu nou, asigurați-vă că există contul Data Lake Storage 
 1. Alege cum să **Conectați-vă spațiul de stocare**. Puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. Pentru mai multe informații, vezi [Conectați-vă la un Azure Data Lake Storage cont utilizând un Azure Service Principal](connect-service-principal.md).
    - Pentru **Abonament Azure**, alege **Abonament**, **de resurse**, și **Cont de stocare** care contine`customerinsights` recipient.
    - Pentru **Cheia de cont**, furnizați **Nume de cont** si **Cheia de cont** pentru contul Data Lake Storage. Folosirea acestei metode de autentificare implică faptul că sunteți informat dacă organizația dvs. rotește cheile. Trebuie [actualizați configurația mediului](manage-environments.md#edit-an-existing-environment) cu noua cheie când este rotită.
+1. Alegeți dacă doriți să utilizați Azure Private Link pentru a vă conecta la contul de stocare și [creați conexiunea la Private Link](security-overview.md#private-links-tab) cu un proces în două etape.
 
 Când procesele de sistem, cum ar fi ingerarea datelor, sunt finalizate, sistemul creează folderele corespunzătoare în contul de stocare. Fișierele de date și fișierele *model.json* sunt create și adăugate în dosare pe baza numelui procesului.
 

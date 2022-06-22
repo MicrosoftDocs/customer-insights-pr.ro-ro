@@ -1,7 +1,7 @@
 ---
 title: Vizualizare profiluri de client
 description: Obțineți o vizualizare combinată a datelor unificate ale clienților.
-ms.date: 05/13/2022
+ms.date: 06/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 9bb7abc04afe38d73e1df9b252e1864fa6570d7e
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 1e9e59d7ae6c16ed8b33f2ea482563c3520ab885
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755797"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947061"
 ---
 # <a name="customer-profiles"></a>Profiluri de client
 
@@ -55,9 +55,9 @@ Puteți filtra clienții după câmpurile entitate *Client*. Similar cu căutare
 
 Selectați oricare dintre dalele clientului pentru a deschide **Pagina cu detalii despre client**. Această vizualizare conține informații unificate pentru clientul selectat. Detaliile despre clienți includ următorul conținut:
 
-**Dală profil client**: Această dală arată diferitele valori față de entitatea unificată *Client*. Dacă un câmp nu are valoare pentru profilul de client selectat, acesta nu se va afișa. Dala este structurată în secțiuni:
+**Dală profil client**: Această dală arată diferitele valori față de entitatea unificată *Client*. Dacă un câmp nu are nicio valoare pentru profilul de client selectat, nu se va afișa, cu excepția câmpului pentru adresă. Dala este structurată în secțiuni:
 
-- Prima secțiune prezintă un set predefinit de câmpuri urmat de toate câmpurile care fac parte din indexul de căutare și filtrare. Toate câmpurile legate de adresă sunt combinate într-o singură linie dacă profilul conține astfel de câmpuri.
+- Prima secțiune prezintă un set predefinit de câmpuri urmat de toate câmpurile care fac parte din indexul de căutare și filtrare. Toate câmpurile legate de adresă sunt combinate într-o singură linie, care arată chiar dacă profilul nu conține informații despre adresă.
 - **Contacte pentru acest client**: În mediile pentru conturi de afaceri, veți vedea toate contactele aferente pentru acest client ca a doua secțiune. Fiecare contact este afișat cu câmpurile sale. Câmpurile goale sunt ascunse.
 - **Câmpuri suplimentare**: Afișează câmpurile rămase ale clientului selectat, cu excepția ID-urilor.
 - **ID-uri**: Listează toate ID-urile sub numele entității corespunzătoare. Câmpurile sunt identificate ca ID-uri prin semantica lor, care le clasifică ca atare.

@@ -1,7 +1,7 @@
 ---
 title: Îmbogățirea adresei (conține videoclip)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
-ms.date: 01/19/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -14,18 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: b4fef3b5e30e1cac4e5cb4401498f2f0981a409e
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643001"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953826"
 ---
 # <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
 
 Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utilizați modelele Microsoft pentru a vă normaliza și îmbogăți adresele în [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/address) pentru o mai bună acuratețe și informații.
 
-Poti de asemenea [îmbogăți adresele pe sursele de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
+Poti de asemenea [îmbogăți adresele pe surse de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
 
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 
@@ -53,17 +53,17 @@ Informațiile despre adresă pot fi într-un format non-standard și să conțin
 
 ### <a name="limitations"></a>Limitări
 
-Adresele îmbunătățite funcționează numai cu valorile care există deja în datele de adresă ingerate. Modelul nu: 
+Adresele îmbunătățite funcționează numai cu valorile care există deja în datele de adresă ingerate. Modelul nu:
 
 1. Verificî dacă adresa este o adresă validă.
 2. Verifică dacă oricare dintre valori, cum ar fi codurile poștale sau numele străzilor, sunt valide.
 3. Schimbă valorile pe care nu le recunoaște.
 
-Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunătăți adresele. În timp ce aplicăm un prag ridicat de încredere atunci când modelul modifică o valoare de intrare, la fel ca în cazul oricărui model bazat pe învățarea automată, precizia de 100% nu este garantată.
+Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunătăți adresele. Ca și în cazul oricărui model bazat pe învățarea automată, acuratețea de 100% nu este garantată.
 
 ## <a name="supported-countries-or-regions"></a>Țări sau regiuni sprijinite
 
-În prezent, sprijinim adresele îmbogățitoare din aceste țări sau regiuni: 
+În prezent, sprijinim adresele îmbogățitoare din aceste țări sau regiuni:
 
 - Australia
 - Canada
@@ -74,50 +74,46 @@ Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunăt�
 - Regatul Unit
 - Statele Unite ale Americii
 
-Adresele trebuie să conțină o valoare a țării/regiunii. Nu procesăm adrese pentru țări sau regiuni care nu sunt acceptate și adrese care nu au furnizat nicio țară sau regiune.
-
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
-1. Accesați **Date** > **Îmbogățire**.
+1. Accesați **Date** > **Îmbogățire** și selectați fila **Descoperire**.
 
 1. Selectați **Îmbogățire date** pe dala **Adrese îmbunătățite**.
 
    :::image type="content" source="media/enhanced-addresses-tile.png" alt-text="Captură de ecran a plăcii Adrese îmbunătățite.":::
 
-1. Selectați **Set de date client** și alegeți entitatea care conține adresele pe care doriți să le îmbogățiți. Puteți selecta entitatea *Client* pentru a îmbogăți adrese în toate profilurile dvs. de clienți sau selectați o entitate de segment pentru a îmbogăți adresele numai în profilurile de clienți din acel segment.
+1. Examinați prezentarea generală și apoi selectați **Următorul**.
+
+1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
 
 1. Selectați formatatul adreselor în setul de date al dvs. Alegeți **Adresă cu un singur atribut** dacă adresele din datele dvs. utilizează un singur câmp. Alegeți **Adresă cu atribute multiple** dacă adresele din datele dvs. utilizează mai mult de un singur câmp de date.
+
+1. Selectați **Următorul** și mapați câmpurile de adresă de la entitatea dvs. unificată client.
+
+    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Pagina îmbunătățită de mapare a câmpului de adrese.":::
 
    > [!NOTE]
    > Țara/regiunea este obligatorie atât în adresele cu un singur atribut, cât și cu mai multe atribute. Adresele care nu conțin valori valabile sau acceptate de țară/regiune nu vor fi îmbogățite.
 
-1.  Mapați câmpurile de adresă de la entitatea client unificată.
-
-    :::image type="content" source="media/enhanced-address-mapping.png" alt-text="Pagina îmbunătățită de mapare a câmpului de adrese.":::
-
 1. Selectați **Următorul** pentru a completa maparea câmpului.
 
-1. Furnizați un nume pentru îmbogățire și entitatea de ieșire.
+1. Furnizeaza un **Nume** pentru îmbogățire și pentru **Entitate de ieșire**.
 
 1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
 
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
-Pentru a începe procesul de îmbogățire, selectați **Rulare** din bara de comenzi. De asemenea, puteți lăsa sistemul să ruleze automat îmbogățirea ca parte a unei [reîmprospătări programate](system.md#schedule-tab). Timpul de procesare depinde de dimensiunea datelor clienților dvs.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
-După finalizarea procesului de îmbogățire, puteți consulta datele din profilurile clienților nou îmbogățite din **Îmbogățirile mele**. În plus, veți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
-
-Puteți vedea un eșantion de date îmbogățite în **Previzualizarea clienților îmbogățiți** ţiglă. Selectați **Vezi mai mult** și selectați **Date** pentru a accesa o vizualizare detaliată a fiecărui profil îmbogățit.
+The **Număr de clienți îmbogățiți pe domeniu** oferă o detaliere a acoperirii fiecărui câmp îmbogățit.
 
 ### <a name="overview-card"></a>Card de prezentare generală
 
-Cardul de prezentare generală prezintă detalii despre acoperirea îmbogățirii. 
+The **Clienții modifică imaginea de ansamblu** cardul prezintă detalii despre acoperirea îmbogățirii:
 
-* **Adresele procesate și schimbate** : Numărul de profiluri de clienți cu adrese care au fost îmbogățite cu succes.
-
-* **Adresele procesate și neschimbate** : numărul de profiluri de clienți cu adrese care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
-
-* **Adresele nu au fost procesate și nu au fost modificate** : numărul de profiluri cu adrese care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
+- **Adresele procesate și schimbate** : Numărul de profiluri de clienți cu adrese care au fost îmbogățite cu succes.
+- **Adresele procesate și neschimbate** : numărul de profiluri de clienți cu adrese care au fost recunoscute, dar care nu au fost modificate. Se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+- **Adresele nu au fost procesate și nu au fost modificate** : numărul de profiluri cu adrese care nu au fost recunoscute. De obicei, pentru date de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori
 

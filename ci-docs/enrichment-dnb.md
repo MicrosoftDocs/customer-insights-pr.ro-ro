@@ -1,7 +1,7 @@
 ---
 title: Îmbogățirea profilurilor companiei cu Dun & Bradstreet
 description: Informații generale despre îmbogățirea de la terți Dun & Bradstreet.
-ms.date: 04/26/2022
+ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: c738c2657d4cda213342629156ddc8104366bd8a
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
+ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755415"
+ms.lasthandoff: 06/13/2022
+ms.locfileid: "8953906"
 ---
 # <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Previzualizare)
 
@@ -22,16 +22,14 @@ Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-Pentru a configura o îmbogățire Dun & Bradstreet, trebuie îndeplinite următoarele cerințe preliminare:
+- Un activ [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) licență.
+- [Profiluri de clienți unificate](customer-profiles.md) pentru companii.
+- Un Dun & Bradstreet [proiect](#set-up-your-dun--bradstreet-project) este pus la punct.
+- Un Dun & Bradstreet [conexiune](connections.md) este [configurat](#configure-a-connection-for-dun--bradstreet) de către un administrator.
 
-- Ai un activ [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) licență.
-- Aveți [profiluri de clienți unificate](customer-profiles.md) pentru companii.
-- Un Dun & Bradstreet [conexiune](connections.md) este configurat de un administrator. Îl poți crea dacă ai [administrator](permissions.md#admin) permisiunile și acreditările de la Dun & Bradstreet Connect.
-
-## <a name="setting-up-your-dun--bradstreet-project"></a>Configurarea proiectului Dun & Bradstreet
+## <a name="set-up-your-dun--bradstreet-project"></a>Configurați-vă proiectul Dun & Bradstreet
 
 În calitate de utilizator licențiat al Dun & Bradstreet, puteți configura un proiect în [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights).
-
 
 1. Conectați la [Dun & Bradstreet Connect](https://connect.dnb.com?lead_source=microsoft_audienceinsights). Pentru a recupera acreditările, [restaurați-vă parola](https://sso.dnb.com/signin/forgot-password?lead_source=microsoft_audienceinsights).
 
@@ -47,66 +45,69 @@ Pentru a configura o îmbogățire Dun & Bradstreet, trebuie îndeplinite următ
 
    :::image type="content" source="media/enrichment-dnb-s3info.png" alt-text="Captură de ecran cu selecția informațiilor s3 într-un proiect Dun & Bradstreet.":::
 
-## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
-
-1. Accesați **Date** > **Îmbogățire**.
-
-1. Selectați **Îmbogățiți-mi datele** pe tigla Dun & Bradstreet și selectați **Incepe**.
-
-   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captură de ecran a plăcilor Dun & Bradstreet.":::
-
-1. Selectați o [conexiune](connections.md) din lista derulantă. Contactați un administrator dacă nu este disponibilă nicio conexiune. Dacă sunteți administrator, puteți crea o conexiune. Selectați **Adăugați conexiune** și alegeți **Dun & Bradstreet**.
-
-1. Selectați **Conectați-vă la Dun & Bradstreet** pentru a confirma conexiunea.
-
-1. Selectați **Următorul** și alegeți **Set de date despre client** doriți să vă îmbogățiți cu datele companiei de la Dun & Bradstreet. Puteți selecta **Client** entitate pentru a vă îmbogăți toate profilurile de clienți sau selectați o entitate de segment pentru a îmbogăți numai profilurile de clienți unificate conținute în acel segment.
-
-1. Selectați **Următorul** și definiți ce câmpuri din profilurile dvs. unificate sunt folosite pentru a căuta datele companiei potrivite de la Dun & Bradstreet. Fie **Numărul DUNS** sau **Numele companiei** și **Țară** câmpurile sunt obligatorii. Domeniul de țară susține [coduri de țară din două sau trei litere](https://www.iso.org/iso-3166-country-codes.html), numele țării în engleză, numele țării în limba maternă și prefixul de telefon. Unele variante comune de țară includ:
-
-- SUA: Statele Unite ale Americii, Statele Unite ale Americii, SUA, America.
-- CA: Canada.
-- GB: Regatul Unit, Regatul Unit, Marea Britanie, GB, Regatul Unit al Marii Britanii și Irlandei de Nord, Regatul Unit al Marii Britanii.
-- AU: Australia, Commonwealth of Australia.
-- FR: Franța, Republica Franceză.
-- DE: Germania, Germană, Deutschland, Allemagne, Republica Federală Germania, Republica Germania.
-
-   :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panoul de cartografiere a câmpurilor Dun & Bradstreet.":::
-
-1. Selectați **Următorul** pentru a completa maparea câmpului.
-
-1. Furnizați un nume pentru îmbogățire și selectați **Salvați îmbogățirea** după ce v-ați analizat alegerile.
-
 ## <a name="configure-a-connection-for-dun--bradstreet"></a>Configurați o conexiune pentru Dun & Bradstreet
 
-Trebuie să fiți administrator pentru a configura conexiunile. Selectați **Adăugați conexiune** la configurarea unei îmbogățiri *sau* mergi la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
+Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți acreditările de la Dun & Bradstreet Connect.
 
-1. Selectați **Începeți lucrul**.
+1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau mergeți la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
 
-1. Introduceți un nume pentru conexiune în caseta **Nume afișat**.
+1. Introduceți un nume pentru conexiune.
 
-1. Furnizați acreditările Dun & Bradstreet valide și detaliile proiectului Dun & Bradstreet *Regiunea, Calea folderului Drop și Drop folder name*. Tu [obține aceste informații](#setting-up-your-dun--bradstreet-project) din proiectul Dun & Bradstreet.
+1. Furnizați acreditările Dun & Bradstreet valide și detaliile proiectului Dun & Bradstreet *Regiunea, Calea folderului Drop și Drop folder name*. Tu [obține aceste informații](#set-up-your-dun--bradstreet-project) din proiectul Dun & Bradstreet.
 
-1. Examinați și furnizați consimțământul pentru **Confidențialitatea și respectarea datelor** prin selectarea **Sunt de acord**.
+1. Examinați și furnizați consimțământul pentru [Confidențialitatea și respectarea datelor](#data-privacy-and-compliance) prin selectarea **Sunt de acord**.
 
-1. Selectați **Verificare** pentru a valida configurația.
-
-1. După finalizarea verificării, selectați **Salvare**.
+1. Selectați **Verifica** pentru a valida configurația și apoi selectați **Salvați**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Pagina de configurare a conexiunii Dun & Bradstreet.":::
 
+### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
+
+Când activați Dynamics 365 Customer Insights pentru a transmite date către Dun & Bradstreet, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Dun & Bradstreet îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
+
+## <a name="supported-countries-or-regions"></a>Țări sau regiuni sprijinite
+
+În prezent, acceptăm următoarele opțiuni de țară/regiune: Canada (engleză) sau Statele Unite ale Americii (engleză).
+
+## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
+
+1. Accesați **Date** > **Îmbogățire** și selectați fila **Descoperire**.
+
+1. Selectați **Îmbogățiți-mi datele** pe **Datele companiei** pentru faianta Dun & Bradstreet.
+
+   :::image type="content" source="media/enrichment-dnb-tile.png" alt-text="Captură de ecran a plăcilor Dun & Bradstreet.":::
+
+1. Examinați prezentarea generală și apoi selectați **Următorul**.
+
+1. Selectați conexiunea și confirmați. Contactați un administrator dacă unul nu este disponibil.
+
+1. Selectați **Următorul**.
+
+1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți cu datele companiei de la Dun & Bradstreet. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
+
+1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor companiei de la Dun & Bradstreet. Cel puțin unul dintre câmpurile **Numele și adresa**, **Telefon** sau **E-mail** este necesar.
+
+1. Selectați **Următorul**
+
+1. Hartați câmpurile cu datele companiei de la Dun & Bradstreet. Fie **Numărul DUNS** sau **Numele companiei** și **Țară** câmpurile sunt obligatorii.
+
+      :::image type="content" source="media/enrichment-dnb-mapping.png" alt-text="Panoul de cartografiere a câmpurilor Dun & Bradstreet.":::
+
+1. Selectați **Următorul** pentru a completa maparea câmpului.
+
+1. Furnizeaza un **Nume** pentru îmbogățire și pentru **Numele entității de ieșire**.
+
+1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
+
+1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
+
 ## <a name="enrichment-results"></a>Rezultate de îmbogățire
 
-După reîmprospătarea îmbogățirii, puteți examina datele companiei nou îmbogățite sub [Îmbogățirile mele](enrichment-hub.md). Puteți găsi ora ultimei actualizări și numărul de profiluri îmbogățite.
-
-Puteți accesa o vedere detaliată a fiecărui profil îmbogățit selectând **Vizualizați datele îmbogățite**.
+[!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
 ## <a name="next-steps"></a>Pașii următori
 
 [!INCLUDE [next-steps-enrichment](includes/next-steps-enrichment.md)]
-
-## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Dun & Bradstreet, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Dun & Bradstreet îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

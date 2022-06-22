@@ -1,26 +1,26 @@
 ---
-title: Reîmprospătare incrementală pentru Power Query surse de date bazate pe
-description: Actualizează datele noi și actualizate pentru surse mari de date pe baza Power Query.
-ms.date: 12/06/2021
-ms.reviewer: mhart
+title: Reîmprospătare incrementală pentru Power Query și surse de date Azure Data Lake
+description: Actualizează datele noi și actualizate pentru surse mari de date pe baza Power Query sau surse de date Azure Data Lake.
+ms.date: 05/30/2022
+ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: adkuppa
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: 3d21baf9804f300802b066df0183fc8f01abba9a
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
+ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643666"
+ms.lasthandoff: 06/14/2022
+ms.locfileid: "9012040"
 ---
-# <a name="incremental-refresh-for-data-sources-based-on-power-query"></a>Reîmprospătare incrementală pentru sursele de date pe baza Power Query
+# <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Reîmprospătare incrementală pentru Power Query și surse de date Azure Data Lake
 
-Acest articol discută cum să configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query.
+Acest articol discută cum să configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query sau Azure Data Lake.
 
 Reîmprospătarea incrementală pentru sursele de date oferă următoarele avantaje:
 
@@ -28,13 +28,11 @@ Reîmprospătarea incrementală pentru sursele de date oferă următoarele avant
 - **Fiabilitate crescută** - Cu actualizări mai mici, nu trebuie să mențineți conexiunile la sisteme volatile pentru o perioadă lungă de timp, reducând riscul apariției problemelor de conectare.
 - **Consum redus de resurse** - Reîmprospătarea doar a unui subset din datele dvs. totale duce la utilizarea mai eficientă a resurselor de calcul și reduce amprenta asupra mediului.
 
-## <a name="configure-incremental-refresh"></a>Configurați reîmprospătarea incrementală
+## <a name="configure-incremental-refresh-for-data-sources-based-on-power-query"></a>Configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query
 
 Customer Insights permite reîmprospătarea incrementală pentru sursele de date importate prin intermediul Power Query care sprijină ingestia incrementală. De exemplu, bazele de date SQL Azure cu câmpuri de dată și oră, care indică momentul în care înregistrările de date au fost actualizate ultima dată.
 
 1. [Creați un nou sursă de date bazat pe Power Query](connect-power-query.md).
-
-1. Furnizeaza un **Nume** pentru sursă de date.
 
 1. Selectați un sursă de date care acceptă reîmprospătarea incrementală, cum ar fi [Baza de date Azure SQL](/power-query/connectors/azuresqldatabase).
 
@@ -48,7 +46,7 @@ Customer Insights permite reîmprospătarea incrementală pentru sursele de date
 
 1. Pe **Setări de reîmprospătare incrementală**, veți configura reîmprospătarea incrementală pentru toate entitățile pe care le-ați selectat la crearea sursei de date.
 
-   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurați entitățile dintr-o sursă de date pentru reîmprospătare incrementală.":::
+   :::image type="content" source="media/incremental-refresh-settings.png" alt-text="Configurați setările de reîmprospătare incrementală.":::
 
 1. Selectați o entitate și furnizați următoarele detalii:
 
@@ -58,5 +56,31 @@ Customer Insights permite reîmprospătarea incrementală pentru sursele de date
 
 1. Selectați **salvare** pentru a finaliza crearea sursei de date. Actualizarea inițială a datelor va fi o reîmprospătare completă. Ulterior, reîmprospătarea de date incrementală se întâmplă așa cum este configurat în pasul anterior.
 
+## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Configurați reîmprospătarea incrementală pentru sursele de date Azure Data Lake
+
+Customer Insights permite reîmprospătarea incrementală pentru sursele de date conectate Azure Data Lake Storage. Pentru a utiliza absorbția incrementală și reîmprospătarea pentru o entitate, configurați acea entitate atunci când adăugați Azure Data Lake sursă de date sau ulterior când editați sursă de date. Dosarul de date entității trebuie să conțină următoarele foldere:
+
+- **Date complete** : Dosar cu fișiere de date care conțin înregistrările inițiale
+- **Date incrementale** : Dosar cu dosare cu ierarhie dată/oră în **aaaa/ll/zz/hh** format care conține actualizările incrementale. **hh** reprezintă ora UTC a actualizărilor și conține **Upsers** și **Șterge** foldere. **Upsers** conține fișiere de date cu actualizări ale înregistrărilor existente sau ale înregistrărilor noi. **Șterge** conține fișiere de date cu înregistrări care trebuie eliminate.
+
+1. Când adăugați sau editați un sursă de date, navigați la **Atribute** panou pentru entitate.
+
+1. Examinați atributele. Asigurați-vă că un atribut pentru data creată sau ultima actualizare este configurat cu a *dateTime* **Format de date** si a *Calendar.Data* **Tip semantic**. Editați atributul dacă este necesar și selectați **Terminat**.
+
+1. De la **Selectați Entități** panoul, editați entitatea. The **Ingestie incrementală** caseta de selectare este bifată.
+
+   :::image type="content" source="media/ADLS_inc_refresh.png" alt-text="Configurați entitățile dintr-o sursă de date pentru reîmprospătare incrementală.":::
+
+   1. Răsfoiți la folderul rădăcină care conține fișierele .csv sau .parquet pentru date complete, suprafețe de date incrementale și ștergeri incrementale de date.
+   1. Introduceți extensia pentru datele complete și pentru ambele fișiere incrementale (\. csv sau\. parchet).
+   1. Selectați **Salvare**.
+
+1. Pentru **Ultima actualizare**, selectați atributul de marcaj temporal al datei.
+
+1. Dacă **Cheia principala** nu este selectat, selectați cheia primară. Cheia primară este un atribut unic pentru entitate. Pentru ca un atribut să fie o cheie primară validă, nu ar trebui să includă valori duplicate, valori lipsă sau valori nule. Atributele tipului de date șir, întreg și GUID sunt acceptate ca chei primare.
+
+1. Selectați **Închide** pentru a salva și a închide panoul.
+
+1. Continuați să adăugați sau să editați sursă de date.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

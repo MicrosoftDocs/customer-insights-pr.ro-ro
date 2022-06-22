@@ -1,19 +1,19 @@
 ---
 title: Exportați date despre Customer Insights către gazde SFTP (conține videoclip)
 description: Aflați cum să configurați conexiunea și să exportați către o locație SFTP.
-ms.date: 03/03/2021
+ms.date: 06/09/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 5170ec4ca35ad2a94f02e9d696c44a32da888120
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b56d628c8286ba6697cccc9b002f609aa929951b
+ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643235"
+ms.lasthandoff: 06/10/2022
+ms.locfileid: "8947199"
 ---
 # <a name="export-segments-and-other-data-to-sftp-preview"></a>Exportați segmente și alte date către SFTP (previzualizare)
 
@@ -28,8 +28,8 @@ Utilizați datele clienților dvs. în aplicații terțe, exportându-le într-o
 ## <a name="known-limitations"></a>Limitări cunoscute
 
 - Destinațiile SFTP din spatele firewall-urilor nu sunt acceptate momentan. 
-- Runtime-ul unui export depinde de performanța sistemului dvs. Vă recomandăm două nuclee CPU și 1 Gb de memorie ca configurație minimă a serverului dvs. 
-- Entitățile exportatoare cu până la 100 de milioane de profiluri de clienți pot dura 90 de minute când se utilizează configurația minimă recomandată a două nuclee CPU și 1 Gb de memorie. 
+- Runtime-ul unui export depinde de performanța sistemului dvs. Vă recomandăm două nuclee CPU și 1 Gb de memorie ca configurație minimă a serverului dvs.
+- Entitățile exportatoare cu până la 100 de milioane de profiluri de clienți pot dura 90 de minute când se utilizează configurația minimă recomandată a două nuclee CPU și 1 Gb de memorie.
 
 ## <a name="set-up-connection-to-sftp"></a>Configurarea conexiuni la SFTP
 
@@ -64,13 +64,17 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 1. Selectați entitățile, de exemplu segmente pe care doriți să le exportați.
 
    > [!NOTE]
-   > Fiecare entitate selectată va fi împărțită în maximum cinci fișiere de ieșire la export. 
+   > Fiecare entitate selectată va fi împărțită în maximum cinci fișiere de ieșire la export.
 
 1. Selectați **Salvare**.
 
 Salvarea unui export nu se execută imediat.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab).
+Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand).
+
+> [!TIP]
+> Exportul de entități care conțin o cantitate mare de date poate duce la mai multe fișiere CSV în același folder pentru fiecare export. Împărțirea exporturilor are loc din motive de performanță pentru a minimiza timpul necesar pentru finalizarea unui export.
 
 ## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 

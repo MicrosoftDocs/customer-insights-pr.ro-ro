@@ -1,7 +1,7 @@
 ---
 title: Examinați unificarea datelor
 description: Examinați pașii de unificare a datelor, creați profiluri de clienți unificate și examinați rezultatele
-ms.date: 05/04/2022
+ms.date: 06/02/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4c709dfb55bf079dd2fe99e41adb4c77c2bece4b
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: 0f7b2e9af65796c4d304dbd9893a21617e847620
+ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8743033"
+ms.lasthandoff: 06/03/2022
+ms.locfileid: "8844101"
 ---
 # <a name="review-data-unification"></a>Examinați unificarea datelor
 
@@ -32,11 +32,13 @@ Acest ultim pas al procesului de unificare arată un rezumat al pașilor din pro
 
 1. Selectați **Editați | ×** pe oricare dintre pașii de unificare a datelor pentru a revizui și a face orice modificări.
 
-1. Dacă sunteți mulțumit de selecțiile dvs., selectați **Creați profiluri de clienți**. The **Unifica** pagina se afișează în timp ce se creează profilul unificat de client. Algoritmul de unificare durează ceva timp pentru a se finaliza și nu puteți modifica configurația până când nu se finalizează.
+1. Dacă sunteți mulțumit de selecțiile dvs., selectați **Creați profiluri de clienți**. The **Unifica** pagina se afișează în timp ce se creează profilul unificat de client. Toate plăcile, cu excepția **Câmpurile sursă** spectacol **În așteptare** sau **Înviorător** stare.
 
-   [!INCLUDE [m3-task-details-include](includes/m3-task-details.md)]
+   :::image type="content" source="media/m3_unify_refreshing.png" alt-text="Captură de ecran a paginii Unify cu plăci afișând în coadă sau în curs de reîmprospătare.":::
 
-Când procesul de unificare se încheie, entitatea unificată a profilului clientului a sunat *Client*, este listat pe **Entități** pagina din **Profiluri** secțiune. Prima rundă de unificare cu succes creează unificatul *Client* entitate. Toate rulările ulterioare extind acea entitate.
+   [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
+
+Algoritmul de unificare durează ceva timp pentru a se finaliza și nu puteți modifica configurația până când nu se finalizează. Când procesul de unificare se încheie, entitatea unificată a profilului clientului a sunat *Client*, este listat pe **Entități** pagina din **Profiluri** secțiune. Prima rundă de unificare cu succes creează unificatul *Client* entitate. Toate rulările ulterioare extind acea entitate.
 
 ## <a name="review-the-results-of-data-unification"></a>Examinați rezultatele unificării datelor
 

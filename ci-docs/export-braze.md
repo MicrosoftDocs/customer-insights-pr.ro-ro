@@ -1,34 +1,35 @@
 ---
-title: Exportați datele despre Customer Insights în Braze
+title: Exportați segmente în Braze (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați în Braze.
-ms.date: 03/29/2022
+ms.date: 06/29/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: bfc9b34506dc3385b5edf12b31e74d05f2d20655
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 314a61f82c4040a8dbd6dff1dd5d92e20464f82a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643154"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082686"
 ---
-# <a name="export-segment-lists-to-braze-preview"></a>Exportați liste de segmente în Braze (previzualizare)
+# <a name="export-segments-to-braze-preview"></a>Exportați segmente în Braze (previzualizare)
 
 Exportați segmente de profiluri de clienți unificate în Braze și utilizați-le pentru activități de marketing.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
--   Tu ai [cont Braze](https://www.braze.com/) și acreditările de administrator corespunzătoare.
--   Tu ai [segmente configurate](segments.md) în Customer Insights.
--   Profilurile unificate ale clienților din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail și un ID de client Braze. 
+- A [cont Braze](https://www.braze.com/) și acreditările de administrator corespunzătoare.
+- Existent [segmente în Braze](https://www.braze.com/docs/user_guide/engagement_tools/segments/creating_a_segment/).
+- [Segmente configurate](segments.md) în Customer Insights.
+- Profilurile unificate ale clienților din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail și un ID de client Braze.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
 - Exportul în Braze este limitat la segmente.
-- Exportarea a până la 1 milion de profiluri de clienți în Braze poate dura până la 40 de minute. 
+- Exportarea a până la 1 milion de profiluri de clienți în Braze poate dura până la 40 de minute.
 - Numărul de profiluri de clienți pe care le puteți exporta în Braze depinde și este limitat de contractul dvs. cu Braze.
 
 ## <a name="set-up-connection-to-braze"></a>Configurați conexiunea la Braze
@@ -41,7 +42,7 @@ Exportați segmente de profiluri de clienți unificate în Braze și utilizați-
 
 1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Furnizați-vă [Cheia API Braze](https://www.braze.com/docs/api/basics/) pentru a continua conectarea. 
+1. Furnizați-vă [Cheia API Braze](https://www.braze.com/docs/api/basics/) pentru a continua conectarea.
 
 1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
 
@@ -59,9 +60,13 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Pentru a crea un nou export, selectați **Adăugare destinație**.
 
-1. În **Conexiune pentru export** câmp, alegeți o conexiune din secțiunea Braze. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.  
+1. În **Conexiune pentru export** câmp, alegeți o conexiune din secțiunea Braze. Dacă nu vedeți această secțiune, nu sunt disponibile conexiuni de acest tip.  
 
-3. În **Potrivirea datelor** secțiunea, în **E-mail** câmp, selectați câmpul care reprezintă adresa de e-mail a unui client, în câmpul „ID client”, selectați câmpul care reprezintă ID-ul Braze al clientului. Este necesar să exportați segmente în Braze. Segmentele din Braze vor fi create cu același nume al segmentului ca în Dynamics 365 Customer Insights. Puteți alege câmpuri suplimentare, opționale, pentru datele de potrivire. 
+1. Adauga o **Numele de afișare** pentru exportul dvs.
+
+1. Adăugați identificatorul API al segmentului Braze în care doriți să exportați în **Identificatorul API al segmentului Braze** camp. Identificatorul îl găsiți în detaliile segmentului de pe platforma Braze.
+
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. În **Număr de înregistrare client** câmp, selectați câmpul care reprezintă ID-ul Braze al clientului. Este necesar să exportați segmente în Braze. Puteți alege mai multe câmpuri opțional.
 
 1. Selectați **Salvare**.
 

@@ -1,5 +1,5 @@
 ---
-title: Pagina de pornire în Customer Insights
+title: Explorați statisticile clienților
 description: Începeți să explorați aplicația din pagina de pornire.
 ms.date: 05/11/2022
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 621977068dc49b55f50f00e9762a4a5952d7b453
-ms.sourcegitcommit: ba29fd7c89bdeba7260b4783662d8da8e1e1e30e
+ms.openlocfilehash: 13b4bfa2f0b0cd69454c025e2f59de3dd6bb75a3
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/18/2022
-ms.locfileid: "8768365"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053312"
 ---
 # <a name="explore-customer-insights"></a>Explorați statisticile clienților
 
@@ -50,8 +50,8 @@ Această secțiune conține carduri care vă ajută să parcurgeți procesul de 
 
 1. The **Adăugați date** cardul vă ajută cu importarea datelor. Suport pentru Customer Insights [mai multe opțiuni pentru a introduce date despre clienții dvs](data-sources.md). Selectați **Adăugați surse de date** pentru a incepe.
 1. Odată ce importul inițial al datelor s-a încheiat cu succes, puteți utiliza **Unificați datele** card de armonizare a datelor și [creați profiluri unificate pentru clienți](data-unification.md) din surse disparate. 
-1. Cu profilurile unificate ale clienților, este timpul să revizuiți **Analizați datele** opțiuni și obțineți informații suplimentare. Încercați să creați [măsuri de afaceri](measures.md) pentru a urmări KPI-uri, [definiți segmentele](segments.md) pentru a ajunge la anumite audiențe sau [configura previziunile](predictions-overview.md) cu ajutorul AI.
-1. Acum că datele clienților dvs. sunt importate, unificate și bine structurate, folosiți noastre [diverse destinații de export](export-destinations.md) pentru a lua măsuri asupra datelor. Selectați **Adăugați conexiuni** pentru a vă conecta serviciile preferate. De exemplu, exportați datele în Dynamics 365 Marketing pentru a crea campanii de marketing outbound sau pentru a construi călătorii ale clienților. 
+1. Cu profiluri unificate ale clienților, este timpul să revizuiți **Analizați datele** opțiuni și obțineți informații suplimentare. Încercați să creați [măsuri de afaceri](measures.md) pentru a urmări KPI-uri, [definiți segmentele](segments.md) pentru a ajunge la anumite audiențe sau [configura previziunile](predictions-overview.md) cu ajutorul AI.
+1. Acum că datele clienților dvs. sunt importate, unificate și bine structurate, folosiți noastre [diverse destinații de export](export-destinations.md) pentru a lua măsuri asupra datelor. Selectați **Adăugați conexiuni** pentru a vă conecta serviciile preferate. De exemplu, exportați datele în Dynamics 365 Marketing pentru a crea campanii de marketing outbound sau pentru a construi călătoriile clienților. 
 
 ## <a name="your-customer-insights-section"></a>Secțiunea cu informații despre clienți
 

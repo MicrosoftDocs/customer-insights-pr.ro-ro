@@ -1,5 +1,5 @@
 ---
-title: Audit Dynamics 365 Customer Insights cu Azure Monitor
+title: Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
 description: Aflați cum să trimiteți jurnalele către Microsoft Azure Monitorizați.
 ms.date: 12/14/2021
 ms.reviewer: mhart
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 15ae772617efa4c64cf79d0bac10a0c3cb28ca30
-ms.sourcegitcommit: a92bf5985263240fd07bad98d8e119b88cf2c9d9
+ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/26/2022
-ms.locfileid: "8807596"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052668"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (Previzualizare)
+# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
 
 Dynamics 365 Customer Insights oferă o integrare directă cu Azure Monitor. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), sau transmiteți-le în flux [Huburi de evenimente Azure](https://azure.microsoft.com/services/event-hubs/).
 
@@ -38,7 +38,7 @@ Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite ur
 
 - Ai un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
 - Tu ai [Administrator](permissions.md#admin) permisiunile din Customer Insights.
-- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa de destinație pe Azure. Resursa poate fi o Azure Data Lake Storage cont, un hub de evenimente Azure sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal). Această permisiune este necesară în timpul configurării setărilor de diagnosticare în Customer Insights, poate fi modificată după configurarea cu succes.
+- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa destinație pe Azure. Resursa poate fi o Azure Data Lake Storage cont, un hub de evenimente Azure sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal). Această permisiune este necesară în timpul configurării setărilor de diagnosticare în Customer Insights, poate fi modificată după configurarea cu succes.
 - [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics îndeplinite.
 - Ai cel puțin **Cititor** rol pe grupul de resurse din care face parte resursa.
 
@@ -102,7 +102,7 @@ Principalul serviciului Customer Insights primește **Colaborator cont de stocar
 
 ### <a name="event-hub"></a>Hub de evenimente
 
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Hub-uri de evenimente sub spațiul de nume selectat:
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
 
 - `insight-logs-audit` conținând **evenimente de audit**
 - `insight-logs-operational` conținând **evenimente operaționale**
@@ -176,7 +176,7 @@ The`identity` Obiectul JSON are următoarea structură
 | `properties.origin`          | URI care indică de unde provine o preluare sau `unknown`.                                                                  |
 | `properties.operationStatus` | `Success` pentru codul de stare HTTP < 400 <br> `ClientError` pentru codul de stare HTTP < 500 <br> `Error` pentru starea HTTP >= 500 |
 | `properties.tenantId`        | ID organizație                                                                                                        |
-| `properties.tenantName`      | Numele organizației.                                                                                              |
+| `properties.tenantName`      | Nume organizație.                                                                                              |
 | `properties.callerObjectId`  | Azure Active Directory ObjectId al apelantului.                                                                         |
 | `properties.instanceId`      | Informații despre clienți`instanceId`                                                                                         |
 

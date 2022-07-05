@@ -1,5 +1,5 @@
 ---
-title: Îmbogățiți profilurile clienților cu date despre locație din Azure Maps
+title: Îmbogățiți profilurile clienților cu date despre locație din Azure Maps (previzualizare)
 description: Informații generale despre îmbogățire de primă parte Azure Maps.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: a806b2d0c791972c967c90694527608b4def9f3f
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953643"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052622"
 ---
-# <a name="enrichment-of-customer-profiles-with-azure-maps-preview"></a>Îmbogățirea profilurilor clienților cu Azure Maps (previzualizare)
+# <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Îmbogățiți profilurile clienților cu date despre locație din Azure Maps (previzualizare)
 
 Azure Maps oferă date și servicii centrate pe locație pentru a oferi experiențe bazate pe date geospațiale cu inteligență încorporată privind locația. Serviciile de îmbogățire a datelor Azure Maps îmbunătățesc precizia informațiilor despre locație despre clienții dvs. Aduce capabilități precum normalizarea adreselor și extragerea latitudinii și longitudinii la Dynamics 365 Customer Insights.
 
@@ -82,7 +82,7 @@ Administratorul Dynamics 365 Customer Insights poate să elimine această îmbog
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

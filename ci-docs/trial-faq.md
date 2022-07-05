@@ -1,5 +1,5 @@
 ---
-title: Întrebări frecvente Versiune de încercare Dynamics 365 Customer Insights
+title: Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 description: Soluții la întrebări comune legate de configurarea și gestionarea versiunii de încercare Customer Insights. Aflați să rezolvați problemele specifice platformei și aplicației.
 author: m-hartmann
 ms.author: mhart
@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-faq
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: 46a67e58f79029246029e2d06789525c2131f100
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 41f112466d54c9923d0daf7c55d343f9b5c81d98
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011902"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051514"
 ---
 # <a name="dynamics-365-customer-insights-trial-faq"></a>Întrebări frecvente versiune de încercare Dynamics 365 Customer Insights
 
@@ -68,7 +68,7 @@ După ce v-ați conectat pentru prima dată la instanța dvs. plătită de Custo
 
 ### <a name="what-are-the-trial-limits-and-quotas"></a>Care sunt limitele și cotele pentru versiunea de încercare?
 
-- Nu le poți folosi pe ale tale Azure Data Lake Storage cont pentru a stoca datele de ieșire în timpul unei versiuni de probă a Customer Insights. Cu toate acestea, puteți ingera date dintr-un cont Data Lake Storage.
+- Nu-l poți folosi pe al tău Azure Data Lake Storage cont pentru a stoca datele de ieșire în timpul unei versiuni de probă a Customer Insights. Cu toate acestea, puteți ingera date dintr-un cont Data Lake Storage.
 - Puteți stoca până la 3 GB de date în mediul Dataverse mediu care se aprovizionează automat atunci când porniți o versiune de încercare Customer Insights.
 
 ## <a name="customer-insights-specific-questions"></a>Întrebări specifice pentru Customer Insights

@@ -1,7 +1,7 @@
 ---
-title: Ingerați date prin a Power Query conector (conține video)
-description: Conectori pentru surse de date bazate pe Power Query.
-ms.date: 05/09/2022
+title: Conectați-vă la a Power Query sursă de date (conține videoclip)
+description: Ingerați date prin a Power Query conector (conține video).
+ms.date: 06/13/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: b99c3b446e580f455f9678d54d9db414aea9b331
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 6736b253e3a7e652f92f61bc44bfb31ca69be31a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011672"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082182"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la a Power Query sursă de date
 
@@ -88,6 +88,6 @@ Gateway-urile de date de la un mediu existent Power BI sau Power Apps vor fi viz
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-1. Aplicați modificările și transformările dvs. în **Power Query - Editați interogările** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
+1. Aplicați modificările și transformările dvs. în **Power Query - Editați interogări** dialog așa cum este descris în [Creați un nou sursă de date](#create-a-new-data-source) secțiune.
 
 1. Selectați **Salvați** în Power Query după finalizarea modificărilor pentru a salva modificările.

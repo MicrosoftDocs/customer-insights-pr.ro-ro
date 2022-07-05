@@ -1,6 +1,6 @@
 ---
-title: Aduceți propriul seif cu chei Azure pentru a gestiona secretele
-description: Aflați cum să configurați Customer Insights pentru a utiliza propriul seif de chei Azure.
+title: Aduceți-vă propriul seif de chei Azure (versiune preliminară)
+description: Aflați cum să configurați Customer Insights pentru a utiliza propriul seif de chei Azure pentru a gestiona secretele.
 ms.date: 10/06/2021
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: d4f2d5ebc828053c40e22065f4915c4d0f84153f
-ms.sourcegitcommit: 6ec4626a185892dfb781d3c7af4384f9c13f3723
+ms.openlocfilehash: 8fdb131de35c7d936d2921265f03faa5682db6f6
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/17/2022
-ms.locfileid: "8763594"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082644"
 ---
 # <a name="bring-your-own-azure-key-vault-preview"></a>Aduceți-vă propriul seif de chei Azure (versiune preliminară)
 
@@ -101,7 +101,7 @@ Rolurile Key Vault Reader și Key Vault Secrets User vor fi adăugate pentru Cus
 
 ## <a name="recommendations"></a>Recomandări
 
-- Utilizați un seif de chei separat sau dedicat care conține numai secretele necesare pentru Customer Insights. Citiți mai multe despre de ce [se recomandă seifuri de chei separate](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
+- Utilizați un seif de chei separat sau dedicat, care conține numai secretele necesare pentru Customer Insights. Citiți mai multe despre de ce [se recomandă seifuri de chei separate](/azure/key-vault/general/best-practices#why-we-recommend-separate-key-vaults).
 
 - Urmați [cele mai bune practici pentru utilizarea Key Vault](/azure/key-vault/general/best-practices#turn-on-logging) pentru controlul opțiunilor de acces, backup, audit și recuperare.
 

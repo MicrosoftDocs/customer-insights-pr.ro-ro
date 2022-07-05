@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea profilurilor companiei cu Dun & Bradstreet
+title: Îmbogățiți profilurile companiei cu Dun & Bradstreet (previzualizare)
 description: Informații generale despre îmbogățirea de la terți Dun & Bradstreet.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -9,14 +9,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b1038970b6aee3bbdd7f79cc457f79aaf1c38222
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953906"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082560"
 ---
-# <a name="enrichment-of-company-profiles-with-dun--bradstreet-preview"></a>Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Previzualizare)
+# <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Îmbogățiți profilurile companiei cu Dun & Bradstreet (previzualizare)
 
 Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute precum numărul DUNS, dimensiunea companiei, locația, industria și multe altele.
 
@@ -102,7 +102,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

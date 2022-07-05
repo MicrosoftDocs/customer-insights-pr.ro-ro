@@ -1,6 +1,6 @@
 ---
-title: Cum se creează un mediu nou
-description: Pași pentru a crea medii cu for Dynamics 365 Customer Insights.
+title: 'Cum să: creați un mediu nou'
+description: Pași pentru a crea medii în Dynamics 365 Customer Insights.
 ms.date: 05/31/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -12,16 +12,16 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 6dfaa09cd80498e9a4e4dea6a07ce6e9d29105e2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011626"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052761"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cum să: creați un mediu nou
 
-După [achiziționarea unei licențe de abonament pentru Dynamics 365 Customer Insights](paid-license.md), administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. În acest scenariu, puteți merge direct la [Pasul 1: Furnizați informații de bază](#step-1-provide-basic-information).
+După [achiziționarea unei licențe de abonament pt Dynamics 365 Customer Insights](paid-license.md), administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. În acest scenariu, puteți merge direct la [Pasul 1: Furnizați informații de bază](#step-1-provide-basic-information).
 
 După crearea primului mediu, administratorul global al Microsoft 365 chiriașul poate [adăugați utilizatori din organizația lor ca administratori](permissions.md). În continuare, acești administratori pot gestiona utilizatorii și mediile. Dacă organizația dvs. achiziționează mai mult de o licență pentru Customer Insights, [contactați echipa noastră de asistență](https://go.microsoft.com/fwlink/?linkid=2079641) pentru a crește numărul de medii disponibile. Pentru mai multe informații despre capacitate și capacitatea suplimentară, consultați [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
@@ -49,7 +49,7 @@ Ai nevoie [permisiuni de administrator](permissions.md) în Customer Insights pe
 Furnizați următoarele detalii:
 
 - **Nume**: Numele pentru acest mediu. Acest câmp este deja completat dacă ați copiat dintr-un mediu existent, dar îl puteți modifica.
-- **Alegeți-vă afacerea**: alegeți publicul principal pentru noul mediu. Puteți lucra cu consumatori individuali (B-la-C) sau cu [conturi de business](work-with-business-accounts.md) (B-la-B). Dacă organizația dvs. face afaceri în principal cu persoane fizice, cum ar fi un comerciant cu amănuntul sau o cafenea, alegeți consumatori individuali. În cazul în care publicul dvs. principal sunt alte companii, cum ar fi un producător de mașini sau o companie de hârtie, alegeți conturi de afaceri.
+- **Alegeți-vă afacerea**: alegeți publicul principal pentru noul mediu. Puteți lucra cu consumatori individuali (B-la-C) sau cu [conturi de business](work-with-business-accounts.md) (B-la-B). Dacă organizația dvs. face afaceri în principal cu persoane fizice, cum ar fi un comerciant cu amănuntul sau o cafenea, alegeți consumatori individuali. În cazul în care publicul dvs. principal este alte companii, cum ar fi un producător de mașini sau o companie de hârtie, alegeți conturi de afaceri.
 - **Tip**: Selectați dacă doriți să creați un mediu de tip producție sau sandbox. Mediile Sandbox nu permit reîmprospătarea datelor programate și sunt destinate pre-implementării și testării. Mediile Sandbox utilizează același public principal ca mediul de producție selectat în prezent.
 - **Regiune**: Regiunea în care este implementat și găzduit serviciul. La [folosește-ți pe al tău Azure Data Lake Storage cont](own-data-lake-storage.md) sau [conectați la un existent Microsoft Dataverse organizare](customer-insights-dataverse.md), mediul Customer Insights trebuie să fie în aceeași regiune.
 
@@ -118,7 +118,7 @@ Sunt copiate următoarele setări de configurare:
 
 Când copiați configurația mediului, trebuie să parcurgeți câțiva pași suplimentari pentru a confirma acreditările:
 
-- Profiluri de client. Mai întâi, autentificați și asimilați sursele de date și rulați unificarea datelor pentru a recrea profilurile clienților.
+- Profiluri de client. Mai întâi, autentificați-vă și asimilați sursele de date și rulați unificarea datelor pentru a recrea profilurile clienților.
 - Acreditările sursă de date. Trebuie să furnizați acreditările pentru fiecare sursă de date pentru a autentifica și reîmprospăta sursele de date manual.
 - Surse de date din folderul Common Data Model și Dataverse. Trebuie să creați manual acele surse de date cu același nume ca în mediul sursă.
 - Secrete de conexiune care sunt folosite pentru exporturi și îmbogățiri. Trebuie să reautentificați conexiunile și apoi să reactivați îmbogățirile și exporturile.

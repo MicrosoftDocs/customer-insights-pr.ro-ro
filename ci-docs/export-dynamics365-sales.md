@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights către Dynamics 365 Sales
+title: Exportați segmente în Dynamics 365 Sales (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la Dynamics 365 Sales.
 ms.date: 03/03/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 987690283090ec83ca75f50bf8f3cd8da9295887
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643316"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082392"
 ---
-# <a name="use-segments-in-dynamics-365-sales-preview"></a>Utilizarea segmentelor în Dynamics 365 Sales (previzualizare)
-
-
+# <a name="export-segments-to-dynamics-365-sales-preview"></a>Exportați segmente în Dynamics 365 Sales (previzualizare)
 
 Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxuri de lucru și a trimite promoții cu Dynamics 365 Sales.
 
@@ -34,7 +32,7 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să ingerați contacte de la [Dynamics 365 Sales folosind Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Exportarea segmentelor din Customer Insights la Sales nu va crea noi înregistrări de contact în instanțele de vânzări. Înregistrările de contact de la vânzări trebuie să fie introduse în Customer Insights și folosite ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
+   > Exportarea segmentelor din Customer Insights la Sales nu va crea noi înregistrări de contact în instanțele de vânzări. Înregistrările de contact de la vânzări trebuie să fie introduse în Customer Insights și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
 
 ## <a name="set-up-the-connection-to-sales"></a>Configurarea conexiunii la Sales
 

@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea HERE Technologies de terță parte
+title: Îmbogățiți profilurile clienților cu tehnologiile HERE (previzualizare)
 description: Informații generale despre îmbogățirea terță parte HERE Technologies.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 171ead92427924083a13e2a3d52e7a7da417c801
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: d88085b6be156dd1c895e9e5b38cc9d77acbdb95
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953688"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052066"
 ---
-# <a name="enrichment-of-customer-profiles-with-here-technologies-preview"></a>Îmbogățirea profilurilor clienților cu HERE Technologies (previzualizare)
+# <a name="enrich-customer-profiles-with-here-technologies-preview"></a>Îmbogățiți profilurile clienților cu tehnologiile HERE (previzualizare)
 
 HERE Technologies este o companie de platformă de localizare care oferă date și servicii centrate pe locație. Serviciile de îmbogățire a datelor HERE Technologies îmbunătățesc precizia informațiilor despre locație despre clienții dvs. Oferă normalizarea adreselor, extragerea latitudinii și longitudinii și multe altele.
 
@@ -72,7 +72,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

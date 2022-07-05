@@ -1,6 +1,6 @@
 ---
-title: Îmbogățire profiluri de clienți unificate
-description: Folosiți capacitățile pentru a vă îmbogăți datele clienților.
+title: Prezentare generală privind îmbogățirea datelor (previzualizare).
+description: Utilizați capabilitățile de la Microsoft și alte servicii terțe pentru a vă îmbogăți datele clienților.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,24 +14,32 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 3bbe8b829a6698da55d84709dbab6c36aa76792a
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954056"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9053895"
 ---
-# <a name="enrichment-for-customer-profiles-preview"></a>Îmbogățirea profilurilor clienților (previzualizare)
+# <a name="data-enrichment-preview-overview"></a>Prezentare generală privind îmbogățirea datelor (previzualizare).
 
-Utilizați date din surse precum Microsoft și de la alți parteneri pentru a vă îmbogăți datele clienților.
+Utilizați date din surse precum Microsoft și de la alți parteneri pentru a vă îmbogăți datele clienților. Îmbogățirile terților sunt configurate folosind [conexiuni](connections.md), pe care un administrator le înființează cu acreditări și oferă consimțământul pentru transferurile de date. Conexiunile pot fi utilizate de administratori și cei care contribuie pentru a configura îmbogățiri.  
+
+## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
+
+Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. De exemplu, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe fiecare țiglă de pe **Descoperi** fila din **Îmbogăţire** pagină.
+
+## <a name="enrich-data-sources-before-unification"></a>Îmbogățiți sursele de date înainte de unificare
+
+Vă puteți îmbogăți datele clienților înainte de unificarea datelor pentru a ajuta la creșterea calității potrivirii datelor. Pentru mai multe informații, vezi [sursă de date îmbogățire](data-sources-enrichment.md).
+
+## <a name="create-an-enrichment"></a>Creați o îmbogățire
+
+Trebuie să aveți Contributor sau Administrator [permisiuni](permissions.md) pentru a crea sau edita îmbogățiri.
+
+Accesați **Date** > **Îmbogățire**. The **Descoperi** fila arată toate opțiunile de îmbogățire acceptate.
 
 :::image type="content" source="media/enrichment-hub-page.png" alt-text="Pagină hub de îmbogățire.":::
-
-Mergi la **Date** > **Îmbogăţire** pentru a lucra cu opțiuni de îmbogățire.  
-
-Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau edita îmbogățirile. Pentru mai multe informații, consultați [Permisiuni](permissions.md).
-
-Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptate.
 
 # <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
 
@@ -57,45 +65,33 @@ Pe fila **Descoperiți**, veți găsi toate opțiunile de îmbogățire acceptat
 
 ---
 
-Pe fila **Îmbogățirile mele**, puteți vedea îmbogățirile pe care le-ați configurat și le puteți edita proprietățile. De asemenea, puteți crea [segmente](segments.md) sau [măsuri](measures.md) din îmbogăţiri.
-
 ## <a name="manage-existing-enrichments"></a>Gestionarea îmbogățirilor existente
 
-Accesați fila **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate. Fiecare îmbogățire este reprezentată ca un rând care include informații suplimentare despre îmbogățire.
+Accesați **Date** > **Îmbogățire**. Pe **Îmbogățirile mele** fila, vizualizați îmbogățirile configurate, starea acestora, numărul de clienți îmbogățiți și ultima dată când datele au fost reîmprospătate. Puteți sorta lista de îmbogățiri după orice coloană sau puteți utiliza caseta de căutare pentru a găsi îmbogățirea pe care doriți să o gestionați.
 
-Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta elipsa verticală (&vellip;) pe un element din listă pentru a vedea opțiunile. Dacă ați configurat mai multe îmbogățiri, puteți utiliza caseta de căutare pentru a o găsi rapid.
+Selectați îmbogățirea pentru a vedea acțiunile disponibile.
 
 :::image type="content" source="media/enrichment-hub-options-run.png" alt-text="Opțiuni de gestionare a îmbogățirilor din lista îmbogățirilor.":::
 
 - **Vizualizare** detalii de îmbogățire cu numărul de profiluri de clienți îmbogățite.
 - **Editați** configurația de îmbogățire.
-- **Rulați** îmbogățirea pentru actualizarea profilurilor clienților cu cele mai recente date.
-- **Dezactivați** o îmbogățire existentă pentru a o opri din actualizarea automată cu fiecare actualizare programată. Datele din ultima actualizare reușită vor continua să fie disponibile. **Activați** o îmbogățire inactivă pentru a reporni actualizarea automată cu fiecare actualizare programată.
+- [**Alerga**](#run-or-refresh-enrichments) îmbogățirea pentru a actualiza profilurile clienților cu cele mai recente date. Rulați mai multe îmbogățiri simultan, selectându-le în listă.
+- **Activati** sau **Dezactivați** o îmbogățire. Îmbogățirile inactive nu vor fi reîmprospătate în timpul unui [reîmprospătare programată](system.md#schedule-tab).
 - **Ștergeți** îmbogățirea.
 
-Rulați sau dezactivați mai multe îmbogățiri simultan selectându-le în listă. Opțiunile de vizualizare și editare nu sunt disponibile ca acțiune în bloc. Lucrează doar pentru o singură îmbogățire la un moment dat.
-
-## <a name="enrichments-and-connections"></a>Îmbogățiri și conexiuni
-
-Îmbogățirile terților sunt configurate folosind [conexiuni](connections.md), pe care un administrator le înființează cu acreditări și oferă consimțământul pentru transferurile de date. Conexiunile pot fi utilizate de administratori și cei care contribuie pentru a configura îmbogățiri.  
-
-## <a name="multiple-enrichments-of-the-same-type"></a>Îmbogățiri multiple de același tip
-
-Entitatea care urmează să fie îmbogățită este specificată în timpul configurației de îmbogățire, care vă permite să îmbogățiți doar un subset de profiluri. De exemplu, îmbogățiți datele numai pentru un anumit segment. Puteți configura mai multe îmbogățiri de același tip și reutiliza aceeași conexiune. Unele îmbogățiri vor avea limite la numărul de îmbogățiri de același tip care pot fi create. Limitele și utilizarea curentă pot fi văzute pe fiecare țiglă de pe **Descoperi** fila din **Îmbogăţire** pagină.
-
-## <a name="enrich-data-sources-before-unification"></a>Îmbogățiți sursele de date înainte de unificare
-
-Vă puteți îmbogăți datele clienților înainte de unificarea datelor pentru a ajuta la creșterea calității potrivirii datelor. Pentru mai multe informații, vezi [sursă de date îmbogățire](data-sources-enrichment.md).
+De asemenea, puteți crea [segmente](segments.md) sau [măsuri](measures.md) din îmbogăţiri.
 
 ## <a name="run-or-refresh-enrichments"></a>Rulați sau reîmprospătați îmbogățirile
 
-1. Pentru a începe procesul de îmbogățire, selectați **Alerga**. Sau lăsați sistemul să ruleze automat îmbogățirea ca parte a unui [reîmprospătare programată](system.md#schedule-tab). Timpul de procesare depinde de dimensiunea datelor clienților dvs.
+Odată executate, îmbogățirile pot fi reîmprospătate într-un program automat sau reîmprospătate manual la cerere.
+
+1. Pentru a reîmprospăta manual una sau mai multe îmbogățiri, selectați-le și alegeți **Alerga**. La [programați o reîmprospătare automată](system.md#schedule-tab), mergi la **Admin** > **Sistem** > **Programa**. Timpul de procesare depinde de dimensiunea datelor clienților dvs.
 
 1. Opțional, [vezi progresul procesului de îmbogățire](#see-the-progress-of-the-enrichment-process).
 
 1. După finalizarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a examina datele profilurilor client nou îmbogățite, ora ultimei actualizări și numărul de profiluri îmbogățite.
 
-1. Selectați îmbogățirea pentru a vedea [rezultate de îmbogățire](#enrichment-results).
+1. Selectați îmbogățirea pentru a vedea [rezultate de îmbogățire](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Vedeți progresul procesului de îmbogățire
 
@@ -107,12 +103,12 @@ Puteți găsi detalii despre procesarea unei îmbogățiri, inclusiv starea aces
 1. Sub îmbogățirea pe care doriți să vedeți progresul, selectați **Vezi detalii**.
 1. În panoul **Detalii despre activitate**, selectați **Arată detaliile** pentru a vedea procesele care sunt implicate în actualizarea îmbogățirii și a statutului lor.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 După o rundă de îmbogățire completă, examinați rezultatele îmbogățirii.
 
 1. Accesați **Date** > **Îmbogățire**.
-1. În **Îmbogățirile mele** fila, selectați îmbogățirea despre care doriți informații.
+1. În **Îmbogățirile mele** fila, selectați îmbogățirea pe care doriți să o vizualizați.
 
 Toate îmbogățirile arată informații de bază, cum ar fi numărul de profiluri îmbogățite și numărul de profiluri îmbogățite în timp. The **Previzualizarea clienților îmbogățiți** țigla arată un eșantion al entității de îmbogățire generată. Pentru a vedea o vizualizare detaliată, selectați **Vezi mai mult** și selectați **Date** fila.
 

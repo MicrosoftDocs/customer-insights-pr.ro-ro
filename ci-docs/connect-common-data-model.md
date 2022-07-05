@@ -1,5 +1,5 @@
 ---
-title: Conectați datele Common Data Model la un cont Azure Data Lake
+title: Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 description: Lucrați cu datele Common Data Model folosind Azure Data Lake Storage.
 ms.date: 05/30/2022
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: 2ab7ec77252be33f1203959c2a596ddec20425f2
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: b1cdcb46df17d722ad49d361ae4c7ab34c83eeb1
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011588"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082266"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarea la date în Azure Data Lake Storage
 
@@ -33,7 +33,7 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
 
 - The Azure Data Lake Storage de la care doriți să vă conectați și să ingerați date trebuie să fie în aceeași regiune Azure ca și Dynamics 365 Customer Insights mediu inconjurator. Conexiunile la un director Common Data Model dintr-un data lake dintr-o altă regiune Azure nu sunt acceptate. Pentru a cunoaște regiunea Azure a mediului, accesați **Admin** > **Sistem** > **Despre** în Customer Insights.
 
-- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care sunt procesate sau stocate datele Dynamics 365 Customer Insights.Prin importul sau conectarea la date stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
+- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care sunt procesate sau stocate datele Dynamics 365 Customer Insights.Prin importul sau conectarea la datele stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 - Principalul serviciu Customer Insights trebuie să aibă unul dintre următoarele roluri pentru a accesa contul de stocare. Pentru mai multe informații, vezi [Acordați permisiuni principalului serviciu pentru a accesa contul de stocare](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Cititor de date Blob de stocare

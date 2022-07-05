@@ -1,5 +1,5 @@
 ---
-title: Sursă de date îmbogățire
+title: Îmbogățirea surselor de date (previzualizare)
 description: Îmbogățiți sursele de date înainte de a trece prin procesul de unificare a datelor.
 ms.date: 05/20/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: b34b83d7a73dbdf21984f626174524188f0f1dc1
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011488"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082119"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (previzualizare)
 
@@ -29,7 +29,7 @@ Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau
 
 1. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl îmbogățiți și să îl selectați **Îmbogăţi**.
 
-   :::image type="content" source="media/data_sources_enrich.png" alt-text="Pagina surselor de date cu Îmbogățire evidențiată":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Pagina surse de date cu Îmbogățire evidențiată":::
 
    The **Descoperi** fila afișează [opțiuni de îmbogățire sursă de date acceptate](#supported-data-source-enrichments).
 

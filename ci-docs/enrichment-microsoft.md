@@ -1,5 +1,5 @@
 ---
-title: Îmbogățiți profilurile clienților cu date despre mărci și interese de la Microsoft
+title: Îmbogățiți profilurile clienților cu date despre mărci și interese de la Microsoft (previzualizare)
 description: Utilizați datele proprietare de la Microsoft pentru a vă îmbogăți datele clienților cu afinități și partajarea vocii.
 ms.date: 03/02/2022
 ms.reviewer: mhart
@@ -12,14 +12,14 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 61262980cafdcd130430e200e466ce7da6cc4d07
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: e1827adca10a3b193c02a20c4abccacf73194a77
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953780"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082707"
 ---
-# <a name="enrich-customer-profiles-with-affinities-and-share-of-voice-preview"></a>Îmbogățiți profilurile clienților cu afinități și cota de voce (previzualizare)
+# <a name="enrich-customer-profiles-with-brands-and-interests-data-from-microsoft-preview"></a>Îmbogățiți profilurile clienților cu date despre mărci și interese de la Microsoft (previzualizare)
 
 Utilizați datele proprietare Microsoft pentru a vă îmbogăți datele clienților cu afinități de marcă, afinități de interese și cota de voce (SoV). Aceste afinități și SoV se bazează pe date de la persoane cu date demografice similare cu clienții dvs. Aceste informații vă ajută să înțelegeți și să segmentați mai bine clienții în funcție de afinitățile lor sau de SoV pentru mărci și interese specifice.
 
@@ -29,7 +29,7 @@ Folosim datele de căutare online ale Microsoft pentru a găsi afinități și S
 
 - Afinitatea este o comparație între segmente demografice. Puteți utiliza aceste informații pentru a identifica segmentele demografice care au cea mai mare afinitate pentru o anumită marcă sau interes, în comparație cu alte segmente.
 
-- Cota de voce este o comparație între mărcile sau interesele selectate. Puteți utiliza aceste informații pentru a identifica care marcă sau interes are cea mai mare cotă de voce pentru un anumit segment demografic, în comparație cu alte mărci sau interese pe care le-ați selectat.
+- Cota de voce este o comparație între mărcile sau interesele selectate. Puteți utiliza aceste informații pentru a identifica ce marcă sau interes are cea mai mare cotă de voce pentru un anumit segment demografic, în comparație cu alte mărci sau interese pe care le-ați selectat.
 
 ## <a name="affinity-level-and-score"></a>Nivelul și scorul de afinitate
 
@@ -104,7 +104,7 @@ Calculăm SoV pe o scară de 100 de puncte. SoV total pentru toate mărcile sau 
 
    Când îmbogățim profilurile, vom îmbogăți toate profilurile clienților pentru care obținem date pentru mărcile și dobânzile selectate, inclusiv profilurile care nu se află în țara sau regiunea selectată. De exemplu, dacă ați selectat Germania, vom îmbogăți profilurile situate în Statele Unite dacă avem date disponibile pentru mărcile și interesele selectate din SUA.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
@@ -112,7 +112,7 @@ Calculăm SoV pe o scară de 100 de puncte. SoV total pentru toate mărcile sau 
 
 Rezultatele includ **Nivel de afinitate** sau **Cota de voce** grafice.
 
-Entitățile create din îmbogățiri sunt enumerate sub **Îmbogăţire** grup in **Date** > **Entități**. Datele îmbogățite pentru mărci merg la **BrandAffinityFromMicrosoft** și **BrandShareOfVoiceFromMicrosoft** entitati. Datele pentru interese sunt în **InterestAffinityFromMicrosoft** și **InterestShareOfVoiceFromMicrosoft** entitati.
+Entitățile create din îmbogățiri sunt enumerate sub **Îmbogăţire** grup in **Date** > **Entități**. Datele îmbogățite pentru mărci merg la **BrandAffinityFromMicrosoft** și **BrandShareOfVoiceFromMicrosoft** entitati. Datele pentru interese se află în **InterestAffinityFromMicrosoft** și **InterestShareOfVoiceFromMicrosoft** entitati.
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 

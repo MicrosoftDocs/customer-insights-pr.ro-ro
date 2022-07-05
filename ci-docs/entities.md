@@ -1,5 +1,5 @@
 ---
-title: Entități și seturi de date
+title: Entități în Customer Insights
 description: Vizualizați datele pe pagina Entități.
 ms.date: 12/06/2021
 ms.reviewer: mhart
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: c1094bc2f6d137087b317ed20d0615289d6f1187
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 4abb7704710ac269a4f3c9463fe905fa6eec3234
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643424"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082728"
 ---
 # <a name="entities-in-customer-insights"></a>Entități în Customer Insights
 
@@ -26,7 +26,7 @@ The **Entități** pagina listează entitățile și include aceste coloane:
 
 - **Nume** : Numele entității de date. Dacă vedeți un simbol de avertizare lângă un nume de entitate, înseamnă că datele pentru acea entitate nu s-au încărcat cu succes.
 - **Sursă** : Tipul de sursă de date care a ingerat entitatea.
-- **Actualizat** : Ora la care entitatea a fost actualizată ultima dată.
+- **La curent** : Ora la care entitatea a fost actualizată ultima dată.
 - **stare** : Detalii despre ultima actualizare a entității.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
@@ -83,7 +83,7 @@ Următoarele verificări rulează pe datele ingerate pentru a expune înregistr�
 
 - Valoarea unui câmp nu se potrivește cu tipul de date al coloanei sale.
 - Câmpurile conțin caractere care fac ca coloanele să nu se potrivească cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără scăpare sau caracterele cu linie nouă.
-- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul standard ISO.
+- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul ISO standard.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights către AdRoll
+title: Exportați segmente în AdRoll (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la AdRoll.
 ms.date: 10/08/2021
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ec7d2d4d137f2f0e3e1ff2ec0d09bff8ac4f28ea
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 13c7dd3b8556ad807fba6c537525b463480e860b
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643181"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082833"
 ---
 # <a name="export-segments-to-adroll-preview"></a>Exportați segmente în AdRoll (previzualizare)
 
@@ -21,9 +21,9 @@ Exportați segmente de profiluri unificate ale clienților în AdRoll și folosi
 
 ## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
 
--   Aveți un [cont AdRoll](https://www.adroll.com/) și acredităările de administrator corespunzătoare.
--   Tu ai [segmente configurate](segments.md) în Customer Insights.
--   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
+- Aveți un [cont AdRoll](https://www.adroll.com/) și acredităările de administrator corespunzătoare.
+- Tu ai [segmente configurate](segments.md) în Customer Insights.
+- Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 

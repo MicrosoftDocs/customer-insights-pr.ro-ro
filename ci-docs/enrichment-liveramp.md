@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea datelor de identitate LiveRamp
+title: Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (previzualizare)
 description: Îmbogățiți profilurile clienților cu date LiveRamp.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: e8a130865267b57c89157b44be3d4bba3dc2fb4e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954010"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082203"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (previzualizare)
 
@@ -33,7 +33,7 @@ LiveRamp oferă rezoluție deterministă a identității offline și consolidare
 
 ## <a name="configure-the-connection-for-liveramp"></a>Configurați conexiunea pentru LiveRamp
 
-Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți un ID de client și un secret LiveRamp activ.
+Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți un ID și un secret de client LiveRamp activ.
 
 1. Selectați **Adăugați conexiune** când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe țigla LiveRamp.
 
@@ -65,7 +65,7 @@ Când activați Dynamics 365 Customer Insights pentru a transmite date către Li
 
 1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți cu date de identitate din LiveRamp. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
 
-1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor de identitate din LiveRamp. Cel puțin unul dintre câmpuri **Nume si adresa**, **-mail**, sau **Telefon** este necesară. Pentru o precizie mai mare a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
+1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor de identitate din LiveRamp. Cel puțin unul dintre câmpuri **Nume si adresa**, **-mail**, sau **Telefon** este necesară. Pentru o mai mare precizie a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
 
 1. Hartați câmpurile cu datele de identificare din LiveRamp.
 
@@ -79,7 +79,7 @@ Când activați Dynamics 365 Customer Insights pentru a transmite date către Li
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

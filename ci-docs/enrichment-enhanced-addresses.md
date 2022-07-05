@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea adresei (conține videoclip)
+title: Îmbogățiți profilurile clienților cu adrese îmbunătățite (conține videoclip)
 description: Îmbogățiți și normalizați informațiile de adresă ale profilurilor clienților cu modelele Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -14,18 +14,18 @@ searchScope:
 - ci-enrichments
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: f6279b9bb721d99d66f73e8dc839a92f1ad90140
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 01f1c917c75e932cc69f4c7251e57524fc859dce
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953826"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082077"
 ---
-# <a name="enrichment-of-customer-profiles-with-enhanced-addresses"></a>Îmbogățirea profilurilor clienților cu adrese îmbunătățite
+# <a name="enrich-customer-profiles-with-enhanced-addresses"></a>Îmbogățiți profilurile clienților cu adrese îmbunătățite
 
 Adresele din datele dvs. pot fi nestructurate, incomplete sau incorecte. Utilizați modelele Microsoft pentru a vă normaliza și îmbogăți adresele în [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/address) pentru o mai bună acuratețe și informații.
 
-Poti de asemenea [îmbogăți adresele pe surse de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
+Poti de asemenea [îmbogăți adresele pe sursele de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor. 
 
 ## <a name="how-we-enhance-addresses"></a>Cum îmbunătățim adresele
 
@@ -101,7 +101,7 @@ Modelul utilizează tehnici bazate pe învățarea automată pentru a îmbunăt�
 
 1. Selectați **Salvați îmbogățirea** după ce v-ați revizuit alegerile.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

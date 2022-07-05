@@ -1,5 +1,5 @@
 ---
-title: Îmbogățirea profilurilor companiei cu îmbogățirea terță parte Leadspace
+title: Îmbogățiți profilurile companiei cu Leadspace (previzualizare)
 description: Informații generale despre îmbogățirea terță parte Leadspace.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: ca53f15bd7c71b3b4acb396c4daf52d7c7aff9eb
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954194"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082371"
 ---
-# <a name="enrichment-of-company-profiles-with-leadspace-preview"></a>Îmbogățirea profilurilor companiei cu Leadspace (previzualizare)
+# <a name="enrich-company-profiles-with-leadspace-preview"></a>Îmbogățiți profilurile companiei cu Leadspace (previzualizare)
 
 Leadspace este o companie ce se ocupă cu știința datelor și care oferă o platformă de date pentru clienți B la B. Permite medii cu profiluri de clienți unificate bazate pe conturi să își îmbogățească datele. Îmbogăţiți *Profilurile clienților* cu atribute precum dimensiunea companiei, locația sau industria. Îmbogăţiți *Profiluri de contact* cu atribute precum titlul, persoana sau verificarea prin e-mail.
 
@@ -64,7 +64,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivire: adresa principală și/sau secundară. Puteți specifica o mapare a câmpului pentru ambele adrese și puteți îmbogăți profilurile pentru ambele adrese separat. De exemplu, pentru o adresă de domiciliu și o adresă de afaceri. Selectați **Următorul**.
 
-1. Hartați câmpurile cu datele companiei din Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
+1. Hartați-vă câmpurile la datele companiei din Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panoul de mapare a câmpului Leadspace.":::
 
@@ -82,7 +82,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

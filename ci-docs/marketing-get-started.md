@@ -6,14 +6,14 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 4cc3cbde97d0f9da198652e86c0843476393b646
-ms.sourcegitcommit: f5af5613afd9c3f2f0695e2d62d225f0b504f033
+ms.openlocfilehash: 99ec463299a24ea81cfe26bb785e36bdefdcd080
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/01/2022
-ms.locfileid: "8833323"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054447"
 ---
-# <a name="work-with-unified-customer-profiles-in-dynamics-365-marketing"></a>Lucrați cu profiluri de clienți unificate în Dynamics 365 Marketing
+# <a name="use-unified-customer-profiles-in-dynamics-365-marketing"></a>Utilizați profiluri de clienți unificate în Dynamics 365 Marketing
 
 [Dynamics 365 Marketing](/dynamics365/marketing/overview) crește experiențele clienților, permițându-vă să orchestrați călătorii personalizate în toate punctele de contact pentru a consolida relațiile și a câștiga loialitate. Aplicația Dynamics 365 Marketing funcționează perfect cu Dynamics 365 Sales,Dynamics 365 Customer Insights,Microsoft Teams și alte produse și vă permite să luați decizii mai rapide și mai bune folosind puterea datelor și a inteligenței artificiale.
 

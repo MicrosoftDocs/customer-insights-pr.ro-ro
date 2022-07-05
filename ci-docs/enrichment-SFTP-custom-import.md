@@ -1,5 +1,5 @@
 ---
-title: Îmbogățire cu importul particularizat SFTP
+title: Îmbogățiți profilurile clienților cu import personalizat SFTP (previzualizare)
 description: Informații generale despre îmbogățirea particularizată a importului SFTP.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 657afb6fcb68429680eb677734b4115e69769008
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953734"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082329"
 ---
-# <a name="enrich-customer-profiles-with-custom-data-preview"></a>Îmbogățiți profilurile clienților cu date particularizate (previzualizare)
+# <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Îmbogățiți profilurile clienților cu import personalizat SFTP (previzualizare)
 
 Importul particularizat Secure File Transfer Protocol (SFTP) vă permite să importați date care nu trebuie să treacă prin procesul de unificare a datelor. Este un mod flexibil, sigur și ușor de a vă obține datele. Importul particularizat SFTP poate fi utilizat în combinație cu [exportul SFTP](export-sftp.md) care vă permite să exportați datele de profil ale clienților necesare pentru îmbogățire. Datele pot fi apoi procesate și îmbogățite, iar importul personalizat SFTP poate fi utilizat pentru a aduce datele îmbogățite înapoi în Dynamics 365 Customer Insights.
 
@@ -120,7 +120,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 

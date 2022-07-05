@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights către Adobe Experience Platform
+title: Exportați segmente către Adobe Experience Platform (previzualizare)
 description: Aflați cum să utilizați segmentele Customer Insights în Adobe Experience Platform.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 42a4e0c6bce67a63b449a541299620ef2f4a3259
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643735"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9052526"
 ---
-# <a name="use-customer-insights-segments-in-adobe-experience-platform-preview"></a>Utilizați segmentele Customer Insights în Adobe Experience Platform (previzualizare)
+# <a name="export-segments-to-adobe-experience-platform-preview"></a>Exportați segmente către Adobe Experience Platform (previzualizare)
 
 Ca utilizator al Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă eficientiza campaniile de marketing prin țintirea unor publicuri relevante. Pentru a utiliza un segment din Customer Insights în Adobe Experience Platform și aplicații precum Adobe Standard de campanie, trebuie să urmați câțiva pași descriși în acest articol.
 
@@ -106,7 +106,7 @@ Exemplu: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiți Experience Data Mode (XDM) în Adobe Experience Platform
 
-Înainte ca datele exportate din Customer Insights să poată fi utilizate în Adobe Experience Platform, trebuie să definim schema Experience Data Model și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Înainte ca datele exportate din Customer Insights să poată fi utilizate în interiorul Adobe Experience Platform, trebuie să definim schema Experience Data Model și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Învățați [ce este XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) și înțelegeți [elementele de bază ale compoziției schemei](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 

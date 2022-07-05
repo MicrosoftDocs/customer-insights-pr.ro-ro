@@ -1,5 +1,5 @@
 ---
-title: Exemple OData pentru Dynamics 365 Customer Insights API-uri
+title: Exemple de interogări OData pentru API-urile Customer Insights
 description: Exemple utilizate în mod obișnuit pentru Protocolul de date deschise (OData) pentru a interoga API-urile Customer Insights pentru a examina datele.
 ms.date: 05/25/2022
 ms.subservice: audience-insights
@@ -8,14 +8,14 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: cdadd72bfe4272d8d83d923baaa6fd40d008473b
-ms.sourcegitcommit: bf65bc0a54cdab71680e658e1617bee7b2c2bb68
+ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/27/2022
-ms.locfileid: "8808476"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083169"
 ---
-# <a name="odata-query-examples"></a>Exemple de interogări OData
+# <a name="odata-query-examples-for-customer-insights-apis"></a>Exemple de interogări OData pentru API-urile Customer Insights
 
 Protocolul de date deschise (OData) este un protocol de acces la date construit pe protocoale de bază precum HTTP. Folosește metodologii acceptate în mod obișnuit, cum ar fi REST pentru web. Există diferite tipuri de biblioteci și instrumente care pot fi utilizate pentru a consuma serviciile OData.
 

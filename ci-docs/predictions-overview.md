@@ -1,5 +1,5 @@
 ---
-title: Prezentare generală despre scenariile de predicție acceptate
+title: Prezentare generală a predicțiilor
 description: Predicție scenarii și opțiuni acoperite de aplicația Dynamics 365 Customer Insights.
 ms.date: 03/24/2022
 ms.reviewer: mhart
@@ -8,12 +8,12 @@ ms.topic: overview
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 11b0efeecf8bea893272e67d29b1c6622771110c
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: a87af80fa713a1ac70493345c0c920e416692b0f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643935"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083106"
 ---
 # <a name="predictions-overview"></a>Prezentare generală a predicțiilor
 
@@ -38,7 +38,7 @@ Cel mai simplu mod de a începe cu prezicerea datelor sunt modelele predefinite,
 ---
 
 > [!TIP]
-> Vă recomandăm să reîmprospătați în mod regulat modelele gata de fabricație cu date actualizate, pentru a vă asigura că acestea vă informează cu exactitate cazul de utilizare în afaceri. Datele sunt reîmprospătate ad-hoc atunci când sistemul ingerează surse de date noi sau actualizate. Cu toate acestea, modelele vor recalifica doar în acest caz și vor continua să utilizeze datele de antrenament existente.
+> Vă recomandăm să reîmprospătați în mod regulat modelele gata de fabricație cu date actualizate, pentru a vă asigura că acestea vă informează cu exactitate cazul de utilizare în afaceri. Datele sunt reîmprospătate ad-hoc atunci când sistemul ingerează surse de date noi sau actualizate. Cu toate acestea, modelele vor recore doar în acest caz și vor continua să utilizeze datele de antrenament existente.
 > 
 > Puteți configura un **Actualizați programul** prin setarea programului de reinstruire a modelului în experiența de configurare. Modelul se va reinstrui și va recalifica în acest program, pe care îl puteți schimba oricând.
 

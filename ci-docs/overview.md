@@ -1,23 +1,23 @@
 ---
-title: Dynamics 365 Customer Insights Prezentarea produsului
+title: Prezentare generală a produsului pentru Dynamics 365 Customer Insights
 author: m-hartmann
 description: Obțineți o privire de ansamblu pentru Dynamics 365 Customer Insights și principalele sale caracteristici.
 ms.author: mhart
 ms.date: 04/12/2022
 ms.topic: overview
 ms.manager: shellyha
-ms.openlocfilehash: 820d295a95e1536be1ffcbebc5ca153c10ad60ea
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: a8b982d761b6598fb5c582963dbc00852089a396
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947107"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9051146"
 ---
 # <a name="product-overview-for-dynamics-365-customer-insights"></a>Prezentare generală a produsului pentru Dynamics 365 Customer Insights
 
 [Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/) este platforma Microsoft de date despre clienți (CDP) care ajută la furnizarea de experiențe personalizate pentru clienți. Aplicația oferă o viziune holistică a clienților cu timp de neegalat până la perspectivă. Obțineți cea mai cuprinzătoare vizualizare a clienților dvs. unificând datele clienților cu datele operaționale și IoT în timp real. Îmbogățiți profilurile clienților cu surse de date primare și terțe. 
 
-Customer Insights vă ajută să vă transformați afacerea într-o organizație centrată pe client, împuternicindu-vă profesioniștii în marketing, vânzări și servicii pentru a personaliza interacțiunile 1:1 la scară. Integrarea la cheie cu aplicațiile Microsoft și de la terțe părți pot fi folosite pentru a activa informații în timp real pentru a conduce acțiuni semnificative.
+Customer Insights vă ajută să vă transformați afacerea într-o organizație centrată pe client, împuternicindu-vă profesioniștii în marketing, vânzări și servicii pentru a personaliza interacțiunile 1:1 la scară. Integrarea la cheie cu aplicațiile Microsoft și terțe părți pot fi folosite pentru a activa informații în timp real pentru a conduce acțiuni semnificative.
 
 Conectați datele din surse de date tranzacționale, comportamentale și demografice pentru a crea vizualizări la 360 de grade ale clienților. Obțineți informații ieșite din cutie cu modele AI preconstruite sau construiți, testați și implementați rapid modele AI/ML personalizate folosind soluții de analiză avansate la scară nelimitată.
 

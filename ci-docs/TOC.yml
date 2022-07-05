@@ -80,7 +80,7 @@
       href: data-unification-update.md
 - name: Îmbogățire date
   items:
-    - name: Îmbogățiși profilele clientului
+    - name: Prezentare generală a îmbogățirii datelor
       href: enrichment-hub.md
     - name: Conturi de la Office 365 date
       href: enrichment-office.md
@@ -112,7 +112,7 @@
       href: search-filter-index.md
     - name: Definiți activitățile clienților
       href: activities.md
-    - name: Gestionarea consimțământului pentru Customer Insights
+    - name: Utilizați gestionarea consimțământului
       href: consent-management.md
 - name: Segmente
   items:
@@ -212,6 +212,8 @@
           href: export-facebook.md
         - name: Google Ads
           href: export-google-ads.md
+        - name: InMobi
+          href: export-inmobi.md
         - name: Iterabil
           href: export-iterable.md
         - name: Klaviyo

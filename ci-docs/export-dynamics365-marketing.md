@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights către Dynamics 365 Marketing
+title: Exportați segmente în Dynamics 365 Marketing (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la Dynamics 365 Marketing.
 ms.date: 08/24/2021
 ms.reviewer: mhart
@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: 7227f3f9e7699a9b5ad546789de5e568b56da579
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: fed4ae1b017cca2b6060c4dda155859cd77e0daf
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8642961"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054631"
 ---
-# <a name="use-segments-in-dynamics-365-marketing-preview"></a>Utilizarea segmentelor în Dynamics 365 Marketing (previzualizare)
-
-
+# <a name="export-segments-to-dynamics-365-marketing-preview"></a>Exportați segmente în Dynamics 365 Marketing (previzualizare)
 
 Utilizați [segmentele](segments.md) pentru a genera campanii și a contacta anumite grupuri de clienți cu Dynamics 365 Marketing. Pentru mai multe informații, consultați [Utilizați segmente din Dynamics 365 Customer Insights cu Dynamics 365 Marketing](/dynamics365/marketing/customer-insights-segments).
 

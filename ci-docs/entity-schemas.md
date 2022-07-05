@@ -1,5 +1,5 @@
 ---
-title: Scheme de entități Customer Insights din Common Data Model
+title: Scheme de entități din Common Data Model
 description: Lucrul cu entități din Common Data Model.
 ms.date: 08/13/2021
 ms.reviewer: mhart
@@ -8,16 +8,14 @@ ms.topic: conceptual
 author: mukeshpo
 ms.author: mukeshpo
 manager: shellyha
-ms.openlocfilehash: 33a0562854e97b9ac5218e060f965996305627fd
-ms.sourcegitcommit: d45c00a5f6cb106714366af81e8070e7f53654b3
+ms.openlocfilehash: 92d37fc0950fefcb5c2a5d26214a469d3693980d
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/15/2022
-ms.locfileid: "8757447"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054769"
 ---
 # <a name="entity-schemas-in-common-data-model"></a>Scheme de entități din Common Data Model
-
-
 
 [Common Data Model](/common-data-model/) este o specificație declarativă și o definiție a entităților standard care reprezintă concepte și activități utilizate în mod obișnuit în aplicațiile de afaceri și de productivitate. Acest model este extins și la date observaționale și analitice. Common Data Model oferă entități de afaceri bine definite, modulare și extensibile - cum ar fi Cont, unitate de afaceri, caz, persoană de contact, client potențial, oportunitate și produs - precum și interacțiuni cu furnizorii, lucrătorii și clienții - cum ar fi activități și acorduri privind nivelul serviciului. Oricine poate construi și extinde definițiile Common Data Model pentru a capta idei suplimentare specifice afacerii.
 

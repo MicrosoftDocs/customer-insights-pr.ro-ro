@@ -1,5 +1,5 @@
 ---
-title: Exportați datele Customer Insights la Adobe Campaign Standard
+title: Exportați segmentele Customer Insights către Adobe Standard de campanie (previzualizare)
 description: Aflați cum utilizați segmentele Customer Insights în Adobe Standard de campanie.
 ms.date: 03/29/2021
 ms.reviewer: mhart
@@ -8,24 +8,24 @@ ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: 2a62d2f889f199222eeb8cc969fce62fa89fa6f0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 9915591cd969bf825f5d1669de43ed4f9953f898
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643451"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082350"
 ---
-# <a name="use-customer-insights-segments-in-adobe-campaign-standard-preview"></a>Utilizați segmentele Customer Insights în Adobe Campaign Standard (previzualizare)
+# <a name="export-customer-insights-segments-to-adobe-campaign-standard-preview"></a>Exportați segmentele Customer Insights către Adobe Standard de campanie (previzualizare)
 
-Ca utilizator Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă eficientiza campaniile de marketing prin țintirea unor publicuri relevante. Pentru a utiliza un segment din Customer Insights în Adobe Experience Platform și aplicații precum Adobe Standard de campanie, trebuie să urmați câțiva pași descriși în acest articol.
+Ca utilizator al Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă eficientiza campaniile de marketing prin țintirea unor publicuri relevante. Pentru a utiliza un segment din Customer Insights în Adobe Experience Platform și aplicații precum Adobe Standard de campanie, trebuie să urmați câțiva pași descriși în acest articol.
 
 :::image type="content" source="media/ACS-flow.png" alt-text="Diagrama de proces a pașilor descriși în acest articol.":::
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
--   Licență Dynamics 365 Customer Insights
--   Licență Adobe Campaign Standard
--   Cont Azure Blob Storage
+- Licență Dynamics 365 Customer Insights
+- Licență Adobe Campaign Standard
+- Cont Azure Blob Storage
 
 ## <a name="campaign-overview"></a>Prezentare generală de campanie
 
@@ -87,7 +87,7 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Selectați **Următorul**.
 
-1. Acum mapăm **Sursă** câmpurile de la segmentul Customer Insights la **Ţintă** numele câmpurilor în Adobe Schema profilului standard al campaniei.
+1. Acum mapăm **Sursă** câmpuri de la segmentul Customer Insights la **Ţintă** numele câmpurilor în Adobe Schema profilului standard al campaniei.
 
    :::image type="content" source="media/ACS-field-mapping.png" alt-text="Maparea câmpului pentru conectorul Adobe Campaign Standard.":::
 

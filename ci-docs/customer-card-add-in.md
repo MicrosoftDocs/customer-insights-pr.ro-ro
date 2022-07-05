@@ -1,5 +1,5 @@
 ---
-title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (conține videoclip)
+title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (previzualizare) (conține videoclip)
 description: Afișați datele despre profilul clientului din Customer Insights în aplicațiile Dynamics 365 cu acest program de completare.
 ms.date: 02/02/2022
 ms.reviewer: mhart
@@ -13,14 +13,14 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8508880bb3274bb491a314a043a5222d4d381073
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755651"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082140"
 ---
-# <a name="customer-card-add-in-preview"></a>Program de completare card client (previzualizare)
+# <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (previzualizare)
 
 Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicațiile Dynamics 365. Cu programul de completare a cardului pentru clienți instalat într-o aplicație Dynamics 365 acceptată, puteți alege să afișați câmpurile de profil ale clienților, informații și cronologia activității. Programul de completare va prelua date din Customer Insights fără a afecta datele din aplicația Dynamics 365 conectată.
 

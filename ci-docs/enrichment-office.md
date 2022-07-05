@@ -1,5 +1,5 @@
 ---
-title: Îmbogățiți profilurile clienților cu date de la Microsoft Office 365
+title: Îmbogățiți profilurile clienților cu date de la Microsoft Office 365 (previzualizare)
 description: Utilizați date proprietare de la Microsoft Office pentru a vă îmbogăți profilurile clienților cu date de implicare.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,14 +8,14 @@ ms.topic: how-to
 author: jodahl
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 7192b7680e73a581dd603de174c57b20bec996dd
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 75762afb70814c8a81c1574ee7ea1553a2048737
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8954148"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9055689"
 ---
-# <a name="enrich-customer-profiles-with-engagement-data-preview"></a>Îmbogățiți profilurile clienților cu date de implicare (previzualizare)
+# <a name="enrich-customer-profiles-with-data-from-microsoft-office-365-preview"></a>Îmbogățiți profilurile clienților cu date de la Microsoft Office 365 (previzualizare)
 
 Utilizați datele de la Microsoft Office 365 pentru a vă îmbogăți profilurile contului de client cu informații despre angajamente prin intermediul Office 365 aplicații. Datele de implicare constau în e-mail și activitate de întâlnire, care este agregată la nivel de cont. De exemplu, numărul de e-mailuri dintr-un cont de afaceri sau numărul de întâlniri cu contul. Nu sunt disponibile date despre utilizatorii individuali.
 
@@ -26,7 +26,7 @@ Utilizați datele de la Microsoft Office 365 pentru a vă îmbogăți profiluril
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Un activ Office 365 licență cloud.
-- [Profiluri unificate ale clienților](customer-profiles.md) bazat pe [conturi de afaceri](work-with-business-accounts.md).
+- [Profiluri de clienți unificate](customer-profiles.md) bazat pe [conturi de afaceri](work-with-business-accounts.md).
 - A [Microsoft Dataverse organizatie atasata](create-environment.md#step-3-connect-to-microsoft-dataverse) în mediul dvs. Customer Insights.
 - [Administrator](permissions.md#admin) permisiuni.
 - Consimțământul dvs Office 365 administratorul locatarului de utilizat Office 365 date de furnizat **Perspective pentru organizație** în cadrul aplicațiilor Dynamics 365.
@@ -75,7 +75,7 @@ Selectați **Alerga** pentru a începe procesul de îmbogățire.
 
 [!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)] Acesta este *Birou* entitate. The *Office_UserEntity* conține ID-urile Active Directory pentru adresele de e-mail care au fost alese în timpul configurării îmbogățirii.
 
@@ -104,7 +104,7 @@ Toate datele sunt agregate până la nivel de cont. Sistemul calculează un scor
 
 ## <a name="see-enrichment-data-on-the-customer-card"></a>Consultați datele de îmbogățire de pe cardul clientului
 
-Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul de client, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
+Implicarea contului poate fi vizualizată și pe cardurile individuale ale clienților. Accesați **Clienți** și selectați un profil de client. În cardul clientului, veți găsi scorul de implicare al contului, numărul total de e-mailuri și numărul total de întâlniri agregate în ultimul an. De asemenea, găsiți diagrame care arată e-mailul și istoricul întâlnirilor.
 
 :::image type="content" source="media/enrichment-office-customer-card.png" alt-text="Card de client cu date îmbogățite.":::
 

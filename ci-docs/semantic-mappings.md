@@ -1,5 +1,5 @@
 ---
-title: Mapări semantice (Versiune preliminară)
+title: Mapări semantice (versiune preliminară)
 description: Prezentare generală a mapărilor semantice și modul de utilizare a acestora.
 ms.date: 12/01/2021
 ms.subservice: audience-insights
@@ -11,14 +11,14 @@ manager: shellyha
 searchScope:
 - ci-semantic-mapping
 - customerInsights
-ms.openlocfilehash: a60855f6d5616ca9b958752836d1071ae3433db0
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b3a0643ab71c98ce212f4e4581a584d8382c67eb
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643535"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9083148"
 ---
-# <a name="semantic-mappings-preview"></a>Mapări semantice (Versiune preliminară)
+# <a name="semantic-mappings-preview"></a>Mapări semantice (versiune preliminară)
 
 Asocierile semantice vă permit să vă mapați datele de non-activitate în scheme predefinite. Aceste scheme ajută Customer Insights să vă înțeleagă mai bine atributele datelor. Maparea semantică și datele furnizate permit noi perspective și funcții în Customer Insights. Pentru a vă mapa datele de activitate cu schemele, consultați documentația [activități](activities.md).
 
@@ -110,7 +110,7 @@ După crearea unui *Profil de contact* cartografierea entităților semantice, p
 
 1. În **Relații** pas, creați o relație indirectă între datele dvs. sursă de activitate și conturi, folosind datele dvs. de contact ca entitate intermediară. Pentru mai multe informații, vezi [căi de relație directe și indirecte](relationships.md#relationship-paths).
    - Relație de exemplu pentru o activitate numită *Achiziții*:
-      - **Datele privind activitatea sursă pentru achiziții** > **Datele de contact** asupra atributului **ContactID**
+      - **Date privind activitatea sursă de achiziții** > **Datele de contact** asupra atributului **ContactID**
       - **Datele de contact** > **Datele contului** asupra atributului **Cont ID**
 
    :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemplu de configurare a relației.":::

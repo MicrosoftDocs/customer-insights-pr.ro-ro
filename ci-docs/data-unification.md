@@ -1,5 +1,5 @@
 ---
-title: Creați o vizualizare unificată a clienților dvs.
+title: Prezentare generală a unificării datelor
 description: Parcurgeți procesul de unificare a datelor cu datele dvs. pentru a crea un singur set de date de profiluri unificate de clienți.
 ms.date: 05/10/2022
 ms.reviewer: v-wendysmith
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: bb8da6f4b9f92f2b265ff9807e04638edae4f814
-ms.sourcegitcommit: 4ae316c856b8de0f08a4605f73e75a8c2cf51c4e
+ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "8755749"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082224"
 ---
 # <a name="data-unification-overview"></a>Prezentare generală a unificării datelor
 
@@ -30,7 +30,7 @@ Datele pot fi unificate pe o singură entitate sau pe mai multe entități. Unif
 
 1. [Înregistrări duplicate](remove-duplicates.md) (anterior parte a potrivirii): în pasul de înregistrări duplicate, definiți opțional reguli pentru a elimina înregistrările duplicate ale clienților din fiecare entitate.
 
-1. [Condiții de potrivire](match-entities.md) (numit anterior Potrivire): în pasul condițiilor de potrivire, definiți reguli care potrivesc înregistrările clienților între entități. Când un client este găsit în două sau mai multe entități, este creată o singură înregistrare consolidată cu toate coloanele și datele din fiecare entitate.
+1. [Condiții de potrivire](match-entities.md) (denumit anterior Potrivire): în pasul condițiilor de potrivire, definiți reguli care potrivesc înregistrările clienților între entități. Când un client este găsit în două sau mai multe entități, este creată o singură înregistrare consolidată cu toate coloanele și datele din fiecare entitate.
 
 1. [Câmpuri unificate pentru clienți](merge-entities.md) (numit anterior Îmbinare): în pasul Câmpuri unificate pentru clienți, determinați ce câmpuri sursă trebuie incluse, excluse sau îmbinate într-un profil de client unificat.  
 

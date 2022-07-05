@@ -1,5 +1,5 @@
 ---
-title: Caracteristici noi și actualizate
+title: Ce este nou în Dynamics 365 Customer Insights
 description: Informații despre funcții noi, îmbunătățiri și remedieri de erori.
 ms.date: 06/02/2022
 ms.subservice: audience-insights
@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: d06f8be114f558d7adadf2913107c5fd69686875
-ms.sourcegitcommit: 9dd767051014e06d8d9f2f616e248573f24df4cb
+ms.openlocfilehash: 4b5b95d1774d22827b3c08c2b6ccbb7858f1b04b
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8843362"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054033"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Ce este nou în Dynamics 365 Customer Insights
 
@@ -126,7 +126,7 @@ Pentru mai multe informații, vezi [Prezentare generală a predicțiilor](predic
 
 ### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nou sursă de date: Integrare cu Azure Synapse Analytics (Previzualizare)
 
-Azure Synapse Analytics este un serviciu de analiză a întreprinderii care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
+Azure Synapse Analytics este un serviciu de analiză pentru întreprinderi care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
 
 Organizații care folosesc deja Azure Synapse Analytics poate ingera acele date în Customer Insights. 
 
@@ -163,7 +163,7 @@ Această modificare înseamnă că experiența de încercare a Customer Insights
 
 Vă invităm să explorați și să evaluați multe alte caracteristici ale [Informații despre clienți](https://dynamics.microsoft.com/ai/customer-insights/), platforma Microsoft de date pentru clienți (CDP).    
  
-Pentru o perioadă de tranziție, participanții existenți la previzualizare încă au acces la unele capacități și funcționalități de previzualizare:
+Pentru o perioadă de tranziție, participanții existenți de previzualizare au în continuare acces la unele capabilități și funcționalități de previzualizare:
 
 - Obțineți codul pentru a instrumenta un site web sau o aplicație mobilă 
 - Vedeți evenimentele și proprietățile evenimentului 

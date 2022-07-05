@@ -1,5 +1,5 @@
 ---
-title: Configurarea sistemului în Customer Insights
+title: Configurări sistem
 description: Aflați mai multe despre setările de sistem din Dynamics 365 Customer Insights.
 ms.date: 04/21/2022
 ms.subservice: audience-insights
@@ -15,12 +15,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 3aa4c6529d705698e612adad86587e3c3a4db35b
-ms.sourcegitcommit: cf74b8c20d88eb96e1ac86e18cd44fe27aad5ab9
+ms.openlocfilehash: 0ef84d8e286d8135eb8938e72f1319925e948bed
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "8653631"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9050686"
 ---
 # <a name="system-configuration"></a>Configurări sistem
 
@@ -92,7 +92,7 @@ Selectați starea unui proces pentru a vedea detaliile despre progresul întregu
 Folosiți fila **Planificare** pentru a planifica reîmprospătarea automată a tuturor [surselor de date ingerate](data-sources.md). Actualizările automate vă ajută să vă asigurați că actualizările din sursele de date sunt reflectate în profilurile dvs. de clienți unificate.
 
 > [!NOTE]
-> Sursele de date gestionate de dvs. se reîmprospătează în propriile lor programe. Pentru a programa reîmprospătarea surselor de date gestionate de dvs., configurați setările de reîmprospătare pe respectivul sursă de date din **Surse de date** pagină.
+> Sursele de date gestionate de dvs. se reîmprospătează în propriile lor programe. Pentru a programa reîmprospătarea surselor de date gestionate de dvs., configurați setările de reîmprospătare pentru respectivul sursă de date din **Surse de date** pagină.
 > :::image type="content" source="media/PPDF-edit-refresh.png" alt-text="Power Platform Setări de reîmprospătare a fluxului de date.":::
 
 1. Mergi la **Admin** > **Sistem** și selectați **Programa** fila.

@@ -1,5 +1,5 @@
 ---
-title: Îmbunătățirea datelor companiei
+title: Îmbogățiți profilurile companiei cu date îmbunătățite ale companiei
 description: Îmbogățiți și normalizați datele companiei cu modelele Microsoft.
 ms.date: 06/10/2022
 ms.reviewer: mhart
@@ -8,16 +8,16 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 4247d59806468907d93fc7848231ec5a2985580e
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 131ef3d1e123628779609ddec368cfef8f4d607e
+ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/13/2022
-ms.locfileid: "8953964"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9054263"
 ---
-# <a name="enrichment-of-company-profiles-with-enhanced-company-data"></a>Îmbogățirea profilurilor companiei cu date îmbunătățite ale companiei
+# <a name="enrich-company-profiles-with-enhanced-company-data"></a>Îmbogățiți profilurile companiei cu date îmbunătățite ale companiei
 
-Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
+Utilizați modelele Microsoft și datele compilate ale companiei pentru a corecta, completa și standardiza profilurile companiei dvs. Vom folosi [Formatul Common Data Model](/common-data-model/schema/core/applicationcommon/account) pentru o mai bună acuratețe și perspectivă.
 
 Poti de asemenea [îmbunătățirea datelor companiei despre sursele de date](data-sources-enrichment.md) pentru a îmbunătăți acuratețea potrivirii în procesul de unificare a datelor.
 
@@ -84,7 +84,7 @@ Modelul nu:
 
 1. Selectați **Alerga** pentru a începe procesul de îmbogățire sau aproape pentru a reveni la **Îmbogățiri** pagină.
 
-## <a name="enrichment-results"></a>Rezultate de îmbogățire
+## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 
 [!INCLUDE [enrichment-results](includes/enrichment-results.md)]
 
@@ -92,8 +92,8 @@ Modelul nu:
 
 The **Clienții modifică imaginea de ansamblu** țigla arată detalii despre acoperirea îmbogățirii
 
-- **Companiile procesate și schimbate** : Numărul de profiluri de companie client care au fost îmbogățite cu succes.
-- **Companii procesate și neschimbate** : Numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
+- **Companiile procesate și schimbate** : Numărul de profiluri de companie clienți care au fost îmbogățite cu succes.
+- **Companii procesate și neschimbate** : numărul de profiluri ale companiei clienți care au fost recunoscute, dar nu au fost modificate. Acest lucru se întâmplă de obicei atunci când datele de intrare sunt valide și nu pot fi îmbunătățite prin îmbogățire.
 - **Companiile nu sunt procesate și neschimbate** : numărul de profiluri ale companiei clienți care nu au fost recunoscute. Acest lucru se întâmplă de obicei pentru datele de intrare care nu sunt valide sau nu sunt acceptate de îmbogățire.
 
 ## <a name="next-steps"></a>Pașii următori

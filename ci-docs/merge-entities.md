@@ -1,5 +1,5 @@
 ---
-title: Unificați câmpurile client sau cont
+title: Unificați câmpurile clienților pentru unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
 recommendations: false
 ms.date: 05/04/2022
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 78e2528d4a3058f879d83952f72ed88a1da065b6
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
+ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8740872"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "9082959"
 ---
-# <a name="unify-customer-fields"></a>Unificați câmpurile clienților
+# <a name="unify-customer-fields-for-data-unification"></a>Unificați câmpurile clienților pentru unificarea datelor
 
 [!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
-În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri separate de e-mail sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
+În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea dvs. de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri separate de e-mail sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
 
 :::image type="content" source="media/m3_unify.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
 
@@ -49,7 +49,7 @@ ms.locfileid: "8740872"
 
 1. Opțional, [generați configurația ID-ului clientului](#configure-customer-id-generation).
 
-1. Opțional, [grupați profilurile în gospodării sau grupuri](#group-profiles-into-households-or-clusters).
+1. Opțional, [grupează profilurile în gospodării sau clustere](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Pasul următor: revizuiți unificarea](review-unification.md)

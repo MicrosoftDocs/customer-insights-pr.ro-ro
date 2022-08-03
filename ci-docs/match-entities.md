@@ -14,16 +14,14 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: 770a18f3a7471714a7e044ae034da168a2601010
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082413"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139718"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condiții de potrivire pentru unificarea datelor
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Acest pas în unificare definește ordinea de potrivire și regulile pentru potrivirea între entități. Acest pas necesită cel puțin două entități.
 
@@ -49,7 +47,7 @@ Fiecare potrivire unifică două sau mai multe entități într-o singură entit
 >
 > Considerații importante:
 >
-> - Alegeți entitatea cu cele mai complete și de încredere date de profil despre clienții dvs. ca entitate principală.
+> - Alegeți entitatea cu cele mai complete și mai fiabile date de profil despre clienții dvs. ca entitate principală.
 > - Alegeți entitatea care are mai multe atribute în comun cu alte entități (de exemplu, numele, numărul de telefon sau adresa de e-mail) ca entitate principală.
 
 1. Pe **Condiții de potrivire** pagina, utilizați săgețile de mutare în sus și în jos pentru a muta entitățile în ordinea dorită sau trageți și plasați-le. De exemplu, selectați **Contacte: eCommerce** ca entitate primară şi **CustomerLoyalty: loialitate** ca a doua entitate.
@@ -118,7 +116,7 @@ Regulile de potrivire reprezintă seturi de condiții. Pentru a potrivi entită�
 
 ### <a name="add-exceptions-to-a-rule"></a>Adăugați excepții la o regulă
 
-În cele mai multe cazuri, potrivirea entității duce la profiluri unice de clienți cu date consolidate. Pentru a aborda în mod dinamic cazuri rare de fals pozitive și fals negative, puteți defini excepții pentru o regulă de potrivire. Excepțiile sunt aplicate după procesarea regulilor de potrivire și se evită potrivirea tuturor înregistrărilor, care îndeplinesc criteriile de excepție.
+În cele mai multe cazuri, potrivirea entității duce la profiluri unice de clienți cu date consolidate. Pentru a aborda în mod dinamic cazuri rare de fals pozitive și fals negative, puteți defini excepții pentru o regulă de potrivire. Excepțiile sunt aplicate după procesarea regulilor de potrivire și evită potrivirea tuturor înregistrărilor, care îndeplinesc criteriile de excepție.
 
 De exemplu, dacă regula de potrivire combină nume de familie, orașul și data nașterii, sistemul va identifica gemeni cu același nume de familie care locuiesc în același oraș cu același profil. Puteți specifica o excepție care nu se potrivește cu profilurile dacă prenume din entitățile pe care le combinați nu sunt aceleași.
 
@@ -159,7 +157,7 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 
 1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi.
 
-1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul drop-down și selectați **Terminat**.
+1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul derulant și selectați **Terminat**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 

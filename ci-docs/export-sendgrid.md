@@ -1,53 +1,54 @@
 ---
 title: Exportați segmente către SendGrid (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la SendGrid.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 669f0fb48b095f6a9faeebf257ee9df3d1c580c7
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f2990ad410dda0cbf952f82f3fc30b3a53a7bcd4
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083043"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9197007"
 ---
 # <a name="export-segments-to-sendgrid-preview"></a>Exportați segmente către SendGrid (previzualizare)
 
-Exportați segmente de profiluri unificate ale clienților în SendGrid și utilizați-le pentru campanii și marketing prin e-mail în SendGrid. 
+Exportați segmente de profiluri unificate ale clienților în SendGrid și utilizați-le pentru campanii și marketing prin e-mail în SendGrid.
 
-## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
+## <a name="prerequisites"></a>Cerințe preliminare
 
--   Aveți un [cont SendGrid](https://sendgrid.com/) și acreditările de administrator corespunzătoare.
--   Există liste de persoane de contact în SendGrid și ID-urile corespunzătoare. Pentru mai multe informații, consultați [SendGrid - Gestionați persoanele de contact](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts).
--   Tu ai [segmente configurate](segments.md) în Customer Insights.
--   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
+- A [cont SendGrid](https://sendgrid.com/) și acreditările de administrator corespunzătoare.
+- [Liste de contacte existente în SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts) și ID-urile corespunzătoare.
+- A [Cheia API SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+- [Segmente configurate](segments.md) în Customer Insights.
+- Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 100.000 de profiluri de clienți în total la SendGrid.
-- Exportul către SendGrid este limitat la segmente.
-- Exportul până la 100.000 de profiluri de clienți în SendGrid poate dura până la câteva ore. 
-- Numărul de profiluri de clienți pe care le puteți exporta în SendGrid depinde și este limitat de contractul dvs. cu SendGrid.
+- Până la 100.000 de profiluri de clienți în total pentru SendGrid, care poate dura până la câteva ore. Numărul de profiluri de clienți pe care le puteți exporta în SendGrid depinde de contractul dvs. cu SendGrid.
+- Numai segmente.
 
 ## <a name="set-up-connection-to-sendgrid"></a>Configurarea conexiunii la SendGrid
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **SendGrid** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **SendGrid**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduceți **Cheia API SendGrid** [Cheia API SendGrid](https://sendgrid.com/docs/ui/account-and-settings/api-keys/).
+1. Introduceți **Cheia API SendGrid**.
 
-1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
-1. Selectați **Conectare** pentru a inițializa conexiunea la SendGrid.
+1. Selectați **Conectați** pentru a inițializa conexiunea.
 
 1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
 
@@ -55,30 +56,26 @@ Exportați segmente de profiluri unificate ale clienților în SendGrid și util
 
 ## <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea SendGrid. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea SendGrid. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
-1. Introduceți **[ID-ul listă SendGrid](https://sendgrid.com/docs/ui/managing-contacts/create-and-manage-contacts/#manage-contacts)**.
+1. Introduceți un nume pentru export.
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale precum **Prenume**, **Nume**, **Țară/Regiune**, **Stare**, **Oraș** și **Cod poștal**.
+1. Introduceți **ID-ul listei SendGrid**.
 
-1. Selectați segmentele pe care doriți să le exportați. Ferm **recomandăm să nu exportați mai mult de 100.000 de profiluri de clienți în total** la SendGrid. 
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client.
+
+1. Opțional, selectați câmpuri precum **prenume**, **de familie**, **/Regiune**, **·**, **·**, și **Cod poștal**.
+
+1. Selectați segmentele pe care doriți să le exportați urmând limitările cunoscute.
 
 1. Selectați **Salvare**.
 
-Salvarea unui export nu se execută imediat.
-
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către SendGrid, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că SendGrid îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această destinație de export oricând, pentru a întrerupe utilizarea acestei funcționalități.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -104,22 +104,26 @@
       href: enrichment-here.md
     - name: Import personalizat SFTP
       href: enrichment-SFTP-custom-import.md
-- name: Profiluri unificate
+- name: Profilurile și activitățile clienților
   items:
-    - name: Evaluare profile de client unificat
+    - name: Vizualizare profiluri de client
       href: customer-profiles.md
-    - name: Filtrare profile de client unificat
+    - name: Gestionați indexul de căutare și filtrare
       href: search-filter-index.md
     - name: Definiți activitățile clienților
       href: activities.md
     - name: Utilizați gestionarea consimțământului
       href: consent-management.md
+    - name: Utilizați datele web pentru personalizare
+      href: unknown-to-known.md
 - name: Segmente
   items:
     - name: Prezentare generală a segmentelor
       href: segments.md
-    - name: Creare segmente
+    - name: Creați cu generatorul de segmente
       href: segment-builder.md
+    - name: Creați cu segmente rapide
+      href: segment-quick.md
     - name: Segmente sugerate bazate pe măsuri
       href: suggested-segments.md
     - name: Segmente sugerate bazate pe activitate
@@ -132,9 +136,9 @@
   items:
     - name: Prezentare generală a măsurilor
       href: measures.md
-    - name: Creați o măsură nouă
+    - name: Creați cu generatorul de măsuri
       href: measure-builder.md
-    - name: Utilizați un șablon de măsură
+    - name: Creați cu șabloane
       href: measure-templates.md
 - name: Predicții
   items:
@@ -150,7 +154,7 @@
           href: predict-subscription-churn.md
         - name: Previzionați retragere din tranzacții
           href: predict-transactional-churn.md
-        - name: Analizați sentimentul în feedback-ul clienților
+        - name: Analizați sentimentul în feedbackul clienților
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md
@@ -180,6 +184,10 @@
           href: export-destinations.md
         - name: Campanie activă
           href: export-active-campaign.md
+        - name: Adobe Campaign Standard
+          href: export-adobe-campaign-standard.md
+        - name: Adobe Experience Platform
+          href: export-adobe-experience-platform.md
         - name: AdRoll
           href: export-adroll.md
         - name: Autopilot
@@ -190,10 +198,6 @@
           href: export-azure-data-lake-storage-gen2.md
         - name: Azure Synapse Analytics
           href: export-azure-synapse-analytics.md
-        - name: Adobe Campaign Standard
-          href: export-adobe-campaign-standard.md
-        - name: Adobe Experience Platform
-          href: export-adobe-experience-platform.md
         - name: Braze
           href: export-braze.md
         - name: Monitor de campanie
@@ -228,6 +232,8 @@
           href: export-marketo.md
         - name: Microsoft Advertising
           href: export-microsoft-advertising.md
+        - name: MoEngage
+          href: export-moengage.md
         - name: Omnisend
           href: export-omnisend.md
         - name: RollWorks

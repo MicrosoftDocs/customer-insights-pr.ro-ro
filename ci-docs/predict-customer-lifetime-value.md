@@ -1,7 +1,7 @@
 ---
 title: Predicția valorii pe viață a clientului (CLV)
 description: Prevedeți potențialul de venituri pentru clienții activi în viitor.
-ms.date: 02/05/2021
+ms.date: 07/21/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -13,21 +13,22 @@ searchScope:
 - ci-create-prediction
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: ea7acd1ddbb0eb8d66fb82018637a85b6ffb369b
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: b6f6665d906cc96688efe84035336f64d2a39303
+ms.sourcegitcommit: 80d8436d8c940f1267e6f26b221b8d7ce02ed26b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9055229"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9186455"
 ---
 # <a name="customer-lifetime-value-clv-prediction"></a>Predicția valorii pe viață a clientului (CLV)
 
 Preziceți valoarea potențială (veniturile) pe care clienții activi individuali o vor aduce în afacerea dvs. într-o perioadă de timp viitoare definită. Această funcție vă poate ajuta să atingeți diferite obiective:
+
 - Identificați clienții cu valoare ridicată și procesați această perspectivă
 - Creați segmente de clienți strategici pe baza valorii potențiale a acestora pentru a derula campanii personalizate cu eforturi de vânzări, marketing și asistență direcționate
 - Ghidați dezvoltarea produselor concentrându-vă pe caracteristicile care măresc valoarea clienților
 - Optimizați strategia de vânzări sau de marketing și alocați bugetul mai precis pentru contactarea clienților
-- Recunoașteți și recompensați clienții cu valoare ridicată prin programe de loialitate sau recompense 
+- Recunoașteți și recompensați clienții cu valoare ridicată prin programe de loialitate sau recompense
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -35,7 +36,7 @@ Preziceți valoarea potențială (veniturile) pe care clienții activi individua
 
 Deoarece configurarea și rularea unui model CLV nu necesită mult timp, luați în considerare crearea mai multor modele cu preferințe de intrare variate și comparați rezultatele modelului pentru a vedea ce scenariu de model se potrivește cel mai bine nevoilor dvs. de afaceri.
 
-###  <a name="data-requirements"></a>Cerinţe de date
+### <a name="data-requirements"></a>Cerinţe de date
 
 Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate pentru o performanță sporită a modelului. Cu cât modelul poate prelucra mai multe date, cu atât va fi mai precisă predicția. Prin urmare, vă încurajăm să efectuați ingerarea mai multor date despre activitatea clienților, dacă sunt disponibile.
 
@@ -52,11 +53,12 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
     - Activități web: istoricul vizitelor site-ului web, istoricul e-mailurilor
     - Activități de loialitate: puncte de recompensă de loialitate acumulate și istoricul de răscumpărare
     - Serviciu pentru relații cu clienții jurnal, apel de serviciu, reclamație sau istoricul de returnare
+    - Informații despre profilul clientului
 - Date despre activitățile clienților (opțional):
     - Identificatori de activitate pentru a distinge activitățile de același tip
     - Identificatori ai clienților pentru asocia activitățile cu clienții dvs.
     - Informații despre activitate care conțin numele și data activității
-    - Schema de date semantice pentru activități include: 
+    - Schema de date semantice pentru activități include:
         - **Cheia primară**: Un identificator unic pentru o activitate.
         - **Marcaj temporal**: Data și ora evenimentului identificate de cheia primară.
         - **Eveniment** (numele activității): numele evenimentului pe care doriți să îl utilizați
@@ -66,7 +68,7 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
     - Date istorice suficiente: cel puțin un an de date tranzacționale. De preferință, doi-trei ani de date tranzacționale pentru a prezice CLV pentru un an.
     - Achiziții multiple pe client: în mod ideal, cel puțin două până la trei tranzacții pe ID-ul clientului, de preferință pe mai multe date.
     - Număr de clienți: cel puțin 100 de clienți unici, de preferință mai mult de 10.000 de clienți. Modelul va eșua cu mai puțin de 100 clienți și cu date istorice insuficiente.
-    - Completitatea datelor: mai puțin de 20% lipsesc valorile din câmpurile obligatorii din datele de intrare   
+    - Completitatea datelor: mai puțin de 20% lipsesc valorile din câmpurile obligatorii din datele de intrare
 
 > [!NOTE]
 > - Modelul necesită istoricul tranzacțiilor clienților dvs. În prezent, poate fi configurată o singură entitate din istoricul tranzacțiilor. Dacă există mai multe entități de cumpărare/tranzacție, le puteți uni Power Query înainte de ingerarea datelor.
@@ -122,11 +124,11 @@ Următoarele date sunt necesare și, dacă sunt marcate opțional, recomandate p
 
 1. Selectați **Următorul**.
 
-### <a name="add-optional-data"></a>Adăugați date opționale
+### <a name="add-optional-activity-data"></a>Adăugați date de activitate opționale
 
-Datele care reflectă interacțiunile cheie ale clienților (cum ar fi web, serviciu pentru relații cu clienții și jurnalele de evenimente) adaugă context înregistrărilor tranzacțiilor. Mai multe modele găsite în datele de activitate ale clienților dvs. pot îmbunătăți precizia predicțiilor. 
+Datele care reflectă interacțiunile cheie ale clienților (cum ar fi web, serviciu pentru relații cu clienții și jurnalele de evenimente) adaugă context înregistrărilor tranzacțiilor. Mai multe modele găsite în datele de activitate ale clienților dvs. pot îmbunătăți precizia predicțiilor.
 
-1. În pasul **Date suplimentare (opțional)**, selectați **Adăugați date**. Alegeți entitatea de activitate client care furnizează informații despre activitatea clienților așa cum este descris în [cerințele preliminare](#prerequisites).
+1. În **Date suplimentare (opțional)** pas, selectați **Adăugați date** sub **Îmbunătățiți informațiile despre model cu date suplimentare despre activitate**. Alegeți entitatea de activitate client care furnizează informații despre activitatea clienților așa cum este descris în [cerințele preliminare](#prerequisites).
 
 1. Asociați câmpurile semantice la atributele din cadrul entității cu activitatea clientului și selectați **Următorul**.
 
@@ -135,15 +137,34 @@ Datele care reflectă interacțiunile cheie ale clienților (cum ar fi web, serv
 1. Selectați un tip de activitate care se potrivește cu tipul de activitate a clienților pe care îl adăugați. Alegeți dintre tipurile de activitate existente sau adăugați un tip de activitate nou.
 
 1. Configurați relația de la entitatea dvs. de activitate a clienților la entitatea *Client*.
-    
+
     1. Selectați câmpul care identifică clientul în tabelul de activitate a clienților. Poate fi legat direct de ID-ul de client principal al entității dvs. *Client*.
     1. Selectați entitatea *Client* care se potrivește cu entitatea *Client* primară.
     1. Introduceți un nume care descrie relația.
 
    :::image type="content" source="media/clv-additional-data.png" alt-text="Imagine a pasului din fluxul de configurare pentru a adăuga date suplimentare și pentru a configura activitatea cu exemple completate.":::
 
-1. Selectați **Salvare**.    
+1. Selectați **Salvare**.
     Adăugați mai multe date dacă doriți să includeți alte activități ale clienților.
+
+1. Adăugați date opționale despre clienți sau selectați **Următorul**.
+
+### <a name="add-optional-customer-data"></a>Adăugați date opționale ale clienților
+
+Selectați dintre 18 atribute de profil de client utilizate în mod obișnuit pentru a le include ca intrare în model. Aceste atribute pot duce la rezultate de model mai personalizate, relevante și mai acționabile pentru cazurile de utilizare ale afacerii dvs.
+
+De exemplu: Contoso Coffee vrea să prezică valoarea de viață a clientului pentru a viza clienții de mare valoare cu o ofertă personalizată legată de lansarea noului lor espressor. Contoso folosește modelul CLV și adaugă toate cele 18 atribute ale profilului clientului pentru a vedea ce factori influențează clienții lor cu cea mai mare valoare. Ei consideră că locația clienților este factorul cel mai influent pentru acești clienți.
+Cu aceste informații, ei organizează un eveniment local pentru lansarea espressorului și se asociază cu vânzătorii locali pentru oferte personalizate și o experiență specială la eveniment. Fără aceste informații, Contoso ar fi trimis doar e-mailuri de marketing generice și ar fi ratat ocazia de a se personaliza pentru acest segment local al clienților lor de mare valoare.
+
+1. În **Date suplimentare (opțional)** pas, selectați **Adăugați date** sub **Îmbunătățiți și mai mult informațiile despre model cu date suplimentare despre clienți**.
+
+1. Pentru **Entitate**, alege **Client: CustomerInsights** pentru a selecta tabelul unificat al profilului clientului care se mapează la datele despre atributele clientului. Pentru **Număr de înregistrare client**, alege **System.Customer.CustomerId**.
+
+1. Hartați mai multe câmpuri dacă datele sunt disponibile în profilurile dvs. unificate de clienți.
+
+   :::image type="content" source="media/clv-optional-customer-profile-mapping.png" alt-text="Exemplu de câmpuri mapate pentru datele profilului clientului.":::
+
+1. Selectați **Salvați** după maparea atributelor pe care modelul ar trebui să le folosească pentru a ajuta la prezicerea valorii de viață a clientului.
 
 1. Selectați **Următorul**.
 

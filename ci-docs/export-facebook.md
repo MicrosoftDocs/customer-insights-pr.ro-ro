@@ -1,19 +1,19 @@
 ---
 title: Exportați segmente către Facebook Manager de anunțuri (previzualizare) (conține videoclip)
 description: Aflați cum să configurați conexiunea și să exportați la Facebook Ads Manager.
-ms.date: 04/15/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 782abd7d69166b9c81ac25c4d7e191bdeb03a887
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 01be1a075db0da05dc5536aea8a33093f9a2ea13
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082980"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195029"
 ---
 # <a name="export-segments-to-facebook-ads-manager-preview"></a>Exportați segmente către Facebook Manager de anunțuri (previzualizare)
 
@@ -21,31 +21,32 @@ Exportați segmente de profiluri de client unificate către Managerul de reclame
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWO1aN]
 
-## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
+## <a name="prerequisites"></a>Cerințe preliminare
 
-- Trebuie să aveți un [**Cont Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) care include un [**Cont Facebook Business**](https://business.facebook.com/).
-- Trebuie să fiți administrator pe [**Contul Facebook Ads**](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
+- A [Facebook Cont de reclame](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account) care include a [Facebook Cont de afaceri](https://business.facebook.com/).
+- Privilegii de administrator pe [Facebook Cont de reclame](https://www.facebook.com/business/learn/lessons/step-by-step-ads-manager-account).
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 10 milioane de profiluri de clienți pe export către Facebook Ads Manager.
-- Exportul către Facebook Ads Manager este limitat la segmente.
-- Creați sau actualizați segmente de public personalizate în Facebook de tip doar *lista de clienți*.
-- Exportarea de segmente cu un total de 10 milion de profiluri de clienți poate dura până la 90 minute.
+- Până la 10 milioane de profiluri de clienți per export către Facebook Ads Manager, care poate dura până la 90 de minute.
+- Numai segmente.
+- Facebook *lista de clienti* introduceți [audiențe personalizate](https://www.facebook.com/business/help/744354708981227?id=2469097953376494) numai.
+  > [!NOTE]
+  > În unele cazuri, este posibil să vedeți segmente de public personalizate de diferite tipuri în lista drop-down. Dacă selectați un alt tip, altul decât *lista de clienti*, exportul eșuează.
 
 ## <a name="set-up-connection-to-facebook-ads-manager"></a>Configurarea conexiunii la Facebook Ads Manager
 
-Înainte ca utilizatorii să poată crea un export, un administrator trebuie să configureze conexiunea la serviciu și să permită contribuitorilor să utilizeze conexiunea.
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Facebook Ads Manager** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **Facebook Manager de reclame**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. [Permiteți contribuitorilor să folosească conexiunea pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Autentificare cu Facebook Ads: 
+1. Autentificare cu Facebook Ads:
 
    1. Selectați **Continuați cu Facebook** pentru a vă conecta la contul Facebook Ads.
 
@@ -53,27 +54,25 @@ Exportați segmente de profiluri de client unificate către Managerul de reclame
 
    1. Selectați **Contul publicitar Facebook** cu care doriți să lucrați.
 
-   1. Selectați un **Public particularizat existent** din lista derulantă sau creați un **Public nou particularizat**. Pentru mai multe informații, consultați [**Publicuri în Managerul de reclame Facebook**](https://www.facebook.com/business/help/744354708981227?id=2469097953376494).
-      > [!NOTE]
-      > Puteți crea sau actualiza numai segmente de public personalizate pe Facebook de tipul *lista de clienți* cu acest export. În unele cazuri, vedeți segmente de public particularizate de diferite tipuri în lista derulantă. Selectarea unui alt tip decât *lista de clienți* va duce la un eșec al exportului. 
+   1. Selectați un **Public particularizat existent** din lista derulantă sau creați un **Public nou particularizat**.
 
-1. Examinați **Confidențialitatea și conformitatea datelor** și selectați **De acord**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ## <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare destinație**. 
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea **Facebook Ads Manager**. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
+1. În **Conexiune pentru export** câmp, alegeți o conexiune din Facebook Secțiunea Manager de anunțuri. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
-1. În **Alegeți câmpul dvs. de identificare cheie**, selectați **E-mail**, **Nume și adresă** sau **Telefon** pentru a trimite la Managerul de reclame Facebook. 
+1. Introduceți un nume pentru export.
 
-1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**.
+1. În **Conectați datele** câmp, selectați **E-mail**, **și adresa**, sau **Telefon** a trimite la Facebook Manager de reclame.
 
 1. Mapați atributele corespunzătoare de la entitatea clientului dvs. unificat pentru identificatorul de cheie selectat.
    > [!TIP]
@@ -85,16 +84,6 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Selectați **Salvare**.
 
-Salvarea unui export nu se execută imediat.
-
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). 
-
-Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Facebook Ads Manager, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Facebook Ads îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această destinație de export oricând, pentru a întrerupe utilizarea acestei funcționalități.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: b58532a541ee22a5e34d0af1a3334ccbd53627b2
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 3f23fe7177f931db3e3179970915d0cd3c736f87
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082371"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196225"
 ---
 # <a name="enrich-company-profiles-with-leadspace-preview"></a>Îmbogățiți profilurile companiei cu Leadspace (previzualizare)
 
@@ -22,7 +22,7 @@ Leadspace este o companie ce se ocupă cu știința datelor și care oferă o pl
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - O licență Leadspace activă.
-- [Profiluri de clienți unificate](customer-profiles.md) bazat pe conturi.
+- [Profiluri unificate ale clienților](customer-profiles.md) bazat pe conturi.
 - Un Leadspace [conexiune](connections.md) este [configurat](#configure-the-connection-for-leadspace) de către un administrator. Luați legătura în mod direct cu [Leadspace](https://www.leadspace.com/leadspace-microsoft-dynamics-365/) pentru detalii despre produsul lor.
 
 ## <a name="configure-the-connection-for-leadspace"></a>Configurați conexiunea pentru Leadspace
@@ -54,7 +54,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-1. Selectați conexiunea. Contactați un administrator dacă unul nu este disponibil.
+1. Selectați conexiunea. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
 1. Selectați **Următorul**.
 
@@ -64,7 +64,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivire: adresa principală și/sau secundară. Puteți specifica o mapare a câmpului pentru ambele adrese și puteți îmbogăți profilurile pentru ambele adrese separat. De exemplu, pentru o adresă de domiciliu și o adresă de afaceri. Selectați **Următorul**.
 
-1. Hartați-vă câmpurile la datele companiei din Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
+1. Mapați câmpurile dvs. la datele companiei din Leadspace. Câmpul **Numele companiei** este obligatoriu. Pentru o precizie mai mare a potrivirii, până la două alte câmpuri, **Site-ul companiei** și **Locația companiei**, pot fi adăugate.
 
    :::image type="content" source="media/enrichment-leadspace-mapping.png" alt-text="Panoul de mapare a câmpului Leadspace.":::
 

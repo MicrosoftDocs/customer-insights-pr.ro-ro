@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 54ba9f4e9baeb4b7021bb8c20a706bbb6eb1529f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8843fc04e4e6eaba0019d932c54f62561ffbdb92
+ms.sourcegitcommit: f3c12ad445d5f91a88f91a7bbc40790ebcfaa826
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083169"
+ms.lasthandoff: 07/06/2022
+ms.locfileid: "9121577"
 ---
 # <a name="odata-query-examples-for-customer-insights-apis"></a>Exemple de interogări OData pentru API-urile Customer Insights
 
@@ -23,9 +23,9 @@ Acest articol enumeră câteva exemple de interogări frecvent solicitate pentru
 
 Trebuie să modificați mostrele de interogare pentru a le face să funcționeze în mediile țintă: 
 
-- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}` Unde{instanceId} este GUID-ul mediului Customer Insights pe care doriți să îl interogați. The [Operațiunea ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vă permite să găsiți{InstanceId} ai acces la.
+- {serviceRoot}:`https://api.ci.ai.dynamics.com/v1/instances/{instanceId}/data` Unde{instanceId} este GUID-ul mediului Customer Insights pe care doriți să îl interogați. The [Operațiunea ListAllInstances](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances) vă permite să găsiți{InstanceId} ai acces la.
 - {CID}: GUID-ul unei înregistrări unificate de client. Exemplu:`ce759201f786d590bf2134bff576c369`.
-- {AlternateKey}: Identificatorul cheii primare a înregistrării unui client într-un sursă de date. Exemplu: `CNTID_1002`
+- {AlternateKey}: identificatorul cheii primare a înregistrării unui client într-un sursă de date. Exemplu: `CNTID_1002`
 - {DSname}: șir cu numele entității unui sursă de date care este ingerat în Customer Insights. Exemplu:`Website_contacts`.
 - {SegmentName}: șir cu numele entității de ieșire a unui segment în Customer Insights. Exemplu:`Male_under_40`.
 
@@ -39,9 +39,10 @@ Următorul tabel conține un set de exemple de interogări pentru *Client* entit
 |Cheie alternativă    | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} eq '{AlternateKey}'`         |  Cheile alternative persistă în entitatea client unificată       |
 |Select   | `{serviceRoot}/Customer?$select=CustomerId,FullName&$filter=customerid eq '1'`        |         |
 |În    | `{serviceRoot}/Customer?$filter=CustomerId in ('{CID1}',’{CID2}’)`        |         |
-|Cheie alternativă + In   | `Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
+|Cheie alternativă + In   | `{serviceRoot}/Customer?$filter={DSname_EntityName_PrimaryKeyColumnName} in ('{AlternateKey}','{AlternateKey}')`         |         |
 |Căutarea  | `{serviceRoot}/Customer?$top=10&$skip=0&$search="string"`        |   Returnează primele 10 rezultate pentru un șir de căutare      |
 |Segmentul de membru  | `{serviceRoot}/Customer?select=*&$filter=IsMemberOfSegment('{SegmentName}')&$top=10`     | Returnează un număr prestabilit de rânduri de la entitatea de segmentare.      |
+|Segmentează calitatea de membru pentru un client | `{serviceRoot}/Customer?$filter=CustomerId eq '{CID}'&IsMemberOfSegment('{SegmentName}')`     | Returnează profilul clientului dacă este membru al segmentului dat     |
 
 ## <a name="unified-activity"></a>Activitate unificată
 
@@ -49,7 +50,7 @@ Următorul tabel conține un set de exemple de interogări pentru *Activitate un
 
 |Tip interogare |Exemplu  | Notă  |
 |---------|---------|---------|
-|Activitatea CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Enumeră activitățile unui anumit profil de client |
+|Activitatea CID     | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}'`          | Listează activitățile unui anumit profil de client |
 |Intervalul de timp al activității    | `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityTime gt 2017-01-01T00:00:00.000Z and ActivityTime lt 2020-01-01T00:00:00.000Z`     |  Activitățile unui profil de client într-un interval de timp       |
 |Tip de activitate    |   `{serviceRoot}/UnifiedActivity?$filter=CustomerId eq '{CID}' and ActivityType eq '{ActivityName}'`        |         |
 |Activitate după numele afișat     | `{serviceRoot}/UnifiedActivity$filter=CustomerId eq ‘{CID}’ and ActivityTypeDisplay eq ‘{ActivityDisplayName}’`        | |

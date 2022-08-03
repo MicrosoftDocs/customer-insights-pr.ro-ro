@@ -21,21 +21,21 @@ searchScope:
 - ci-measure-template
 - ci-permissions
 - customerInsights
-ms.openlocfilehash: 5477798a8b9e0771d390e403379b7447eb7baddd
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: e622e5fa0b5738e31db1c668d95312adbc4f7d36
+ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082581"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "9183584"
 ---
 # <a name="relationships-between-entities-and-entity-paths"></a>Relații între entități și căi de entități
 
 Relațiile conectează entități și definesc un grafic al datelor dvs. atunci când entitățile partajează un identificator comun, o cheie străină. La această cheie străină se poate face referire de la o entitate la alta. Entitățile conectate vă permit definirea de segmente și măsuri pe baza mai multor surse de date.
 
 Există trei tipuri de relații: 
-- Relații de sistem needitable, create de sistem ca parte a procesului de unificare a datelor
-- Relații moștenite non-editabile, care sunt create automat din ingerarea surselor de date 
-- Relații particularizate editabile, create și configurate de utilizatori
+- Relațiile de sistem needitabile sunt create de sistem ca parte a procesului de unificare a datelor
+- Relațiile moștenite needitabile sunt create automat din sursele de date asimilate
+- Relațiile personalizate editabile sunt create și configurate de utilizatori
 
 ## <a name="non-editable-system-relationships"></a>Relații de sistem non-editabile
 
@@ -67,69 +67,66 @@ Relația constă dintr-o *entitate sursă* care conține cheia străină și o *
    - **Descriere**: Descrierea relației.
    - **Entitate sursă**: Entitate care este utilizată ca sursă în relație. Exemplu: SupportCase.
    - **Entitate țintă**: Entitate care este utilizată ca țintă în relație. Exemplu: Client.
-   - **Cardinalitatea sursă**: Specificați cardinalitatea entității sursă. Cardinalitatea descrie numărul de elemente posibile dintr-un set. Se referă întotdeauna la cardinalitatea țintă. Puteți alege între **Unu** și **Mulți**. Sunt acceptate doar relații mulți-la-unu și unu-la-unu.  
+   - **Cardinalitatea sursei** : Cardinalitatea entității sursă. Cardinalitatea descrie numărul de elemente posibile dintr-un set. Se referă întotdeauna la cardinalitatea țintă. Puteți alege între **Unu** și **Mulți**. Sunt acceptate doar relații mulți-la-unu și unu-la-unu.  
      - Mai-multe-la-una: Mai multe înregistrări sursă se pot referi la o înregistrare țintă. Exemplu: Mai multe cazuri de asistență de la un singur client.
      - Una-la-una: O singură înregistrare sursă se referă la o singură înregistrare țintă. Exemplu: Un ID de loialitate pentru un singur client.
 
      > [!NOTE]
      > Relațiile mulți-la-mai-mulți pot fi create folosind două relații multe-la-una și o entitate care leagă, care conectează entitatea sursă și entitatea țintă.
 
-   - **Cardinalitate țintă**: Selectați cardinalitatea înregistrărilor entității țintă. 
-   - **Câmpul cheie sursă**: Câmpul cheie străină din entitatea sursă. Exemplu: SupportCase ar putea utiliza CaseID ca un câmp cu cheie străină.
-   - **Câmpul cheie țintă**: Câmpul cheie al entității țintă. Exemplu Clientul ar putea folosi câmpul cheie **Număr de înregistrare client**.
+   - **Cardinalitatea țintă** : Cardinalitatea înregistrărilor entității țintă.
+   - **Câmp cheie sursă** : câmp cheie străină în entitatea sursă. Exemplu: folosește SupportCase **CaseID** ca câmp cheie străină.
+   - **Câmp cheie țintă** : Câmp cheie al entității țintă. Exemplu: utilizări de către client **Număr de înregistrare client** ca câmp cheie.
 
 4. Pentru a crea conexiunea particularizată, selectați **Salvare**.
 
 ## <a name="set-up-account-hierarchies"></a>Configurați ierarhii de cont
 
-Mediile care sunt configurate pentru a utiliza conturile de afaceri ca public țintă principal pot configura ierarhii de conturi pentru conturile de afaceri conexe. De exemplu, o companie care are unități de afaceri separate. 
+Mediile care sunt configurate să utilizeze conturi de afaceri ca public țintă principal pot configura ierarhii de cont pentru conturile de afaceri asociate. De exemplu, o companie care are unități de afaceri separate.
 
 Organizațiile creează ierarhii de conturi pentru a gestiona mai bine conturile și relațiile lor între ele. Customer Insights acceptă ierarhiile de conturi părinte-copil care există deja în datele clienților ingerate. De exemplu, conturi din Dynamics 365 Sales. Aceste ierarhii pot fi configurate pe **Relații** pagină.
 
 1. Accesați **Date** > **Relații**.
 1. Selectați fila **Ierarhie de cont**.
-1. Selectați **Ierarhie nouă de cont**. 
-1. În panoul **Ierarhia contului**, furnizați un nume pentru ierarhie. Sistemul creează un nume pentru entitatea de ieșire. Puteți schimba numele entității de nume de ieșire.
+1. Selectați **Ierarhie nouă de cont**.
+1. În panoul **Ierarhia contului**, furnizați un nume pentru ierarhie. Sistemul creează un nume pentru entitatea de ieșire, dar îl puteți schimba.
 1. Selectați entitatea care conține ierarhia contului dvs. De obicei se află în aceeași entitate care conține conturile.
-1. Selectați **ID Cont** și **ID Cont părinte** din entitatea selectată 
-1. Selectați **Salvați** pentru a aplica setările și a finaliza ierarhia contului.
+1. Selectează **UID contului** și **UID părinte** de la entitatea selectată.
+1. Selectați **Salvați** pentru a finaliza ierarhia conturilor.
 
-## <a name="view-relationships"></a>Vizualizare relații
+## <a name="manage-existing-relationships"></a>Gestionați relațiile existente
 
-Pagina Relații listează toate relațiile care au fost create. Fiecare rând reprezintă o relație, care include, de asemenea, detalii despre entitatea sursă, entitatea țintă și cardinalitatea. 
+Du-te la **Relații** pagina pentru a vizualiza toate relațiile care au fost create, entitatea sursă, entitatea țintă și cardinalitatea.
 
 :::image type="content" source="media/relationships-list.png" alt-text="Lista relațiilor și opțiunilor din bara de acțiuni a paginii Relații.":::
 
-Această pagină oferă un set de opțiuni pentru relațiile existente și noi: 
-- **Nouă relație**: [Creați o relație particularizată](#create-a-custom-relationship).
-- **Vizualizator**: [Explorați vizualizatorul relației](#explore-the-relationship-visualizer) pentru a vedea o diagramă de rețea a relațiilor existente și cardinalitatea acestora.
-- **Filtrați după**: Alegeți tipul de relații de afișat în listă.
-- **Căutați relații**: Utilizați o căutare bazată pe text pe proprietățile relațiilor.
+Folosește **Filtreaza dupa** sau **Caută relații** opțiuni pentru a localiza o anumită relație. Pentru a vedea o diagramă de rețea a relațiilor existente și cardinalitatea acestora, selectați [**Vizualizator**](#explore-the-relationship-visualizer).
+
+Selectați o relație pentru a vedea acțiunile disponibile:
+- **Editați**: Actualizați proprietățile relațiilor particularizate în panoul de editare și salvați modificările.
+- **Ștergeți**: Ștergeți relațiile particularizate.
+- **Vizualizare**: Vizualizați relațiile create și moștenite de sistem.
 
 ### <a name="explore-the-relationship-visualizer"></a>Explorați vizualizatorul de relații
 
 Vizualizatorul de relații arată o diagramă de rețea a relațiilor existente între entitățile conectate și cardinalitatea acestora. De asemenea, vizualizează calea relației.
 
-Pentru a personaliza vizualizarea, puteți schimba poziția casetelor glisându-le pe pânză.
-
 :::image type="content" source="media/relationship-visualizer.png" alt-text="Captură de ecran a diagramei de rețea a vizualizatorului de relații cu conexiuni între entități conexe.":::
 
-Opțiuni disponibile: 
+Pentru a personaliza vizualizarea, puteți schimba poziția casetelor glisându-le pe pânză. Alte opțiuni includ: 
 - **Exportați ca imagine**: Salvați vizualizarea curentă ca fișier imagine.
 - **Treceți la aspectul orizontal/vertical**: Schimbați alinierea entităților și a relațiilor.
 - **Editați**: Actualizați proprietățile relațiilor particularizate în panoul de editare și salvați modificările.
 
 ## <a name="relationship-paths"></a>Căi de relație
 
-O cale de relație descrie entitățile care sunt conectate cu relațiile dintre o entitate sursă și o entitate țintă. Este utilizat atunci când creați un segment sau o măsură care include alte entități decât entitatea de profil unificat și există mai multe opțiuni pentru a ajunge la entitatea de profil unificat. 
-
-O cale de relație informează sistemul despre care relații pentru a accesa entitatea de profil unificat. Căile de relație diferite pot produce rezultate diferite.
+O cale de relație descrie entitățile care sunt conectate cu relațiile dintre o entitate sursă și o entitate țintă. Este folosit atunci când se creează un segment sau o măsură care include alte entități decât entitatea de profil unificat și există mai multe opțiuni pentru a ajunge la entitatea de profil unificat. Căile de relație diferite pot produce rezultate diferite.
 
 De exemplu, entitatea *eCommerce_eCommercePurchases* are următoarele relații cu entitatea profilul unificat *Client*:
 
 - eCommerce_eCommercePurchases > Client
 - eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > Client
-- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client 
+- eCommerce_eCommercePurchases > eCommerce_eCommerceContacts > POS_posPurchases > loyaltyScheme_loyCustomers > Client
 
 O cale de relație determină ce entități puteți utiliza atunci când creați reguli pentru măsuri sau segmente. Alegerea opțiunii cu cea mai lungă cale de relație va produce probabil mai puține rezultate, deoarece înregistrările de potrivire trebuie să facă parte din toate entitățile. În acest exemplu, un client trebuie să fi achiziționat bunuri prin e-commerce (eCommerce_eCommercePurchases), la un punct de vânzare (POS_posPurchases) și să participe la programul nostru de fidelizare (loyaltyScheme_loyCustomers). Atunci când alegeți prima opțiune, veți obține probabil mai multe rezultate, deoarece clienții trebuie să existe doar într-o singură entitate suplimentară.
 
@@ -155,7 +152,7 @@ O relație este clasificată ca o **relație indirectă** atunci când o entitat
 
 #### <a name="multi-hop-relationship"></a>Relație multi-hop
 
-O *relație multi-hop* este o *relație indirectă* care vă permite să conectați o entitate sursă la o entitate țintă prin una sau mai multe alte entități intermediare.
+O **relație multi-hop** este o *relație indirectă* care vă permite să conectați o entitate sursă la o entitate țintă prin una sau mai multe alte entități intermediare.
 
 De exemplu, dacă o entitate de activitate a apelat *eCommerce_eCommercePurchasesWest* se conectează la o entitate intermediară numită *eCommerce_eCommercePurchasesEast* și apoi se conectează la o entitate țintă numită *eCommerce_eCommerceContacts*, este o relație multi-hop.
 
@@ -169,17 +166,7 @@ De exemplu, dacă o entitate de activitate numită *eCommerce_eCommercePurchases
 
 :::image type="content" source="media/multi-hop_multi-path_relationship.png" alt-text="Entitatea sursă se conectează direct la o entitate țintă și se conectează la o altă entitate țintă printr-o entitate intermediară.":::
 
-## <a name="manage-existing-relationships"></a>Gestionați relațiile existente 
-
-În pagina Relații, fiecare relație este reprezentată de un rând. 
-
-Selectați o relație și alegeți una dintre următoarele opțiuni: 
- 
-- **Editați**: Actualizați proprietățile relațiilor particularizate în panoul de editare și salvați modificările.
-- **Ștergeți**: Ștergeți relațiile particularizate.
-- **Vizualizare**: Vizualizați relațiile create și moștenite de sistem. 
-
-## <a name="next-step"></a>Următorul pas
+## <a name="next-step"></a>Pasul următor
 
 Relațiile de sistem și personalizate sunt obișnuite să [creeze segmente](segments.md) și cu [măsuri](measures.md) pe baza mai multor surse de date care nu mai sunt în silozuri.
 

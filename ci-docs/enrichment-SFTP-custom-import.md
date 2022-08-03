@@ -8,12 +8,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 88fc366ab9478c3b67034af794e237ff4573da7c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082329"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195811"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Îmbogățiți profilurile clienților cu import personalizat SFTP (previzualizare)
 
@@ -23,7 +23,7 @@ Importul particularizat Secure File Transfer Protocol (SFTP) vă permite să imp
 
 - Numele fișierului și locația (calea) fișierului care urmează să fie importat pe gazda SFTP sunt cunoscute.
 
-- A *model.json* este disponibil fișierul care specifică schema modelului comun de date pentru datele care urmează să fie importate. Acest fișier trebuie să fie în același director cu fișierul de importat.
+- A *model.json* este disponibil un fișier care specifică schema Common Data Model pentru datele de importat. Acest fișier trebuie să fie în același director cu fișierul de importat.
 
 - Un SFTP [conexiune](connections.md) este [configurat](#configure-the-connection-for-sftp-custom-import).
 
@@ -77,7 +77,7 @@ Directorul care conține fișierul de importat pe serverul SFTP trebuie să con�
 
 Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți acreditările utilizatorului, adresa URL și numărul portului pentru locația SFTP de unde doriți să importați datele.
 
-1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau mergeți la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Import personalizat.
+1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Import personalizat.
 
    :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Pagina de configurare a conexiunii de import personalizat.":::
 
@@ -104,7 +104,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-1. Selectați conexiunea. Contactați un administrator dacă unul nu este disponibil.
+1. Selectați conexiunea. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
 1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
 

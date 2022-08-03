@@ -1,19 +1,19 @@
 ---
 title: Power Automate conector (previzualizare) | Microsoft Docs
 description: Creați fluxuri în Microsoft Power Automate din Dynamics 365 Customer Insights.
-ms.date: 06/24/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 29a861dad926072f6f849d738d868f0f3b9306be
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: f87bd6db7143294a264813f6c5c7d7963f303628
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082455"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196133"
 ---
 # <a name="power-automate-connector-preview"></a>Conector Power Automate (previzualizare)
 
@@ -21,18 +21,18 @@ Declanșați evenimente specifice care să aibă loc automat atunci când datele
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Puteți efectua maximum 100 de apeluri pe 60 de secunde. Puteți apela punctul final API de mai multe ori utilizând parametrul $skip. [Aflați mai multe despre parametrul $skip](/connectors/customerinsights/#get-items-from-an-entity).
+- Maximum 100 de apeluri pe 60 de secunde. Folosește [parametru $skip](/connectors/customerinsights/#get-items-from-an-entity) pentru a apela punctul final API de mai multe ori.
 
 ## <a name="power-automate-triggers"></a>declanșatoare Power Automate
 
-Utilizați declanșatoarele pentru a crea fluxuri cloud și pentru a automatiza sarcini repetitive, cum ar fi notificări sau acțiuni mai avansate.
+Utilizați declanșatoarele pentru a crea fluxuri cloud și pentru a automatiza sarcini repetitive, cum ar fi notificări sau acțiuni mai avansate. Utilizați declanșatorii atunci când:
 
-- Se declanșează atunci când o reîmprospătare pentru o sursă de date eșuează.
-- Se declanșează atunci când o reîmprospătare pentru o sursă de date reușește.
-- Se declanșează atunci când un prag este trecut pe un segment. Declanșatorul se limitează la trecerea peste prag.
-- Se declanșează atunci când un prag este trecut pe o măsură de business. Numai măsurile de business fără o dimensiune sunt acceptate. Declanșatorul se limitează la trecerea peste prag.
-- Declanșați când se finalizează o reîmprospătare completă (surse de date, segmente, măsuri, ...).
-- Se declanșează când este finalizată o reîmprospătare a procesului de unificare.
+- O reîmprospătare sursă de date eșuează.
+- O reîmprospătare sursă de date reușește.
+- Se trece un prag pe un segment. Declanșatorul se limitează la trecerea peste prag.
+- Este depășit un prag pentru o măsură de afaceri. Numai măsurile de business fără o dimensiune sunt acceptate. Declanșatorul se limitează la trecerea peste prag.
+- O reîmprospătare programată completă este finalizată. Acest declanșator nu funcționează pentru reîmprospătările pornite manual.
+- O reîmprospătare a procesului de unificare este finalizată.
 
 [Configurați declanșatoarele în Power Automate.](https://flow.microsoft.com/connectors/shared_customerinsights/dynamics-365-customer-insights-connector/)
 
@@ -42,7 +42,7 @@ Conectorul Power Automate oferă alte acțiuni decât declanșatoarele disponibi
 
 ## <a name="create-a-power-automate-flow"></a>Creați un flux Power Automate
 
-1. Accesați **Administrator** > **Destinații de export**.
+1. Salt la **Administrator** > **Conexiuni**.
 
 1. Pe dala **Power Automate**, selectați **Configurare**.
 
@@ -53,7 +53,5 @@ Conectorul Power Automate oferă alte acțiuni decât declanșatoarele disponibi
 Exemple de utilizare a fluxurilor: 
 - Postează un mesaj către un canal Microsoft Teams dacă o reîmprospătare sursă de date eșuează. 
 - Trimiteți un e-mail proprietarilor de date atunci când este trecut un prag pe un segment.
-
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

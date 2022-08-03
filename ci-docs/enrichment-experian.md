@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: a30e98b06ed07590ab95cae1d8db8023e49ff7f9
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 876853ab42e8c08ad1abacb8d8a205c0aadabcf7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053036"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195951"
 ---
 # <a name="enrich-customer-profiles-with-demographics-from-experian-preview"></a>Îmbogățiți profilurile clienților cu date demografice din Experian (previzualizare)
 
@@ -29,7 +29,7 @@ Experian este un lider global în raportarea creditelor de consum și de afaceri
 
 - Un Experian [conexiune](connections.md) este [configurat](#configure-the-connection-for-experian) de către un administrator.
 
-- Experian ID utilizator, ID-ul părții și numărul de model pentru contul dvs. de transport securizat (ST) activat pentru SSH Experian creat pentru tine.
+- Experian ID de utilizator, ID-ul părții și numărul de model pentru contul dvs. de transport securizat (ST) activat pentru SSH Experian creat pentru tine.
 
 ## <a name="configure-the-connection-for-experian"></a>Configurați conexiunea pentru Experian
 
@@ -59,7 +59,7 @@ Când activați Dynamics 365 Customer Insights pentru a transmite date către Ex
 
 1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-1. Selectați conexiunea. Contactați un administrator dacă unul nu este disponibil.
+1. Selectați conexiunea. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
 1. Selectați **Următorul**.
 
@@ -67,7 +67,7 @@ Când activați Dynamics 365 Customer Insights pentru a transmite date către Ex
 
     :::image type="content" source="media/enrichment-Experian-configuration-customer-data-set.png" alt-text="Captură de ecran atunci când alegeți setul de date pentru clienți.":::
 
-1. Definiți din ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor demografice Experian. Cel puțin unul dintre câmpurile **Numele și adresa**, **Telefon** sau **E-mail** este necesar. Pentru o mai mare precizie a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
+1. Definiți din ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor demografice Experian. Cel puțin unul dintre câmpurile **Numele și adresa**, **Telefon** sau **E-mail** este necesar. Pentru o precizie mai mare a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
 
 1. Hartați câmpurile cu datele demografice de la Experian.
 

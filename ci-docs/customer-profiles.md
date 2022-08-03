@@ -1,5 +1,5 @@
 ---
-title: Profiluri de client
+title: Vizualizare profiluri de client
 description: Vizualizați datele unificate ale clienților, inclusiv folosind căutarea și filtrarea
 ms.date: 06/08/2022
 ms.reviewer: mhart
@@ -14,63 +14,83 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 279c8e1291c6449005d593244f1979e871610a77
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052204"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188108"
 ---
-# <a name="customer-profiles"></a>Profiluri de client
+# <a name="view-customer-profiles"></a>Vizualizare profiluri de client
 
-Pagina **Clienți** afișează o vizualizare combinată a profilurilor dvs. unificate de clienți. Profilurile clienților sunt disponibile odată ce [ați creat entitatea Client unificat](data-unification.md). Pagina vă permite să căutați clienți și să definiți indexul pentru căutarea respectivă.
+Profilurile clienților sunt disponibile odată ce dvs [creează unificatul *Client* entitate](data-unification.md). Vizualizarea combinată a profilurilor dvs. unificate de clienți se afișează pe **Clienți** pagină. Clienții pot fi persoane fizice sau organizații.
 
-Clienții pot fi persoane fizice sau organizații. Fiecare profil de client este reprezentat de o dală. Utilizați comenzile de paginare pentru a obține mai multe înregistrări. Cardul afișează câmpurile din entitatea *Client* definită în **Index de căutare și filtrare**. Ordinea câmpurilor din fiecare card este aleasă de sistem.
-
-Selectați o dală pentru a vedea datele pentru clientul selectat într-o pagină dedicată numită [Pagina cu detalii despre client](customer-profiles.md#customer-details-page).
-
-> [!div class="mx-imgBorder"]
-> ![Pagina clienților care prezintă dale de rezultate](media/customers-page-result-tiles-B2C.png "Pagina clienților care prezintă dale de rezultate")
+Du-te la **Clienți** pagina pentru a vă vizualiza clienții și profilurile acestora. Fiecare profil de client este reprezentat de o dală. Utilizați comenzile de paginare pentru a obține mai multe înregistrări. Cardul afișează câmpurile din entitatea *Client* definită în **Index de căutare și filtrare**. Ordinea câmpurilor din fiecare card este aleasă de sistem.
 
 > [!NOTE]
-> Dacă nu puteți vedea dalele atunci când selectați **Clienți** în navigare, administratorul dvs. trebuie să [definească cel puțin un atribut care poate fi căutat](search-filter-index.md) în **Index de căutare și filtrare**.
+> Dacă nu puteți vedea plăcile atunci când selectați **Clienți**, administratorul dvs. trebuie să o facă [definiți cel puțin un atribut care poate fi căutat](search-filter-index.md) în **Căutare și filtrare index**.
+
+:::image type="content" source="media/customers-page-result-tiles-B2C.png" alt-text="Pagina Clienți care arată piese de rezultat.":::
+
+Selectați oricare dintre următoarele acțiuni:
+- [Vedeți detaliile clienților](#view-customer-details)
+- [Gestionați indexul de căutare și filtrare](search-filter-index.md) (doar administratorii)
+- [Filtrați clienții](#filter-customers)
+- **Extindeți cardurile** sau **Restrângeți cardurile** pentru a extinde sau restrânge informațiile afișate pe tigla client
+- **Filtrează după** un anumit atribut
+- [Căutare clienți](#search-for-customers)
+
+  > [!NOTE]
+  > Pentru a utiliza căutarea și filtrarea, un administrator trebuie să configureze atributele care pot fi căutate și să definească câmpurile filtrabile folosind indexul de căutare și filtrare.
 
 ## <a name="search-for-customers"></a>Căutare clienți
 
-Căutați clienți introducând un nume sau alt atribut în caseta de căutare. Căutarea funcționează numai în entitatea *Client* creată în timpul procesului de unificare a datelor.
+Căutați clienți introducând un nume sau un alt atribut **Căutați clienți**. Atributele care pot fi căutate sunt definite de administrator și provin din unificat *Client* entitate.
 
-Ca administrator, puteți configura atributele care pot fi căutate folosind pagina **Indice de căutare și filtrare**. Pentru mai multe informații, accesați [Geestionați index de căutare și filtrare](search-filter-index.md).
+> [!NOTE]
+> **Şir** este singurul tip de date care este inclus în căutare. Folosiți-l în **Căutați clienți** câmp din pagina Clienți pentru a căuta clienți.
 
 ## <a name="filter-customers"></a>Filtrați clienții
 
-Puteți filtra clienții după câmpurile entitate *Client*. Similar cu căutarea, administratorul dvs. va trebui mai întâi să definească câmpurile ca fiind filtrabile folosind pagina **Indice de căutare și filtrare**.
+Filtrați clienții după *Client* câmpurile de entitate. Câmpurile filtrabile sunt definite de administrator.
 
-1. Selectați **Afișați filtrele** pe pagina **Clienți**.
+1. Pe **Clienți** pagina, selectați **Afișați filtrele**. Se afișează panoul Filtru.
 
 1. Bifați casetele de lângă atributele prin care doriți să filtrați clienții.
 
-1. Eliminați filtrele selectând **Ștergere filtre** pe pagina **Clienți**.
+1. Eliminați toate filtrele selectând **Ștergeți filtrele** sau debifați o casetă de selectare de lângă un atribut selectat.
 
-## <a name="customer-details-page"></a>Pagină detalii client
+1. Selectați **Ascunde filtrele** pentru a închide panoul de filtrare.
 
-Selectați oricare dintre dalele clientului pentru a deschide **Pagina cu detalii despre client**. Această vizualizare conține informații unificate pentru clientul selectat. Detaliile despre clienți includ următorul conținut:
+1. Pentru a salva rezultatele filtrului ca a [segment](segments.md), Selectați **Salvați filtrele ca segment**.
+   1. Introduceți un nume pentru segment.
+   1. Selectați **Salvați** pentru a salva segmentul.
+   1. Alegeți dacă să rulați segmentul acum selectând **Activati** sau rulați-l **Mai tarziu**.
 
-**Dală profil client**: Această dală arată diferitele valori față de entitatea unificată *Client*. Dacă un câmp nu are nicio valoare pentru profilul de client selectat, nu se va afișa, cu excepția câmpului pentru adresă. Dala este structurată în secțiuni:
+## <a name="view-customer-details"></a>Vedeți detaliile clienților
+
+Pe **Clienți** pagina, selectați o piesă de client pentru a vedea detaliile pentru clientul selectat.
+
+:::image type="content" source="media/customers-details-B2C.png" alt-text="Pagina de detalii client.":::
+
+Detaliile clientului includ:
+
+**Tigla de profil client** arată valorile diferite de la unificat *Client* entitate. Dacă un câmp nu are nicio valoare pentru profilul de client selectat, nu se va afișa, cu excepția câmpului de adresă. Dala este structurată în secțiuni:
 
 - Prima secțiune prezintă un set predefinit de câmpuri urmat de toate câmpurile care fac parte din indexul de căutare și filtrare. Toate câmpurile legate de adresă sunt combinate într-o singură linie, care arată chiar dacă profilul nu conține informații despre adresă.
-- **Contacte pentru acest client**: În mediile pentru conturi de afaceri, veți vedea toate contactele aferente pentru acest client ca a doua secțiune. Fiecare contact este afișat cu câmpurile sale. Câmpurile goale sunt ascunse.
-- **Câmpuri suplimentare**: Afișează câmpurile rămase ale clientului selectat, cu excepția ID-urilor.
-- **ID-uri**: Listează toate ID-urile sub numele entității corespunzătoare. Câmpurile sunt identificate ca ID-uri prin semantica lor, care le clasifică ca atare.
+- **Contacte pentru acest client** afișare în medii pentru conturi de afaceri. Fiecare contact este afișat cu câmpurile sale. Câmpurile goale sunt ascunse.
+- **Câmpuri suplimentare** afișează câmpurile rămase ale clientului selectat, cu excepția ID-urilor.
+- **ID-uri** listează toate ID-urile sub numele lor de entitate corespunzător. Câmpurile sunt identificate ca ID-uri prin semantică.
 
-**Cronologia activității**: Afișează date dacă ați configurat activități. Vizualizarea cronologiei conține activități sortate cronologic ale clientului selectat, începând cu cea mai recentă activitate. Pentru mai multe informații, accesați [Activități de client](activities.md).
+**Cronologia activității** afișează date dacă ați configurat [Activități](activities.md). Vizualizarea cronologiei conține activități sortate cronologic ale clientului selectat, începând cu cea mai recentă activitate.
 
 **Detalii**:
 
-- **Măsuri**: Arată dacă ați configurat una sau mai multe măsuri măsuri ale atributelor clientului. Acestea includ indicatorii KPI calculați în jurul clienților dvs. la nivel de client individual. Pentru mai multe informații, accesați [Definiți și gestionați măsurile](measures.md).
+- **Măsuri** arata daca ai configurat [măsurile atributelor clientului](measures.md). Acestea includ indicatorii KPI calculați în jurul clienților dvs. la nivel de client individual.
 
-- **Interese potențiale, mărci potențiale**: Arată dacă ați configurat o îmbogățire a afinității de marcă sau de interes. Reprezintă potențiale interese și afinități pentru mărci bazate pe alți clienți al căror profil este similar cu profilul de client selectat. Pentru mai multe informații, accesați [Îmbogățiți profilurile clienților cu afinități de marcă și interes](enrichment-microsoft.md).
+- **Interese potențiale, mărci potențiale** arata daca ai configurat un [îmbogățirea afinității de marcă sau de interes](enrichment-microsoft.md). Reprezintă potențiale interese și afinități pentru mărci bazate pe alți clienți al căror profil este similar cu profilul de client selectat.
 
-Pentru a reveni la pagina de căutare a clienților, selectați **Înapoi la Clienți**.
+Pentru a reveni la **Clienți** pagina, selectați **Înapoi la Clienți**.
 
 ## <a name="next-steps"></a>Pașii următori
 

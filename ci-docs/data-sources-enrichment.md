@@ -8,12 +8,12 @@ author: NimrodMagen
 ms.author: nimagen
 ms.reviewer: v-wendysmith
 manager: shellyha
-ms.openlocfilehash: fb97b721cc82ccd23cfd1df74a0712b8fc277b8a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 98e9e330e7ef9cf085caa94a506fa788cebdd67b
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082119"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207198"
 ---
 # <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (previzualizare)
 
@@ -21,15 +21,15 @@ Utilizați date din surse precum Microsoft și alți parteneri pentru a vă îmb
 
 ## <a name="enrich-a-data-source"></a>Îmbogățiți un sursă de date
 
-Trebuie să aveți permisiuni de Colaborator sau Administrator pentru a crea sau edita îmbogățiri. Pentru mai multe informații, consultați [Permisiuni](permissions.md).  
+Trebuie să aveți Contributor sau Administrator [permisiuni](permissions.md) pentru a crea sau edita îmbogățiri.  
 
-1. Mergi la **Date** > **Unifica**. Selectați entitatea pe care doriți să o îmbogățiți și selectați un atribut ca cheie primară pentru entitate. Pentru mai multe informații, vezi [Selectați cheia primară](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+1. Mergi la **Date** > **Unifica**. Selectați entitatea pe care doriți să o îmbogățiți și selectați un atribut ca a [cheia principala](map-entities.md#select-primary-key-and-semantic-type-for-attributes) pentru entitate.
 
 1. Accesați **Date** > **Surse de date**.
 
 1. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl îmbogățiți și să îl selectați **Îmbogăţi**.
 
-   :::image type="content" source="media/data_sources_enrich.png" alt-text="Pagina surse de date cu Îmbogățire evidențiată":::
+   :::image type="content" source="media/data_sources_enrich.png" alt-text="Pagina surselor de date cu Îmbogățire evidențiată":::
 
    The **Descoperi** fila afișează [opțiuni de îmbogățire sursă de date acceptate](#supported-data-source-enrichments).
 
@@ -47,8 +47,8 @@ Următoarele îmbogățiri sunt disponibile în prezent pentru sursele de date. 
 
 ## <a name="manage-existing-data-source-enrichments"></a>Gestionați îmbogățirile existente sursă de date
 
-Accesați fila **Îmbogățirile mele** pentru a vedea toate îmbogățirile configurate.
+Accesați **Date** > **Îmbogățire**. Pe **Îmbogățirile mele** fila, vizualizați îmbogățirile configurate, starea acestora, numărul de clienți îmbogățiți și ultima dată când datele au fost reîmprospătate. Puteți sorta lista de îmbogățiri după orice coloană sau puteți utiliza caseta de căutare pentru a găsi îmbogățirea pe care doriți să o gestionați.
 
-Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta elipsa verticală (&vellip;) pe un element din listă pentru a vedea opțiunile. Dacă ați configurat mai multe îmbogățiri, puteți utiliza caseta de căutare pentru a o găsi rapid.
+Selectați îmbogățirea pentru a vedea opțiunile disponibile. De asemenea, puteți selecta elipsa verticală (&vellip;) pe un element din listă pentru a vedea opțiunile.
 
-Puteți vizualiza, edita, rula sau șterge o îmbogățire sursă de date. Pentru mai multe informații, vezi [Gestionați îmbogățirile existente](enrichment-hub.md).
+Puteți vizualiza, edita, rula sau șterge o îmbogățire sursă de date. Pentru mai multe informații, vezi [Gestionați îmbogățirile existente](enrichment-hub.md#manage-existing-enrichments).

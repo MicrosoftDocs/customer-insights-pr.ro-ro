@@ -1,7 +1,7 @@
 ---
-title: 'Profilurile clienților: indexul de căutare și filtrare'
+title: Gestionați indexul de căutare și filtrare pentru profilurile clienților
 description: Găsiți rapid informații despre profilurile de clienți unificate și filtrați pentru atributele specificate.
-ms.date: 11/01/2021
+ms.date: 07/22/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,59 +11,64 @@ manager: shellyha
 searchScope:
 - ci-search-filter
 - customerInsights
-ms.openlocfilehash: fc076e341f744ac2922dcacdf5f20ae8ecbdbaa0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: dfbfcbff3ffb3e4483252377e591229631d38556
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9050824"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9187924"
 ---
-# <a name="customer-profiles-search--filter-index"></a>Profilurile clienților: indexul de căutare și filtrare
+# <a name="manage-the-search--filter-index-for-customer-profiles"></a>Gestionați indexul de căutare și filtrare pentru profilurile clienților
 
-Rezultatul unificării datelor clientului dvs. este o entitate de profil pentru clienți care oferă o vizualizare unificată în baza dvs. totală de clienți. Pentru [găsirea rapidă a informațiilor despre un anumit client sau grup de clienți](customer-profiles.md), puteți configura capabilitățile **Căutare** și **Filtru** pe pagina **Clienți**. Citiți mai departe pentru a afla cum pot edita administratorii atributele de pe pagina **Index de căutare și filtrare**, care sunt disponibile utilizatorilor pentru căutare și filtrare.
+Rezultatul unificării datelor dvs. despre clienți este a *Client* entitate care oferă o vedere unificată asupra bazei totale de clienți. Pentru utilizatorii rapid [găsiți informații despre un anumit client sau grup de clienți](customer-profiles.md), un administrator trebuie să configureze **Căutare** și **Filtru** capabilități pentru **Clienți** pagină.
 
    :::image type="content" source="media/search-filter.png" alt-text="Filtru de căutare":::
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+## <a name="define-searchable-attributes-and-indexed-fields"></a>Definiți atributele care pot fi căutate și câmpurile indexate
 
-## <a name="add-fields-and-specify-attributes"></a>Adăugați câmpuri și specificați atributele
+Dacă este prima dată când definiți atribute care pot fi căutate ca administrator, definiți mai întâi câmpurile indexate. Vă sugerăm să alegeți toate atributele prin care utilizatorii pot căuta și filtra clienții pe pagina **Clienți**. Doar atributele care există în *Client* poate fi specificată entitate creată în timpul procesului de unificare a datelor.
 
-Dacă este prima dată când definiți atribute căutabile ca administrator, trebuie să definiți mai întâi câmpurile indexate. Vă sugerăm să alegeți toate atributele prin care utilizatorii pot căuta și filtra clienții pe pagina **Clienți**. Puteți specifica doar atribute care există în entitatea Profil client pe care le-ați creat în timpul procesului de unificare a datelor.
+1. Mergi la **Clienți** și selectați **Căutare și filtrare index**.
 
-1. Deschideți pagina **Clienți** și selectați **Index de căutare și filtrare**.
+1. Selectați **+ Adăugați**.
 
-2. Selectați **+ Adăugare** pentru specificarea câmpurilor indexate.
+1. Selectați atributele din lista pe care doriți să le adăugați ca câmpuri indexate și faceți clic **aplica**.
 
-3. Selectați atributele din lista pe care doriți să le adăugați ca câmpuri indexate. Puteți adăuga întotdeauna mai multe atribute selectând **Adăugare**. De asemenea, puteți elimina orice atribute selectate selectând simbolul **Eliminare**.
+1. Pentru a adăuga mai multe atribute, selectați **Adăuga**. Pentru a elimina un atribut selectat, selectați atributul și apoi **Șterge**.
 
-## <a name="explore-the-indexed-customer-fields-table"></a>Explorați tabelul câmpurilor indexate pentru clienți
+   :::image type="content" source="media/search-filter-index.png" alt-text="Pagina de index de căutare și filtrare.":::
 
-Următoarele informații sunt prezentate în tabel.
+1. Selectați **Alerga** după ce sunteți gata să aplicați setările de căutare și filtrare. După procesarea modificărilor, vizualizați-le în [carduri de client pe pagina Client](customer-profiles.md).
 
-- **Nume**: Reprezintă numele atributului așa cum apare în entitatea Profil client.
+## <a name="define-filtering-options-for-a-given-attribute"></a>Definiți opțiunile de filtrare pentru un anumit atribut
+
+Configurați câmpurile care pot fi utilizate pentru filtrarea clienților pe **Clienți** pagină.
+
+1. Mergi la **Clienți** și selectați **Căutare și filtrare index**.
+
+1. Selectați un atribut și **Adăugați filtru**. Definiți numărul de rezultate și ordinea în care vor fi organizate. În funcție de tipul de date al atributului, va apărea unul dintre următoarele panouri.
+
+   - Atribute de tip șir: specificați numărul de rezultate dorite pe **Filtru de șiruri** panoul și politica de ordine după care vor fi organizate.
+
+   - Atribute de tip numeric: specificați intervalele incluse în **Filtru de număr** panoul și politica de ordine după care vor fi organizate.
+
+   - Atribute tip dată: specificați intervalele incluse în **Filtru de dată** panoul și politica de ordine după care vor fi organizate.
+
+1. Selectați **OK**. Repetați pentru toate atributele după care doriți să filtrați.
+
+1. Selectați **Alerga** după ce sunteți gata să aplicați setările de căutare și filtrare. După procesarea modificărilor, vizualizați-le în [carduri de client pe pagina Client](customer-profiles.md).
+
+## <a name="view-indexed-customer-fields"></a>Vizualizați câmpurile client indexate
+
+The **Căutare și filtrare index** pagina afișează următoarele informații:
+
+- **Nume** : Reprezintă numele atributului așa cum apare în *Client* entitate.
 - **Tip de date**: Specifică dacă tipul de date este un șir, un număr sau o dată.
 - **Inclus în căutare**: Specifică dacă acest atribut poate fi utilizat pentru căutarea clienților pe pagina **Clienți** folosind câmpul de **Căutare**.
 - **Adăugare filtru**: Control pentru a defini modul în care acest atribut poate fi utilizat pentru filtrare pe pagina **Clienți**.
 
-## <a name="editing-filtering-options-for-a-given-attribute"></a>Editarea opțiunilor de filtrare pentru un atribut dat
-
-Meniul **Filtru** din pagina **Clienți** poate include un număr diferit de niveluri de atribute (de exemplu, diferite grupe de vârstă pentru filtrarea clienților).
-
-1. Selectați **Adăugare filtru** pentru un atribut dat pe pagina **Indice de căutare și filtrare**. Puteți defini numărul de rezultate și ordinea în care vor fi organizate. În funcție de tipul de date al atributului, apare unul dintre următoarele panouri.
-
-- Atribute de tip string: specificați numărul de rezultate dorite pe panoul **Opțiuni filtru string** și politica de comandă prin care vor fi organizate.
-
-- Atribute de tip numeric: specificați inervalele incluse pe panoul **Opțiuni filtru număr** și politica de comandă prin care vor fi organizate.
-
-- Atribute de tip date: specificați inervalele incluse pe panoul **Opțiuni filtru date** și politica de comandă prin care vor fi organizate.
-
-2. Selectați **Salvare** pentru a vă aplica modificările.
-
-3. Selectați **Executare** odată ce sunteți gata să vă aplicați setările. După procesarea modificărilor, le găsiți în [carduri client pe pagina Client](customer-profiles.md). 
-
 ## <a name="next-steps"></a>Pașii următori
 
 Examinați [pagina profilurilor unificate](customer-profiles.md) pentru a căuta profiluri sau pentru a utiliza câmpurile indexate pentru a vedea un subset al tuturor profilurilor unificate.
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-connections
 - customerInsights
-ms.openlocfilehash: a8b4b8a9bdcf7cf43c47a67d547405dd20dad60d
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 4a0bc5dd4100b462a26660a0c51fda1fe92b6bb9
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082098"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195189"
 ---
 # <a name="connections-preview-overview"></a>Prezentare generală a conexiunilor (previzualizare)
 
@@ -27,6 +27,12 @@ Salt la **Administrator** > **Conexiuni** pentru a crea și vizualiza conexiuni.
 Fila **Conexiuni** vă arată toate conexiunile active. Lista arată un rând pentru fiecare conexiune.
 
 Obțineți o prezentare rapidă, o descriere și aflați ce puteți face cu fiecare opțiune de extensibilitate de pe fila **Descoperire**.
+
+## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
+
+Când activați Dynamics 365 Customer Insights pentru a transmite date către terți sau alte produse Microsoft, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi Datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că terța parte îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+
+Ta Dynamics 365 Customer Insights administratorul poate elimina oricând conexiunea pentru a întrerupe utilizarea funcționalității.
 
 ## <a name="exports"></a>Exporturi
 
@@ -41,8 +47,6 @@ Numai administratorii pot configura conexiuni noi, dar conexiunile create sunt �
 Pentru a adăuga conexiuni, trebuie să aveți [permisiuni de administrator](permissions.md). Dacă vă conectați la alte servicii Microsoft, presupunem că ambele servicii se află în aceeași organizație.
 
 1. Salt la **Administrator** > **Conexiuni (previzualizare)**.
-
-1. Mergeți la fila **Conexiuni**.
 
 1. Selectați **Adăugare conexiune** pentru a crea o nouă conexiune. Alegeți din meniul derulant ce tip de conexiune doriți să creați.
 
@@ -99,3 +103,5 @@ Dacă conexiunea pe care o eliminați este folosită de îmbogățiri sau export
 ## <a name="set-up-connections-with-secrets-managed-by-your-own-key-vault"></a>Configurați conexiuni cu secrete gestionate de propria Key Vault
 
 Unele conexiuni au nevoie de secrete, cum ar fi cheile API sau parolele. Unele conexiuni acceptă secretele stocate în propria Key Vault. Aflați mai multe despre conexiunile acceptate și despre cum să le configurați [propriul tău Key Vault pentru Customer Insights](use-azure-key-vault.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

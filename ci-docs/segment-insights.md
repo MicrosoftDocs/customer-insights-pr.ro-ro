@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: e90bdc523c3f8857c150ccba9d81f055d39f9feb
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: ccb33594a3a92e87d307f3300c77772ef8b4a82f
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051606"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171018"
 ---
 # <a name="segment-insights-preview"></a>Detalii despre segment (previzualizare)
 
@@ -43,26 +43,25 @@ De asemenea, puteți analiza modul în care se suprapun modificările pentru atr
 
 ### <a name="view-and-optimize-an-overlap-analysis"></a>Vizualizați și optimizați o analiză de suprapunere
 
-După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
+1. După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment.":::
+   :::image type="content" source="media/segment-overlap.png" alt-text="Detalii despre suprapunere pe segment.":::
 
-Selectați un detaliu pentru a vedea rezultatele analizei:
+1. Selectați un detaliu pentru a vedea rezultatele analizei:
 
-- Numărul de membri care se suprapun segmentelor selectate pentru analiză.
-- Numărul de membri incluși într-unul dintre segmente, dar nu și în restul segmentelor.
-- Dacă ați selectat câmpuri în timp ce configurați analiza de suprapunere, le veți găsi în filele corespunzătoare. Puteți utiliza meniul derulant al filtrului pentru a selecta orice nivel de interes al atributului, iar tabelul din partea de jos va afișa datele corespunzătoare.
+   - Numărul de membri care se suprapun segmentelor selectate pentru analiză.
+   - Numărul de membri incluși într-unul dintre segmente, dar nu și în restul segmentelor.
+   - Dacă ați selectat câmpuri în timp ce configurați analiza de suprapunere, le veți găsi în filele corespunzătoare. Puteți utiliza meniul derulant al filtrului pentru a selecta orice nivel de interes al atributului, iar tabelul din partea de jos va afișa datele corespunzătoare.
 
 ## <a name="segment-differentiators"></a>Diferențiatori de segmente
 
-Diferențiatori de segmente vă ajută să aflați ce diferențiază un segment de restul clienților dvs. sau de un alt segment. Trebuie doar să selectați un segment, iar sistemul va identifica atributele de profil și măsurile care disting segmentul selectat.
+Diferențiatori de segmente vă ajută să aflați ce diferențiază un segment de restul clienților dvs. sau de un alt segment. Selectați un segment și sistemul identifică atributele profilului și măsurile care disting segmentul selectat.
 
 ### <a name="run-a-differentiator-analysis"></a>Efectuați o analiză de diferențiator
 
 1. Accesați **Segmente** și selectați fila **Detalii (previzualizare)**.
 
-1. Selectați **Nou** și alegeți opțiunea **Suprapune** în panoul **Alegeți tipul de Detaliu**.
+1. Selectați **Nou** și alegeți **Diferențiatori** opțiunea în **Alegeți tipul de perspectivă** panou.
 
 1. Alegeți segmentul pe care doriți să îl analizați **Segmentul primar** și selectați **Următorul**.
 
@@ -70,29 +69,29 @@ Diferențiatori de segmente vă ajută să aflați ce diferențiază un segment 
 
 1. Opțional, alege unul sau mai multe câmpuri de interes pentru a concentra analiza pe atribute specifice și selectează **Următorul**.
 
-1. Furnizați un nume pentru analiza de suprapunere, un nume de afișare opțional și o descriere.
+1. Furnizați un nume pentru analiza de diferențiere, un nume afișat opțional și o descriere.
 
-1. Selectați **Salvare** pentru a începe analiza. Analiza de suprapunere este gata atunci când starea se schimbă de la Actualizare la Succes.
+1. Selectați **Salvare** pentru a începe analiza. Analiza de diferențiere este gata atunci când starea se schimbă de la Reîmprospătare la Reușit.
 
 ### <a name="view-and-optimize-a-differentiators-analysis"></a>Vizualizați și optimizați o analiză a diferențiatorilor
 
-După finalizarea analizei, găsiți detalii despre acest detaliu despre **Segmente** > **Detalii (previzualizare)**.
+1. După finalizarea analizei, accesați **Segmente** > **Perspective (previzualizare)**.
 
-> [!div class="mx-imgBorder"]
-> :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment.":::
+   :::image type="content" source="media/segment-differentiators.png" alt-text="Detalii despre diferențiator pe segment.":::
 
-Selectați un detaliu pentru a vedea rezultatele analizei. O analiză a diferențiatorului include două file. Fila **Atribute** listează atributele profilului considerate ca diferențiatori. Fila **Măsuri** listează diferențiatori. Fiecare filă include următoarele detalii:
+1. Selectați un detaliu pentru a vedea rezultatele analizei. O analiză a diferențiatorului include două file. Fila **Atribute** listează atributele profilului considerate ca diferențiatori. Fila **Măsuri** listează diferențiatori. Fiecare filă include următoarele detalii:
 
-- Lista clasificată a diferențiatorilor, ordonată după scorul diferenței.
-- **Scorul de diferență** pentru fiecare diferențiator. Scorul de diferență reprezintă gradul de diferență a unui atribut între două segmente. Cu cât scorul de diferență este mai mare, cu atât atributele diferă între cele două segmente. Selectați un scor pentru a deschide panoul **Scorul de diferență** cu distribuțiile de valori pentru acel atribut.
+   - Lista clasificată a diferențiatorilor, ordonată după scorul diferenței.
+   - **Scorul de diferență** pentru fiecare diferențiator. Scorul de diferență reprezintă gradul de diferență a unui atribut între două segmente. Cu cât scorul de diferență este mai mare, cu atât atributele diferă între cele două segmente. Selectați un scor pentru a deschide panoul **Scorul de diferență** cu distribuțiile de valori pentru acel atribut.
 
 ## <a name="manage-segment-insights"></a>Gestionați detaliile de segment
 
-Puteți utiliza următoarele opțiuni pentru detaliile dvs. din bara de comenzi:
+Mergi la **Segmente** > **Perspective (previzualizare)** pentru a vizualiza statisticile segmentului dvs. și pentru a le gestiona. Selectați o perspectivă de segment pentru a vedea acțiunile disponibile.
 
-- **Înapoi** pentru a returna lista de detalii
-- **Reîmprospăta** pentru a rula din nou analiza
-- **Ștergere** pentru a elimina acest detaliu
-
+- **Vedere** analiza insight
+- **Editați | ×** intuiția de a-și schimba proprietățile
+- **Reîmprospăta** perspicacitatea pentru a rula din nou analiza
+- **Redenumiți** perspicacitatea
+- **Șterge** perspicacitatea
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

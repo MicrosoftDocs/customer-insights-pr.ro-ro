@@ -1,85 +1,83 @@
 ---
 title: Exportați segmente în Google Ads (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la Google Ads.
-ms.date: 03/31/2022
+ms.date: 07/25/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: b7f08936d7d90322cb4e62396a2961fe06273b76
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: fd7498ecf17ef8a3a8f22dcc49ae204bef88b47f
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083001"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196593"
 ---
 # <a name="export-segments-to-google-ads-preview"></a>Exportați segmente în Google Ads (previzualizare)
 
-Exportați segmente de profiluri de clienți unificate într-o listă de public pentru Google Ads și folosiți-le pentru a face publicitate în Căutarea Google, Gmail, YouTube și Google Display Network. 
+Exportați segmente de profiluri de clienți unificate într-o listă de public pentru Google Ads și folosiți-le pentru a face publicitate în Căutarea Google, Gmail, YouTube și Google Display Network.
 
+## <a name="prerequisites"></a>Cerințe preliminare
 
-## <a name="prerequisites-for-connection"></a>Cerințe preliminare pentru conexiune
-
--   Aveți un [cont Google Ads](https://ads.google.com/) și acreditările de administrator corespunzătoare.
--   Îndepliniți cerințele pentru [Politica Customer Match](https://support.google.com/adspolicy/answer/6299717).
--   Îndepliniți cerințele pentru [remarketing al dimensiunilor listei](https://support.google.com/google-ads/answer/7558048).
--   Aveți [segmente configurate](segments.md).
--   Profilurile unificate ale clienților din segmentele exportate conțin câmpuri care reprezintă o adresă de e-mail, un telefon, un ID de agent de publicitate mobil, un ID de utilizator terță parte sau o adresă.
+- A [cont Google Ads](https://ads.google.com/) și acreditările de administrator corespunzătoare.
+- A [ID de client Google Ads](https://support.google.com/google-ads/answer/1704344).
+- Cerințele de [Politica de potrivire după clienți](https://support.google.com/adspolicy/answer/6299717) sunt întâlniți.
+- Cerințele de [dimensiunile listelor de remarketing](https://support.google.com/google-ads/answer/7558048) sunt întâlniți.
+- [Segmente configurate](segments.md).
+- Profilurile unificate ale clienților din segmentele exportate conțin câmpuri care reprezintă o adresă de e-mail, un telefon, un ID de agent de publicitate mobil, un ID de utilizator terță parte sau o adresă.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Exportul către Google Ads este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri de clienți poate dura până la 30 minute din cauza limitărilor din partea furnizorului. 
+- Exportați până la 1 milion de profiluri de clienți per export în Google Ads, care poate dura până la 30 de minute din cauza limitărilor din partea furnizorului.
+- Numai segmente.
 - Potrivirea în Google Ads poate dura până la 48 de ore.
 
 ## <a name="set-up-connection-to-google-ads"></a>Configurarea conexiunii la Google Ads
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Google Ads** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **Google Ads**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduceți **[ID-ul de client Google Ads](https://support.google.com/google-ads/answer/1704344)**.
+1. Introduceți codul dvs. de client Google Ads.
 
-1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Autentificare cu Google Ads** și furnizați acreditările dvs. Google Ads.
 
 1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ## <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Google Ads. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Google Ads. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
-1. Dacă doriți să creați un nou public, lăsați câmpul Google Audience ID necompletat. Vom crea automat un nou public în contul dvs. Google Ads și vom folosi numele segmentului exportat. Dacă doriți să actualizați un public Google Ads existent, introduceți dvs [ID de public Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns.)
+1. Introduceți un nume pentru export.
+
+1. Alegeți dacă doriți să utilizați un public existent sau să creați unul nou:
+   - Pentru a actualiza un public Google Ads existent, introduceți dvs [ID de public Google Ads](https://support.google.com/google-ads/answer/7558048?hl=en#:~:text=Audience%20lists%20is%20a%20section,Display%20Network%20through%20remarketing%20campaigns).
+   - Pentru a crea un public nou, lăsați necompletat câmpul Google Audience ID. Customer Insights va crea automat un nou public în contul dvs. Google Ads și va folosi numele segmentului exportat.
 
 1. În **Potrivirea datelor** secțiunea, selectați unul sau mai multe câmpuri de date de exportat și selectați câmpul care reprezintă câmpurile de date corespunzătoare în Customer Insights.
 
-1. Selectați segmentele pe care doriți să le exportați. 
+1. Selectați segmentele pe care doriți să le exportați.
 
-Salvarea unui export nu se execută imediat.
+1. Selectați **Salvare**.
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). 
-
-Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
-
-## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Google Ads, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că Google Ads îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această destinație de export oricând, pentru a întrerupe utilizarea acestei funcționalități.
-
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

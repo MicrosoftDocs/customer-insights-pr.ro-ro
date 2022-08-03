@@ -1,7 +1,7 @@
 ---
 title: Lucrul cu Customer Insights în Microsoft Dataverse
 description: Aflați cum să conectați Customer Insights și Microsoft Dataverse și înțelegeți entitățile de ieșire care sunt exportate în Dataverse.
-ms.date: 05/30/2022
+ms.date: 07/15/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 252723b8c174cb1ec488388c26fd2a1d398e9002
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: 89ff629033230de3c6252b6a3a16816d9b3c1287
+ms.sourcegitcommit: 85b198de71ff2916fee5500ed7c37c823c889bbb
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011562"
+ms.lasthandoff: 07/15/2022
+ms.locfileid: "9153419"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
@@ -31,13 +31,25 @@ Conectarea la dvs Dataverse mediul vă permite de asemenea [ingerați date din s
 - Niciun alt mediu Customer Insights nu este deja asociat cu Dataverse mediul pe care doriți să îl conectați. Învață cum să [eliminați o conexiune existentă la a Dataverse mediu inconjurator](#remove-an-existing-connection-to-a-dataverse-environment).
 - A Microsoft Dataverse mediul se poate conecta doar la un singur cont de stocare. Se aplică numai dacă configurați mediul la [foloseste-ti Azure Data Lake Storage](own-data-lake-storage.md).
 
+## <a name="dataverse-storage-capacity-entitlement"></a>Dataverse dreptul la capacitate de stocare
+
+Un abonament Customer Insights vă dă dreptul la capacitate suplimentară pentru organizația dvs. existentă [Dataverse Capacitate de stocare](/power-platform/admin/capacity-storage). Capacitatea adăugată depinde de numărul de profiluri pe care le folosește abonamentul.
+
+**Exemplu:**
+
+Presupunând că obțineți 15 GB de stocare a bazei de date și 20 GB de stocare a fișierelor la 100.000 de profiluri de clienți. Dacă abonamentul dvs. include 300.000 de profiluri de clienți, capacitatea de stocare totală ar fi de 45 GB (3 x 15 GB) de stocare a bazei de date și 60 GB de stocare a fișierelor (3 x 20 GB). În mod similar, dacă aveți un abonament B2B cu 30K conturi, capacitatea dvs. totală de stocare ar fi de 45 GB (3 x 15 GB) de stocare a bazei de date și 60 GB de stocare a fișierelor (3 x 20 GB).
+
+Capacitatea de jurnal nu este incrementală și fixă pentru organizația dvs.
+
+Pentru mai multe informații despre drepturile detaliate privind capacitatea, consultați [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+
 ## <a name="connect-a-dataverse-environment-to-customer-insights"></a>Conectați a Dataverse mediu pentru Customer Insights
 
 The **Microsoft Dataverse** pasul vă permite să conectați Customer Insights cu dvs Dataverse mediu în timp ce [crearea unui mediu Customer Insights](create-environment.md).
 
 :::image type="content" source="media/dataverse-provisioning.png" alt-text="partajarea datelor cu Microsoft Dataverse activat automat pentru medii net noi.":::
 
-Administratorii pot configura Customer Insights pentru a conecta un existent Dataverse mediu inconjurator. Prin furnizarea URL-ului către Dataverse mediu, se atașează noului lor mediu Customer Insights.
+Administratorii pot configura Customer Insights pentru a conecta un existent Dataverse mediu inconjurator. Prin furnizarea URL-ului către Dataverse mediu, se conectează la noul lor mediu Customer Insights. După stabilirea conexiunii dintre Customer Insights și Dataverse, nu schimbați numele organizației pentru Dataverse mediu inconjurator. Numele organizației este folosit în Dataverse Adresa URL și un nume schimbat întrerup conexiunea cu Customer Insights.
 
 Dacă nu doriți să utilizați unul existent Dataverse mediu, sistemul creează un nou mediu pentru datele Customer Insights din chiriașul dvs. [Power Platform administratorii pot controla cine poate crea medii](/power-platform/admin/control-environment-creation). Când configurați un nou mediu Customer Insights și administratorul a dezactivat crearea de Dataverse medii pentru toată lumea, cu excepția administratorilor, este posibil să nu puteți crea un mediu nou.
 
@@ -47,10 +59,10 @@ Dacă utilizați propriul cont Data Lake Storage, aveți nevoie și de **Identif
 
 ## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage (Previzualizare)
 
-Activarea partajării datelor cu Microsoft Dataverse când mediul tău [folosește propriul tău Azure Data Lake Storage cont](own-data-lake-storage.md) necesită o configurație suplimentară. Utilizatorul care configurează mediul Customer Insights trebuie să aibă cel puțin **Cititor de date Blob de stocare** permisiuni pe *CustomerInsights* recipient în Azure Data Lake Storage cont.
+Activarea partajării datelor cu Microsoft Dataverse când mediul tău [folosește a ta Azure Data Lake Storage cont](own-data-lake-storage.md) necesită o configurație suplimentară. Utilizatorul care configurează mediul Customer Insights trebuie să aibă cel puțin **Cititor de date Blob de stocare** permisiunile pe *CustomerInsights* recipient în Azure Data Lake Storage cont.
 
-1. Creați două grupuri de securitate pe abonamentul Azure - unul **Cititor** grup de securitate și unul **Colaborator** grup de securitate și setați Microsoft Dataverse serviciu ca proprietar pentru ambele grupuri de securitate.
-2. Gestionați Lista de control al accesului (ACL) din containerul CustomerInsights din contul dvs. de stocare prin intermediul acestor grupuri de securitate. Adaugă Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe Dynamics 365 Marketing la **Cititor** grup de securitate cu **numai pentru citire** permisiuni. Adăuga *numai* aplicația Customers Insights la **Colaborator** grupului de securitate să le acorde pe ambele **Citeste si scrie** permisiuni de a scrie profiluri și informații.
+1. Creați două grupuri de securitate pe abonamentul dvs. Azure - unul **Cititor** grup de securitate și unul **Colaborator** grup de securitate și setați Microsoft Dataverse serviciu ca proprietar pentru ambele grupuri de securitate.
+2. Gestionați Lista de control al accesului (ACL) din containerul CustomerInsights din contul dvs. de stocare prin aceste grupuri de securitate. Adaugă Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe Dynamics 365 Marketing la **Cititor** grup de securitate cu **numai pentru citire** permisiuni. Adăuga *numai* aplicația Customers Insights la **Colaborator** grupului de securitate să le acorde pe ambele **Citeste si scrie** permisiuni de a scrie profiluri și informații.
 
 ### <a name="limitations"></a>Limitări
 
@@ -84,8 +96,8 @@ Pentru a executa scripturile PowerShell, mai întâi trebuie să configurați Po
 
     2. `ByolSetup.ps1`
         - Ai nevoie *Proprietar de date Blob de stocare* permisiuni la nivelul contului de stocare/container pentru a rula acest script sau acest script va crea unul pentru dvs. Atribuirea rolului dvs. poate fi eliminată manual după rularea cu succes a scriptului.
-        - Acest script PowerShell adaugă controlul de acces bazat pe tole (RBAC) necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe De asemenea, actualizează Lista de control al accesului (ACL) din containerul CustomerInsights pentru grupurile de securitate create cu`CreateSecurityGroups.ps1` scenariu. Grupul de colaboratori va avea *rwx* permisiunea și grupul de cititori va avea *rx* numai permisiunea.
-        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+        - Acest script PowerShell adaugă controlul de acces bazat pe roluri necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe De asemenea, actualizează Lista de control al accesului (ACL) din containerul CustomerInsights pentru grupurile de securitate create cu`CreateSecurityGroups.ps1` scenariu. Grupul de colaboratori va avea *rwx* permisiunea și grupul de cititori va avea *rx* numai permisiunea.
+        - Executați acest script PowerShell în Windows PowerShell furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
         - Copiați șirul de ieșire după rularea cu succes a scriptului. Șirul de ieșire arată astfel:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
 2. Introduceți șirul de ieșire copiat de sus în **Identificator de permisiuni** câmpul pasului de configurare a mediului pentru Microsoft Dataverse.
@@ -105,7 +117,7 @@ SAU
 
 1. Deschide-ți Dataverse mediu inconjurator.
 1. Mergi la **Setari avansate** > **Soluții**.
-1. Dezinstalează **CustomerInsightsCustomerCard** soluţie.
+1. Dezinstalați **CustomerInsightsCustomerCard** soluţie.
 
 Dacă eliminarea conexiunii eșuează din cauza dependențelor, trebuie să eliminați și dependențele. Pentru mai multe informații, vezi [Eliminarea dependențelor](/power-platform/alm/removing-dependencies).
 

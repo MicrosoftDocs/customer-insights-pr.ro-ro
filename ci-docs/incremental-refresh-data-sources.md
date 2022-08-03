@@ -11,18 +11,16 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: bff27bf7fec2bcb741846ae76bb1f616f459136c
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
+ms.openlocfilehash: de39743eb8728fac34e417724c5f73bf44309c89
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9012040"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207152"
 ---
 # <a name="incremental-refresh-for-power-query-and-azure-data-lake-data-sources"></a>Reîmprospătare incrementală pentru Power Query și surse de date Azure Data Lake
 
-Acest articol discută cum să configurați reîmprospătarea incrementală pentru sursele de date pe baza Power Query sau Azure Data Lake.
-
-Reîmprospătarea incrementală pentru sursele de date oferă următoarele avantaje:
+Reîmprospătare incrementală pentru sursele de date pe baza Power Query sau Azure Data Lake oferă următoarele avantaje:
 
 - **Reîmprospătări mai rapide** - Numai datele care s-au schimbat se reîmprospătează. De exemplu, este posibil să reîmprospătați doar ultimele cinci zile ale unui set de date istoric.
 - **Fiabilitate crescută** - Cu actualizări mai mici, nu trebuie să mențineți conexiunile la sisteme volatile pentru o perioadă lungă de timp, reducând riscul apariției problemelor de conectare.
@@ -58,12 +56,12 @@ Customer Insights permite reîmprospătarea incrementală pentru sursele de date
 
 ## <a name="configure-incremental-refresh-for-azure-data-lake-data-sources"></a>Configurați reîmprospătarea incrementală pentru sursele de date Azure Data Lake
 
-Customer Insights permite reîmprospătarea incrementală pentru sursele de date conectate Azure Data Lake Storage. Pentru a utiliza absorbția incrementală și reîmprospătarea pentru o entitate, configurați acea entitate atunci când adăugați Azure Data Lake sursă de date sau ulterior când editați sursă de date. Dosarul de date entității trebuie să conțină următoarele foldere:
+Customer Insights permite reîmprospătarea incrementală pentru sursele de date conectate Azure Data Lake Storage. Pentru a utiliza absorbția incrementală și reîmprospătarea pentru o entitate, configurați acea entitate atunci când adăugați Azure Data Lake sursă de date sau mai târziu când editați sursă de date. Dosarul de date entității trebuie să conțină următoarele foldere:
 
 - **Date complete** : Dosar cu fișiere de date care conțin înregistrările inițiale
-- **Date incrementale** : Dosar cu dosare cu ierarhie dată/oră în **aaaa/ll/zz/hh** format care conține actualizările incrementale. **hh** reprezintă ora UTC a actualizărilor și conține **Upsers** și **Șterge** foldere. **Upsers** conține fișiere de date cu actualizări ale înregistrărilor existente sau ale înregistrărilor noi. **Șterge** conține fișiere de date cu înregistrări care trebuie eliminate.
+- **Date incrementale** : Folder cu dosare cu ierarhie dată/oră în **aaaa/ll/zz/hh** format care conține actualizările incrementale. **hh** reprezintă ora UTC a actualizărilor și conține **Upsers** și **Șterge** foldere. **Upsers** conține fișiere de date cu actualizări ale înregistrărilor existente sau ale înregistrărilor noi. **Șterge** conține fișiere de date cu înregistrări care trebuie eliminate.
 
-1. Când adăugați sau editați un sursă de date, navigați la **Atribute** panou pentru entitate.
+1. Când adăugați sau editați un sursă de date, navigați la **Atribute** panoul pentru entitate.
 
 1. Examinați atributele. Asigurați-vă că un atribut pentru data creată sau ultima actualizare este configurat cu a *dateTime* **Format de date** si a *Calendar.Data* **Tip semantic**. Editați atributul dacă este necesar și selectați **Terminat**.
 
@@ -73,6 +71,7 @@ Customer Insights permite reîmprospătarea incrementală pentru sursele de date
 
    1. Răsfoiți la folderul rădăcină care conține fișierele .csv sau .parquet pentru date complete, suprafețe de date incrementale și ștergeri incrementale de date.
    1. Introduceți extensia pentru datele complete și pentru ambele fișiere incrementale (\. csv sau\. parchet).
+   1. Pentru fișierele .csv, selectați delimitatorul de coloană și dacă doriți ca primul rând al fișierului ca antet de coloană.
    1. Selectați **Salvare**.
 
 1. Pentru **Ultima actualizare**, selectați atributul de marcaj temporal al datei.

@@ -1,6 +1,6 @@
 ---
 title: Selectați câmpurile sursă pentru unificarea datelor
-description: Primul pas în procesul de unificare este selectarea de entități, atribute, chei primare și tipuri semantice pentru a mapa datele la profilul unificat al clientului.
+description: Primul pas în procesul de unificare este selectarea entităților, atributelor, cheilor primare și a tipurilor semantice pentru a mapa datele la profilul unificat al clientului.
 recommendations: false
 ms.date: 04/22/2022
 ms.subservice: audience-insights
@@ -13,18 +13,16 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a962f1353b6e25b40c60b39a81ac936873f34d92
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
+ms.openlocfilehash: a75218c996b277e00924f2b7b38ea686a1f4dc38
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8741010"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139797"
 ---
 # <a name="select-source-fields-for-data-unification"></a>Selectați câmpurile sursă pentru unificarea datelor
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-Primul pas în unificare este selectarea entităților și câmpurilor din seturile de date pe care doriți să le unificați. Selectați entitățile care conțin detalii legate de client, cum ar fi numele, adresa, numărul de telefon și e-mailul. Puteți selecta una sau mai multe entități.
+Primul pas în unificare este selectarea entităților și câmpurilor din seturile de date pe care doriți să le unificați. Selectați entități care conțin detalii legate de client, cum ar fi numele, adresa, numărul de telefon și e-mailul. Puteți selecta una sau mai multe entități.
 
 ## <a name="select-entities-and-fields"></a>Selectați entități și câmpuri
 
@@ -38,7 +36,7 @@ Primul pas în unificare este selectarea entităților și câmpurilor din setur
 
 1. Selectați cel puțin o entitate.
 
-1. Pentru fiecare entitate selectată, identificați câmpurile pe care doriți să le utilizați pentru a potrivi înregistrările clienților și câmpurile de inclus în profilul unificat. Aceste câmpuri sunt numite *Atribute*. Puteți selecta atributele necesare în mod individual dintr-o entitate sau puteți include toate atributele dintr-o entitate bifând caseta de selectare la nivel de entitate. Puteți căuta cuvinte cheie în toate atributele și entitățile pentru a selecta atributele necesare pe care doriți să le mapați.
+1. Pentru fiecare entitate selectată, identificați câmpurile pe care doriți să le utilizați pentru a potrivi înregistrările clienților și câmpurile de inclus în profilul unificat. Aceste câmpuri sunt numite *Atribute*. Puteți selecta atributele necesare individual dintr-o entitate sau puteți include toate atributele dintr-o entitate bifând caseta de selectare la nivel de entitate. Puteți căuta cuvinte cheie în toate atributele și entitățile pentru a selecta atributele necesare pe care doriți să le mapați.
 
    :::image type="content" source="media/m3_select_entities.png" alt-text="Captură de ecran a entităților și atributelor selectate.":::
 
@@ -54,7 +52,7 @@ Pentru fiecare entitate, efectuați următorii pași.
 
 1. Alege **Cheia principala**. Cheia primară este un atribut unic pentru entitate. Pentru ca un atribut să fie o cheie primară validă, nu ar trebui să includă valori duplicate, valori lipsă sau valori nule. Atributele tipului de date șir, întreg și GUID sunt acceptate ca chei primare.
 
-1. Pentru a utiliza modele AI pentru predicție inteligent de semantică, economisiți timp și îmbunătățiți acuratețea, asigurați-vă că **Cartografiere inteligentă** este pornit. Maparea inteligentă evidențiază recomandările semantice bazate pe inteligență artificială în câmpul **Tip**. Puteți suprascrie selecția sugerată alegând orice tip semantic din lista de opțiuni disponibile.
+1. Pentru a utiliza modele AI pentru predicție inteligente de semantică, economisiți timp și îmbunătățiți acuratețea, asigurați-vă că **Cartografiere inteligentă** este pornit. Maparea inteligentă evidențiază recomandările semantice bazate pe inteligență artificială în câmpul **Tip**. Puteți suprascrie selecția sugerată alegând orice tip semantic din lista de opțiuni disponibile.
 
 1. Pentru fiecare atribut, alegeți o semantică **Tip** care descrie cel mai bine acel atribut, cum ar fi numele, orașul sau adresa de e-mail.
 
@@ -78,6 +76,6 @@ Pentru fiecare entitate, efectuați următorii pași.
 1. Selectați **Următorul**.
 
 > [!div class="nextstepaction"]
-> [Pasul următor: Eliminați duplicatele](remove-duplicates.md)
+> [Următorul pas: Eliminați duplicatele](remove-duplicates.md)
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

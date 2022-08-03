@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: e55ca8c6926fa0bda05aaf52fd799ca25f7f585f
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: b8216b5a739964fdfff8cad7e6d6d7ce3f5308b5
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643975"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171110"
 ---
 # <a name="transaction-churn-prediction"></a>Predicție retragere din tranzacții
 
@@ -24,7 +24,7 @@ Predicția retragerii tranzacționale ajută la a prezice dacă un client nu va 
 Pentru medii bazate pe conturi de business, putem prezice retrageri din tranzacții pentru un cont și, de asemenea, o combinație de cont și un alt nivel de informații, cum ar fi categoria de produse. Adăugarea unui parametru vă poate ajuta să aflați cât de probabil este ca contul „Contoso” să nu mai cumpere categoria de produse „articole de birou”. În plus, pentru conturile de afaceri, putem folosi, de asemenea, AI pentru a genera o listă de motive potențiale pentru care este probabil ca un cont să se schimbe pentru o categorie de informații de nivel secundar.
 
 > [!TIP]
-> Încercați tutorialul pentru o pierdere a tranzacțiilor predicție folosind date exemplu: [Ghid de exemplu pentru ratarea tranzacțiilor predicție](sample-guide-predict-transactional-churn.md).
+> Încercați tutorialul pentru o pierdere a tranzacțiilor predicție folosind date exemplu: [Ghid de exemplu de eliminare a tranzacțiilor predicție](sample-guide-predict-transactional-churn.md).
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -118,7 +118,7 @@ Pentru medii bazate pe conturi de business, putem prezice retrageri din tranzac�
 
 1. Seteaza **fereastra predicție**. De exemplu, preziceți riscul de retragere pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de marketing de retenție. Predicția riscului de retragere pentru o perioadă mai lungă sau mai scurtă de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, dar depinde de cerințele dvs. de afaceri specifice.
    >[!TIP]
-   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
+   > Puteți selecta **Salveaza schita** oricând pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
 1. Introduceți numărul de zile pentru a defini abandonul în **Definiția churn** camp. De exemplu, dacă un client nu a efectuat nicio achiziție în ultimele 30 de zile, acesta ar putea fi considerat ca fiind retras pentru afacerea dvs. 
 
@@ -240,7 +240,7 @@ Adăugați o listă a clienților și conturilor dvs. de afaceri pe care doriți
    - **Nume predicție**: Numele predicției furnizat la crearea acesteia.
    - **Tip predicție**: Tipul modelului utilizat pentru predicție
    - **Entitate de ieșire**: Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.
-     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-new-segment) cu pragul preferat.
+     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-segment) cu pragul preferat.
      Nu toți clienții sunt în mod necesar clienți activi. Este posibil ca unii dintre ei să nu fi avut nicio activitate de mult timp și să fie considerați deja derutați, pe baza definiției dvs. de retragere. Prezicerea riscului de retragere pentru clienții care deja au retragere nu este utilă deoarece nu sunt publicul de interes.
    - **Câmp prevăzut**: Acest câmp este populat numai pentru anumite tipuri de predicții și nu este utilizat în predicția retragerii.
    - **Stare**: Starea rulării predicției.

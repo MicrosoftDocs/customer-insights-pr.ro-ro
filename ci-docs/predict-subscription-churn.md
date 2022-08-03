@@ -8,12 +8,12 @@ ms.topic: how-to
 author: zacookmsft
 ms.author: zacook
 manager: shellyha
-ms.openlocfilehash: 415cd5d675512b4f434998afaa8265c8e45c562b
-ms.sourcegitcommit: b7dbcd5627c2ebfbcfe65589991c159ba290d377
+ms.openlocfilehash: 72aa38242df21181f142833db03c825574455986
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "8643815"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9171064"
 ---
 # <a name="subscription-churn-prediction"></a>Predicție retragere abonament
 
@@ -76,7 +76,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
 1. Introduceți numărul de **Zile de la încheierea abonamentului** la care compania dvs. consideră că un client s-a retras. În această perioadă companiile se concentrează pe activități precum ofertele sau alte eforturi de marketing care încearcă să prevină pierderea clientului.
 1. Introduceți numărul de **Zile pentru a investiga viitorul pentru a prezice problemele** pentru a seta o fereastră pentru care să prezică problemele. De exemplu, pentru a prezice riscul problemelor pentru clienții dvs. în următoarele 90 de zile pentru a se alinia la eforturile dvs. de păstrare a marketingului. Predicția riscului de retragere pentru perioade mai lungi sau mai scurte de timp poate face mai dificilă abordarea factorilor din profilul dvs. de risc de retragere, în funcție de cerințele dvs. comerciale specifice. Selectați **Următorul** pentru a continua
    >[!TIP]
-   > Puteți selecta **Salveaza schita** în orice moment pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
+   > Puteți selecta **Salveaza schita** oricând pentru a salva predicție ca schiță. Veți găsi schița predicției în fila **Predicțiile mele** pentru a continua.
 
 ### <a name="add-required-data"></a>Adăugați datele necesare
 
@@ -121,7 +121,7 @@ Predicția renunțării la abonament ajută la predicția existenței riscului c
    - **Numele predicției:** Numele predicției furnizat la crearea acesteia.
    - **Tip de predicție:** Tipul de model utilizat pentru predicție
    - **Entitate de ieșire:** Numele entității care va stoca rezultatul predicției. Puteți găsi o entitate cu acest nume în **Date** > **Entități**.    
-     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-new-segment) cu pragul preferat.
+     În entitatea de ieșire, *ChurnScore* este probabilitatea prezisă de dezactivare și *IsChurn* este o etichetă binară bazată pe *ChurnScore* cu 0,5 prag. Este posibil ca pragul implicit să nu funcționeze pentru scenariul dvs. [Creați un segment nou](segments.md#create-a-segment) cu pragul preferat.
    - **Câmp prognozat:** Acest câmp este populat doar pentru anumite tipuri de predicții și nu este utilizat în predicția de renunțare la abonament.
    - **Stare:** Starea curentă a rulării predicției.
         - **În coadă:** În prezent, predicția așteaptă să fie rulate alte procese.

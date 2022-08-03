@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 77b09b6eb0a916e724542d503d96d19c5581aca1
-ms.sourcegitcommit: 27c5473eecd851263e60b2b6c96f6c0a99d68acb
+ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
+ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "8947528"
+ms.lasthandoff: 07/22/2022
+ms.locfileid: "9188063"
 ---
 # <a name="use-customer-consent"></a>Utilizați consimțământul clientului
 
@@ -24,7 +24,7 @@ Clienții pot alege să își retragă sau să-și rețină consimțământul pe
 
 Dynamics 365 Customer Insights vă ajută să onorați solicitările clienților dvs. importând și stocând preferințele acestora ca parte a profilurilor unificate ale clienților.
 
-Dacă datele de consimțământ sunt stocate separat de profilurile dvs. de clienți, [adăugați datele dvs. de consimțământ ca un nou sursă de date](#import-and-unify-consent-data). Sursă de date care conține datele consimțământului este adăugat la procesul de unificare a datelor. Unificarea cu succes a datelor de consimțământ și a profilurilor clienților conduce apoi la profiluri de clienți unificate care conțin informațiile privind consimțământul. Pentru profilurile de clienți care conțin deja informații despre consimțământ, accesați direct [utilizați datele consimțământului](#use-consent-data) secțiune.
+Dacă datele de consimțământ sunt stocate separat de profilurile dvs. de clienți, [adăugați datele dvs. de consimțământ ca un nou sursă de date](#import-and-unify-consent-data). Sursă de date care conține datele consimțământului este adăugat la procesul de unificare a datelor. Unificarea cu succes a datelor de consimțământ și a profilurilor clienților conduce apoi la profiluri de clienți unificate care conțin informațiile privind consimțământul. Pentru profilurile de clienți care conțin deja informații privind consimțământul, accesați direct [utilizați datele consimțământului](#use-consent-data) secțiune.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -50,13 +50,13 @@ Exemplu de tabel al unei baze de date simple de consimțământ cu mai multe op�
 
 ## <a name="import-and-unify-consent-data"></a>Importați și unificați datele de consimțământ
 
-Puteți importa date privind consimțământul în același mod în care ingerați alte surse de date în Customer Insights. Pentru mai multe informații despre sursele de date acceptate și despre cum să le importați, consultați [Prezentare generală a surselor de date](data-sources.md).
+Importați datele de consimțământ în același mod în care ați ingerat alte surse de date în Customer Insights. Pentru mai multe informații despre sursele de date acceptate și despre cum să le importați, consultați [Prezentare generală a surselor de date](data-sources.md).
 
 Pentru mai multe informații despre unificarea surselor de date, consultați [Prezentare generală a unificării datelor](data-unification.md).
 
 ## <a name="use-consent-data"></a>Utilizați datele de consimțământ
 
-Odată ce datele dvs. de consimțământ fac parte din profilurile dvs. unificate de clienți, le puteți utiliza în Customer Insights. De exemplu, creați un segment cu o regulă pentru a vă asigura că respectați preferințele de confidențialitate și protecție a datelor ale clienților dvs. Regulile care susțin preferințele de consimțământ sunt folosite pentru a exclude utilizatorii dintr-un segment pe baza atributelor profilului. Adăugarea unei reguli la un segment care exclude profilurile clienților care nu au furnizat consimțământul pentru a contacta.
+Odată ce datele dvs. de consimțământ fac parte din profilurile dvs. unificate de clienți, le puteți utiliza în Customer Insights. De exemplu, creați un segment cu o regulă pentru a vă asigura că respectați preferințele privind confidențialitatea și protecția datelor ale clienților dvs. Regulile care susțin preferințele de consimțământ sunt folosite pentru a exclude utilizatorii dintr-un segment pe baza atributelor profilului. Adăugați o regulă la un segment care exclude profilurile clienților care nu au furnizat consimțământul pentru contact.
 
 Referindu-ne la exemplul de tabel de mai sus, un segment poate conține această regulă:`Consent option=Newsletter & Consent value=True`. Această configurație are ca rezultat un segment care onorează preferințele de contact pentru a trimite un buletin informativ.
 
@@ -66,8 +66,10 @@ Odată ce segmentul este creat, puteți utiliza unul dintre multele [opțiuni de
 
 ## <a name="ensure-updated-consent-status"></a>Asigurați-vă starea de consimțământ actualizată
 
-Este important să păstrați actualizat starea consimțământului pentru clienții dvs. Actualizarea programată din Customer Insights importă întotdeauna cea mai recentă stare a surselor dvs. de date. Aceste informații sunt apoi procesate prin unificarea datelor și rezultă în profiluri actualizate ale clienților. Aceste profiluri actualizate sunt apoi folosite pentru a reîmprospăta segmente pentru a vă asigura că lucrați cu cele mai actualizate informații.
+Este important să păstrați actualizat starea consimțământului pentru clienții dvs. Actualizarea programată în Customer Insights importă întotdeauna cea mai recentă stare a surselor dvs. de date. Aceste informații sunt apoi procesate prin unificarea datelor și rezultă în profiluri actualizate ale clienților. Aceste profiluri actualizate sunt apoi folosite pentru a reîmprospăta segmentele pentru a vă asigura că lucrați cu cele mai actualizate informații.
 
 Cu alte cuvinte, asigurați-vă că datele sursă care sunt importate în Customer Insights au întotdeauna cele mai recente informații.
 
-Pentru mai multe informații, vezi [Actualizează segmentele manual](segments.md#refresh-segments) sau [configurați o reîmprospătare programată](system.md#schedule-tab).
+Pentru mai multe informații, consultați [Actualizează segmentele manual](segments.md#refresh-segments) sau [configurați o reîmprospătare programată](system.md#schedule-tab).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

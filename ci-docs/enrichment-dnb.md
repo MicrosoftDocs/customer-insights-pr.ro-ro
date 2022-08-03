@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 51f2e4e46aa25d10502d0feb5ea42eb7d2d637b9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082560"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196041"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Îmbogățiți profilurile companiei cu Dun & Bradstreet (previzualizare)
 
@@ -23,7 +23,7 @@ Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Un activ [Dun & Bradstreet](https://www.dnb.com/marketing/media/give-your-data-a-boost.html?source=microsoft_audience_insights) licență.
-- [Profiluri de clienți unificate](customer-profiles.md) pentru companii.
+- [Profiluri unificate ale clienților](customer-profiles.md) pentru companii.
 - Un Dun & Bradstreet [proiect](#set-up-your-dun--bradstreet-project) este pus la punct.
 - Un Dun & Bradstreet [conexiune](connections.md) este [configurat](#configure-a-connection-for-dun--bradstreet) de către un administrator.
 
@@ -49,7 +49,7 @@ Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii
 
 Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți acreditările de la Dun & Bradstreet Connect.
 
-1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau mergeți la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
+1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
 
 1. Introduceți un nume pentru conexiune.
 
@@ -63,7 +63,7 @@ Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights �
 
 ### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
 
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Dun & Bradstreet, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Dun & Bradstreet îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
+Când activați Dynamics 365 Customer Insights pentru a transmite date către Dun & Bradstreet, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi Datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Dun & Bradstreet îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
 Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 ## <a name="supported-countries-or-regions"></a>Țări sau regiuni sprijinite
@@ -80,7 +80,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-1. Selectați conexiunea și confirmați. Contactați un administrator dacă unul nu este disponibil.
+1. Selectați conexiunea și confirmați. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
 1. Selectați **Următorul**.
 

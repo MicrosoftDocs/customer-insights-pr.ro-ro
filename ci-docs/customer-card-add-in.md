@@ -1,6 +1,6 @@
 ---
 title: Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (previzualizare) (conține videoclip)
-description: Afișați datele despre profilul clientului din Customer Insights în aplicațiile Dynamics 365 cu acest program de completare.
+description: Afișați datele despre profilul clientului din Customer Insights în aplicațiile Dynamics 365 cu acest supliment.
 ms.date: 02/02/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: ead18963959f94fd07912384cf61802f83523e2f
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082140"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9194938"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (previzualizare)
 
@@ -28,21 +28,25 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- Programul de completare funcționează numai cu aplicații bazate pe model Dynamics 365, cum ar fi Sales sau Customer Service, versiunea 9.0 și versiunile ulterioare.
-- Pentru ca datele dvs. Dynamics 365 să fie mapate la profilurile clienților Customer Insights, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, trebuie să vă asigurați că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în pasul de hartă a procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
+- Aplicații bazate pe model Dynamics 365, cum ar fi Vânzări sau serviciu pentru relații cu clienții, versiunea 9.0 și ulterioară.
+- Pentru ca datele dvs. Dynamics 365 să fie mapate la profilurile clienților Customer Insights, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, asigurați-vă că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în timpul procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Toți utilizatorii Dynamics 365 ai suplimentului pentru cardul de client trebuie să fie [adăugat ca utilizatori](permissions.md) în Customer Insights pentru a vedea datele.
-- [Capacități de căutare și filtrare configurate](search-filter-index.md) în Customer Insights sunt necesare pentru ca căutarea datelor să funcționeze.
+- [Funcții de căutare și filtrare configurate](search-filter-index.md) în Customer Insights.
 - Fiecare control de supliment se bazează pe date specifice din Customer Insights. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurația add-in vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
-  - **Măsurați controlul**: Necesită [măsuri configurate](measures.md) de tipul atributelor clientului.
-  - **Controlul inteligenței** : Necesită date generate folosind [predicții sau modele personalizate](predictions-overview.md).
-  - **Controlul detaliilor clientului**: Toate câmpurile din profil sunt disponibile în profilul de client unificat.
-  - **Control îmbogățire**: solicită [îmbogățiri](enrichment-hub.md) active aplicate profilelor de client. Suplimentul de card acceptă aceste îmbogățiri: [Mărci](enrichment-microsoft.md) furnizat de Microsoft, [Interese](enrichment-microsoft.md) furnizate de Microsoft și [Date despre implicarea biroului](enrichment-office.md) furnizate de Microsoft.
-  - **Controlul contactelor**: Necesită definirea entității semantice a contactelor de tip.
-  - **Control cronologie**: necesită [activități configurate](activities.md).
+  - **Măsoară controlul** cere [măsuri configurate ale atributelor clientului](measures.md).
+  - **Controlul inteligenței** necesită date generate folosind [predicții sau modele personalizate](predictions-overview.md).
+  - **Controlul detaliilor clientului** afișează toate câmpurile din profilul disponibile în profilul unificat de client.
+  - **Controlul îmbogățirii** necesită activ [îmbogățiri](enrichment-hub.md) aplicate profilurilor clienților. Suplimentul de card acceptă aceste îmbogățiri: [Mărci](enrichment-microsoft.md) furnizat de Microsoft, [Interese](enrichment-microsoft.md) furnizate de Microsoft și [Date despre implicarea biroului](enrichment-office.md) furnizate de Microsoft.
+  - **Controlul contactelor** necesită un tip de entitate semantică de contact.
+  - **Controlul cronologiei** cere [activități configurate](activities.md).
 
 ## <a name="install-the-customer-card-add-in"></a>Instalați suplimentul cardului client
 
-Adăugarea programului de completare Card client este o soluție pentru aplicațiile de implicare a clienților din Dynamics 365. Pentru a instala soluția, accesați AppSource și căutați **Card de client Dynamics**. Selectați [Programul de completare card de client AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) și selectați **Obțineți acum**.
+Adăugarea programului de completare Card client este o soluție pentru aplicațiile de implicare a clienților din Dynamics 365. Pentru a instala soluția:
+
+1. Mergi la AppSource si cauta **Card de client Dynamics**.
+
+1. Selectați [Programul de completare card de client AppSource](https://appsource.microsoft.com/product/dynamics-365/mscrm.dynamics_365_customer_insights_customer_card_addin?tab=Overview) și selectați **Obțineți acum**.
 
 Este posibil să fie nevoie să vă autentificați cu datele dvs. de acreditare pentru aplicația Dynamics 365 pentru a instala soluția. Poate dura ceva timp pentru ca soluția să fie instalată în mediul dvs.
 

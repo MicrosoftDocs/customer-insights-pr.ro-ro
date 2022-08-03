@@ -1,7 +1,7 @@
 ---
 title: Exportați segmente în Dynamics 365 Sales (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la Dynamics 365 Sales.
-ms.date: 03/03/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -11,38 +11,39 @@ manager: shellyha
 searchScope:
 - ci-export
 - customerInsights
-ms.openlocfilehash: b8e756313ca037dca41cb25587229808f0c584c9
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: c3497f4625cada49ae33c6987e58994a15536f9b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082392"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195996"
 ---
 # <a name="export-segments-to-dynamics-365-sales-preview"></a>Exportați segmente în Dynamics 365 Sales (previzualizare)
 
 Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxuri de lucru și a trimite promoții cu Dynamics 365 Sales.
 
-## <a name="known-limitations"></a>Limitări cunoscute
+## <a name="prerequisites"></a>Cerințe preliminare
 
-- Exporturile către Dynamics 365 Sales sunt limitate la 100.000 de membri pe segment.
-- Exporturile de segmente către Dynamics 365 Sales pot dura până la 3 ore. 
-
-## <a name="prerequisite-for-connection"></a>Cerință preliminară pentru conexiune
-
-1. Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să ingerați contacte de la [Dynamics 365 Sales folosind Microsoft Dataverse](connect-dataverse-managed-lake.md).
+Înregistrările de contact trebuie să fie prezente în Dynamics 365 Sales înainte de a putea exporta un segment din Customer Insights în Sales. Citiți mai multe despre cum să ingerați contacte de la [Dynamics 365 Sales folosind Microsoft Dataverse](connect-dataverse-managed-lake.md).
 
    > [!NOTE]
-   > Exportarea segmentelor din Customer Insights la Sales nu va crea noi înregistrări de contact în instanțele de vânzări. Înregistrările de contact de la vânzări trebuie să fie introduse în Customer Insights și utilizate ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
+   > Exportarea segmentelor din Customer Insights la Sales nu va crea noi înregistrări de contact în instanțele de vânzări. Înregistrările de contact de la vânzări trebuie să fie introduse în Customer Insights și folosite ca sursă de date. De asemenea, trebuie să fie incluse în entitatea Client unificată pentru a identifica ID-urile clienților cu ID-urile de contact înainte ca segmentele să poată fi exportate.
 
-## <a name="set-up-the-connection-to-sales"></a>Configurarea conexiunii la Sales
+## <a name="known-limitations"></a>Limitări cunoscute
+
+Exporturile către Dynamics 365 Sales sunt limitate la 100.000 pe segment, ceea ce poate dura până la 3 ore.
+
+## <a name="set-up-connection-to-sales"></a>Configurați conexiunea la vânzări
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Dynamics 365 Sales** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **Dynamics 365 Sales**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduceți adresa URL de vânzări a organizației dvs. în câmpul **Adresa serverului**.
 
@@ -50,24 +51,28 @@ Utilizați datele clienților pentru a crea liste de marketing, a urmări fluxur
 
 1. Mapați un câmp ID client la ID-ul de contact Dynamics 365.
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
+
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ## <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Dynamics 365 Sales. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Dynamics 365 Sales. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
-1. Alegeți unul sau mai multe segmente.
+1. Introduceți un nume pentru export.
+
+1. Selectați câmpul Contact ID din entitatea Client care se potrivește cu Dynamics 365 Contact ID.
+
+1. Selectați segmentele pe care doriți să le exportați.
 
 1. Selectați **Salvare**
 
-Salvarea unui export nu se execută imediat.
-
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

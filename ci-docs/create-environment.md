@@ -12,18 +12,18 @@ ms.custom: intro-internal
 searchScope:
 - ci-home
 - customerInsights
-ms.openlocfilehash: 62969527ceed906ff06fb9be90b972496323ce0a
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 33c8910b7a4dd8723c0d62f2e28228cd2d8df4b7
+ms.sourcegitcommit: 5716025eb4828425ca237377b02a892de8689f4a
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052761"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9142834"
 ---
 # <a name="how-to-create-a-new-environment"></a>Cum să: creați un mediu nou
 
-După [achiziționarea unei licențe de abonament pt Dynamics 365 Customer Insights](paid-license.md), administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. În acest scenariu, puteți merge direct la [Pasul 1: Furnizați informații de bază](#step-1-provide-basic-information).
+După [achiziționarea unei licențe de abonament pentru Dynamics 365 Customer Insights](paid-license.md), administratorul global al Microsoft 365 chiriașul primește un e-mail care îl invită să creeze mediul. Accesați [https://home.ci.ai.dynamics.com/start](https://home.ci.ai.dynamics.com/start) pentru a începe. În acest scenariu, puteți merge direct la [Pasul 1: Furnizați informații de bază](#step-1-provide-basic-information).
 
-După crearea primului mediu, administratorul global al Microsoft 365 chiriașul poate [adăugați utilizatori din organizația lor ca administratori](permissions.md). În continuare, acești administratori pot gestiona utilizatorii și mediile. Dacă organizația dvs. achiziționează mai mult de o licență pentru Customer Insights, [contactați echipa noastră de asistență](https://go.microsoft.com/fwlink/?linkid=2079641) pentru a crește numărul de medii disponibile. Pentru mai multe informații despre capacitate și capacitatea suplimentară, consultați [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
+După ce primul mediu este creat, administratorul global al Microsoft 365 chiriașul poate [adăugați utilizatori din organizația lor ca administratori](permissions.md). În continuare, acești administratori pot gestiona utilizatorii și mediile. Dacă organizația dvs. achiziționează mai mult de o licență pentru Customer Insights, [contactați echipa noastră de asistență](https://go.microsoft.com/fwlink/?linkid=2079641) pentru a crește numărul de medii disponibile. Pentru mai multe informații despre capacitate și capacitatea suplimentară, consultați [Ghid de licențiere Dynamics 365](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 > [!TIP]
 > Dacă doriți să încercați serviciul, consultați [Configurați un mediu de încercare](trial-signup.md).
@@ -67,7 +67,6 @@ Există două opțiuni dintre care poți alege:
 ## <a name="step-3-connect-to-microsoft-dataverse"></a>Pasul 3: Conectați-vă la Microsoft Dataverse
 
 Pasul **Microsoft Dataverse** vă permite să conectați Customer Insights cu mediul Dataverse. Partajați date cu Dataverse pentru a-l folosi cu aplicații de afaceri bazate pe Dataverse, cum ar fi Dynamics 365 Marketing sau aplicații bazate pe model în Power Apps.
-
 
 Lăsați acest câmp necompletat dacă nu aveți al dvs Dataverse mediu și vom crea unul pentru tine.
 

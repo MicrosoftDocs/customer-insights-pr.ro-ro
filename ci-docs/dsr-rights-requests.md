@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: wimohabb
 manager: shellyha
-ms.openlocfilehash: c71305ab835b0f4f75adcce716e795959f898e47
-ms.sourcegitcommit: 8e9f0a9693fd8d91ad0227735ff03688fef5406f
+ms.openlocfilehash: 6c6ce49c18de3a09d28138316d893e6842919042
+ms.sourcegitcommit: ff0f4b5664d995870c91adb87c7d3780a582efca
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/10/2022
-ms.locfileid: "8947383"
+ms.lasthandoff: 07/13/2022
+ms.locfileid: "9146710"
 ---
 # <a name="data-subject-rights-dsr-requests-under-gdpr"></a>Solicitări de drepturi privin datele subiecților sub RGPD
 
@@ -31,18 +31,22 @@ Ne-am angajat să ne ajutăm clienții să își îndeplinească cerințele RGPD
 
 Customer Insights oferă următoarele experiențe în produs pentru a șterge datele personale pentru un anumit client sau utilizator:
 
-- **Gestionați ștergerea cererilor datelor clienților**: Datele clienților din Customer Insights sunt ingerate din surse de date originale externe pentru Customer Insights. Toate cererile de ștergere a RGPD trebuie să fie efectuate în sursă originală de date.
+- **Gestionați ștergerea cererilor datelor clienților**: Datele clienților din Customer Insights sunt ingerate din surse de date originale externe pentru Customer Insights. Efectuați mai întâi solicitările de ștergere GDPR în sursă de date original.
 - **Gestionați solicitările de ștergere pentru datele de utilizator Customer Insights** : Datele pentru utilizatori sunt create de Customer Insights. Toate cererile de ștergere a RGPD trebuie să fie efectuate în Customer Insights.
 
 ##### <a name="manage-requests-to-delete-customer-data"></a>Gestionați solicitări pentru a șterge datele clienților
 
-Un administrator al Customer Insights poate urma acești pași pentru a elimina datele despre clienți care au fost șterse în sursa de date:
+Un administrator Customer Insights poate urma acești pași pentru a elimina datele clienților care au fost șterse din sursă de date. Asigurați-vă că solicitarea de ștergere a fost efectuată în sursă de date înainte de a continua cu pașii enumerați mai jos. 
 
 1. Conectați-vă la Dynamics 365 Customer Insights.
-2. Mergi la **Date** > **Surse de date**
-3. Pentru fiecare sursă de date din listă care conține datele șterse ale clienților:
+1. Mergi la **Date** > **Surse de date**
+1. Pentru fiecare sursă de date din listă care conține datele șterse ale clienților:
    1. Selectați elipsa verticală (&vellip;) și apoi selectați **Reîmprospăta**.
-   2. Verificați starea sursei de date din **Stare**. O bifă înseamnă că actualizarea a reușit. Un triunghi de avertizare înseamnă că a apărut o problemă. Dacă este afișat un triunghi de avertizare, contactați D365CI@microsoft.com.
+   1. Verificați starea sursei de date din **Stare**. O bifă înseamnă că actualizarea a reușit. Un triunghi de avertizare înseamnă că a apărut o problemă. Dacă este afișat un triunghi de avertizare, contactați D365CI@microsoft.com.
+1. După o reîmprospătare reușită a surselor de date, executați și reîmprospătările din aval. Mai ales, dacă nu aveți programată o reîmprospătare completă recurentă a Customer Insights. 
+
+> [!IMPORTANT]
+> Segmentele statice nu sunt incluse într-o reîmprospătare completă sau care rulează reîmprospătări în aval după o solicitare de ștergere. Pentru a vă asigura că și datele despre clienți sunt eliminate din segmentele statice, recreați segmentele statice cu datele sursă reîmprospătate.
 
 > [!div class="mx-imgBorder"]
 > ![Manipularea RGPD de ștergere a cererilor pentru datele clienților.](media/gdpr-data-sources.png "Manipularea RGPD de ștergere a cererilor pentru datele clienților")
@@ -77,5 +81,10 @@ Un administrator de entitate găzduită poate urma acești pași pentru a export
 1. Trimiteți un e-mail la D365CI@microsoft.com specificând adresa de e-mail a utilizatorului în cerere. Echipa Customer Insights va trimite un e-mail la adresa de e-mail înregistrată a administratorului entității găzduite înregistrate, solicitând confirmarea exportului de date.
 2. Aprobați confirmarea de a exporta datele pentru utilizator solicitate.
 3. Primiți datele exportate prin intermediul adresei de e-mail de administrator de entitate găzduită.
+
+### <a name="data-deletion-handling-in-dynamics-365-customer-insights"></a>Gestionarea ștergerii datelor în Dynamics 365 Customer Insights
+
+1. Datele vor fi șterse (partiții de date și instantanee de date) dacă partițiile de date și instantaneele de date sunt inactive mai mult de 30 de zile, ceea ce înseamnă că au fost înlocuite cu o nouă partiție de date și instantanee printr-o reîmprospătare a surselor de date.
+2. Nu toate datele și instantaneele sunt șterse. Cea mai recentă partiție de date și instantanee de date sunt active prin definiție deoarece sunt utilizate în Customer Insights. Pentru cele mai recente date, nu contează dacă sursele de date nu au fost reîmprospătate în ultimele 30 de zile.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

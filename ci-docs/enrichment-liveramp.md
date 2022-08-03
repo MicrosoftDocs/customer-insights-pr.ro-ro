@@ -8,12 +8,12 @@ ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 334440493c50448005ec90d0cfac11358d677b73
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082203"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196363"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (previzualizare)
 
@@ -55,17 +55,17 @@ Când activați Dynamics 365 Customer Insights pentru a transmite date către Li
 
 1. Selectați **Îmbogățiți-mi datele** pe **Identitate** din țiglă LiveRamp.
 
-   :::image type="content" source="media/liveramp-tile.png" alt-text="Dală identitate în pagina de prezentare generală a îmbogățirii.":::
+   :::image type="content" source="media/liveramp-tile.png" alt-text="Dală de identitate în pagina de prezentare generală a îmbogățirii.":::
 
 1. Examinați prezentarea generală și apoi selectați **Următorul**.
 
-1. Selectați conexiunea. Contactați un administrator dacă unul nu este disponibil.
+1. Selectați conexiunea. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
 1. Selectați **Următorul**.
 
 1. Selectează **Set de date despre client** și alegeți profilul sau segmentul pe care doriți să îl îmbogățiți cu date de identitate din LiveRamp. The *Client* entitate îmbogățește toate profilurile dvs. de clienți, în timp ce un segment îmbogățește numai profilurile de clienți conținute în acel segment.
 
-1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor de identitate din LiveRamp. Cel puțin unul dintre câmpuri **Nume si adresa**, **-mail**, sau **Telefon** este necesară. Pentru o mai mare precizie a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
+1. Definiți ce tip de câmpuri din profilurile dvs. unificate să utilizați pentru potrivirea datelor de identitate din LiveRamp. Cel puțin unul dintre câmpuri **Nume și adresa**, **-mail**, sau **Telefon** este necesară. Pentru o precizie mai mare a potrivirii, adăugați alte câmpuri. Selectați **Următorul**.
 
 1. Hartați câmpurile cu datele de identificare din LiveRamp.
 

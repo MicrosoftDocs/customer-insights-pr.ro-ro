@@ -1,32 +1,32 @@
 ---
 title: Exportați segmente către Adobe Experience Platform (previzualizare)
 description: Aflați cum să utilizați segmentele Customer Insights în Adobe Experience Platform.
-ms.date: 03/29/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
 author: stefanie-msft
 ms.author: antando
 manager: shellyha
-ms.openlocfilehash: c29b8264019669ffd954a298ce3a633c852477fa
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fcb43e0956c6d1f0ef36b222dd2b718906364244
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052526"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195305"
 ---
 # <a name="export-segments-to-adobe-experience-platform-preview"></a>Exportați segmente către Adobe Experience Platform (previzualizare)
 
-Ca utilizator al Dynamics 365 Customer Insights, este posibil să fi creat segmente pentru a vă eficientiza campaniile de marketing prin țintirea unor publicuri relevante. Pentru a utiliza un segment din Customer Insights în Adobe Experience Platform și aplicații precum Adobe Standard de campanie, trebuie să urmați câțiva pași descriși în acest articol.
+Exportați segmente care vizează public relevante către Adobe Experience Platform.
 
 :::image type="content" source="media/AEP-flow.png" alt-text="Diagrama de proces a pașilor descriși în acest articol.":::
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
--   Licență Dynamics 365 Customer Insights
--   Licență Adobe Experience Platform
--   Licență Adobe Campaign Standard
--   Cont Azure Blob Storage
+- Un Adobe Experience Platform licență.
+- Un Adobe Licență standard pentru campanie.
+- Un [Cont Azure Blob Storage](/azure/storage/blobs/create-data-lake-storage-account) nume și cheie de cont. Pentru a găsi numele și cheia, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
+- Un [Container Azure Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
 ## <a name="campaign-overview"></a>Prezentare generală campanie
 
@@ -48,38 +48,39 @@ E-mailul de ofertă pe care doriți să îl trimiteți va conține prenume, nume
 
 ## <a name="export-your-target-audience"></a>Expportați-vă publicul țintă
 
-Cu publicul țintă identificat, putem configura exportul din Customer Insights într-un cont Azure Blob Storage.
+Vom configura exportul din Customer Insights într-un cont Azure Blob Storage.
 
-### <a name="configure-a-connection"></a>Configurați o conexiune
+### <a name="set-up-connection-to-azure-blob-storage"></a>Configurați conexiunea la Azure Blob Storage
+
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
 
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **Stocare Blob Azure** sau selectați **Configurat** în dala **Stocare Blob Azure** pentru a configura conexiunea.
-
-   :::image type="content" source="media/export-azure-blob-storage-tile.png" alt-text="Dală de configurare pentru stocare Blob Azure."::: 
+1. Selectați **Adăugați conexiune** și alegeți **Azure Blob Storage**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 1. Introduceți **Nume de cont**, **Cheia de cont** și **Recipient** pentru contul dvs. de Stocare de bloburi în care doriți să exportați segmentul.  
-      
-   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captură de ecran a configurării contului de stocare. "::: 
-   
-    - Pentru a afla mai multe despre cum să aflați numele contului de Stocare de bloburi și cheia de cont, consultați [Gestionați setările contului de stocare în portalul Azure](/azure/storage/common/storage-account-manage).
-    - Pentru a afla cum să creați un container, consultați [Creați un container](/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
+   :::image type="content" source="media/azure-blob-configuration.png" alt-text="Captură de ecran a configurării contului de stocare. ":::
+
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
+
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ### <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare export**.
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Stocare bloburi Azure. Dacă nu vedeți numele acestei secțiuni, atunci nu aveți la dispoziție conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea Stocare bloburi Azure. Contactați un administrator dacă nu este disponibilă nicio conexiune.
+
+1. Introduceți un nume pentru export.
 
 1. Alegeți segmentul pe care doriți să îl exportați. În acest exemplu, este **ChurnProneCustomers**.
 
@@ -87,46 +88,49 @@ Puteți configura acest export dacă aveți acces la o conexiune de acest tip. P
 
 1. Selectați **Salvare**.
 
-După salvarea destinației de export, o veți găsi pe **Date** > **Exporturi**.
-
-Acum puteți [exporta segmentul la cerere](export-destinations.md#run-exports-on-demand). Exportul va rula, de asemenea, cu fiecare [actualizare programată](system.md).
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
 > [!NOTE]
 > Asigurați-vă că numărul de înregistrări din segmentul exportat se încadrează în limita permisă a licenței dvs. Adobe Campaign Standard.
 
-Datele exportate sunt stocate în containerul de Stocare bloburi Azure pe care l-ați configurat mai sus. Următoarea cale a folderului este creată automat în container:
+Datele exportate sunt stocate în containerul Azure Blob Storage pe care l-ați configurat. Următoarele căi de foldere sunt create automat în containerul dvs.:
 
-*%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
+- Pentru entitățile sursă și entitățile generate de sistem:  
 
-Example: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/ChurnSegmentDemo/2021/02/16/1433/ChurnProneCustomers_1.csv
+  *%ContainerName%/CustomerInsights_%instanceID%/%ExportDestinationName%/%EntityName%/%Year%/%Month%/%Day%/%HHMM%/%EntityName%_%PartitionId%.csv*
 
-*model.json* pentru entitățile exportate se află la nivelul *%ExportDestinationName%*.
+  Example: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/BlobExport/ChurnSegmentDemo/2021/02/16/1433/ChurnProneCustomers_1.csv
 
-Exemplu: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
+- *model.json* pentru entitățile exportate se află la nivelul *%ExportDestinationName%*.
+
+  Exemplu: Dynamics365CustomerInsights/CustomerInsights_abcd1234-4312-11f4-93dc-24f72f43e7d5/ChurnSegmentDemo/model.json
 
 ## <a name="define-experience-data-model-xdm-in-adobe-experience-platform"></a>Definiți Experience Data Mode (XDM) în Adobe Experience Platform
 
-Înainte ca datele exportate din Customer Insights să poată fi utilizate în interiorul Adobe Experience Platform, trebuie să definim schema Experience Data Model și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
+Înainte ca datele exportate din Customer Insights să poată fi utilizate în Adobe Experience Platform, definiți schema Experience Data Model și [configurați datele pentru Profilul clientului în timp real](https://experienceleague.adobe.com/docs/experience-platform/profile/tutorials/dataset-configuration.html#tutorials).
 
 Învățați [ce este XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) și înțelegeți [elementele de bază ale compoziției schemei](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#schema).
 
 ## <a name="import-data-into-adobe-experience-platform"></a>Importul datelor în Adobe Experience Platform
 
-Acum că totul este la locul său, trebuie să importăm datele pregătite privind publicul din Customer Insights în Adobe Experience Platform.
+Importați datele de audiență pregătite din Customer Insights în Adobe Experience Platform.
 
-În primul rând, [creați o conexiune sursă Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).    
+1. [Creați o conexiune la sursă Azure Blob Storage](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/blob.html#getting-started).
 
-După definirea conexiunii la sursă, [configurați un flux de date](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pentru o conexiune în lot de stocare în cloud pentru a importa ieșirea segmentului din Customer Insights în Adobe Experience Platform.
+1. [Configurați un flux de date](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/cloud-storage.html#ui-tutorials) pentru o conexiune în lot de stocare în cloud pentru a importa ieșirea segmentului din Customer Insights în Adobe Experience Platform.
 
 ## <a name="create-an-audience-in-adobe-campaign-standard"></a>Creați un public în Adobe Campaign Standard
 
-Pentru a trimite e-mailul pentru această campanie, vom utiliza Adobe Campaign Standard. După importul datelor în Adobe Experience Platform, avem nevoie să [creăm un public](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) în Adobe Campaign Standard folosind datele din Adobe Experience Platform.
+Pentru a trimite e-mailul pentru această campanie, vom utiliza Adobe Campaign Standard.
 
+1. [Creați un public](https://experienceleague.adobe.com/docs/campaign-standard/using/profiles-and-audiences/get-started-profiles-and-audiences.html#permission) în Adobe Standard de campanie folosind datele din Adobe Experience Platform.
 
-Aflați cum să [utilizați generatorul de segmente](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) în Adobe Campaign Standard pentru a defini un public pe baza datelor din Adobe Experience Platform.
+1. [Utilizați generatorul de segmente](https://experienceleague.adobe.com/docs/campaign-standard/using/integrating-with-adobe-cloud/adobe-experience-platform/audience-destinations/aep-using-segment-builder.html) în Adobe Standard de campanie pentru a defini un public pe baza datelor din Adobe Experience Platform.
 
 ## <a name="create-and-send-the-email-using-adobe-campaign-standard"></a>Creați și trimiteți e-mailul utilizând Adobe Campaign Standard
 
 Creați conținutul e-mailului și apoi [testați și trimiteți](https://experienceleague.adobe.com/docs/campaign-standard/using/testing-and-sending/get-started-sending-messages.html#preparing-and-testing-messages) email-ul dvs.
 
 :::image type="content" source="media/contoso-sample-email.jpg" alt-text="Exemplu de e-mail cu ofertă de reînnoire de la Adobe Campaign Standard.":::
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

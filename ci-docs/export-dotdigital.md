@@ -1,88 +1,82 @@
 ---
 title: Exportați segmente în DotDigital (previzualizare)
 description: Aflați cum să configurați conexiunea și să exportați la DotDigital.
-ms.date: 10/08/2021
+ms.date: 07/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: af0cce4edb9d47247c79ae08491366349da98b1c
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: cabaea84e31f8fe97bc558a8dca8d93bc40f43b7
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082938"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9196087"
 ---
 # <a name="export-segments-to-dotdigital-preview"></a>Exportați segmente în DotDigital (previzualizare)
 
-Exportați segmente de profiluri de clienți unificate în agende DotDigital și folosiți-le pentru campanii, marketing prin e-mail și pentru a crea segmente de clienți cu DotDigital. 
+Exportați segmente de profiluri de clienți unificate în agende DotDigital și folosiți-le pentru campanii, marketing prin e-mail și pentru a crea segmente de clienți cu DotDigital.
 
-## <a name="prerequisites-for-a-connection"></a>Cerințe preliminare pentru o conexiune
+## <a name="prerequisites"></a>Cerințe preliminare
 
--   Aveți un [Cont DotDigital](https://dotdigital.com/) și ați creat un [Utilizator API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user). Va trebui să utilizați acreditările de utilizator API pentru a crea o conexiune
--   Există agende în DotDigital și ID-urile corespunzătoare. ID-ul poate fi găsit în adresa URL atunci când selectați și deschideți o agendă. Pentru mai multe informații, consultați [Agende DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
--   Tu ai [segmente configurate](segments.md) în Customer Insights.
--   Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
+- A [cont DotDigital](https://dotdigital.com/) si un [utilizator API](https://support.dotdigital.com/hc/articles/115001718730-How-do-I-create-an-API-user).
+- Un ID DotDigital de la a [nou](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book) sau agenda existentă în DotDigital. ID-ul poate fi găsit în adresa URL atunci când selectați și deschideți o agendă.
+- [Segmente configurate](segments.md) în Customer Insights.
+- Profilurile de clienți unificate din segmentele exportate conțin un câmp care reprezintă o adresă de e-mail.
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Până la 1 milion de profiluri de clienți per export către DotDigital.
-- Exportul către DotDigital este limitat la segmente.
-- Exportul de segmente cu un total de 1 milion de profiluri de clienți poate dura până la 3 ore din cauza limitărilor din partea furnizorului. 
-- Numărul de profiluri de clienți pe care le puteți exporta în DotDigital depinde și este limitat de contractul dvs. cu DotDigital.
+- Până la 1 milion de profiluri de clienți per export către DotDigital, care poate dura până la trei ore pentru a finaliza din cauza limitărilor din partea furnizorului. Numărul de profiluri de clienți pe care le puteți exporta în DotDigital depinde de contractul dvs. cu DotDigital.
+- Numai segmente.
 
 ## <a name="set-up-connection-to-dotdigital"></a>Configurarea conexiunii la DotDigital
 
+[!INCLUDE [export-connection-include](includes/export-connection-admn.md)]
+
 1. Salt la **Administrator** > **Conexiuni**.
 
-1. Selectați **Adăugați conexiune** și alegeți **DotDigital** pentru a configura conexiunea.
+1. Selectați **Adăugați conexiune** și alegeți **DotDigital**.
 
 1. Dați conexiunii dvs. un nume ușor de recunoscut în câmpul **Nume afișat**. Numele și tipul conexiunii descriu această conexiune. Vă recomandăm să alegeți un nume care să explice scopul și ținta conexiunii.
 
-1. Alegeți cine poate utiliza această conexiune. Dacă nu luați nicio măsură, valoarea implicită va fi Administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Introduceți **numele de utilizator API și parola DotDigital**. 
+1. Introduceți **numele de utilizator API și parola DotDigital**.
 
-1. Introduceți **[ID-ul agendei DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book)**.
+1. Introduceți **ID-ul agendei de adrese DotDigital**.
 
-1. Selectați **Sunt de acord** pentru a confirma **Confidențialitatea și conformitatea datelor**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
-1. Selectați **Conectare** pentru a inițializa conexiunea la DotDigital.
+1. Selectați **Conectați** pentru a inițializa conexiunea.
 
 1. Selectați **Adăugați-vă ca utilizator de export** și furnizați acreditările dvs. Customer Insights.
 
-1. Selectați **Salvare** pentru a finaliza conexiunea. 
+1. Selectați **Salvare** pentru a finaliza conexiunea.
 
 ## <a name="configure-an-export"></a>Configurați un export
 
-Puteți configura acest export dacă aveți acces la o conexiune de acest tip. Pentru mai multe informații, consultați [Permisiuni necesare pentru configurarea unui export](export-destinations.md#set-up-a-new-export).
+[!INCLUDE [export-permission-include](includes/export-permission.md)]
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Pentru a crea un nou export, selectați **Adăugare destinație**.
+1. Selectați **Adăugați export**.
 
-1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea DotDigital. Dacă nu vedeți numele acestei secțiuni, nu sunt disponibile conexiuni de acest tip.
+1. În câmpul **Conexiune pentru export**, alegeți o conexiune din secțiunea DotDigital. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
+1. Introduceți un nume pentru export.
 
-1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client. Repetați aceiași pași pentru alte câmpuri opționale, cum ar fi **Prenume**, **Nume de familie**, **Nume complet**, **Gen**, și **Cod poștal**.
+1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client.
 
-1. Selectați segmentele pe care doriți să le exportați. Puteți exporta până la 1 milion de profiluri de client în total către DotDigital.
+1. Opțional, exportați **prenume**, **de familie**, **complet**, **·**, și **Cod poștal**.
+
+1. Selectați segmentele pe care doriți să le exportați.
 
 1. Selectați **Salvare**.
 
-Salvarea unui export nu se execută imediat.
+[!INCLUDE [export-saving-include](includes/export-saving.md)]
 
-Exportul rulează cu fiecare [reîmprospătare programată](system.md#schedule-tab). Puteți de asemenea [exporta date la cerere](export-destinations.md#run-exports-on-demand). 
- 
-În DotDigital, puteți găsi acum segmentele dvs. în [Agendele DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
-
-
-## <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către DotDigital, permiteți transferul de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru asigurarea faptului că DotDigital îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această destinație de export oricând, pentru a întrerupe utilizarea acestei funcționalități.
-
+În DotDigital, găsiți-vă segmentele în [Agende DotDigital](https://support.dotdigital.com/hc/articles/212211968-Creating-an-address-book).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

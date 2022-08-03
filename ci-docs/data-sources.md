@@ -1,7 +1,7 @@
 ---
 title: Prezentare generală surse de date
 description: Aflați cum să importați sau să ingerați date din diverse surse.
-ms.date: 05/18/2022
+ms.date: 07/26/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: mukeshpo
@@ -12,24 +12,24 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: fbe44f655bdbc20ef7f0956022395e2dcb570adf
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
+ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051468"
+ms.lasthandoff: 07/28/2022
+ms.locfileid: "9207106"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
 Dynamics 365 Customer Insights oferă conexiuni pentru a aduce date dintr-un set larg de surse. Conectarea la un sursă de date este adesea denumită procesul de *ingerare de date*. După ce ați ingerat datele, puteți [unifica](data-unification.md), generați perspective și activați datele pentru a construi experiențe personalizate.
 
-## <a name="add-data-sources"></a>Adăugare surse de date
+## <a name="add-or-edit-data-sources"></a>Adăugați sau editați surse de date
 
-Puteți atașa sau importa surse de date în Customer Insights. Linkurile de mai jos oferă instrucțiuni despre adăugarea surselor de date.
+Puteți atașa sau importa surse de date în Customer Insights. Linkurile de mai jos oferă instrucțiuni despre adăugarea și editarea surselor de date.
 
 **Atașați un sursă de date**
 
-Dacă aveți date pregătite într-unul dintre serviciile de date Azure ale Microsoft, Customer Insights se poate conecta cu ușurință la sursă de date fără a fi nevoie să reingere datele. Selectați una dintre următoarele opțiuni:
+Dacă aveți date pregătite într-unul dintre serviciile de date Azure de la Microsoft, Customer Insights se poate conecta cu ușurință la sursă de date fără a fi nevoie să reingere datele. Selectați una dintre următoarele opțiuni:
 - [Azure Data Lake Storage(fișiere csv sau parchet într-un folder Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(baze de date lacuri)](connect-synapse.md)
 - [Microsoft Dataverse lacul de date](connect-dataverse-managed-lake.md)
@@ -50,13 +50,18 @@ Dacă mediul dvs. a fost configurat pentru a utiliza stocarea Customer Insights 
 
 Dacă mediul dumneavoastră nu utilizează Power Platform fluxurile de date, **Surse de date** pagina conține doar o listă a tuturor surselor de date. Nu se afișează secțiuni.
 
-Mergi la **Date** > **Surse de date** pentru a vedea numele fiecărui sursă de date ingerat, starea acestuia și ultima dată când datele au fost reîmprospătate pentru acea sursă. Puteți sorta lista surselor de date după fiecare coloană.
+## <a name="manage-existing-data-sources"></a>Gestionați sursele de date existente
 
-:::image type="content" source="media/configure-data-datasource-added.png" alt-text="Sursă de date adăugată.":::
+Mergi la **Date** > **Surse de date** pentru a vedea numele fiecărui sursă de date ingerat, starea acestuia și ultima dată când datele au fost reîmprospătate pentru acea sursă. Puteți sorta lista de surse de date după orice coloană sau puteți utiliza caseta de căutare pentru a găsi sursă de date pe care doriți să-l gestionați.
 
-[!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+Selectați un sursă de date pentru a vedea acțiunile disponibile.
 
-Încărcarea datelor poate dura timp. După o reîmprospătare reușită, datele ingerate pot fi revizuite din pagina **Entități**. Pentru mai multe informații, consultați [Entități](entities.md).
+:::image type="content" source="media/data_sources_showmore.png" alt-text="Sursă de date adăugată.":::
+
+- [**Editați | ×**](#add-or-edit-data-sources) sursă de date pentru a-și schimba proprietățile.
+- [**Reîmprospăta**](#refresh-data-sources) sursă de date pentru a include cele mai recente date.
+- [**Îmbogăţi**](data-sources-enrichment.md) sursă de date înainte de unificare.
+- **Șterge** sursă de date. Un sursă de date poate fi șters numai dacă datele nu sunt utilizate în nicio prelucrare, cum ar fi unificare, informații, activări sau exporturi.
 
 ## <a name="refresh-data-sources"></a>Actualizați sursele de date
 
@@ -64,23 +69,12 @@ Sursele de date pot fi reîmprospătate într-un program automat sau reîmprosp�
 
 Mergi la **Admin** > **Sistem** > [**Programa**](system.md#schedule-tab) pentru a configura reîmprospătările programate de sistem ale surselor de date ingerate.
 
-Pentru a actualiza o sursă de date la cerere, urmați acești pași:
+Pentru a reîmprospăta un sursă de date la cerere:
 
 1. Accesați **Date** > **Surse de date**.
 
-1. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl reîmprospătați și să îl selectați **Reîmprospăta** din lista derulantă. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
+1. Selectați sursă de date pe care doriți să îl reîmprospătați și selectați **Reîmprospăta**. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
 
-1. Selectați **Oprire reîmprospătare** dacă doriți să anulați o reîmprospătare existentă iar sursa de date va reveni la ultima sa stare de reîmprospătare.
-
-## <a name="delete-a-data-source"></a>Ștergerea unei surse de date
-
-Un sursă de date poate fi șters numai dacă datele nu sunt utilizate în nicio prelucrare, cum ar fi unificare, informații, activări sau exporturi.
-
-1. Accesați **Date** > **Surse de date**.
-
-2. Selectați elipsa verticală (&vellip;) lângă sursă de date pe care doriți să îl eliminați și să îl selectați **Șterge** din meniul drop-down.
-
-3. Confirmați ștergerea.
-
+1. Selectați starea pentru a deschide **Detalii despre progres** panoul și vizualizați progresul. Pentru a anula lucrarea, selectați **Anulează jobul** în partea de jos a panoului.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

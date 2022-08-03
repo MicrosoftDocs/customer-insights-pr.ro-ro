@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 39d68011df9e4341244af627bb71f4e3635256bb
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
+ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9083190"
+ms.lasthandoff: 07/27/2022
+ms.locfileid: "9195673"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
@@ -28,7 +28,7 @@ Funcționalitatea în timp real oferă date imediat pentru consum, până când 
 
 Actualizările în timp real au un termen de expirare, după care nu mai suprascriu valoarea din sursă de date:
 
-- Actualizările profilului vor fi păstrate timp de 4 ore
+- Actualizările profilului vor fi păstrate timp de patru ore
 - Activitățile se vor păstra timp de 30 de zile
 
 Aceste valori sunt parametrii de apel API pe care îi puteți modifica. Ei urmăresc să se asigure că datele dvs. sursă rămân sursa de adevăr. Dacă doriți ca actualizările în timp real să fie incluse mai mult timp, trebuie să le adăugați la o sursă de date, astfel încât să fie trase în timpul următoarei reîmprospătări programate.

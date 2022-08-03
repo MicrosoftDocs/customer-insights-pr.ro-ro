@@ -13,16 +13,14 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 27dff3551ab411a12c273536d7431d651c48573e
-ms.sourcegitcommit: 6a5f4312a2bb808c40830863f26620daf65b921d
-ms.translationtype: MT
+ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/11/2022
-ms.locfileid: "8742977"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139444"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Eliminați duplicatele înainte de unificarea datelor
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Acest pas în unificare vă permite opțional să configurați reguli pentru gestionarea înregistrărilor duplicate într-o entitate. *Deduplicarea* identifică înregistrările duplicate și le îmbină într-o singură înregistrare. Înregistrările sursă sunt legate de înregistrarea combinată cu ID-uri alternative. Dacă regulile nu sunt configurate, se aplică regulile definite de sistem.
 
@@ -60,7 +58,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 
    1. Opțional, selectați **Adăuga** > **Adăugați o condiție** pentru a adăuga mai multe condiții la regulă. Condițiile sunt conectate cu un operator AND logic și astfel executate numai dacă sunt îndeplinite toate condițiile.
 
-   1. Opțional, **Adăuga** > **Adăugați o excepție** la [adăugați excepții de la regulă](match-entities.md#add-exceptions-to-a-rule). Excepțiile sunt utilizate pentru a aborda cazuri rare de fals pozitive și fals negative.
+   1. Opțional, **Adăuga** > **Adăugați o excepție** la [adăugați excepții de la regulă](match-entities.md#add-exceptions-to-a-rule). Excepțiile sunt folosite pentru a aborda cazuri rare de fals pozitive și fals negative.
 
    1. Selectați **Terminat** pentru a crea regula.
 
@@ -76,7 +74,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
       
       În caz de egalitate, recordul de câștigător este cel cu MAX(PK) sau valoarea cheii primare mai mare.
       
-   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie să specificați și un câmp de dată/ora care definește recentitatea.
+   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie, de asemenea, să specificați un câmp de dată/ora care definește recentitatea.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Panoul de preferințe avansate de îmbinare care arată e-mailul recent și adresa completă":::
 
@@ -85,7 +83,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 1. După definirea regulilor de deduplicare și a preferințelor de îmbinare, selectați **Următorul**.
   
 > [!div class="nextstepaction"]
-> [Următorul pas pentru o singură entitate: Unificarea câmpurilor](merge-entities.md)
+> [Următorul pas pentru o singură entitate: Unificați câmpurile](merge-entities.md)
 
 > [!div class="nextstepaction"]
 > [Următorul pas pentru mai multe entități: Condiții de potrivire](match-entities.md)

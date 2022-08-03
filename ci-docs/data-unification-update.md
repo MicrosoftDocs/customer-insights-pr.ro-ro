@@ -13,16 +13,14 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 590a2996cf8b2b1c6def59b78583169ec1910b59
-ms.sourcegitcommit: 760fbac397c738407c7dea59297d54cae19b6f57
+ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/03/2022
-ms.locfileid: "8844055"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139626"
 ---
 # <a name="update-the-unification-settings"></a>Actualizați setările de unificare
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 Pentru a revizui sau modifica orice setări de unificare odată ce un profil unificat a fost creat, parcurgeți următorii pași.
 
@@ -61,7 +59,7 @@ Nu puteți elimina un atribut sau o entitate dacă acestea au fost deja unificat
 
 1. Opțional, puteți modifica cheia primară pentru o entitate, tipurile de atribute și comutați **Cartografiere inteligentă** pornit sau oprit. Pentru mai multe informații, vezi [Selectați cheia primară și tipul semantic pentru atribute](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
-1. Selectați **Următorul** pentru a modifica regulile de deduplicare sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a modifica regulile de deduplicare sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Gestionați regulile de deduplicare
 
@@ -75,7 +73,7 @@ Nu puteți elimina un atribut sau o entitate dacă acestea au fost deja unificat
 
 1. Pentru a gestiona regulile de deduplicare, alegeți oricare dintre următoarele opțiuni:
    - **Creați o nouă regulă** : Selectați **Adăugați o regulă** sub entitatea corespunzătoare. Pentru mai multe informații, vezi [Definiți regulile de deduplicare](remove-duplicates.md#define-deduplication-rules).
-   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Modificați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
+   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Schimbați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
    - **previzualizare** : Selectați regula și apoi **previzualizare** pentru a vizualiza rezultatele ultimei rulări pentru această regulă.
    - **Dezactivați o regulă** : Selectați regula și apoi **Dezactivați** pentru a păstra o regulă de deduplicare în timp ce o excludeți din procesul de potrivire.
    - **Duplicați o regulă** : Selectați regula și apoi **Duplicat** pentru a crea o regulă similară cu modificări.
@@ -89,7 +87,7 @@ Nu puteți elimina un atribut sau o entitate dacă acestea au fost deja unificat
 
    1. Selectați **Terminat**.
 
-1. Selectați **Următorul** pentru a modifica condițiile de potrivire sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a modifica condițiile de potrivire sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-match-rules"></a>Gestionare reguli de potrivire
 
@@ -106,7 +104,7 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 
 1. Pentru a vedea rezultatele tuturor regulilor și scorurile acestora, selectați **Vezi ultima rulare**. Se afișează rezultatele, inclusiv ID-urile de contact alternative. Puteți descărca rezultatele.
 
-1. Pentru a vedea rezultatele și scorurile unei anumite reguli, selectați regula și apoi **previzualizare**. Se afișează rezultatele. Puteți descărca rezultatele.
+1. Pentru a vizualiza rezultatele și scorurile unei anumite reguli, selectați regula și apoi **previzualizare**. Se afișează rezultatele. Puteți descărca rezultatele.
 
 1. Pentru a vedea rezultatele unei anumite condiții pe o regulă, selectați regula și apoi **Editați | ×**. În panoul Editare, selectați **previzualizare** sub conditia. Puteți descărca rezultatele.
 
@@ -117,12 +115,12 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 1. Pentru a gestiona regulile, alegeți oricare dintre următoarele opțiuni:
    - **Creați o nouă regulă** : Selectați **Adăugați o regulă** sub entitatea corespunzătoare. Pentru mai multe informații, vezi [Definiți reguli pentru perechile de potrivire](match-entities.md#define-rules-for-match-pairs).
    - **Schimbați ordinea regulilor dvs** dacă ați definit mai multe reguli: trageți și plasați regulile în ordinea dorită. Pentru mai multe informații, vezi [Specificați ordinea de potrivire](match-entities.md#specify-the-match-order).
-   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Modificați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
+   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Schimbați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
    - **Dezactivați o regulă** : Selectați regula și apoi **Dezactivați** pentru a păstra o regulă de potrivire în timp ce o excludeți din procesul de potrivire.
    - **Duplicați o regulă** : Selectați regula și apoi **Duplicat** pentru a crea o regulă similară cu modificări.
    - **Ștergeți o regulă** : Selectați regula și apoi **Șterge**.
 
-1. Selectați **Următorul** pentru a modifica câmpurile unificate sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a efectua modificări câmpurilor unificate sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Gestionați câmpurile unificate
 
@@ -132,11 +130,11 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 
 1. Examinați câmpurile combinate și excluse și faceți modificările necesare. Adăugați sau editați cheia CustomerID sau profilurile de grup în grupuri. Pentru mai multe informații, vezi [Unificați câmpurile clienților](merge-entities.md).
 
-1. Selectați **Următorul** pentru a revizui setările de unificare și [actualizați profilul unificat și dependențele](#run-updates-to-the-unified-customer-profile), sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings) pentru a face mai multe modificări.
+1. Selectați **Următorul** pentru a revizui setările de unificare și [actualizați profilul unificat și dependențele](#run-updates-to-the-unified-customer-profile), sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings) pentru a face mai multe modificări.
 
 ## <a name="run-matching-conditions"></a>Rulați condiții de potrivire
 
-Run matching conditions rulează numai deduplicarea și potrivirea regulilor și actualizează entitatile *Deduplicare_* și *ConflationMatchPair*.
+Run matching conditions rulează numai deduplicarea și potrivirea regulilor și actualizează *Deduplicare_* * și *ConflationMatchPair* entitati.
 
 1. De la **Date** > **Unifica** pagina, selectați **Rulați numai condiții de potrivire**.
 
@@ -164,4 +162,4 @@ Run matching conditions rulează numai deduplicarea și potrivirea regulilor și
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-Rezultatele unei rulări de succes sunt afișate pe **Unifica** pagină care arată numărul de profiluri de clienți unificate.
+Rezultatele unei rulări reușite se afișează pe **Unifica** pagină care arată numărul de profiluri de clienți unificate.

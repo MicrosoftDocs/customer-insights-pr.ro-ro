@@ -12,69 +12,59 @@ searchScope:
 - ci-segment-builder
 - ci-segment-insights
 - customerInsights
-ms.openlocfilehash: d58b2e424fd81ad691db4b2576bdf5655038ed89
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 09fe36a4da45d114cbfccf8dad1e7b80b4b7e320
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054820"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170742"
 ---
 # <a name="find-similar-customers-with-ai-preview"></a>Găsiți clienți similari cu AI (previzualizare)
 
-Această caracteristică vă permite să găsiți clienți similari în baza de clienți utilizând inteligența artificială. Trebuie să aveți cel puțin un segment creat pentru a utiliza această caracteristică. Extinderea criteriilor unui segment existent vă ajută să găsiți clienți similari cu acel segment.
+Găsiți clienți similari în baza de clienți utilizând informații artificiale. Aveți nevoie de cel puțin un segment creat pentru a utiliza această funcție. Extinderea criteriilor unui segment existent ajută la găsirea de clienți care sunt similari cu acel segment.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWOFou]
 
 > [!NOTE]
-> *Găsiți clienți similari* utilizează mijloace automate pentru a evalua datele și a face predicții pe baza acestor date și, prin urmare, are capacitatea de a fi utilizat ca metodă de profilare, deoarece acest termen este definit prin Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv predicțiile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.
+> *Găsiți clienți similari* folosește mijloace automate pentru a evalua datele și a face predicții pe baza acestor date. Prin urmare, are capacitatea de a fi utilizat ca metodă de profilare, așa cum termenul respectiv este definit de Regulamentul general privind protecția datelor („GDPR”). Utilizarea acestei funcții de către client pentru prelucrarea datelor poate fi supusă RGPD sau altor legi sau reglementări. Sunteți responsabil pentru a vă asigura că utilizarea de către dvs. a Dynamics 365 Customer Insights, inclusiv predicțiile, respectă toate legile și reglementările aplicabile, inclusiv legile legate de confidențialitate, date cu caracter personal, date biometrice, protecția datelor și confidențialitatea comunicărilor.
 
-## <a name="finding-similar-customers"></a>Găsirea unor clienți similari
+## <a name="find-similar-customers"></a>Găsiți clienți similari
 
 1. Mergi la **Segmente** și selectați segmentul pe care doriți să vă bazați noul segment. Acesta este *segmentul sursă* al dvs.
 
-1. În bara de acțiuni, selectați **Găsiți clienți similari**.
+1. Selectați **Găsiți clienți similari**.
 
 1. Examinați numele sugerat pentru noul segment și schimbați-l dacă este necesar.
 
 1. Opțional, adăugați [Etichete](work-with-tags-columns.md#manage-tags) la noul segment.
 
-1. Examinați câmpurile care definesc noul dvs. segment. Aceste câmpuri definesc baza pe care sistemul va încerca să găsească clienți similari cu segmentul dvs. sursă. În mod implicit, sistemul va selecta câmpurile recomandate.
+1. Examinați câmpurile care definesc noul dvs. segment. Aceste câmpuri definesc baza pe care sistemul va încerca să găsească clienți similari cu segmentul dvs. sursă. Sistemul selectează în mod implicit câmpurile recomandate. Dacă este necesar, adăugați mai multe câmpuri.
   Câmpurile care pot reduce semnificativ performanța modelului sunt excluse automat:
   
    - Câmpuri cu următoarele tipuri de date: StringType, BooleanType, CharType, LongType, IntType, DoubleType, FloatType, ShortType
    - Câmpuri cu o cardinalitate (numărul de elemente dintr-un câmp) mai mică de 2 sau mai mare de 30
 
-1. Alegeți dacă doriți să includeți **Toți clienții** sau numai clienții dintr-un **Segment specific existent** în noul dvs. segment.
+1. Alegeți dacă doriți să includeți **Toți clienții** cu excepția segmentului sursă sau numai clienții din a **segment diferit** în noul tău segment.
 
 1. În mod implicit, sistemul sugerează să includeți doar 20% din mărimea publicului țintă în rezultatul dvs. Editați acest prag în funcție de necesități. Creșterea pragului va reduce precizia.
 
-1. Includeți clienții în segmentul sursă selectând **Includeți membri din segmentul sursă în plus față de clienții cu atribute similare** Caseta de bifat.
+1. Includeți clienții în segmentul sursă selectând **Includeți membri din segmentul sursă pe lângă clienții cu atribute similare** Caseta de bifat.
 
-1. Selectați **Rulează** în partea de jos a paginii pentru a începe o sarcină de clasificare binară (o metodă a învățare programată) care analizează setul de date.
+1. Selectați **Alerga** în partea de jos a paginii pentru a începe a [sarcină de clasificare binară](#about-similarity-scores) (o metodă de învățare programată) care analizează setul de date.
 
 ## <a name="view-the-similar-segment"></a>Vizualizați segmentul similar
 
-După procesarea segmentului similar, veți găsi noul segment listat pe pagina **Segmente**.
+După procesarea segmentului similar, veți găsi noul segment listat pe **Segmente** pagina cu tipul **Expansiune**.
 
-> [!div class="mx-imgBorder"]
-> ![Segment de clienți similar.](media/expanded-segment.png "Segment de clienți similar")
+Selectați **Vedere** pentru a vedea distribuția rezultatelor [scoruri de similaritate](#about-similarity-scores) și valorile scorului de similaritate sub **Previzualizarea membrilor segmentului**.
 
-Selectați **Vizualizare** în bara de acțiuni pentru a deschide detaliile segmentului. Această vizualizare conține informații despre distribuția rezultatelor în cadrul [scorurilor de similaritate](#about-similarity-scores). De asemenea, veți găsi valorile scorului de similaritate în **Previzualizarea membrilor segmentului**.
+:::image type="content" source="media/expanded-segment.png" alt-text="Segment de clienți similar.":::
 
-## <a name="use-the-output-of-a-similar-segment"></a>Utilizați rezultatul unui segment similar
+## <a name="manage-a-similar-segment"></a>Gestionați un segment similar
 
-Puteți [lucra cu rezultatul unui segment similar](segments.md) așa cum faceți cu alte segmente. De exemplu, exportați segmentul sau construiți o măsură.
+[Lucrați și gestionați un segment similar](segments.md#manage-existing-segments) asa cum faci cu alte segmente. De exemplu, exportați segmentul sau construiți o măsură.
 
-## <a name="refresh-and-edit-a-similar-segment"></a>Reîmprospătați și editați un segment similar
-
-Pentru a reîmprospăta un segment similar, selectați-l pe pagina **Segmente** și selectați **Reîmprospătare** în bara de acțiune.
-
-Editarea unui segment similar va reprocesa datele dumneavoastră. Segmentul creat anterior este actualizat cu datele reîmprospătate.
-Pentru a edita un segment similar, selectați-l pe pagina **Segmente** și selectați **Editare** în bara de acțiune. Aplicați modificările și selectați **Rulează** pentru a începe procesarea.
-
-## <a name="delete-a-similar-segment"></a>Ștergeți un segment similar
-
-Selectați segmentul de pe pagina **Segmente** și selectați **Ștergeți** în bara de acțiune. Apoi, confirmați ștergerea.
+Editați, reîmprospătați, redenumiți, descărcați și ștergeți un segment similar. Editarea unui segment similar vă reprocesează datele. Segmentul creat anterior este actualizat cu datele reîmprospătate.
 
 ## <a name="about-similarity-scores"></a>Despre scoruri de similaritate
 

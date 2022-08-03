@@ -14,18 +14,16 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: ceb2724ad490c1ba44fd9b7ff2be04721892fca4
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
-ms.translationtype: MT
+ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082959"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139672"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unificați câmpurile clienților pentru unificarea datelor
 
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
-
-În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea dvs. de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri separate de e-mail sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
+În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea dvs. de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri de e-mail separate sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
 
 :::image type="content" source="media/m3_unify.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
 
@@ -40,7 +38,7 @@ ms.locfileid: "9082959"
       - [Excludere](#exclude-fields)
       - [Deplasați-vă în sus sau în jos](#change-the-order-of-fields)
 
-   1. Pentru orice câmp, puteți:
+   1. Pentru orice câmpuri individuale, puteți:
       - [Combinare câmpuri](#combine-fields-manually)
       - [Combinați un grup de câmpuri](#combine-a-group-of-fields)
       - [Redenumire](#rename-fields)
@@ -49,7 +47,7 @@ ms.locfileid: "9082959"
 
 1. Opțional, [generați configurația ID-ului clientului](#configure-customer-id-generation).
 
-1. Opțional, [grupează profilurile în gospodării sau clustere](#group-profiles-into-households-or-clusters).
+1. Opțional, [grupează profilurile în gospodării sau grupuri](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Pasul următor: revizuiți unificarea](review-unification.md)
@@ -145,7 +143,7 @@ Tratați un grup de câmpuri ca o singură unitate. De exemplu, dacă înregistr
 
 Definiți cum să generați valorile ID-ului clientului, identificatorii unici ai profilului clientului. Pasul de unificare a câmpurilor din procesul de unificare a datelor generează identificatorul unic al profilului clientului. Identificatorul este *Număr de înregistrare client* în *Client* entitate care rezultă din procesul de unificare a datelor.
 
-The *Număr de înregistrare client*  se bazează pe un hash al primei valori a cheilor primare ale câștigătoarei non-nule. Aceste chei provin de la entitățile utilizate în unificarea datelor și sunt influențate de ordinea potrivirii.Deci, ID-ul de client generat se poate schimba atunci când o valoare a cheii primare se modifică în entitatea principală a comenzii de potrivire. Este posibil ca valoarea cheii primare să nu reprezinte întotdeauna același client.
+The *Număr de înregistrare client*  se bazează pe un hash al primei valori a cheilor primare ale câștigătoarei non-nule. Aceste chei provin de la entitățile utilizate în unificarea datelor și sunt influențate de ordinea potrivirii.Deci, ID-ul clientului generat se poate schimba atunci când o valoare a cheii primare se modifică în entitatea principală a comenzii de potrivire. Este posibil ca valoarea cheii primare să nu reprezinte întotdeauna același client.
 
 Configurarea unui ID stabil de client vă permite să evitați acel comportament.
 

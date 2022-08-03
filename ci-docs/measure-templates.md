@@ -11,25 +11,24 @@ manager: shellyha
 searchScope:
 - ci-measure-template
 - customerInsights
-ms.openlocfilehash: f6bcdfc45a49c36f22d6ebc6e919f43b27f899d8
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 6dc7fce78d10ba91de4b2abf54c6c6ab1c919d3a
+ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051699"
+ms.lasthandoff: 07/18/2022
+ms.locfileid: "9170788"
 ---
 # <a name="create-measures-from-templates"></a>Creați măsuri din șabloane
 
-Puteți utiliza șabloane predefinite de cele utilizate în mod obișnuit [măsuri](measures.md) pentru a le crea. Descrieri detaliate ale șabloanelor și o experiență ghidată vă ajută la crearea eficientă a măsurilor. Șabloanele se bazează pe date cartografiate din entitatea *Activitate unificată*. Deci, asigurați-vă că ați configurat [activitățile clienților](activities.md) înainte de a crea o măsură dintr-un șablon.
+Utilizați șabloane predefinite de utilizate în mod obișnuit [măsuri](measures.md) pentru a le crea. Șabloanele se bazează pe date cartografiate din entitatea *Activitate unificată*. Deci, asigurați-vă că ați configurat [activitățile clienților](activities.md) înainte de a crea o măsură dintr-un șablon.
 
-Pentru a crea măsuri personalizate, consultați [Utilizați generatorul de măsuri pentru a crea măsuri de la zero](measure-builder.md).
+Șabloanele de măsură sunt acceptate numai în medii pentru **clienți individuali**. Pentru a crea măsuri personalizate sau pentru a crea măsuri pentru B-to-B, consultați [Utilizați generatorul de măsură](measure-builder.md).
 
-# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
-
-Șabloane de măsură disponibile: 
+Șabloane de măsură disponibile:
 - Valoarea medie a tranzacției (ATV)
 - Valoarea totală a tranzacțiilor
 - Venitul mediu zilnic
+- Venitul mediu lunar
 - Venitul mediu anual
 - Numărul de tranzacții
 - Puncte de fidelitate câștigate
@@ -57,21 +56,22 @@ Pentru a crea măsuri personalizate, consultați [Utilizați generatorul de măs
 
 1. Selectați **Terminat**.
 
-1. În secțiunea **Setați perioada de timp**, definiți intervalul de timp al datelor de utilizat. Alegeți dacă doriți ca noua măsură să acopere întregul set de date selectând **Tot timpul**, sau dacă doriți ca măsura să se concentreze pe o **Anumită perioadă de timp**.
+1. În **Setați perioada de timp** secțiunea, definiți intervalul de timp al datelor. Alegeți dacă doriți ca noua măsură să acopere întregul set de date selectând **Tot timpul**, sau dacă doriți ca măsura să se concentreze pe o **Anumită perioadă de timp**.
 
    :::image type="content" source="media/measure-set-time-period.png" alt-text="Captură de ecran care arată secțiunea perioadei de timp la configurarea unei măsuri dintr-un șablon.":::
 
 1. În secțiunea următoare, selectați **Adăugați date** pentru a alege activitățile și pentru a mapa datele corespunzătoare din entitatea *Activitate unificată*.
 
-    1. Pasul 1 din 2: Sub **Tipul activității**, alegeți tipul entității pe care doriți să o utilizați. Pentru **Activități**, selectați entitățile pe care doriți să le mapați.
-    1. Pasul 2 din 2: Alegeți atributul din entitatea *Activitate unificată* pentru componenta cerută de formulă. De exemplu, pentru Valoarea medie a tranzacției, este atributul care reprezintă valoarea tranzacției. Pentru **Marcaj de timp al activității**, alegeți atributul din entitatea de activitate unificată care reprezintă data și ora activității.
-   
-1. Odată ce maparea datelor are succes, puteți vedea starea drept **Finalizată** și numele activităților și atributelor mapate.
+    1. Pasul 1 din 2: Sub **Tipul activității**, alegeți tipul entității pe care doriți să o utilizați. Pentru **Activități**, selectați entitățile pe care doriți să le mapați, apoi selectați **Următorul**.
+    1. Pasul 2 din 2: Alegeți atributul din entitatea *Activitate unificată* pentru componenta cerută de formulă. De exemplu, pentru Valoarea medie a tranzacției, este atributul care reprezintă valoarea tranzacției. Pentru **Marca temporală a activității**, alegeți atributul din *Activitate unificată* entitate care reprezintă data și ora activității.
+    1. Selectați **Salvare**.
 
-1. Acum puteți selecta **Rulare** pentru a calcula rezultatele măsurii. Pentru a-l rafina mai târziu, selectați **Salvați schița**.
+    Când maparea datelor are succes, se afișează starea **Complet** și se afișează numele activităților și atributelor mapate.
 
-# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
+1. Selectați **Alerga** pentru a calcula rezultatele măsurii. Selectați **Salveaza schita** dacă doriți să păstrați configurația curentă și să rulați măsura mai târziu. The **Măsuri** afișează pagina.
 
-Această funcție este disponibilă numai pentru măsurile create în medii cu clienți individuali ca public țintă principal.
+## <a name="next-step"></a>Pasul următor
 
----
+Utilizați măsurile existente pentru a crea [un segment de clienți](segments.md).
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

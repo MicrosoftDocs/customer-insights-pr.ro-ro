@@ -11,16 +11,14 @@ manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 0dbc3b2c75365e94758a1b6330e8cb557e6bd768
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
+ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082224"
+ms.lasthandoff: 07/12/2022
+ms.locfileid: "9139533"
 ---
 # <a name="data-unification-overview"></a>Prezentare generală a unificării datelor
-
-[!INCLUDE [m3-prod-trial-note](includes/m3-prod-trial-note.md)]
 
 După [configurarea surselor de date](data-sources.md), puteți unifica datele. Unificarea datelor vă permite să unificați sursele de date odată diferite într-un singur set de date principal care oferă o vizualizare unificată a datelor respective. Pentru consumatorii individuali (B-to-C) în care datele sunt centrate în jurul persoanelor fizice, unificarea oferă o vedere unificată a clienților dvs. Pentru conturile de afaceri (B-to-B) în care datele sunt centrate pe conturi, unificarea oferă o vizualizare unificată a conturilor dvs.
 
@@ -30,9 +28,9 @@ Datele pot fi unificate pe o singură entitate sau pe mai multe entități. Unif
 
 1. [Înregistrări duplicate](remove-duplicates.md) (anterior parte a potrivirii): în pasul de înregistrări duplicate, definiți opțional reguli pentru a elimina înregistrările duplicate ale clienților din fiecare entitate.
 
-1. [Condiții de potrivire](match-entities.md) (denumit anterior Potrivire): în pasul condițiilor de potrivire, definiți reguli care potrivesc înregistrările clienților între entități. Când un client este găsit în două sau mai multe entități, este creată o singură înregistrare consolidată cu toate coloanele și datele din fiecare entitate.
+1. [Condiții de potrivire](match-entities.md) (numit anterior Potrivire): în pasul condițiilor de potrivire, definiți reguli care potrivesc înregistrările clienților între entități. Când un client este găsit în două sau mai multe entități, este creată o singură înregistrare consolidată cu toate coloanele și datele din fiecare entitate.
 
-1. [Câmpuri unificate pentru clienți](merge-entities.md) (numit anterior Îmbinare): în pasul Câmpuri unificate pentru clienți, determinați ce câmpuri sursă trebuie incluse, excluse sau îmbinate într-un profil de client unificat.  
+1. [Câmpuri unificate pentru clienți](merge-entities.md) (denumit anterior Îmbinare): în pasul Câmpuri unificate pentru clienți, determinați ce câmpuri sursă trebuie incluse, excluse sau îmbinate într-un profil de client unificat.  
 
 1. [Revizuire](review-unification.md) și creați profilul unificat.
 

@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6ab97c535454e84c1bb18aca00bca2568eb65a2a
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 591353bf1ba2f9ca05ddd137e1cf29dc0b0fba97
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207106"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245664"
 ---
 # <a name="data-sources-overview"></a>Prezentare generală surse de date
 
@@ -29,7 +29,7 @@ Puteți atașa sau importa surse de date în Customer Insights. Linkurile de mai
 
 **Atașați un sursă de date**
 
-Dacă aveți date pregătite într-unul dintre serviciile de date Azure de la Microsoft, Customer Insights se poate conecta cu ușurință la sursă de date fără a fi nevoie să reingere datele. Selectați una dintre următoarele opțiuni:
+Dacă aveți date pregătite într-unul dintre serviciile de date Azure ale Microsoft, Customer Insights se poate conecta cu ușurință la sursă de date fără a fi nevoie să reingere datele. Selectați una dintre următoarele opțiuni:
 - [Azure Data Lake Storage(fișiere csv sau parchet într-un folder Common Data Model)](connect-common-data-model.md)
 - [Azure Synapse Analytics(baze de date lacuri)](connect-synapse.md)
 - [Microsoft Dataverse lacul de date](connect-dataverse-managed-lake.md)
@@ -43,7 +43,7 @@ Dacă utilizați surse de date locale, Microsoft sau date terță parte, importa
 
 Dacă mediul dvs. a fost configurat pentru a utiliza stocarea Customer Insights și utilizați surse de date locale, utilizați Power Platform fluxuri de date. Cu Power Platform fluxuri de date, puteți vizualiza sursele de date partajate și sursele de date gestionate de alții. The **Surse de date** pagina listează sursele de date în trei secțiuni:
 - **Impartit** : Surse de date care pot fi gestionate de toți administratorii Customer Insights. Power Platform fluxuri de date, propriul cont de stocare și atașarea la a Dataverse -lacul de date gestionat sunt exemple de surse de date partajate.
-- **Gestionat de mine** :Power Platform fluxuri de date create și gestionate numai de dvs. Alți administratori Customer Insights pot vedea numai aceste fluxuri de date, dar nu le pot edita, reîmprospăta sau șterge.
+- **Gestionat de mine** :Power Platform fluxuri de date create și gestionate numai de dvs. Alți administratori Customer Insights pot vedea doar aceste fluxuri de date, dar nu le pot edita, reîmprospăta sau șterge.
 - **Gestionat de alții** :Power Platform fluxuri de date create de alți administratori. Puteți doar să le vizualizați. Acesta listează proprietarul fluxului de date pe care să îl contactați pentru orice asistență.
 > [!NOTE]
 > Toate entitățile pot fi vizualizate și utilizate de alți utilizatori. În timp ce sursele de date sunt deținute de utilizatorul care le-a creat, entitățile rezultate din asimilarea datelor pot fi folosite de fiecare utilizator al Customer Insights.
@@ -67,13 +67,13 @@ Selectați un sursă de date pentru a vedea acțiunile disponibile.
 
 Sursele de date pot fi reîmprospătate într-un program automat sau reîmprospătate manual la cerere. [Surse de date on-premise](connect-power-query.md#add-data-from-on-premises-data-sources) se reîmprospătează în propriile programări care sunt configurate în timpul ingerării datelor. Pentru sursele de date atașate, asimilarea datelor consumă cele mai recente date disponibile de la acel sursă de date.
 
-Mergi la **Admin** > **Sistem** > [**Programa**](system.md#schedule-tab) pentru a configura reîmprospătările programate de sistem ale surselor de date ingerate.
+Mergi la **Admin** > **Sistem** > [**Programa**](schedule-refresh.md) pentru a configura reîmprospătările programate de sistem ale surselor de date ingerate.
 
 Pentru a reîmprospăta un sursă de date la cerere:
 
 1. Accesați **Date** > **Surse de date**.
 
-1. Selectați sursă de date pe care doriți să îl reîmprospătați și selectați **Reîmprospăta**. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
+1. Selectați sursă de date pe care doriți să-l reîmprospătați și selectați **Reîmprospăta**. Sursa de date este acum declanșată pentru o reîmprospătare manuală. Reîmprospătarea unei surse de date va actualiza atât schema entității, cât și datele pentru toate entitățile specificate în sursa de date.
 
 1. Selectați starea pentru a deschide **Detalii despre progres** panoul și vizualizați progresul. Pentru a anula lucrarea, selectați **Anulează jobul** în partea de jos a panoului.
 

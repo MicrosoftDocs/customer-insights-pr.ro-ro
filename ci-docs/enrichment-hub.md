@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 6b6daab480db5e37830ff58b71dcdd3bbdbe46da
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
-ms.translationtype: MT
+ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9053895"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245894"
 ---
 # <a name="data-enrichment-preview-overview"></a>Prezentare generală privind îmbogățirea datelor (previzualizare).
 
@@ -76,20 +76,20 @@ Selectați îmbogățirea pentru a vedea acțiunile disponibile.
 - **Vizualizare** detalii de îmbogățire cu numărul de profiluri de clienți îmbogățite.
 - **Editați** configurația de îmbogățire.
 - [**Alerga**](#run-or-refresh-enrichments) îmbogățirea pentru a actualiza profilurile clienților cu cele mai recente date. Rulați mai multe îmbogățiri simultan, selectându-le în listă.
-- **Activati** sau **Dezactivați** o îmbogățire. Îmbogățirile inactive nu vor fi reîmprospătate în timpul unui [reîmprospătare programată](system.md#schedule-tab).
+- **Activati** sau **Dezactivați** o îmbogățire. Îmbogățirile inactive nu vor fi reîmprospătate în timpul unui [reîmprospătare programată](schedule-refresh.md).
 - **Ștergeți** îmbogățirea.
 
 De asemenea, puteți crea [segmente](segments.md) sau [măsuri](measures.md) din îmbogăţiri.
 
 ## <a name="run-or-refresh-enrichments"></a>Rulați sau reîmprospătați îmbogățirile
 
-Odată executate, îmbogățirile pot fi reîmprospătate într-un program automat sau reîmprospătate manual la cerere.
+Odată executate, îmbogățirile pot fi reîmprospătate pe o programare automată sau reîmprospătate manual la cerere.
 
-1. Pentru a reîmprospăta manual una sau mai multe îmbogățiri, selectați-le și alegeți **Alerga**. La [programați o reîmprospătare automată](system.md#schedule-tab), mergi la **Admin** > **Sistem** > **Programa**. Timpul de procesare depinde de dimensiunea datelor clienților dvs.
+1. Pentru a reîmprospăta manual una sau mai multe îmbogățiri, selectați-le și alegeți **Alerga**. La [programați o reîmprospătare automată](schedule-refresh.md), mergi la **Admin** > **Sistem** > **Programa**. Timpul de procesare depinde de dimensiunea datelor clienților dvs.
 
 1. Opțional, [vezi progresul procesului de îmbogățire](#see-the-progress-of-the-enrichment-process).
 
-1. După finalizarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a examina datele profilurilor client nou îmbogățite, ora ultimei actualizări și numărul de profiluri îmbogățite.
+1. După finalizarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a examina datele profilurilor de clienți nou îmbogățite, ora ultimei actualizări și numărul de profiluri îmbogățite.
 
 1. Selectați îmbogățirea pentru a vedea [rezultate de îmbogățire](#view-enrichment-results).
 
@@ -102,6 +102,8 @@ Puteți găsi detalii despre procesarea unei îmbogățiri, inclusiv starea aces
 1. În panoul **Detalii despre progres**, extindeți secțiunea **Îmbogățiri**.
 1. Sub îmbogățirea pe care doriți să vedeți progresul, selectați **Vezi detalii**.
 1. În panoul **Detalii despre activitate**, selectați **Arată detaliile** pentru a vedea procesele care sunt implicate în actualizarea îmbogățirii și a statutului lor.
+
+[!INCLUDE [progress-details-pane](includes/progress-details-pane.md)]
 
 ## <a name="view-enrichment-results"></a>Vedeți rezultatele îmbogățirii
 

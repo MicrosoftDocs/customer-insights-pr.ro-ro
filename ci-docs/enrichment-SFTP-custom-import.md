@@ -1,19 +1,19 @@
 ---
 title: Îmbogățiți profilurile clienților cu import personalizat SFTP (previzualizare)
 description: Informații generale despre îmbogățirea particularizată a importului SFTP.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 81ef6c62240e26cb5c9475e6306e08edc7e5eb31
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 831d1d3d3045379bbc5bcdcd4b05b8a147221f31
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195811"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237781"
 ---
 # <a name="enrich-customer-profiles-with-sftp-custom-import-preview"></a>Îmbogățiți profilurile clienților cu import personalizat SFTP (previzualizare)
 
@@ -21,9 +21,9 @@ Importul particularizat Secure File Transfer Protocol (SFTP) vă permite să imp
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- Numele fișierului și locația (calea) fișierului care urmează să fie importat pe gazda SFTP sunt cunoscute.
+- Numele și locația (calea) fișierului care urmează să fie importat pe gazda SFTP sunt cunoscute.
 
-- A *model.json* este disponibil un fișier care specifică schema Common Data Model pentru datele de importat. Acest fișier trebuie să fie în același director cu fișierul de importat.
+- A *model.json* este disponibil un fișier care specifică schema Common Data Model pentru datele care urmează să fie importate. Acest fișier trebuie să fie în același director cu fișierul de importat.
 
 - Un SFTP [conexiune](connections.md) este [configurat](#configure-the-connection-for-sftp-custom-import).
 
@@ -77,7 +77,7 @@ Directorul care conține fișierul de importat pe serverul SFTP trebuie să con�
 
 Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți acreditările utilizatorului, adresa URL și numărul portului pentru locația SFTP de unde doriți să importați datele.
 
-1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Import personalizat.
+1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau mergeți la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Import personalizat.
 
    :::image type="content" source="media/enrichment-SFTP-connection.png" alt-text="Pagina de configurare a conexiunii de import personalizat.":::
 
@@ -85,14 +85,9 @@ Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights �
 
 1. Introduceți un nume de utilizator, o parolă și o adresă URL gazdă valide pentru serverul SFTP pe care se află datele de importat.
 
-1. Examinați și furnizați consimțământul pentru [Confidențialitatea și respectarea datelor](#data-privacy-and-compliance) prin selectarea **Sunt de acord**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Verifica** pentru a valida configurația și apoi selectați **Salvați**.
-
-### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date folosind Custom Import, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil să vă asigurați că datele îndeplinesc orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 ## <a name="configure-the-import"></a>Configurați importul
 
@@ -110,7 +105,7 @@ Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această �
 
 1. Selectați **Următorul**.
 
-1. Introduceți **cale** și **Nume de fișier** a fișierului de date pe care doriți să-l importați.
+1. Introduceți **cale** și **Nume de fișier** a fișierului de date pe care doriți să îl importați.
 
 1. Selectați **Următorul**.
 

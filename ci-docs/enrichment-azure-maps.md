@@ -1,23 +1,23 @@
 ---
 title: Îmbogățiți profilurile clienților cu date despre locație din Azure Maps (previzualizare)
 description: Informații generale despre îmbogățire de primă parte Azure Maps.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: dfadc08f67beac3fded1a97e557ee9e1880664e0
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: f14b4fc20a9a1d8842f42f9e0e656b3d8dcddcf4
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052622"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9238057"
 ---
 # <a name="enrich-customer-profiles-with-location-data-from-azure-maps-preview"></a>Îmbogățiți profilurile clienților cu date despre locație din Azure Maps (previzualizare)
 
-Azure Maps oferă date și servicii centrate pe locație pentru a oferi experiențe bazate pe date geospațiale cu inteligență încorporată privind locația. Serviciile de îmbogățire a datelor Azure Maps îmbunătățesc precizia informațiilor despre locație despre clienții dvs. Aduce capabilități precum normalizarea adreselor și extragerea latitudinii și longitudinii la Dynamics 365 Customer Insights.
+Azure Maps oferă date și servicii centrate pe locație pentru a oferi experiențe bazate pe date geospațiale cu inteligență de locație încorporată. Serviciile de îmbogățire a datelor Azure Maps îmbunătățesc precizia informațiilor despre locație despre clienții dvs. Aduce capabilități precum normalizarea adreselor și extragerea latitudinii și longitudinii la Dynamics 365 Customer Insights.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -35,14 +35,9 @@ Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights �
 
 1. Introduceți un nume pentru conexiune și o cheie API Azure Maps validă.
 
-1. Examinați și furnizați consimțământul pentru [Confidențialitatea și respectarea datelor](#data-privacy-and-compliance) prin selectarea **Sunt de acord**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Verifica** pentru a valida configurația și apoi selectați **Salvați**.
-
-### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Azure Maps, permiteți transfer de date în afara limitelor de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi date cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Azure Maps îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru mai multe informații, accesați [Declarație de confidențialitate Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 
@@ -70,7 +65,7 @@ Administratorul Dynamics 365 Customer Insights poate să elimine această îmbog
 
 1. Revizuire **Setari avansate** care oferă flexibilitate maximă pentru a gestiona cazuri de utilizare avansate. Cu toate acestea, următoarele valori implicite de obicei nu trebuie modificate.
 
-   - **Tipul adreselor** : Cea mai bună potrivire a adresei revine chiar dacă este incompletă. Pentru a obține numai adrese complete&mdash;de exemplu, adrese care includ numărul casei&mdash;debifați toate casetele de selectare, cu excepția **Adrese punct**.
+   - **Tipuri de adrese** : Cea mai bună potrivire a adresei revine chiar dacă este incompletă. Pentru a obține numai adrese complete&mdash;de exemplu, adrese care includ numărul casei&mdash;debifați toate casetele de selectare, cu excepția **Adrese punct**.
    - **Limba** : Adresele revin în limba în funcție de regiunea adresei. Pentru a aplica o limbă de adresă standardizată, selectați limba din meniul derulant. De exemplu, selectarea **Engleză** se intoarce **Copenhaga, Danemarca** în loc de **København, Danemarca**.
    - **Numărul maxim de rezultate** : Numărul de rezultate pe adresă.
 

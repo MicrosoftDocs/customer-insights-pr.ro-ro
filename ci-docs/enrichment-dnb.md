@@ -1,7 +1,7 @@
 ---
 title: Îmbogățiți profilurile companiei cu Dun & Bradstreet (previzualizare)
 description: Informații generale despre îmbogățirea de la terți Dun & Bradstreet.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.service: customer-insights
 ms.subservice: audience-insights
@@ -9,12 +9,12 @@ ms.topic: how-to
 author: jodahlMSFT
 ms.author: jodahl
 manager: shellyha
-ms.openlocfilehash: 71b35e4295e19c13edadc6548ac79715555e8183
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: e89b64774dcb519a071dd3d403473807a50e7f33
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196041"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237919"
 ---
 # <a name="enrich-company-profiles-with-dun--bradstreet-preview"></a>Îmbogățiți profilurile companiei cu Dun & Bradstreet (previzualizare)
 
@@ -49,22 +49,17 @@ Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii
 
 Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți acreditările de la Dun & Bradstreet Connect.
 
-1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
+1. Selectați **Adăugați conexiune** atunci când configurați o îmbogățire sau mergeți la **Admin** > **Conexiuni** și selectați **Înființat** pe tigla Dun & Bradstreet.
 
 1. Introduceți un nume pentru conexiune.
 
 1. Furnizați acreditările Dun & Bradstreet valide și detaliile proiectului Dun & Bradstreet *Regiunea, Calea folderului Drop și Drop folder name*. Tu [obține aceste informații](#set-up-your-dun--bradstreet-project) din proiectul Dun & Bradstreet.
 
-1. Examinați și furnizați consimțământul pentru [Confidențialitatea și respectarea datelor](#data-privacy-and-compliance) prin selectarea **Sunt de acord**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Verifica** pentru a valida configurația și apoi selectați **Salvați**.
 
    :::image type="content" source="media/enrichment-dnb-connection.png" alt-text="Pagina de configurare a conexiunii Dun & Bradstreet.":::
-
-### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către Dun & Bradstreet, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi Datele cu caracter personal. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că Dun & Bradstreet îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru informații suplimentare, consultați [Angajamentul de respectare a confidențialității Microsoft](https://go.microsoft.com/fwlink/?linkid=396732).
-Administratorul dvs. Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 ## <a name="supported-countries-or-regions"></a>Țări sau regiuni sprijinite
 

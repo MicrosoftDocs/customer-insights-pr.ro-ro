@@ -1,7 +1,7 @@
 ---
-title: Gestionare permisiuni utilizator
+title: Atribuiți permisiuni de utilizator
 description: Aflați mai multe despre permisiuni și roluri de utilizator.
-ms.date: 02/09/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -12,20 +12,16 @@ searchScope:
 - ci-permissions
 - ci-system-security
 - customerInsights
-ms.openlocfilehash: 30b37645cad4e795ef20579e20e3f2bbdb2afbf6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: a59a672b6f7e1e67c2162ea14bb9860df0d551aa
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9054899"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245434"
 ---
-# <a name="manage-user-permissions"></a>Gestionare permisiuni utilizator
+# <a name="assign-user-permissions"></a>Atribuiți permisiuni de utilizator
 
-The **Permisiuni** pagina este locul în care veți configura rolurile și permisiunile pentru utilizarea Customer Insights.
-
-Trebuie să aveți permisiuni de administrator pentru a vedea pagina. Pentru a accesa pagina de permisiuni, accesați **Admin** > **Securitate** > **Utilizatori**.
-
-Există trei tipuri de roluri:
+Accesul la Customer Insights este limitat la utilizatorii din organizația dvs. care sunt adăugați la aplicație de către un administrator. Un administrator poate adăuga, edita sau elimina utilizatori. Un utilizator poate fi un singur utilizator, grup sau aplicație. Există trei tipuri de roluri pe care un utilizator le poate avea:
 
 ## <a name="viewer"></a>Spectator
 
@@ -41,18 +37,18 @@ Există trei tipuri de roluri:
 
 - Toate permisiunile disponibile pentru Spectator.
 - Încărcați și transformați datele utilizând pagina **Surse de date**.
-- Complet ***Unificarea datelor** care au ca rezultat entitatea de profil unificat al clientului.
+- Complet **Unificarea datelor** care au ca rezultat entitatea de profil unificat al clientului.
 - Definiți **Relații** și **Activități**.
 - Creați segmente folosind pagina **Segmente**.
 - Creați măsuri folosind pagina **Măsuri**.
 - Gestionați configurația și îmbogățiți profilurile clienților din pagina **Îmbogățire** (numai pentru îmbogățirea primară).
-- Gestionați și creați exporturi pe baza conexiunilor partajate cu colaboratorii. [Aflați mai multe despre modul în care administratorii permit colaboratorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
+- Gestionați și creați exporturi pe baza [conexiuni partajate cu colaboratorii](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
 ## <a name="admin"></a>Administrator
 
 - Toate permisiunile disponibile pentru Colaborator.
-- Modificați setările pe pagina **Sistem**, inclusiv limbajul de lucru și programele de actualizare pentru procesele sistemului.
-- Vizualizați și adăugați permisiunile folosind pagina **Permisiuni**.
+- Modificați setările pe **Sistem** pagina, inclusiv limba de lucru, programele de reîmprospătare pentru procesele sistemului dvs. și exportarea jurnalelor de diagnosticare.
+- Modificați setările pe **Securitate** pagina, inclusiv utilizatori, chei API, linkuri private și seif pentru chei.
 - Setați definițiile căutare și filtrare pentru pagina Clienți utilizând pagina **Index de căutare și filtrare** (accesibilă prin pagina **Clienți**).
 - Gestionați conexiunile și permiteți-le activarea altor roluri de utilizator pe pagina **Conexiuni**.
 - Gestionați configurația și îmbogățiți profilurile clienților din pagina **Îmbogățire** (pentru toate îmbogățirile).
@@ -67,24 +63,27 @@ Există trei tipuri de roluri:
 - Toate permisiunile disponibile pentru administrator.
 - [Resetați și ștergeți](manage-environments.md#reset-an-existing-environment-preview) mediul.
 
-## <a name="assign-roles-and-permissions"></a>Alocați roluri și permisiuni
+## <a name="add-users"></a>Adăugați utilizatori
 
-1. Mergi la **Admin** > **Securitate** > **Utilizatori***.
+1. Mergi la **Admin** > **Securitate** și selectați **Utilizatori** fila.
 
 1. Selectați **Adăugare utilizatori** pentru a deschide panoul **Adăugare/Editare permisiuni**.
 
-1. Folosiți câmpul **Căutare** pentru a găsi utilizatorul sau grupul Azure Active Directory ale cărui permisiuni doriți să le ajustați. Alege un **Rol** de atribuit acelui utilizator sau grup.
+1. Folosește **Căutare** câmp pentru a găsi Azure Active Directory utilizator sau grup pe care doriți să-l adăugați. Alege un **Rol** de atribuit acelui utilizator sau grup.
 
-1. Selectați **Salvare**. Mediul actual va fi distribuit automat utilizatorului sau membrilor grupului ale căror permisiuni le-ați modificat. Utilizatorii pot accesa aplicația Customer Insights și pot lucra în funcție de rolul specificat.
+1. Selectați **Salvare**. Mediul curent este partajat automat cu utilizatorul sau membrii grupului. Utilizatorii pot accesa aplicația Customer Insights și pot lucra în funcție de rolul specificat.
 
 ## <a name="view-current-permissions"></a>Vizualizați permisiunile curente
 
-Mergi la **Admin** > **Securitate** > **Utilizatori** pentru a vedea ce atribuții de rol sunt active în prezent.
+Mergi la **Admin** > **Securitate** și selectați **Utilizatori** pentru a vedea lista de utilizatori activi și alocarea rolurilor acestora. Puteți sorta lista de utilizatori după orice coloană sau puteți utiliza caseta de căutare pentru a găsi un anumit utilizator.
 
-- Coloana **Tip** specifică un singur utilizator, grup sau aplicație. Sistemul acceptă utilizatori individuali și grupuri.
-- Rolurile sunt specificate la coloana **Rol**.
-- Selectați orice titlu de coloană pentru a sorta rezultatele după valoarea coloanei respective.
-- Utilizați câmpul **Căutare** din partea de sus a paginii pentru a localiza anumiți utilizatori.
+## <a name="manage-current-users"></a>Gestionați utilizatorii actuali
 
+Mergi la **Admin** > **Securitate** și selectați **Utilizatori** fila. Puteți sorta lista de utilizatori după orice coloană sau puteți utiliza caseta de căutare pentru a găsi utilizatorul pe care doriți să-l gestionați.
+
+Selectați un utilizator pentru a vedea acțiunile disponibile.
+
+- **Editați | ×** pentru a edita rolul utilizatorului în Customer Insights. Selectați **Salvați** pentru a confirma modificarea.
+- **Elimina** pentru a elimina utilizatorul de a avea acces la Customer Insights. Selectați **Ștergere**, apoi confirmați ștergerea.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

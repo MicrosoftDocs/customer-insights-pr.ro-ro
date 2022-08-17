@@ -2,7 +2,7 @@
 title: Eliminați duplicatele înainte de unificarea datelor
 description: Al doilea pas în procesul de unificare este selectarea înregistrării pe care să o păstrați atunci când sunt găsite duplicate.
 recommendations: false
-ms.date: 04/22/2022
+ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -13,16 +13,25 @@ searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: a838fbdabdb3bfffc6d3835a3f0e97306a43964a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139444"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213642"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Eliminați duplicatele înainte de unificarea datelor
 
-Acest pas în unificare vă permite opțional să configurați reguli pentru gestionarea înregistrărilor duplicate într-o entitate. *Deduplicarea* identifică înregistrările duplicate și le îmbină într-o singură înregistrare. Înregistrările sursă sunt legate de înregistrarea combinată cu ID-uri alternative. Dacă regulile nu sunt configurate, se aplică regulile definite de sistem.
+Acest pas opțional de unificare vă permite să configurați reguli pentru eliminarea înregistrărilor duplicate **în** o entitate. Deduplicarea identifică mai multe înregistrări pentru un client și selectează cea mai bună înregistrare de păstrat (pe baza preferințelor de îmbinare de bază) sau îmbină înregistrările într-una singură (pe baza preferințelor avansate de îmbinare). Înregistrările sursă sunt legate de înregistrarea combinată cu ID-uri alternative. Dacă regulile nu sunt configurate, se aplică regulile definite de sistem.
+
+## <a name="default-deduplication"></a>Deduplicare implicită
+
+Regulile definite de sistem se aplică dacă nu sunt adăugate reguli de deduplicare.
+
+- Cheia primară este deduplicată.
+  Pentru orice înregistrări cu aceeași cheie primară, **Cele mai pline** record (cel cu cele mai puține valori nule) este câștigătorul.
+- Orice reguli de potrivire între entități sunt aplicate entității.
+  De exemplu: în pasul de potrivire, dacă entitatea A este corelată cu entitatea B activată *Numele complet* și *Data nașterii*, atunci entitatea A este, de asemenea, deduplicată de *Numele complet* și *Data nașterii*. Pentru că *Numele complet* și *Data nașterii* sunt chei valide pentru identificarea unui client în entitatea A, aceste chei sunt valabile și pentru identificarea clienților duplicați în entitatea A.
 
 ## <a name="include-enriched-entities-preview"></a>Includeți entități îmbogățite (previzualizare)
 
@@ -74,7 +83,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
       
       În caz de egalitate, recordul de câștigător este cel cu MAX(PK) sau valoarea cheii primare mai mare.
       
-   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie, de asemenea, să specificați un câmp de dată/ora care definește recentitatea.
+   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie să specificați și un câmp de dată/ora care definește recentitatea.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Panoul de preferințe avansate de îmbinare care arată e-mailul recent și adresa completă":::
 
@@ -83,7 +92,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 1. După definirea regulilor de deduplicare și a preferințelor de îmbinare, selectați **Următorul**.
   
 > [!div class="nextstepaction"]
-> [Următorul pas pentru o singură entitate: Unificați câmpurile](merge-entities.md)
+> [Următorul pas pentru o singură entitate: Unificarea câmpurilor](merge-entities.md)
 
 > [!div class="nextstepaction"]
 > [Următorul pas pentru mai multe entități: Condiții de potrivire](match-entities.md)

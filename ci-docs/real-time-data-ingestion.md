@@ -11,18 +11,18 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 403cc9dbd3bddcf67f59b5cb0be936af4d268fc2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195673"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246123"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
 Funcționalitatea aproape în timp real vă permite să vedeți, în câteva secunde, cele mai recente interacțiuni pe care clienții dvs. le-au făcut cu produsele sau serviciile dvs.
 
-[Reîmprospătări programate](system.md#schedule-tab) includ un număr mare de înregistrări și mai multe operațiuni complexe. În primul rând, datele sunt extrase din sursa de date. În continuare, datele sunt unificate, apoi îmbogățite cu informații suplimentare. Fiecare rulare a acestui proces poate dura de la câteva minute la câteva ore.
+[Reîmprospătări programate](schedule-refresh.md) includ un număr mare de înregistrări și mai multe operațiuni complexe. În primul rând, datele sunt extrase din sursa de date. În continuare, datele sunt unificate, apoi îmbogățite cu informații suplimentare. Fiecare rulare a acestui proces poate dura de la câteva minute la câteva ore.
 
 Funcționalitatea în timp real oferă date imediat pentru consum, până când actualizarea planificată ulterioară extrage aceste date din sursa de date.
 
@@ -85,7 +85,7 @@ Detalii despre acest API, inclusiv parametrii și răspunsurile, pot fi găsite 
 
 ## <a name="understand-your-real-time-usage-with-telemetry"></a>Înțelegeți utilizarea dvs. în timp real cu telemetria
 
-Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#api-usage-tab). 
+Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#view-api-usage). 
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

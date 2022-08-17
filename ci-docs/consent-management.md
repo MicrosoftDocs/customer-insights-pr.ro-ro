@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: 99fe24cb47a8c20f629182d9a1c6adfd36a1eaf7
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 6c951219410b55adc34691f677158b574cea1e01
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188063"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245710"
 ---
 # <a name="use-customer-consent"></a>Utilizați consimțământul clientului
 
@@ -24,7 +24,7 @@ Clienții pot alege să își retragă sau să-și rețină consimțământul pe
 
 Dynamics 365 Customer Insights vă ajută să onorați solicitările clienților dvs. importând și stocând preferințele acestora ca parte a profilurilor unificate ale clienților.
 
-Dacă datele de consimțământ sunt stocate separat de profilurile dvs. de clienți, [adăugați datele dvs. de consimțământ ca un nou sursă de date](#import-and-unify-consent-data). Sursă de date care conține datele consimțământului este adăugat la procesul de unificare a datelor. Unificarea cu succes a datelor de consimțământ și a profilurilor clienților conduce apoi la profiluri de clienți unificate care conțin informațiile privind consimțământul. Pentru profilurile de clienți care conțin deja informații privind consimțământul, accesați direct [utilizați datele consimțământului](#use-consent-data) secțiune.
+Dacă datele de consimțământ sunt stocate separat de profilurile dvs. de clienți, [adăugați datele dvs. de consimțământ ca un nou sursă de date](#import-and-unify-consent-data). Sursă de date care conține datele consimțământului este adăugat la procesul de unificare a datelor. Unificarea cu succes a datelor de consimțământ și a profilurilor clienților conduce apoi la profiluri de clienți unificate care conțin informațiile privind consimțământul. Pentru profilurile de clienți care conțin deja informații de consimțământ, accesați direct [utilizați datele consimțământului](#use-consent-data) secțiune.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
@@ -56,7 +56,7 @@ Pentru mai multe informații despre unificarea surselor de date, consultați [Pr
 
 ## <a name="use-consent-data"></a>Utilizați datele de consimțământ
 
-Odată ce datele dvs. de consimțământ fac parte din profilurile dvs. unificate de clienți, le puteți utiliza în Customer Insights. De exemplu, creați un segment cu o regulă pentru a vă asigura că respectați preferințele privind confidențialitatea și protecția datelor ale clienților dvs. Regulile care susțin preferințele de consimțământ sunt folosite pentru a exclude utilizatorii dintr-un segment pe baza atributelor profilului. Adăugați o regulă la un segment care exclude profilurile clienților care nu au furnizat consimțământul pentru contact.
+Odată ce datele dvs. de consimțământ fac parte din profilurile dvs. unificate de clienți, le puteți utiliza în Customer Insights. De exemplu, creați un segment cu o regulă pentru a vă asigura că respectați preferințele de confidențialitate și protecție a datelor ale clienților dvs. Regulile care susțin preferințele de consimțământ sunt folosite pentru a exclude utilizatorii dintr-un segment pe baza atributelor profilului. Adăugați o regulă la un segment care exclude profilurile clienților care nu au furnizat consimțământul pentru contact.
 
 Referindu-ne la exemplul de tabel de mai sus, un segment poate conține această regulă:`Consent option=Newsletter & Consent value=True`. Această configurație are ca rezultat un segment care onorează preferințele de contact pentru a trimite un buletin informativ.
 
@@ -70,6 +70,6 @@ Este important să păstrați actualizat starea consimțământului pentru clien
 
 Cu alte cuvinte, asigurați-vă că datele sursă care sunt importate în Customer Insights au întotdeauna cele mai recente informații.
 
-Pentru mai multe informații, consultați [Actualizează segmentele manual](segments.md#refresh-segments) sau [configurați o reîmprospătare programată](system.md#schedule-tab).
+Pentru mai multe informații, vezi [Actualizează segmentele manual](segments.md#refresh-segments) sau [configurați o reîmprospătare programată](schedule-refresh.md).
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

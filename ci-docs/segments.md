@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 4bcfbb50b893ca7e6ec4607d3c156a3c6979f775
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
-ms.translationtype: MT
+ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170696"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246308"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
 Segmentele vă permit să vă grupați clienții pe baza atributelor demografice, tranzacționale sau comportamentale. Puteți utiliza segmentele pentru a viza campanii promoționale, activități de vânzare și acțiuni de asistență pentru clienți pentru a vă atinge obiectivele de business.
 
-Profilurile de clienți care se potrivesc cu filtrele unei definiții de segment sunt denumite *membrii* a unui segment. Se aplică unele [limite ale serviciului](/dynamics365/customer-insights/service-limits).
+Profilurile de clienți care se potrivesc cu filtrele unei definiții de segment sunt denumite ca *membrii* a unui segment. Se aplică unele [limite ale serviciului](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Creați un segment
 
@@ -58,7 +58,7 @@ Selectați un segment pentru a vedea acțiunile disponibile.
 - **Editați** segmentul pentru a-i schimba proprietățile.
 - **Creați duplicat** pentru un segment. Puteți alege să editați proprietățile acestuia imediat sau să salvați duplicatul.
 - [**Reîmprospăta**](#refresh-segments) segmentul să includă cele mai recente date.
-- **Activarea** sau **Dezactivarea** segmentului. Segmentele inactive nu vor fi reîmprospătate în timpul unui [reîmprospătare programată](system.md#schedule-tab) și au **stare** enumerate ca **Sărit**, indicând că nici măcar nu a fost încercată o reîmprospătare. Segmentele active sunt reîmprospătate în funcție de tipul lor: static sau dinamic.
+- **Activarea** sau **Dezactivarea** segmentului. Segmentele inactive nu vor fi reîmprospătate în timpul unui [reîmprospătare programată](schedule-refresh.md) și au **stare** enumerate ca **Sărit**, indicând că nici măcar nu a fost încercată o reîmprospătare. Segmentele active sunt reîmprospătate în funcție de tipul lor: static sau dinamic.
 - **Faceți statică** sau **Faceți dinamic** tipul de segment. Segmentele statice trebuie reîmprospătate manual. Segmentele dinamice sunt reîmprospătate automat în timpul reîmprospătărilor sistemului.
 - [**Găsiți clienți similari**](find-similar-customer-segments.md) din segment.
 - **Redenumire** segment.
@@ -69,7 +69,7 @@ Selectați un segment pentru a vedea acțiunile disponibile.
 - **Filtru** la [filtrează pe etichete](work-with-tags-columns.md#filter-on-tags).
 - **Căutați numele** pentru a căuta după numele segmentului.
 
-## <a name="view-segment-details"></a>Vizualizați detaliile segmentului
+## <a name="view-segment-details"></a>Vedeți detaliile segmentului
 
 Pe **Segmente** pagina, selectați un segment pentru a vizualiza istoricul procesării și membrii segmentului.
 
@@ -88,7 +88,7 @@ Partea inferioară conține o listă a membrilor segmentului.
 
 Segmentele pot fi reîmprospătate în program automat sau manual, la cerere. Pentru a reîmprospăta manual unul sau mai multe segmente, selectați-le și alegeți **Reîmprospăta**.
 
-La [programați o reîmprospătare automată](system.md#schedule-tab), mergi la **Admin** > **Sistem** > **Programa**. Se aplică următoarele reguli:
+La [programați o reîmprospătare automată](schedule-refresh.md), mergi la **Admin** > **Sistem** > **Programa**. Se aplică următoarele reguli:
 
 - Toate segmentele cu tipul **Dinamic** sau **Expansiune** va fi reîmprospătat automat la cadența setată. Odată ce reîmprospătarea este completă, **stare** indică dacă au existat probleme la reîmprospătarea segmentului. The **Ultima reîmprospătare** afișează un marcaj temporal al ultimei reîmprospătări reușite. Dacă apare o eroare, selectați eroarea pentru a vedea detalii despre ceea ce s-a întâmplat.
 - Segmente cu tipul **Static** *nu va* fi reîmprospătat automat. The **Ultima reîmprospătare** afișează un marcaj temporal al ultimei rulări sau reîmprospătare manuală a segment static.

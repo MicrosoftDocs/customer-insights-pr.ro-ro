@@ -11,20 +11,20 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: ff99721bef0004bc8cae1ec14ff9df16cbb0682e
-ms.sourcegitcommit: ece8ff732490ecd3b3421ab273f331e6fd46a7f7
+ms.openlocfilehash: 8e3477750d82f965dc2d62174fb35554d9447b7b
+ms.sourcegitcommit: 52eca81c36e93d553140f5a37cf6013aaa42623a
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/19/2022
-ms.locfileid: "9173823"
+ms.lasthandoff: 08/03/2022
+ms.locfileid: "9224310"
 ---
 # <a name="personalize-your-experiences-with-data-about-known-and-unknown-users"></a>Personalizați-vă experiențele cu date despre utilizatori cunoscuți și necunoscuți
 
-Gestionarea datelor despre clienți nu este o provocare nouă, dar devine din ce în ce mai dificilă pe măsură ce utilizatorii navighează pe diferitele canale digitale oferite de mărci. Un utilizator care este cunoscut (autentificat) pe un canal devine necunoscut (neautentificat) pe altul dacă nu este autentificat. Problema este adesea că utilizatorii neautentificați (necunoscuti) nu au un ID comun. Ar putea fi folosit pentru a asocia atribute semnificative ale profilurilor și pentru a genera profiluri unificate pentru clienți. Customer Insights ajută la rezolvarea acestei probleme prin ingerarea datelor din metodele de urmărire pe sistemele dumneavoastră sursă. Profilurile necunoscute și cunoscute consolidate oferă organizațiilor o vizualizare completă a profilurilor actualizate și a tranzacțiilor, comportamentelor și datelor demografice ale acestora. Chiar și un pas mai departe, oferind o rezoluție a identității care vă permite să unificați activitatea clienților pe mai multe canale, inclusiv site-ul dvs. web, achiziția în magazin, programele de loialitate și așa mai departe.
+Gestionarea datelor despre clienți nu este o provocare nouă, dar devine din ce în ce mai dificilă pe măsură ce utilizatorii navighează pe diferitele canale digitale oferite de mărci. Un utilizator care este cunoscut (autentificat) pe un canal devine necunoscut (neautentificat) pe altul dacă nu este autentificat. Problema este adesea că utilizatorii neautentificați (necunoscuti) nu au un ID comun. Ar putea fi folosit pentru a asocia atribute semnificative ale profilurilor și pentru a genera profiluri unificate pentru clienți. Customer Insights ajută la rezolvarea acestei probleme prin ingerarea datelor din metodele de urmărire pe sistemele dumneavoastră sursă. Consolidarea profilurilor necunoscute și cunoscute oferă organizațiilor o vizualizare completă a profilurilor actualizate și a tranzacțiilor, comportamentelor și datelor demografice ale acestora. Chiar și un pas mai departe, oferind o rezoluție a identității care vă permite să unificați activitatea clienților pe mai multe canale, inclusiv site-ul dvs. web, achiziția în magazin, programele de loialitate și așa mai departe.
 
 ## <a name="sample-scenario"></a>Eșantion de scenariu
 
-Să ne gândim la un lanț de cafea, care are o bază largă de clienți care cumpără cafea și alimente din magazine și comandă produse online. Adesea, vizitatorii online nu sunt autentificați atunci când navighează pe produse, ceea ce îi face „utilizatori necunoscuți”. Este dificil pentru lanțul de cafea să livreze oferte și experiențe personalizate dacă utilizatorii sunt necunoscuți. Pe de altă parte, clienții se pot conecta în contul lor și pot deveni „utilizatori cunoscuți” ai companiei prin aderarea la un sistem de loialitate, care la rândul său permite experiențe mai personalizate. Customer Insights poate ajuta lanțul de cafea să obțină informații despre utilizatori cunoscuți și necunoscuți anterior.
+Să ne gândim la un lanț de cafea, care are o bază largă de clienți care cumpără cafea și alimente din magazine și comandă produse online. Adesea, vizitatorii online nu sunt autentificați atunci când navighează prin produse, ceea ce îi face „utilizatori necunoscuți”. Este dificil pentru lanțul de cafea să livreze oferte și experiențe personalizate dacă utilizatorii sunt necunoscuți. Pe de altă parte, clienții se pot conecta în contul lor și pot deveni „utilizatori cunoscuți” ai companiei prin aderarea la un sistem de loialitate, care la rândul său permite experiențe mai personalizate. Customer Insights poate ajuta lanțul de cafea să obțină informații despre utilizatori cunoscuți și necunoscuți anterior.
 
 Cu Customer Insights, compania poate combina profilurile clienților cu datele de activitate din sesiuni neautentificate (necunoscute) după ce un utilizator se conectează și devine cunoscut. Lanțul de cafea poate aduce date din alte surse de date folosind conectori încorporați în Customer Insights pentru a fuziona identitățile clienților de pe diverse canale.
 
@@ -47,7 +47,7 @@ Următorul tabel arată un exemplu simplificat cum ar putea fi capturate evenime
 
 Datele despre clienți pot proveni de pe site-ul dvs. web ca date despre evenimente și pot fi stocate în propriile dvs. servicii de analiză a datelor interne sau terță parte. Datele web conțin utilizatori cunoscuți și necunoscuți dacă site-ul web are un flux de autentificare care se integrează cu un serviciu de autentificare. De exemplu, un sistem de comerț electronic care solicită utilizatorilor să furnizeze detaliile lor complete pentru a finaliza o tranzacție de cumpărare. Sau un sistem de loialitate care necesită autentificare pentru a confirma un destinatar valid al reducerilor de recompense.
 
-Datele despre eveniment din exemplul nostru de mai sus conțin ID-urile de profil distincte ale utilizatorilor cunoscuți și necunoscuți. În evenimentele 1 și 4, utilizatorii sunt necunoscuți, în timp ce în evenimentele 2 și 3 utilizatorul cu ID abc123 se înscrie la un program de fidelitate.
+Datele despre eveniment din exemplul nostru de mai sus conțin ID-urile de profil distincte ale utilizatorilor cunoscuți și necunoscuți. În evenimentele 1 și 4, utilizatorii sunt necunoscuți, în timp ce în evenimentele 2 și 3 utilizatorul cu ID-ul abc123 se înscrie la un program de loialitate.
 
 :::image type="content" source="media/website-data-source.png" alt-text="Surse de date, inclusiv site-ul web Contoso.":::
 
@@ -65,9 +65,9 @@ Deoarece unii dintre utilizatorii din datele noastre sunt cunoscuți, putem folo
 
 1. Adăugați reguli pentru a îmbina înregistrările duplicate. Pentru datele web, alegeți datele cele mai completate.
 
-1. Configurați regulile și condițiile de potrivire. Datele despre evenimentele profilurilor web din acest exemplu vor fi corelate pe ID-uri cu profilurile din alte surse de date care conțin informații despre clienți. Configurați reguli de potrivire exactă pentru ID-uri ca reguli separate cu fiecare dintre celelalte entități de profil care au o cheie primară corespunzătoare sau o potrivire a ID-ului. În exemplu, datele de profil de eveniment web sunt utilizate ca ultima entitate de potrivire, astfel încât alte date de profil să fie combinate mai întâi.
+1. Configurați regulile și condițiile de potrivire. Datele despre evenimentele profilurilor web din acest exemplu vor fi corelate pe ID-uri cu profilurile din alte surse de date care conțin informații despre clienți. Configurați reguli de potrivire exactă pentru ID-uri ca reguli separate cu fiecare dintre celelalte entități de profil care au o cheie primară sau o potrivire de ID corespunzătoare. În exemplu, datele profilului de eveniment web sunt utilizate ca ultima entitate de potrivire, astfel încât alte date de profil să fie combinate mai întâi.
    1. Nu se verifică **Includeți toate înregistrările** creează profiluri unificate pentru utilizatori cunoscuți și include ID-urile de utilizator necunoscute corespunzătoare. Este util în scenariile în care sunteți interesat să vizualizați activitățile comportamentale anterioare ale utilizatorilor cunoscuți, când aceștia erau încă necunoscuți.
-   1. Control **Includeți toate înregistrările** creează înregistrări de profil separate pentru utilizatori necunoscuți. Utilizatorii necunoscuți primesc un ID unic de client. În viitor, când un profil cunoscut este asociat în datele profilului evenimentelor web, atunci călătoria utilizatorului nou cunoscut poate fi vizualizată și utilizată pentru personalizare pe baza datelor comportamentale necunoscute din trecut.
+   1. Control **Includeți toate înregistrările** creează înregistrări de profil separate pentru utilizatori necunoscuți. Utilizatorii necunoscuți primesc un ID de client unic. În viitor, când un profil cunoscut este asociat în datele profilului evenimentelor web, atunci călătoria utilizatorului nou cunoscut poate fi vizualizată și utilizată pentru personalizare pe baza datelor comportamentale necunoscute din trecut.
 
 :::image type="content" source="media/website-match-rule.png" alt-text="Regula de potrivire pentru entitatea site-ului sursă de date.":::
 

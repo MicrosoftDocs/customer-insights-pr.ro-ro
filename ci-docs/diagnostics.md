@@ -1,7 +1,7 @@
 ---
-title: Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
+title: Exportați jurnalele de diagnosticare (previzualizare)
 description: Aflați cum să trimiteți jurnalele către Microsoft Azure Monitorizați.
-ms.date: 12/14/2021
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: article
@@ -11,71 +11,92 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 8c72df7054a682244215bbee54968d6aef4bbf59
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: 60b039173fd938482c782c7394420d4951c222a7
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9052668"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245940"
 ---
-# <a name="log-forwarding-in-dynamics-365-customer-insights-with-azure-monitor-preview"></a>Redirecționarea conectării Dynamics 365 Customer Insights cu Azure Monitor (previzualizare)
+# <a name="export-diagnostic-logs-preview"></a>Exportați jurnalele de diagnosticare (previzualizare)
 
-Dynamics 365 Customer Insights oferă o integrare directă cu Azure Monitor. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), sau transmiteți-le în flux [Huburi de evenimente Azure](https://azure.microsoft.com/services/event-hubs/).
+Redirecționați jurnalele din Customer Insights folosind Azure Monitor. Jurnalele de resurse Azure Monitor vă permit să monitorizați și să trimiteți jurnalele către [Azure Storage](https://azure.microsoft.com/services/storage/),[Azure Log Analytics](/azure/azure-monitor/logs/log-analytics-overview), sau transmiteți-le în flux [Huburi de evenimente Azure](https://azure.microsoft.com/services/event-hubs/).
 
 Customer Insights trimite următoarele jurnale de evenimente:
 
 - **Evenimente de audit**
-  - **APIEvent** - permite urmărirea modificărilor efectuate prin intermediul Dynamics 365 Customer Insights UI.
+  - **APIEvent** - permite urmărirea modificărilor prin intermediul Dynamics 365 Customer Insights UI.
 - **Evenimente operaționale**
-  - **WorkflowEvent** - Fluxul de lucru vă permite să configurați [Surse de date](data-sources.md),[unifica](data-unification.md),[îmbogăţi](enrichment-hub.md), și, în sfârșit [export](export-destinations.md) date în alte sisteme. Toți acești pași pot fi făcuți individual (de exemplu, declanșați un singur export). De asemenea, poate rula orchestrat (de exemplu, reîmprospătarea datelor din surse de date care declanșează procesul de unificare, care va aduce îmbogățiri și, odată terminat, exporta datele într-un alt sistem). Pentru mai multe informații, consultați [WorkflowEvent Schema](#workflow-event-schema).
-  - **APIEvent** - toate apelurile API către instanța clienților Dynamics 365 Customer Insights. Pentru mai multe informații, consultați [Schema APIEvent](#api-event-schema).
+  - **WorkflowEvent** - vă permite să configurați [surse de date](data-sources.md),[unifica](data-unification.md),[îmbogăţi](enrichment-hub.md), și [export](export-destinations.md) date în alte sisteme. Acești pași pot fi efectuati individual (de exemplu, declanșați un singur export). De asemenea, pot rula orchestrate (de exemplu, reîmprospătarea datelor din surse de date care declanșează procesul de unificare, care va aduce îmbogățiri și va exporta datele într-un alt sistem). Pentru mai multe informații, consultați [Schema WorkflowEvent](#workflow-event-schema).
+  - **APIEvent** - trimite toate apelurile API ale instanței clienților către Dynamics 365 Customer Insights. Pentru mai multe informații, consultați [Schema APIEvent](#api-event-schema).
 
 ## <a name="set-up-the-diagnostic-settings"></a>Configurați setările de diagnosticare
 
 ### <a name="prerequisites"></a>Cerințe preliminare
 
-Pentru a configura diagnosticarea în Customer Insights, trebuie îndeplinite următoarele cerințe preliminare:
-
-- Ai un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
-- Tu ai [Administrator](permissions.md#admin) permisiunile din Customer Insights.
-- Tu ai **Colaborator** și **Administrator de acces utilizator** rol pe resursa destinație pe Azure. Resursa poate fi o Azure Data Lake Storage cont, un hub de evenimente Azure sau un spațiu de lucru Azure Log Analytics. Pentru mai multe informații, vezi [Adăugați sau eliminați atribuirile de rol Azure folosind portalul Azure](/azure/role-based-access-control/role-assignments-portal). Această permisiune este necesară în timpul configurării setărilor de diagnosticare în Customer Insights, poate fi modificată după configurarea cu succes.
-- [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics îndeplinite.
-- Ai cel puțin **Cititor** rol pe grupul de resurse din care face parte resursa.
+- Un activ [Abonament Azure](https://azure.microsoft.com/pricing/purchase-options/pay-as-you-go/).
+- [Administrator](permissions.md#admin) permisiunile din Customer Insights.
+- [Rol de colaborator și administrator de acces utilizator](/azure/role-based-access-control/role-assignments-portal) pe resursa de destinație pe Azure. Resursa poate fi o Azure Data Lake Storage cont, un hub de evenimente Azure sau un spațiu de lucru Azure Log Analytics. Această permisiune este necesară în timpul configurării setărilor de diagnosticare în Customer Insights, dar poate fi modificată după configurarea cu succes.
+- [Cerințe de destinație](/azure/azure-monitor/platform/diagnostic-settings#destination-requirements) pentru Azure Storage, Azure Event Hub sau Azure Log Analytics sunt îndeplinite.
+- Cel puțin cel **Cititor** rol pe grupul de resurse din care face parte resursa.
 
 ### <a name="set-up-diagnostics-with-azure-monitor"></a>Configurați diagnosticarea cu Azure Monitor
 
-1. În Customer Insights, selectați **Sistem** > **Diagnosticare** pentru a vedea destinațiile de diagnosticare configurate pentru această instanță.
+1. În Customer Insights, accesați **Admin** > **Sistem** și selectați **Diagnosticare** fila.
 
 1. Selectați **Adăugați destinația**.
 
-   > [!div class="mx-imgBorder"]
-   > ![Conexiune de diagnosticare](media/diagnostics-pane.png "Conexiune de diagnosticare")
+   :::image type="content" source="media/diagnostics-pane.png" alt-text="Conexiune de diagnosticare.":::
 
 1. Furnizați un nume în **Nume pentru destinația de diagnosticare** camp.
 
-1. Alege **Chiriaş** a abonamentului Azure cu resursa de destinație și selectați **Autentificare**.
+1. Selectează **Tipul de resursă** (Cont de stocare, Hub de evenimente sau Log Analytics).
 
-1. Selectează **Tipul de resursă** (Cont de stocare, centru de evenimente sau analize de jurnal).
+1. Selectează **Abonament**, **de resurse**, și **Resursă** pentru resursa de destinație. Vedea [Configurare pe resursa destinație](#configuration-on-the-destination-resource) pentru permisiuni și informații de jurnal.
 
-1. Selectează **Abonament** pentru resursa de destinație.
-
-1. Selectează **Grup de resurse** pentru resursa de destinație.
-
-1. Selectează **Resursă**.
-
-1. Confirmă **Confidențialitatea datelor și conformitatea** afirmație.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Conectați-vă la sistem** pentru a vă conecta la resursa destinație. Jurnalele încep să apară în destinație după 15 minute, dacă API-ul este în uz și generează evenimente.
 
-### <a name="remove-a-destination"></a>Eliminați o destinație
+## <a name="configuration-on-the-destination-resource"></a>Configurare pe resursa destinație
 
-1. Mergi la **Sistem** > **Diagnosticare**.
+Pe baza alegerii tipului de resursă, apar automat următoarele modificări:
+
+### <a name="storage-account"></a>Cont de stocare
+
+Principalul serviciului Customer Insights primește **Colaborator cont de stocare** permisiunea pe resursa selectată și creează două containere sub spațiul de nume selectat:
+
+- `insight-logs-audit` conținând **evenimente de audit**
+- `insight-logs-operational` conținând **evenimente operaționale**
+
+### <a name="event-hub"></a>Hub de evenimente
+
+Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și creează două Huburi de evenimente sub spațiul de nume selectat:
+
+- `insight-logs-audit` conținând **evenimente de audit**
+- `insight-logs-operational` conținând **evenimente operaționale**
+
+### <a name="log-analytics"></a>Log Analytics
+
+Principalul serviciului Customer Insights primește **Log Analytics Contributor** permisiunea asupra resursei. Jurnalele sunt disponibile sub **Bușteni** > **Mese** > **Managementul jurnalului** în spațiul de lucru Log Analytics selectat. Extindeți **Managementul jurnalului** soluție și localizați`CIEventsAudit` și`CIEventsOperational` Mese.
+
+- `CIEventsAudit` conținând **evenimente de audit**
+- `CIEventsOperational` conținând **evenimente operaționale**
+
+Sub **Întrebări** fereastra, extindeți **Audit** soluție și localizați exemplele de interogări furnizate prin căutarea `CIEvents`.
+
+## <a name="remove-a-diagnostics-destination"></a>Eliminați o destinație de diagnosticare
+
+1. Mergi la **Admin** > **Sistem** și selectați **Diagnosticare** fila.
 
 1. Selectați destinația de diagnosticare din listă.
 
+   > [!TIP]
+   > Eliminarea destinației oprește redirecționarea jurnalului, dar nu șterge resursa din abonamentul Azure. Pentru a șterge resursa din Azure, selectați linkul din **Acțiuni** pentru a deschide portalul Azure pentru resursa selectată și ștergeți-o acolo. Apoi ștergeți destinația de diagnosticare.
+
 1. În **Acțiuni** coloana, selectați **Șterge** pictograma.
 
-1. Confirmați ștergerea pentru a opri redirecționarea jurnalului. Resursa din abonamentul Azure nu va fi ștearsă. Puteți selecta linkul din **Acțiuni** pentru a deschide portalul Azure pentru resursa selectată și ștergeți-o acolo.
+1. Confirmați ștergerea pentru a elimina destinația și pentru a opri redirecționarea jurnalului.
 
 ## <a name="log-categories-and-event-schemas"></a>Categoriile de jurnal și schemele de evenimente
 
@@ -87,38 +108,11 @@ Schema de jurnal urmează [Schemă comună Azure Monitor](/azure/azure-monitor/p
 Customer Insights oferă două categorii:
 
 - **Evenimente de audit** :[evenimente API](#api-event-schema) pentru a urmări modificările de configurare ale serviciului. `POST|PUT|DELETE|PATCH` operațiunile intră în această categorie.
-- **Evenimente operaționale** :[evenimente API](#api-event-schema) sau [evenimente de flux de lucru](#workflow-event-schema) generate în timpul utilizării serviciului.  De exemplu,`GET` cererile sau evenimentele de execuție a unui flux de lucru.
-
-## <a name="configuration-on-the-destination-resource"></a>Configurare pe resursa destinație
-
-În funcție de alegerea dvs. cu privire la tipul de resursă, următorii pași se vor aplica automat:
-
-### <a name="storage-account"></a>Cont de stocare
-
-Principalul serviciului Customer Insights primește **Colaborator cont de stocare** permisiunea pe resursa selectată și creează două containere sub spațiul de nume selectat:
-
-- `insight-logs-audit` conținând **evenimente de audit**
-- `insight-logs-operational` conținând **evenimente operaționale**
-
-### <a name="event-hub"></a>Hub de evenimente
-
-Principalul serviciului Customer Insights primește **Proprietar de date Azure Event Hubs** permisiunea asupra resursei și va crea două Huburi de evenimente sub spațiul de nume selectat:
-
-- `insight-logs-audit` conținând **evenimente de audit**
-- `insight-logs-operational` conținând **evenimente operaționale**
-
-### <a name="log-analytics"></a>Log Analytics
-
-Principalul serviciului Customer Insights primește **Log Analytics Contributor** permisiunea asupra resursei. Jurnalele vor fi disponibile sub **Bușteni** > **Mese** > **Managementul jurnalului** în spațiul de lucru Log Analytics selectat. Extindeți **Managementul jurnalului** soluție și localizați`CIEventsAudit` și`CIEventsOperational` Mese.
-
-- `CIEventsAudit` conținând **evenimente de audit**
-- `CIEventsOperational` conținând **evenimente operaționale**
-
-Sub **Întrebări** fereastra, extindeți **Audit** soluție și localizați exemplele de interogări furnizate prin căutarea `CIEvents`.
+- **Evenimente operaționale** :[evenimente API](#api-event-schema) sau [evenimente de flux de lucru](#workflow-event-schema) generate în timpul utilizării serviciului.  De exemplu,`GET` solicitările sau evenimentele de execuție a unui flux de lucru.
 
 ## <a name="event-schemas"></a>Scheme de evenimente
 
-Evenimentele API și evenimentele fluxului de lucru au o structură comună și detalii unde diferă, vezi [Schema de evenimente API](#api-event-schema) sau [schema de evenimente a fluxului de lucru](#workflow-event-schema).
+Evenimentele API și evenimentele fluxului de lucru au o structură comună, dar cu câteva diferențe. Pentru mai multe informații, vezi [Schema de evenimente API](#api-event-schema) sau [schema de evenimente a fluxului de lucru](#workflow-event-schema).
 
 ### <a name="api-event-schema"></a>Schema de evenimente API
 
@@ -220,7 +214,6 @@ Fluxul de lucru conține mai mulți pași. [Ingerați surse de date](data-source
 | `durationMs`    | Long      | Opțional          | Durata operațiunii în milisecunde.                                                                                                                    | `133`                                                                                                                                                                    |
 | `properties`    | Șir    | Opțional          | Obiect JSON cu mai multe proprietăți pentru categoria particulară de evenimente.                                                                                        | Vezi subsecțiunea [Proprietăți flux de lucru](#workflow-properties-schema)                                                                                                       |
 | `level`         | Șir    | Obligatoriu          | Nivelul de severitate al evenimentului.                                                                                                                                  | `Informational`, `Warning` sau `Error`                                                                                                                                   |
-|                 |
 
 #### <a name="workflow-properties-schema"></a>Schema proprietăților fluxului de lucru
 
@@ -247,3 +240,5 @@ Evenimentele fluxului de lucru au următoarele proprietăți.
 | `properties.additionalInfo.AffectedEntities` | No       | Da  | Opțional. Pentru OperationType`Export` numai. Conține o listă de entități configurate în export.                                                                                                                                                            |
 | `properties.additionalInfo.MessageCode`      | No       | Da  | Opțional. Pentru OperationType`Export` numai. Mesaj detaliat pentru export.                                                                                                                                                                                 |
 | `properties.additionalInfo.entityCount`      | No       | Da  | Opțional. Pentru OperationType`Segmentation` numai. Indică numărul total de membri pe care îl are segmentul.                                                                                                                                                    |
+
+[!INCLUDE [footer-include](includes/footer-banner.md)]

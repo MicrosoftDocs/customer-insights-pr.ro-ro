@@ -8,12 +8,12 @@ ms.topic: how-to
 author: m-hartmann
 ms.author: mhart
 manager: shellyha
-ms.openlocfilehash: a180f6462452d9830d0daa150a35a9d0acad925a
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 42abfb305efaccaeef48e32f2cc69f3d36fbe73d
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082854"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245480"
 ---
 # <a name="manage-predictions"></a>Gestionați predicțiile
 
@@ -58,7 +58,7 @@ Următoarele coloane din raport conțin informații utile pentru a îmbunătăț
 
 ## <a name="refresh-a-prediction"></a>Reîmprospătați o predicție
 
-Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reîmprospătare a datelor](system.md#schedule-tab) așa cum este configurat în setări. Le puteți reîmprospăta și manual.
+Predicțiile se vor actualiza reîmprospăta conform aceluiași [program de reîmprospătare a datelor](schedule-refresh.md) așa cum este configurat în setări. Le puteți reîmprospăta și manual.
 
 1. Mergeți la **Informații** > **Predicții** și selectați fila **Previziunile mele**.
 

@@ -14,12 +14,12 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 4a19b753e7a5979fe72d7e96bc4452d7795c2d48
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
+ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
 ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139672"
+ms.lasthandoff: 08/01/2022
+ms.locfileid: "9213597"
 ---
 # <a name="unify-customer-fields-for-data-unification"></a>Unificați câmpurile clienților pentru unificarea datelor
 
@@ -38,7 +38,7 @@ ms.locfileid: "9139672"
       - [Excludere](#exclude-fields)
       - [Deplasați-vă în sus sau în jos](#change-the-order-of-fields)
 
-   1. Pentru orice câmpuri individuale, puteți:
+   1. Pentru orice câmp, puteți:
       - [Combinare câmpuri](#combine-fields-manually)
       - [Combinați un grup de câmpuri](#combine-a-group-of-fields)
       - [Redenumire](#rename-fields)
@@ -47,7 +47,7 @@ ms.locfileid: "9139672"
 
 1. Opțional, [generați configurația ID-ului clientului](#configure-customer-id-generation).
 
-1. Opțional, [grupează profilurile în gospodării sau grupuri](#group-profiles-into-households-or-clusters).
+1. Opțional, [grupează profilurile în gospodării sau clustere](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Pasul următor: revizuiți unificarea](review-unification.md)
@@ -58,6 +58,9 @@ ms.locfileid: "9139672"
 
 1. Specificați cum să combinați sau să combinați câmpurile dintr-una dintre cele trei opțiuni:
     - **Importanţă**: Identifică valoarea câștigătorului pe baza rangului de importanță specificat pentru câmpurile participante. Este opțiunea implicită de combinare. Selectați **Mutați în sus/în jos** pentru a stabili clasamentul importanței.
+
+      > [!NOTE]
+      > Customer Insights folosește prima valoare non-nulă. De exemplu, date entități A, B și C clasate în această ordine, dacă A.Name și B.Name sunt nule, atunci se folosește valoarea de la C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Opțiunea de importanță din dialogul câmpurilor de îmbinare.":::
 
@@ -158,7 +161,7 @@ Configurarea unui ID stabil de client vă permite să evitați acel comportament
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Profiluri de grup în gospodării sau clustere
 
-Puteți defini reguli pentru gruparea profilurilor asociate într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
+Puteți defini reguli pentru a grupa profilurile asociate într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
 
 1. Selectați **Avansat** > **Creați cluster**.
 

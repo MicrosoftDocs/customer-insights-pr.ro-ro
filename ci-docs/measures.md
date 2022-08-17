@@ -14,18 +14,18 @@ searchScope:
 - ci-measure-template
 - ci-enrichment-details
 - customerInsights
-ms.openlocfilehash: ead57ccbdcaf9f86ee54d1f15de71a63f2e1081b
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 99368a7ab2e8d7b3e53c04fbf25bb23bd2e550a9
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170861"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245388"
 ---
 # <a name="measures-overview"></a>Prezentare generală a măsurilor
 
 Măsurile vă ajută să înțelegeți mai bine comportamentele clienților și performanța afacerii. Se uită la valorile relevante din [profiluri unificate](data-unification.md). De exemplu, o companie vrea să vadă *cheltuielile totale per client* pentru a înțelege istoricul sau măsura achizițiilor unui client individual *vânzările totale ale companiei* pentru a înțelege veniturile la nivel agregat din întreaga afacere.
 
-Creați măsuri pentru a planifica activitățile de afaceri interogând datele clienților și extrageți informații. De exemplu, creați o măsură de *cheltuieli totale per client* și *randament total per client* pentru a ajuta la identificarea unui grup de clienți cu cheltuieli mari, dar cu randament ridicat. Apoi, [creați un segment](segments.md) pe baza acestor măsuri pentru a conduce următoarele cele mai bune acțiuni.
+Creați măsuri pentru a planifica activitățile de afaceri interogând datele clienților și extrageți informații. De exemplu, creați o măsură de *cheltuieli totale per client* și *randament total per client* pentru a ajuta la identificarea unui grup de clienți cu cheltuieli mari, dar cu randament ridicat. Apoi, [creați un segment](segments.md) pe baza acestor măsuri, pentru a conduce următoarele cele mai bune acțiuni.
 
 ## <a name="create-a-measure"></a>Crearea unei măsuri
 
@@ -53,7 +53,7 @@ Selectați lângă o măsură pentru a vedea acțiunile disponibile. Selectați 
 - **Editați | ×** măsura de a-și schimba proprietățile.
 - **Reîmprospăta** măsura să includă cele mai recente date.
 - **Redenumiți** măsura.
-- **Activati** sau **Dezactivați** masura. Măsurile inactive nu vor fi reîmprospătate în timpul a [reîmprospătare programată](system.md#schedule-tab) și au **stare** enumerate ca **Sărit**, indicând că nici măcar nu a fost încercată o reîmprospătare.
+- **Activati** sau **Dezactivați** masura. Măsurile inactive nu vor fi reîmprospătate în timpul a [reîmprospătare programată](schedule-refresh.md) și au **stare** enumerate ca **Sarit peste**, indicând că nici măcar nu a fost încercată o reîmprospătare.
 - **Etichetă** la [gestionați etichetele](work-with-tags-columns.md#manage-tags) pentru masura.
 - **Ștergeți** măsura.
 - **Coloane** la [personalizați coloanele](work-with-tags-columns.md#customize-columns) acel afișaj.
@@ -62,7 +62,7 @@ Selectați lângă o măsură pentru a vedea acțiunile disponibile. Selectați 
 
 ## <a name="refresh-measures"></a>Măsuri de reîmprospătare
 
-Măsurile pot fi reîmprospătate după un program automat sau reîmprospătate manual la cerere. Pentru a reîmprospăta manual una sau mai multe măsuri, selectați-le și alegeți **Reîmprospăta**. La [programați o reîmprospătare automată](system.md#schedule-tab), mergi la **Admin** > **Sistem** > **Programa**.
+Măsurile pot fi reîmprospătate după un program automat sau reîmprospătate manual la cerere. Pentru a reîmprospăta manual una sau mai multe măsuri, selectați-le și alegeți **Reîmprospăta**. La [programați o reîmprospătare automată](schedule-refresh.md), mergi la **Admin** > **Sistem** > **Programa**.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

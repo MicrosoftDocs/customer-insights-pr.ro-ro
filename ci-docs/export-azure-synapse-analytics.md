@@ -8,12 +8,12 @@ ms.topic: how-to
 author: stefanie-msft
 ms.author: sthe
 manager: shellyha
-ms.openlocfilehash: f9c9ee55f2874ae1dcaf82f2ff17ed0fbbb7804d
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0e953cfff12df433d033717d58b28c2834468916
+ms.sourcegitcommit: 086f75136132d561cd78a4c2cb1e1933e2301f32
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196409"
+ms.lasthandoff: 08/11/2022
+ms.locfileid: "9259859"
 ---
 # <a name="export-data-to-azure-synapse-analytics-preview"></a>Exportați datele în Azure Synapse Analytics (previzualizare)
 
@@ -24,7 +24,7 @@ Azure Synapse este un serviciu de analize ce accelerează timpul de detaliere a 
 > [!NOTE]
 > Asigurați-vă să setați toate **atribuirile de roluri** după cum este descris.
 
-- În Customer Insights, dvs Azure Active Directory Contul de utilizator (AD) trebuie să aibă un [Rolul de administrator](permissions.md#assign-roles-and-permissions).
+- În Customer Insights, dvs Azure Active Directory Contul de utilizator (AD) trebuie să aibă un [Rolul de administrator](permissions.md#add-users).
 
 În Azure:
 
@@ -34,11 +34,13 @@ Azure Synapse este un serviciu de analize ce accelerează timpul de detaliere a 
 
 - Pe grupul de resurse unde Azure Synapse spațiul de lucru este situat, the *principalul serviciului* si *Azure AD utilizator cu permisiuni de administrator în Customer Insights* trebuie să fie atribuit cel puțin **Cititor**[permisiuni](/azure/role-based-access-control/role-assignments-portal).
 
-- The *Azure AD utilizator cu permisiuni de administrator în Customer Insights* are **Colaborator de date Blob de stocare** permisiuni pe Azure Data Lake Storage Contul Gen2 în care se află datele și sunt legate la Azure Synapse spațiu de lucru. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
+- The *Azure AD utilizator cu permisiuni de administrator în Customer Insights* are **Colaborator de date Blob de stocare** permisiunile pe Azure Data Lake Storage Contul Gen2 în care se află datele și sunt legate la Azure Synapse spațiu de lucru. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - The *[Azure Synapse identitatea administrată de spațiul de lucru](/azure/synapse-analytics/security/synapse-workspace-managed-identity)* are **Colaborator de date Blob de stocare** permisiuni pe Azure Data Lake Storage Contul Gen2 în care se află datele și sunt legate la Azure Synapse spațiu de lucru. Aflați mai multe despre [utilizarea portalului Azure pentru a atribui un rol Azure pentru accesul la datele de blob și la coadă](/azure/storage/common/storage-auth-aad-rbac-portal) și [permisiuni de stocare pentru contribuitor date blob](/azure/role-based-access-control/built-in-roles#storage-blob-data-contributor).
 
 - Pe Azure Synapse spaţiul de lucru, *principal de serviciu pentru Customer Insights* are **Administrator Synapse**[rolul atribuit](/azure/synapse-analytics/security/how-to-set-up-access-control).
+
+- Dacă mediul dvs. Customer Insights stochează date în dvs [proprii Azure Data Lake Storage](own-data-lake-storage.md), utilizatorul care stabilește conexiunea la Azure Synapse Analytics are nevoie cel puțin de încorporat **Cititor** rol pe contul Data Lake Storage. Pentru mai multe informații, consultați [Atribuirea de roluri Azure utilizând portalul Azure](/azure/role-based-access-control/role-assignments-portal).
 
 ## <a name="set-up-connection-to-azure-synapse"></a>Configurați conexiunea la Azure Synapse
 

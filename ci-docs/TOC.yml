@@ -154,7 +154,7 @@
           href: predict-subscription-churn.md
         - name: Previzionați retragere din tranzacții
           href: predict-transactional-churn.md
-        - name: Analizați sentimentul în feedbackul clienților
+        - name: Analizați sentimentul în feedback-ul clienților
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md
@@ -284,18 +284,20 @@
       href: connect-service-principal.md
 - name: Administrare
   items:
-    - name: Configurați configurarea sistemului
-      href: system.md
-    - name: Configurați setările de securitate
-      href: security-overview.md
     - name: Atribuiți permisiuni de utilizator
       href: permissions.md
     - name: Aduceți-vă propria Key Vault
       href: use-azure-key-vault.md
+    - name: Configurați setările de securitate
+      href: security-overview.md
     - name: Exportați jurnalele de diagnosticare
       href: diagnostics.md
-    - name: Prezentare generală a conexiunilor
+    - name: Gestionați conexiunile
       href: connections.md
+    - name: Programați reîmprospătarea sistemului
+      href: schedule-refresh.md
+    - name: Vedeți configurația sistemului
+      href: system.md
 - name: API-uri
   items:
     - name: Lucrați cu API-uri

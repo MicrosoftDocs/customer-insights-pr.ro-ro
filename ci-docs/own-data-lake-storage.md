@@ -8,18 +8,18 @@ ms.topic: conceptual
 ms.manager: shellyha
 ms.custom: intro-internal
 ms.reviewer: mhart
-ms.openlocfilehash: 5acb58906c1a9db54337f3b4dc2ab7891db7954e
-ms.sourcegitcommit: 5e26cbb6d2258074471505af2da515818327cf2c
-ms.translationtype: MT
+ms.openlocfilehash: d2ff49c324c5c5c28213f362ff330d441fcb6052
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/14/2022
-ms.locfileid: "9011948"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9246216"
 ---
 # <a name="use-your-own-azure-data-lake-storage-gen2-account"></a>Folosește-ți pe al tău Azure Data Lake Storage cont Gen2
 
 Dynamics 365 Customer Insights vă oferă opțiunea de a stoca toate datele dvs [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction).
 
-Prin salvarea datelor în Data Lake Storage, sunteți de acord că datele vor fi transferate și stocate în locația geografică corespunzătoare pentru acel cont de stocare Azure. Pentru mai multe informații, vezi [Centrul de încredere Microsoft](https://www.microsoft.com/trust-center).
+Prin salvarea datelor în Data Lake Storage, sunteți de acord că datele vor fi transferate și stocate în locația geografică adecvată pentru acel cont de stocare Azure. Pentru mai multe informații, vezi [Centrul de încredere Microsoft](https://www.microsoft.com/trust-center).
 
 Administratorii din Customer Insights pot [creează medii](create-environment.md) și [specificați opțiunea de stocare a datelor](create-environment.md#step-2-configure-data-storage) în procesul.
 
@@ -37,7 +37,7 @@ Când creați un mediu nou, asigurați-vă că există contul Data Lake Storage 
 1. Alege cum să **Conectați-vă spațiul de stocare**. Puteți alege între o opțiune bazată pe resurse și o opțiune bazată pe abonament pentru autentificare. Pentru mai multe informații, vezi [Conectați-vă la un Azure Data Lake Storage cont utilizând un Azure Service Principal](connect-service-principal.md).
    - Pentru **Abonament Azure**, alege **Abonament**, **de resurse**, și **Cont de stocare** care contine`customerinsights` recipient.
    - Pentru **Cheia de cont**, furnizați **Nume de cont** si **Cheia de cont** pentru contul Data Lake Storage. Folosirea acestei metode de autentificare implică faptul că sunteți informat dacă organizația dvs. rotește cheile. Trebuie [actualizați configurația mediului](manage-environments.md#edit-an-existing-environment) cu noua cheie când este rotită.
-1. Alegeți dacă doriți să utilizați Azure Private Link pentru a vă conecta la contul de stocare și [creați conexiunea la Private Link](security-overview.md#private-links-tab) cu un proces în două etape.
+1. Alegeți dacă doriți să utilizați Azure Private Link pentru a vă conecta la contul de stocare și [creați conexiunea la Private Link](security-overview.md#set-up-an-azure-private-link) cu un proces în două etape.
 
 Când procesele de sistem, cum ar fi ingerarea datelor, sunt finalizate, sistemul creează folderele corespunzătoare în contul de stocare. Fișierele de date și fișierele *model.json* sunt create și adăugate în dosare pe baza numelui procesului.
 

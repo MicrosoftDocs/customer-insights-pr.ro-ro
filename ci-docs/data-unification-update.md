@@ -13,12 +13,12 @@ searchScope:
 - ci-merge
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: 1af7f018abd412c833ff22b3880f0e4508ff4953
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
-ms.translationtype: MT
+ms.openlocfilehash: a7cf06c07e4b95b848a55dfe5fe0b09397fe744e
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139626"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245609"
 ---
 # <a name="update-the-unification-settings"></a>Actualizați setările de unificare
 
@@ -42,7 +42,7 @@ Pentru a revizui sau modifica orice setări de unificare odată ce un profil uni
    :::image type="content" source="media/m3_run_match_merge.png" alt-text="Captură de ecran a paginii Data Unify cu opțiunile Unify evidențiate.":::
 
    - [Rulați condiții de potrivire](#run-matching-conditions) pentru a evalua rapid calitatea condițiilor de potrivire (deduplicare și reguli de potrivire) fără a actualiza profilul unificat. The **Rulați numai condiții de potrivire** opțiunea nu se afișează pentru o singură entitate.
-   - [Unificați profilurile clienților](#run-updates-to-the-unified-customer-profile) pentru a rula condiții de potrivire și pentru a actualiza entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](system.md#schedule-tab).
+   - [Unificați profilurile clienților](#run-updates-to-the-unified-customer-profile) pentru a rula condiții de potrivire și pentru a actualiza entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](schedule-refresh.md).
    - [Unificați profilurile și dependențele clienților](#run-updates-to-the-unified-customer-profile) pentru a rula condiții de potrivire și pentru a actualiza entitatea unificată a profilului clientului și toate dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Toate procesele sunt reluate automat.
 
 ## <a name="edit-source-fields"></a>Editați câmpurile sursă
@@ -59,7 +59,7 @@ Nu puteți elimina un atribut sau o entitate dacă acestea au fost deja unificat
 
 1. Opțional, puteți modifica cheia primară pentru o entitate, tipurile de atribute și comutați **Cartografiere inteligentă** pornit sau oprit. Pentru mai multe informații, vezi [Selectați cheia primară și tipul semantic pentru atribute](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 
-1. Selectați **Următorul** pentru a modifica regulile de deduplicare sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a modifica regulile de deduplicare sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-deduplication-rules"></a>Gestionați regulile de deduplicare
 
@@ -72,9 +72,9 @@ Nu puteți elimina un atribut sau o entitate dacă acestea au fost deja unificat
 1. Dacă ați adăugat o entitate îmbogățită, selectați **Utilizați entități îmbogățite**. Pentru mai multe informații, vezi [Îmbogățirea surselor de date](data-sources-enrichment.md).
 
 1. Pentru a gestiona regulile de deduplicare, alegeți oricare dintre următoarele opțiuni:
-   - **Creați o nouă regulă** : Selectați **Adăugați o regulă** sub entitatea corespunzătoare. Pentru mai multe informații, vezi [Definiți regulile de deduplicare](remove-duplicates.md#define-deduplication-rules).
-   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Schimbați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
-   - **previzualizare** : Selectați regula și apoi **previzualizare** pentru a vizualiza rezultatele ultimei rulări pentru această regulă.
+   - **Creați o nouă regulă** : Selectați **Adăugați o regulă** sub entitatea corespunzătoare. Pentru mai multe informații, consultați [Definiți regulile de deduplicare](remove-duplicates.md#define-deduplication-rules).
+   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Modificați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
+   - **previzualizare** : Selectați regula și apoi **previzualizare** pentru a vedea rezultatele ultimei rulări pentru această regulă.
    - **Dezactivați o regulă** : Selectați regula și apoi **Dezactivați** pentru a păstra o regulă de deduplicare în timp ce o excludeți din procesul de potrivire.
    - **Duplicați o regulă** : Selectați regula și apoi **Duplicat** pentru a crea o regulă similară cu modificări.
    - **Ștergeți o regulă** : Selectați regula și apoi **Șterge**.
@@ -115,12 +115,12 @@ Puteți reconfigura și regla fin majoritatea parametrilor de potrivire. Nu pute
 1. Pentru a gestiona regulile, alegeți oricare dintre următoarele opțiuni:
    - **Creați o nouă regulă** : Selectați **Adăugați o regulă** sub entitatea corespunzătoare. Pentru mai multe informații, vezi [Definiți reguli pentru perechile de potrivire](match-entities.md#define-rules-for-match-pairs).
    - **Schimbați ordinea regulilor dvs** dacă ați definit mai multe reguli: trageți și plasați regulile în ordinea dorită. Pentru mai multe informații, vezi [Specificați ordinea de potrivire](match-entities.md#specify-the-match-order).
-   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Schimbați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
+   - **Schimbați condițiile regulilor** : Selectați regula și apoi **Editați | ×**. Modificați câmpuri, adăugați sau eliminați condiții sau adăugați sau eliminați excepții.
    - **Dezactivați o regulă** : Selectați regula și apoi **Dezactivați** pentru a păstra o regulă de potrivire în timp ce o excludeți din procesul de potrivire.
    - **Duplicați o regulă** : Selectați regula și apoi **Duplicat** pentru a crea o regulă similară cu modificări.
    - **Ștergeți o regulă** : Selectați regula și apoi **Șterge**.
 
-1. Selectați **Următorul** pentru a efectua modificări câmpurilor unificate sau selectați **Salveaza si inchide** si revin la [Actualizați setările de unificare](#update-the-unification-settings).
+1. Selectați **Următorul** pentru a modifica câmpurile unificate sau selectați **Salveaza si inchide** și întoarce-te la [Actualizați setările de unificare](#update-the-unification-settings).
 
 ## <a name="manage-unified-fields"></a>Gestionați câmpurile unificate
 
@@ -154,7 +154,7 @@ Run matching conditions rulează numai deduplicarea și potrivirea regulilor și
 
 1. De la **Date** > **Unifica** pagina, selectați:
 
-   - **Unificați profilurile clienților** : rulează condiții de potrivire și actualizează entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](system.md#schedule-tab).
+   - **Unificați profilurile clienților** : execută condiții de potrivire și actualizează entitatea unificată a profilului clientului fără a afecta dependențele (cum ar fi îmbogățirile, segmentele sau măsurile). Procesele dependente nu sunt rulate, dar vor fi reîmprospătate pe măsură ce [definite în programul de reîmprospătare](schedule-refresh.md).
 
    - **Unificați profilurile și dependențele clienților** : rulează condițiile potrivite și actualizează profilul unificat și toate dependențele. Toate procesele sunt reluate automat. După finalizarea tuturor proceselor din aval, profilul clientului reflectă datele actualizate.
 
@@ -162,4 +162,4 @@ Run matching conditions rulează numai deduplicarea și potrivirea regulilor și
 
    [!INCLUDE [progress-details-pane-include](includes/progress-details-pane.md)]
 
-Rezultatele unei rulări reușite se afișează pe **Unifica** pagină care arată numărul de profiluri de clienți unificate.
+Rezultatele unei rulări de succes sunt afișate pe **Unifica** pagină care arată numărul de profiluri unificate de clienți.

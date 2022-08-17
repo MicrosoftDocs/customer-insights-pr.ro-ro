@@ -1,23 +1,23 @@
 ---
 title: Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (previzualizare)
 description: Îmbogățiți profilurile clienților cu date LiveRamp.
-ms.date: 06/10/2022
+ms.date: 08/08/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: how-to
 author: kishorem-ms
 ms.author: kishorem
 manager: shellyha
-ms.openlocfilehash: 49bf558209ca91ab9d8db945862a57adccee1f6b
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 0aa6dc144602741b87843a5373779855ee3e334c
+ms.sourcegitcommit: b1d06fe26934f12f0c5ed13e8ef1d37e52e67cc7
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196363"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "9237828"
 ---
 # <a name="enrich-customer-profiles-with-identity-data-from-liveramp-preview"></a>Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (previzualizare)
 
-LiveRamp oferă rezoluție deterministă a identității offline și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților dvs. la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților dvs.
+LiveRamp oferă rezoluție deterministă a identității offline și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților dvs. la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Puteți utiliza apoi aceste ID-uri pentru o mai bună unificare a datelor clienților dvs.
 
 ## <a name="supported-countriesregions"></a>Țări / regiuni acceptate
 
@@ -33,7 +33,7 @@ LiveRamp oferă rezoluție deterministă a identității offline și consolidare
 
 ## <a name="configure-the-connection-for-liveramp"></a>Configurați conexiunea pentru LiveRamp
 
-Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și aveți un ID și un secret de client LiveRamp activ.
+Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights și au un ID de client și un secret LiveRamp activ.
 
 1. Selectați **Adăugați conexiune** când configurați o îmbogățire sau accesați **Admin** > **Conexiuni** și selectați **Înființat** pe țigla LiveRamp.
 
@@ -41,13 +41,9 @@ Trebuie să fii un [administrator](permissions.md#admin) în Customer Insights �
 
 1. Introduceți un nume pentru conexiune și un ID de client LiveRamp valid și un secret.
 
-1. Examinați și furnizați consimțământul pentru [Confidențialitatea și respectarea datelor](#data-privacy-and-compliance) prin selectarea **Sunt de acord**.
+1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
 
 1. Selectați **Verifica** pentru a valida configurația și apoi selectați **Salvați**.
-
-### <a name="data-privacy-and-compliance"></a>Confidențialitatea și conformitatea datelor
-
-Când activați Dynamics 365 Customer Insights pentru a transmite date către LiveRamp, permiteți transferul de date în afara limitei de conformitate pentru Dynamics 365 Customer Insights, inclusiv date potențial sensibile, cum ar fi datele personale. Microsoft va transfera astfel de date la instrucțiunile dvs., dar sunteți responsabil pentru a vă asigura că LiveRamp îndeplinește orice obligații de confidențialitate sau securitate pe care le aveți. Pentru mai multe informații, consultați [Declarație de confidențialitate Microsoft](https://go.microsoft.com/fwlink/?linkid=396732). Administratorul Dynamics 365 Customer Insights poate să elimine această îmbogățire oricând, pentru a întrerupe utilizarea acestei funcționalități.
 
 ## <a name="configure-the-enrichment"></a>Configurați îmbogățirea
 

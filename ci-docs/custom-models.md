@@ -11,19 +11,19 @@ manager: shellyha
 searchScope:
 - ci-custom-models
 - customerInsights
-ms.openlocfilehash: a44d1f2c00c90de3ed5a9425e3a197e109cb28e0
-ms.sourcegitcommit: b515120bebd2638f2639004422cee3cff42fbdf7
+ms.openlocfilehash: 3fad8a6cba71da80d4cc34be4084275e0d0a3622
+ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 05/24/2022
-ms.locfileid: "8800435"
+ms.lasthandoff: 08/10/2022
+ms.locfileid: "9245818"
 ---
 # <a name="custom-machine-learning-models"></a>Modele învățare programată particularizate
 
 > [!NOTE]
 > Asistența pentru învățare programată Studio (clasic) se va încheia pe 31 august 2024. Vă recomandăm să treceți la [Azure învățare programată](/azure/machine-learning/overview-what-is-azure-machine-learning) până la acea dată.
 >
-> Începând cu 1 decembrie 2021, nu veți putea crea resurse noi învățare programată Studio (clasic). Până la 31 august 2024, puteți continua să utilizați resursele existente învățare programată Studio (clasic). Pentru mai multe informații, vezi [Migrați la Azure învățare programată](/azure/machine-learning/migrate-overview).
+> Începând cu 1 decembrie 2021, nu veți putea crea resurse noi învățare programată Studio (clasic). Până la 31 august 2024, puteți continua să utilizați resursele existente învățare programată Studio (clasic). Pentru mai multe informații, consultați [Migrați la Azure învățare programată](/azure/machine-learning/migrate-overview).
 
 
 **Informații** > **Modele particularizate** vă permite să gestionați fluxurile de lucru pe baza modelelor Azure Machine Learning. Fluxurile de lucru vă ajută să alegeți datele din care doriți să generați detalii și să mapați rezultatele la datele unificate ale clienților. Pentru mai multe informații despre construirea de modele ML particularizate, consultați [Utilizare modele bazate pe Azure Machine Learning](azure-machine-learning-experiments.md).
@@ -112,7 +112,7 @@ Predicțiile oferă capacități pentru crearea de experiențe client mai bune, 
 
 1. Selectare rând **Rulare**.
 
-Fluxul dvs. de lucru rulează automat cu fiecare reîmprospătare planificată. Aflați mai multe despre [configurarea reîmprospătărilor planificate](system.md#schedule-tab).
+Fluxul dvs. de lucru rulează automat cu fiecare reîmprospătare planificată. Aflați mai multe despre [configurarea reîmprospătărilor planificate](schedule-refresh.md).
 
 ## <a name="delete-a-workflow"></a>Ștergeți un flux de lucru
 

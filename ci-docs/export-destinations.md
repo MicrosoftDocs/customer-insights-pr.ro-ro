@@ -1,7 +1,7 @@
 ---
 title: Prezentare generală a exporturilor (previzualizare)
 description: Gestionați exporturile către partajare date.
-ms.date: 07/25/2022
+ms.date: 08/12/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: overview
@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: fd234aff9021ded76d8226bf2f15e035cf75e7db
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245342"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304074"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
@@ -27,8 +27,8 @@ ms.locfileid: "9245342"
 
 Există două tipuri principale de exporturi:  
 
-- **Exporturi de date** : exportați orice tip de entitate disponibilă în Customer Insights. Entitățile pe care le selectați pentru export sunt exportate cu toate câmpurile de date, metadate, scheme și detalii de mapare.
-- **Segmentează exporturile** : exportați entități de segment din Customer Insights. Segmentele reprezintă o listă a profilurilor clienților. Când configurați exportul, selectați câmpurile de date incluse, în funcție de sistemul țintă către care exportați datele.
+- **Exporturi de date** vă permit să exportați orice tip de entitate disponibil în Customer Insights. Entitățile pe care le selectați pentru export sunt exportate cu toate câmpurile de date, metadate, scheme și detalii de mapare.
+- **Segmentează exporturile** vă permit să exportați entități segmentate din Customer Insights. Pentru consumatorii individuali (B-to-C), segmentele reprezintă o listă de profiluri de clienți. Pentru companii (B-to-B), [segmentele pot reprezenta o listă de conturi sau persoane de contact](segment-builder.md#create-a-new-segment-with-segment-builder). Când configurați exportul, selectați câmpurile de date incluse, în funcție de sistemul țintă către care exportați datele.
 
 ### <a name="export-segments"></a>Export segmente
 
@@ -38,14 +38,15 @@ Majoritatea opțiunilor de export acceptă ambele tipuri de medii. Exportarea se
 **Exporturile de segmente în medii pentru consumatori individuali (B la C)**  
 - Segmentele din contextul mediilor pentru clienții individuali sunt construite pe baza entității *profil client unificat*. Fiecare segment care îndeplinește cerințele sistemelor țintă (de exemplu, o adresă de e-mail) poate fi exportat.
 
-**Mediile de export ale segmentelor pentru conturi de business (B la B)**  
-- Segmentele din contextul mediilor pentru conturile de afaceri sunt construite pe baza entității *cont*. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea **companie** la definirea exportului.
-- Toate celelalte sisteme țintă necesită câmpuri de la entitatea de contact. Pentru a vă asigura că segmentele de cont pot prelua date din contactele asociate, definiția segmentului dvs. trebuie să proiecteze atributele entității de contact. Aflați mai multe despre cum să [configurați segmente și atribute de proiect](segment-builder.md).
+**Segmentați exporturile în medii pentru conturi de afaceri (B-to-B)**  
+- Segmentele în contextul mediilor pentru conturile de afaceri sunt construite pe *cont* entitatea sau *a lua legatura* entitate. Pentru a exporta segmente de cont așa cum este, sistemul țintă trebuie să accepte segmente de cont pure. Acesta este cazul pentru [LinkedIn](export-linkedin-ads.md) când alegeți opțiunea **companie** la definirea exportului.
+- Toate celelalte sisteme țintă necesită câmpuri de la entitatea de contact.
+- Cu două tipuri de segmente (contacte și conturi), Customer Insights identifică automat ce tip de segmente sunt eligibile pentru export pe baza sistemului țintă. De exemplu, pentru un sistem țintă axat pe contacte, cum ar fi Mailchimp, Customer Insights vă permite doar să alegeți segmente de contact de exportat.
 
 **Limite la exporturile pe segmente**  
 - Sistemele țintă terțe pot limita numărul de profiluri de clienți pe care le puteți exporta. 
 - Pentru clienții individuali, veți vedea numărul real de membri ai segmentului atunci când selectați un segment pentru export. Veți primi un avertisment dacă un segment este prea mare. 
-- Pentru conturile de afaceri, veți vedea numărul de conturi dintr-un segment; cu toate acestea, numărul de contacte care pot fi proiectate nu apare. În unele cazuri, acest lucru ar putea duce la segmentul exportat care conține de fapt mai multe profiluri de clienți decât acceptă sistemul țintă. Dacă limitele sistemului țintă sunt depășite, exportul este omis.
+- Pentru conturile de afaceri, veți vedea numărul de conturi sau persoane de contact în funcție de segment. Veți primi un avertisment dacă segmentul este prea mare. Depășirea limitelor rezultatelor sistemelor țintă va sări peste export.
 
 ## <a name="set-up-a-new-export"></a>Configurați un nou export
 
@@ -110,6 +111,20 @@ Pentru a exporta date fără a aștepta o reîmprospătare programată, accesaț
 
 - Pentru a rula toate exporturile, selectați **Executare totală** în bara de comandă. Sunt executate numai exporturile care au o programare activă. Pentru a rula un export care nu este activ, executați un singur export.
 - Pentru a rula un singur export, selectați-l în listă și selectați **Executare** în bara de comandă.
+
+## <a name="troubleshooting"></a>Depanare
+
+### <a name="segment-not-eligible-for-export"></a>Segmentul nu este eligibil pentru export
+
+**Problemă** Într-un mediu de conturi de afaceri, exporturile dvs. eșuează cu mesajul de eroare: „Următorul segment nu este eligibil pentru această destinație de export: '{ numele segmentului} '. Alegeți numai segmente de tip ContactProfile și încercați din nou."
+
+**Rezoluţie** Mediile Customer Insights pentru conturile de afaceri au fost actualizate pentru a suporta segmente de contact pe lângă segmentele de cont. Datorită acestei modificări, exporturile care necesită detalii de contact funcționează numai cu segmente bazate pe contacte.
+
+1. [Creați un segment bazat pe contacte](segment-builder.md) care se potrivește cu segmentul utilizat anterior.
+
+1. Odată ce segmentul de contact este rulat, editați exportul respectiv și selectați noul segment.
+
+1. Selectați **Salvați** pentru a salva configurația sau **Salvați și rulați** pentru a testa acest export imediat.
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

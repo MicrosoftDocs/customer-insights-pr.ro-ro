@@ -1,6 +1,6 @@
 ---
 title: Prezentare generală privind îmbogățirea datelor (previzualizare).
-description: Utilizați capabilitățile de la Microsoft și alte servicii terțe pentru a vă îmbogăți datele clienților.
+description: Utilizați capabilitățile Microsoft și alte servicii terțe pentru a vă îmbogăți datele clienților.
 ms.date: 06/10/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
@@ -14,12 +14,12 @@ searchScope:
 - ci-enrichment-details
 - ci-enrichment-wizard
 - customerInsights
-ms.openlocfilehash: 0c2a900190b4ab6e93098d05a2fd66bcd2b847fd
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: fb747f7adc7d87f30f66c5d0ed20bbe238558fde
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245894"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304534"
 ---
 # <a name="data-enrichment-preview-overview"></a>Prezentare generală privind îmbogățirea datelor (previzualizare).
 
@@ -83,19 +83,19 @@ De asemenea, puteți crea [segmente](segments.md) sau [măsuri](measures.md) din
 
 ## <a name="run-or-refresh-enrichments"></a>Rulați sau reîmprospătați îmbogățirile
 
-Odată executate, îmbogățirile pot fi reîmprospătate pe o programare automată sau reîmprospătate manual la cerere.
+Odată executate, îmbogățirile pot fi reîmprospătate într-un program automat sau reîmprospătate manual la cerere.
 
 1. Pentru a reîmprospăta manual una sau mai multe îmbogățiri, selectați-le și alegeți **Alerga**. La [programați o reîmprospătare automată](schedule-refresh.md), mergi la **Admin** > **Sistem** > **Programa**. Timpul de procesare depinde de dimensiunea datelor clienților dvs.
 
 1. Opțional, [vezi progresul procesului de îmbogățire](#see-the-progress-of-the-enrichment-process).
 
-1. După finalizarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a examina datele profilurilor de clienți nou îmbogățite, ora ultimei actualizări și numărul de profiluri îmbogățite.
+1. După finalizarea procesului de îmbogățire, accesați **Îmbogățirile mele** pentru a examina datele profilurilor client nou îmbogățite, ora ultimei actualizări și numărul de profiluri îmbogățite.
 
 1. Selectați îmbogățirea pentru a vedea [rezultate de îmbogățire](#view-enrichment-results).
 
 ### <a name="see-the-progress-of-the-enrichment-process"></a>Vedeți progresul procesului de îmbogățire
 
-Puteți găsi detalii despre procesarea unei îmbogățiri, inclusiv starea acesteia și problemele potențiale în timp ce este reîmprospătată sau după finalizarea unei reîmprospătări. Înțelegeți ce procese sunt implicate pentru a reîmprospăta o îmbogățire și cât timp a durat pentru a rula procesele. Starea de îmbogățire este acceptată pentru Experian, Leadspace, HERE Technologies, SFTP Import și Azure Maps.
+Puteți găsi detalii despre procesarea unei îmbogățiri, inclusiv starea acesteia și probleme potențiale în timpul reîmprospătării sau după finalizarea unei actualizări. Înțelegeți ce procese sunt implicate pentru a reîmprospăta o îmbogățire și cât timp a durat pentru a rula procesele. Starea de îmbogățire este acceptată pentru Experian, Leadspace, HERE Technologies, SFTP Import și Azure Maps.
 
 1. Accesați **Date** > **Îmbogățire**.
 1. În **Îmbogățirile mele** fila, selectați starea îmbogățirii pentru a deschide un panou lateral.
@@ -112,7 +112,7 @@ După o rundă de îmbogățire completă, examinați rezultatele îmbogățirii
 1. Accesați **Date** > **Îmbogățire**.
 1. În **Îmbogățirile mele** fila, selectați îmbogățirea pe care doriți să o vizualizați.
 
-Toate îmbogățirile arată informații de bază, cum ar fi numărul de profiluri îmbogățite și numărul de profiluri îmbogățite în timp. The **Previzualizarea clienților îmbogățiți** țigla arată un eșantion al entității de îmbogățire generată. Pentru a vedea o vizualizare detaliată, selectați **Vezi mai mult** și selectați **Date** fila.
+Toate îmbogățirile arată informații de bază, cum ar fi numărul de profiluri îmbogățite și numărul de profiluri îmbogățite în timp. The **Previzualizarea clienților îmbogățiți** țiglă arată o mostră a entității de îmbogățire generată. Pentru a vedea o vizualizare detaliată, selectați **Vezi mai mult** și selectați **Date** fila.
 
 :::image type="content" source="media/enrichments-results.png" alt-text="Pagina cu rezultate îmbogățiri.":::
 

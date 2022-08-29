@@ -2,7 +2,7 @@
 title: Unificați câmpurile clienților pentru unificarea datelor
 description: Îmbinați entitățile pentru a crea profiluri de clienți unificate.
 recommendations: false
-ms.date: 05/04/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,18 +14,18 @@ searchScope:
 - ci-match
 - ci-relationships
 - customerInsights
-ms.openlocfilehash: a6f29c4985ee274207d122fb1bd76d97b98613b6
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 7ebd6ab8fa6ae141f33295a5d7723e96c8dc70ca
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213597"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304028"
 ---
-# <a name="unify-customer-fields-for-data-unification"></a>Unificați câmpurile clienților pentru unificarea datelor
+# <a name="unify-customer-fields"></a>Unificați câmpurile clienților
 
-În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea dvs. de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri de e-mail separate sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de clienți stabile și unice și puteți grupa profiluri asociate într-un cluster.
+În acest pas al procesului de unificare, alegeți și excludeți atributele de îmbinat în entitatea dvs. de profil unificat. De exemplu, dacă trei entități aveau date de e-mail, poate doriți să păstrați toate cele trei câmpuri de e-mail separate sau să le îmbinați într-un singur câmp de e-mail pentru profilul unificat. Unele atribute sunt combinate automat de către sistem. Puteți crea ID-uri de client stabile și unice. Pentru clienții individuali, puteți grupa profilurile asociate într-un cluster.
 
-:::image type="content" source="media/m3_unify.png" alt-text="Pagina de îmbinare din procesul de unificare a datelor, afișând tabelul cu câmpuri îmbinate care definesc profilul de client unificat.":::
+:::image type="content" source="media/m3_unify.png" alt-text="Pagina Unificați câmpurile clienților în procesul de unificare a datelor care arată un tabel cu câmpurile îmbinate care definesc profilul unificat al clientului.":::
 
 ## <a name="review-and-update-the-customer-fields"></a>Examinați și actualizați câmpurile pentru clienți
 
@@ -38,7 +38,7 @@ ms.locfileid: "9213597"
       - [Excludere](#exclude-fields)
       - [Deplasați-vă în sus sau în jos](#change-the-order-of-fields)
 
-   1. Pentru orice câmp, puteți:
+   1. Pentru orice câmpuri individuale, puteți:
       - [Combinare câmpuri](#combine-fields-manually)
       - [Combinați un grup de câmpuri](#combine-a-group-of-fields)
       - [Redenumire](#rename-fields)
@@ -47,7 +47,7 @@ ms.locfileid: "9213597"
 
 1. Opțional, [generați configurația ID-ului clientului](#configure-customer-id-generation).
 
-1. Opțional, [grupează profilurile în gospodării sau clustere](#group-profiles-into-households-or-clusters).
+1. Opțional pentru B-to-C, [grupează profilurile în gospodării sau clustere](#group-profiles-into-households-or-clusters).
 
 > [!div class="nextstepaction"]
 > [Pasul următor: revizuiți unificarea](review-unification.md)
@@ -60,7 +60,7 @@ ms.locfileid: "9213597"
     - **Importanţă**: Identifică valoarea câștigătorului pe baza rangului de importanță specificat pentru câmpurile participante. Este opțiunea implicită de combinare. Selectați **Mutați în sus/în jos** pentru a stabili clasamentul importanței.
 
       > [!NOTE]
-      > Customer Insights folosește prima valoare non-nulă. De exemplu, date entități A, B și C clasate în această ordine, dacă A.Name și B.Name sunt nule, atunci se folosește valoarea de la C.Name.
+      > Customer Insights folosește prima valoare non-nulă. De exemplu, date entități A, B și C clasate în acea ordine, dacă A.Name și B.Name sunt nule, atunci se folosește valoarea de la C.Name.
 
       :::image type="content" source="media/importance-merge-option.png" alt-text="Opțiunea de importanță din dialogul câmpurilor de îmbinare.":::
 
@@ -161,7 +161,7 @@ Configurarea unui ID stabil de client vă permite să evitați acel comportament
 
 ## <a name="group-profiles-into-households-or-clusters"></a>Profiluri de grup în gospodării sau clustere
 
-Puteți defini reguli pentru a grupa profilurile asociate într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
+Pentru clienții individuali, puteți defini reguli de grupare a profilurilor asociate într-un cluster. În prezent există două tipuri de clustere disponibile - clustere de uz casnic și personalizate. Sistemul alege automat o gospodărie cu reguli predefinite dacă entitatea *Client* conține câmpurile semantice *Person.LastName* și *Location.Address*. De asemenea, puteți crea un cluster cu propriile reguli și condiții, similar cu [potrivire reguli](match-entities.md#define-rules-for-match-pairs).
 
 1. Selectați **Avansat** > **Creați cluster**.
 

@@ -6,19 +6,19 @@ ms.date: 08/01/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
-ms.author: mukeshpo
+ms.author: sstabbert
 ms.reviewer: v-wendysmith
 manager: shellyha
 searchScope:
 - ci-map
 - ci-match
 - customerInsights
-ms.openlocfilehash: 7f4829cfc14af623f724c6594e834f3fac1c15a9
-ms.sourcegitcommit: 10dcfc32eaf8ec0903be96136dca7bb4e250276a
-ms.translationtype: HT
+ms.openlocfilehash: 3f84c1c149f0befcbe489ccdd8a666ce6d5d798a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/01/2022
-ms.locfileid: "9213642"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304488"
 ---
 # <a name="remove-duplicates-before-unifying-data"></a>Eliminați duplicatele înainte de unificarea datelor
 
@@ -47,7 +47,7 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 
 1. Pe **Înregistrări duplicate** pagina, selectați o entitate și selectați **Adăugați o regulă** pentru a defini regulile de deduplicare.
 
-   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captură de ecran a paginilor de înregistrări duplicate cu Afișați mai multe evidențiate":::
+   :::image type="content" source="media/m3_duplicates_showmore.png" alt-text="Captură de ecran a paginii Înregistrări duplicate cu entitatea evidențiată și afișată Adăugați regula"  lightbox="media/m3_duplicates_showmore.png":::
 
    1. În **Adăugați o regulă** panoul, introduceți următoarele informații:
       - **Selectați câmpul** : Alegeți din lista de câmpuri disponibile din entitatea pe care doriți să o verificați pentru duplicate. Alegeți câmpuri care sunt probabil unice pentru fiecare client. De exemplu, o adresă de e-mail sau combinația dintre nume, oraș și număr de telefon.
@@ -80,10 +80,10 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
       - **Cea mai completată**: Identifică înregistrarea cu cele mai populate câmpuri de atribute drept înregistrare câștigătoare. Este opțiunea implicită de combinare.
       - **Cea mai recentă**: Identifică înregistrarea câștigătoare pe baza celor mai recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
       - **Cea mai puțin recentă**: Identifică înregistrarea câștigătoare pe baza celor mai puțin recente. Necesită o dată sau un câmp numeric pentru a defini activitatea recentă.
-      
+
       În caz de egalitate, recordul de câștigător este cel cu MAX(PK) sau valoarea cheii primare mai mare.
-      
-   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie să specificați și un câmp de dată/ora care definește recentitatea.
+
+   1. Opțional, pentru a defini preferințele de îmbinare pe atributele individuale ale unei entități, selectați **Avansat** în partea de jos a panoului. De exemplu, puteți alege să păstrați cel mai recent e-mail ȘI cea mai completă adresă din diferite înregistrări. Extindeți entitatea pentru a vedea toate atributele sale și definiți ce opțiune să utilizați pentru atributele individuale. Dacă alegeți o opțiune bazată pe recentitate, trebuie, de asemenea, să specificați un câmp de dată/ora care definește recentitatea.
 
       :::image type="content" source="media/m3_adv_merge.png" alt-text="Panoul de preferințe avansate de îmbinare care arată e-mailul recent și adresa completă":::
 
@@ -92,22 +92,9 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 1. După definirea regulilor de deduplicare și a preferințelor de îmbinare, selectați **Următorul**.
   
 > [!div class="nextstepaction"]
-> [Următorul pas pentru o singură entitate: Unificarea câmpurilor](merge-entities.md)
+> [Următorul pas pentru o singură entitate: Unificați câmpurile](merge-entities.md)
 
 > [!div class="nextstepaction"]
 > [Următorul pas pentru mai multe entități: Condiții de potrivire](match-entities.md)
-
-## <a name="deduplication-output-as-an-entity"></a>Ieșire de deduplicare ca entitate
-
-Procesul de deduplicare creează o nouă entitate deduplicată pentru fiecare dintre entitățile sursă. Aceste entități pot fi găsite împreună cu **ConflationMatchPairs:CustomerInsights** în secțiunea **Sistem** din pagina **Entități**, cu numele **Deduplication_DataSource_Entity**.
-
-O entitate de ieșire de deduplicare conține următoarele informații:
-
-- ID-uri / Chei
-  - Câmpurile cheie primară și ID alternativ. Câmpul ID alternativ este format din toate ID-urile alternative identificate pentru o înregistrare.
-  - Câmpul Deduplication_GroupId arată grupul sau clusterul identificat în cadrul unei entități care grupează toate înregistrările similare pe baza câmpurilor de deduplicare specificate. Este utilizat în scopuri de procesare a sistemului. Dacă nu sunt specificate reguli de deduplicare manuală și se aplică reguli de deduplicare definite de sistem, este posibil să nu găsiți acest câmp în entitatea de ieșire a deduplicării.
-  - Deduplication_WinnerId: Acest câmp conține ID-ul câștigător din grupurile sau clusterele identificate. Dacă Deduplication_WinnerId este aceeași cu valoarea cheii principale pentru o înregistrare, înseamnă că înregistrarea este înregistrarea câștigătoare.
-- Câmpuri utilizate pentru definirea regulilor de deduplicare.
-- Câmpurile Regulă și Scor pentru a indica care dintre regulile de deduplicare s-au aplicat și scorul returnat de algoritmul de potrivire.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 title: Condiții de potrivire pentru unificarea datelor
 description: Asociați entitățile pentru a crea profiluri de clienți unificate.
 recommendations: false
-ms.date: 05/05/2022
+ms.date: 07/27/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: e3e4e37d5b4c9caf2520a789d5f78ef33b491793
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139718"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304672"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condiții de potrivire pentru unificarea datelor
 
@@ -27,6 +27,8 @@ Acest pas în unificare definește ordinea de potrivire și regulile pentru potr
 
 > [!NOTE]
 > Odată ce ați creat condițiile de potrivire și selectați **Următorul**, nu puteți elimina o entitate sau un atribut selectat. Dacă este necesar, selectați **Înapoi** pentru a revizui entitățile și atributele selectate înainte de a continua.
+
+[!INCLUDE [m3-first-run-note](includes/m3-first-run-note.md)]
 
 ## <a name="include-enriched-entities-preview"></a>Includeți entități îmbogățite (previzualizare)
 
@@ -43,16 +45,16 @@ Dacă ați îmbogățit entități la nivelul sursă de date pentru a vă îmbun
 Fiecare potrivire unifică două sau mai multe entități într-o singură entitate consolidată. În același timp, păstrează înregistrările unice ale clienților. Ordinea de potrivire indică ordinea în care sistemul încearcă să potrivească înregistrările.
 
 > [!IMPORTANT]
-> Prima entitate din listă se numește entitate primară. Entitatea principală servește drept bază pentru setul de date unificat de profiluri. Entitățile suplimentare care sunt selectate vor fi adăugate la această entitate.
+> Prima entitate se numește entitate principală, care servește drept bază pentru profilurile dvs. unificate. Entitățile suplimentare care sunt selectate vor fi adăugate la această entitate.
 >
 > Considerații importante:
 >
-> - Alegeți entitatea cu cele mai complete și mai fiabile date de profil despre clienții dvs. ca entitate principală.
+> - Alegeți entitatea cu cele mai complete și de încredere date de profil despre clienții dvs. ca entitate principală.
 > - Alegeți entitatea care are mai multe atribute în comun cu alte entități (de exemplu, numele, numărul de telefon sau adresa de e-mail) ca entitate principală.
 
-1. Pe **Condiții de potrivire** pagina, utilizați săgețile de mutare în sus și în jos pentru a muta entitățile în ordinea dorită sau trageți și plasați-le. De exemplu, selectați **Contacte: eCommerce** ca entitate primară şi **CustomerLoyalty: loialitate** ca a doua entitate.
+1. Pe **Condiții de potrivire** pagina, utilizați săgețile de mutare în sus și în jos pentru a muta entitățile în ordinea dorită sau trageți și plasați-le. De exemplu, selectați **eCommerceClienți** ca entitate primară şi **Clienti loiali** ca a doua entitate.
 
-1. Pentru a avea fiecare înregistrare din entitate ca client unic, indiferent dacă este găsită o potrivire, selectați **Includeți toate înregistrările**. Orice înregistrări din această entitate care nu se potrivesc cu înregistrările din alte entități sunt incluse în profilul unificat. Înregistrările care nu au o potrivire se numesc singletons.
+1. Pentru a avea fiecare înregistrare din entitate ca client unic, indiferent dacă este găsită o potrivire, selectați **Includeți toate înregistrările**. Orice înregistrări din această entitate care nu se potrivesc cu înregistrările din nicio altă entitate sunt incluse în profilul unificat. Înregistrările care nu au o potrivire se numesc singletons.
   
 Entitatea primară *Contacte: eCommerce* este potrivit cu următoarea entitate *CustomerLoyalty: loialitate*. Setul de date care rezultă din primul pas de potrivire este asociat cu următoarea entitate dacă aveți mai mult de două entități.
 
@@ -70,7 +72,7 @@ Avertismentul de lângă numele unei entități înseamnă că nu este definită
 
    :::image type="content" source="media/m3_add_rule.png" alt-text="Captură de ecran a panoului Adăugați reguli.":::
 
-   - **Selectați entitate/câmp (primul rând)** : alegeți o entitate asociată și un atribut pentru a specifica o proprietate de înregistrare care este probabil unică pentru un client. De exemplu, un număr de telefon sau o adresă de e-mail. Evitați potrivirea după atributele de tip activitate. De exemplu, un ID de achiziție nu va găsi probabil nicio potrivire în alte tipuri de înregistrări.
+   - **Selectați entitate/câmp (primul rând)** : alegeți o entitate și un atribut care este probabil unic pentru un client. De exemplu, un număr de telefon sau o adresă de e-mail. Evitați potrivirea după atributele de tip activitate. De exemplu, un ID de achiziție nu va găsi probabil nicio potrivire în alte tipuri de înregistrări.
 
    - **Selectați entitate/câmp (al doilea rând)** : Alegeți un atribut care se referă la atributul entității specificate în primul rând.
 
@@ -116,7 +118,7 @@ Regulile de potrivire reprezintă seturi de condiții. Pentru a potrivi entită�
 
 ### <a name="add-exceptions-to-a-rule"></a>Adăugați excepții la o regulă
 
-În cele mai multe cazuri, potrivirea entității duce la profiluri unice de clienți cu date consolidate. Pentru a aborda în mod dinamic cazuri rare de fals pozitive și fals negative, puteți defini excepții pentru o regulă de potrivire. Excepțiile sunt aplicate după procesarea regulilor de potrivire și evită potrivirea tuturor înregistrărilor, care îndeplinesc criteriile de excepție.
+În cele mai multe cazuri, potrivirea entității duce la profiluri unice de clienți cu date consolidate. Pentru a aborda cazurile rare de fals pozitive și fals negative, definiți excepții pentru o regulă de potrivire. Excepțiile sunt aplicate după procesarea regulilor de potrivire și se evită potrivirea tuturor înregistrărilor, care îndeplinesc criteriile de excepție.
 
 De exemplu, dacă regula de potrivire combină nume de familie, orașul și data nașterii, sistemul va identifica gemeni cu același nume de familie care locuiesc în același oraș cu același profil. Puteți specifica o excepție care nu se potrivește cu profilurile dacă prenume din entitățile pe care le combinați nu sunt aceleași.
 
@@ -134,7 +136,7 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 |---------|---------|---------|
 |Se potrivesc întotdeauna     | Definește valori care se potrivesc întotdeauna.         |  Mereu potriviți *Mike* și *MikeR*.       |
 |Nu se potrivesc niciodată     | Definește valori care nu se potrivesc niciodată.        | Nu se potrivește niciodată *Ioan* și *Jonathan*.        |
-|Bypass particularizat     | Definește valori pe care sistemul ar trebui să le ignore întotdeauna în faza de potrivire. |  Ignorați valorile *11111* și *Necunoscut* în timpul meciului.        |
+|Bypass            | Definește valori pe care sistemul ar trebui să le ignore întotdeauna în faza de potrivire. |  Ignorați valorile *11111* și *Necunoscut* în timpul meciului.        |
 |Mapare de alias    | Definirea valorilor pe care sistemul ar trebui să le considere ca fiind aceeași valoare.         | Considera *Joe* a fi egal cu *Iosif*.        |
 
 1. Selectați **Particularizat**.
@@ -157,7 +159,7 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 
 1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi.
 
-1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul derulant și selectați **Terminat**.
+1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul drop-down și selectați **Terminat**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 

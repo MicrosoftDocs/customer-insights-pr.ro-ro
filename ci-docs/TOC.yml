@@ -76,6 +76,8 @@
       href: merge-entities.md
     - name: Examinați unificarea datelor
       href: review-unification.md
+    - name: Creați un profil de contact unificat
+      href: data-unification-contacts.md
     - name: Actualizați setările de unificare
       href: data-unification-update.md
 - name: Îmbogățire date
@@ -154,7 +156,7 @@
           href: predict-subscription-churn.md
         - name: Previzionați retragere din tranzacții
           href: predict-transactional-churn.md
-        - name: Analizați sentimentul în feedback-ul clienților
+        - name: Analizați sentimentul în feedbackul clienților
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md

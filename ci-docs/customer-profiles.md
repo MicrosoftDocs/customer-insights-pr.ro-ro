@@ -14,12 +14,12 @@ searchScope:
 - ci-activities
 - ci-activities-wizard
 - customerInsights
-ms.openlocfilehash: 6cdf47e6997f230811dcb0f2cf5542f3a6db2367
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+ms.openlocfilehash: 0c8edfd8f45ce7770d568811df2b38be1b04e73a
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188108"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9303798"
 ---
 # <a name="view-customer-profiles"></a>Vizualizare profiluri de client
 
@@ -78,7 +78,7 @@ Detaliile clientului includ:
 **Tigla de profil client** arată valorile diferite de la unificat *Client* entitate. Dacă un câmp nu are nicio valoare pentru profilul de client selectat, nu se va afișa, cu excepția câmpului de adresă. Dala este structurată în secțiuni:
 
 - Prima secțiune prezintă un set predefinit de câmpuri urmat de toate câmpurile care fac parte din indexul de căutare și filtrare. Toate câmpurile legate de adresă sunt combinate într-o singură linie, care arată chiar dacă profilul nu conține informații despre adresă.
-- **Contacte pentru acest client** afișare în medii pentru conturi de afaceri. Fiecare contact este afișat cu câmpurile sale. Câmpurile goale sunt ascunse.
+- **Contacte pentru acest client** afișare în medii pentru conturi de afaceri (B-to-B). Fiecare contact este afișat cu câmpurile sale. Câmpurile goale sunt ascunse.
 - **Câmpuri suplimentare** afișează câmpurile rămase ale clientului selectat, cu excepția ID-urilor.
 - **ID-uri** listează toate ID-urile sub numele lor de entitate corespunzător. Câmpurile sunt identificate ca ID-uri prin semantică.
 

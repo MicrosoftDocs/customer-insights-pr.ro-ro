@@ -1,7 +1,7 @@
 ---
 title: Creați segmente complexe cu generatorul de segmente
 description: Utilizați generatorul de segmente pentru a crea segmente complexe de clienți, grupându-le pe baza diferitelor atribute.
-ms.date: 03/25/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: JimsonChalissery
@@ -13,19 +13,19 @@ searchScope:
 - ci-segment-builder
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: cde373cd65e296675e1b3c92f3024e1093853842
-ms.sourcegitcommit: 8a28e9458b857adf8e90e25e43b9bc422ebbb2cd
+ms.openlocfilehash: 7f691fd0b2ea76a2960d5adf766a4b166f02ebb4
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/18/2022
-ms.locfileid: "9170650"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304764"
 ---
 # <a name="create-complex-segments-with-segment-builder"></a>Creați segmente complexe cu generatorul de segmente
 
-Definiți filtre complexe pe baza entității client unificate și a entităților conexe. Fiecare segment, după procesare, creează un set de înregistrări ale clienților pe care le puteți exporta și pe care puteți acționa.
+Definiți filtre complexe în jurul clientului unificat sau contactului unificat și entităților asociate acestuia. Fiecare segment, după procesare, creează un set de înregistrări ale clienților sau contactelor pe care le puteți exporta și asupra cărora puteți lua măsuri.
 
 > [!TIP]
-> Segmente bazate pe **clienți individuali** includ automat informațiile de contact disponibile pentru membrii segmentului. În medii pentru **conturi de business**, segmentele se bazează pe conturi (companii sau filiale). Pentru a include informații de contact într-un segment, utilizați funcționalitatea **Atributele proiectului** în generatorul de segmente. Asigurați-vă că sursele de date de contact sunt [mapate semantic la ContactProfile](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping) pentru entitate.
+> Segmente bazate pe **clienți individuali** includ automat informațiile de contact disponibile pentru membrii segmentului. În **conturi de afaceri**, daca tu [unificat](data-unification.md) atât conturi, cât și contacte, alegeți dacă segmentul se bazează pe conturi sau pe contacte de afaceri. Pentru a exporta către o destinație care așteaptă informații de contact, utilizați un segment de contacte. Pentru a exporta informații despre cont către o destinație, utilizați un segment de conturi.
 
 ## <a name="segment-builder"></a>Constructor de segmente
 
@@ -57,6 +57,11 @@ Exemplul de mai sus ilustrează capacitatea de segmentare. Am definit un segment
 
 1. Selectați **Nou** > **Construiește-ți propriul**. În pagina generator de segmente, definiți sau compuneți reguli. O regulă constă din una sau mai multe condiții care definesc un set de clienți.
 
+   > [!NOTE]
+   > Pentru mediile bazate pe conturi de afaceri, selectați **Nou** > **Segment de conturi** sau **Segment de persoane de contact (previzualizare)** în funcție de tipul de segment pe care doriți să îl creați. Daca un [ierarhia conturilor](relationships.md#set-up-account-hierarchies) a fost definit și doriți să creați reguli pentru a filtra datele în funcție de relația dintre copii și părinți, selectați **Folosiți ierarhia? (previzualizare)**, selectați ierarhia, apoi **aplica**.
+   >
+   > :::image type="content" source="media/segment_acct_hierarchy.png" alt-text="Segmentează panoul de ierarhie a contului de selectare.":::
+
 1. Selectați **Editează detaliile** lângă segmentul fără titlu. Furnizați un nume pentru segmentul dvs. și actualizați **Numele entității de ieșire** sugerat pentru segment. Opțional, adăugați o descriere și [Etichete](work-with-tags-columns.md#manage-tags) la segment.
 
    :::image type="content" source="media/segments_edit_details.png" alt-text="caseta de dialog Editare detalii.":::
@@ -65,11 +70,11 @@ Exemplul de mai sus ilustrează capacitatea de segmentare. Am definit un segment
    - Consultați lista entităților și atributelor disponibile în panoul **Adăugați la regulă** și selectați pictograma **+** pictogramă de lângă atributul de adăugat. Alegeți dacă doriți să adăugați atributul la o regulă existentă sau utilizați-l pentru a crea o nouă regulă.
    - Tastați numele atributului în secțiunea regulii pentru a vedea sugestiile potrivite.
 
-1. Alegeți operatorii pentru a specifica valorile potrivite ale condiției. Atributul poate avea unul dintre cele patru tipuri de date ca valoare: numeric, șir, dată sau boolean. În funcție de tipul de date al atributului, sunt disponibili diferiți operatori pentru a specifica condiția. Pentru segmente cu conturi de afaceri, sunt disponibili doi operatori speciali pentru a include ierarhii potențiale între conturile ingerate. Utilizați operatorii *copil al* și *parinte a* pentru a include conturi conexe.
+1. Alegeți operatorii pentru a specifica valorile potrivite ale condiției. Atributul poate avea unul dintre cele patru tipuri de date ca valoare: numeric, șir, dată sau boolean. În funcție de tipul de date al atributului, sunt disponibili diferiți operatori pentru a specifica condiția.
 
 1. Selectați **Adăugați o condiție** pentru a adăuga mai multe condiții unei reguli. Pentru a crea o regulă sub regula curentă, selectați **Adăugați o subregulă**.
 
-1. Dacă o regulă folosește alte entități decât cele *Client* entitate, selectați **Stabiliți calea relației** pentru a mapa entitatea selectată la entitatea client unificat. Dacă există o singură cale de relație posibilă, sistemul o selectează automat. Diferit [căi de relație](relationships.md#relationship-paths) poate da rezultate diferite. Fiecare regulă poate avea propria cale de relaționare.
+1. Dacă o regulă folosește alte entități decât cele *Client* entitate (sau *Profil de contact* entitate pentru B-to-B), selectați **Stabiliți calea relației** pentru a mapa entitatea selectată la entitatea client unificat. Dacă există o singură cale de relație posibilă, sistemul o selectează automat. Diferit [căi de relație](relationships.md#relationship-paths) poate da rezultate diferite. Fiecare regulă poate avea propria cale de relaționare.
 
    :::image type="content" source="media/relationship-path.png" alt-text="Calea relației potențiale la crearea unei reguli bazate pe o entitate mapată la entitatea client unificată.":::
 
@@ -92,24 +97,22 @@ Exemplul de mai sus ilustrează capacitatea de segmentare. Am definit un segment
       - **Intersectare** suprapune cele două grupuri. Numai datele ce *sunt comune* pentru ambele grupuri vor rămâne în grupul unificat.
       - **Excepție** combină cele două grupuri. Se păstrează numai datele din grupul A care *nu sunt comune* cu datele din grupa B.
 
-1. În mod implicit, entitatea de ieșire va conține automat toate atributele profilurilor clienților care se potrivesc cu filtrele definite. Dacă un segment se bazează pe alte entități decât cele *Client* entitate, selectați **Atributele proiectului** pentru a adăuga mai multe atribute de la aceste entități la entitatea de ieșire.
-
-   > [!IMPORTANT]
-   > Pentru segmentele bazate pe conturi de afaceri, detalii despre una sau mai multe persoane de contact ale fiecărui cont din *Profil de contact* entitatea trebuie inclusă în segment pentru a permite ca acel segment să fie activat sau exportat către destinații care necesită informații de contact. Pentru mai multe informații despre entitatea *ContactProfile*, vedeți [Mapări semantice](semantic-mappings.md).
-   > Un exemplu de ieșire pentru un segment bazat pe conturi de business cu atributele proiectate ale persoanelor de contact ar putea arăta astfel:
-   >
-   > |ID  |Nume cont  |Venituri  |Nume persoană de contact  | Rol persoană de contact|
-   > |---------|---------|---------|---------|---|
-   > |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, manager achiziții]
-
-   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplu de atribute proiectate selectate în panoul lateral pentru a fi adăugate la entitatea de ieșire.":::
-  
+1. În mod implicit, entitatea de ieșire va conține automat toate atributele profilurilor clienților care se potrivesc cu filtrele definite. În B-to-B când utilizați *Profil de contact* entitate, ID-ul contului este inclus automat. Dacă un segment se bazează pe alte entități decât cele *Client* entitate sau pentru a include mai multe atribute din *Profil de contact*, Selectați **Atributele proiectului** pentru a adăuga mai multe atribute de la aceste entități la entitatea de ieșire.
+ 
    De exemplu: un segment se bazează pe o entitate care conține date de achiziție, care sunt legate de entitatea *Client*. Segmentul caută toți clienții din Spania care au achiziționat bunuri în anul curent. Puteți alege să adăugați atribute precum prețul mărfurilor sau data achiziției la toate înregistrările clienților care se potrivesc din entitatea de ieșire. Aceste informații ar putea fi utile pentru a analiza corelațiile sezoniere cu cheltuielile totale.
 
+   :::image type="content" source="media/segments-project-attributes.png" alt-text="Exemplu de atribute proiectate selectate în panoul lateral pentru a fi adăugate la entitatea de ieșire.":::
+ 
+   Un exemplu de ieșire pentru un segment bazat pe conturi de business cu atributele proiectate ale persoanelor de contact ar putea arăta astfel:
+
+   |ID  |Nume cont  |Venituri  |Nume persoană de contact  | Rol persoană de contact|
+   |---------|---------|---------|---------|---|
+   |10021     | Contoso | 100K | [Abbie Moss, Ruth Soto]  | [CEO, manager achiziții]
+
    > [!NOTE]
-   > - **Atributele proiectului** funcționează numai pentru entitățile care au o relație de la unu la mai mulți cu entitatea client. De exemplu, un client poate avea mai multe abonamente.
-   > - Dacă atributul pe care doriți să îl proiectați este la mai mult de un salt de entitatea *Client*, așa cum este definită de relație, acel atribut ar trebui să fie utilizat în fiecare regulă a interogării de segment pe care o construiți.
-   > - Dacă atributul pe care doriți să îl proiectați este la doar un salt de entitatea *Client*, acel atribut nu trebuie să fie prezent în fiecare regulă a interogării de segment pe care o construiți.
+   > - **Atributele proiectului** funcționează numai pentru entitățile care au o relație unu-la-mulți cu *Client* sau *Profil de contact* entitate. De exemplu, un client poate avea mai multe abonamente.
+   > - Dacă atributul pe care doriți să îl proiectați este la mai mult de un hop distanță de *Client* sau *Profil de contact* entitate, așa cum este definită de relație, acel atribut ar trebui să fie utilizat în fiecare regulă a interogării de segment pe care o construiți.
+   > - Dacă atributul pe care doriți să îl proiectați este la doar un hop distanță de *Client* sau *Profil de contact* entitate, acel atribut nu trebuie să fie prezent în fiecare regulă a interogării de segment pe care o construiți.
    > - **Atributele proiectate** sunt luate în calcul atunci când se utilizează operatori de mulțimi.
 
 1. Selectați **Alerga** pentru a crea segmentul. Selectați **Salvați** dacă doriți să păstrați configurația curentă și să rulați segmentul mai târziu. The **Segmente** afișează pagina.

@@ -1,9 +1,9 @@
 ---
-title: Activități ale clienților
-description: Definiți activitățile clienților și vizualizați-le într-o cronologie pe profilurile clienților.
-ms.date: 07/22/2022
+title: Activități de contact cu clienții sau afaceri
+description: Definiți activitățile de contact cu clienții sau de afaceri și vizualizați-le într-o cronologie pe profilurile clienților.
+ms.date: 08/12/2022
 ms.subservice: audience-insights
-ms.reviewer: mhart
+ms.reviewer: v-wendysmith
 ms.topic: conceptual
 author: CadeSanthaMSFT
 ms.author: cadesantha
@@ -16,19 +16,19 @@ searchScope:
 - ci-activities-wizard
 - ci-measures
 - ci-segment-suggestions
-- customerInsight
-ms.openlocfilehash: cc21b0eeb368156437e60d851c2d144f3974c066
-ms.sourcegitcommit: c45c3e044034bf866b0662f80a59166cee4ababe
+- customerInsights
+ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/22/2022
-ms.locfileid: "9188154"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304120"
 ---
-# <a name="customer-activities"></a>Activități ale clienților
+# <a name="customer-or-business-contact-activities"></a>Activități de contact cu clienții sau afaceri
 
-Activitățile clienților sunt acțiuni sau evenimente efectuate de clienți. De exemplu, tranzacții, durata apelului de asistență, recenzii ale site-urilor web, achiziții sau returnări. Aceste activități sunt conținute în una sau mai multe surse de date. Cu Customers Insights, consolidați-vă activitățile clienților din acestea [surse de date](data-sources.md) și asociați-le cu profilurile clienților. Aceste activități apar cronologic într-o cronologie pe profilul clientului. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul clientului](customer-card-add-in.md) soluţie.
+Activitățile clienților sunt acțiuni sau evenimente realizate de clienți sau contacte de afaceri. De exemplu, tranzacții, durata apelului de asistență, recenzii ale site-urilor web, achiziții sau returnări. Aceste activități sunt conținute în una sau mai multe surse de date. Cu Customers Insights, consolidați-vă activitățile clienților din acestea [surse de date](data-sources.md) și asociați-le cu profilurile clienților. Aceste activități apar cronologic într-o cronologie pe profilul clientului. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul clientului](customer-card-add-in.md) soluţie.
 
-## <a name="define-an-activity"></a>Definiți o activitate
+## <a name="define-a-customer-activity"></a>Definiți o activitate de client
 
 O entitate trebuie să aibă cel puțin un atribut de tip **Data** pentru a fi incluse într-o cronologie a clientului. Controlul **Adăugați activitate** este dezactivat dacă nu se găsește o astfel de entitate.
 
@@ -38,9 +38,9 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Data** pentru a fi i
 
 1. În **Date de activitate** pas, introduceți următoarele informații:
 
-   - **Numele activității** : Nume pentru activitatea dvs.
-   - **Entitate de activitate** : Entitate care include date tranzacționale sau de activitate.
-   - **Cheia principala** : Câmp care identifică în mod unic o înregistrare. Nu ar trebui să conțină valori duplicate, valori goale sau valori lipsă.
+   - **Numele activității**: Selectați un nume pentru activitatea dvs.
+   - **Entitate de activitate** : Selectați o entitate care include date tranzacționale sau de activitate.
+   - **Cheie primară**: Selectați câmpul care identifică în mod unic o înregistrare. Nu ar trebui să conțină valori duplicate, valori goale sau valori lipsă.
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configurați datele despre activitate cu numele, entitatea și cheia primară.":::
 
@@ -48,9 +48,9 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Data** pentru a fi i
 
 1. În **Relaţie** pas, selectați **Adaugă relația** pentru a conecta datele dvs. de activitate la înregistrarea clientului corespunzătoare. Acest pas vizualizează conexiunea dintre entități.  
 
-   - **Cheie străină de la entitate** : Câmp din entitatea dvs. de activitate care va fi folosit pentru a stabili o relație cu o altă entitate.
+   - **Cheie externă** : Câmp străin din entitatea dvs. de activitate care va fi folosit pentru a stabili o relație cu o altă entitate.
    - **La numele entității** : Entitatea client sursă corespunzătoare cu care va fi în relație entitatea dvs. de activitate. Vă puteți raporta doar la entitățile client sursă care sunt utilizate în procesul de unificare a datelor.
-   - **Numele relației** : Nume care identifică relația dintre entități. Dacă există deja o relație între această entitate de activitate și entitatea client sursă selectată, numele relației este doar pentru citire.
+   - **Numele relației** : Dacă există deja o relație între această entitate de activitate și entitatea client sursă selectată, numele relației va fi în modul numai citire. Dacă nu există o astfel de relație, va fi creată o nouă relație cu numele pe care îl furnizați în această casetă.
 
    :::image type="content" source="media/Activity_Wizard2.PNG" alt-text="Definiți relația dintre entități.":::
 
@@ -90,7 +90,7 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Data** pentru a fi i
 
 [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 
-## <a name="manage-existing-activities"></a>Gestionați activitățile existente
+## <a name="manage-existing-customer-activities"></a>Gestionați activitățile clienților existente
 
 Mergi la **Date** > **Activități** pentru a vedea activitățile dvs. salvate, entitatea sursă a acestora, tipul de activitate și dacă sunt incluse în cronologia clientului. Puteți sorta lista de activități după orice coloană sau puteți utiliza caseta de căutare pentru a găsi activitatea pe care doriți să o gestionați.
 
@@ -116,9 +116,43 @@ Selectați o activitate pentru a vedea acțiunile disponibile.
 
      :::image type="content" source="media/Activity_Timeline3.PNG" alt-text="Utilizați panoul de filtrare pentru a configura condițiile de filtrare.":::
 
-1. Pentru a elimina filtrele, selectați **Ștergeți filtrele** sau selectați **Filtru** și debifați caseta de selectare a filtrului.
-
 > [!NOTE]
 > Filtrele de activitate sunt eliminate când părăsiți profilul unui client. Trebuie să le aplicați de fiecare dată când deschideți un profil de client.
+
+## <a name="define-a-contact-activity"></a>Definiți o activitate de contact
+
+Pentru conturile de afaceri (B-to-B), utilizați a *Profil de contact* entitate pentru a capta activitățile contactelor. Puteți vedea în cronologia activității pentru un cont care persoană de contact a fost responsabilă pentru fiecare activitate. Majoritatea pașilor urmează configurația de mapare a activității clienților.
+
+   > [!NOTE]
+   > Pentru a defini o activitate la nivel de contact, a *Profil de contact* entitate trebuie creată, fie ca a [profil de contact unificat](data-unification-contacts.md) sau prin [maparea semantică](semantic-mappings.md#define-a-contactprofile-semantic-entity-mapping).
+   >
+   > Trebuie să le ai pe amândouă **Cont ID** și **ContactID** atribute pentru fiecare înregistrare din datele dvs. de activitate.
+  
+1. Mergi la **Date** > **Activități**.
+
+1. Selectați **Adăugați o activitate**.
+
+1. Denumiți activitatea, selectați entitatea de activitate sursă și selectați cheia primară a entității de activitate.
+
+1. În **Relații** pas, creați o relație indirectă între datele dvs. sursă de activitate și conturi, folosind datele dvs. de contact ca entitate intermediară. Pentru mai multe informații, vezi [căi de relație directe și indirecte](relationships.md#relationship-paths).
+   - Exemplu de relație pentru o activitate numită *Achiziții*:
+      - **Date privind activitatea sursă de achiziții** > **Datele de contact** asupra atributului **ContactID**
+      - **Datele de contact** > **Datele contului** asupra atributului **Cont ID**
+
+   :::image type="content" source="media/Contact_Activities1.png" alt-text="Exemplu de configurare a relației.":::
+
+1. După configurarea relațiilor, selectați **Următorul** și finalizați configurația de cartografiere a activității. Pentru pașii detaliați despre crearea activității, consultați [defini o activitate a clientului](#define-a-customer-activity).
+
+1. Rulați mapările activității dvs.
+
+1. Activitățile tale la nivel de contact vor fi acum vizibile pe cronologia clientului.
+
+   :::image type="content" source="media/Contact_Activities2.png" alt-text="Rezultatul final după configurarea activităților de contact":::
+
+## <a name="contact-level-activity-timeline-filtering"></a>Filtrarea cronologiei activității la nivel de contact
+
+După ce configurați o mapare a activității la nivel de contact și o rulați, cronologia activității pentru clienții dvs. va fi actualizată. Include ID-urile sau numele lor, în funcție de dvs *Profil de contact* configuratie, pentru activitatile asupra carora au actionat. Puteți filtra activitățile după persoane de contact din cronologie pentru a vedea anumite persoane de contact care vă interesează. În plus, puteți vedea toate activitățile care nu sunt atribuite unui anumit contact selectând **Activități care nu sunt mapate la o persoană de contact**.
+
+   :::image type="content" source="media/Contact_Activities3.png" alt-text="Opțiuni de filtrare disponibile pentru activitățile la nivel de contact.":::
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Prezentare generală a segmentelor
 description: Prezentare generală a segmentelor și modul de creare și gestionare a acestora.
-ms.date: 05/20/2022
+ms.date: 08/12/2022
 ms.subservice: audience-insights
 ms.topic: overview
 author: JimsonChalissery
@@ -14,18 +14,18 @@ searchScope:
 - ci-segments
 - ci-segment-details
 - customerInsights
-ms.openlocfilehash: 195a7c733f047c24f9f47a151c1cb623fe34d055
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
-ms.translationtype: HT
+ms.openlocfilehash: d4de3a6af6bc7d54305a23e3fbd3cc95d464d352
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246308"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304810"
 ---
 # <a name="segments-overview"></a>Prezentare generală a segmentelor
 
 Segmentele vă permit să vă grupați clienții pe baza atributelor demografice, tranzacționale sau comportamentale. Puteți utiliza segmentele pentru a viza campanii promoționale, activități de vânzare și acțiuni de asistență pentru clienți pentru a vă atinge obiectivele de business.
 
-Profilurile de clienți care se potrivesc cu filtrele unei definiții de segment sunt denumite ca *membrii* a unui segment. Se aplică unele [limite ale serviciului](/dynamics365/customer-insights/service-limits).
+Profilurile de clienți sau de contact care se potrivesc cu filtrele unei definiții de segment sunt denumite *membrii* a unui segment. Se aplică unele [limite ale serviciului](/dynamics365/customer-insights/service-limits).
 
 ## <a name="create-a-segment"></a>Creați un segment
 
@@ -41,13 +41,19 @@ Alegeți cum să creați un segment în funcție de publicul țintă.
 
 # <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
 
-- Segmente simple sau complexe cu generatorul de segmente: [Construiește-ți propriul](segment-builder.md)
+Segment de conturi sau segment de contacte (previzualizare) cu generatorul de segmente: [Construiește-ți propriul](segment-builder.md)
+
+> [!NOTE]
+> Majoritatea destinațiilor de export necesită informații de contact în scopuri de marketing. Prin urmare, creați segmente de contacte pe care să le utilizați pentru acele exporturi.
 
 ---
 
 ## <a name="manage-existing-segments"></a>Gestionarea segmentelor existente
 
-Du-te la **Segmente** pentru a vedea segmentele pe care le-ați creat, starea și starea acestora, numărul de membri și ultima dată când datele au fost reîmprospătate. Puteți sorta lista de segmente după orice coloană sau puteți utiliza caseta de căutare pentru a găsi segmentul pe care doriți să îl gestionați.
+Du-te la **Segmente** pentru a vedea segmentele pe care le-ați creat, starea și starea acestora și ultima dată când datele au fost reîmprospătate. Puteți sorta lista de segmente după orice coloană sau puteți utiliza caseta de căutare pentru a găsi segmentul pe care doriți să îl gestionați.
+
+> [!TIP]
+> În mediile B-to-B, **Tip de public** coloana identifică dacă un segment se bazează pe conturi sau persoane de contact.
 
 Selectați un segment pentru a vedea acțiunile disponibile.
 
@@ -69,7 +75,7 @@ Selectați un segment pentru a vedea acțiunile disponibile.
 - **Filtru** la [filtrează pe etichete](work-with-tags-columns.md#filter-on-tags).
 - **Căutați numele** pentru a căuta după numele segmentului.
 
-## <a name="view-segment-details"></a>Vedeți detaliile segmentului
+## <a name="view-segment-details"></a>Vizualizați detaliile segmentului
 
 Pe **Segmente** pagina, selectați un segment pentru a vizualiza istoricul procesării și membrii segmentului.
 
@@ -82,7 +88,7 @@ Partea inferioară conține o listă a membrilor segmentului.
 > [!NOTE]
 > Câmpurile care apar în această listă se bazează pe atributele entităților segmentului dvs.
 >
->Lista este o previzualizare a membrilor segmentului care se potrivesc și arată primele 100 de înregistrări ale segmentului dvs., astfel încât să puteți evalua rapid și să revizuiți definițiile, dacă este necesar. Pentru a vedea toate înregistrările care se potrivesc, [exportați segmentul](export-destinations.md).
+> Lista este o previzualizare a membrilor segmentului care se potrivesc și arată primele 100 de înregistrări ale segmentului dvs., astfel încât să puteți evalua rapid și să revizuiți definițiile, dacă este necesar. Pentru a vedea toate înregistrările care se potrivesc, selectați **Vezi mai mult** care deschide [**Entități**](entities.md) pagina sau [exportați segmentul](export-destinations.md).
 
 ## <a name="refresh-segments"></a>Se reîmprospătează segmentele
 

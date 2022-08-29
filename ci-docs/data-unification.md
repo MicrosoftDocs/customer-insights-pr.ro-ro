@@ -1,28 +1,34 @@
 ---
-title: Prezentare generală a unificării datelor
-description: Parcurgeți procesul de unificare a datelor cu datele dvs. pentru a crea un singur set de date de profiluri unificate de clienți.
-ms.date: 05/10/2022
+title: Creați o vizualizare unificată a clienților dvs.
+description: Parcurgeți procesul de unificare a datelor cu datele dvs. pentru a crea un singur set de date principale de profiluri de cont sau de clienți.
+ms.date: 08/12/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: overview
-author: v-wendysmith
-ms.author: mukeshpo
+author: Scott-Stabbert
+ms.author: sstabbert
 manager: shellyha
 searchScope:
 - ci-map
 - customerInsights
-ms.openlocfilehash: 766e688cb80c50a0d620943f87b76eb84a2fb89a
-ms.sourcegitcommit: 3c5b0b40b2b45e420015bbdd228ce0e610245e6f
+ms.openlocfilehash: c2a81776eab147c4b5209a6fbf89c0f4c9853d1d
+ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/12/2022
-ms.locfileid: "9139533"
+ms.lasthandoff: 08/16/2022
+ms.locfileid: "9304442"
 ---
 # <a name="data-unification-overview"></a>Prezentare generală a unificării datelor
 
-După [configurarea surselor de date](data-sources.md), puteți unifica datele. Unificarea datelor vă permite să unificați sursele de date odată diferite într-un singur set de date principal care oferă o vizualizare unificată a datelor respective. Pentru consumatorii individuali (B-to-C) în care datele sunt centrate în jurul persoanelor fizice, unificarea oferă o vedere unificată a clienților dvs. Pentru conturile de afaceri (B-to-B) în care datele sunt centrate pe conturi, unificarea oferă o vizualizare unificată a conturilor dvs.
+După [configurarea surselor de date](data-sources.md), puteți unifica datele. Unificarea datelor vă permite să unificați sursele de date odată diferite într-un singur set de date principal care oferă o vizualizare unificată a datelor respective.
 
-Datele pot fi unificate pe o singură entitate sau pe mai multe entități. Unificarea se realizează în următoarea ordine:
+Pentru consumatorii individuali (B-to-C) în care datele sunt centrate în jurul persoanelor fizice, unificarea oferă o vedere unificată a clienților dvs. Pentru conturile de afaceri (B-to-B) în care datele sunt centrate pe conturi, unificarea oferă o vizualizare unificată a conturilor dvs. [Unificarea contactelor (previzualizare)](data-unification-contacts.md) permite ca contactele respectivelor conturi să fie unificate separat și asociate cu conturile.
+
+Datele pot fi unificate pe o singură entitate sau pe mai multe entități.
+
+# <a name="individual-consumers-b-to-c"></a>[Consumatori individuali (B2C)](#tab/b2c)
+
+Procesul de unificare mapează datele clienților din sursele dvs. de date, elimină duplicatele, potrivește datele între entități și creează un profil unificat. Unificarea se realizează în următoarea ordine:
 
 1. [Câmpurile sursă](map-entities.md) (denumită anterior Hartă): în pasul câmpuri sursă, selectați entitățile și câmpurile de inclus în procesul de unificare. Mapează câmpurile la un tip semantic comun care descrie scopul câmpului.
 
@@ -33,6 +39,24 @@ Datele pot fi unificate pe o singură entitate sau pe mai multe entități. Unif
 1. [Câmpuri unificate pentru clienți](merge-entities.md) (denumit anterior Îmbinare): în pasul Câmpuri unificate pentru clienți, determinați ce câmpuri sursă trebuie incluse, excluse sau îmbinate într-un profil de client unificat.  
 
 1. [Revizuire](review-unification.md) și creați profilul unificat.
+
+# <a name="business-accounts-b-to-b"></a>[Conturi de afaceri (B2B)](#tab/b2b)
+
+Procesul de unificare mapează datele contului din sursele dvs. de date, elimină duplicatele, potrivește datele între entități și creează un profil unificat. Unificarea se realizează în următoarea ordine:
+
+1. [Câmpurile sursă](map-entities.md) (denumită anterior Hartă): în pasul câmpuri sursă, selectați entitățile și câmpurile de inclus în procesul de unificare a contului. Mapează câmpurile la un tip semantic comun care descrie scopul câmpului.
+
+1. [Înregistrări duplicate](remove-duplicates.md) (anterior parte din Potrivire): în pasul de înregistrări duplicate, definiți opțional reguli pentru a elimina înregistrările de cont duplicate din fiecare entitate.
+
+1. [Condiții de potrivire](match-entities.md) (numit anterior Potrivire): în pasul condițiilor de potrivire, definiți reguli care potrivesc înregistrările de cont între entități. Când un cont este găsit în două sau mai multe entități, este creată o singură înregistrare consolidată cu toate coloanele și datele din fiecare entitate.
+
+1. [Câmpuri unificate pentru clienți](merge-entities.md) (denumit anterior Îmbinare): în pasul Câmpuri unificate pentru clienți, determinați ce câmpuri sursă trebuie incluse, excluse sau îmbinate într-un profil de client unificat.  
+
+1. [Revizuire](review-unification.md) și creați profilul unificat.
+
+După unificarea conturilor, puteți opțional [unificați contactele (previzualizare)](data-unification-contacts.md) pentru acele conturi și conectați contactele unificate la conturile unificate.
+
+---
 
 După finalizarea unificării datelor, puteți opțional:
 

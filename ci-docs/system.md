@@ -14,12 +14,12 @@ searchScope:
 - ci-system-general
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2498814a3d2e6330124fb97c036b9b310bcf1f7a
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 6e60bf7c18939a29f660e06989e262deeb59a39b
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246262"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396016"
 ---
 # <a name="view-system-configuration"></a>Vedeți configurația sistemului
 
@@ -39,19 +39,13 @@ Vizualizați detalii despre utilizarea API-ului în timp real și vedeți ce eve
    - **Transfer de date** - o diagramă care arată cantitatea de date care a fost transferată prin API în intervalul de timp selectat.
    - **Operațiuni** - un tabel cu rânduri pentru fiecare operațiune API disponibilă și detalii despre utilizarea operațiunilor. Selectați un nume de operație la care să mergeți [referința API](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights&operation=Get-all-instances).
 
-   Operațiuni care folosesc [asimilarea datelor în timp real](real-time-data-ingestion.md) conține un simbol binocular pentru a vizualiza în timp real utilizarea API-ului.
-
-   1. Selectați binoclul pentru a deschide **Utilizare API în timp real** panoul care conține detalii de utilizare pentru operațiune.
-   1. **Selectați un interval de timp** A vedea.
-   1. Folosește **A se grupa cu** casetă pentru a alege cum să vă prezentați cel mai bine interacțiunile în timp real. Grupați datele după API **Metodă**, **calificat al entității** (entitate ingerată), **Creat de** (sursa evenimentului), **Rezultat** (succes sau eșec) sau **Coduri de eroare**. Datele sunt disponibile ca un grafic istoric și ca un tabel.
-
 ## <a name="view-system-information"></a>Vizualizați informații despre sistem
 
 Vizualizați numele afișat al mediului, ID-ul, regiunea, tipul și ID-ul sesiunii.
 
 1. Mergi la **Admin** > **Sistem** și selectați **Despre** fila.
 
-1. Pentru a vizualiza limba și țara/regiunea, selectați **General** fila.
+1. Pentru a vedea limba și țara/regiunea, selectați **General** fila.
 
 ### <a name="update-preferred-language-or-countryregion"></a>Actualizați limba sau țara/regiunea preferată
 
@@ -92,9 +86,9 @@ Sistemul utilizează următoarele stări pentru sarcini și procese:
 |Anulat |Sarcina sau procesul a fost anulat de utilizator înainte de a se termina.   |
 |Nereușite   |Sarcina sau procesul a întâmpinat erori.         |
 |Eşec  |Sarcina sau procesul a eșuat.  |
-|Neînceput   |Sursă de date nu are încă date ingerate sau sarcina este încă în modul ciornă.         |
-|Se prelucrează  |Sarcina sau procesul este în curs.  |
-|Se reîmprospătează    |Sarcina sau procesul este în curs. Pentru a anula această operațiune, selectați **Înviorător** și **Anulează jobul**. Oprirea reîmprospătării unei sarcini sau proces va reveni la ultima stare de reîmprospătare.       |
+|Neînceput   |Sursă de date nu are încă date ingerate sau sarcina este încă în modul schiță.         |
+|Se prelucrează  |Sarcina sau procesul este în desfășurare.  |
+|Se reîmprospătează    |Sarcina sau procesul este în desfășurare. Pentru a anula această operațiune, selectați **Înviorător** și **Anulează jobul**. Oprirea reîmprospătării unei sarcini sau proces va reveni la ultima stare de reîmprospătare.       |
 |Ignorate  |Sarcina sau procesul a fost omis. Unul sau mai multe dintre procesele din aval de care depinde această sarcină eșuează sau sunt omise.|
 |Reușit  |Sarcină sau proces finalizat cu succes. Pentru sursele de date, indică faptul că datele au fost ingerate cu succes dacă este menționată o oră în **Odihnit** coloană.|
 |Plasată în coadă | Procesarea este pusă în coadă și va începe odată ce toate sarcinile și procesele din amonte sunt finalizate. Pentru mai multe informații, vezi [Procesele de reîmprospătare](#refresh-processes).|
@@ -123,7 +117,7 @@ Reîmprospătarea sarcinilor și proceselor se execută în conformitate cu [pro
 |Sistem   |Depinde de finalizarea procesului de potrivire. Segmentele, măsurile, îmbogățirea, căutarea, activitățile, predicțiile și pregătirea datelor depind de finalizarea cu succes a acestui proces.   |
 |User  |Funcționează manual (reîmprospătare o singură dată). Depinde de entitati.  |
 
-Selectați starea unui proces pentru a vedea detaliile despre progresul întregii sarcini în care a fost. Procesele de reîmprospătare de mai sus vă pot ajuta să înțelegeți ce puteți face pentru a aborda a **Sarit peste** sau **În așteptare** sarcină sau proces.
+Selectați starea unui proces pentru a vedea detaliile despre progresul întregului job în care a fost. Procesele de reîmprospătare de mai sus vă pot ajuta să înțelegeți ce puteți face pentru a aborda a **Sărit** sau **În așteptare** sarcină sau proces.
 
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

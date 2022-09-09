@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: b237c291bb4dd22ca22ab2cdd8b6293490aa83e1
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9245848"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396106"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarea la date în Azure Data Lake Storage
 
@@ -27,20 +27,22 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
 
 - Suporta ingestie de date Azure Data Lake Storage *Gen2* exclusiv conturi. Nu puteți utiliza conturi Data Lake Storage Gen1 pentru a asimila date.
 
-- The Azure Data Lake Storage cont trebuie sa aiba [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Datele trebuie să fie stocate într-un format de folder ierarhic care definește folderul rădăcină și are subdosare pentru fiecare entitate. Subfolderele pot avea date complete sau foldere de date incrementale.
+- The Azure Data Lake Storage cont trebuie sa aiba [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Datele trebuie să fie stocate într-un format de folder ierarhic care definește folderul rădăcină și are subfoldere pentru fiecare entitate. Subfolderele pot avea date complete sau foldere de date incrementale.
 
 - Pentru a vă autentifica cu o entitate principală de serviciu Azure, asigurați-vă că este configurat în entitatea găzduită. Pentru mai multe informații, vezi [Conectați-vă la un Azure Data Lake Storage Cont Gen2 cu un principal de serviciu Azure](connect-service-principal.md).
 
 - The Azure Data Lake Storage de la care doriți să vă conectați și să ingerați date trebuie să fie în aceeași regiune Azure ca și Dynamics 365 Customer Insights mediu inconjurator. Conexiunile la un director Common Data Model dintr-un data lake dintr-o altă regiune Azure nu sunt acceptate. Pentru a cunoaște regiunea Azure a mediului, accesați **Admin** > **Sistem** > **Despre** în Customer Insights.
 
-- Datele stocate în serviciile online pot fi stocate într-o altă locație decât cea în care sunt procesate sau stocate datele Dynamics 365 Customer Insights.Prin importul sau conectarea la date stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Centrul de încredere Microsoft](https://www.microsoft.com/trust-center).
+- Datele stocate în serviciile online pot fi stocate într-o locație diferită de cea în care sunt procesate sau stocate datele Dynamics 365 Customer Insights.Prin importul sau conectarea la date stocate în serviciile online, sunteți de acord că datele pot fi transferate și stocate cu Dynamics 365 Customer Insights . [Aflați mai multe la Centrul de încredere Microsoft](https://www.microsoft.com/trust-center).
 
 - Principalul serviciu Customer Insights trebuie să aibă unul dintre următoarele roluri pentru a accesa contul de stocare. Pentru mai multe informații, vezi [Acordați permisiuni principalului serviciu pentru a accesa contul de stocare](connect-service-principal.md#grant-permissions-to-the-service-principal-to-access-the-storage-account).
   - Cititor de date Blob de stocare
   - Proprietar de date Blob de stocare
   - Contribuitor de date blob de stocare
 
-- Datele din Data Lake Storage trebuie să urmeze standardul Common Data Model pentru stocarea datelor dvs. și să aibă manifestul comun al modelului de date pentru a reprezenta schema fișierelor de date (*.csv sau *.parquet). Manifestul trebuie să furnizeze detaliile entităților, cum ar fi coloanele de entități și tipurile de date, precum și locația și tipul fișierului de date. Pentru mai multe informații, vezi [Manifestul Common Data Model](/common-data-model/sdk/manifest). Dacă manifestul nu este prezent, utilizatorii administratori cu acces Proprietar de date stocare blob sau Contributor de date blob stocare pot defini schema atunci când ingerează datele.
+- Utilizatorul care configurează conexiunea sursă de date are nevoie de cel puțin permisiuni Storage Blob Data Contributor pentru contul de stocare.
+
+- Datele din Data Lake Storage trebuie să urmeze standardul Common Data Model pentru stocarea datelor dvs. și să aibă manifestul comun al modelului de date pentru a reprezenta schema fișierelor de date (*.csv sau *.parquet). Manifestul trebuie să furnizeze detaliile entităților, cum ar fi coloanele de entități și tipurile de date, precum și locația și tipul fișierului de date. Pentru mai multe informații, vezi [Manifestul Common Data Model](/common-data-model/sdk/manifest). Dacă manifestul nu este prezent, utilizatorii administratori cu acces Proprietar de date blob stocare sau Contributor la date blob stocare pot defini schema atunci când ingerează datele.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Conectarea la Azure Data Lake Storage
 
@@ -50,7 +52,7 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
 
 1. Selectați **Stocare Azure Data Lake**.
 
-   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Casetă de dialog pentru a introduce detaliile de conectare pentru Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
+   :::image type="content" source="media/data_sources_ADLS.png" alt-text="Caseta de dialog pentru a introduce detaliile de conectare pentru Azure Data Lake." lightbox="media/data_sources_ADLS.png":::
 
 1. Introduceți a **Nume** pentru sursă de date și opțional **Descriere**. Numele identifică în mod unic sursă de date și este referit în procesele din aval și nu poate fi schimbat.
 
@@ -62,7 +64,7 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
    > [!NOTE]
    > Aveți nevoie de unul dintre următoarele roluri fie pentru container, fie pentru contul de stocare pentru a crea sursă de date:
    >
-   >  - Storage Blob Data Reader este suficient pentru a citi dintr-un cont de stocare și pentru a asimila datele în Customer Insights. 
+   >  - Storage Blob Data Reader este suficient pentru a citi dintr-un cont de stocare și pentru a asimila datele în Customer Insights.
    >  - Este necesar să editați fișierele manifest direct în Customer Insights.  
   
 1. Alegeți numele **Container** care conține datele și schema (fișierul model.json sau manifest.json) din care să importați date și selectați **Următorul**.
@@ -185,16 +187,16 @@ Puteți actualiza *Conectați-vă la contul de stocare folosind* opțiune. Pentr
    - Pentru a elimina orice entitate deja selectată dacă nu există dependențe, selectați entitatea și **Șterge**.
       > [!IMPORTANT]
       > Dacă există dependențe de fișierul model.json sau manifest.json existent și setul de entități, veți vedea un mesaj de eroare și nu puteți selecta un fișier model.json sau manifest.json diferit. Eliminați aceste dependențe înainte de a schimba fișierul model.json sau manifest.json sau creați un nou sursă de date cu fișierul model.json sau manifest.json pe care doriți să îl utilizați pentru a evita eliminarea dependențelor.
-   - Pentru a schimba locația fișierului de date sau cheia principală, selectați **Editați | ×**.
-   - Pentru a modifica datele de asimilare incrementală, consultați [Configurați o reîmprospătare incrementală pentru sursele de date Azure Data Lake](incremental-refresh-data-sources.md).
-   - Schimbați numai numele entității pentru a se potrivi cu numele entității din fișierul .json.
+   - Pentru a modifica locația fișierului de date sau cheia primară, selectați **Editare**.
+   - Pentru a modifica datele de ingestie incrementală, consultați [Configurarea unei reîmprospătări incrementale pentru sursele de date Azure Data Lake](incremental-refresh-data-sources.md).
+   - Modificați numai numele entității pentru a se potrivi cu numele entității din fișierul .json.
 
      > [!NOTE]
-     > Păstrați întotdeauna numele entității din Customer Insights același cu numele entității din fișierul model.json sau manifest.json după ingerare. Customer Insights validează toate numele de entități cu model.json sau manifest.json la fiecare reîmprospătare a sistemului. Dacă numele unei entități este schimbat fie în interiorul Customer Insights, fie în exterior, apare o eroare, deoarece Customer Insights nu poate găsi noul nume de entitate în fișierul .json. Dacă numele unei entități ingerate a fost schimbat din greșeală, editați numele entității în Customer Insights pentru a se potrivi cu numele din fișierul .json.
+     > Păstrați întotdeauna numele entității în Customer Insights la fel ca numele entității din fișierul model.json sau manifest.json după ingestie. Customer Insights validează toate numele entităților cu model.json sau manifest.json în timpul fiecărei reîmprospătări a sistemului. Dacă un nume de entitate se modifică fie în interiorul Customer Insights, fie în exterior, apare o eroare deoarece Customer Insights nu poate găsi noul nume de entitate în fișierul .json. Dacă un nume de entitate ingerat a fost modificat accidental, editați numele entității în Customer Insights pentru a se potrivi cu numele din fișierul .json.
 
-1. Selectați **Atribute** pentru a adăuga sau modifica atribute sau pentru a activa profilarea datelor. Apoi selectați **Terminat**.
+1. Selectați **Atribute** pentru a adăuga sau a modifica atribute sau pentru a activa profilarea datelor. Apoi selectați **Terminat**.
 
-1. Clic **Salvați** pentru a aplica modificările și a reveni la **Surse de date** pagină.
+1. Faceți clic pe **Salvare** pentru a aplica modificările și a reveni la **pagina Surse de** date.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
 

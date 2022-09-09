@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-api-usage
 - customerInsights
-ms.openlocfilehash: 2652e0868f5cc514ab6df9c150a9183cf95ae589
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: dd433b57e8695891a08d6f7fdb8c87befd2e1cfa
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246123"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9396076"
 ---
 # <a name="real-time-data-ingestion-preview"></a>Ingestie date în timp real (previzualizare)
 
@@ -82,10 +82,5 @@ Puteți utiliza capabilitățile în timp real construindu-vă propriul canal ș
 Puteți posta o activitate în formatul sistemului sursă sau în formatul UnifiedActivity. Obțineți formatul făcând un apel API către /api/instances/{instanceId}/manage/entities/UnifiedActivity.
 
 Detalii despre acest API, inclusiv parametrii și răspunsurile, pot fi găsite în secțiunea **EntityData** de pe [Referința API-urilor Customer Insights](https://developer.ci.ai.dynamics.com/api-details#api=CustomerInsights). Pentru informații suplimentare, consultați [Lucrul cu API-uri Customer Insights](apis.md).
-
-## <a name="understand-your-real-time-usage-with-telemetry"></a>Înțelegeți utilizarea dvs. în timp real cu telemetria
-
-Obțineți o prezentare generală a volumului de solicitări către API-ul în timp real și informații despre problemele pe care le poate întâmpina sistemul. Puteți [accesa telemetria în timp real](system.md#view-api-usage). 
-
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

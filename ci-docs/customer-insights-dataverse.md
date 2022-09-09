@@ -1,7 +1,7 @@
 ---
 title: Lucrul cu Customer Insights în Microsoft Dataverse
 description: Aflați cum să conectați Customer Insights și Microsoft Dataverse și înțelegeți entitățile de ieșire care sunt exportate în Dataverse.
-ms.date: 08/15/2022
+ms.date: 08/25/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-diagnostic
 - customerInsights
-ms.openlocfilehash: 0d536259f310b41fe12922baeebdc4569937db08
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: dfa63110fc5291f2b63aebf588d6fdd20ed4ab67
+ms.sourcegitcommit: 134aac66e3e0b77b2e96a595d6acbb91bf9afda2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9303844"
+ms.lasthandoff: 09/07/2022
+ms.locfileid: "9424324"
 ---
 # <a name="work-with-customer-insights-data-in-microsoft-dataverse"></a>Lucrul cu Customer Insights în Microsoft Dataverse
 
@@ -56,110 +56,136 @@ The **Microsoft Dataverse** pasul vă permite să conectați Customer Insights c
 
    [Power Platform administratorii pot controla cine poate crea un nou Dataverse medii](/power-platform/admin/control-environment-creation). Dacă încercați să configurați un nou mediu Customer Insights și nu puteți, este posibil ca administratorul să fi dezactivat crearea de Dataverse medii pentru toată lumea, cu excepția administratorilor.
 
-1. Dacă utilizați propriul cont Data Lake Storage:
-   1. Selectați **Activați partajarea datelor** cu Dataverse.
-   1. Introduceți **Identificator de permisiuni**. Pentru a obține identificatorul de permisiune, [activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+1. Dacă utilizați propriul cont data lake storage:
+   1. Selectați **Activați partajarea** datelor cu Dataverse.
+   1. Introduceți identificatorul **permisiunilor**. Pentru a obține identificatorul de permisiune, [activați partajarea datelor cu Dataverse de la propriul dvs Azure Data Lake Storage](#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
-## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage (previzualizare)
+## <a name="enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview"></a>Activați partajarea datelor cu Dataverse de pe cont propriu Azure Data Lake Storage (previzualizare)
 
-În [al tau Azure Data Lake Storage cont](own-data-lake-storage.md), verificați dacă utilizatorul care configurează mediul Customer Insights are cel puțin **Cititor de date Blob de stocare** permisiuni pe`customerinsights` container în contul de depozitare.
+În [propriul Azure Data Lake Storage cont](own-data-lake-storage.md), verificați dacă utilizatorul care configurează mediul Customer Insights are cel puțin **permisiuni de stocare Blob Data Reader** pe containerul din `customerinsights` contul de stocare.
 
 ### <a name="limitations"></a>Limitări
 
-- Doar mapare unu-la-unu între a Dataverse organizaţie şi an Azure Data Lake Storage cont. Odata Dataverse organizația este conectată la un cont de stocare, nu se poate conecta la un alt cont de stocare. Această limitare împiedică Dataverse de la popularea mai multor conturi de stocare.
-- Partajarea datelor nu va funcționa dacă este necesară o configurare Azure Private Link pentru a vă accesa Azure Data Lake Storage cont pentru că se află în spatele unui firewall. Dataverse momentan nu acceptă conexiunea la punctele finale private prin Private Link.
+- Doar maparea unu-la-unu între o Dataverse organizație și un Azure Data Lake Storage cont. Odată ce o Dataverse organizație este conectată la un cont de stocare, aceasta nu se poate conecta la un alt cont de stocare. Această limitare Dataverse împiedică popularea mai multor conturi de stocare.
+- Partajarea datelor nu va funcționa dacă este necesară o configurare Azure Private Link pentru a vă Azure Data Lake Storage accesa contul, deoarece se află în spatele unui paravan de protecție. Dataverse în prezent, nu acceptă conexiunea la puncte finale private prin Private Link.
 
-### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Configurați singur grupuri de securitate Azure Data Lake Storage
+### <a name="set-up-security-groups-on-your-own-azure-data-lake-storage"></a>Configurarea grupurilor de securitate pe cont propriu Azure Data Lake Storage
 
-1. Creați două grupuri de securitate pe abonamentul dvs. Azure - unul **Cititor** grup de securitate și unul **Colaborator** grup de securitate și setați Microsoft Dataverse serviciu ca proprietar pentru ambele grupuri de securitate.
+1. Creați două grupuri de securitate pe abonamentul Azure - un **grup de securitate Reader** și un **grup de securitate Contributor** și setați Microsoft Dataverse serviciul ca proprietar pentru ambele grupuri de securitate.
 
-1. Gestionați Lista de control al accesului (ACL) pe`customerinsights` container în contul dvs. de stocare prin aceste grupuri de securitate.
-   1. Adaugă Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe Dynamics 365 Marketing la **Cititor** grup de securitate cu **numai pentru citire** permisiuni.
-   1. Adăuga *numai* aplicația Customers Insights la **Colaborator** grupului de securitate să le acorde pe ambele **Citeste si scrie** permisiuni de a scrie profiluri și informații.
+1. Gestionați lista de control al accesului (ACL) din containerul din `customerinsights` contul de stocare prin aceste grupuri de securitate.
+   1. Microsoft Dataverse Adăugați serviciul și orice Dataverse aplicații de business bazate pe, cum ar fi Dynamics 365 Marketing, la **grupul de securitate Reader** cu **permisiuni doar în** citire.
+   1. Adăugați *numai* aplicația Customer Insights la **grupul de securitate Contributor** pentru a acorda atât permisiuni de citire, cât **și de scriere** pentru a scrie profiluri și detalii.
 
-### <a name="set-up-powershell"></a>Configurați PowerShell
+### <a name="set-up-powershell"></a>Configurarea PowerShell
 
 Configurați PowerShell pentru a executa scripturi PowerShell.
 
-1. Instalați cea mai recentă versiune a [Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
+1. Instalați cea mai recentă versiune de [Azure Active Directory PowerShell pentru Graph](/powershell/azure/active-directory/install-adv2).
    1. Pe computer, selectați tasta Windows de pe tastatură și căutați **Windows PowerShell** și selectați **Rulat ca administrator**.
    1. În fereastra PowerShell care se deschide, introduceți `Install-Module AzureAD`.
 
-1. Importă trei module.
-   1. În fereastra PowerShell, introduceți`Install-Module -Name Az.Accounts` și urmați pașii.
-   1. Repetați pentru`Install-Module -Name Az.Resources` și `Install-Module -Name Az.Storage`.
+1. Importați trei module.
+   1. În fereastra PowerShell, introduceți `Install-Module -Name Az.Accounts` și urmați pașii.
+   1. Repetați pentru `Install-Module -Name Az.Resources` și `Install-Module -Name Az.Storage`.
 
-### <a name="execute-powershell-scripts-and-obtain-the-permission-identifier"></a>Executați scripturi PowerShell și obțineți identificatorul de permisiune
+### <a name="execute-powershell-scripts-and-obtain-the-permission-identifier"></a>Executarea scripturilor PowerShell și obținerea identificatorului de permisiune
 
-1. Descărcați cele două scripturi PowerShell de care aveți nevoie pentru a rula de la inginerul nostru [Repoziție GitHub](https://github.com/trin-msft/byol).
-   - `CreateSecurityGroups.ps1`: Necesită permisiuni de administrator al locatarului.
-   - `ByolSetup.ps1`: necesită permisiuni de proprietar de date blob de stocare la nivel de cont/container de stocare. Acest script va crea permisiunea pentru dvs. Atribuirea rolului dvs. poate fi eliminată manual după rularea cu succes a scriptului.
+1. Descărcați cele două scripturi PowerShell de care aveți nevoie pentru a rula de la repo-ul [GitHub al inginerului](https://github.com/trin-msft/byol) nostru.
+   - `CreateSecurityGroups.ps1`: Necesită permisiuni de administrator de entitate găzduită.
+   - `ByolSetup.ps1`: Necesită permisiuni de stocare Blob data owner la nivel de cont de stocare / container. Acest script va crea permisiunea pentru tine. Atribuirea rolurilor poate fi eliminată manual după executarea cu succes a scriptului.
 
-1. A executa`CreateSecurityGroups.ps1` în Windows PowerShell, furnizând ID-ul de abonament Azure care conține dvs Azure Data Lake Storage. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+1. Executați `CreateSecurityGroups.ps1` în Windows PowerShell furnizând ID-ul de abonament Azure care conține .Azure Data Lake Storage Deschideți scriptul PowerShell într-un editor pentru a revizui informațiile suplimentare și logica implementată.
 
-   Acest script creează două grupuri de securitate în abonamentul Azure: unul pentru grupul Reader și altul pentru grupul Contributor. Microsoft Dataverse service este proprietarul pentru ambele grupuri de securitate.
+   Acest script creează două grupuri de securitate pentru abonamentul Azure: unul pentru grupul Reader și altul pentru grupul Contribuitor. Microsoft Dataverse serviciul este proprietarul pentru ambele aceste grupuri de securitate.
 
-1. Salvați ambele valori ale ID-urilor grupului de securitate generate de acest script pentru a le utiliza în`ByolSetup.ps1` scenariu.
+1. Salvați ambele valori ID de grup de securitate generate de acest script pentru a utiliza în script-ul `ByolSetup.ps1`.
 
    > [!NOTE]
-   > Crearea grupului de securitate poate fi dezactivată pentru chiriașul dvs. În acest caz, ar fi necesară o configurare manuală, iar dvs Azure AD administratorul ar trebui [activați crearea grupului de securitate](/azure/active-directory/enterprise-users/groups-self-service-management).
+   > Crearea grupului de securitate poate fi dezactivată pe entitatea găzduită. În acest caz, ar fi necesară o configurare manuală și Azure AD administratorul ar trebui să [activeze crearea](/azure/active-directory/enterprise-users/groups-self-service-management) grupului de securitate.
 
-1. A executa`ByolSetup.ps1` în Windows PowerShell, furnizând ID-ul abonamentului Azure care conține dvs Azure Data Lake Storage, numele contului de stocare, numele grupului de resurse și valorile ID-ului grupului de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a examina informații suplimentare și logica implementată.
+1. Executați `ByolSetup.ps1` în Windows PowerShell furnizând ID-ul de abonament Azure care conține numele contului de Azure Data Lake Storage stocare, numele grupului de resurse și valorile ID-ului de grup de securitate Reader și Contributor. Deschideți scriptul PowerShell într-un editor pentru a revizui informațiile suplimentare și logica implementată.
 
-   Acest script adaugă controlul de acces bazat pe roluri necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe De asemenea, actualizează Lista de control al accesului (ACL) pe`customerinsights` container pentru grupurile de securitate create cu`CreateSecurityGroups.ps1` scenariu. Se oferă grupul de colaboratori *rwx* se acordă permisiunea și grupul de cititori *rx* numai permisiunea.
+   Acest script adaugă controlul de acces bazat pe roluri necesar pentru Microsoft Dataverse serviciu și orice Dataverse aplicații de afaceri bazate pe. De asemenea, actualizează lista de control al accesului (ACL) din `customerinsights` container pentru grupurile de securitate create cu scriptul `CreateSecurityGroups.ps1`. Grupului Contributor i se acordă *permisiunea rwx*, iar grupului Cititori i se acordă *numai permisiunea r-x*.
 
-1. Copiați șirul de ieșire care arată astfel:`https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
+1. Copiați șirul de ieșire care arată astfel: `https://DVBYODLDemo/customerinsights?rg=285f5727-a2ae-4afd-9549-64343a0gbabc&cg=720d2dae-4ac8-59f8-9e96-2fa675dbdabc`
 
-1. Introduceți șirul de ieșire copiat în fișierul **Identificator de permisiuni** câmpul pasului de configurare a mediului pentru Microsoft Dataverse.
+1. Introduceți șirul de ieșire copiat în **câmpul Identificator** de permisiuni al pasului de configurare a mediului pentru Microsoft Dataverse.
 
-   :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opțiuni de configurare pentru a activa partajarea datelor de la dvs Azure Data Lake Storage cu Microsoft Dataverse .":::
+   :::image type="content" source="media/dataverse-enable-datasharing-BYODL.png" alt-text="Opțiuni de configurare pentru a permite partajarea datelor de pe cont propriu Azure Data Lake Storage cu Microsoft Dataverse.":::
 
-## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminați o conexiune existentă la a Dataverse mediu inconjurator
+## <a name="remove-an-existing-connection-to-a-dataverse-environment"></a>Eliminarea unei conexiuni existente la un Dataverse mediu
 
-Când vă conectați la a Dataverse mediu, mesajul de eroare **Această organizație CDS este deja atașată la o altă instanță Customer Insights** înseamnă că Dataverse mediu este deja utilizat într-un mediu Customer Insights. Puteți elimina conexiunea existentă ca administrator global pe Dataverse mediu inconjurator. Pot dura câteva ore pentru a completa modificările.
+Atunci când vă conectați la un Dataverse mediu, mesajul **de eroare Această organizație CDS este deja atașată la o altă instanță** Customer Insights înseamnă că Dataverse mediul este deja utilizat într-un mediu Customer Insights. Aveți posibilitatea să eliminați conexiunea existentă ca administrator global pe Dataverse mediu. Poate dura câteva ore pentru a popula modificările.
 
 1. Salt la [Power Apps](https://make.powerapps.com).
 1. Selectați mediul din selectorul de mediu.
-1. Mergi la **Soluții**.
-1. Dezinstalați sau ștergeți soluția numită **Dynamics 365 Customer Insights Supliment pentru cardul de client (previzualizare)**.
+1. Accesați **Soluții**.
+1. Dezinstalați sau ștergeți soluția numită **Dynamics 365 Customer Insights Program de completare card client (Previzualizare)**.
 
 SAU
 
-1. Deschide-ți Dataverse mediu inconjurator.
-1. Mergi la **Setari avansate** > **Soluții**.
-1. Dezinstalați **CustomerInsightsCustomerCard** soluţie.
+1. Deschideți mediul Dataverse.
+1. Accesați **Soluții** > **de setări** avansate.
+1. Dezinstalați soluția **CustomerInsightsCustomerCard**.
 
-Dacă eliminarea conexiunii eșuează din cauza dependențelor, trebuie să eliminați și dependențele. Pentru mai multe informații, vezi [Eliminarea dependențelor](/power-platform/alm/removing-dependencies).
+Dacă eliminarea conexiunii nu reușește din cauza dependențelor, trebuie să eliminați și dependențele. Pentru mai multe informații, consultați [Eliminarea dependențelor](/power-platform/alm/removing-dependencies).
 
 ## <a name="output-entities"></a>Entități de ieșire
 
 Unele entități de ieșire din Customer Insights sunt disponibile ca tabele în Dataverse. Secțiunile de mai jos descriu schema așteptată a acestor tabele.
 
 - [Profil client](#customerprofile)
+- [Profil contact](#contactprofile)
 - [AlternateKey](#alternatekey)
 - [UnifiedActivity](#unifiedactivity)
 - [CustomerMeasure](#customermeasure)
 - [Îmbogățire](#enrichment)
 - [Predicția](#prediction)
-- [Segmentul de membru](#segment-membership)
+- [Apartenența la segment](#segment-membership)
 
 ### <a name="customerprofile"></a>Profil client
 
-Acest tabel conține profilul de client unificat de la Customer Insights. Schema pentru un profil de client unificat depinde de entitățile și atributele utilizate în procesul de unificare a datelor. O schemă de profil client conține de obicei un subset de atribute din [Definiția Common Data Model a CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile).
+Acest tabel conține profilul de client unificat de la Customer Insights. Schema pentru un profil de client unificat depinde de entitățile și atributele utilizate în procesul de unificare a datelor. O schemă de profil client conține de obicei un subset de atribute din [Definiția Common Data Model a CustomerProfile](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/solutions/customerinsights/customerprofile). Pentru scenariul B-la-B, profilul de client conține conturi unificate și schema conține, de obicei, un subset de atribute din [definiția common data model de cont](/common-data-model/schema/core/applicationcommon/foundationcommon/crmcommon/account).
+
+### <a name="contactprofile"></a>Profil contact
+
+Un ContactProfile conține informații unificate despre o persoană de contact. Persoanele de contact sunt [persoane care sunt mapate la un cont](data-unification-contacts.md) într-un scenariu B-la-B.
+
+| Column                       | Tipul                | Descriere     |
+| ---------------------------- | ------------------- | --------------- |
+|  Data nașterii            | DateTime       |  Data nașterii persoanei de contact               |
+|  Oraș                 | SMS |  Orașul adresei de contact               |
+|  ContactId            | SMS |  ID-ul profilului de contact               |
+|  ContactProfileId     | Identificator unic   |  GUID pentru persoana de contact               |
+|  ȚarăOrRegiune      | SMS |  Țara/Regiunea adresei de contact               |
+|  CustomerId           | SMS |  ID-ul contului la care este mapată persoana de contact               |
+|  EntityName           | SMS |  Entitatea de la care provin datele                |
+|  FirstName            | SMS |  Prenume contactului               |
+|  Gen               | SMS |  Sexul contactului               |
+|  Id                   | SMS |  GUID determinist bazat pe`Identifier`               |
+|  Identifier           | SMS |  ID-ul intern al profilului de contact: `ContactProfile|CustomerId|ContactId`               |
+|  JobTitle             | SMS |  Titlul postului persoanei de contact               |
+|  LastName             | SMS |  Nume de familie persoanei de contact               |
+|  PostalCode           | SMS |  Codul poștal al adresei de contact               |
+|  PrimaryEmail         | SMS |  Adresa de e-mail a persoanei de contact               |
+|  PrimaryPhone         | SMS |  Numărul de telefon al persoanei de contact               |
+|  JudețSauProvincie      | SMS |  Statul sau provincia adresei de contact               |
+|  StreetAddress        | SMS |  Strada adresei de contact               |
 
 ### <a name="alternatekey"></a>AlternateKey
 
 Tabelul AlternateKey conține chei ale entităților, care au participat la procesul de unificare.
 
-|Column  |Tip  |Descriere  |
+|Column  |Tipul  |Descriere  |
 |---------|---------|---------|
-|DataSourceName    |Șir         | Numele pentru sursa de date. De exemplu: `datasource5`        |
-|EntityName        | Șir        | Numele entității în Customer Insights. De exemplu: `contact1`        |
-|AlternateValue    |Șir         |ID alternativ care este mapat la ID-ul clientului. Exemplu: `cntid_1078`         |
-|KeyRing           | Text multilinie        | Valoare JSON  </br> Eșantion: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
-|CustomerId         | Șir        | ID-ul profilului de client unificat.         |
-|AlternateKeyId     | GUID         |  GUID determinist AlternateKey bazat pe msdynci_identifier       |
-|msdynci_identifier |   Șir      |   `DataSourceName|EntityName|AlternateValue`  </br> Eșantion: `testdatasource|contact1|cntid_1078`    |
+|DataSourceName    |SMS         | Numele pentru sursa de date. De exemplu: `datasource5`        |
+|EntityName        | SMS        | Numele entității în Customer Insights. De exemplu: `contact1`        |
+|AlternateValue    |SMS         |ID alternativ care este mapat la ID-ul clientului. Exemplu: `cntid_1078`         |
+|KeyRing           | SMS        | Valoare JSON  </br> Eșantion: [{"dataSourceName":" datasource5 ",</br>"entityName":" contact1",</br>"preferredKey":" cntid_1078",</br>"keys":[" cntid_1078"]}]       |
+|CustomerId         | SMS        | ID-ul profilului de client unificat.         |
+|AlternateKeyId     | Identificator unic        |  AlternateKey GUID determinist bazat pe`Identifier`      |
+|Identifier |   SMS      |   `DataSourceName|EntityName|AlternateValue`  </br> Eșantion: `testdatasource|contact1|cntid_1078`    |
 
 ### <a name="unifiedactivity"></a>UnifiedActivity
 
@@ -167,43 +193,42 @@ Acest tabel conține activități ale utilizatorilor care sunt disponibile în C
 
 | Column            | Tipul        | Descriere                                                                              |
 |-------------------|-------------|------------------------------------------------------------------------------------------|
-| CustomerId        | Șir      | ID de profil client                                                                      |
-| ActivityId        | Șir      | ID-ul intern al activității clienților (cheie primară)                                       |
-| SourceEntityName  | Șir      | Nume al entității sursă                                                                |
-| SourceActivityId  | Șir      | Cheie primară de la entitatea sursă                                                       |
-| ActivityType      | Șir      | Tipul activității semantice sau numele activității particularizate                                        |
-| ActivityTimeStamp | DATETIME    | Marca temporală a activității                                                                      |
-| Funcție             | Șir      | Titlul sau numele activității                                                               |
-| Descriere       | Șir      | Descrierea activității                                                                     |
-| URL               | Șir      | Link către o adresă URL externă specifică activității                                         |
-| SemanticData      | Șir JSON | Include o listă de perechi de valori cheie pentru câmpurile de mapare semantică specifice tipului de activitate |
-| RangeIndex        | Șir      | Marca de timp Unix utilizată pentru sortarea cronologiei activității și a interogărilor eficiente asupra intervalului |
-| mydynci_unifiedactivityid   | GUID | ID-ul intern al activității clienților (ActivityId) |
+| CustomerId        | SMS      | ID de profil client                                                                      |
+| ActivityId        | SMS      | ID-ul intern al activității clienților (cheie primară)                                       |
+| SourceEntityName  | SMS      | Nume al entității sursă                                                                |
+| SourceActivityId  | SMS      | Cheie primară de la entitatea sursă                                                       |
+| ActivityType      | SMS      | Tipul activității semantice sau numele activității particularizate                                        |
+| ActivityTimeStamp | DateTime    | Marca timpului de activitate                                                                      |
+| Funcție             | SMS      | Titlul sau numele activității                                                               |
+| Descriere       | SMS      | Descrierea activității                                                                     |
+| Adresă URL               | SMS      | Link către o adresă URL externă specifică activității                                         |
+| SemanticData      | SMS | Include o listă de perechi de valori cheie pentru câmpurile de mapare semantică specifice tipului de activitate |
+| RangeIndex        | SMS      | Marca de timp Unix utilizată pentru sortarea cronologiei activității și a interogărilor eficiente asupra intervalului |
+| UnifiedActivityId   | Identificator unic | ID-ul intern al activității clienților (ActivityId) |
 
 ### <a name="customermeasure"></a>CustomerMeasure
 
 Acest tabel conține datele de ieșire ale măsurilor bazate pe atribute ale clienților.
 
-| Column             | Tip             | Descriere                 |
+| Column             | Tipul             | Descriere                 |
 |--------------------|------------------|-----------------------------|
-| CustomerId         | Șir           | ID de profil client        |
-| Măsuri           | Șir JSON      | Include o listă de perechi de valori cheie pentru numele măsurii și valorile pentru clientul dat | 
-| msdynci_identifier | Șir           | `Customer_Measure|CustomerId` |
-| msdynci_customermeasureid | GUID      | ID de profil client |
-
+| CustomerId         | SMS           | ID de profil client        |
+| Măsuri           | SMS      | Include o listă de perechi de valori cheie pentru numele măsurii și valorile pentru clientul dat |
+| Identifier | SMS           | `Customer_Measure|CustomerId` |
+| CustomerMeasureId | Identificator unic     | ID de profil client |
 
 ### <a name="enrichment"></a>Îmbogățire
 
 Acest tabel conține rezultatul procesului de îmbogățire.
 
-| Column               | Tip             |  Descriere                                          |
+| Column               | Tipul             |  Descriere                                          |
 |----------------------|------------------|------------------------------------------------------|
-| CustomerId           | Șir           | ID de profil client                                 |
-| EnrichmentProvider   | Șir           | Numele furnizorului pentru îmbogățire                                  |
-| EnrichmentType       | Șir           | Tipul de îmbogățire                                      |
-| Valori               | Șir JSON      | Lista atributelor produse de procesul de îmbogățire |
-| msdynci_enrichmentid | GUID             | GUID determinist generat de msdynci_identifier |
-| msdynci_identifier   | Șir           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
+| CustomerId           | SMS           | ID de profil client                                 |
+| EnrichmentProvider   | SMS           | Numele furnizorului pentru îmbogățire                                  |
+| EnrichmentType       | SMS           | Tipul de îmbogățire                                      |
+| Valori               | SMS      | Lista atributelor produse de procesul de îmbogățire |
+| EnrichmentId | Identificator unic            | GUID determinist generat de la`Identifier` |
+| Identifier   | SMS           | `EnrichmentProvider|EnrichmentType|CustomerId`         |
 
 ### <a name="prediction"></a>Predicția
 
@@ -211,25 +236,24 @@ Acest tabel conține rezultatul predicțiilor modelelor.
 
 | Column               | Tipul        | Descriere                                          |
 |----------------------|-------------|------------------------------------------------------|
-| CustomerId           | Șir      | ID de profil client                                  |
-| ModelProvider        | Șir      | Numele furnizorului modelului                                      |
-| Model                | Șir      | Nume model                                                |
-| Valori               | Șir JSON | Lista atributelor produse de model |
-| msdynci_predictionid | GUID        | GUID determinist generat de msdynci_identifier | 
-| msdynci_identifier   | Șir      |  `Model|ModelProvider|CustomerId`                      |
+| CustomerId           | SMS      | ID de profil client                                  |
+| ModelProvider        | SMS      | Numele furnizorului modelului                                      |
+| Model                | SMS      | Nume model                                                |
+| Valori               | SMS | Lista atributelor produse de model |
+| PredictionId | Identificator unic       | GUID determinist generat de la`Identifier` |
+| Identifier   | SMS      |  `Model|ModelProvider|CustomerId`                      |
 
-### <a name="segment-membership"></a>Segmentul de membru
+### <a name="segment-membership"></a>Apartenența la segment
 
-Acest tabel conține informații despre apartenența la segmente ale profilurilor clienților.
+Acest tabel conține informații despre apartenența la segment a profilurilor de client.
 
 | Column        | Tipul | Descriere                        |
 |--------------------|--------------|-----------------------------|
-| CustomerId        | Șir       | ID de profil client        |
-| SegmentProvider      | Șir       | Aplicație care publică segmentele.      |
-| SegmentMembershipType | Șir       | Tipul de client pentru înregistrarea de membru al acestui segment. Acceptă mai multe tipuri, cum ar fi Client, Contact sau Cont. Implicit: Client  |
-| Segmente       | Șir JSON  | Lista segmentelor unice la care este membru profilul clientului      |
-| msdynci_identifier  | Șir   | Identificatorul unic al înregistrării de membru al segmentului. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
-| msdynci_segmentmembershipid | GUID      | GUID determinist generat din`msdynci_identifier`          |
-
+| CustomerId        | SMS       | ID de profil client        |
+| SegmentProvider      | SMS       | Aplicație care publică segmentele.      |
+| SegmentMembershipType | SMS       | Tipul de client pentru această înregistrare de membru segment. Acceptă mai multe tipuri, cum ar fi Client, Persoană de contact sau Cont. Implicit: Client  |
+| Segmente       | SMS  | Lista segmentelor unice din care face parte profilul clientului      |
+| Identifier  | SMS   | Identificator unic al înregistrării apartenenței la segment. `CustomerId|SegmentProvider|SegmentMembershipType|Name`  |
+| SegmentMembershipId | Identificator unic      | GUID determinist generat de la`Identifier`          |
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -160,8 +160,6 @@
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md
-        - name: Completați datele parțial lipsă
-          href: predictions.md
     - name: Ghiduri cu exemple
       items:
         - name: Exemplu de ghid pentru predicție CLV

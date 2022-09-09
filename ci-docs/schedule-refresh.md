@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-system-schedule
 - customerInsights
-ms.openlocfilehash: ce10fcfe9906d33209270f8f6930a51b045b13e2
-ms.sourcegitcommit: 49394c7216db1ec7b754db6014b651177e82ae5b
+ms.openlocfilehash: 949ea071ca41127b0c45488d5d7af3f6aa4e1c35
+ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/10/2022
-ms.locfileid: "9246435"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "9395971"
 ---
 # <a name="schedule-system-refresh"></a>Programați reîmprospătarea sistemului
 
@@ -36,7 +36,7 @@ Programați reîmprospătările automate ale tuturor [surse de date ingerate](da
 
 1. Alegeți între **Săptămânal** (implicit) și reîmprospătare **Zilnică**. Dacă intenționați să programați actualizări săptămânale, selectați una sau mai multe zile în care doriți să rulați actualizarea.
 
-1. Setați-vă **Fusul orar**, apoi utilizați meniul vertical **Oră** pentru a seta temporizarea reîmprospătării. Dacă doriți să programați mai multe actualizări într-o singură zi, selectați **Adăugați altă oră**.
+1. Setați-vă **Fusul orar**, apoi utilizați meniul vertical **Oră** pentru a seta temporizarea reîmprospătării. Dacă doriți să programați mai multe actualizări într-o singură zi, selectați **Adăugați altă oră**. Puteți adăuga până la patru reîmprospătări.
 
 1. Selectați **Salvare** pentru a vă aplica modificările.
 

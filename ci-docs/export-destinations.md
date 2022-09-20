@@ -12,12 +12,12 @@ searchScope:
 - ci-export
 - ci-connections
 - customerInsights
-ms.openlocfilehash: c580b6c01e1b4ac6b095733193d86ebd0b4005f2
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: 44f58d694b9bd35a8d8c04d487d40743291e0566
+ms.sourcegitcommit: ef3e17134d44d2731605381ea0385dbc5aef6120
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304074"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9460205"
 ---
 # <a name="exports-preview-overview"></a>Prezentare generală a exporturilor (previzualizare)
 
@@ -81,6 +81,11 @@ Selectați un export pentru a vedea acțiunile disponibile.
 ## <a name="schedule-and-run-exports"></a>Planificați și rulați exporturile
 
 Fiecare export pe care îl configurați are o planificare de reîmprospătare. În timpul unei reîmprospătări, sistemul caută date noi sau actualizate pentru a le include într-un export. În mod implicit, exporturile sunt executate ca parte a fiecărui [reîmprospătare planificată a sistemului](schedule-refresh.md). Puteți particulariza planificarea de reîmprospătare sau îl puteți dezactiva pentru a rula manual exporturile.
+
+> [!TIP]
+> Minimizați timpul de procesare al exporturilor de segmente cu următoarele bune practici:
+> - Distribuiți entitățile de segment în mai multe exporturi.
+> - Evitați programarea tuturor exporturilor în același timp. Lăsați 30 de minute sau o oră între ora programată pentru fiecare export.
 
 Planificările de export depind de starea mediului dvs. Dacă există actualizări în curs pe [dependențe](system.md#refresh-processes) când ar trebui să înceapă un export planificat, sistemul va finaliza mai întâi actualizările și apoi va rula exportul. The **Odihnit** coloana arată când a fost actualizat ultima dată un export.
 

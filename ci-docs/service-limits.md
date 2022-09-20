@@ -8,12 +8,12 @@ author: JimsonChalissery
 ms.author: jimsonc
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: 7f38b7d9985368fc38107f1f360f0603a7fcc8e6
-ms.sourcegitcommit: 3c7cdfc8bd83ca236e4777240e08a541dc955d34
+ms.openlocfilehash: c3863b1a72fd92ddc87755699feda11371ec9214
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/07/2022
-ms.locfileid: "9411755"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463234"
 ---
 # <a name="service-limits-in-customer-insights"></a>Limite de servicii în Customer Insights
 
@@ -25,6 +25,7 @@ ms.locfileid: "9411755"
 |-------------|---------------------------------------------------------------------|---------------------------------------------------------------------|
 | Segmente, măsuri și previziuni | 300  | Numărul total de [segmente](segments.md),[măsuri](measures.md), și [previziuni](predictions-overview.md) combinate nu pot depăși 300.  |
 | Relaţii | 20 de niveluri de profunzime a relațiilor în căile entității. | Când creați [segmente](segments.md) sau [măsuri](measures.md) utilizând interfața constructor, căile entității pot avea până la 20 de relații de salturi între entitatea de pornire și entitatea țintă.  |
+|Ingestie date| Evaluări concurente pentru Power Query sursele de date sunt limitate. | Customer Insights are același lucru [limitele de reîmprospătare, cum ar fi Fluxuri de date în PowerBI.com](/power-query/power-query-online-limits#refresh-limits). |
 
 ## <a name="fair-scheduling-of-jobs"></a>Programarea corectă a locurilor de muncă
 

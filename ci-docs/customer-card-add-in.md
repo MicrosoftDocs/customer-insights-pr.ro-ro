@@ -13,12 +13,12 @@ searchScope:
 - ci-search-filter
 - ci-customer-card
 - customerInsights
-ms.openlocfilehash: 8b3b6a0d54b80d7df454e9dc925f14cc3c39684c
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 65fd80cc563b8b3b8c8874b66f179f8b0c7a19f0
+ms.sourcegitcommit: fe33cc76d015232ff8737f77193f44f2b884bb6b
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9194938"
+ms.lasthandoff: 09/13/2022
+ms.locfileid: "9473657"
 ---
 # <a name="customer-card-add-in-for-dynamics-365-apps-preview"></a>Supliment pentru cardul de client pentru aplicațiile Dynamics 365 (previzualizare)
 
@@ -32,11 +32,12 @@ Obțineți o vizualizare la 360 de grade a clienților dvs. direct în aplicați
 - Pentru ca datele dvs. Dynamics 365 să fie mapate la profilurile clienților Customer Insights, vă recomandăm [ingerat din aplicația Dynamics 365 folosind Microsoft Dataverse conector](connect-power-query.md). Dacă utilizați o metodă diferită pentru a asimila contacte (sau conturi) Dynamics 365, asigurați-vă că`contactid` (sau`accountid`) câmpul este setat ca [cheia primară pentru acel sursă de date în timpul procesului de unificare a datelor](map-entities.md#select-primary-key-and-semantic-type-for-attributes).
 - Toți utilizatorii Dynamics 365 ai suplimentului pentru cardul de client trebuie să fie [adăugat ca utilizatori](permissions.md) în Customer Insights pentru a vedea datele.
 - [Funcții de căutare și filtrare configurate](search-filter-index.md) în Customer Insights.
-- Fiecare control de supliment se bazează pe date specifice din Customer Insights. Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurația add-in vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
+- Unele date și controale sunt disponibile numai în medii de tipuri specifice. Configurația add-in vă va informa dacă un control nu este disponibil din cauza tipului de mediu selectat. Această eroare se va afișa în control atunci când o redați. Aflați mai multe despre [cazuri de utilizare a mediului](work-with-business-accounts.md).
+- Fiecare control de supliment se bazează pe date specifice din Customer Insights.
   - **Măsoară controlul** cere [măsuri configurate ale atributelor clientului](measures.md).
   - **Controlul inteligenței** necesită date generate folosind [predicții sau modele personalizate](predictions-overview.md).
   - **Controlul detaliilor clientului** afișează toate câmpurile din profilul disponibile în profilul unificat de client.
-  - **Controlul îmbogățirii** necesită activ [îmbogățiri](enrichment-hub.md) aplicate profilurilor clienților. Suplimentul de card acceptă aceste îmbogățiri: [Mărci](enrichment-microsoft.md) furnizat de Microsoft, [Interese](enrichment-microsoft.md) furnizate de Microsoft și [Date despre implicarea biroului](enrichment-office.md) furnizate de Microsoft.
+  - **Controlul îmbogățirii** necesită activ [îmbogățiri](enrichment-hub.md) aplicate profilurilor de clienți. Suplimentul de card acceptă aceste îmbogățiri: [Mărci](enrichment-microsoft.md) furnizat de Microsoft, [Interese](enrichment-microsoft.md) furnizate de Microsoft și [Date despre implicarea biroului](enrichment-office.md) furnizate de Microsoft.
   - **Controlul contactelor** necesită un tip de entitate semantică de contact.
   - **Controlul cronologiei** cere [activități configurate](activities.md).
 

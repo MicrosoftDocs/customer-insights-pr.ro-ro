@@ -5,19 +5,19 @@ ms.date: 07/26/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
-author: adkuppa
-ms.author: matgos
+author: mukeshpo
+ms.author: mukeshpo
 manager: shellyha
 searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 7af51ed04fbd28149ea501c58e6fe71b5fa6d4b6
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
+ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9207060"
+ms.lasthandoff: 09/09/2022
+ms.locfileid: "9463280"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la a Power Query sursă de date
 
@@ -63,7 +63,9 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 Încărcarea datelor poate dura timp. După o reîmprospătare cu succes, datele ingerate pot fi revizuite din [**Entități**](entities.md) pagină.
 
 > [!CAUTION]
-> Un sursă de date bazat pe Power Query creează o [fluxul de date în Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nu schimbați numele unui flux de date în Power Platform centru de administrare care este utilizat în Customer Insights. Redenumirea unui flux de date cauzează probleme cu referințele dintre Customer Insights sursă de date și Dataverse flux de date.
+>
+> - Un sursă de date bazat pe Power Query creează o [fluxul de date în Dataverse](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365). Nu schimbați numele unui flux de date în Power Platform centru de administrare care este utilizat în Customer Insights. Redenumirea unui flux de date cauzează probleme cu referințele dintre Customer Insights sursă de date și Dataverse flux de date.
+> - Evaluări concurente pentru Power Query sursele de date din Customer Insights au același lucru [limitele de reîmprospătare, cum ar fi Fluxuri de date în PowerBI.com](/power-query/power-query-online-limits#refresh-limits). Dacă o reîmprospătare a datelor eșuează deoarece a atins limita de evaluare, vă recomandăm să ajustați programul de reîmprospătare pentru fiecare flux de date pentru a vă asigura că sursele de date nu sunt procesate în același timp.
 
 ### <a name="available-power-query-data-sources"></a>Disponibil Power Query surse de date
 
@@ -77,10 +79,10 @@ Ingerarea datelor din sursele de date local este acceptată pe baza Microsoft Po
 
 Surse de date care sunt create după asocierea a Dataverse mediu cu utilizarea Customer Insights [Power Platform fluxuri de date](/power-query/dataflows/overview-dataflows-across-power-platform-dynamics-365) în mod implicit. Fluxurile de date acceptă conectivitate locală folosind gateway-ul de date. Puteți elimina și recrea surse de date care existau înainte de a Dataverse mediu a fost asociat [folosind local gateway-uri de date](/data-integration/gateway/service-gateway-app).
 
-Gateway-uri de date de la un existent Power BI sau Power Apps mediul va fi vizibil și le puteți reutiliza în Customer Insights. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
+Gateway-uri de date de la un existent Power BI sau Power Apps mediul va fi vizibil și le puteți reutiliza în Customer Insights dacă gateway-ul de date și mediul Customer Insights se află în aceeași regiune Azure. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
 > [!IMPORTANT]
-> Asigurați-vă că gateway-urile sunt actualizate la cea mai recentă versiune. Puteți instala o actualizare și reconfigura un gateway dintr-un prompt afișat pe ecranul gateway direct sau [descărcați cea mai recentă versiune](https://powerapps.microsoft.com/downloads/). Dacă nu utilizați cea mai recentă versiune de gateway, reîmprospătarea fluxului de date eșuează cu mesaje de eroare precum **Cuvântul cheie nu este acceptat: proprietăți de configurare. Nume parametru: cuvânt cheie**.
+> Asigurați-vă că gateway-urile sunt actualizate la cea mai recentă versiune. Puteți instala o actualizare și reconfigura un gateway dintr-un prompt afișat pe ecranul gateway-ului direct sau [descărcați cea mai recentă versiune](https://powerapps.microsoft.com/downloads/). Dacă nu utilizați cea mai recentă versiune de gateway, reîmprospătarea fluxului de date eșuează cu mesaje de eroare precum **Cuvântul cheie nu este acceptat: proprietăți de configurare. Nume parametru: cuvânt cheie**.
 >
 > Erorile cu gateway-urile de date local din Customer Insights sunt adesea cauzate de probleme de configurare. Pentru mai multe informații despre depanarea gateway-urilor de date, consultați [Depanați gateway-ul de date local](/data-integration/gateway/service-gateway-tshoot).
 

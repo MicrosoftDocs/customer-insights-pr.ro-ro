@@ -7,21 +7,21 @@
 - name: Catalog de instruire
   items:
     - name: Certificați ca specialist Microsoft în platforma de date pentru clienți
-      href: /learn/certifications/exams/mb-260?tab=tab-instructor-led
+      href: /certifications/exams/mb-260?tab=tab-instructor-led
     - name: Porniți cu Customer Insights
-      href: /learn/modules/get-started-customer-data-platform/
+      href: /training/modules/get-started-customer-data-platform/
     - name: Ingerare date
-      href: /learn/modules/ingest-data-customer-insights/
+      href: /training/modules/ingest-data-customer-insights/
     - name: Creați un profil de client unificat
-      href: /learn/modules/unified-customer-profile/
+      href: /training/modules/unified-customer-profile/
     - name: Lucrați cu Customer Insights
-      href: /learn/modules/working-with-customer-insights/
+      href: /training/modules/working-with-customer-insights/
     - name: Îmbogățiți datele și faceți predicții
-      href: /learn/modules/enrich-data/
+      href: /training/modules/enrich-data/
     - name: Gestionați conexiunile externe
-      href: /learn/modules/configure-third-party-connections/
+      href: /training/modules/configure-third-party-connections/
     - name: Administrați Customer Insights
-      href: /learn/modules/administer-customer-data-platform/
+      href: /training/modules/administer-customer-data-platform/
 - name: Versiune de încercare gratuită
   items:
     - name: Înregistrați-vă pentru o versiune de încercare gratuită
@@ -118,6 +118,8 @@
       href: consent-management.md
     - name: Utilizați datele web pentru personalizare
       href: unknown-to-known.md
+    - name: Gestionați profiluri de clienți necunoscute
+      href: manage-unknown-profiles.md
 - name: Segmente
   items:
     - name: Prezentare generală a segmentelor

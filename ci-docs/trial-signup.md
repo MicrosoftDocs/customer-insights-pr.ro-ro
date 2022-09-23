@@ -8,12 +8,12 @@ ms.topic: get-started
 ms.custom: template-trial-setup
 ms.reviewer: jeffhar
 manager: shellyha
-ms.openlocfilehash: fd32a3e37f4bbf57a5bd05f888fde39d32c02a82
-ms.sourcegitcommit: e5649ca0b3000cee0ca7c9eac7142cbd5f7dd2ac
+ms.openlocfilehash: 13e0b22d40d909abdbea8e77c9b4795ee42271c8
+ms.sourcegitcommit: e02a0bf51b5440fcf3284d410f24ea652fe90723
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/17/2022
-ms.locfileid: "9305619"
+ms.lasthandoff: 09/20/2022
+ms.locfileid: "9544324"
 ---
 # <a name="sign-up-for-a-free-dynamics-365-customer-insights-trial"></a>Înregistrați-vă pentru o versiune de încercare gratuită a Dynamics 365 Customer Insights
 
@@ -40,6 +40,6 @@ Mediul de încercare include aceleași caracteristici ca și versiunea plătită
 
 ## <a name="additional-resources"></a>Resurse suplimentare
 
-- [Explorați căi de învățare și module pentru Customer Insights](/learn/browse/?products=dynamics-cust-insights)
+- [Explorați căi de învățare și module pentru Customer Insights](/training/browse/?products=dynamics-cust-insights)
 - [Întrebări frecvente despre versiunea de încercare](trial-faq.md)
 - [Detaliile produsului Dynamics 365 Customer Insights](https://dynamics.microsoft.com/ai/customer-insights/)

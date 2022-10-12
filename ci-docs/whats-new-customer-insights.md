@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: acba06cba5fb5cbf0bca5aeb30b603003555fc32
-ms.sourcegitcommit: 3ab8f1c0ba5874095a19f0b6367b9a4432f72ed1
-ms.translationtype: MT
+ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
+ms.translationtype: HT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/06/2022
-ms.locfileid: "9409372"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609607"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Ce este nou în Dynamics 365 Customer Insights
 
@@ -90,7 +90,7 @@ Pentru mai multe informații, vezi [Exportați în InMobi (previzualizare)](expo
 
 ### <a name="lockbox-support-in-customer-insights"></a>Asistență pentru Lockbox în Customer Insights
 
-Customer Lockbox oferă o interfață pentru a revizui și a aproba (sau respinge) solicitările de acces la date. Aceste solicitări apar atunci când accesul la date la datele clienților este necesar pentru a rezolva un caz de asistență.
+Customer Lockbox oferă o interfață pentru a revizui și a aproba (sau respinge) solicitările de acces la date. Aceste solicitări apar atunci când este necesar accesul la date la datele clienților pentru a rezolva un caz de asistență.
 
 Pentru mai multe informații, vezi [Accesați în siguranță datele clienților cu Customer Lockbox (Previzualizare)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
@@ -124,95 +124,95 @@ Acuma poți [urmăriți utilizarea unui segment](segments.md#track-usage-of-a-se
 
 Criteo este o platformă online care ajută utilizatorii să gestioneze publicitatea digitală. Acum puteți exporta segmente de profiluri de clienți unificate pentru a genera campanii, a oferi marketing prin e-mail și a utiliza anumite grupuri de clienți cu Criteo.
 
-Pentru mai multe informații, consultați [Exportul segmentelor în Criteo (previzualizare)](export-criteo.md).
+Pentru mai multe informații, vezi [Exportați segmente în Criteo (previzualizare)](export-criteo.md).
 
-### <a name="refined-documentation-structure-for-environment-creation"></a>Structură de documentație rafinată pentru crearea de mediu
+### <a name="refined-documentation-structure-for-environment-creation"></a>Structură rafinată a documentației pentru crearea mediului
 
-Am revizuit documentele de ajutor legate de crearea și gestionarea mediilor în Customer Insights. Articolele sunt acum grupate sub nodul medii în cuprins. Articolele restructurate oferă mai multe îndrumări pentru diferitele modalități de a configura medii și au o structură mai clară. Dacă aveți feedback de împărtășit, anunțați-ne prin intermediul controalelor spre sfârșitul articolelor de ajutor.
+Am revizuit documentele de ajutor legate de crearea și gestionarea mediilor în Customer Insights. Articolele sunt acum grupate sub nodul Medii din cuprins. Articolele restructurate oferă mai multe îndrumări pentru diferitele modalități de a configura medii și au o structură mai clară. Dacă aveți feedback de împărtășit, anunțați-ne prin intermediul comenzilor către sfârșitul articolelor de ajutor.
 
-Pentru mai multe informații, consultați [Cum să: Creați un mediu nou](create-environment.md).
+Pentru mai multe informații, vezi [Cum să: creați un mediu nou](create-environment.md).
 
 ## <a name="april-2022-updates"></a>Actualizări aprilie 2022
 
-Actualizările din aprilie 2022 includ caracteristici noi, upgrade-uri de performanță și remedieri de erori.
+Actualizările din aprilie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
 
-### <a name="dun--bradstreet-enrichment-preview"></a>Dun & Bradstreet îmbogățire (Preview)
+### <a name="dun--bradstreet-enrichment-preview"></a>Îmbogățirea Dun & Bradstreet (Previzualizare)
 
-Dun & Bradstreet oferă date comerciale, analize și informații pentru companii. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute precum numărul DUNS, dimensiunea companiei, locația, industria și multe altele.
+Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute precum numărul DUNS, dimensiunea companiei, locația, industria și multe altele.
 
-Pentru mai multe informații, consultați [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Pentru mai multe informații, vezi [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Preview)](enrichment-dnb.md).
 
-### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definirea tipului de măsură atunci când creați o măsură nouă
+### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definiți tipul de măsură atunci când creați o măsură nouă
 
-Acum puteți face distincția între măsurile pentru profilurile individuale și măsurile din întreaga afacere. În timp ce măsurile de afaceri apar pe pagina de pornire a Customer Insights, măsurile clienților sunt expuse în vizualizările detaliate ale clienților.
+Acum puteți face distincția între măsurile pentru profiluri individuale și măsurile din întreaga afacere. În timp ce măsurile de afaceri apar pe pagina de pornire a Customer Insights, măsurile pentru clienți sunt expuse în vizualizările detaliate ale clienților.
 
-Pentru mai multe informații, consultați [Utilizarea constructorului de măsuri pentru a crea măsuri de la zero](measure-builder.md).
+Pentru mai multe informații, vezi [Utilizați generatorul de măsuri pentru a crea măsuri de la zero](measure-builder.md).
 
 ### <a name="consolidation-of-customer-insights-documentation"></a>Consolidarea documentației Customer Insights
 
-Am revizuit articolele noastre din documentație și am eliminat mențiunile privind statisticile privind interacțiunile și capacitățile privind statisticile publicului. Mergând mai departe, ne vom referi în mod constant la numele produsului Customer Insights atunci când scriem despre caracteristicile de bază ale aplicației. Această modificare duce, de asemenea, la restructurarea semnificativă a cuprinsului, structura URL-ului și căile de fișier din depozitul de documente subiacente. Toate marcajele sau linkurile existente continuă să funcționeze și redirecționează către adresele URL actualizate.
+Am revizuit articolele din documentație și am eliminat mențiunile despre statisticile de implicare și capabilitățile de statistici ale publicului. În continuare, ne vom referi în mod constant la numele produsului Customer Insights atunci când vom scrie despre caracteristicile de bază ale aplicației. Această modificare duce, de asemenea, la o restructurare semnificativă a cuprinsului, a structurii URL și a căilor fișierelor din depozitul de documentație de bază. Toate marcajele sau linkurile existente continuă să funcționeze și să redirecționeze către adresele URL actualizate.
 
-Dacă doriți să ne spuneți cum percepeți acea schimbare sau să observați că ceva nu funcționează așa cum vă așteptați, spuneți-ne trimițând [feedback pentru această pagină](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
+Dacă doriți să ne anunțați cum percepeți acea schimbare sau să observați că ceva nu funcționează conform așteptărilor, spuneți-ne prin [trimiterea de feedback pentru această pagină](https://github.com/MicrosoftDocs/customer-insights/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20docs.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Version%20Independent%20ID%3A%20d323ba46-f96e-1972-bc52-9b88f7d9cdfa%0A*%20Content%3A%20%5BNew%20and%20upcoming%20features%20-%20Dynamics%20365%20Customer%20Insights%5D(https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcustomer-insights%2Fwhats-new-customer-insights)%0A*%20Content%20Source%3A%20%5Bci-docs%2Fwhats-new-customer-insights.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fcustomer-insights%2Fblob%2Fmain%2Fci-docs%2Fwhats-new-customer-insights.md)%0A*%20Service%3A%20**customer-insights**%0A*%20Sub-service%3A%20**audience-insights**%0A*%20GitHub%20Login%3A%20%40m-hartmann%0A*%20Microsoft%20Alias%3A%20**mhart**).
 
 ## <a name="march-2022-updates"></a>Actualizări martie 2022
 
-Actualizările din martie 2022 includ caracteristici noi, upgrade-uri de performanță și remedieri de erori.
+Actualizările din martie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
 
-### <a name="liveramp-abilitec-enrichment-preview"></a>Îmbogățire LiveRamp AbiliTec (Preview)
+### <a name="liveramp-abilitec-enrichment-preview"></a>Îmbogățirea LiveRamp AbiliTec (Previzualizare)
 
-LiveRamp oferă rezolvarea identității și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi, puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților.
+LiveRamp oferă rezoluția identității și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților dvs. la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților dvs.
 
-Pentru mai multe informații, consultați [Îmbogățirea profilurilor clienților cu date de identitate din LiveRamp (Preview)](enrichment-liveramp.md).
+Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (Previzualizare)](enrichment-liveramp.md).
 
-### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizarea segmentelor și măsurilor cu etichete și filtre
+### <a name="organize-segments-and-measures-with-tags-and-filters"></a>Organizați segmente și măsuri cu etichete și filtre
 
-Dacă organizația dumneavoastră menține o mulțime de segmente sau măsuri, găsirea celei potrivite se poate simți uneori o provocare. Această nouă caracteristică vă permite să organizați liste utilizând etichete și coloane. Ajută la găsirea rapidă și ușoară a datelor și la personalizarea vizualizărilor.
+Dacă organizația dvs. menține o mulțime de segmente sau măsuri, găsirea celui potrivit poate fi uneori o provocare. Această nouă funcție vă permite să organizați liste folosind etichete și coloane. Vă ajută să găsiți date rapid și ușor și să personalizați vizualizările.
 
-Pentru mai multe informații, consultați [Lucrul cu etichete și coloane](work-with-tags-columns.md).
+Pentru mai multe informații, vezi [Lucrați cu etichete și coloane](work-with-tags-columns.md).
 
 ### <a name="enable-data-sharing-with-dataverse-when-using-your-own-storage-account"></a>Activați partajarea datelor cu Dataverse atunci când utilizați propriul cont de stocare
 
-Dacă mediul pe care îl utilizează Azure Data Lake Storage pentru a stoca date Customer Insights, partajarea datelor cu Microsoft Dataverse necesită o configurație suplimentară.
-Anterior, puteți activa partajarea datelor numai cu Dataverse momentul în care datele au fost stocate în lacul nostru de date gestionat.
+Dacă mediul dumneavoastră folosește Azure Data Lake Storage pentru a stoca datele Customer Insights, cu care partajarea datelor Microsoft Dataverse necesită o configurație suplimentară.
+Anterior, puteai activa doar partajarea datelor cu Dataverse când datele dumneavoastră au fost stocate în lacul nostru de date gestionat.
 
-Pentru mai multe informații, consultați [Activarea partajării datelor cu Dataverse a dvs Azure Data Lake Storage](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
+Pentru mai multe informații, vezi [Activați partajarea datelor cu Dataverse din a ta Azure Data Lake Storage (Previzualizare)](customer-insights-dataverse.md#enable-data-sharing-with-dataverse-from-your-own-azure-data-lake-storage-preview).
 
 ### <a name="new-export-destinations-iterable-and-braze"></a>Noi destinații de export: Iterable și Braze
 
-Continuăm să ne extindem ecosistemul de destinații de export cu noi conexiuni. Acum puteți exporta segmente în Iterable și Braze pentru a utiliza serviciile lor de activare.
+Continuăm să ne extindem ecosistemul de destinații de export cu noi conexiuni. Acum puteți exporta segmente în Iterable și Braze pentru a folosi serviciile lor de activare.
 
-Pentru mai multe informații, consultați [Exportul segmentelor în segmente iterabile (previzualizare)](export-iterable.md) și [Exportul segmentelor în Braze (previzualizare)](export-braze.md).
+Pentru mai multe informații, vezi [Exportați segmente în Iterable (previzualizare)](export-iterable.md) și [Exportați segmente în Braze (previzualizare)](export-braze.md).
 
-### <a name="improvements-to-marketo-and-google-ads-export"></a>Îmbunătățiri ale exportului Marketo și Google Ads
+### <a name="improvements-to-marketo-and-google-ads-export"></a>Îmbunătățiri aduse exportului Marketo și Google Ads
 
-Modificarea API-urilor în serviciile conectate duce la actualizări pentru ca conectorii să ruleze în mod fiabil și fără probleme. Am lansat câteva actualizări pentru exporturile către serviciile Marketo și Google Ads:
+Schimbarea API-urilor în serviciile conectate duce la actualizări pentru ca conectorii să ruleze în mod fiabil și fără probleme. Am lansat câteva actualizări pentru exporturile către serviciile Marketo și Google Ads:
 
-- Google Ads: noua versiune a conectorului de export Google Ads simplifică experiența de autentificare și vă permite acum să creați automat noi segmente de public Google Ads. 
-- Marketo: Noua versiune a conectorului de export Marketo oferă suport pentru ID-ul Marketo, permițându-vă să evitați duplicarea datelor, să actualizați înregistrările existente și să creați noi înregistrări în Marketo. 
+- Google Ads: noua versiune a conectorului de export Google Ads simplifică experiența de autentificare și acum vă permite să creați automat noi segmente de public Google Ads. 
+- Marketo: noua versiune a conectorului de export Marketo oferă suport pentru ID-ul Marketo, permițându-vă să evitați duplicarea datelor, să actualizați înregistrările existente și să creați noi înregistrări în Marketo. 
 
 ## <a name="february-2022-updates"></a>Actualizări februarie 2022
 
-Actualizările din februarie 2022 includ caracteristici noi, upgrade-uri de performanță și remedieri de erori.
+Actualizările din februarie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
 
 ### <a name="general-availability-for-prediction-models"></a>Disponibilitate generală pentru modelele predicție
 
-Modelele de predicție out-of-the-box, inclusiv **churn-ul** de abonament, **churn-ul** tranzacțional și **valoarea pe durata de viață a clientului (CLV)** devin disponibile în general ca parte a Customer Insights. 
+Modele ieșite din cutie predicție, inclusiv **pierderea abonamentului**, **tranzacțional**, și **valoarea de viață a clientului (CLV)** devin disponibile în general ca parte a Customer Insights. 
 
-Pentru mai multe informații, consultați [Prezentare generală](predictions-overview.md) a predicțiilor.
+Pentru mai multe informații, vezi [Prezentare generală a predicțiilor](predictions-overview.md).
 
-### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Noua sursă de date: Integrarea cu Azure Synapse Analytics (Previzualizare)
+### <a name="new-data-source-integration-with-azure-synapse-analytics-preview"></a>Nou sursă de date: Integrare cu Azure Synapse Analytics (Previzualizare)
 
-Azure Synapse Analytics este un serviciu de analiză a întreprinderilor care accelerează timpul până la statistici în depozitele de date și în sistemele de volume mari de date.
+Azure Synapse Analytics este un serviciu de analiză a întreprinderii care accelerează timpul de a obține informații în depozitele de date și sistemele de date mari.
 
-Organizațiile care utilizează Azure Synapse Analytics deja pot ingera aceste date în Customer Insights. 
+Organizații care folosesc deja Azure Synapse Analytics poate ingera acele date în Customer Insights. 
 
 Pentru mai multe informații, vezi [Conectați un Azure Synapse sursă de date (Previzualizare)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Îmbogățirea LiveRamp (Previzualizare)
 
-LiveRamp oferă rezolvarea identității și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi, puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților.
+LiveRamp oferă rezoluția identității și consolidarea datelor clienților. Puteți mapa identificatorii personali din datele clienților dvs. la graficul de identitate AbiliTec și puteți primi ID-uri AbiliTec. Apoi puteți utiliza aceste ID-uri pentru o mai bună unificare a datelor clienților dvs.
 
-Pentru mai multe informații, consultați [Îmbogățirea profilurilor clienților cu date de identitate din LiveRamp (Preview)](enrichment-liveramp.md).
+Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu date de identitate din LiveRamp (Previzualizare)](enrichment-liveramp.md).
 
 ### <a name="enrichment-for-data-sources-preview"></a>Îmbogățirea surselor de date (Previzualizare)
 
@@ -228,9 +228,9 @@ Pentru mai multe informații, vezi [Schimbați proprietarul unui mediu](manage-e
 
 ### <a name="data-preparation-process-lists-corruption-reason-for-corrupted-records"></a>Procesul de pregătire a datelor listează motivele corupției pentru înregistrările corupte
 
-Pregătirea datelor arată acum motivul corupției pentru toate câmpurile cu date corupte. Informațiile sunt furnizate la nivel de înregistrare individuală pentru o identificare ușoară. 
+Pregătirea datelor arată acum motivul corupției pentru toate câmpurile cu date corupte. Informațiile sunt furnizate la nivel de înregistrare individuală pentru o identificare ușoară.
 
-Pentru mai multe informații, vezi [Surse de date corupte](entities.md#corrupted-data-sources).
+Pentru mai multe informații, vezi [Surse de date corupte](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Sfârșitul previzualizării pentru funcțiile de raportare din capacitatea de statistici privind implicarea
 

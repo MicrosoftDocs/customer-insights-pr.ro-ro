@@ -1,7 +1,7 @@
 ---
 title: Entități în Customer Insights
 description: Vizualizați datele pe pagina Entități.
-ms.date: 12/06/2021
+ms.date: 08/04/2022
 ms.reviewer: mhart
 ms.subservice: audience-insights
 ms.topic: conceptual
@@ -11,12 +11,12 @@ manager: shellyha
 searchScope:
 - ci-entities
 - customerInsight
-ms.openlocfilehash: 0beaa46d47545ac195ced876b509dfc57821bfaf
-ms.sourcegitcommit: ad74ace653db9a25fce4343adef7db1c9b0d8904
+ms.openlocfilehash: e365945b27e7c985ca5371c6b72619610b6f3af1
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "9183587"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9610113"
 ---
 # <a name="entities-in-customer-insights"></a>Entități în Customer Insights
 
@@ -44,7 +44,7 @@ Mergi la **Date** > **Entități** pentru a vizualiza o listă de entități. Ur
    :::image type="content" source="media/data-manager-entities-fields.png" alt-text="Tabelul câmpurilor.":::
 
    > [!NOTE]
-   > Această pagină afișează doar o mostră de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați **Surse de date** pagina, selectați o entitate, selectați **Editați | ×**, apoi vizualizați datele acestei entități cu Power Query editor așa cum este explicat în [Surse de date](data-sources.md).
+   > Această pagină arată doar o mostră de date ale entității dvs. Pentru a vizualiza setul complet de date, accesați **Surse de date** pagina, selectați o entitate, selectați **Editați | ×**, apoi vizualizați datele acestei entități cu Power Query editor așa cum este explicat în [Surse de date](data-sources.md).
 
    Pentru a afla mai multe despre datele ingerate în entitate, the **rezumat** coloana furnizează câteva caracteristici importante ale datelor, cum ar fi valorile nule, valorile lipsă, valorile unice, numărul și distribuțiile, indiferent de ceea ce este aplicabil datelor dvs. Selectați pictograma diagramă pentru a vedea rezumatul datelor.
 
@@ -61,27 +61,5 @@ Mergi la **Date** > **Entități** pentru a vizualiza o listă de entități. Ur
   - **Creată** : Data și ora creării entității.
   - **Editat de** : Numele persoanei care a modificat entitatea.
   - **Editat** : Data și ora modificării entității.
-
-## <a name="entity-specific-information"></a>Informații specifice entității
-
-Următoarea secțiune oferă informații despre unele entități create de sistem.
-
-### <a name="corrupted-data-sources"></a>Surse de date deteriorate
-
-Câmpurile dintr-o sursă de date ingerate pot conține date deteriorate. Înregistrările cu câmpuri deteriorate sunt expuse în entități create de sistem. Cunoașterea înregistrărilor deteriorate vă ajută să identificați ce date să revizuiți și să actualizați pe sistemul sursă. După următoarea reîmprospătare a sursă de date, înregistrările corectate sunt ingerate către Customer Insights și transmise proceselor din aval. 
-
-De exemplu, o coloană „zi de naștere” are tipul de date setat ca „dată”. Înregistrarea unui client are ziua de naștere înregistrată ca „01/01/19777”. Sistemul va semnaliza această înregistrare ca fiind deteriorată. Cineva poate schimba acum ziua de naștere din sistemul sursă în „1977”. După o reîmprospătare automată a surselor de date, câmpul are acum un format valid și înregistrarea va fi eliminată din entitatea deteriorată.
-
-Accesați **Date** > **Entități** și căutați entitățile deteriorate în secțiunea **Sistem**. Schema de denumire a entităților deteriorate: „DataSourceName_EntityName_corrupt”. Selectați o entitate coruptă pentru a identifica câmpurile corupte și motivul la nivel de înregistrare individuală.
-
-   :::image type="content" source="media/corruption-reason.png" alt-text="Motivul corupției.":::
-
-Customer Insights procesează încă înregistrări deteriorate. Cu toate acestea, acestea pot cauza probleme atunci când lucrați cu datele unificate.
-
-Următoarele verificări rulează pe datele ingerate pentru a expune înregistrările deteriorate:
-
-- Valoarea unui câmp nu se potrivește cu tipul de date al coloanei sale.
-- Câmpurile conțin caractere care fac ca coloanele să nu se potrivească cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără scăpare sau caracterele cu linie nouă.
-- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul ISO standard.
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -158,10 +158,12 @@
           href: predict-subscription-churn.md
         - name: Previzionați retragere din tranzacții
           href: predict-transactional-churn.md
-        - name: Analizați sentimentul în feedbackul clienților
+        - name: Analizați sentimentul în feedback-ul clienților
           href: sentiment-analysis.md
         - name: Utilizați modele personalizate de la Azure Machine Learning
           href: custom-models.md
+        - name: Crearea segmentelor pe baza predicțiilor
+          href: prediction-based-segment.md
     - name: Ghiduri cu exemple
       items:
         - name: Exemplu de ghid pentru predicție CLV
@@ -174,10 +176,6 @@
           href: sample-guide-predict-product-recommendation.md
         - name: Experimente cu Azure Machine learning
           href: azure-machine-learning-experiments.md
-    - name: Gestionați predicțiile
-      href: manage-predictions.md
-    - name: Crearea segmentelor pe baza predicțiilor
-      href: prediction-based-segment.md
 - name: Opțiuni export
   items:
     - name: Exporturi

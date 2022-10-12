@@ -1,23 +1,23 @@
 ---
 title: Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului (CLV)
 description: Utilizați acest exemplu de ghid pentru a încerca modelul de predicție pentru Valoarea ciclului de viață a clientului.
-ms.date: 03/31/2022
+ms.date: 09/15/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: yashlundia
 ms.author: yalundia
 manager: shellyha
-ms.openlocfilehash: 2013533ed225a396d21e51e63297d7608ce58ac6
-ms.sourcegitcommit: a97d31a647a5d259140a1baaeef8c6ea10b8cbde
+ms.openlocfilehash: fec43b279326daa17fb179181f5e310c99d48bb7
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9051652"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609653"
 ---
 # <a name="customer-lifetime-value-clv-prediction-sample-guide"></a>Ghid eșantion de predicție pentru Valoarea ciclului de viață a clientului (CLV)
 
-Acest ghid vă va explica un exemplu de la un capăt la altul al predicției valorii ciclului de viață al clientului (CLV) în Customer Insights, folosind date eșantion.
+Acest ghid vă prezintă un exemplu de la capăt la capăt al valorii de viață a clientului (CLV) predicție în Customer Insights, folosind date eșantion. Vă recomandăm să încercați acest predicție [într-un mediu nou](manage-environments.md).
 
 ## <a name="scenario"></a>Scenariu
 
@@ -25,20 +25,19 @@ Contoso este o companie care produce cafea și aparate de cafea de înaltă cali
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
-- Cel puțin [Permisiuni de contributor](permissions.md) în Customer Insights.
-- Vă recomandăm să implementați pașii următori [într-un mediu nou](manage-environments.md).
+- Minimum [Permisiuni de colaborare](permissions.md).
 
 ## <a name="task-1---ingest-data"></a>Sarcina 1 - Ingerare date
 
-Examinați articolele [despre ingerarea de date](data-sources.md) și [importul surselor de date folosind Power Query conectori](connect-power-query.md). Următoarele informații presupun că v-ați familiarizat cu ingerarea datelor în general.
+Examinați articolele [despre ingerarea de date](data-sources.md) și [conectarea la a Power Query sursă de date](connect-power-query.md). Următoarele informații presupun că sunteți familiarizat cu ingerarea datelor în general.
 
 ### <a name="ingest-customer-data-from-ecommerce-platform"></a>Ingerarea datelor clienților de pe platforma de comerț electronic
 
-1. Creați un sursă de date numită **eCommerce**, alegeți opțiunea de import și selectați conectorul **Text/CSV**.
+1. Creați un Power Query sursă de date numit **eCommerce** și selectați **Text/CSV** conector.
 
-1. Introduceți adresa de URL pentru contactele de comerț electronic [https://aka.ms/ciadclasscontacts](https://aka.ms/ciadclasscontacts).
+1. Introduceți adresa de URL pentru contactele de comerț electronic https://aka.ms/ciadclasscontacts.
 
-1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
+1. În timp ce editați datele, selectați **Transforma** și apoi **Utilizați primul rând ca antete**.
 
 1. Actualizați tipul de date pentru coloanele enumerate mai jos:
    - **DateOfBirth**: Dată
@@ -46,7 +45,7 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
    :::image type="content" source="media/ecommerce-dob-date.PNG" alt-text="Transformați data nașterii în dată.":::
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** în **eCommerceContacts**
+1. În **Nume** câmpul din panoul din dreapta, redenumiți-vă sursă de date în **eCommerceContacts**
 
 1. **Salvați** sursa de date.
 
@@ -56,126 +55,136 @@ Examinați articolele [despre ingerarea de date](data-sources.md) și [importul 
 
 1. Introduceți adresa URL pentru datele de **Achiziții online** https://aka.ms/ciadclassonline.
 
-1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
+1. În timp ce editați datele, selectați **Transforma** și apoi **Utilizați primul rând ca antete**.
 
 1. Actualizați tipul de date pentru coloanele enumerate mai jos:
    - **PurchasedOn**: Dată/Oră
    - **TotalPrice**: Monedă
 
-1. În câmpul **Nume** din panoul lateral, redenumiți sursa de date din **Interogare** în **eCommercePurchases**.
+1. În **Nume** câmpul din panoul lateral, redenumiți-vă sursă de date în **eCommerceAchiziții**.
 
 1. **Salvați** sursa de date.
 
 ### <a name="ingest-customer-data-from-loyalty-schema"></a>Ingerați datele clienților din schema de loialitate
 
-1. Creați o sursă de date numită **LoyaltyScheme**, alegeți opțiunea de import și selectați conectorul **Text/CSV**.
+1. Creați un sursă de date numit **Schema de loialitate** și selectați **Text/CSV** conector.
 
-1. Introduceți adresa de URL pentru contactele de comerț electronic https://aka.ms/ciadclasscustomerloyalty.
+1. Introduceți adresa URL pentru clienții fideli https://aka.ms/ciadclasscustomerloyalty.
 
-1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
+1. În timp ce editați datele, selectați **Transforma** și apoi **Utilizați primul rând ca antete**.
 
 1. Actualizați tipul de date pentru coloanele enumerate mai jos:
    - **DateOfBirth**: Dată
    - **RewardsPoints**: Număr întreg
    - **CreatedOn**: Dată/Oră
 
-1. În câmpul **Nume** din panoul din dreapta, redenumiți sursa de date din **Interogare** în **loyCustomers**.
+1. În **Nume** câmpul din panoul din dreapta, redenumiți-vă sursă de date în **Clienti loiali**.
 
 1. **Salvați** sursa de date.
 
 ### <a name="ingest-customer-data-from-website-reviews"></a>Ingerați datele clienților din recenziile site-ului web
 
-1. Creați o sursă de date numită **Website**, alegeți opțiunea de import și selectați conectorul **Text/CSV**.
+1. Creați un sursă de date numit **Site-ul web** și selectați **Text/CSV** conector.
 
-1. Introduceți adresa de URL pentru contactele de comerț electronic https://aka.ms/CI-ILT/WebReviews.
+1. Introduceți adresa URL pentru recenziile site-ului https://aka.ms/CI-ILT/WebReviews.
 
-1. În timp ce editați datele, selectați **Transformare** și apoi **Utilizați primul rând ca anteturi**.
+1. În timp ce editați datele, selectați **Transforma** și apoi **Utilizați primul rând ca antete**.
 
 1. Actualizați tipul de date pentru coloanele enumerate mai jos:
-
    - **ReviewRating**: Număr decimal
    - **ReviewDate**: Dată
 
-1. În câmpul „Nume” din panoul din dreapta, redenumiți sursa de date din **Interogare** la **Recenzii**.
+1. În **Nume** câmpul din panoul din dreapta, redenumiți-vă sursă de date în **Recenzii**.
 
 1. **Salvați** sursa de date.
 
 ## <a name="task-2---data-unification"></a>Sarcina 2 - Unificarea datelor
 
+Revizuiește articolul [despre unificarea datelor](data-unification.md). Următoarele informații presupun că sunteți familiarizat cu unificarea datelor în general.
+
 [!INCLUDE [sample-guide-unification](includes/sample-guide-unification.md)]
 
-## <a name="task-3---configure-customer-lifetime-value-prediction"></a>Sarcina 3 - Configurați predicția pentru Valoarea ciclului de viață a clientului
+## <a name="task-3---create-transaction-history-activity"></a>Sarcina 3 - Crearea activității istoricului tranzacțiilor
 
-Cu profilurile de clienți unificate, putem acum să rulăm predicția pentru Valoarea ciclului de viață a clientului. Pentru pași detaliați, vezi [Valoarea de viață a clientului predicție](predict-customer-lifetime-value.md).
+Revizuiește articolul [despre activitățile clienților](activities.md). Următoarele informații presupun că sunteți familiarizat cu crearea de activități în general.
 
-1. Accesați **Inteligența**  > **Predicții** și selectați **Modelul pentru Valoarea ciclului de viață al clientului**.
+1. Creați o activitate numită **eCommerceAchiziții** cu *eCommercePurchases:eCommerce* entitatea și cheia sa primară, **PurchaseId**.
 
-1. Parcurgeți informațiile din panoul lateral și selectați **Începeți**.
+1. Creați o relație între *eCommercePurchases:eCommerce* și *eCommerceContact:eCommerce* cu **ContactID** ca cheie externă pentru a conecta cele două entități.
+
+1. Selectați **Pretul total** pentru **EventActivity** și **CumpăratLa** pentru **Timestamp-ul**.
+
+1. Selectați **SalesOrderLine** pentru **Tip de activitate** și mapați semantic datele de activitate.
+
+1. Rulați activitatea.
+
+1. Adăugați o altă activitate și mapați numele câmpurilor acesteia la câmpurile corespunzătoare:
+   - **Entitate de activitate** : Recenzii:Site web
+   - **Cheia principala** : ReviewId
+   - **Timestamp-ul** : ReviewDate
+   - **Activitatea evenimentului** : ActivityTypeDisplay
+   - **Detaliu suplimentar** : ReviewEvaluare
+   - **Tip de activitate** : Revizuire
+
+1. Rulați activitatea.
+
+## <a name="task-4---configure-customer-lifetime-value-prediction"></a>Sarcina 4 - Configurați predicția pentru Valoarea ciclului de viață a clientului
+
+Cu profilurile unificate ale clienților existente și activitatea creată, rulați valoarea de viață a clientului (CLV) predicție. Pentru pași detaliați, vezi [Valoarea de viață a clientului predicție](predict-customer-lifetime-value.md).
+
+1. Mergi la **Inteligența** > **Previziuni**.
+
+1. Pe **Crea** filă, selectați **Utilizați modelul** pe **Valoarea de viață a clientului** ţiglă.
+
+1. Selectați **Începeți**.
 
 1. Denumiți modelul **Predicție OOB eCommerce CLV** și entitatea de ieșire **OOBeCommerceCLVPrediction**.
 
-1. Definiți preferințele modelului pentru modelul CLV:
-   - **Predicția perioadei de timp**: **12 luni sau 1 an**. Această setare definește cât de departe în viitor se poate prezice ciclul de viață al clientului.
-   - **Clienți activi**: Specificați ce înseamnă clienții activi pentru afacerea dvs. Setați intervalul de timp istoric în care un client trebuie să fi avut cel puțin o tranzacție pentru a fi considerat activ. Modelul va prezice CLV numai pentru clienții activi. Alegeți între a permite modelului să calculeze perioada de timp pe baza datelor istorice ale tranzacțiilor sau să furnizați un anumit interval de timp. În acest exemplu de ghid, noi **lăsăm modelul să calculeze intervalul de cumpărare**, care este opțiunea implicită.
-   - **Clienți cu valoare ridicată**: Definiți clienții cu valoare ridicată ca o percentilă a clienților cu plată superioară. Modelul folosește această intrare pentru a oferi rezultate care se potrivesc definiției dvs. de afaceri a clienților cu valoare ridicată. Puteți alege să lăsați modelul să definească clienți de mare valoare. Folosește o regulă euristică din care derivă percentila. De asemenea, puteți defini clienții cu valoare ridicată ca fiind o percentilă a celor mai buni viitori clienți plătitori. În acest exemplu de ghid, definim manual clienții cu valoare ridicată ca **30% din cei mai activi clienți plătitori** și selectați **Următorul**.
+1. Definiți preferințele modelului:
+   - **predicție perioada de timp** :**12 luni sau 1 an** pentru a defini cât de departe în viitor să prezică CLV.
+   - **Clienți activi** :**Lăsați modelul să calculeze intervalul de achiziție** care este intervalul de timp în care un client trebuie să fi avut cel puțin o tranzacție pentru a fi considerat activ.
+   - **Client de mare valoare** : definiți manual clienții de mare valoare ca **primii 30% dintre clienții activi**.
 
     :::image type="content" source="media/clv-model-preferences.png" alt-text="Preferințele intră în experiența ghidată pentru modelul CLV.":::
 
+1. Selectați **Următorul**.
+
 1. În pasul **Date necesare**, selectați **Adăugați date** pentru a furniza datele din istoricul tranzacțiilor.
 
-1. Adăugați entitatea **Achiziții eCommerce: eCommerce** și maparea atributelor necesare modelului:
-   - ID tranzacție: eCommerce.eCommercePurchases.PurchaseId
-   - Data tranzacției: eCommerce.eCommercePurchases.PurchasedOn
-   - Valoarea tranzacției: eCommerce.eCommercePurchases.TotalPrice
-   - ID produs: eCommerce.eCommercePurchases.ProductId
+    :::image type="content" source="media/clv-model-required.png" alt-text="Adăugați pasul de date necesar în experiența ghidată pentru modelul CLV.":::
+
+1. Selectați **SalesOrderLine** și entitatea eCommercePurchases și selectați **Următorul**. Datele necesare sunt completate automat din activitate. Selectați **Salvați** și apoi **Următorul**.
+
+1. The **Date suplimentare (opțional)** pasul vă permite să adăugați mai multe date despre activitatea clienților pentru a obține mai multe informații despre interacțiunile cu clienții. Pentru acest exemplu, selectați **Adăugați date** și adăugați activitatea de revizuire web.
 
 1. Selectați **Următorul**.
 
-1. Configurați relația dintre entitatea **Achiziții eCommerce: eCommerce** și **eCommerceContacts: eCommerce**.
+1. În **Actualizări de date** pas, selectați **Lunar** pentru programul model.
 
-1. Pasul **Date suplimentare (opțional)** vă permite să adăugați mai multe date despre activitatea clienților. Aceste date vă pot ajuta să obțineți mai multe informații despre interacțiunile clienților cu afacerea dvs., care pot contribui la CLV. Adăugarea de interacțiuni cheie cu clienții, cum ar fi jurnalele web, jurnalele serviciu pentru relații cu clienții sau istoricul programului de recompense, poate îmbunătăți precizia predicțiilor. Selectați **Adăugați date** pentru a include mai multe date despre activitatea clienților.
-
-1. Adăugați entitatea de activitate client și asociați numele câmpurilor acesteia la câmpurile corespunzătoare cerute de model:
-   - Entitatea de activitate client: Recenzii: Site web
-   - Cheia principală: Website.Reviews.ReviewId
-   - Marcă de timp: Website.Reviews.ReviewDate
-   - Eveniment (numele activității): Website.Reviews.ActivityTypeDisplay
-   - Detalii (suma sau valoarea): Website.Reviews.ReviewRating
-
-1. Selectați **Următorul** și configurați activitatea și relația dintre datele tranzacției și datele clienților:  
-   - Tipul activității: Alegeți activitate existentă
-   - Eticheta activității: Recenzie
-   - Etichetă corespondentă: Website.Reviews.UserId
-   - Entitate client: eCommerceContacts:eCommerce
-   - Relație: WebsiteReviews
-
-1. Selectați **Următorul** pentru a seta planificarea modelului.
-
-   Modelul trebuie să se antreneze în mod regulat pentru a învăța noi modele atunci când sunt ingerate date noi. Pentru acest exemplu, alegeți **Lunar**.
+1. Selectați **Următorul**.
 
 1. După examinarea tuturor detaliilor, selectați **Salvați și rulați**.
 
-## <a name="task-4---review-model-results-and-explanations"></a>Sarcina 4 - Examinați rezultatele modelului și explicațiile
+## <a name="task-5---review-model-results-and-explanations"></a>Sarcina 5 - Examinați rezultatele modelului și explicațiile
 
-Lăsați modelul să finalizeze pregătirea și notarea datelor. Apoi, puteți consulta rezultatele și explicațiile modelului CLV. Pentru mai multe informații, consultați [Examinați starea și rezultatele unei predicții](predict-customer-lifetime-value.md#review-prediction-status-and-results).
+Lăsați modelul să finalizeze pregătirea și notarea datelor. Examinați [Rezultate și explicații ale modelului CLV](predict-customer-lifetime-value.md#view-prediction-results).
 
-## <a name="task-5---create-a-segment-of-high-value-customers"></a>Sarcina 5 - Creați un segment de clienți de mare valoare
+## <a name="task-6---create-a-segment-of-high-value-customers"></a>Sarcina 6 - Creați un segment de clienți de mare valoare
 
 Rularea modelului creează o nouă entitate, care este listată pe **Date** > **Entități**. Puteți crea un nou segment de clienți pe baza entității create de model.
 
-1. Mergeți la **Segmente**. 
+1. Pe pagina de rezultate, selectați **Creați segment**.
 
-1. Selectați **Nou** și alegeți **Creați din** > **Informații**.
+1. Creați o regulă folosind **OOBeCommerceCLVPrediction** entitatea și definiți segmentul:
+   - **Camp** : CLVScore
+   - **Operator** : mai mare ca
+   - **Valoare** : 1500
 
-   ![Crearea unui segment cu rezultatul modelului.](media/segment-intelligence.png)
+1. Selectați **Salvați** și **Alerga** segmentul.
 
-1. Selectați entitatea **OOBeCommerceCLVPrediction** și definiți segmentul:
-  - Câmp: CLVScore
-  - Operator: mai mare decât
-  - Valoare: 1500
+Acum aveți un segment care identifică clienții despre care se estimează că vor genera mai mult de 1500$ în venituri în următoarele 12 luni. Acest segment se actualizează dinamic dacă sunt ingerate mai multe date. Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
 
-1. Selectați **Revizuiți** și **Salvați** segmentul.
+> [!TIP]
+> De asemenea, puteți crea un segment pentru un model predicție din **Segmente** pagină selectând **Nou** si alegerea **Creați din** > **Inteligența**. Pentru mai multe informații, vezi [Creați un nou segment cu segmente rapide](segment-quick.md).
 
-Acum aveți un segment care identifică clienții despre care se estimează că vor genera mai mult de 1500$ în venituri în următoarele 12 luni. Acest segment se actualizează dinamic dacă sunt ingerate mai multe date.
-
-Pentru mai multe informații, consultați [Creați și gestionați segmente](segments.md).
+[!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la a Power Query sursă de date (conține videoclip)
 description: Ingerați date prin a Power Query conector (conține video).
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.reviewer: v-wendysmith
 ms.subservice: audience-insights
 ms.topic: how-to
@@ -12,12 +12,12 @@ searchScope:
 - ci-data-sources
 - ci-create-data-source
 - customerInsights
-ms.openlocfilehash: 6a25e332bafab414c9def4e1e6b461139dd24ea6
-ms.sourcegitcommit: dfba60e17ae6dc1e2e3830e6365e2c1f87230afd
+ms.openlocfilehash: 4cc7e57dfb0f8d050e91adc441c24e849882f5d8
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/09/2022
-ms.locfileid: "9463280"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609911"
 ---
 # <a name="connect-to-a-power-query-data-source"></a>Conectați-vă la a Power Query sursă de date
 
@@ -43,16 +43,17 @@ Adăugarea surselor de date pe baza Power Query conectorii urmează, în general
 
 1. Selectați **Transformați datele**.
 
-1. The **Power Query - Editați interogările** dialog vă permite să revizuiți și să rafinați datele. Entitățile identificate de sisteme în sursa de date selectată apar în panoul din stânga.
+1. Examinați și rafinați datele dvs. în **Power Query - Editați interogările** pagină. Entitățile identificate de sisteme în sursa de date selectată apar în panoul din stânga.
 
    :::image type="content" source="media/data-manager-configure-edit-queries.png" alt-text="Editați interogările de dialog":::
 
-1. De asemenea, vă puteți transforma datele. Selectați o entitate de editat sau de transformat. Utilizați opțiunile din Power Query fereastra pentru a aplica transformări. Fiecare transformare este listată sub **Pași aplicați**. Power Query oferă numeroase [transformare preconstruită](/power-query/power-query-what-is-power-query#transformations) Opțiuni.
+1. Transformă-ți datele. Selectați o entitate de editat sau de transformat. Utilizați opțiunile din Power Query fereastra pentru a aplica transformări. Fiecare transformare este listată sub **Pași aplicați**. Power Query oferă numeroase [transformare preconstruită](/power-query/power-query-what-is-power-query#transformations) Opțiuni.
 
-   Vă recomandăm să utilizați următoarele transformări:
-
-   - Dacă ingerați date dintr-un fișier CSV, primul rând conține adesea anteturi. Mergi la **Transforma** și selectați **Utilizați primul rând ca antete**.
-   - Asigurați-vă că tipul de date este setat corespunzător. De exemplu, pentru câmpurile de dată, selectați un tip de dată.
+   > [!IMPORTANT]
+   > Vă recomandăm să utilizați următoarele transformări:
+   >
+   > - Dacă ingerați date dintr-un fișier CSV, primul rând conține adesea anteturi. Mergi la **Transforma** și selectați **Utilizați primul rând ca antete**.
+   > - Asigurați-vă că tipul de date este setat corespunzător și se potrivește cu datele. De exemplu, pentru câmpurile de dată, selectați un tip de dată.
 
 1. Pentru a adăuga entități suplimentare la sursă de date în fișierul **Editați interogările** dialog, accesați **Acasă** și selectați **Obțineți date**. Repetați pașii 5-10 până când ați adăugat toate entitățile pentru acest sursă de date. Dacă aveți o bază de date care include mai multe seturi de date, fiecare set de date este propria entitate.
 
@@ -82,7 +83,7 @@ Surse de date care sunt create după asocierea a Dataverse mediu cu utilizarea C
 Gateway-uri de date de la un existent Power BI sau Power Apps mediul va fi vizibil și le puteți reutiliza în Customer Insights dacă gateway-ul de date și mediul Customer Insights se află în aceeași regiune Azure. Pagina surselor de date afișează linkuri pentru a accesa mediul Microsoft Power Platform în care puteți vizualiza și configura gateway-urile de date local.
 
 > [!IMPORTANT]
-> Asigurați-vă că gateway-urile sunt actualizate la cea mai recentă versiune. Puteți instala o actualizare și reconfigura un gateway dintr-un prompt afișat pe ecranul gateway-ului direct sau [descărcați cea mai recentă versiune](https://powerapps.microsoft.com/downloads/). Dacă nu utilizați cea mai recentă versiune de gateway, reîmprospătarea fluxului de date eșuează cu mesaje de eroare precum **Cuvântul cheie nu este acceptat: proprietăți de configurare. Nume parametru: cuvânt cheie**.
+> Asigurați-vă că gateway-urile sunt actualizate la cea mai recentă versiune. Puteți instala o actualizare și reconfigura un gateway dintr-un prompt afișat pe ecranul gateway direct sau [descărcați cea mai recentă versiune](https://powerapps.microsoft.com/downloads/). Dacă nu utilizați cea mai recentă versiune de gateway, reîmprospătarea fluxului de date eșuează cu mesaje de eroare precum **Cuvântul cheie nu este acceptat: proprietăți de configurare. Nume parametru: cuvânt cheie**.
 >
 > Erorile cu gateway-urile de date local din Customer Insights sunt adesea cauzate de probleme de configurare. Pentru mai multe informații despre depanarea gateway-urilor de date, consultați [Depanați gateway-ul de date local](/data-integration/gateway/service-gateway-tshoot).
 
@@ -102,5 +103,51 @@ Gateway-uri de date de la un existent Power BI sau Power Apps mediul va fi vizib
 1. Selectați **Salvați** pentru a aplica modificările și a reveni la **Surse de date** pagină.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motive obișnuite pentru erori de asimilare sau date corupte
+
+### <a name="data-type-does-not-match-data"></a>Tipul de date nu se potrivește cu datele
+
+Cea mai frecventă nepotrivire a tipurilor de date apare atunci când un câmp de dată nu este setat la formatul de dată corect.
+
+Datele pot fi fixate la sursă și reingerate. Sau remediați transformarea în Customer Insights. Pentru a remedia transformarea:
+
+1. Accesați **Date** > **Surse de date**.
+
+1. Lângă sursă de date cu datele corupte, selectați **Editați | ×**.
+
+1. Selectați **Următorul**.
+
+1. Selectați fiecare dintre interogări și căutați transformări aplicate în „Pași aplicați” care sunt incorecte sau coloane de dată care nu au fost transformate cu un format de dată.
+
+   :::image type="content" source="media/PQ_corruped_date.png" alt-text="Power Query- Editați afișând formatul de dată incorect":::
+
+1. Schimbați tipul de date pentru a se potrivi corect cu datele.
+
+1. Selectați **Salvare**. Acel sursă de date este reîmprospătat.
+
+## <a name="troubleshoot-ppdf-power-query-based-data-source-refresh-issues"></a>Depanați PPDF Power Query -based sursă de date probleme de reîmprospătare
+
+Dacă datele sunt învechite sau primiți erori după o reîmprospătare sursă de date, efectuați următorii pași:
+
+1. Navigați la [Power Platform](https://make.powerapps.com).
+
+1. Selectează **Mediu inconjurator** pentru instanța dvs. de Customer Insights.
+
+1. Navigheaza catre **Fluxuri de date**.
+
+1. Pentru fluxul de date care corespunde sursă de date din Customer Insights, selectați punctele de suspensie verticale (&vellip;) și apoi selectați **Afișează istoricul reîmprospătărilor**.
+
+1. Dacă **stare** a fluxului de date este **Succes**, proprietatea asupra Power Query -based sursă de date s-ar putea fi schimbat:
+
+   1. Examinați programul de reîmprospătare din istoricul de reîmprospătare.
+   1. Setați programul noului proprietar și salvați setările.
+
+1. Dacă **stare** a fluxului de date este **A eșuat**:
+
+   1. Descărcați fișierul istoric de reîmprospătare.
+   1. Examinați fișierul descărcat pentru motivul eșecului.
+   1. Dacă eroarea nu poate fi rezolvată, selectați **?** Pentru a deschide un bilet de asistență. Includeți fișierul de istoric al reîmprospătărilor descărcat.
+
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la un folder Common Data Model folosind un cont Azure Data Lake
 description: Lucrați cu datele Common Data Model folosind Azure Data Lake Storage.
-ms.date: 07/27/2022
+ms.date: 09/29/2022
 ms.topic: how-to
 author: mukeshpo
 ms.author: mukeshpo
@@ -12,12 +12,12 @@ searchScope:
 - ci-create-data-source
 - ci-attach-cdm
 - customerInsights
-ms.openlocfilehash: d79b2d34e425e123224209814fef6e367c77c813
-ms.sourcegitcommit: d7054a900f8c316804b6751e855e0fba4364914b
+ms.openlocfilehash: c12603b9ed8a814356a0f8d0137e97afc749b87c
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "9396106"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609963"
 ---
 # <a name="connect-to-data-in-azure-data-lake-storage"></a>Conectarea la date în Azure Data Lake Storage
 
@@ -27,7 +27,7 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
 
 - Suporta ingestie de date Azure Data Lake Storage *Gen2* exclusiv conturi. Nu puteți utiliza conturi Data Lake Storage Gen1 pentru a asimila date.
 
-- The Azure Data Lake Storage cont trebuie sa aiba [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Datele trebuie să fie stocate într-un format de folder ierarhic care definește folderul rădăcină și are subfoldere pentru fiecare entitate. Subfolderele pot avea date complete sau foldere de date incrementale.
+- The Azure Data Lake Storage cont trebuie sa aiba [spațiu de nume ierarhic activat](/azure/storage/blobs/data-lake-storage-namespace). Datele trebuie să fie stocate într-un format de folder ierarhic care definește folderul rădăcină și are subdosare pentru fiecare entitate. Subfolderele pot avea date complete sau foldere de date incrementale.
 
 - Pentru a vă autentifica cu o entitate principală de serviciu Azure, asigurați-vă că este configurat în entitatea găzduită. Pentru mai multe informații, vezi [Conectați-vă la un Azure Data Lake Storage Cont Gen2 cu un principal de serviciu Azure](connect-service-principal.md).
 
@@ -43,6 +43,10 @@ Ingerați date în Dynamics 365 Customer Insights folosind dvs Azure Data Lake S
 - Utilizatorul care configurează conexiunea sursă de date are nevoie de cel puțin permisiuni Storage Blob Data Contributor pentru contul de stocare.
 
 - Datele din Data Lake Storage trebuie să urmeze standardul Common Data Model pentru stocarea datelor dvs. și să aibă manifestul comun al modelului de date pentru a reprezenta schema fișierelor de date (*.csv sau *.parquet). Manifestul trebuie să furnizeze detaliile entităților, cum ar fi coloanele de entități și tipurile de date, precum și locația și tipul fișierului de date. Pentru mai multe informații, vezi [Manifestul Common Data Model](/common-data-model/sdk/manifest). Dacă manifestul nu este prezent, utilizatorii administratori cu acces Proprietar de date blob stocare sau Contributor la date blob stocare pot defini schema atunci când ingerează datele.
+
+## <a name="recommendations"></a>Recomandări
+
+Pentru o performanță optimă, Customer Insights recomandă ca dimensiunea unei partiții să fie de 1 GB sau mai puțin, iar numărul de fișiere de partiție dintr-un folder nu trebuie să depășească 1000.
 
 ## <a name="connect-to-azure-data-lake-storage"></a>Conectarea la Azure Data Lake Storage
 
@@ -187,17 +191,113 @@ Puteți actualiza *Conectați-vă la contul de stocare folosind* opțiune. Pentr
    - Pentru a elimina orice entitate deja selectată dacă nu există dependențe, selectați entitatea și **Șterge**.
       > [!IMPORTANT]
       > Dacă există dependențe de fișierul model.json sau manifest.json existent și setul de entități, veți vedea un mesaj de eroare și nu puteți selecta un fișier model.json sau manifest.json diferit. Eliminați aceste dependențe înainte de a schimba fișierul model.json sau manifest.json sau creați un nou sursă de date cu fișierul model.json sau manifest.json pe care doriți să îl utilizați pentru a evita eliminarea dependențelor.
-   - Pentru a modifica locația fișierului de date sau cheia primară, selectați **Editare**.
-   - Pentru a modifica datele de ingestie incrementală, consultați [Configurarea unei reîmprospătări incrementale pentru sursele de date Azure Data Lake](incremental-refresh-data-sources.md).
-   - Modificați numai numele entității pentru a se potrivi cu numele entității din fișierul .json.
+   - Pentru a schimba locația fișierului de date sau cheia principală, selectați **Editați | ×**.
+   - Pentru a modifica datele de asimilare incrementală, consultați [Configurați o reîmprospătare incrementală pentru sursele de date Azure Data Lake](incremental-refresh-data-sources.md).
+   - Schimbați numai numele entității pentru a se potrivi cu numele entității din fișierul .json.
 
      > [!NOTE]
-     > Păstrați întotdeauna numele entității în Customer Insights la fel ca numele entității din fișierul model.json sau manifest.json după ingestie. Customer Insights validează toate numele entităților cu model.json sau manifest.json în timpul fiecărei reîmprospătări a sistemului. Dacă un nume de entitate se modifică fie în interiorul Customer Insights, fie în exterior, apare o eroare deoarece Customer Insights nu poate găsi noul nume de entitate în fișierul .json. Dacă un nume de entitate ingerat a fost modificat accidental, editați numele entității în Customer Insights pentru a se potrivi cu numele din fișierul .json.
+     > Păstrați întotdeauna numele entității din Customer Insights același cu numele entității din fișierul model.json sau manifest.json după ingerare. Customer Insights validează toate numele de entități cu model.json sau manifest.json la fiecare reîmprospătare a sistemului. Dacă numele unei entități este schimbat fie în interiorul Customer Insights, fie în exterior, apare o eroare, deoarece Customer Insights nu poate găsi noul nume de entitate în fișierul .json. Dacă numele unei entități ingerate a fost schimbat accidental, editați numele entității în Customer Insights pentru a se potrivi cu numele din fișierul .json.
 
-1. Selectați **Atribute** pentru a adăuga sau a modifica atribute sau pentru a activa profilarea datelor. Apoi selectați **Terminat**.
+1. Selectați **Atribute** pentru a adăuga sau modifica atribute sau pentru a activa profilarea datelor. Apoi selectați **Terminat**.
 
-1. Faceți clic pe **Salvare** pentru a aplica modificările și a reveni la **pagina Surse de** date.
+1. Clic **Salvați** pentru a aplica modificările și a reveni la **Surse de date** pagină.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupt-data"></a>Motive obișnuite pentru erori de asimilare sau date corupte
+
+În timpul ingerării datelor, unele dintre cele mai frecvente motive pentru care o înregistrare ar putea fi considerată coruptă includ:
+
+- Tipurile de date și valorile câmpurilor nu se potrivesc între fișierul sursă și schemă
+- Numărul de coloane din fișierul sursă nu se potrivește cu schema
+- Câmpurile conțin caractere care determină declinarea coloanelor în comparație cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără escape, caractere de linie nouă sau caractere cu file.
+- Fișierele de partiție lipsesc
+- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în schemă dacă nu respectă formatul standard.
+
+### <a name="schema-or-data-type-mismatch"></a>Nepotrivire între schemă sau tip de date
+
+Dacă datele nu sunt conforme cu schema, procesul de asimilare se finalizează cu erori. Corectați fie datele sursă, fie schema și reingerați datele.
+
+### <a name="partition-files-are-missing"></a>Fișierele de partiție lipsesc
+
+- Dacă absorbția a avut succes fără înregistrări corupte, dar nu puteți vedea nicio dată, editați fișierul model.json sau manifest.json pentru a vă asigura că sunt specificate partițiile. Apoi, [reîmprospătați sursă de date](data-sources.md#refresh-data-sources).
+
+- Dacă asimilarea datelor are loc în același timp în care sursele de date sunt reîmprospătate în timpul unei reîmprospătări automate a programului, fișierele de partiție pot fi goale sau să nu fie disponibile pentru procesarea Customer Insights. Pentru a vă alinia cu programul de reîmprospătare din amonte, modificați [programul de reîmprospătare a sistemului](schedule-refresh.md) sau programul de reîmprospătare pentru sursă de date. Aliniați sincronizarea astfel încât reîmprospătările să nu aibă loc simultan și să ofere cele mai recente date care urmează să fie procesate în Customer Insights.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Câmpuri de dată și oră în format greșit
+
+Câmpurile datetime din entitate nu sunt în format ISO 8601 sau en-US. Formatul implicit de dată și oră din Customer Insights este formatul en-US. Toate câmpurile datetime dintr-o entitate ar trebui să fie în același format. Customer Insights acceptă alte formate, cu condiția ca adnotările sau trăsăturile să fie făcute la nivel de sursă sau de entitate în model sau manifest.json. De exemplu:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Într-un manifest.json, formatul datetime poate fi specificat la nivel de entitate sau la nivel de atribut. La nivel de entitate, utilizați „exhibitsTraits” în entitatea din *.manifest.cdm.json pentru a defini formatul datetime. La nivel de atribut, utilizați „appliedTraits” în atributul din entityname.cdm.json.
+
+**Manifest.json la nivel de entitate**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json la nivel de atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

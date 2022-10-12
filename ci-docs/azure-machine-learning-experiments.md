@@ -1,19 +1,19 @@
 ---
 title: Utilizați modele bazate pe Azure Machine Learning
 description: Utilizați modele bazate pe Azure Machine Learning în Dynamics 365 Customer Insights.
-ms.date: 12/02/2021
+ms.date: 09/22/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: naravill
 ms.author: naravill
 ms.reviewer: mhart
 manager: shellyha
-ms.openlocfilehash: a1efad2887a02a92ee2960b07b066edc331f3665
-ms.sourcegitcommit: dca46afb9e23ba87a0ff59a1776c1d139e209a32
+ms.openlocfilehash: 8d9c9324ea4840b585b9af1a58d505ccaea6f18e
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 06/29/2022
-ms.locfileid: "9082287"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609840"
 ---
 # <a name="use-azure-machine-learning-based-models"></a>Utilizați modele bazate pe Azure Machine Learning
 
@@ -35,26 +35,25 @@ Datele unificate din Dynamics 365 Customer Insights sunt o sursă pentru constru
 ## <a name="work-with-azure-machine-learning-designer"></a>Lucrați cu designerul Azure Machine Learning
 
 Designerul Azure învățare programată oferă o pânză vizuală în care puteți glisa și plasa seturi de date și module. Un canal de lot creat din designer poate fi integrată în Customer Insights dacă acestea sunt configurate corespunzător. 
-   
+
 ## <a name="working-with-azure-machine-learning-sdk"></a>Lucrul cu SDK Azure Machine Learning
 
 Specialiștii în date și dezvoltatorii de AI folosesc [SDK Azure Machine Learning](/python/api/overview/azure/ml/?preserve-view=true&view=azure-ml-py) pentru a construi fluxuri de lucru de învățare programată. În prezent, modelele instruite folosind SDK nu pot fi integrate direct cu Customer Insights. Pentru integrarea cu Customer Insights este necesar un canal de inferență de lot care consumă acel model.
 
 ## <a name="batch-pipeline-requirements-to-integrate-with-customer-insights"></a>Cerințe de canal de lot pentru integrare cu Customer Insights
 
-### <a name="dataset-configuration"></a>Configurare set de date
+### <a name="dataset-configuration"></a>Configurația setului de date
 
-Trebuie să creați seturi de date pentru a utiliza datele entității din Customer Insights în canalul de inferență a lotului. Aceste seturi de date trebuie înregistrate în spațiul de lucru. În prezent, acceptăm doar [seturi de date tabelare](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) în format .csv. Seturile de date care corespund datelor entității trebuie parametrizate ca parametru de canal.
-   
-* Parametrii setului de date în Designer
-   
-     În designer, deschideți **Selectare Coloane în setul de date** și selectați **Setare ca parametru al canalului** unde furnizați un nume pentru parametru.
+Creați seturi de date pentru a utiliza datele de entitate din Customer Insights pentru conducta dvs. de inferență pe lot. Înregistrați aceste seturi de date în spațiul de lucru. În prezent, acceptăm doar [seturi de date tabelare](/azure/machine-learning/how-to-create-register-datasets#tabulardataset) în format .csv. Parametrizați seturile de date care corespund datelor de entitate ca parametru de conductă.
 
-     > [!div class="mx-imgBorder"]
-     > ![Parametrizare set de date în proiectant.](media/intelligence-designer-dataset-parameters.png "Parametrizare set de date în designer")
-   
-* Parametru set de date în SDK (Python)
-   
+- Parametrii setului de date în Designer
+
+  În designer, deschideți **Selectare Coloane în setul de date** și selectați **Setare ca parametru al canalului** unde furnizați un nume pentru parametru.
+
+  :::image type="content" source="media/intelligence-designer-dataset-parameters.png" alt-text="Parametrizare set de date în proiectant.":::
+
+- Parametru set de date în SDK (Python)
+
    ```python
    HotelStayActivity_dataset = Dataset.get_by_name(ws, name='Hotel Stay Activity Data')
    HotelStayActivity_pipeline_param = PipelineParameter(name="HotelStayActivity_pipeline_param", default_value=HotelStayActivity_dataset)
@@ -63,10 +62,10 @@ Trebuie să creați seturi de date pentru a utiliza datele entității din Custo
 
 ### <a name="batch-inference-pipeline"></a>Canal de inferență a lotului
   
-* În designer, un canal de instruire poate fi utilizat pentru a crea sau actualiza un canal de inferență. În prezent, sunt acceptate doar canalele de inferență în lot.
+- În designer, utilizați o conductă de antrenament pentru a crea sau actualiza o conductă de inferență. În prezent, sunt acceptate doar canalele de inferență în lot.
 
-* Folosind SDK, puteți publica canalul într-un punct final. În prezent, Customer Insights se integrează cu canalul implicit într-un punct final al canalului de lot din spațiul de lucru Machine Learning.
-   
+- Folosind SDK-ul, publicați pipeline la un punct final. În prezent, Customer Insights se integrează cu canalul implicit într-un punct final al canalului de lot din spațiul de lucru Machine Learning.
+
    ```python
    published_pipeline = pipeline.publish(name="ChurnInferencePipeline", description="Published Churn Inference pipeline")
    pipeline_endpoint = PipelineEndpoint.get(workspace=ws, name="ChurnPipelineEndpoint") 
@@ -75,11 +74,11 @@ Trebuie să creați seturi de date pentru a utiliza datele entității din Custo
 
 ### <a name="import-pipeline-data-into-customer-insights"></a>Importați datele canalelor în Customer Insights
 
-* Designerul oferă [modulul Export date](/azure/machine-learning/algorithm-module-reference/export-data) care permite exportarea ieșirii unui canal în stocarea Azure. În prezent, modulul trebuie să utilizeze tipul de depozit de date **Stocare Blob Azure** și parametrizează **Depozitul de date** și **Calea** relativă. Customer Insights anulează ambii acești parametri în timpul executării canalului cu un depozit de date și o cale accesibilă produsului.
-   > [!div class="mx-imgBorder"]
-   > ![Exportul configurării modulului de date.](media/intelligence-designer-importdata.png "Exportul configurării modulului de date")
-   
-* Când scrieți ieșirea de inferență folosind cod, puteți încărca ieșirea către cale dintr-un *depozit de date înregistrat* în spațiul de lucru. Când calea și depozitul de date sunt parametrizate în canal, Customer Insights va putea citi și importa ieșirea de inferență. În prezent, este acceptată o singură ieșire tabulară în format csv. Calea trebuie să includă directorul și numele fișierului.
+- Designerul oferă [modulul Export date](/azure/machine-learning/algorithm-module-reference/export-data) care permite exportarea ieșirii unui canal în stocarea Azure. În prezent, modulul trebuie să utilizeze tipul de depozit de date **Stocare Blob Azure** și parametrizează **Depozitul de date** și **Calea** relativă. Customer Insights anulează ambii acești parametri în timpul executării canalului cu un depozit de date și o cale accesibilă produsului.
+
+  :::image type="content" source="media/intelligence-designer-importdata.png" alt-text="Exportul configurării modulului de date.":::
+
+- Când scrieți rezultatul de inferență folosind cod, încărcați rezultatul pe o cale din a *depozit de date înregistrat* în spațiul de lucru. Când calea și depozitul de date sunt parametrizate în canal, Customer Insights va putea citi și importa ieșirea de inferență. În prezent, este acceptată o singură ieșire tabulară în format csv. Calea trebuie să includă directorul și numele fișierului.
 
    ```python
    # In Pipeline setup script

@@ -1,7 +1,7 @@
 ---
 title: Conectați-vă la date într-un data lake gestionat Microsoft Dataverse
 description: Importați date dintr-un Microsoft Dataverse Data Lake gestionat.
-ms.date: 07/26/2022
+ms.date: 08/18/2022
 ms.subservice: audience-insights
 ms.topic: how-to
 author: adkuppa
@@ -11,12 +11,12 @@ ms.reviewer: v-wendysmith
 searchScope:
 - ci-dataverse
 - customerInsights
-ms.openlocfilehash: b21150a1c51bdad35250cae7fde7f38a014ec876
-ms.sourcegitcommit: 5807b7d8c822925b727b099713a74ce2cb7897ba
+ms.openlocfilehash: 0d9612525344c8ac99b6e3edfe33a426dc0a474b
+ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/28/2022
-ms.locfileid: "9206968"
+ms.lasthandoff: 09/30/2022
+ms.locfileid: "9609811"
 ---
 # <a name="connect-to-data-in-a-microsoft-dataverse-managed-data-lake"></a>Conectați-vă la date într-un data lake gestionat Microsoft Dataverse
 
@@ -70,5 +70,93 @@ Pentru a vă conecta la alt data lake Dataverse, [creați o nouă sursă de date
 1. Clic **Salvați** pentru a aplica modificările și a reveni la **Surse de date** pagină.
 
    [!INCLUDE [progress-details-include](includes/progress-details-pane.md)]
+
+## <a name="common-reasons-for-ingestion-errors-or-corrupted-data"></a>Motive obișnuite pentru erori de asimilare sau date corupte
+
+Următoarele verificări rulează pe datele ingerate pentru a expune înregistrările deteriorate:
+
+- Valoarea unui câmp nu se potrivește cu tipul de date al coloanei sale.
+- Câmpurile conțin caractere care fac ca coloanele să nu se potrivească cu schema așteptată. De exemplu: ghilimele formatate incorect, ghilimele fără scăpare sau caracterele cu linie nouă.
+- Dacă există coloane datetime/date/datetimeoffset, formatul acestora trebuie specificat în model dacă nu respectă formatul standard ISO.
+
+### <a name="schema-or-data-type-mismatch"></a>Nepotrivire între schemă sau tip de date
+
+Dacă datele nu sunt conforme cu schema, înregistrările sunt clasificate ca fiind corupte. Corectați fie datele sursă, fie schema și reingerați datele.
+
+### <a name="datetime-fields-in-the-wrong-format"></a>Câmpuri de dată și oră în format greșit
+
+Câmpurile datetime din entitate nu sunt în format ISO sau en-US. Formatul implicit de dată și oră din Customer Insights este formatul en-US. Toate câmpurile datetime dintr-o entitate ar trebui să fie în același format. Customer Insights acceptă alte formate, cu condiția ca adnotările sau trăsăturile să fie făcute la nivel de sursă sau de entitate în model sau manifest.json. De exemplu:
+
+**Model.json**
+
+   ```json
+      "annotations": [
+        {
+          "name": "ci:CustomTimestampFormat",
+          "value": "yyyy-MM-dd'T'HH:mm:ss:SSS"
+        },
+        {
+          "name": "ci:CustomDateFormat",
+          "value": "yyyy-MM-dd"
+        }
+      ]   
+   ```
+
+  Într-un manifest.json, formatul datetime poate fi specificat la nivel de entitate sau la nivel de atribut. La nivel de entitate, utilizați „exhibitsTraits” în entitatea din *.manifest.cdm.json pentru a defini formatul datatime. La nivel de atribut, utilizați „appliedTraits” în atributul din entityname.cdm.json.
+
+**Manifest.json la nivel de entitate**
+
+```json
+"exhibitsTraits": [
+    {
+        "traitReference": "is.formatted.dateTime",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd'T'HH:mm:ss"
+            }
+        ]
+    },
+    {
+        "traitReference": "is.formatted.date",
+        "arguments": [
+            {
+                "name": "format",
+                "value": "yyyy-MM-dd"
+            }
+        ]
+    }
+]
+```
+
+**Entity.json la nivel de atribut**
+
+```json
+   {
+      "name": "PurchasedOn",
+      "appliedTraits": [
+        {
+          "traitReference": "is.formatted.date",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-dd"
+            }
+          ]
+        },
+        {
+          "traitReference": "is.formatted.dateTime",
+          "arguments" : [
+            {
+              "name": "format",
+              "value": "yyyy-MM-ddTHH:mm:ss"
+            }
+          ]
+        }
+      ],
+      "attributeContext": "POSPurchases/attributeContext/POSPurchases/PurchasedOn",
+      "dataFormat": "DateTime"
+    }
+```
 
 [!INCLUDE [footer-include](includes/footer-banner.md)]

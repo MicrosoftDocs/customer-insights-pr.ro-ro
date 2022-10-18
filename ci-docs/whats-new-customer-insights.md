@@ -8,12 +8,12 @@ author: m-hartmann
 ms.author: mhart
 ms.reviewer: skumm
 manager: shellyha
-ms.openlocfilehash: 2a386d65a5e285d471e9cafc45f247e7b4ae23bb
-ms.sourcegitcommit: be341cb69329e507f527409ac4636c18742777d2
-ms.translationtype: HT
+ms.openlocfilehash: dcee60a73e0c32278553253040478c31e45237ae
+ms.sourcegitcommit: 618ef15b434de0a68213383b6521ce2a60753afb
+ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/30/2022
-ms.locfileid: "9609607"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "9638366"
 ---
 # <a name="whats-new-in-dynamics-365-customer-insights"></a>Ce este nou în Dynamics 365 Customer Insights
 
@@ -23,6 +23,28 @@ Lansăm actualizări pentru fiecare regiune în parte. Prin urmare, anumite regi
 
 > [!TIP]
 > Pentru a remite și vota pentru solicitări de caracteristici și sugestii de produs, accesați [portalul Dynamics 365 Application Ideas](https://experience.dynamics.com/ideas/categories/?forum=79a8c474-4e35-e911-a971-000d3a4f3343&forumName=Dynamics%20365%20Customer%20Insights).
+
+## <a name="september-2022-updates"></a>Actualizări din septembrie 2022
+
+Actualizările din septembrie 2022 includ noi funcții, îmbunătățiri de performanță și remedieri de erori.
+
+### <a name="export-data-to-hubspot"></a>Exportați datele în HubSpot
+
+Exportați segmente de profiluri de clienți unificate în HubSpot și utilizați-le pentru marketing prin e-mail.
+
+Pentru mai multe informații, vezi [Exportați segmente în HubSpot](export-hubspot.md).
+
+### <a name="remove-a-unified-field-or-entity-from-data-unification"></a>Eliminați un câmp sau o entitate unificată din unificarea datelor
+
+Puteți elimina câmpuri și entități din procesul de unificare a datelor.
+
+Pentru mai multe informații, vezi [Eliminați un câmp unificat](data-unification-update.md#remove-a-unified-field).
+
+### <a name="manage-unknown-customer-profiles"></a>Gestionați profiluri de clienți necunoscute
+
+Personalizarea memorabilă depinde de bogăția și caracterul complet al datelor despre clienți, iar Customer Insights vă ajută să atingeți aceste obiective. Puteți gestiona profiluri de clienți pentru utilizatorii pentru care nu aveți alte informații decât un ID.
+
+Pentru mai multe informații, vezi [Gestionați profiluri necunoscute cu Customer Insights](manage-unknown-profiles.md).
 
 ## <a name="august-2022-updates"></a>Actualizări august 2022
 
@@ -90,7 +112,7 @@ Pentru mai multe informații, vezi [Exportați în InMobi (previzualizare)](expo
 
 ### <a name="lockbox-support-in-customer-insights"></a>Asistență pentru Lockbox în Customer Insights
 
-Customer Lockbox oferă o interfață pentru a revizui și a aproba (sau respinge) solicitările de acces la date. Aceste solicitări apar atunci când este necesar accesul la date la datele clienților pentru a rezolva un caz de asistență.
+Customer Lockbox oferă o interfață pentru a revizui și a aproba (sau respinge) solicitările de acces la date. Aceste solicitări apar atunci când accesul la date la datele clienților este necesar pentru a rezolva un caz de asistență.
 
 Pentru mai multe informații, vezi [Accesați în siguranță datele clienților cu Customer Lockbox (Previzualizare)](security-overview.md#securely-access-customer-data-with-customer-lockbox-preview).
 
@@ -118,7 +140,7 @@ Pentru mai multe informații, vezi [Explorați statisticile clienților](home.md
 
 ### <a name="track-usage-of-a-segment"></a>Urmăriți utilizarea unui segment
 
-Acuma poți [urmăriți utilizarea unui segment](segments.md#track-usage-of-a-segment) în aplicații, care se bazează pe Dataverse organizație care este conectată cu Customer Insights. Pentru [Segmentele Customer Insights utilizate în călătoriile clienților din Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistemul vă informează despre utilizarea segmentului respectiv.
+Acuma poți [urmăriți utilizarea unui segment](segments.md#track-usage-of-a-segment) în aplicații, care se bazează pe Dataverse organizație care este conectată cu Customer Insights. Pentru [Segmente Customer Insights utilizate în călătoriile clienților din Dynamics 365 Marketing](/dynamics365/marketing/real-time-marketing-ci-profile), sistemul vă informează despre utilizarea segmentului respectiv.
 
 ### <a name="export-to-criteo"></a>Exportați în Criteo
 
@@ -140,7 +162,7 @@ Actualizările din aprilie 2022 includ noi funcții, îmbunătățiri de perform
 
 Dun & Bradstreet oferă date comerciale, analize și perspective pentru companii. Aceasta permite clienților cu profiluri de clienți unificate pentru companii să-și îmbogățească datele. Îmbogățirile includ atribute precum numărul DUNS, dimensiunea companiei, locația, industria și multe altele.
 
-Pentru mai multe informații, vezi [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Preview)](enrichment-dnb.md).
+Pentru mai multe informații, vezi [Îmbogățirea profilurilor companiei cu Dun & Bradstreet (Previzualizare)](enrichment-dnb.md).
 
 ### <a name="define-the-measure-type-when-creating-a-new-measure"></a>Definiți tipul de măsură atunci când creați o măsură nouă
 
@@ -183,7 +205,7 @@ Continuăm să ne extindem ecosistemul de destinații de export cu noi conexiuni
 
 Pentru mai multe informații, vezi [Exportați segmente în Iterable (previzualizare)](export-iterable.md) și [Exportați segmente în Braze (previzualizare)](export-braze.md).
 
-### <a name="improvements-to-marketo-and-google-ads-export"></a>Îmbunătățiri aduse exportului Marketo și Google Ads
+### <a name="improvements-to-marketo-and-google-ads-export"></a>Îmbunătățiri ale exportului Marketo și Google Ads
 
 Schimbarea API-urilor în serviciile conectate duce la actualizări pentru ca conectorii să ruleze în mod fiabil și fără probleme. Am lansat câteva actualizări pentru exporturile către serviciile Marketo și Google Ads:
 
@@ -206,7 +228,7 @@ Azure Synapse Analytics este un serviciu de analiză a întreprinderii care acce
 
 Organizații care folosesc deja Azure Synapse Analytics poate ingera acele date în Customer Insights. 
 
-Pentru mai multe informații, vezi [Conectați un Azure Synapse sursă de date (Previzualizare)](connect-synapse.md).
+Pentru mai multe informații, consultați [Conectați un Azure Synapse sursă de date (Previzualizare)](connect-synapse.md).
 
 ### <a name="liveramp-enrichment-preview"></a>Îmbogățirea LiveRamp (Previzualizare)
 
@@ -218,7 +240,7 @@ Pentru mai multe informații, vezi [Îmbogățiți profilurile clienților cu da
 
 Utilizați date din surse precum Microsoft și alți parteneri pentru a vă îmbogăți datele clienților înainte de unificarea datelor. Îmbogățirile sursă de date ajută la obținerea unei complete și a unei calități mai mari a datelor, care pot ajuta la obținerea unor rezultate mai bune odată ce vă unificați datele.
 
-Pentru mai multe informații, vezi [Îmbogățire pentru sursele de date (Previzualizare)](data-sources-enrichment.md).
+Pentru mai multe informații, vezi [Îmbogățirea surselor de date (Previzualizare)](data-sources-enrichment.md).
 
 ### <a name="change-owner-of-environment"></a>Schimbați proprietarul mediului
 
@@ -230,7 +252,7 @@ Pentru mai multe informații, vezi [Schimbați proprietarul unui mediu](manage-e
 
 Pregătirea datelor arată acum motivul corupției pentru toate câmpurile cu date corupte. Informațiile sunt furnizate la nivel de înregistrare individuală pentru o identificare ușoară.
 
-Pentru mai multe informații, vezi [Surse de date corupte](data-sources.md#corrupt-data-sources).
+Pentru mai multe informații, consultați [Surse de date corupte](data-sources.md#corrupt-data-sources).
 
 ### <a name="end-of-preview-for-reporting-features-in-the-engagement-insights-capability"></a>Sfârșitul previzualizării pentru funcțiile de raportare din capacitatea de statistici privind implicarea
 

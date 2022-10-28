@@ -2,7 +2,7 @@
 title: Condiții de potrivire pentru unificarea datelor
 description: Asociați entitățile pentru a crea profiluri de clienți unificate.
 recommendations: false
-ms.date: 07/27/2022
+ms.date: 10/07/2022
 ms.subservice: audience-insights
 ms.topic: tutorial
 author: v-wendysmith
@@ -14,12 +14,12 @@ searchScope:
 - ci-merge
 - ci-map
 - customerInsights
-ms.openlocfilehash: eaa3409aaa7541dc88953336942e43afaf6511c6
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: bbd2c5f441b85460250c11f02358ea67260278d6
+ms.sourcegitcommit: 52ea58c872b10f1e6f9d120be93df93cca1a12dd
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304672"
+ms.lasthandoff: 10/26/2022
+ms.locfileid: "9721536"
 ---
 # <a name="match-conditions-for-data-unification"></a>Condiții de potrivire pentru unificarea datelor
 
@@ -130,12 +130,12 @@ De exemplu, dacă regula de potrivire combină nume de familie, orașul și data
 
 ### <a name="specify-custom-match-conditions"></a>Specificați condițiile de potrivire personalizate
 
-Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Există patru opțiuni disponibile:
+Specificați condițiile care înlocuiesc logica de potrivire implicită. Există patru opțiuni disponibile:
 
 |Opțiune  |Descriere |Exemplu  |
 |---------|---------|---------|
-|Se potrivesc întotdeauna     | Definește valori care se potrivesc întotdeauna.         |  Mereu potriviți *Mike* și *MikeR*.       |
-|Nu se potrivesc niciodată     | Definește valori care nu se potrivesc niciodată.        | Nu se potrivește niciodată *Ioan* și *Jonathan*.        |
+|Se potrivesc întotdeauna     | Definește valori pentru cheile primare care sunt întotdeauna potrivite.         |  Potriviți întotdeauna rândul cu cheia primară *12345* la rândul cu cheia primară *54321*.       |
+|Nu se potrivesc niciodată     | Definește valori pentru cheile primare care nu se potrivesc niciodată.        | Nu potriviți niciodată rândul cu cheia primară *12345* la rândul cu cheia primară *54321*.        |
 |Bypass            | Definește valori pe care sistemul ar trebui să le ignore întotdeauna în faza de potrivire. |  Ignorați valorile *11111* și *Necunoscut* în timpul meciului.        |
 |Mapare de alias    | Definirea valorilor pe care sistemul ar trebui să le considere ca fiind aceeași valoare.         | Considera *Joe* a fi egal cu *Iosif*.        |
 
@@ -143,23 +143,24 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
 
    :::image type="content" source="media/m3_match_custom.png" alt-text="Buton personalizat":::
 
-1. Alege **Tip personalizat** și selectați **Descărcați șablonul**. Aveți nevoie de un șablon separat pentru fiecare opțiune de potrivire.
+1. Alege **Tip personalizat** și selectați **Descărcați șablonul**. Redenumiți șablonul fără a utiliza spații. Utilizați un șablon separat pentru fiecare opțiune de potrivire.
 
-1. Deschideți fișierul șablon descărcat și completați detaliile. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
-    - Entity1: Vânzări
-    - Entity1Key: 12345
-    - Entity2: Persoană de contact
-    - Entity2Key: 34567
+1. Deschideți fișierul șablon descărcat și completați detaliile. Șablonul conține câmpuri pentru a specifica entitatea și valorile cheie primare ale entității de utilizat în potrivirea particularizată. Numele entităților țin cont de majuscule și minuscule. De exemplu, dacă doriți cheia primară *12345* din entitatea *Vânzări* să se potrivească întotdeauna cu cheia primară *34567* din entitatea *Persoană de contact*, completați șablonul:
+   - Entity1: Vânzări
+   - Entity1Key: 12345
+   - Entity2: Persoană de contact
+   - Entity2Key: 34567
 
    Același fișier șablon poate specifica înregistrări de potrivire particularizată de la mai multe entități.
 
-   Dacă doriți să specificați potrivirea personalizată pentru deduplicare pe o entitate, furnizați aceeași entitate ca și Entity1 și Entity2 și setați diferitele valori ale cheii primare.
+   > [!NOTE]
+   > Dacă doriți să specificați potrivirea personalizată pentru deduplicare pe o entitate, furnizați aceeași entitate ca și Entity1 și Entity2 și setați diferitele valori ale cheii primare. Trebuie să definiți cel puțin o regulă de deduplicare pentru entitate pentru a utiliza potrivirea personalizată.
 
 1. După ce ați adăugat toate înlocuirile, salvați fișierul șablon.
 
 1. Accesați **Date** > **Surse de date** și ingerați fișierele șablon ca entități noi.
 
-1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul drop-down și selectați **Terminat**.
+1. După încărcarea fișierelor, selectați **Personalizat** din nou opțiunea. Selectați entitățile necesare din meniul derulant și selectați **Terminat**.
 
    :::image type="content" source="media/custom-match-overrides.png" alt-text="Captură de ecran a dialogului pentru a alege suprascrierea pentru un scenariu de potrivire particularizat.":::
 
@@ -169,6 +170,8 @@ Puteți specifica condiții care înlocuiesc logica de potrivire implicită. Exi
    - Pentru **Bypass** sau **Maparea aliasului**, Selectați **Editați | ×** pe o regulă de potrivire existentă sau creați o regulă nouă. În meniul derulant Normalizări, alegeți **Bypass personalizat** sau **Maparea aliasului** opțiunea și selectați **Terminat**.
 
 1. Selectați **Terminat** pe **Personalizat** panoul pentru a aplica configurația personalizată de potrivire.
+
+   Fiecare fișier șablon ingerat este propriul său sursă de date. Dacă sunt descoperite înregistrări care necesită un tratament special de potrivire, actualizați sursă de date corespunzător. Actualizarea va fi utilizată în timpul următorului proces de unificare. De exemplu, identificați gemeni cu aproape același nume care locuiesc la aceeași adresă și care au fost comasați ca o singură persoană. Actualizați sursă de date pentru a identifica gemenii ca înregistrări separate, unice.
 
 > [!div class="nextstepaction"]
 > [Următorul pas: Unificați câmpurile](merge-entities.md)

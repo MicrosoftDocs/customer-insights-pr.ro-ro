@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: f57cdfbb24df8a8ffa1670b426d50dbba2c5f40f
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: cba40b74b86a40fc41db856760c9361b755a8864
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195259"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724955"
 ---
 # <a name="export-segments-to-marketo-preview"></a>Exportați segmente către Marketo (previzualizare)
 
@@ -29,6 +29,7 @@ Exportați segmentele profilurilor client unificate pentru a genera campanii, a 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Marketo, ceea ce poate dura până la 3 ore. Numărul de profiluri de clienți pe care le puteți exporta în Marketo depinde de contractul dvs. cu Marketo.
 - Numai segmente.
 

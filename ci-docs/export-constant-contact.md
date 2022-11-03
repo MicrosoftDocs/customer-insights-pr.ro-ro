@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 4d2ec29c194dc481ee40048b8ecbed813291b4d2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: c0affd3ed45f462696850813bd50331061dde780
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196501"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724516"
 ---
 # <a name="export-segments-to-constant-contact-preview"></a>Exportați segmente în Constant Contact (previzualizare)
 
@@ -28,6 +28,7 @@ Exportați segmente de profiluri de clienți unificate în Constant Contact și 
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Constant Contact, care poate dura până la o oră. Numărul de profiluri de clienți pe care le puteți exporta în Constant Contact depinde de contractul dvs. cu Constant Contact.
 - Numai segmente.
 

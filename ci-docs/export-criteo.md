@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: d7c8d6f0121fe18a6c886ba3776109a1a592ef33
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195351"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724804"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportați segmente în Criteo (previzualizare)
 
@@ -27,6 +27,7 @@ Exportați segmente de profiluri de clienți unificate pentru a genera campanii,
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Criteo, care poate dura până la 30 de minute. Numărul de profiluri de clienți pe care le puteți exporta în Criteo depinde de contractul dvs. cu Criteo.
 - Numai segmente.
 
@@ -65,8 +66,6 @@ Exportați segmente de profiluri de clienți unificate pentru a genera campanii,
 1. Introduceți un nume pentru export.
 
 1. În secțiunea **Potrivirea datelor**, în câmpul **E-mail**, selectați câmpul ce reprezintă adresa de e-mail a unui client.
-
-1. Opțional, exportați **ID agent de publicitate** și **Nume**.
 
 1. Selectați segmentele pe care doriți să le exportați.
 

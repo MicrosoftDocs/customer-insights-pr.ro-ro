@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 2f52eb8196e057f934c8d2b5ac0518ce121606b6
-ms.sourcegitcommit: 003c1929f730d7d505c108aba84f6269f4c98978
+ms.openlocfilehash: a3967008ec166cb6f099659b0791f1318126c0da
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/12/2022
-ms.locfileid: "9655303"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725231"
 ---
 # <a name="export-segments-to-braze-preview"></a>Exportați segmente în Braze (previzualizare)
 
@@ -29,6 +29,7 @@ Exportați segmente de profiluri de clienți unificate în Braze și utilizați-
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți pentru Braze, care poate dura până la 40 de minute. Numărul de profiluri de clienți pe care le puteți exporta în Braze depinde de contractul dvs. cu Braze.
 - Numai segmente.
 - Azure Private Link nu este acceptat pentru exportul Braze.

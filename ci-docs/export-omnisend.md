@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: c23d6d3538c4df6006c14064f95379169af06622
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: fb57e2bd70592f4ce4e1a13e21901dc69734f6bf
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196179"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9725185"
 ---
 # <a name="export-segments-to-omnisend-preview"></a>Exportați segmente către Omnisend (previzualizare)
 
@@ -28,6 +28,7 @@ Exportați segmente de profiluri de clienți unificate în Omnisend și folosiț
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Omnisend, care poate dura până la patru ore. Numărul de profiluri de clienți pe care le puteți exporta în Omnisend depinde de contractul dvs. cu Omnisend.
 - Numai segmente.
 

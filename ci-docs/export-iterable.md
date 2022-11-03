@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: ccf10b6e3a28a75f9d1bd3d8da3bf870ebc2b1b2
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 69e2bd207c98fc2530620018bf95dd869d1798f6
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9195444"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724619"
 ---
 # <a name="export-segments-to-iterable-preview"></a>Exportați segmente în Iterable (previzualizare)
 
@@ -28,6 +28,7 @@ Exportați segmente de profiluri de clienți unificate în Iterable și utiliza�
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți pentru Iterable, care poate dura până la 30 de minute. Numărul de profiluri de clienți pe care le puteți exporta în Iterable depinde de contractul dvs. cu Iterable.
 - Numai segmente.
 

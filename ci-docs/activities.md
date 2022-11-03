@@ -1,12 +1,12 @@
 ---
-title: Activități de contact cu clienții sau afaceri
+title: Activități de contact cu clienții sau cu afaceri
 description: Definiți activitățile de contact cu clienții sau de afaceri și vizualizați-le într-o cronologie pe profilurile clienților.
-ms.date: 08/12/2022
+ms.date: 10/26/2022
 ms.subservice: audience-insights
 ms.reviewer: v-wendysmith
 ms.topic: conceptual
-author: CadeSanthaMSFT
-ms.author: cadesantha
+author: srivas15
+ms.author: shsri
 manager: shellyha
 searchScope:
 - ci-entities
@@ -17,16 +17,16 @@ searchScope:
 - ci-measures
 - ci-segment-suggestions
 - customerInsights
-ms.openlocfilehash: bbb8bc30d079273bc935181c628915bb3c02d982
-ms.sourcegitcommit: 267c317e10166146c9ac2c30560c479c9a005845
+ms.openlocfilehash: d8caa477278f04c3a0a95ced15f4bea2a22aa8cd
+ms.sourcegitcommit: da6a2d189edacc8f2c0f2abedcb28245f26fe74c
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 08/16/2022
-ms.locfileid: "9304120"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9723796"
 ---
-# <a name="customer-or-business-contact-activities"></a>Activități de contact cu clienții sau afaceri
+# <a name="customer-or-business-contact-activities"></a>Activități de contact cu clienții sau cu afaceri
 
-Activitățile clienților sunt acțiuni sau evenimente realizate de clienți sau contacte de afaceri. De exemplu, tranzacții, durata apelului de asistență, recenzii ale site-urilor web, achiziții sau returnări. Aceste activități sunt conținute în una sau mai multe surse de date. Cu Customers Insights, consolidați-vă activitățile clienților din acestea [surse de date](data-sources.md) și asociați-le cu profilurile clienților. Aceste activități apar cronologic într-o cronologie pe profilul clientului. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul clientului](customer-card-add-in.md) soluţie.
+Activitățile clienților sunt acțiuni sau evenimente efectuate de clienți sau contacte de afaceri. De exemplu, tranzacții, durata apelului de asistență, recenzii ale site-urilor web, achiziții sau returnări. Aceste activități sunt conținute în una sau mai multe surse de date. Cu Customers Insights, consolidați-vă activitățile clienților din acestea [surse de date](data-sources.md) și asociați-le cu profilurile clienților. Aceste activități apar cronologic într-o cronologie pe profilul clientului. Includeți cronologia în aplicațiile Dynamics 365 cu [Supliment pentru cardul clientului](customer-card-add-in.md) soluţie.
 
 ## <a name="define-a-customer-activity"></a>Definiți o activitate de client
 
@@ -41,6 +41,9 @@ O entitate trebuie să aibă cel puțin un atribut de tip **Data** pentru a fi i
    - **Numele activității**: Selectați un nume pentru activitatea dvs.
    - **Entitate de activitate** : Selectați o entitate care include date tranzacționale sau de activitate.
    - **Cheie primară**: Selectați câmpul care identifică în mod unic o înregistrare. Nu ar trebui să conțină valori duplicate, valori goale sau valori lipsă.
+
+     > [!NOTE]
+     > Cheia primară pentru fiecare rând trebuie să rămână consecventă în timpul reîmprospătărilor sursă de date. Dacă cheia primară pentru un rând este actualizată într-o reîmprospătare sursă de date, aceasta creează duplicate în entitatea de ieșire Activitate. 
 
    :::image type="content" source="media/Activity_Wizard1.PNG" alt-text="Configurați datele despre activitate cu numele, entitatea și cheia primară.":::
 
@@ -132,7 +135,15 @@ Pentru conturile de afaceri (B-to-B), utilizați a *Profil de contact* entitate 
 
 1. Selectați **Adăugați o activitate**.
 
-1. Denumiți activitatea, selectați entitatea de activitate sursă și selectați cheia primară a entității de activitate.
+1. În **Date de activitate** pas, introduceți următoarele informații:
+
+   - **Numele activității**: Selectați un nume pentru activitatea dvs.
+   - **Entitate de activitate** : Selectați o entitate care include date tranzacționale sau de activitate.
+   - **Cheie primară**: Selectați câmpul care identifică în mod unic o înregistrare. Nu ar trebui să conțină valori duplicate, valori goale sau valori lipsă.
+
+     > [!NOTE]
+     > Cheia primară pentru fiecare rând trebuie să rămână consecventă în timpul reîmprospătărilor sursă de date. Dacă cheia primară pentru un rând este actualizată într-o reîmprospătare sursă de date, aceasta creează duplicate în entitatea de ieșire Activitate. 
+
 
 1. În **Relații** pas, creați o relație indirectă între datele dvs. sursă de activitate și conturi, folosind datele dvs. de contact ca entitate intermediară. Pentru mai multe informații, vezi [căi de relație directe și indirecte](relationships.md#relationship-paths).
    - Exemplu de relație pentru o activitate numită *Achiziții*:

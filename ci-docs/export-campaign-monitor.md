@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 3c04fc26dc690cf32b45913257e82b9a0f617185
-ms.sourcegitcommit: 594081c82ca385f7143b3416378533aaf2d6d0d3
+ms.openlocfilehash: 82303c7bcb269ee68419c9639ee743e13451f273
+ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 07/27/2022
-ms.locfileid: "9196317"
+ms.lasthandoff: 10/27/2022
+ms.locfileid: "9724699"
 ---
 # <a name="export-segments-to-campaign-monitor-preview"></a>Exportați segmente în Monitor de campanie (previzualizare)
 
@@ -29,6 +29,7 @@ Exportați segmente de profiluri de clienți unificate în Monitor de campanie �
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
+- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Campaign Monitor, care poate dura până la 20 de minute. Numărul de profiluri de clienți pe care le puteți exporta în Campaign Monitor depinde de contractul dvs. cu Campaign Monitor.
 - Numai segmente.
 

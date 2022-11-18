@@ -8,29 +8,29 @@ ms.topic: conceptual
 author: andtapia
 ms.author: andreatapia
 manager: shellyha
-ms.openlocfilehash: d7e5050ee5832df5ecf40a352f7ea8d42830fa45
-ms.sourcegitcommit: f6b6a4c4ce9cf12e449488b24aab80a2cbfe0c47
+ms.openlocfilehash: 0e12f64a22b93d117009fb8aee76d02a7583e699
+ms.sourcegitcommit: 24627d53dcdf607baaab1cc3c299a3584c386173
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 09/21/2022
-ms.locfileid: "9556411"
+ms.lasthandoff: 11/15/2022
+ms.locfileid: "9776836"
 ---
 # <a name="manage-unknown-profiles-with-customer-insights"></a>Gestionați profiluri necunoscute cu Customer Insights
 
-Utilizatorii de internet sunt adesea neidentificați și anonimi online. Dacă nu sunt autentificați pentru că folosesc dispozitive sau canale diferite, este valabil chiar și pentru cei mai fideli clienți. Deoarece cookie-urile terță parte vor dispărea în curând, gestionarea preferințelor utilizatorilor pe baza datelor de la prima parte este crucială pentru a obține experiențe personalizate diferențiate. Pentru multe mărci, utilizatorii cunoscuți sau autentificați sunt o minoritate, în ciuda așteptărilor crescânde ale clienților cu privire la personalizare. Este minunat pentru companii să știe cine sunt clienții lor, pe baza unor date fiabile, detaliate și unificate.
+Utilizatorii de internet sunt adesea neidentificați sau anonimi online. Chiar și cei mai fideli clienți pot părea „necunoscuți” dacă nu sunt conectați pe diferite dispozitive. Pentru multe mărci, utilizatorii cunoscuți sau autentificați sunt o minoritate, în ciuda așteptărilor crescânde ale clienților cu privire la personalizare. Având în vedere viitorul cookie-urilor terță parte, gestionarea preferințelor utilizatorilor pe baza datelor de la prima parte este crucială pentru realizarea unor experiențe personalizate.
 
-Personalizarea memorabilă depinde de bogăția și caracterul complet al datelor despre clienți, iar Customer Insights vă ajută să atingeți aceste obiective. Nu trebuie să limitați sau să opriți utilizarea datelor colectate la începutul călătoria clientului. Customer Insights vă permite să vă aduceți propriile date pentru a crea un profil de client pentru utilizatori necunoscuți. Apoi puteți utiliza acel profil pentru acțiuni suplimentare, în ciuda informațiilor de contact lipsă. Importați date primare din surse precum sistemele web, mobile sau CRM în Customer Insights pentru a îmbogăți continuu profilurile clienților. Pe măsură ce unificați mai multe interacțiuni, [întoarce *necunoscut* client într-o *cunoscut* client](unknown-to-known.md).
+Personalizarea memorabilă depinde de cât de bine vă cunoașteți clientul, iar Customer Insights vă ajută să faceți asta prin urmărirea tuturor clienților.  Nu trebuie să limitați sau să opriți utilizarea datelor colectate la începutul călătoria clientului. Customer Insights vă permite să vă aduceți propriile date pentru a crea un profil de client pentru utilizatori necunoscuți. Apoi puteți utiliza acel profil pentru acțiuni suplimentare, în ciuda informațiilor de contact lipsă. Importați date primare din surse precum sistemele web, mobile sau CRM în Customer Insights pentru a îmbogăți continuu profilurile clienților. Pe măsură ce unificați mai multe interacțiuni, [întoarce *necunoscut* client într-o *cunoscut* client](unknown-to-known.md).
 
 ## <a name="sample-scenario"></a>Exemplu de scenariu
 
-Comerțul electronic este canalul cu cea mai rapidă creștere în ultimul deceniu. Să presupunem că un utilizator își folosește dispozitivul mobil pentru a vă naviga pe site-ul dvs. de comerț electronic. Site-ul web atribuie vizitatorului „mobile_guest123” ca un identificator unic și începeți să colectați activități comportamentale pe baza activității sale online. De exemplu, ce pagini au vizitat, cât timp au petrecut pe acele pagini sau pe ce linkuri au făcut clic. Nu le cunoașteți numele sau adresa de e-mail, dar aceste date pot oferi mărcilor informații semnificative despre acest utilizator specific. La rândul său, puteți pune aceste informații să funcționeze data viitoare când utilizatorul vizitează site-ul. Interogați Customer Insights pentru „mobile_guest123” pentru a prelua lista de segmente a utilizatorului, cum ar fi „organic”, „clienți cu precomandă pe mobil”, „clienți cu valoare mare” etc. sau pentru a prelua profilul pentru a crea experiențe web personalizate. De asemenea, puteți exporta datele în orice sistem de activare pentru a face același lucru.
+Să presupunem că un utilizator își folosește dispozitivul mobil pentru a vă naviga pe site-ul dvs. de comerț electronic. Site-ul web atribuie vizitatorului „mobile_guest123” ca un identificator unic și începeți să colectați activități comportamentale pe baza activității sale online. De exemplu, ce pagini au vizitat, cât timp au petrecut pe acele pagini sau pe ce linkuri au făcut clic. Nu le cunoașteți numele sau adresa de e-mail, dar aceste date pot oferi mărcilor informații semnificative despre acest utilizator specific. La rândul său, puteți pune aceste informații să funcționeze data viitoare când utilizatorul vizitează site-ul. Interogați Customer Insights pentru „mobile_guest123” pentru a prelua lista de segmente a utilizatorului, cum ar fi „organic”, „clienți cu precomandă pe mobil”, „clienți cu valoare mare” etc. sau pentru a prelua profilul pentru a crea experiențe web personalizate. De asemenea, puteți exporta datele în orice sistem de activare pentru a face același lucru.
 
 ## <a name="prerequisites"></a>Cerințe preliminare
 
 - Ingerați date primare în Customer Insights
 - Fiecare entitate are un ID unic care este setat ca cheie primară
 - Fiecare entitate cu o cheie primară pentru personalizare este unificată
-- Sistemul de management al conținutului site-ului dvs. este capabil să utilizeze API-uri (pentru personalizarea web bazată pe comunicarea directă cu Customer Insights)
+- Sistemul de management al conținutului site-ului dvs. poate utiliza API-uri (pentru personalizarea web bazată pe comunicarea directă cu Customer Insights)
 
 Următorul tabel arată un exemplu simplificat cum ar putea fi capturate evenimentele web de mare valoare.
 

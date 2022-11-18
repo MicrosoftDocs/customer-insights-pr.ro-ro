@@ -8,12 +8,12 @@ ms.topic: how-to
 author: pkieffer
 ms.author: philk
 manager: shellyha
-ms.openlocfilehash: 61435030254638965fbeb7980312e73695416aa2
-ms.sourcegitcommit: c3ae7e7e0c9566f9479ba71a26afc5a17fb589c2
+ms.openlocfilehash: 811752da943cd5e40608d48644a1744c7971d3c8
+ms.sourcegitcommit: 40ae3322ac95913e485607494754dd03814e42bb
 ms.translationtype: MT
 ms.contentlocale: ro-RO
-ms.lasthandoff: 10/27/2022
-ms.locfileid: "9724804"
+ms.lasthandoff: 11/11/2022
+ms.locfileid: "9760041"
 ---
 # <a name="export-segments-to-criteo-preview"></a>Exportați segmente în Criteo (previzualizare)
 
@@ -27,7 +27,6 @@ Exportați segmente de profiluri de clienți unificate pentru a genera campanii,
 
 ## <a name="known-limitations"></a>Limitări cunoscute
 
-- Linkul privat în combinație cu Bring your own storage (BYOS) nu este acceptat.
 - Până la 1 milion de profiluri de clienți per export către Criteo, care poate dura până la 30 de minute. Numărul de profiluri de clienți pe care le puteți exporta în Criteo depinde de contractul dvs. cu Criteo.
 - Numai segmente.
 
@@ -43,7 +42,7 @@ Exportați segmente de profiluri de clienți unificate pentru a genera campanii,
 
 1. Alegeți cine poate utiliza această conexiune. În mod implicit, sunt doar de administratori. Pentru mai multe informații, consultați [Permiteți contribuitorilor să utilizeze o conexiune pentru exporturi](connections.md#allow-contributors-to-use-a-connection-for-exports).
 
-1. Examinați [confidențialitatea și conformitatea datelor](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord**.
+1. Examinați [confidențialitatea datelor și conformitatea](connections.md#data-privacy-and-compliance) și selectați **Sunt de acord** .
 
 1. Selectați **Conectați** pentru a inițializa conexiunea.
 
@@ -59,7 +58,7 @@ Exportați segmente de profiluri de clienți unificate pentru a genera campanii,
 
 1. Faceți salt la **Date** > **Exporturi**.
 
-1. Selectați **Adăugați export**.
+1. Selectați **Adăugați export** .
 
 1. În **Conexiune pentru export** câmp, alegeți o conexiune din secțiunea Criteo. Contactați un administrator dacă nu este disponibilă nicio conexiune.
 
